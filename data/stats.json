@@ -1,0 +1,17 @@
+{
+  "total_cases_tracked": 1294,
+  "total_cases_widely_cited": 1227,
+  "daily_growth_rate": "5-6",
+  "q1_2026_sanctions_usd": 145000,
+  "single_day_record": 17,
+  "single_day_record_date": "2026-03-31",
+  "largest_single_sanction": 109700,
+  "largest_single_case": "Couvrette v. Wisnovsky",
+  "courts_with_disclosure_rules": 300,
+  "aba_opinion": "Formal Opinion 512",
+  "aba_opinion_date": "2024-07-29",
+  "tracker_source": "Damien Charlotin, HEC Paris Smart Law Hub",
+  "tracker_url": "https://www.damiencharlotin.com/hallucinations/",
+  "last_updated": "2026-04-10T00:00:00Z",
+  "data_source": "Charlotin AI Hallucination Tracker + Public Court Records"
+}

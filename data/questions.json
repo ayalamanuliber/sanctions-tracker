@@ -1,0 +1,82 @@
+[
+  {
+    "id": "written-ai-policy",
+    "question": "Does your firm have a written AI usage policy that all attorneys have signed?",
+    "category": "tool-governance",
+    "risk_weight": 15,
+    "proof_snippet": "Johnson v. Dunn — Three Butler Snow attorneys disqualified. Court found firm had no written AI policy despite using AI tools regularly.",
+    "why": "Courts are treating the absence of a written policy as evidence of systemic negligence. In Johnson, the lack of policy turned an individual error into firm-wide liability."
+  },
+  {
+    "id": "citation-verification",
+    "question": "Do you independently verify every citation in AI-assisted drafts against primary sources?",
+    "category": "filing-safeguards",
+    "risk_weight": 20,
+    "proof_snippet": "Couvrette v. Wisnovsky — $109,700 sanctions. 23 fabricated citations and 8 false quotations across three filings. Largest AI sanction in U.S. history.",
+    "why": "Every single AI sanctions case involves unverified citations. Courts view failure to verify as a violation of Rule 11 obligations. This is the #1 risk factor."
+  },
+  {
+    "id": "paid-tool-verification",
+    "question": "Do you verify output from paid legal AI tools (CoCounsel, Lexis+AI) the same way you verify free tools?",
+    "category": "filing-safeguards",
+    "risk_weight": 12,
+    "proof_snippet": "United States v. Farris — CJA fees denied, attorney removed. Brief filename read 'CoCounsel Skill Results.' Paid tool hallucinated. Court: 'The tool's pedigree is no defense.'",
+    "why": "Courts have now sanctioned attorneys for trusting paid tools like CoCounsel (Westlaw). K&L Gates was sanctioned in Lacey despite using CoCounsel. Paying for AI does not equal verification."
+  },
+  {
+    "id": "attorney-training",
+    "question": "Have all attorneys at your firm completed AI competency training in the past 12 months?",
+    "category": "training-protocols",
+    "risk_weight": 10,
+    "proof_snippet": "Montes v. Suns — Court ordered mandatory AI ethics training as part of sanctions. Judge forwarded ruling to every federal judge in Arizona.",
+    "why": "ABA Formal Opinion 512 requires AI competency. Courts are now ordering training as sanctions — meaning they expect it to already be in place. Untrained attorneys are walking liabilities."
+  },
+  {
+    "id": "supervision-protocol",
+    "question": "Does a senior attorney review all AI-assisted work product before filing?",
+    "category": "accountability",
+    "risk_weight": 12,
+    "proof_snippet": "Johnson v. Dunn — Practice group leader's failure to review called 'particularly egregious.' Three attorneys disqualified, firm referred to Alabama State Bar.",
+    "why": "Supervisory liability is expanding. In Lacey, two BigLaw firms were sanctioned because the supervising attorney reviewed for style but not substance. Courts expect substantive review."
+  },
+  {
+    "id": "ai-disclosure-protocol",
+    "question": "Do you have a protocol for AI disclosure when required by local court rules?",
+    "category": "disclosure-compliance",
+    "risk_weight": 8,
+    "proof_snippet": "Prososki v. Regan — Attorney denied AI use despite 57 defective citations out of 63. Brief stricken. Referred for discipline and facing suspension.",
+    "why": "300+ courts now have AI disclosure rules. Denying AI use when evidence suggests otherwise is treated as an aggravating factor. Prososki's denial turned sanctions into potential disbarment."
+  },
+  {
+    "id": "engagement-letter-ai",
+    "question": "Do your engagement letters address AI tool usage in client matters?",
+    "category": "client-governance",
+    "risk_weight": 6,
+    "proof_snippet": "Johnson v. Dunn — Firm disqualified from representing client. Client's case damaged by undisclosed AI use. No engagement letter provisions for AI.",
+    "why": "When AI errors damage a client's case, the first question in malpractice litigation will be: did the client consent to AI use? Engagement letters are your first line of defense."
+  },
+  {
+    "id": "approved-tools-list",
+    "question": "Does your firm maintain an approved list of AI tools with usage guidelines for each?",
+    "category": "tool-governance",
+    "risk_weight": 8,
+    "proof_snippet": "Lacey v. State Farm — K&L Gates sanctioned $31,100. Attorney used both CoCounsel AND Google Gemini without firm guidelines on either tool.",
+    "why": "Shadow AI is the biggest governance risk. When attorneys use unapproved tools, the firm has no visibility and no defense. An approved tools list creates accountability."
+  },
+  {
+    "id": "audit-trail",
+    "question": "Do you maintain audit trails showing which parts of a filing were AI-assisted?",
+    "category": "accountability",
+    "risk_weight": 5,
+    "proof_snippet": "United States v. Farris — Court caught AI use from the filename 'CoCounsel Skill Results.' Attorney had no documentation of what was AI-generated vs. human-written.",
+    "why": "When sanctions hit, courts examine the entire drafting process. An audit trail proves good faith. Without one, every filing becomes suspect — and sanctions can cascade across cases."
+  },
+  {
+    "id": "incident-response",
+    "question": "Does your firm have a documented response plan for when AI errors are discovered in filed documents?",
+    "category": "incident-response",
+    "risk_weight": 4,
+    "proof_snippet": "Renfer/Fivehouse — AUSA panicked after losing a draft, had AI rewrite it, then tried to cover it up. Fired by DOJ. No incident response plan existed.",
+    "why": "Courts treat cover-ups far more severely than errors. A documented response plan — immediate disclosure, correction filing, client notification — can turn a sanction into a warning."
+  }
+]

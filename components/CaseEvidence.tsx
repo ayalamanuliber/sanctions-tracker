@@ -160,9 +160,9 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
 
         {/* State filter from map click */}
         {stateFilter && (
-          <div className="bg-[#0066FF]/10 border border-[#0066FF]/20 rounded-2xl p-4 mb-4 flex items-center justify-between">
+          <div className="bg-[#FF5E1A]/10 border border-[#FF5E1A]/20 rounded-2xl p-4 mb-4 flex items-center justify-between">
             <span className="text-white/70 text-sm">
-              Showing cases in <span className="text-[#0066FF] font-bold">{stateFilter}</span> (from map)
+              Showing cases in <span className="text-[#FF5E1A] font-bold">{stateFilter}</span> (from map)
             </span>
             <button
               onClick={onClearStateFilter}
@@ -320,7 +320,7 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
             return (
               <div
                 key={c.id}
-                className="bg-[#0A1628]/50 border border-white/[0.06] rounded-2xl flex flex-col group hover:border-[#0066FF]/30 hover:-translate-y-0.5 transition-all duration-300"
+                className="bg-[#0A1628]/50 border border-white/[0.06] rounded-2xl flex flex-col group hover:border-[#FF5E1A]/20 hover:-translate-y-0.5 transition-all duration-300"
               >
                 {/* Compact view (always visible) */}
                 <button
@@ -358,7 +358,7 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
                   </p>
 
                   {c.amount !== null && c.amount > 0 && (
-                    <div className="text-[#0066FF] font-black text-lg">
+                    <div className="text-[#FF5E1A] font-black text-lg">
                       {c.amount_display}
                     </div>
                   )}

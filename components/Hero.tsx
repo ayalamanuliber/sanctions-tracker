@@ -189,9 +189,9 @@ export default function Hero() {
 
               {/* Floating total rulings card */}
               <div className="mt-3 ml-auto w-fit bg-[#0A1628] border border-white/[0.08] rounded-xl shadow-2xl px-5 py-3 flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#0066FF]/10 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-[#FF5E1A]/10 flex items-center justify-center">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M2 4h12M2 8h12M2 12h8" stroke="#0066FF" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M2 4h12M2 8h12M2 12h8" stroke="#FF5E1A" strokeWidth="1.5" strokeLinecap="round"/>
                   </svg>
                 </div>
                 <div>

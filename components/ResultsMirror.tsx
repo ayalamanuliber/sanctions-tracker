@@ -246,7 +246,7 @@ export default function ResultsMirror({ answers }: Props) {
               <div className="mt-8 bg-[#0A1628]/50 border border-white/[0.06] rounded-2xl p-6">
                 <div className="flex items-start justify-between gap-6 flex-col md:flex-row">
                   <div>
-                    <div className="text-[#0066FF] text-[10px] font-semibold tracking-widest uppercase mb-2">Coming Soon</div>
+                    <div className="text-[#FF5E1A] text-[10px] font-semibold tracking-widest uppercase mb-2">Coming Soon</div>
                     <h5 className="text-white font-bold text-lg mb-2">AI Governance Policy Templates</h5>
                     <p className="text-white/50 text-sm leading-relaxed max-w-md">
                       Court-tested policy templates based on {scoreData.gaps.length > 0 ? `your ${scoreData.gaps.length} identified gaps` : 'the assessment results'}.
@@ -262,10 +262,10 @@ export default function ResultsMirror({ answers }: Props) {
                     </div>
                   </div>
                   <div className="shrink-0">
-                    <div className="bg-[#0066FF]/10 border border-[#0066FF]/20 rounded-xl px-5 py-4 text-center">
+                    <div className="bg-[#FF5E1A]/10 border border-[#FF5E1A]/20 rounded-xl px-5 py-4 text-center">
                       <div className="text-white/30 text-[10px] font-semibold line-through mb-1">$297</div>
                       <div className="text-white font-black text-2xl tracking-tight">Free</div>
-                      <div className="text-[#0066FF] text-[10px] font-semibold mt-1">During Beta</div>
+                      <div className="text-[#FF5E1A] text-[10px] font-semibold mt-1">During Beta</div>
                     </div>
                     <a
                       href="https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit"

@@ -93,7 +93,7 @@ export default function PolicyRecommendations({ answers }: Props) {
     <section className="px-6 py-16 border-t border-white/[0.06]">
       <div className="max-w-6xl mx-auto">
         <div className="mb-10">
-          <p className="text-[11px] font-semibold text-[#0066FF] tracking-widest uppercase mb-2">
+          <p className="text-[11px] font-semibold text-[#FF5E1A] tracking-widest uppercase mb-2">
             Action Framework
           </p>
           <h2 className="text-3xl md:text-4xl font-black text-white tracking-[-0.03em]">
@@ -115,7 +115,7 @@ export default function PolicyRecommendations({ answers }: Props) {
             return (
               <div
                 key={rec.num}
-                className={`border rounded-2xl p-6 transition-all duration-300 group hover:border-[#0066FF]/30 hover:-translate-y-0.5 ${
+                className={`border rounded-2xl p-6 transition-all duration-300 group hover:border-[#FF5E1A]/20 hover:-translate-y-0.5 ${
                   isGap
                     ? "bg-[#0A1628]/50 border-red-500/20 shadow-lg shadow-red-950/10"
                     : isCovered
@@ -167,7 +167,7 @@ export default function PolicyRecommendations({ answers }: Props) {
                       </div>
                     )}
                     <div className="text-[11px] font-semibold text-white/30">
-                      Based on <span className="text-[#0066FF]">{caseCount} case{caseCount !== 1 ? "s" : ""}</span>
+                      Based on <span className="text-[#FF5E1A]">{caseCount} case{caseCount !== 1 ? "s" : ""}</span>
                     </div>
                   </div>
                 </div>

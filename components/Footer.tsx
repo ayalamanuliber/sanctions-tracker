@@ -95,7 +95,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="/"
-                className="text-[13px] text-[#0066FF] hover:text-[#4d94ff] transition-colors font-semibold"
+                className="text-[13px] text-[#FF5E1A] hover:text-[#ff8a54] transition-colors font-semibold"
               >
                 AI Sanctions Tracker
               </Link>

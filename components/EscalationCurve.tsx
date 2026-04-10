@@ -57,7 +57,7 @@ export default function EscalationCurve() {
             </p>
             <div className="bg-[#0A1628] border border-white/[0.06] rounded-xl p-4">
               <div className="text-[10px] font-semibold text-white/30 tracking-widest uppercase mb-1">Record Sanction</div>
-              <div className="text-2xl font-black text-[#0066FF]">$109.7K</div>
+              <div className="text-2xl font-black text-[#FF5E1A]">$109.7K</div>
               <div className="text-xs text-white/40 mt-1">Brigandi v. Oregon (2026)</div>
             </div>
           </div>
@@ -180,7 +180,7 @@ export default function EscalationCurve() {
         {/* 17-courts callout */}
         <div className="mt-6 bg-[#0066FF]/5 border border-[#0066FF]/15 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-6">
-            <span className="text-5xl font-black text-[#0066FF]">17</span>
+            <span className="text-5xl font-black text-[#FF5E1A]">17</span>
             <div>
               <p className="text-white font-bold text-sm">
                 One day. Seventeen courts.

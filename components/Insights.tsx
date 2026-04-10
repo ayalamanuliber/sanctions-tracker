@@ -119,7 +119,7 @@ export default function Insights() {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* header */}
         <div className="mb-10">
-          <p className="text-[11px] font-semibold text-[#0066FF] tracking-widest uppercase mb-2">
+          <p className="text-[11px] font-semibold text-[#FF5E1A] tracking-widest uppercase mb-2">
             Intelligence
           </p>
           <h2 className="text-3xl md:text-4xl font-black text-white tracking-[-0.03em]">
@@ -142,7 +142,7 @@ export default function Insights() {
                 <div key={gap}>
                   <div className="flex items-center justify-between mb-1.5">
                     <span className="text-sm text-white/70 font-medium">
-                      <span className="text-[#0066FF] font-bold mr-2">#{i + 1}</span>
+                      <span className="text-[#FF5E1A] font-bold mr-2">#{i + 1}</span>
                       {gapLabels[gap] || gap}
                     </span>
                     <span className="text-sm font-bold text-white">
@@ -259,9 +259,9 @@ export default function Insights() {
           {insightCards.map((card, i) => (
             <div
               key={i}
-              className="bg-[#0A1628]/50 border border-white/[0.06] rounded-2xl p-6 hover:border-[#0066FF]/30 hover:-translate-y-0.5 transition-all duration-300"
+              className="bg-[#0A1628]/50 border border-white/[0.06] rounded-2xl p-6 hover:border-[#FF5E1A]/30 hover:-translate-y-0.5 transition-all duration-300"
             >
-              <div className="w-9 h-9 rounded-xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center mb-4">
+              <div className="w-9 h-9 rounded-xl bg-[#FF5E1A]/10 text-[#FF5E1A] flex items-center justify-center mb-4">
                 {card.icon}
               </div>
               <h4 className="text-sm font-bold text-white mb-2">{card.title}</h4>

@@ -167,9 +167,13 @@ export default function ResultsMirror({ answers }: Props) {
             <div className="lg:w-2/3 w-full">
               {scoreData.gaps.length > 0 && (
                 <>
-                  <h4 className="text-2xl font-black text-white tracking-[-0.02em] mb-6">
+                  <h4 className="text-2xl font-black text-white tracking-[-0.02em] mb-2">
                     Active Exposure Gaps
                   </h4>
+                  <p className="text-white/40 text-sm mb-6">
+                    Your firm has exposure in {scoreData.gaps.length} of 10 assessed areas.
+                    These gaps align with cases where courts imposed sanctions ranging from $2,000 to $109,700.
+                  </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
                     {scoreData.gaps.map((gap) => (
                       <div key={gap.id} className="bg-[#0A1628]/50 backdrop-blur-sm border border-white/[0.06] p-5 rounded-2xl hover:border-red-500/20 transition-all">
@@ -236,6 +240,43 @@ export default function ResultsMirror({ answers }: Props) {
                 <p className="text-white/20 text-[10px] font-medium mt-3">
                   New rulings and policy recommendations delivered every Tuesday.
                 </p>
+              </div>
+
+              {/* Policy Templates */}
+              <div className="mt-8 bg-[#0A1628]/50 border border-white/[0.06] rounded-2xl p-6">
+                <div className="flex items-start justify-between gap-6 flex-col md:flex-row">
+                  <div>
+                    <div className="text-[#0066FF] text-[10px] font-semibold tracking-widest uppercase mb-2">Coming Soon</div>
+                    <h5 className="text-white font-bold text-lg mb-2">AI Governance Policy Templates</h5>
+                    <p className="text-white/50 text-sm leading-relaxed max-w-md">
+                      Court-tested policy templates based on {scoreData.gaps.length > 0 ? `your ${scoreData.gaps.length} identified gaps` : 'the assessment results'}.
+                      Includes citation verification protocols, AI disclosure language, engagement letter clauses, and incident response playbooks.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      <span className="text-[10px] bg-white/[0.05] px-2.5 py-1 rounded-full text-white/40 font-semibold">Written AI Policy Template</span>
+                      <span className="text-[10px] bg-white/[0.05] px-2.5 py-1 rounded-full text-white/40 font-semibold">Citation Verification Checklist</span>
+                      <span className="text-[10px] bg-white/[0.05] px-2.5 py-1 rounded-full text-white/40 font-semibold">Court Disclosure Language</span>
+                      <span className="text-[10px] bg-white/[0.05] px-2.5 py-1 rounded-full text-white/40 font-semibold">Incident Response Playbook</span>
+                      <span className="text-[10px] bg-white/[0.05] px-2.5 py-1 rounded-full text-white/40 font-semibold">Engagement Letter AI Clause</span>
+                      <span className="text-[10px] bg-white/[0.05] px-2.5 py-1 rounded-full text-white/40 font-semibold">+ 3 more</span>
+                    </div>
+                  </div>
+                  <div className="shrink-0">
+                    <div className="bg-[#0066FF]/10 border border-[#0066FF]/20 rounded-xl px-5 py-4 text-center">
+                      <div className="text-white/30 text-[10px] font-semibold line-through mb-1">$297</div>
+                      <div className="text-white font-black text-2xl tracking-tight">Free</div>
+                      <div className="text-[#0066FF] text-[10px] font-semibold mt-1">During Beta</div>
+                    </div>
+                    <a
+                      href="https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit"
+                      target="_blank"
+                      rel="noopener"
+                      className="mt-3 block bg-[#0066FF] hover:bg-[#004ACC] text-white px-5 py-2.5 rounded-xl font-bold text-sm text-center transition-colors"
+                    >
+                      Request Access
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

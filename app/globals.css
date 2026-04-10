@@ -69,10 +69,21 @@ body::after {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #0066FF 0%, #004ACC 100%);
+  background: linear-gradient(135deg, #0066FF 0%, #FF6B35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.gradient-text-hero {
+  background: linear-gradient(135deg, #0066FF 0%, #FF6B35 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-orange {
+  box-shadow: 0 0 40px -10px rgba(255, 107, 53, 0.3);
 }
 
 .glass-card {

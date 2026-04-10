@@ -196,45 +196,47 @@ export default function RiskAssessment({ answers, setAnswers }: Props) {
                   </div>
 
                   {isNo && (
-                    <div className="mt-6 pt-6 border-t border-white/[0.06] grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up">
-                      <div>
-                        <div className="text-red-400 text-[10px] font-semibold tracking-wide uppercase mb-2 flex items-center gap-1.5">
-                          <svg
-                            width="12"
-                            height="12"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                          >
-                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                            <line x1="12" y1="9" x2="12" y2="13" />
-                            <line x1="12" y1="17" x2="12.01" y2="17" />
-                          </svg>
-                          The Consequence
-                        </div>
-                        <p className="text-white/60 text-sm leading-relaxed border-l-2 border-red-500/30 pl-4">
-                          &ldquo;{q.proof_snippet}&rdquo;
-                        </p>
-                      </div>
-                      <div>
-                        <div className="text-white/25 text-[10px] font-semibold tracking-wide uppercase mb-2">
-                          Why This Matters
-                        </div>
-                        <p className="text-white/50 text-sm leading-relaxed mb-3">
-                          {q.why}
-                        </p>
-                        {"remediation" in q && typeof (q as { remediation?: string }).remediation === "string" && (
-                          <div className="bg-[#0066FF]/5 border border-[#0066FF]/15 rounded-xl p-3">
-                            <div className="text-[#0066FF] text-[10px] font-semibold tracking-wide uppercase mb-1">
-                              What compliant firms do
-                            </div>
-                            <p className="text-white/60 text-xs leading-relaxed">
-                              {(q as { remediation: string }).remediation}
-                            </p>
+                    <div className="mt-6 pt-6 border-t border-white/[0.06] animate-fade-in-up">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                          <div className="text-red-400 text-[10px] font-semibold tracking-wide uppercase mb-2 flex items-center gap-1.5">
+                            <svg
+                              width="12"
+                              height="12"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                            >
+                              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                              <line x1="12" y1="9" x2="12" y2="13" />
+                              <line x1="12" y1="17" x2="12.01" y2="17" />
+                            </svg>
+                            The Consequence
                           </div>
-                        )}
+                          <p className="text-white/60 text-sm leading-relaxed border-l-2 border-red-500/30 pl-4">
+                            &ldquo;{q.proof_snippet}&rdquo;
+                          </p>
+                        </div>
+                        <div>
+                          <div className="text-white/25 text-[10px] font-semibold tracking-wide uppercase mb-2">
+                            Why This Matters
+                          </div>
+                          <p className="text-white/50 text-sm leading-relaxed">
+                            {q.why}
+                          </p>
+                        </div>
                       </div>
+                      {"remediation" in q && typeof (q as { remediation?: string }).remediation === "string" && (
+                        <div className="mt-4 bg-[#0066FF]/5 border border-[#0066FF]/15 rounded-xl p-4">
+                          <div className="text-[#0066FF] text-[10px] font-semibold tracking-wide uppercase mb-1">
+                            What compliant firms do
+                          </div>
+                          <p className="text-white/60 text-sm leading-relaxed">
+                            {(q as { remediation: string }).remediation}
+                          </p>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>

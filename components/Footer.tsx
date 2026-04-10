@@ -3,6 +3,57 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
+    <>
+    {/* Author CTA */}
+    <section className="px-6 py-16 border-t border-white/[0.06]">
+      <div className="max-w-6xl mx-auto">
+        <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start">
+          <div className="shrink-0">
+            <Image
+              src="/manuel.webp"
+              alt="Manu Ayala"
+              width={80}
+              height={80}
+              className="rounded-2xl"
+            />
+          </div>
+          <div>
+            <div className="text-[#FF5E1A] text-[11px] font-semibold tracking-widest uppercase mb-2">From Manuel Ayala</div>
+            <p className="text-white/60 text-sm leading-relaxed mb-6">
+              I spent five years doing legal investigations for a US law firm. Now I run AI Vortex, where I help firms figure out where they actually stand on AI and build the infrastructure to get to where they need to be. I built this tracker because lawyers shouldn&apos;t have to get sanctioned to learn the rules changed.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit"
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-2 bg-[#0066FF] hover:bg-[#004ACC] text-white px-5 py-2.5 rounded-xl font-bold text-sm transition-colors"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Book a Call
+              </a>
+              <a
+                href="mailto:manuel@aivortex.io"
+                className="inline-flex items-center gap-2 bg-white/[0.05] hover:bg-white/[0.08] text-white/70 px-5 py-2.5 rounded-xl font-bold text-sm transition-colors border border-white/[0.06]"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                Email
+              </a>
+              <a
+                href="https://www.linkedin.com/in/aivortex/"
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center justify-center w-10 h-10 bg-white/[0.05] hover:bg-white/[0.08] rounded-xl border border-white/[0.06] transition-colors"
+                aria-label="LinkedIn"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer className="bg-[#02050A] border-t border-white/[0.04] py-10 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-8">
@@ -157,5 +208,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }

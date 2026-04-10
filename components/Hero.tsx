@@ -80,7 +80,7 @@ export default function Hero() {
       {/* Blue glow */}
       <div className="absolute top-0 left-1/4 w-[600px] h-[400px] bg-[#0066FF]/[0.04] rounded-full blur-[120px]" />
       {/* Orange/red glow orb */}
-      <div className="absolute top-0 right-[10%] w-[500px] h-[400px] bg-[#FF6B35]/[0.03] rounded-full blur-[120px]" />
+      <div className="absolute top-0 right-[10%] w-[500px] h-[400px] bg-[#FF5E1A]/[0.03] rounded-full blur-[120px]" />
 
       <div className="relative pt-20 pb-16 px-6">
         <div className="max-w-6xl mx-auto">

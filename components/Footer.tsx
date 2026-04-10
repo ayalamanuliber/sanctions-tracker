@@ -7,20 +7,21 @@ export default function Footer() {
     {/* Author CTA */}
     <section className="px-6 py-16 border-t border-white/[0.06]">
       <div className="max-w-6xl mx-auto">
-        <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start">
+        <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center md:items-start">
           <div className="shrink-0">
             <Image
               src="/manuel.webp"
               alt="Manu Ayala"
-              width={80}
-              height={80}
-              className="rounded-2xl"
+              width={96}
+              height={96}
+              className="rounded-full"
             />
           </div>
           <div>
-            <div className="text-[#FF5E1A] text-[11px] font-semibold tracking-widest uppercase mb-2">From Manuel Ayala</div>
+            <div className="text-[#0066FF] text-[11px] font-semibold tracking-widest uppercase mb-2">From Manuel Ayala</div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              I spent five years doing legal investigations for a US law firm. Now I run AI Vortex, where I help firms figure out where they actually stand on AI and build the infrastructure to get to where they need to be. I built this tracker because lawyers shouldn&apos;t have to get sanctioned to learn the rules changed.
+              I&apos;m Manu Ayala. I spent five years doing legal investigations for a US law firm. Now I run AI Vortex, where I help firms figure out where they actually stand on AI and build the infrastructure to get to where they need to be. I write about what I find at{" "}
+              <a href="https://www.aivortex.io/legal" className="text-[#0066FF] hover:underline">aivortex.io/legal</a>.
             </p>
             <div className="flex flex-wrap gap-3">
               <a

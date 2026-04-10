@@ -96,7 +96,7 @@ export default function Hero() {
 
               <h1 className="text-5xl md:text-7xl font-black text-white leading-[1.05] tracking-[-0.03em] mb-6">
                 Where is your firm{" "}
-                <span className="gradient-text-hero">exposed?</span>
+                <span className="text-[#FF5E1A]">exposed?</span>
               </h1>
 
               <p className="text-lg md:text-xl text-white/60 leading-relaxed mb-10">

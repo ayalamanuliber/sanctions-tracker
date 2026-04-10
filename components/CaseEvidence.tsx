@@ -174,7 +174,7 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
         )}
 
         {/* Filter bar */}
-        <div className="bg-[#111] border border-white/[0.08] rounded-2xl p-4 mb-6 space-y-4">
+        <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl p-4 mb-6 space-y-4">
           {/* Gap filter toggle */}
           {hasGaps && (
             <div className="flex items-center gap-3 pb-3 border-b border-white/[0.06]">
@@ -201,7 +201,7 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
             <span className="text-white/30 text-[11px] font-semibold tracking-wide uppercase mr-1">
               Severity
             </span>
-            <div className="flex bg-[#0A0A0A] border border-white/[0.08] p-1 rounded-xl">
+            <div className="flex bg-[#050B14] border border-white/[0.06] p-1 rounded-xl">
               {SEVERITY_OPTIONS.map((f) => (
                 <button
                   key={f}
@@ -228,7 +228,7 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
             <select
               value={state}
               onChange={(e) => setState(e.target.value)}
-              className="bg-[#0A0A0A] border border-white/[0.08] text-white/60 text-[12px] font-medium rounded-xl px-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors cursor-pointer appearance-none"
+              className="bg-[#050B14] border border-white/[0.06] text-white/60 text-[12px] font-medium rounded-xl px-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors cursor-pointer appearance-none"
               style={{ minWidth: 130 }}
             >
               <option value="all">All States</option>
@@ -243,7 +243,7 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
             <select
               value={tool}
               onChange={(e) => setTool(e.target.value)}
-              className="bg-[#0A0A0A] border border-white/[0.08] text-white/60 text-[12px] font-medium rounded-xl px-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors cursor-pointer appearance-none"
+              className="bg-[#050B14] border border-white/[0.06] text-white/60 text-[12px] font-medium rounded-xl px-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors cursor-pointer appearance-none"
               style={{ minWidth: 150 }}
             >
               <option value="all">All Tools</option>
@@ -258,7 +258,7 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
             <select
               value={year}
               onChange={(e) => setYear(e.target.value)}
-              className="bg-[#0A0A0A] border border-white/[0.08] text-white/60 text-[12px] font-medium rounded-xl px-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors cursor-pointer appearance-none"
+              className="bg-[#050B14] border border-white/[0.06] text-white/60 text-[12px] font-medium rounded-xl px-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors cursor-pointer appearance-none"
               style={{ minWidth: 120 }}
             >
               {YEAR_OPTIONS.map((y) => (
@@ -272,7 +272,7 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value as SortKey)}
-              className="bg-[#0A0A0A] border border-white/[0.08] text-white/60 text-[12px] font-medium rounded-xl px-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors cursor-pointer appearance-none"
+              className="bg-[#050B14] border border-white/[0.06] text-white/60 text-[12px] font-medium rounded-xl px-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors cursor-pointer appearance-none"
               style={{ minWidth: 150 }}
             >
               <option value="date-desc">Newest First</option>
@@ -302,7 +302,7 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search case or court..."
-                className="w-full bg-[#0A0A0A] border border-white/[0.08] text-white/60 text-[12px] font-medium rounded-xl pl-9 pr-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors placeholder:text-white/20"
+                className="w-full bg-[#050B14] border border-white/[0.06] text-white/60 text-[12px] font-medium rounded-xl pl-9 pr-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors placeholder:text-white/20"
               />
             </div>
           </div>
@@ -320,7 +320,7 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
             return (
               <div
                 key={c.id}
-                className="bg-[#111] border border-white/[0.08] rounded-2xl flex flex-col group hover:border-[#0066FF]/30 transition-all"
+                className="bg-[#0A1628]/50 border border-white/[0.06] rounded-2xl flex flex-col group hover:border-[#0066FF]/30 hover:-translate-y-0.5 transition-all duration-300"
               >
                 {/* Compact view (always visible) */}
                 <button
@@ -375,7 +375,7 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
                     isOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="px-6 pb-6 space-y-4">
+                  <div className="px-6 pb-6 space-y-4 bg-[#050B14]/50 rounded-b-2xl">
                     {/* Full summary */}
                     <p className="text-white/60 text-sm leading-relaxed">
                       {c.summary}

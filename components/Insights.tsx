@@ -113,8 +113,10 @@ const insightCards = [
 /* ---------- component ---------- */
 export default function Insights() {
   return (
-    <section className="px-6 py-16">
-      <div className="max-w-6xl mx-auto">
+    <section className="px-6 py-16 relative overflow-hidden">
+      {/* Subtle glow orb */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0066FF]/[0.03] blur-[150px] rounded-full pointer-events-none" />
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* header */}
         <div className="mb-10">
           <p className="text-[11px] font-semibold text-[#0066FF] tracking-widest uppercase mb-2">
@@ -131,7 +133,7 @@ export default function Insights() {
         {/* top row: gap ranking + tool breakdown */}
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           {/* most common gaps */}
-          <div className="bg-[#111] border border-white/[0.08] rounded-2xl p-6">
+          <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl p-6">
             <h3 className="text-xs font-semibold text-white/50 tracking-wide uppercase mb-5">
               Most Common Policy Gaps
             </h3>
@@ -147,7 +149,7 @@ export default function Insights() {
                       {count} cases
                     </span>
                   </div>
-                  <div className="h-2 bg-white/[0.06] rounded-full overflow-hidden">
+                  <div className="h-2 bg-white/[0.04] rounded-full overflow-hidden">
                     <div
                       className="h-full rounded-full"
                       style={{
@@ -162,7 +164,7 @@ export default function Insights() {
           </div>
 
           {/* tool breakdown */}
-          <div className="bg-[#111] border border-white/[0.08] rounded-2xl p-6">
+          <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl p-6">
             <h3 className="text-xs font-semibold text-white/50 tracking-wide uppercase mb-5">
               AI Tool Breakdown
             </h3>
@@ -173,7 +175,7 @@ export default function Insights() {
                     <span className="text-sm text-white/70 font-medium truncate mr-3">{tool}</span>
                     <span className="text-xs font-bold text-white/50 shrink-0">{count}</span>
                   </div>
-                  <div className="h-1.5 bg-white/[0.06] rounded-full overflow-hidden">
+                  <div className="h-1.5 bg-white/[0.04] rounded-full overflow-hidden">
                     <div
                       className="h-full bg-[#0066FF] rounded-full transition-all"
                       style={{ width: `${(count / maxToolCount) * 100}%` }}
@@ -188,7 +190,7 @@ export default function Insights() {
         {/* second row: severity + escalation trend */}
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           {/* severity distribution */}
-          <div className="bg-[#111] border border-white/[0.08] rounded-2xl p-6">
+          <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl p-6">
             <h3 className="text-xs font-semibold text-white/50 tracking-wide uppercase mb-5">
               Severity Distribution
             </h3>
@@ -221,7 +223,7 @@ export default function Insights() {
           </div>
 
           {/* escalation trend */}
-          <div className="bg-[#111] border border-white/[0.08] rounded-2xl p-6">
+          <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl p-6">
             <h3 className="text-xs font-semibold text-white/50 tracking-wide uppercase mb-5">
               Avg. Sanction Amount by Year
             </h3>
@@ -234,7 +236,7 @@ export default function Insights() {
                       {avg > 0 ? `$${avg.toLocaleString()}` : "Non-monetary"}
                     </span>
                   </div>
-                  <div className="h-2 bg-white/[0.06] rounded-full overflow-hidden">
+                  <div className="h-2 bg-white/[0.04] rounded-full overflow-hidden">
                     <div
                       className="h-full rounded-full transition-all"
                       style={{
@@ -257,7 +259,7 @@ export default function Insights() {
           {insightCards.map((card, i) => (
             <div
               key={i}
-              className="bg-[#111] border border-white/[0.08] rounded-2xl p-6 hover:border-[#0066FF]/30 transition-colors"
+              className="bg-[#0A1628]/50 border border-white/[0.06] rounded-2xl p-6 hover:border-[#0066FF]/30 hover:-translate-y-0.5 transition-all duration-300"
             >
               <div className="w-9 h-9 rounded-xl bg-[#0066FF]/10 text-[#0066FF] flex items-center justify-center mb-4">
                 {card.icon}

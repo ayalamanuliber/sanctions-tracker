@@ -45,17 +45,32 @@ export default function EscalationCurve() {
   return (
     <section id="escalation" className="py-16 px-6 border-t border-white/[0.06]">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-10">
-          <h2 className="text-3xl md:text-4xl font-black text-white tracking-[-0.03em] mb-2">
-            Escalation Curve
-          </h2>
-          <p className="text-white/50 text-sm">
-            From minor fines to career removal — sanctions are accelerating
-            exponentially
-          </p>
-        </div>
+        <div className="flex flex-col lg:flex-row gap-6 mb-6">
+          {/* Left narrative panel */}
+          <div className="lg:w-1/3 flex flex-col justify-center">
+            <h2 className="text-3xl md:text-4xl font-black text-white tracking-[-0.03em] mb-2">
+              Escalation Curve
+            </h2>
+            <p className="text-white/50 text-sm mb-6">
+              From minor fines to career removal — sanctions are accelerating
+              exponentially
+            </p>
+            <div className="bg-[#0A1628] border border-white/[0.06] rounded-xl p-4">
+              <div className="text-[10px] font-semibold text-white/30 tracking-widest uppercase mb-1">Record Sanction</div>
+              <div className="text-2xl font-black text-[#0066FF]">$109.7K</div>
+              <div className="text-xs text-white/40 mt-1">Brigandi v. Oregon (2026)</div>
+            </div>
+          </div>
 
-        <div className="bg-[#111] border border-white/[0.08] rounded-2xl p-4 md:p-8 overflow-x-auto">
+          {/* Right chart panel */}
+          <div className="lg:w-2/3">
+        <div className="bg-[#0A1628]/80 backdrop-blur-xl border border-white/[0.06] rounded-2xl p-4 md:p-8 overflow-x-auto">
+          <div className="flex items-center gap-2 mb-4">
+            <svg className="w-4 h-4 text-[#0066FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+            <span className="text-xs font-semibold text-white/50 tracking-wide uppercase">Cumulative Judicial Sanctions</span>
+          </div>
           <svg
             viewBox={`0 0 ${W} ${H}`}
             className="w-full h-auto min-w-[600px]"
@@ -121,7 +136,7 @@ export default function EscalationCurve() {
                   cy={p.y}
                   r="5"
                   fill="#0066FF"
-                  stroke="#0A0A0A"
+                  stroke="#050B14"
                   strokeWidth="2.5"
                 />
                 <text
@@ -159,9 +174,11 @@ export default function EscalationCurve() {
             ))}
           </svg>
         </div>
+          </div>
+        </div>
 
         {/* 17-courts callout */}
-        <div className="mt-6 bg-[#0066FF]/10 border border-[#0066FF]/20 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-6 bg-[#0066FF]/5 border border-[#0066FF]/15 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-6">
             <span className="text-5xl font-black text-[#0066FF]">17</span>
             <div>

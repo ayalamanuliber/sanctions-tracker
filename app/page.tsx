@@ -66,7 +66,7 @@ export default function SanctionsTracker() {
   }, [answers]);
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A]">
+    <div className="min-h-screen">
       <Header />
       <Hero />
       <ThreatStats />

@@ -44,13 +44,31 @@ export default function RiskAssessment({ answers, setAnswers }: Props) {
   const strokeOffset = circumference * (1 - liveScore.percent / 100);
 
   return (
-    <section id="assessment" className="py-20 px-6 border-t border-white/[0.06]">
-      <div className="max-w-6xl mx-auto">
+    <section id="assessment" className="relative py-20 px-6 border-t border-white/[0.06] bg-[#050B14]/80 overflow-hidden">
+      {/* Background glow orb */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0066FF]/[0.04] rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="relative max-w-6xl mx-auto">
+        {/* Section header */}
+        <div className="flex flex-col items-center text-center mb-14">
+          <div className="bg-[#0066FF]/10 p-3 rounded-xl mb-5">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0066FF" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h2 className="text-3xl font-bold text-white tracking-[-0.02em] mb-2">
+            Firm Risk Diagnostic
+          </h2>
+          <p className="text-white/40 text-sm max-w-md">
+            Answer these baseline questions to assess your immediate exposure
+          </p>
+        </div>
+
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Sidebar */}
           <div className="lg:w-80 lg:shrink-0">
             <div className="lg:sticky lg:top-20 space-y-4">
-              <div className="bg-[#111] border border-white/[0.08] rounded-2xl p-6">
+              <div className="bg-[#0A1628]/70 backdrop-blur-xl border border-white/[0.06] rounded-2xl p-6">
                 <h3 className="text-xl font-black text-white tracking-[-0.02em] mb-3">
                   Risk Diagnostic
                 </h3>
@@ -82,7 +100,7 @@ export default function RiskAssessment({ answers, setAnswers }: Props) {
 
               {/* Live Score Preview */}
               {answeredCount > 0 && (
-                <div className="bg-[#111] border border-white/[0.08] rounded-2xl p-6 animate-fade-in-up">
+                <div className="bg-[#0A1628]/70 backdrop-blur-xl border border-white/[0.06] rounded-2xl p-6 animate-fade-in-up">
                   <div className="flex items-center gap-4">
                     <div className="relative w-20 h-20 shrink-0">
                       <svg className="w-full h-full -rotate-90" viewBox="0 0 80 80">
@@ -124,15 +142,15 @@ export default function RiskAssessment({ answers, setAnswers }: Props) {
                   key={q.id}
                   className={`border rounded-2xl p-6 transition-all duration-300 ${
                     isNo
-                      ? "bg-[#111] border-red-500/20 shadow-lg shadow-red-950/10"
+                      ? "bg-[#0A1628]/50 border-red-500/20 shadow-lg shadow-red-950/10"
                       : isYes
-                        ? "bg-[#111] border-emerald-500/20"
-                        : "bg-[#111] border-white/[0.08]"
+                        ? "bg-[#0A1628]/50 border-emerald-500/20"
+                        : "bg-[#0A1628]/50 border-white/[0.06]"
                   }`}
                 >
                   <div className="flex flex-col sm:flex-row justify-between gap-4">
                     <div className="flex gap-4 flex-1">
-                      <span className="text-white/20 font-mono text-sm font-bold mt-0.5 shrink-0">
+                      <span className="w-7 h-7 rounded-full bg-white/[0.06] flex items-center justify-center text-xs font-semibold text-white/40 shrink-0 mt-0.5">
                         {String(idx + 1).padStart(2, "0")}
                       </span>
                       <div className="flex-1">
@@ -156,7 +174,7 @@ export default function RiskAssessment({ answers, setAnswers }: Props) {
                         }
                         className={`px-6 py-2.5 rounded-xl text-[11px] font-bold tracking-wide transition-all cursor-pointer ${
                           isYes
-                            ? "bg-emerald-600 text-white"
+                            ? "bg-[#0066FF] text-white shadow-[0_0_15px_rgba(0,102,255,0.4)]"
                             : "bg-white/[0.05] text-white/40 hover:bg-white/[0.08]"
                         }`}
                       >
@@ -168,7 +186,7 @@ export default function RiskAssessment({ answers, setAnswers }: Props) {
                         }
                         className={`px-6 py-2.5 rounded-xl text-[11px] font-bold tracking-wide transition-all cursor-pointer ${
                           isNo
-                            ? "bg-red-600 text-white"
+                            ? "bg-red-500/20 text-red-400 border border-red-500/50"
                             : "bg-white/[0.05] text-white/40 hover:bg-white/[0.08]"
                         }`}
                       >

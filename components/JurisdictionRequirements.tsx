@@ -272,7 +272,7 @@ export default function JurisdictionRequirements() {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-block bg-[#0A1628]/70 border border-white/[0.08] px-3 py-1.5 rounded-full text-[11px] font-semibold text-white/50 tracking-wide uppercase mb-6">
+          <div className="inline-block bg-[#0A1628]/70 border border-white/[0.06] px-3 py-1.5 rounded-full text-[11px] font-semibold text-white/50 tracking-wide uppercase mb-6">
             Jurisdiction Lookup
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -310,7 +310,7 @@ export default function JurisdictionRequirements() {
               }}
               onFocus={() => setIsOpen(true)}
               placeholder="Search by court name, state, or abbreviation..."
-              className="w-full bg-[#0A1628]/70 border border-white/[0.08] rounded-2xl pl-12 pr-4 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-[#0066FF]/50 focus:ring-1 focus:ring-[#0066FF]/20 transition-all text-base"
+              className="w-full bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl pl-12 pr-4 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-[#0066FF]/50 focus:ring-1 focus:ring-[#0066FF]/20 transition-all text-base"
             />
             {query && (
               <button
@@ -340,7 +340,7 @@ export default function JurisdictionRequirements() {
 
           {/* Dropdown */}
           {isOpen && filtered.length > 0 && (
-            <div className="absolute z-50 w-full mt-2 bg-[#0A1628]/70 border border-white/[0.08] rounded-2xl overflow-hidden shadow-2xl shadow-black/40 max-h-80 overflow-y-auto">
+            <div className="absolute z-50 w-full mt-2 bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl overflow-hidden shadow-2xl shadow-black/40 max-h-80 overflow-y-auto">
               {filtered.map((j) => (
                 <button
                   key={j.id}
@@ -372,7 +372,7 @@ export default function JurisdictionRequirements() {
           )}
 
           {isOpen && query && filtered.length === 0 && (
-            <div className="absolute z-50 w-full mt-2 bg-[#0A1628]/70 border border-white/[0.08] rounded-2xl overflow-hidden shadow-2xl shadow-black/40 px-5 py-6 text-center">
+            <div className="absolute z-50 w-full mt-2 bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl overflow-hidden shadow-2xl shadow-black/40 px-5 py-6 text-center">
               <p className="text-white/40 text-sm">
                 No matching jurisdictions found.
               </p>
@@ -382,7 +382,7 @@ export default function JurisdictionRequirements() {
 
         {/* Result Card or Prompt */}
         {selected ? (
-          <div className="bg-[#0A1628]/70 border border-white/[0.08] rounded-2xl overflow-hidden">
+          <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl overflow-hidden">
             {/* Card Header */}
             <div className="px-6 py-5 border-b border-white/[0.06] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div>
@@ -491,7 +491,7 @@ export default function JurisdictionRequirements() {
             </div>
           </div>
         ) : (
-          <div className="bg-[#0A1628]/70 border border-white/[0.08] rounded-2xl px-6 py-12 text-center">
+          <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl px-6 py-12 text-center">
             <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#0066FF]/10 flex items-center justify-center">
               <svg
                 className="w-6 h-6 text-[#0066FF]/60"
@@ -514,7 +514,7 @@ export default function JurisdictionRequirements() {
         )}
 
         {/* Bottom CTA */}
-        <div className="mt-10 bg-[#0A1628]/70 border border-white/[0.08] rounded-2xl px-6 py-8 text-center">
+        <div className="mt-10 bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl px-6 py-8 text-center">
           <p className="text-white/50 text-sm mb-1">
             Don&apos;t see your jurisdiction?
           </p>
@@ -537,7 +537,7 @@ export default function JurisdictionRequirements() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@lawfirm.com"
                 required
-                className="w-full sm:flex-1 bg-[#0A0A0A] border border-white/[0.08] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/25 focus:outline-none focus:border-[#0066FF]/50 focus:ring-1 focus:ring-[#0066FF]/20 transition-all"
+                className="w-full sm:flex-1 bg-[#050B14] border border-white/[0.06] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/25 focus:outline-none focus:border-[#0066FF]/50 focus:ring-1 focus:ring-[#0066FF]/20 transition-all"
               />
               <button
                 type="submit"

@@ -58,10 +58,10 @@ export default function Hero() {
                   View Sanctions Map
                 </a>
                 <a
-                  href="#evidence"
+                  href="#jurisdiction"
                   className="bg-transparent border border-white/[0.08] text-white/70 hover:text-white hover:border-white/20 px-7 py-3.5 rounded-xl font-bold text-sm transition-all text-center"
                 >
-                  Browse Cases
+                  Court Requirements
                 </a>
               </div>
             </div>

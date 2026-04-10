@@ -67,7 +67,15 @@ function ChevronIcon({ open }: { open: boolean }) {
   );
 }
 
-export default function CaseEvidence() {
+import questions from "@/data/questions.json";
+
+interface Props {
+  answers?: Record<string, boolean>;
+  stateFilter?: string | null;
+  onClearStateFilter?: () => void;
+}
+
+export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFilter }: Props) {
   const typedCases = cases as SanctionCase[];
 
   const [severity, setSeverity] = useState("all");
@@ -77,6 +85,16 @@ export default function CaseEvidence() {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState<SortKey>("date-desc");
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [showMyGaps, setShowMyGaps] = useState(false);
+
+  // Get gap IDs from "No" answers
+  const gapIds = Object.entries(answers)
+    .filter(([, v]) => v === false)
+    .map(([k]) => k);
+  const hasGaps = gapIds.length > 0;
+
+  // Apply external state filter from map click
+  const effectiveState = stateFilter || state;
 
   const uniqueStates = useMemo(
     () => [...new Set(typedCases.map((c) => c.state))].sort(),
@@ -92,14 +110,17 @@ export default function CaseEvidence() {
     const q = search.toLowerCase().trim();
     return typedCases.filter((c) => {
       if (severity !== "all" && c.severity !== severity) return false;
-      if (state !== "all" && c.state !== state) return false;
+      if (effectiveState !== "all" && c.state !== effectiveState) return false;
       if (tool !== "all" && c.ai_tool_used !== tool) return false;
       if (year !== "all" && !c.date.startsWith(year)) return false;
       if (q && !c.case_name.toLowerCase().includes(q) && !c.court.toLowerCase().includes(q))
         return false;
+      if (showMyGaps && gapIds.length > 0) {
+        if (!c.policy_gap_ids.some((g: string) => gapIds.includes(g))) return false;
+      }
       return true;
     });
-  }, [typedCases, severity, state, tool, year, search]);
+  }, [typedCases, severity, effectiveState, tool, year, search, showMyGaps, gapIds]);
 
   const sorted = useMemo(() => {
     const arr = [...filtered];
@@ -137,8 +158,44 @@ export default function CaseEvidence() {
           </h2>
         </div>
 
+        {/* State filter from map click */}
+        {stateFilter && (
+          <div className="bg-[#0066FF]/10 border border-[#0066FF]/20 rounded-2xl p-4 mb-4 flex items-center justify-between">
+            <span className="text-white/70 text-sm">
+              Showing cases in <span className="text-[#0066FF] font-bold">{stateFilter}</span> (from map)
+            </span>
+            <button
+              onClick={onClearStateFilter}
+              className="text-white/40 hover:text-white text-sm font-semibold cursor-pointer"
+            >
+              Clear filter
+            </button>
+          </div>
+        )}
+
         {/* Filter bar */}
         <div className="bg-[#111] border border-white/[0.08] rounded-2xl p-4 mb-6 space-y-4">
+          {/* Gap filter toggle */}
+          {hasGaps && (
+            <div className="flex items-center gap-3 pb-3 border-b border-white/[0.06]">
+              <button
+                onClick={() => setShowMyGaps(!showMyGaps)}
+                className={`px-4 py-2 rounded-xl text-[11px] font-bold tracking-wide transition-all cursor-pointer ${
+                  showMyGaps
+                    ? "bg-red-600 text-white"
+                    : "bg-white/[0.05] text-white/40 hover:bg-white/[0.08]"
+                }`}
+              >
+                {showMyGaps ? "Showing My Gaps" : "Show Cases Matching My Gaps"}
+              </button>
+              {showMyGaps && (
+                <span className="text-white/30 text-[11px]">
+                  Filtering to cases linked to your {gapIds.length} gap{gapIds.length !== 1 ? "s" : ""}
+                </span>
+              )}
+            </div>
+          )}
+
           {/* Row 1: Severity pills */}
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-white/30 text-[11px] font-semibold tracking-wide uppercase mr-1">

@@ -203,9 +203,19 @@ export default function RiskAssessment({ answers, setAnswers }: Props) {
                         <div className="text-white/25 text-[10px] font-semibold tracking-wide uppercase mb-2">
                           Why This Matters
                         </div>
-                        <p className="text-white/50 text-sm leading-relaxed">
+                        <p className="text-white/50 text-sm leading-relaxed mb-3">
                           {q.why}
                         </p>
+                        {"remediation" in q && typeof (q as { remediation?: string }).remediation === "string" && (
+                          <div className="bg-[#0066FF]/5 border border-[#0066FF]/15 rounded-xl p-3">
+                            <div className="text-[#0066FF] text-[10px] font-semibold tracking-wide uppercase mb-1">
+                              What compliant firms do
+                            </div>
+                            <p className="text-white/60 text-xs leading-relaxed">
+                              {(q as { remediation: string }).remediation}
+                            </p>
+                          </div>
+                        )}
                       </div>
                     </div>
                   )}

@@ -87,7 +87,11 @@ interface TooltipInfo {
   y: number;
 }
 
-export default function SanctionsMap() {
+interface Props {
+  onStateClick?: (stateCode: string) => void;
+}
+
+export default function SanctionsMap({ onStateClick }: Props) {
   const [tooltip, setTooltip] = useState<TooltipInfo | null>(null);
 
   const stateData = useMemo(() => {
@@ -169,6 +173,10 @@ export default function SanctionsMap() {
                 className="transition-all duration-200 cursor-pointer hover:brightness-150"
                 onMouseEnter={(e) => handleMouseEnter(e, code)}
                 onMouseLeave={handleMouseLeave}
+                onClick={() => {
+                  const count = stateData[code]?.count || 0;
+                  if (count > 0 && onStateClick) onStateClick(code);
+                }}
               />
             ))}
           </svg>

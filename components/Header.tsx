@@ -21,6 +21,7 @@ export default function Header() {
           <a href="#map" className="hover:text-white/80 transition-colors">Map</a>
           <a href="#assessment" className="hover:text-white/80 transition-colors">Assessment</a>
           <a href="#insights" className="hover:text-white/80 transition-colors">Insights</a>
+          <a href="#jurisdiction" className="hover:text-white/80 transition-colors">Courts</a>
           <a href="#evidence" className="hover:text-white/80 transition-colors">Evidence</a>
         </div>
         <Link

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -39,6 +40,12 @@ export default function Footer() {
                 className="text-[13px] text-white/40 hover:text-white/80 transition-colors"
               >
                 AI by Practice Area (10)
+              </Link>
+              <Link
+                href="/"
+                className="text-[13px] text-[#0066FF] hover:text-[#4d94ff] transition-colors font-semibold"
+              >
+                AI Sanctions Tracker
               </Link>
             </div>
           </div>
@@ -130,9 +137,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col sm:flex-row justify-between items-center border-t border-white/[0.06] pt-5 gap-4">
           <div className="flex items-center gap-2.5">
-            <div className="w-5 h-4 rounded-sm bg-white/20 flex items-center justify-center">
-              <span className="text-white text-[7px] font-black">AV</span>
-            </div>
+            <Image src="/av-logo-white.png" alt="AV" width={20} height={16} className="opacity-40" />
             <span className="text-[13px] font-bold text-white/40 tracking-[0.05em]">
               AI VORTEX
             </span>

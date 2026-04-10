@@ -58,6 +58,50 @@ export default function ResultsMirror({ answers }: Props) {
   const circumference = 2 * Math.PI * 90;
   const strokeOffset = circumference * (1 - scoreData.percent / 100);
 
+  // Generate shareable URL
+  const shareUrl = typeof window !== "undefined"
+    ? `${window.location.origin}${window.location.pathname}${window.location.hash}`
+    : "";
+
+  // Score-conditional CTA
+  const getCTA = () => {
+    if (scoreData.percent < 30) {
+      return {
+        headline: "Your Firm Has Critical Exposure",
+        description: "Multiple gaps align with cases that ended careers. An emergency review can identify your highest-risk filings.",
+        buttonText: "Schedule Emergency Gap Review",
+        buttonUrl: "https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit",
+        bgClass: "bg-red-600",
+      };
+    } else if (scoreData.percent < 50) {
+      return {
+        headline: "Significant Gaps Detected",
+        description: "Your firm has exposure in areas where courts have imposed five- and six-figure sanctions.",
+        buttonText: "Book a Policy Review",
+        buttonUrl: "https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit",
+        bgClass: "bg-[#0066FF]",
+      };
+    } else if (scoreData.percent < 75) {
+      return {
+        headline: "Moderate Coverage — Gaps Remain",
+        description: "You're ahead of most firms, but exposed in areas where enforcement is accelerating.",
+        buttonText: "Subscribe to Ruling Alerts",
+        buttonUrl: "#subscribe",
+        bgClass: "bg-[#0066FF]",
+      };
+    } else {
+      return {
+        headline: "Strong Policy Posture",
+        description: "Your firm is well-positioned. Help your network — share this tool with colleagues who may not be as prepared.",
+        buttonText: "Share This Tool",
+        buttonUrl: shareUrl,
+        bgClass: "bg-emerald-600",
+      };
+    }
+  };
+
+  const cta = getCTA();
+
   return (
     <section className="py-20 px-6 bg-[#0d0d0d] border-y border-white/[0.06]">
       <div className="max-w-6xl mx-auto">
@@ -68,25 +112,10 @@ export default function ResultsMirror({ answers }: Props) {
               Risk Profile
             </div>
             <div className="relative w-52 h-52">
-              <svg
-                className="w-full h-full -rotate-90"
-                viewBox="0 0 200 200"
-              >
+              <svg className="w-full h-full -rotate-90" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="8" />
                 <circle
-                  cx="100"
-                  cy="100"
-                  r="90"
-                  fill="none"
-                  stroke="rgba(255,255,255,0.06)"
-                  strokeWidth="8"
-                />
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="90"
-                  fill="none"
-                  strokeWidth="8"
-                  strokeLinecap="round"
+                  cx="100" cy="100" r="90" fill="none" strokeWidth="8" strokeLinecap="round"
                   stroke="currentColor"
                   strokeDasharray={circumference}
                   strokeDashoffset={strokeOffset}
@@ -94,9 +123,7 @@ export default function ResultsMirror({ answers }: Props) {
                 />
               </svg>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span
-                  className={`text-5xl font-black tracking-[-0.03em] ${scoreData.color}`}
-                >
+                <span className={`text-5xl font-black tracking-[-0.03em] ${scoreData.color}`}>
                   {scoreData.percent}%
                 </span>
                 <span className="text-white/25 text-[10px] font-semibold tracking-wide mt-1">
@@ -104,15 +131,25 @@ export default function ResultsMirror({ answers }: Props) {
                 </span>
               </div>
             </div>
-            <div
-              className={`mt-6 px-6 py-2 rounded-xl border ${scoreData.borderColor} bg-white/[0.02]`}
-            >
-              <span
-                className={`text-lg font-black tracking-[-0.02em] ${scoreData.color}`}
-              >
+            <div className={`mt-6 px-6 py-2 rounded-xl border ${scoreData.borderColor} bg-white/[0.02]`}>
+              <span className={`text-lg font-black tracking-[-0.02em] ${scoreData.color}`}>
                 {scoreData.level} RISK
               </span>
             </div>
+
+            {/* Share button */}
+            {shareUrl && (
+              <button
+                onClick={() => { navigator.clipboard.writeText(shareUrl); }}
+                className="mt-4 text-[11px] text-white/30 hover:text-white/60 font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
+              >
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg>
+                Copy shareable link
+              </button>
+            )}
           </div>
 
           {/* Gaps + CTA */}
@@ -124,17 +161,10 @@ export default function ResultsMirror({ answers }: Props) {
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
                   {scoreData.gaps.map((gap) => (
-                    <div
-                      key={gap.id}
-                      className="bg-[#0A0A0A] border border-white/[0.08] p-5 rounded-2xl hover:border-red-500/20 transition-all"
-                    >
-                      <div className="text-red-400 text-[10px] font-semibold tracking-wide uppercase mb-2">
-                        Exposure
-                      </div>
+                    <div key={gap.id} className="bg-[#0A0A0A] border border-white/[0.08] p-5 rounded-2xl hover:border-red-500/20 transition-all">
+                      <div className="text-red-400 text-[10px] font-semibold tracking-wide uppercase mb-2">Exposure</div>
                       <h5 className="text-white font-bold text-sm mb-1.5">
-                        {gap.id
-                          .replace(/-/g, " ")
-                          .replace(/\b\w/g, (l) => l.toUpperCase())}
+                        {gap.id.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}
                       </h5>
                       <p className="text-white/50 text-xs leading-relaxed">
                         {gap.proof_snippet.split(" — ")[1] || gap.proof_snippet}
@@ -145,31 +175,43 @@ export default function ResultsMirror({ answers }: Props) {
               </>
             )}
 
-            {/* CTA */}
-            <div className="bg-[#0066FF] rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            {/* Score-conditional CTA */}
+            <div className={`${cta.bgClass} rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6`}>
               <div>
                 <h4 className="text-2xl font-black text-white tracking-[-0.02em] mb-1">
-                  Assessment Complete
+                  {cta.headline}
                 </h4>
-                <p className="text-white/70 text-sm">
-                  {scoreData.percent < 50
-                    ? "Your firm has significant exposure. Get a detailed gap analysis."
-                    : "Your posture is developing. Subscribe for governance updates."}
-                </p>
+                <p className="text-white/80 text-sm">{cta.description}</p>
               </div>
-              <a
-                href="https://www.aivortex.io/legal"
-                className="bg-white text-[#0A0A0A] px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-white/90 transition-colors whitespace-nowrap"
-              >
-                Visit AI Vortex
-              </a>
+              {cta.buttonUrl.startsWith("http") ? (
+                <a
+                  href={cta.buttonUrl}
+                  target="_blank"
+                  rel="noopener"
+                  className="bg-white text-[#0A0A0A] px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-white/90 transition-colors whitespace-nowrap"
+                >
+                  {cta.buttonText}
+                </a>
+              ) : cta.buttonText === "Share This Tool" ? (
+                <button
+                  onClick={() => { navigator.clipboard.writeText(shareUrl); alert("Link copied!"); }}
+                  className="bg-white text-[#0A0A0A] px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-white/90 transition-colors whitespace-nowrap cursor-pointer"
+                >
+                  {cta.buttonText}
+                </button>
+              ) : (
+                <a
+                  href={cta.buttonUrl}
+                  className="bg-white text-[#0A0A0A] px-7 py-3.5 rounded-xl font-bold text-sm hover:bg-white/90 transition-colors whitespace-nowrap"
+                >
+                  {cta.buttonText}
+                </a>
+              )}
             </div>
 
             {/* Email signup */}
-            <div className="mt-8 bg-[#111] border border-white/[0.08] rounded-2xl p-6">
-              <h5 className="text-white font-bold text-sm mb-4">
-                Get weekly sanctions updates
-              </h5>
+            <div id="subscribe" className="mt-8 bg-[#111] border border-white/[0.08] rounded-2xl p-6">
+              <h5 className="text-white font-bold text-sm mb-4">Get weekly sanctions updates</h5>
               <div className="flex flex-col sm:flex-row gap-2">
                 <input
                   type="email"

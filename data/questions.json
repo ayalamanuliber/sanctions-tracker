@@ -5,7 +5,8 @@
     "category": "tool-governance",
     "risk_weight": 15,
     "proof_snippet": "Johnson v. Dunn — Three Butler Snow attorneys disqualified. Court found firm had no written AI policy despite using AI tools regularly.",
-    "why": "Courts are treating the absence of a written policy as evidence of systemic negligence. In Johnson, the lack of policy turned an individual error into firm-wide liability."
+    "why": "Courts are treating the absence of a written policy as evidence of systemic negligence. In Johnson, the lack of policy turned an individual error into firm-wide liability.",
+    "remediation": "Draft and distribute a firm-wide AI use policy. Require all attorneys to sign an acknowledgment. Review and update quarterly as court rules evolve."
   },
   {
     "id": "citation-verification",
@@ -13,7 +14,8 @@
     "category": "filing-safeguards",
     "risk_weight": 20,
     "proof_snippet": "Couvrette v. Wisnovsky — $109,700 sanctions. 23 fabricated citations and 8 false quotations across three filings. Largest AI sanction in U.S. history.",
-    "why": "Every single AI sanctions case involves unverified citations. Courts view failure to verify as a violation of Rule 11 obligations. This is the #1 risk factor."
+    "why": "Every single AI sanctions case involves unverified citations. Courts view failure to verify as a violation of Rule 11 obligations. This is the #1 risk factor.",
+    "remediation": "Require a second attorney to independently verify every AI-generated citation against Westlaw, CourtListener, or Google Scholar before filing. No self-verification."
   },
   {
     "id": "paid-tool-verification",
@@ -21,7 +23,8 @@
     "category": "filing-safeguards",
     "risk_weight": 12,
     "proof_snippet": "United States v. Farris — CJA fees denied, attorney removed. Brief filename read 'CoCounsel Skill Results.' Paid tool hallucinated. Court: 'The tool's pedigree is no defense.'",
-    "why": "Courts have now sanctioned attorneys for trusting paid tools like CoCounsel (Westlaw). K&L Gates was sanctioned in Lacey despite using CoCounsel. Paying for AI does not equal verification."
+    "why": "Courts have now sanctioned attorneys for trusting paid tools like CoCounsel (Westlaw). K&L Gates was sanctioned in Lacey despite using CoCounsel. Paying for AI does not equal verification.",
+    "remediation": "Apply the same verification protocol to ALL AI tools — free and paid. CoCounsel, Lexis+AI, and CaseText can and do hallucinate. Document the verification step."
   },
   {
     "id": "attorney-training",
@@ -29,7 +32,8 @@
     "category": "training-protocols",
     "risk_weight": 10,
     "proof_snippet": "Montes v. Suns — Court ordered mandatory AI ethics training as part of sanctions. Judge forwarded ruling to every federal judge in Arizona.",
-    "why": "ABA Formal Opinion 512 requires AI competency. Courts are now ordering training as sanctions — meaning they expect it to already be in place. Untrained attorneys are walking liabilities."
+    "why": "ABA Formal Opinion 512 requires AI competency. Courts are now ordering training as sanctions — meaning they expect it to already be in place. Untrained attorneys are walking liabilities.",
+    "remediation": "Implement mandatory annual AI ethics CLE training. Cover: hallucination risks, verification protocols, disclosure requirements, and ethical obligations under ABA Opinion 512."
   },
   {
     "id": "supervision-protocol",
@@ -37,7 +41,8 @@
     "category": "accountability",
     "risk_weight": 12,
     "proof_snippet": "Johnson v. Dunn — Practice group leader's failure to review called 'particularly egregious.' Three attorneys disqualified, firm referred to Alabama State Bar.",
-    "why": "Supervisory liability is expanding. In Lacey, two BigLaw firms were sanctioned because the supervising attorney reviewed for style but not substance. Courts expect substantive review."
+    "why": "Supervisory liability is expanding. In Lacey, two BigLaw firms were sanctioned because the supervising attorney reviewed for style but not substance. Courts expect substantive review.",
+    "remediation": "Designate a partner or AI governance committee to review all AI-assisted filings before submission. Create a sign-off checklist. Every signer is personally liable."
   },
   {
     "id": "ai-disclosure-protocol",
@@ -45,7 +50,8 @@
     "category": "disclosure-compliance",
     "risk_weight": 8,
     "proof_snippet": "Prososki v. Regan — Attorney denied AI use despite 57 defective citations out of 63. Brief stricken. Referred for discipline and facing suspension.",
-    "why": "300+ courts now have AI disclosure rules. Denying AI use when evidence suggests otherwise is treated as an aggravating factor. Prososki's denial turned sanctions into potential disbarment."
+    "why": "300+ courts now have AI disclosure rules. Denying AI use when evidence suggests otherwise is treated as an aggravating factor. Prososki's denial turned sanctions into potential disbarment.",
+    "remediation": "Maintain a current list of AI disclosure requirements for every jurisdiction where your firm practices. Build disclosure language into your filing templates."
   },
   {
     "id": "engagement-letter-ai",
@@ -53,7 +59,8 @@
     "category": "client-governance",
     "risk_weight": 6,
     "proof_snippet": "Johnson v. Dunn — Firm disqualified from representing client. Client's case damaged by undisclosed AI use. No engagement letter provisions for AI.",
-    "why": "When AI errors damage a client's case, the first question in malpractice litigation will be: did the client consent to AI use? Engagement letters are your first line of defense."
+    "why": "When AI errors damage a client's case, the first question in malpractice litigation will be: did the client consent to AI use? Engagement letters are your first line of defense.",
+    "remediation": "Add an AI use clause to all engagement letters specifying: which tools may be used, how client data is protected, and that AI output is always human-verified before delivery."
   },
   {
     "id": "approved-tools-list",
@@ -61,7 +68,8 @@
     "category": "tool-governance",
     "risk_weight": 8,
     "proof_snippet": "Lacey v. State Farm — K&L Gates sanctioned $31,100. Attorney used both CoCounsel AND Google Gemini without firm guidelines on either tool.",
-    "why": "Shadow AI is the biggest governance risk. When attorneys use unapproved tools, the firm has no visibility and no defense. An approved tools list creates accountability."
+    "why": "Shadow AI is the biggest governance risk. When attorneys use unapproved tools, the firm has no visibility and no defense. An approved tools list creates accountability.",
+    "remediation": "Create and maintain an approved AI tools list. Specify permitted use cases for each tool. Require approval before any new tool is used on client matters. Block consumer-grade tools on firm networks."
   },
   {
     "id": "audit-trail",
@@ -69,7 +77,8 @@
     "category": "accountability",
     "risk_weight": 5,
     "proof_snippet": "United States v. Farris — Court caught AI use from the filename 'CoCounsel Skill Results.' Attorney had no documentation of what was AI-generated vs. human-written.",
-    "why": "When sanctions hit, courts examine the entire drafting process. An audit trail proves good faith. Without one, every filing becomes suspect — and sanctions can cascade across cases."
+    "why": "When sanctions hit, courts examine the entire drafting process. An audit trail proves good faith. Without one, every filing becomes suspect — and sanctions can cascade across cases.",
+    "remediation": "Implement a tagging system in your document workflow: mark AI-drafted sections, log which tool was used, and record the verification step. This creates a defensible record."
   },
   {
     "id": "incident-response",
@@ -77,6 +86,7 @@
     "category": "incident-response",
     "risk_weight": 4,
     "proof_snippet": "Renfer/Fivehouse — AUSA panicked after losing a draft, had AI rewrite it, then tried to cover it up. Fired by DOJ. No incident response plan existed.",
-    "why": "Courts treat cover-ups far more severely than errors. A documented response plan — immediate disclosure, correction filing, client notification — can turn a sanction into a warning."
+    "why": "Courts treat cover-ups far more severely than errors. A documented response plan — immediate disclosure, correction filing, client notification — can turn a sanction into a warning.",
+    "remediation": "Create a three-step protocol: (1) Immediately disclose to the court via corrective filing. (2) Notify the client with a candid explanation. (3) Document the root cause and update internal protocols."
   }
 ]

@@ -115,12 +115,12 @@ export default function PolicyRecommendations({ answers }: Props) {
             return (
               <div
                 key={rec.num}
-                className={`border rounded-2xl p-6 transition-all group ${
+                className={`border rounded-2xl p-6 transition-all duration-300 group hover:border-[#0066FF]/30 hover:-translate-y-0.5 ${
                   isGap
-                    ? "bg-[#111] border-red-500/20 shadow-lg shadow-red-950/10"
+                    ? "bg-[#0A1628]/50 border-red-500/20 shadow-lg shadow-red-950/10"
                     : isCovered
-                      ? "bg-[#111] border-emerald-500/15 opacity-70"
-                      : "bg-[#111] border-white/[0.08]"
+                      ? "bg-[#0A1628]/50 border-emerald-500/15 opacity-70"
+                      : "bg-[#0A1628]/50 border-white/[0.06]"
                 }`}
               >
                 <div className="flex items-start gap-4">
@@ -157,7 +157,7 @@ export default function PolicyRecommendations({ answers }: Props) {
                       {rec.description}
                     </p>
                     {isGap && (
-                      <div className="bg-[#0A0A0A] border border-white/[0.06] rounded-xl p-3 mb-3">
+                      <div className="bg-[#050B14]/80 border border-white/[0.06] rounded-xl p-3 mb-3">
                         <div className="text-[10px] font-semibold text-[#0066FF] tracking-wide uppercase mb-1">
                           What compliant firms do
                         </div>
@@ -176,7 +176,7 @@ export default function PolicyRecommendations({ answers }: Props) {
           })}
         </div>
 
-        <div className="mt-10 bg-[#111] border border-white/[0.08] rounded-2xl p-8 text-center">
+        <div className="mt-10 bg-[#0A1628]/50 border border-white/[0.06] rounded-2xl p-8 text-center">
           <h4 className="text-xl font-black text-white tracking-[-0.02em] mb-2">
             Need help implementing these?
           </h4>

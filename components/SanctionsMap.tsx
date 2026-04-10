@@ -144,7 +144,7 @@ export default function SanctionsMap({ onStateClick }: Props) {
 
   return (
     <section className="w-full px-4 md:px-6 py-12">
-      <div className="max-w-5xl mx-auto bg-[#111] border border-white/[0.08] rounded-2xl p-6 md:p-10">
+      <div className="max-w-5xl mx-auto bg-[#0A1628]/80 backdrop-blur-xl border border-white/[0.06] rounded-2xl p-6 md:p-10 relative overflow-hidden">
         {/* Header */}
         <div className="mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-2">
@@ -154,6 +154,9 @@ export default function SanctionsMap({ onStateClick }: Props) {
             Geographic distribution of AI-related court sanctions across the United States
           </p>
         </div>
+
+        {/* Inner glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-[#0066FF]/5 blur-[100px] rounded-full pointer-events-none" />
 
         {/* Map */}
         <div className="relative w-full">
@@ -184,7 +187,7 @@ export default function SanctionsMap({ onStateClick }: Props) {
           {/* Tooltip */}
           {tooltip && (
             <div
-              className="absolute z-50 pointer-events-none bg-[#1a1a1a] border border-white/[0.12] rounded-xl px-4 py-3 shadow-2xl -translate-x-1/2 -translate-y-full"
+              className="absolute z-50 pointer-events-none bg-[#0A1628] border border-white/[0.08] rounded-xl px-4 py-3 shadow-2xl -translate-x-1/2 -translate-y-full"
               style={{ left: tooltip.x, top: tooltip.y }}
             >
               <div className="text-white font-semibold text-sm mb-1">

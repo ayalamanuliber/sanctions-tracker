@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import questions from "@/data/questions.json";
 
 interface PolicyQuestion {
@@ -20,18 +21,40 @@ export default function RiskAssessment({ answers, setAnswers }: Props) {
   const answeredCount = Object.keys(answers).length;
   const typedQuestions = questions as PolicyQuestion[];
 
+  const liveScore = useMemo(() => {
+    const totalPossible = typedQuestions.reduce((acc, q) => acc + q.risk_weight, 0);
+    const earned = Object.entries(answers).reduce((acc, [id, val]) => {
+      const q = typedQuestions.find((q) => q.id === id);
+      return val === true ? acc + (q?.risk_weight || 0) : acc;
+    }, 0);
+    const percent = answeredCount === 0 ? 0 : Math.round((earned / totalPossible) * 100);
+    const noCount = Object.values(answers).filter((v) => v === false).length;
+
+    let level: string, color: string;
+    if (answeredCount === 0) { level = "—"; color = "text-white/30"; }
+    else if (percent < 40) { level = "CRITICAL"; color = "text-red-400"; }
+    else if (percent < 70) { level = "HIGH"; color = "text-orange-400"; }
+    else if (percent < 90) { level = "MODERATE"; color = "text-yellow-400"; }
+    else { level = "LOW"; color = "text-emerald-400"; }
+
+    return { percent, level, color, noCount };
+  }, [answers, answeredCount, typedQuestions]);
+
+  const circumference = 2 * Math.PI * 36;
+  const strokeOffset = circumference * (1 - liveScore.percent / 100);
+
   return (
     <section id="assessment" className="py-20 px-6 border-t border-white/[0.06]">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Sidebar */}
           <div className="lg:w-80 lg:shrink-0">
-            <div className="lg:sticky lg:top-20">
+            <div className="lg:sticky lg:top-20 space-y-4">
               <div className="bg-[#111] border border-white/[0.08] rounded-2xl p-6">
                 <h3 className="text-xl font-black text-white tracking-[-0.02em] mb-3">
                   Risk Diagnostic
                 </h3>
-                <p className="text-white/40 text-sm leading-relaxed mb-6">
+                <p className="text-white/50 text-sm leading-relaxed mb-6">
                   These questions mirror what judges ask in Rule 11 hearings.
                   Each &ldquo;No&rdquo; reveals the ruling that punishes that
                   gap.
@@ -56,6 +79,37 @@ export default function RiskAssessment({ answers, setAnswers }: Props) {
                   Your answers never leave your browser.
                 </p>
               </div>
+
+              {/* Live Score Preview */}
+              {answeredCount > 0 && (
+                <div className="bg-[#111] border border-white/[0.08] rounded-2xl p-6 animate-fade-in-up">
+                  <div className="flex items-center gap-4">
+                    <div className="relative w-20 h-20 shrink-0">
+                      <svg className="w-full h-full -rotate-90" viewBox="0 0 80 80">
+                        <circle cx="40" cy="40" r="36" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="5" />
+                        <circle
+                          cx="40" cy="40" r="36" fill="none" strokeWidth="5" strokeLinecap="round"
+                          stroke="currentColor"
+                          strokeDasharray={circumference}
+                          strokeDashoffset={strokeOffset}
+                          className={`${liveScore.color} transition-all duration-700 ease-out`}
+                        />
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className={`text-lg font-black ${liveScore.color}`}>{liveScore.percent}%</span>
+                      </div>
+                    </div>
+                    <div>
+                      <div className={`text-sm font-black tracking-[-0.02em] ${liveScore.color}`}>
+                        {liveScore.level} RISK
+                      </div>
+                      <div className="text-[10px] text-white/30 font-medium mt-1">
+                        {liveScore.noCount} gap{liveScore.noCount !== 1 ? "s" : ""} identified
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -141,7 +195,7 @@ export default function RiskAssessment({ answers, setAnswers }: Props) {
                           </svg>
                           The Consequence
                         </div>
-                        <p className="text-white/50 text-sm leading-relaxed border-l-2 border-red-500/30 pl-4">
+                        <p className="text-white/60 text-sm leading-relaxed border-l-2 border-red-500/30 pl-4">
                           &ldquo;{q.proof_snippet}&rdquo;
                         </p>
                       </div>
@@ -149,7 +203,7 @@ export default function RiskAssessment({ answers, setAnswers }: Props) {
                         <div className="text-white/25 text-[10px] font-semibold tracking-wide uppercase mb-2">
                           Why This Matters
                         </div>
-                        <p className="text-white/40 text-sm leading-relaxed">
+                        <p className="text-white/50 text-sm leading-relaxed">
                           {q.why}
                         </p>
                       </div>

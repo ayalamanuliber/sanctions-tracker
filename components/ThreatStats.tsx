@@ -15,7 +15,7 @@ export default function ThreatStats() {
           <div key={i} className="bg-[#111] border border-white/[0.08] rounded-2xl p-6">
             <div className="text-[11px] font-semibold text-white/35 tracking-wide uppercase mb-3">{item.label}</div>
             <div className="text-3xl md:text-4xl font-black text-white tracking-[-0.03em] mb-1">{item.value}</div>
-            <div className="text-[11px] text-white/30 font-medium">{item.note}</div>
+            <div className="text-[11px] text-white/40 font-medium">{item.note}</div>
           </div>
         ))}
       </div>

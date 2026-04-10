@@ -136,7 +136,7 @@ export default function ResultsMirror({ answers }: Props) {
                           .replace(/-/g, " ")
                           .replace(/\b\w/g, (l) => l.toUpperCase())}
                       </h5>
-                      <p className="text-white/30 text-xs leading-relaxed">
+                      <p className="text-white/50 text-xs leading-relaxed">
                         {gap.proof_snippet.split(" — ")[1] || gap.proof_snippet}
                       </p>
                     </div>

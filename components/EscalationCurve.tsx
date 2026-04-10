@@ -49,7 +49,7 @@ export default function EscalationCurve() {
           <h2 className="text-3xl md:text-4xl font-black text-white tracking-[-0.03em] mb-2">
             Escalation Curve
           </h2>
-          <p className="text-white/40 text-sm">
+          <p className="text-white/50 text-sm">
             From minor fines to career removal — sanctions are accelerating
             exponentially
           </p>
@@ -168,7 +168,7 @@ export default function EscalationCurve() {
               <p className="text-white font-bold text-sm">
                 One day. Seventeen courts.
               </p>
-              <p className="text-white/40 text-sm">
+              <p className="text-white/60 text-sm">
                 US court decisions flagging AI hallucinations — March 31, 2026
               </p>
             </div>

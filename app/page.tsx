@@ -2,10 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import ThreatStats from "@/components/ThreatStats";
-import SanctionsMap from "@/components/SanctionsMap";
-import EscalationCurve from "@/components/EscalationCurve";
+import SanctionsGlobe from "@/components/SanctionsGlobe";
 import RiskAssessment from "@/components/RiskAssessment";
 import ResultsMirror from "@/components/ResultsMirror";
 import Insights from "@/components/Insights";
@@ -38,7 +35,6 @@ export default function SanctionsTracker() {
   const [answers, setAnswers] = useState<Record<string, boolean>>({});
   const [stateFilter, setStateFilter] = useState<string | null>(null);
 
-  // Decode shared results from URL hash
   useEffect(() => {
     if (typeof window !== "undefined" && window.location.hash.includes("r=")) {
       const decoded = decodeHash(window.location.hash);
@@ -51,7 +47,6 @@ export default function SanctionsTracker() {
     }
   }, []);
 
-  // Update URL hash when answers change
   useEffect(() => {
     const ids = [
       "written-ai-policy", "citation-verification", "paid-tool-verification",
@@ -68,15 +63,7 @@ export default function SanctionsTracker() {
   return (
     <div className="min-h-screen">
       <Header />
-      <Hero />
-      <ThreatStats />
-      <SanctionsMap onStateClick={(st) => {
-        setStateFilter(st);
-        setTimeout(() => {
-          document.getElementById("evidence")?.scrollIntoView({ behavior: "smooth" });
-        }, 100);
-      }} />
-      <EscalationCurve />
+      <SanctionsGlobe />
       <RiskAssessment answers={answers} setAnswers={setAnswers} />
       <ResultsMirror answers={answers} />
       <Insights />

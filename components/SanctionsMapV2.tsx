@@ -86,11 +86,19 @@ interface Props {
 export default function SanctionsMapV2({ onStateClick }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const tipRef = useRef<HTMLDivElement>(null);
+  const zoomBehaviorRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown> | null>(null);
 
   const [activeSev, setActiveSev] = useState<string>("all");
   const [railTab, setRailTab] = useState<"cases" | "states">("cases");
   const [selectedCase, setSelectedCase] = useState<Case | null>(null);
   const [hoverCaseId, setHoverCaseId] = useState<string | null>(null);
+  const [zoomLevel, setZoomLevel] = useState(1);
+
+  // Refs so d3 closures read the current value (not the one captured at setup time)
+  const activeSevRef = useRef(activeSev);
+  const hoverCaseIdRef = useRef(hoverCaseId);
+  useEffect(() => { activeSevRef.current = activeSev; }, [activeSev]);
+  useEffect(() => { hoverCaseIdRef.current = hoverCaseId; }, [hoverCaseId]);
 
   const filteredCases = useMemo(() => {
     return SX.cases.filter((c) => activeSev === "all" || c.severity === activeSev);
@@ -116,8 +124,21 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
         const pathGen = d3.geoPath(projection);
 
         const svg = d3.select(svgRef.current);
+        const gZoom = svg.select<SVGGElement>("#smv2-g-zoom");
         const gStates = svg.select<SVGGElement>("#smv2-g-states");
         const gPins = svg.select<SVGGElement>("#smv2-g-pins");
+
+        // Zoom + pan behavior — applied to the wrapper group so tooltip positioning
+        // can still use getBoundingClientRect() on individual pins.
+        const zoomBehavior = d3.zoom<SVGSVGElement, unknown>()
+          .scaleExtent([1, 8])
+          .translateExtent([[-100, -100], [1060, 700]])
+          .on("zoom", (event) => {
+            gZoom.attr("transform", event.transform.toString());
+            setZoomLevel(event.transform.k);
+          });
+        svg.call(zoomBehavior).on("dblclick.zoom", null);
+        zoomBehaviorRef.current = zoomBehavior;
 
         gStates.selectAll("*").remove();
         for (const feat of statesFeat.features) {
@@ -153,7 +174,8 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
             const [cx, cy] = centroid;
 
             list.forEach((c, i) => {
-              if (activeSev !== "all" && c.severity !== activeSev) return;
+              const currentSev = activeSevRef.current;
+              if (currentSev !== "all" && c.severity !== currentSev) return;
               const n = list.length;
               let x = cx, y = cy;
               if (n > 1) {
@@ -165,7 +187,7 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
               const color = SEV_COLOR[c.severity] || "#3B82F6";
 
               const g = gPins.append("g")
-                .attr("class", "smv2-pin-g" + (hoverCaseId === c.id ? " hi" : ""))
+                .attr("class", "smv2-pin-g" + (hoverCaseIdRef.current === c.id ? " hi" : ""))
                 .attr("transform", `translate(${x},${y})`)
                 .attr("data-case-id", c.id);
 
@@ -198,9 +220,19 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
                 .attr("class", "smv2-pin-hit")
                 .attr("r", Math.max(r + 4, 9));
 
-              g.on("mouseenter", () => { setHoverCaseId(c.id); showTip(c, x, y); });
+              g.on("mouseenter", () => {
+                setHoverCaseId(c.id);
+                const node = g.node() as SVGGElement | null;
+                if (node) {
+                  const b = node.getBoundingClientRect();
+                  showTip(c, b.left + b.width / 2, b.top + b.height / 2);
+                }
+              });
               g.on("mouseleave", () => { setHoverCaseId(null); hideTip(); });
-              g.on("click", () => setSelectedCase(c));
+              g.on("click", (event: MouseEvent) => {
+                event.stopPropagation();
+                setSelectedCase(c);
+              });
             });
           }
         };
@@ -220,14 +252,9 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
     if (redraw) redraw();
   }, [activeSev, hoverCaseId]);
 
-  function showTip(c: Case, x: number, y: number) {
+  function showTip(c: Case, px: number, py: number) {
     const tip = tipRef.current;
-    const svg = svgRef.current;
-    if (!tip || !svg) return;
-    const rect = svg.getBoundingClientRect();
-    const scale = rect.width / 960;
-    const px = rect.left + x * scale;
-    const py = rect.top + y * scale;
+    if (!tip) return;
     tip.innerHTML = `
       <div class="smv2-tip-head">
         <span class="smv2-tip-state">${STATE_NAMES[c.state] || c.state}</span>
@@ -354,10 +381,39 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
                 <div><span className="num">{circuits}</span> <span>circuits</span></div>
               </div>
               <svg ref={svgRef} viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet">
-                <g id="smv2-g-states"></g>
-                <g id="smv2-g-pins"></g>
+                <g id="smv2-g-zoom">
+                  <g id="smv2-g-states"></g>
+                  <g id="smv2-g-pins"></g>
+                </g>
               </svg>
               <div className="smv2-coords">ALBERS USA · 38.5°N, 96.5°W</div>
+              <div className="smv2-zoom-ctrl">
+                <button
+                  aria-label="Zoom in"
+                  onClick={() => {
+                    const svg = svgRef.current;
+                    const zb = zoomBehaviorRef.current;
+                    if (svg && zb) d3.select(svg).transition().duration(220).call(zb.scaleBy, 1.6);
+                  }}
+                >+</button>
+                <button
+                  aria-label="Zoom out"
+                  onClick={() => {
+                    const svg = svgRef.current;
+                    const zb = zoomBehaviorRef.current;
+                    if (svg && zb) d3.select(svg).transition().duration(220).call(zb.scaleBy, 0.625);
+                  }}
+                >−</button>
+                <button
+                  aria-label="Reset zoom"
+                  onClick={() => {
+                    const svg = svgRef.current;
+                    const zb = zoomBehaviorRef.current;
+                    if (svg && zb) d3.select(svg).transition().duration(260).call(zb.transform, d3.zoomIdentity);
+                  }}
+                >⟲</button>
+                <span className="smv2-zoom-level">{zoomLevel.toFixed(1)}×</span>
+              </div>
             </div>
 
             <aside className="smv2-rail">
@@ -557,7 +613,29 @@ const CSS = `
     linear-gradient(180deg, rgba(10,10,10,0.4), transparent 50%);
   overflow: hidden;
 }
-.smv2-stage svg { width: 100%; height: 100%; display: block; }
+.smv2-stage svg { width: 100%; height: 100%; display: block; cursor: grab; }
+.smv2-stage svg:active { cursor: grabbing; }
+
+/* Zoom controls */
+.smv2-zoom-ctrl {
+  position: absolute; top: 16px; right: 16px;
+  display: flex; flex-direction: column; gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.smv2-zoom-ctrl button {
+  width: 32px; height: 32px;
+  background: var(--bg-card); border: none; color: var(--text-300);
+  font-family: var(--font-mono); font-size: 16px; font-weight: 600;
+  cursor: pointer; display: grid; place-items: center;
+  transition: all 0.15s; padding: 0;
+}
+.smv2-zoom-ctrl button:hover { background: var(--bg-subtle); color: var(--text-100); }
+.smv2-zoom-level {
+  padding: 6px 0; text-align: center; background: var(--bg-card);
+  font-family: var(--font-mono); font-size: 9px; font-weight: 700;
+  color: var(--text-500); letter-spacing: 0.14em;
+}
 .smv2-state {
   fill: rgba(255,255,255,0.022);
   stroke: rgba(255,255,255,0.08);

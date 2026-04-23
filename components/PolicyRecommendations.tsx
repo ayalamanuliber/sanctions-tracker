@@ -88,18 +88,18 @@ export default function PolicyRecommendations({ answers }: Props) {
   return (
     <section className="section">
       <div className="wrap">
-        <div className="section-head blue">
-          <div className="section-label blue">
-            <span className="tick blue"></span>
-            Action Framework
+        <div className="section-head amber">
+          <div className="section-label amber">
+            <span className="tick"></span>
+            Exposure Breakdown
           </div>
           <h2 className="section-heading">
-            Policy <span className="blue-em">recommendations</span>.
+            Where firms get <em>sanctioned</em>.
           </h2>
           <p className="section-sub">
             {hasAnswers
-              ? "Personalized to your assessment results. Red items are your active gaps."
-              : `Based on patterns across ${cases.length} sanctions cases. Complete the assessment above to personalize.`}
+              ? "Eight patterns judges cite when issuing sanctions. Red items are your active gaps. Each maps to a real case."
+              : `Eight patterns judges cite when issuing sanctions across ${cases.length} tracked cases. Complete the assessment above to see which apply to your firm.`}
           </p>
         </div>
 
@@ -219,15 +219,47 @@ export default function PolicyRecommendations({ answers }: Props) {
                     )}
                     <div
                       style={{
-                        fontFamily: "var(--font-mono)",
-                        fontSize: "10px",
-                        fontWeight: 700,
-                        color: "var(--text-500)",
-                        letterSpacing: "0.18em",
-                        textTransform: "uppercase",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        flexWrap: "wrap",
+                        gap: "12px",
+                        paddingTop: "14px",
+                        borderTop: "1px solid var(--border-soft)",
+                        marginTop: "4px",
                       }}
                     >
-                      Based on <span style={{ color: "var(--amber)" }}>{caseCount} case{caseCount !== 1 ? "s" : ""}</span>
+                      <div
+                        style={{
+                          fontFamily: "var(--font-mono)",
+                          fontSize: "10px",
+                          fontWeight: 700,
+                          color: "var(--text-500)",
+                          letterSpacing: "0.18em",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        Firms sanctioned <span style={{ color: "var(--red-muted)" }}>{caseCount}</span> time{caseCount !== 1 ? "s" : ""}
+                      </div>
+                      <a
+                        href={isGap ? "#products" : "#products"}
+                        style={{
+                          fontFamily: "var(--font-mono)",
+                          fontSize: "10px",
+                          fontWeight: 700,
+                          color: isGap ? "var(--amber)" : "var(--text-400)",
+                          letterSpacing: "0.22em",
+                          textTransform: "uppercase",
+                          textDecoration: "none",
+                          padding: "6px 12px",
+                          border: `1px solid ${isGap ? "rgba(245,158,11,0.4)" : "var(--border)"}`,
+                          transition: "all 0.15s",
+                        }}
+                        onMouseEnter={(e) => { e.currentTarget.style.color = "var(--text-100)"; e.currentTarget.style.borderColor = isGap ? "var(--amber)" : "var(--text-500)"; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.color = isGap ? "var(--amber)" : "var(--text-400)"; e.currentTarget.style.borderColor = isGap ? "rgba(245,158,11,0.4)" : "var(--border)"; }}
+                      >
+                        {isGap ? "Apply Fix →" : "Get Template →"}
+                      </a>
                     </div>
                   </div>
                 </div>

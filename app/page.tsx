@@ -8,10 +8,14 @@ import SanctionsMapV2 from "@/components/SanctionsMapV2";
 import EscalationCurve from "@/components/EscalationCurve";
 import RiskAssessment from "@/components/RiskAssessment";
 import ResultsMirror from "@/components/ResultsMirror";
-import Insights from "@/components/Insights";
+import AuditExport from "@/components/AuditExport";
 import PolicyRecommendations from "@/components/PolicyRecommendations";
+import Insights from "@/components/Insights";
+import ProductLayer from "@/components/ProductLayer";
+import ScarcityStrip from "@/components/ScarcityStrip";
 import JurisdictionRequirements from "@/components/JurisdictionRequirements";
 import CaseEvidence from "@/components/CaseEvidence";
+import FinalClose from "@/components/FinalClose";
 import Footer from "@/components/Footer";
 
 function decodeHash(hash: string): Record<string, boolean> {
@@ -66,8 +70,14 @@ export default function SanctionsTracker() {
   return (
     <div className="min-h-screen">
       <Header />
+
+      {/* 1 — HERO: immediate threat */}
       <Hero />
+
+      {/* 2 — CONTEXT: what's happening */}
       <ThreatStats />
+
+      {/* 3 — CREDIBILITY: this is real, here's where */}
       <SanctionsMapV2
         onStateClick={(st) => {
           setStateFilter(st);
@@ -77,12 +87,35 @@ export default function SanctionsTracker() {
         }}
       />
       <EscalationCurve />
+
+      {/* 4 — COURT SIMULATION (assessment) */}
       <RiskAssessment answers={answers} setAnswers={setAnswers} />
+
+      {/* 5 — RESULTS + DECISION MOMENT (3-option force choice) */}
       <ResultsMirror answers={answers} />
-      <Insights />
+
+      {/* 6 — AUDIT EXPORT: compliance document */}
+      <AuditExport answers={answers} />
+
+      {/* 7 — EXPOSURE BREAKDOWN (policy recs, per-card CTAs) */}
       <PolicyRecommendations answers={answers} />
+
+      {/* 8 — INTELLIGENCE LAYER (what courts enforce) */}
+      <Insights />
+
+      {/* 9 — PRODUCT LAYER: tiered offers tied to gaps */}
+      <ProductLayer answers={answers} />
+
+      {/* 10 — SCARCITY */}
+      <ScarcityStrip />
+
+      {/* Proof / Reference layer */}
       <JurisdictionRequirements />
       <CaseEvidence answers={answers} stateFilter={stateFilter} onClearStateFilter={() => setStateFilter(null)} />
+
+      {/* 11 — FINAL CLOSE */}
+      <FinalClose />
+
       <Footer />
     </div>
   );

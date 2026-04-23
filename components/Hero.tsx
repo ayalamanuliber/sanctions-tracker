@@ -91,7 +91,9 @@ export default function Hero() {
                 Sanctions Tracker &middot; Live
               </span>
               <span className="eyebrow-divider"></span>
-              <span className="eyebrow-label">AI Hallucinations in Court Filings</span>
+              <span className="eyebrow-label">
+                <strong style={{ color: "var(--text-100)" }}>{stats.total_cases_tracked.toLocaleString()}</strong> rulings &middot; <strong style={{ color: "var(--amber)" }}>${(stats.q1_2026_sanctions_usd / 1000).toFixed(0)}K+</strong> in Q1 sanctions &middot; <strong style={{ color: "var(--text-100)" }}>15</strong> jurisdictions
+              </span>
             </div>
 
             <h1 className="hub-title">
@@ -99,7 +101,7 @@ export default function Hero() {
             </h1>
 
             <p className="hub-subtitle">
-              <strong>{stats.total_cases_tracked.toLocaleString()} tracked rulings.</strong> ${(stats.q1_2026_sanctions_usd / 1000).toFixed(0)}K+ in Q1 2026 sanctions alone. Courts are accelerating enforcement against AI hallucinations in filings &mdash; this tool maps the sanctions, diagnoses your gaps, and shows you exactly what to fix.
+              Courts are already sanctioning AI misuse. This page shows where firms fail &mdash; and <strong>whether you would</strong>.
             </p>
 
             <div className="hero-thesis" data-label="The Gap">
@@ -130,11 +132,9 @@ export default function Hero() {
 
             <div className="hero-ctas">
               <a className="hero-btn-primary" href="#assessment">
-                Start Risk Assessment
+                Run your AI exposure check
                 <span className="arrow-line"></span>
               </a>
-              <a className="hero-btn-secondary" href="#map">View Map</a>
-              <a className="hero-btn-secondary" href="#jurisdiction">Court Rules</a>
             </div>
 
             <div className="hero-trust">

@@ -318,13 +318,13 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
         <div className="section-head blue">
           <div className="section-label blue">
             <span className="tick blue"></span>
-            Jurisdiction Map
+            Credibility · Proof
           </div>
           <h2 className="section-heading">
-            Sanctions by <span className="blue-em">jurisdiction</span>.
+            This is <span className="blue-em">real</span>. Here's where.
           </h2>
           <p className="section-sub">
-            Every documented AI-hallucination sanction, plotted on an Albers USA projection. Pin size = sanction amount. Pin color = severity. Click any pin for full case details.
+            Every documented AI-hallucination sanction across US courts, plotted in real time. Pin size = sanction amount. Pin color = severity. Click any pin for the full case.
           </p>
         </div>
 

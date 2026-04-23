@@ -50,13 +50,13 @@ export default function RiskAssessment({ answers, setAnswers }: Props) {
         <div className="section-head amber">
           <div className="section-label amber">
             <span className="tick"></span>
-            Firm Risk Diagnostic
+            Court Simulation &middot; Mirrors Rule 11 Challenges
           </div>
           <h2 className="section-heading">
-            Where is your firm <em>exposed</em>?
+            Would your firm <em>pass</em> a Rule 11 challenge today?
           </h2>
           <p className="section-sub">
-            Ten baseline questions that mirror what judges actually ask in Rule 11 hearings. Every &ldquo;No&rdquo; shows you the ruling that punishes that specific gap.
+            Ten questions judges actually ask when AI-hallucinated filings surface. <strong>Every &ldquo;No&rdquo; matches a real sanction case</strong> — we show you which one.
           </p>
         </div>
 
@@ -115,9 +115,24 @@ export default function RiskAssessment({ answers, setAnswers }: Props) {
                     color: "var(--text-600)",
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
+                    marginBottom: "14px",
                   }}
                 >
                   Answers never leave your browser
+                </p>
+                <p
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "10px",
+                    color: "var(--red-muted)",
+                    letterSpacing: "0.14em",
+                    lineHeight: 1.5,
+                    padding: "10px 12px",
+                    border: "1px solid rgba(239,68,68,0.25)",
+                    background: "rgba(239,68,68,0.06)",
+                  }}
+                >
+                  Every &ldquo;No&rdquo; matches a real sanction case.
                 </p>
               </div>
 

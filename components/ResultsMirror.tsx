@@ -46,44 +46,6 @@ export default function ResultsMirror({ answers }: Props) {
 
   const shareUrl = typeof window !== "undefined" ? `${window.location.origin}${window.location.pathname}${window.location.hash}` : "";
 
-  const getCTA = () => {
-    if (scoreData.percent < 30) {
-      return {
-        headline: "Your firm has critical exposure.",
-        description: "Multiple gaps align with cases that ended careers. An emergency review can identify your highest-risk filings.",
-        buttonText: "Schedule emergency review",
-        buttonUrl: "https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit",
-        accent: "var(--red-muted)",
-      };
-    } else if (scoreData.percent < 50) {
-      return {
-        headline: "Significant gaps detected.",
-        description: "Your firm has exposure in areas where courts have imposed five- and six-figure sanctions.",
-        buttonText: "Book a policy review",
-        buttonUrl: "https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit",
-        accent: "var(--amber)",
-      };
-    } else if (scoreData.percent < 75) {
-      return {
-        headline: "Moderate coverage — gaps remain.",
-        description: "You're ahead of most firms, but exposed in areas where enforcement is accelerating.",
-        buttonText: "Book a review",
-        buttonUrl: "https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit",
-        accent: "var(--blue)",
-      };
-    } else {
-      return {
-        headline: "Strong policy posture.",
-        description: "Your firm is well-positioned. Help your network — share this tool with colleagues who may not be as prepared.",
-        buttonText: "Copy shareable link",
-        buttonUrl: shareUrl,
-        accent: "#22c55e",
-      };
-    }
-  };
-
-  const cta = getCTA();
-
   return (
     <section className="section alt">
       <div className="wrap">
@@ -272,162 +234,256 @@ export default function ResultsMirror({ answers }: Props) {
                 </>
               )}
 
-              {/* CTA */}
+              {/* DECISION MOMENT */}
               <div
                 style={{
-                  background: "var(--bg-subtle)",
-                  border: `1px solid ${cta.accent === "#22c55e" ? "rgba(34,197,94,0.35)" : "var(--border)"}`,
-                  borderLeft: `3px solid ${cta.accent}`,
-                  padding: "32px 36px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: "24px",
-                  flexWrap: "wrap",
-                }}
-              >
-                <div style={{ flex: 1, minWidth: "280px" }}>
-                  <h4
-                    style={{
-                      fontFamily: "var(--font-serif)",
-                      fontSize: "22px",
-                      fontWeight: 500,
-                      color: "var(--text-100)",
-                      letterSpacing: "-0.02em",
-                      marginBottom: "6px",
-                    }}
-                  >
-                    {cta.headline}
-                  </h4>
-                  <p style={{ color: "var(--text-400)", fontSize: "14px", fontWeight: 300, lineHeight: 1.65 }}>{cta.description}</p>
-                </div>
-                {cta.buttonUrl.startsWith("http") ? (
-                  <a href={cta.buttonUrl} target="_blank" rel="noopener" className="hero-btn-primary">
-                    {cta.buttonText}
-                  </a>
-                ) : (
-                  <button
-                    onClick={() => { navigator.clipboard.writeText(shareUrl); alert("Link copied!"); }}
-                    className="hero-btn-primary"
-                  >
-                    {cta.buttonText}
-                  </button>
-                )}
-              </div>
-
-              {/* Policy Templates */}
-              <div
-                style={{
-                  marginTop: "32px",
                   background: "var(--bg-subtle)",
                   border: "1px solid var(--border)",
-                  padding: "32px 36px",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  gap: "28px",
-                  flexWrap: "wrap",
+                  borderLeft: `3px solid ${scoreData.percent < 50 ? "var(--red-muted)" : scoreData.percent < 75 ? "var(--amber)" : "#22c55e"}`,
+                  padding: "36px 40px",
                 }}
               >
-                <div style={{ flex: 1, minWidth: "280px" }}>
-                  <div
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: "10px",
-                      fontWeight: 700,
-                      color: "var(--amber)",
-                      letterSpacing: "0.22em",
-                      textTransform: "uppercase",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    Coming soon
-                  </div>
-                  <h5
-                    style={{
-                      fontFamily: "var(--font-serif)",
-                      fontSize: "22px",
-                      fontWeight: 500,
-                      color: "var(--text-100)",
-                      letterSpacing: "-0.02em",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    AI Governance Policy Templates
-                  </h5>
-                  <p style={{ color: "var(--text-400)", fontSize: "13px", lineHeight: 1.7, fontWeight: 300, maxWidth: "500px" }}>
-                    Court-tested policy templates based on {scoreData.gaps.length > 0 ? `your ${scoreData.gaps.length} identified gaps` : "the assessment results"}. Citation verification protocols, AI disclosure language, engagement letter clauses, and incident response playbooks.
-                  </p>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "16px" }}>
-                    {[
-                      "Written AI Policy Template",
-                      "Citation Verification Checklist",
-                      "Court Disclosure Language",
-                      "Incident Response Playbook",
-                      "Engagement Letter AI Clause",
-                      "+ 3 more",
-                    ].map((label) => (
-                      <span
-                        key={label}
-                        style={{
-                          fontFamily: "var(--font-mono)",
-                          fontSize: "9px",
-                          fontWeight: 700,
-                          color: "var(--text-400)",
-                          letterSpacing: "0.14em",
-                          textTransform: "uppercase",
-                          padding: "5px 10px",
-                          border: "1px solid var(--border-soft)",
-                        }}
-                      >
-                        {label}
-                      </span>
-                    ))}
-                  </div>
+                <div
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "10px",
+                    fontWeight: 700,
+                    color: scoreData.percent < 50 ? "var(--red-muted)" : "var(--amber)",
+                    letterSpacing: "0.22em",
+                    textTransform: "uppercase",
+                    marginBottom: "12px",
+                  }}
+                >
+                  Decision Moment
                 </div>
-                <div style={{ flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "stretch", gap: "10px", minWidth: "160px" }}>
-                  <div style={{ border: "1px solid rgba(245,158,11,0.3)", padding: "18px 20px", textAlign: "center", background: "var(--bg)" }}>
+                <h4
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "clamp(26px, 3vw, 34px)",
+                    fontWeight: 500,
+                    color: "var(--text-100)",
+                    letterSpacing: "-0.025em",
+                    lineHeight: 1.2,
+                    marginBottom: "14px",
+                  }}
+                >
+                  {scoreData.percent < 50 ? (
+                    <>You would <em style={{ color: "var(--red-muted)" }}>not pass</em> a Rule 11 challenge today.</>
+                  ) : scoreData.percent < 75 ? (
+                    <>You&rsquo;d <em style={{ color: "var(--amber)" }}>barely survive</em> a Rule 11 challenge.</>
+                  ) : (
+                    <>You&rsquo;d likely <em style={{ color: "#22c55e" }}>pass</em> a Rule 11 challenge &mdash; but not perfectly.</>
+                  )}
+                </h4>
+                <p style={{ color: "var(--text-400)", fontSize: "15px", fontWeight: 300, lineHeight: 1.7, marginBottom: "20px" }}>
+                  {scoreData.gaps.length > 0 ? (
+                    <>
+                      <strong style={{ color: "var(--text-100)", fontWeight: 500 }}>{scoreData.gaps.length} gap{scoreData.gaps.length > 1 ? "s" : ""} match{scoreData.gaps.length === 1 ? "es" : ""} real sanction cases.</strong> Firms have been sanctioned for exactly this pattern &mdash; fines from $2,000 to $109,700.
+                    </>
+                  ) : (
+                    <>No exposure gaps detected. You&rsquo;re positioned better than most. Help your network &mdash; share this with firms that aren&rsquo;t.</>
+                  )}
+                </p>
+                <p
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "11px",
+                    fontWeight: 700,
+                    color: "var(--text-300)",
+                    letterSpacing: "0.18em",
+                    textTransform: "uppercase",
+                    marginBottom: "20px",
+                  }}
+                >
+                  What happens next is your choice.
+                </p>
+
+                {/* Three paths */}
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "12px" }} className="decision-grid">
+                  {/* Option 1: Fix */}
+                  <a
+                    href="#products"
+                    className="decision-card"
+                    style={{
+                      background: "var(--bg-card)",
+                      border: "1px solid rgba(245,158,11,0.3)",
+                      borderTop: "2px solid var(--amber)",
+                      padding: "22px 22px 24px",
+                      textDecoration: "none",
+                      display: "flex",
+                      flexDirection: "column",
+                      transition: "border-color 0.2s, transform 0.2s",
+                    }}
+                  >
                     <div
                       style={{
                         fontFamily: "var(--font-mono)",
                         fontSize: "10px",
                         fontWeight: 700,
-                        color: "var(--text-600)",
-                        textDecoration: "line-through",
-                        marginBottom: "6px",
-                        letterSpacing: "0.1em",
+                        color: "var(--amber)",
+                        letterSpacing: "0.22em",
+                        textTransform: "uppercase",
+                        marginBottom: "10px",
                       }}
                     >
-                      $297
+                      Option 1 &middot; Primary
                     </div>
                     <div
                       style={{
                         fontFamily: "var(--font-serif)",
-                        fontSize: "30px",
+                        fontSize: "22px",
                         fontWeight: 500,
                         color: "var(--text-100)",
-                        fontStyle: "italic",
-                        letterSpacing: "-0.03em",
-                        lineHeight: 1,
+                        letterSpacing: "-0.02em",
+                        lineHeight: 1.2,
+                        marginBottom: "10px",
                       }}
                     >
-                      Free
+                      Fix this now.
                     </div>
+                    <p style={{ color: "var(--text-400)", fontSize: "13px", lineHeight: 1.6, fontWeight: 300, marginBottom: "18px", flex: 1 }}>
+                      Get the exact policies + checklists used to prevent these sanctions.
+                    </p>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "11px",
+                        fontWeight: 700,
+                        color: "var(--bg)",
+                        background: "var(--bone)",
+                        letterSpacing: "0.18em",
+                        textTransform: "uppercase",
+                        padding: "10px 16px",
+                        textAlign: "center",
+                      }}
+                    >
+                      Get Audit Kit →
+                    </span>
+                  </a>
+
+                  {/* Option 2: Escalate */}
+                  <a
+                    href="https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit"
+                    target="_blank"
+                    rel="noopener"
+                    className="decision-card"
+                    style={{
+                      background: "var(--bg-card)",
+                      border: "1px solid rgba(0,102,255,0.3)",
+                      borderTop: "2px solid var(--blue)",
+                      padding: "22px 22px 24px",
+                      textDecoration: "none",
+                      display: "flex",
+                      flexDirection: "column",
+                      transition: "border-color 0.2s, transform 0.2s",
+                    }}
+                  >
                     <div
                       style={{
                         fontFamily: "var(--font-mono)",
-                        fontSize: "9px",
+                        fontSize: "10px",
                         fontWeight: 700,
-                        color: "var(--amber)",
+                        color: "var(--blue)",
                         letterSpacing: "0.22em",
                         textTransform: "uppercase",
-                        marginTop: "6px",
+                        marginBottom: "10px",
                       }}
                     >
-                      During Beta
+                      Option 2
                     </div>
-                  </div>
-                  <a href="https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit" target="_blank" rel="noopener" className="hero-btn-blue" style={{ padding: "12px 16px", fontSize: "10px", justifyContent: "center" }}>
-                    Request Access
+                    <div
+                      style={{
+                        fontFamily: "var(--font-serif)",
+                        fontSize: "22px",
+                        fontWeight: 500,
+                        color: "var(--text-100)",
+                        letterSpacing: "-0.02em",
+                        lineHeight: 1.2,
+                        marginBottom: "10px",
+                      }}
+                    >
+                      Have this reviewed.
+                    </div>
+                    <p style={{ color: "var(--text-400)", fontSize: "13px", lineHeight: 1.6, fontWeight: 300, marginBottom: "18px", flex: 1 }}>
+                      We map this to your real workflows and exposure. One-on-one review.
+                    </p>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "11px",
+                        fontWeight: 700,
+                        color: "var(--white)",
+                        background: "var(--blue)",
+                        letterSpacing: "0.18em",
+                        textTransform: "uppercase",
+                        padding: "10px 16px",
+                        textAlign: "center",
+                      }}
+                    >
+                      Request Audit →
+                    </span>
+                  </a>
+
+                  {/* Option 3: Stay exposed */}
+                  <a
+                    href="#products"
+                    className="decision-card"
+                    style={{
+                      background: "var(--bg-card)",
+                      border: "1px solid var(--border)",
+                      borderTop: "2px solid var(--text-500)",
+                      padding: "22px 22px 24px",
+                      textDecoration: "none",
+                      display: "flex",
+                      flexDirection: "column",
+                      transition: "border-color 0.2s, transform 0.2s",
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "10px",
+                        fontWeight: 700,
+                        color: "var(--text-500)",
+                        letterSpacing: "0.22em",
+                        textTransform: "uppercase",
+                        marginBottom: "10px",
+                      }}
+                    >
+                      Option 3
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: "var(--font-serif)",
+                        fontSize: "22px",
+                        fontWeight: 500,
+                        color: "var(--text-100)",
+                        letterSpacing: "-0.02em",
+                        lineHeight: 1.2,
+                        marginBottom: "10px",
+                      }}
+                    >
+                      Stay exposed.
+                    </div>
+                    <p style={{ color: "var(--text-400)", fontSize: "13px", lineHeight: 1.6, fontWeight: 300, marginBottom: "18px", flex: 1 }}>
+                      Track new sanctions and hope nothing applies to you.
+                    </p>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "11px",
+                        fontWeight: 700,
+                        color: "var(--text-300)",
+                        background: "transparent",
+                        border: "1px solid var(--border)",
+                        letterSpacing: "0.18em",
+                        textTransform: "uppercase",
+                        padding: "10px 16px",
+                        textAlign: "center",
+                      }}
+                    >
+                      Join Feed →
+                    </span>
                   </a>
                 </div>
               </div>
@@ -439,9 +495,14 @@ export default function ResultsMirror({ answers }: Props) {
         @media (max-width: 1024px) {
           .results-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
         }
+        @media (max-width: 900px) {
+          .decision-grid { grid-template-columns: 1fr !important; }
+        }
         @media (max-width: 768px) {
           .gaps-grid { grid-template-columns: 1fr !important; }
         }
+        .decision-card:hover { transform: translateY(-2px); }
+        .decision-card:hover[style*="var(--amber)"] { border-color: var(--amber) !important; }
       `}</style>
     </section>
   );

@@ -136,8 +136,39 @@ export default function ThreatStats() {
   ];
 
   return (
-    <section className="strip" style={{ padding: "40px 0" }}>
+    <section className="strip" style={{ padding: "56px 0" }}>
       <div className="wrap">
+        <div style={{ marginBottom: "24px", maxWidth: "720px" }}>
+          <div
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: "10px",
+              fontWeight: 700,
+              color: "var(--amber)",
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              marginBottom: "10px",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <span style={{ width: "5px", height: "5px", background: "var(--amber)" }}></span>
+            What's happening
+          </div>
+          <h2
+            style={{
+              fontFamily: "var(--font-serif)",
+              fontSize: "clamp(24px, 2.6vw, 32px)",
+              fontWeight: 500,
+              color: "var(--text-100)",
+              letterSpacing: "-0.02em",
+              lineHeight: 1.25,
+            }}
+          >
+            Judges are sanctioning attorneys <em style={{ color: "var(--amber)" }}>weekly</em> for AI-hallucinated filings.
+          </h2>
+        </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1px", background: "var(--border)", border: "1px solid var(--border)" }} className="stats-grid">
           {items.map((item, i) => (
             <StatCell key={i} {...item} />

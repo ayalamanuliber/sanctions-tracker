@@ -106,16 +106,16 @@ export default function Insights() {
   return (
     <section id="insights" className="section">
       <div className="wrap">
-        <div className="section-head amber">
-          <div className="section-label amber">
-            <span className="tick"></span>
-            Intelligence
+        <div className="section-head blue">
+          <div className="section-label blue">
+            <span className="tick blue"></span>
+            Intelligence Layer
           </div>
           <h2 className="section-heading">
-            What the <em>data</em> reveals.
+            What courts are actually <span className="blue-em">enforcing</span>.
           </h2>
           <p className="section-sub">
-            Patterns computed from {cases.length} landmark AI sanctions cases. These are the failure modes courts punish most.
+            Patterns computed from {cases.length} landmark AI sanctions cases. Not commentary &mdash; the actual ratios judges are using to decide who gets punished and how hard.
           </p>
         </div>
 

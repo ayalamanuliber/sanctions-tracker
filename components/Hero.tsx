@@ -74,7 +74,7 @@ export default function Hero() {
 
   return (
     <section className="hub-hero">
-      <div className="container">
+      <div className="wrap">
         <div className="hub-hero-grid">
           <div className="hub-hero-inner">
             <div className="hero-credentials-top">

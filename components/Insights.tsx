@@ -105,7 +105,7 @@ function PanelHead({ children }: { children: React.ReactNode }) {
 export default function Insights() {
   return (
     <section id="insights" className="section">
-      <div className="container">
+      <div className="wrap">
         <div className="section-head amber">
           <div className="section-label amber">
             <span className="tick"></span>

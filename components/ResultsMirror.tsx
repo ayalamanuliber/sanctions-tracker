@@ -86,7 +86,7 @@ export default function ResultsMirror({ answers }: Props) {
 
   return (
     <section className="section alt">
-      <div className="container">
+      <div className="wrap">
         <div className="section-head" style={{ borderLeftColor: scoreData.color }}>
           <div className="section-label" style={{ color: scoreData.color }}>
             <span className="tick" style={{ background: scoreData.color }}></span>

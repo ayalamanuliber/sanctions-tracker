@@ -137,7 +137,7 @@ export default function ThreatStats() {
 
   return (
     <section className="strip" style={{ padding: "40px 0" }}>
-      <div className="container">
+      <div className="wrap">
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1px", background: "var(--border)", border: "1px solid var(--border)" }} className="stats-grid">
           {items.map((item, i) => (
             <StatCell key={i} {...item} />

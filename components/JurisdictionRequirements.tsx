@@ -125,7 +125,7 @@ export default function JurisdictionRequirements() {
 
   return (
     <section id="jurisdiction" className="section subtle">
-      <div className="container">
+      <div className="wrap">
         <div className="section-head" style={{ textAlign: "center", marginLeft: "auto", marginRight: "auto", borderLeft: "none", padding: "0", maxWidth: "720px" }}>
           <div className="section-label blue" style={{ justifyContent: "center" }}>
             <span className="tick blue"></span>

@@ -41,7 +41,7 @@ export default function EscalationCurve() {
 
   return (
     <section id="escalation" className="section">
-      <div className="container">
+      <div className="wrap">
         <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "32px", alignItems: "start" }} className="escalation-grid">
           {/* Narrative panel */}
           <div>

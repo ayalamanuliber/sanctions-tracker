@@ -3,7 +3,7 @@ export default function Footer() {
     <>
       {/* AUTHOR SECTION — matches aivortex hub */}
       <section className="section" id="author">
-        <div className="container">
+        <div className="wrap">
           <div className="section-head amber">
             <div className="section-label amber">
               <span className="tick"></span>
@@ -134,7 +134,7 @@ export default function Footer() {
 
       {/* FOOTER */}
       <footer className="footer">
-        <div className="container">
+        <div className="wrap">
           <div className="footer-cols">
             <div className="footer-brand-col">
               <div className="footer-brand">

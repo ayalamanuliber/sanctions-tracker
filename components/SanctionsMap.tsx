@@ -103,7 +103,7 @@ export default function SanctionsMap({ onStateClick }: Props) {
 
   return (
     <section id="map" className="section alt">
-      <div className="container">
+      <div className="wrap">
         <div className="section-head blue">
           <div className="section-label blue">
             <span className="tick blue"></span>

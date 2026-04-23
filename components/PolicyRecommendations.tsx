@@ -87,7 +87,7 @@ export default function PolicyRecommendations({ answers }: Props) {
 
   return (
     <section className="section">
-      <div className="container">
+      <div className="wrap">
         <div className="section-head blue">
           <div className="section-label blue">
             <span className="tick blue"></span>

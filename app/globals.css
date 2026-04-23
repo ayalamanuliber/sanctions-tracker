@@ -113,8 +113,9 @@ body {
 .mobile-menu a { color: var(--text-300); text-decoration: none; font-size: 16px; font-weight: 500; padding: 6px 0; }
 
 /* ============ LAYOUT ============ */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
-.container-narrow { max-width: 720px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+/* NOTE: `.wrap` (not `.container` — that collides with Tailwind's utility) */
+.wrap { max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 24px; position: relative; z-index: 1; width: 100%; box-sizing: border-box; }
+.wrap-narrow { max-width: 720px; margin-left: auto; margin-right: auto; padding: 0 24px; position: relative; z-index: 1; width: 100%; box-sizing: border-box; }
 
 /* ============ HERO ============ */
 .hub-hero { background: var(--bg); padding: 128px 0 96px; position: relative; overflow: hidden; }

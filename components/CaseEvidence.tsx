@@ -142,7 +142,7 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
 
   return (
     <section id="evidence" className="section alt">
-      <div className="container">
+      <div className="wrap">
         <div className="section-head amber">
           <div className="section-label amber">
             <span className="tick"></span>

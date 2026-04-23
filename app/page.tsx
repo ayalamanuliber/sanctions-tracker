@@ -2,7 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
-import SanctionsGlobe from "@/components/SanctionsGlobe";
+import Hero from "@/components/Hero";
+import ThreatStats from "@/components/ThreatStats";
+import SanctionsMapV2 from "@/components/SanctionsMapV2";
+import EscalationCurve from "@/components/EscalationCurve";
 import RiskAssessment from "@/components/RiskAssessment";
 import ResultsMirror from "@/components/ResultsMirror";
 import Insights from "@/components/Insights";
@@ -63,7 +66,17 @@ export default function SanctionsTracker() {
   return (
     <div className="min-h-screen">
       <Header />
-      <SanctionsGlobe />
+      <Hero />
+      <ThreatStats />
+      <SanctionsMapV2
+        onStateClick={(st) => {
+          setStateFilter(st);
+          setTimeout(() => {
+            document.getElementById("evidence")?.scrollIntoView({ behavior: "smooth" });
+          }, 100);
+        }}
+      />
+      <EscalationCurve />
       <RiskAssessment answers={answers} setAnswers={setAnswers} />
       <ResultsMirror answers={answers} />
       <Insights />

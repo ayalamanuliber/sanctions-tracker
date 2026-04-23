@@ -284,6 +284,41 @@ export default function ResultsMirror({ answers }: Props) {
                     <>No exposure gaps detected. You&rsquo;re positioned better than most. Help your network &mdash; share this with firms that aren&rsquo;t.</>
                   )}
                 </p>
+                <div
+                  style={{
+                    padding: "14px 18px",
+                    marginBottom: "18px",
+                    border: "1px solid rgba(239,68,68,0.3)",
+                    background: "rgba(239,68,68,0.06)",
+                    borderLeft: "2px solid var(--red-muted)",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "10px",
+                      fontWeight: 700,
+                      color: "var(--red-muted)",
+                      letterSpacing: "0.22em",
+                      textTransform: "uppercase",
+                      marginBottom: "4px",
+                    }}
+                  >
+                    ◆ Reality check
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "var(--font-serif)",
+                      fontSize: "16px",
+                      fontWeight: 500,
+                      color: "var(--text-100)",
+                      letterSpacing: "-0.01em",
+                      fontStyle: "italic",
+                    }}
+                  >
+                    Firms have already been sanctioned for this exact pattern.
+                  </div>
+                </div>
                 <p
                   style={{
                     fontFamily: "var(--font-mono)",
@@ -466,7 +501,7 @@ export default function ResultsMirror({ answers }: Props) {
                       Stay exposed.
                     </div>
                     <p style={{ color: "var(--text-400)", fontSize: "13px", lineHeight: 1.6, fontWeight: 300, marginBottom: "18px", flex: 1 }}>
-                      Track new sanctions and hope nothing applies to you.
+                      Do nothing. Risk this applying to your next filing.
                     </p>
                     <span
                       style={{

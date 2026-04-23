@@ -44,7 +44,7 @@ export default function FinalClose() {
               letterSpacing: "-0.025em",
               lineHeight: 1.2,
               fontStyle: "italic",
-              marginBottom: "32px",
+              marginBottom: "20px",
               maxWidth: "760px",
               marginLeft: "auto",
               marginRight: "auto",
@@ -54,6 +54,19 @@ export default function FinalClose() {
             <br />
             They get sanctioned for using it <span style={{ color: "var(--amber)" }}>without a system</span>.
           </h2>
+          <p
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: "12px",
+              fontWeight: 700,
+              color: "var(--amber)",
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              marginBottom: "32px",
+            }}
+          >
+            And courts are escalating fast.
+          </p>
           <p
             style={{
               color: "var(--text-400)",

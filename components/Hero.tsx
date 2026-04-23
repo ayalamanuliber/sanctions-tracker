@@ -98,6 +98,9 @@ export default function Hero() {
 
             <h1 className="hub-title">
               Where is your firm <em>exposed</em>?
+              <span style={{ display: "block", fontSize: "0.48em", fontWeight: 400, color: "var(--text-400)", fontFamily: "var(--font-serif)", fontStyle: "italic", letterSpacing: "-0.01em", marginTop: "14px", lineHeight: 1.2 }}>
+                Before a judge does.
+              </span>
             </h1>
 
             <p className="hub-subtitle">

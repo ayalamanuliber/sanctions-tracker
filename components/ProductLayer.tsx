@@ -48,6 +48,22 @@ export default function ProductLayer({ answers }: Props) {
               <>Fix your <em>exposure</em>.</>
             )}
           </h2>
+          {hasAnswers && gaps.length > 0 && (
+            <p
+              style={{
+                marginTop: "12px",
+                marginBottom: "14px",
+                fontFamily: "var(--font-serif)",
+                fontSize: "19px",
+                fontWeight: 500,
+                color: "var(--text-100)",
+                letterSpacing: "-0.015em",
+                fontStyle: "italic",
+              }}
+            >
+              You already know where you&rsquo;re exposed. This fixes it.
+            </p>
+          )}
           <p className="section-sub">
             {hasAnswers && gaps.length > 0 ? (
               <>These map directly to the gaps we just identified. Pick the depth your firm needs.</>
@@ -72,7 +88,7 @@ export default function ProductLayer({ answers }: Props) {
                   marginBottom: "10px",
                 }}
               >
-                Tier 1 &middot; Entry
+                Fix this fast
               </div>
               <h3 className="tier-name">Audit Kit</h3>
               <p className="tier-tag">Drop-in policies + checklists. Fix this internally in 30 minutes.</p>
@@ -120,7 +136,7 @@ export default function ProductLayer({ answers }: Props) {
                   marginBottom: "10px",
                 }}
               >
-                Tier 2 &middot; Full System
+                Make this defensible
               </div>
               <h3 className="tier-name">Compliance Pack</h3>
               <p className="tier-tag">Governance, workflows, SOPs. For firms that want defensible, documented compliance.</p>
@@ -169,14 +185,14 @@ export default function ProductLayer({ answers }: Props) {
                   marginBottom: "10px",
                 }}
               >
-                Tier 3 &middot; Stay Ahead
+                Stay ahead of courts
               </div>
               <h3 className="tier-name">Lifetime</h3>
               <p className="tier-tag">Everything, forever. Updates as the case law evolves. Priority access to new playbooks.</p>
             </div>
             <div className="tier-price">
-              <div className="price-line-through">TBD</div>
-              <div className="price-main" style={{ color: "#a855f7" }}>Early user lock</div>
+              <div className="price-line-through">Launch price</div>
+              <div className="price-main" style={{ color: "#a855f7" }}>Early user pricing</div>
               <div className="price-sub">Priced once, access forever</div>
             </div>
             <ul className="tier-list">

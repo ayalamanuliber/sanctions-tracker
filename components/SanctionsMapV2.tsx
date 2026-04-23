@@ -315,17 +315,44 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
   return (
     <section id="map" className="section alt smv2-root">
       <div className="wrap">
-        <div className="section-head blue">
-          <div className="section-label blue">
-            <span className="tick blue"></span>
-            Credibility · Proof
+        <div className="section-head blue" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "24px", flexWrap: "wrap" }}>
+          <div style={{ flex: 1, minWidth: "280px" }}>
+            <div className="section-label blue">
+              <span className="tick blue"></span>
+              Credibility · Proof
+            </div>
+            <h2 className="section-heading">
+              This is <span className="blue-em">real</span>. Here's where.
+            </h2>
+            <p className="section-sub">
+              Every documented AI-hallucination sanction across US courts, plotted in real time. Pin size = sanction amount. Pin color = severity. Click any pin for the full case.
+            </p>
           </div>
-          <h2 className="section-heading">
-            This is <span className="blue-em">real</span>. Here's where.
-          </h2>
-          <p className="section-sub">
-            Every documented AI-hallucination sanction across US courts, plotted in real time. Pin size = sanction amount. Pin color = severity. Click any pin for the full case.
-          </p>
+          <a
+            href="#assessment"
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: "10px",
+              fontWeight: 700,
+              color: "var(--text-300)",
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              textDecoration: "none",
+              padding: "10px 16px",
+              border: "1px solid var(--border)",
+              background: "transparent",
+              transition: "all 0.15s",
+              flexShrink: 0,
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "10px",
+              alignSelf: "flex-start",
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = "var(--text-100)"; e.currentTarget.style.borderColor = "var(--text-500)"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = "var(--text-300)"; e.currentTarget.style.borderColor = "var(--border)"; }}
+          >
+            Skip to assessment →
+          </a>
         </div>
 
         <div className="smv2-card">

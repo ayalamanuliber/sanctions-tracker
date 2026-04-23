@@ -219,11 +219,6 @@ export default function PolicyRecommendations({ answers }: Props) {
                     )}
                     <div
                       style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                        flexWrap: "wrap",
-                        gap: "12px",
                         paddingTop: "14px",
                         borderTop: "1px solid var(--border-soft)",
                         marginTop: "4px",
@@ -231,35 +226,58 @@ export default function PolicyRecommendations({ answers }: Props) {
                     >
                       <div
                         style={{
-                          fontFamily: "var(--font-mono)",
-                          fontSize: "10px",
-                          fontWeight: 700,
-                          color: "var(--text-500)",
-                          letterSpacing: "0.18em",
-                          textTransform: "uppercase",
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          flexWrap: "wrap",
+                          gap: "12px",
                         }}
                       >
-                        Firms sanctioned <span style={{ color: "var(--red-muted)" }}>{caseCount}</span> time{caseCount !== 1 ? "s" : ""}
+                        <div
+                          style={{
+                            fontFamily: "var(--font-mono)",
+                            fontSize: "10px",
+                            fontWeight: 700,
+                            color: "var(--text-500)",
+                            letterSpacing: "0.18em",
+                            textTransform: "uppercase",
+                          }}
+                        >
+                          Firms sanctioned <span style={{ color: "var(--red-muted)" }}>{caseCount}</span> time{caseCount !== 1 ? "s" : ""}
+                        </div>
+                        <a
+                          href="#products"
+                          style={{
+                            fontFamily: "var(--font-mono)",
+                            fontSize: "10px",
+                            fontWeight: 700,
+                            color: isGap ? "var(--amber)" : "var(--text-400)",
+                            letterSpacing: "0.22em",
+                            textTransform: "uppercase",
+                            textDecoration: "none",
+                            padding: "6px 12px",
+                            border: `1px solid ${isGap ? "rgba(245,158,11,0.4)" : "var(--border)"}`,
+                            transition: "all 0.15s",
+                          }}
+                          onMouseEnter={(e) => { e.currentTarget.style.color = "var(--text-100)"; e.currentTarget.style.borderColor = isGap ? "var(--amber)" : "var(--text-500)"; }}
+                          onMouseLeave={(e) => { e.currentTarget.style.color = isGap ? "var(--amber)" : "var(--text-400)"; e.currentTarget.style.borderColor = isGap ? "rgba(245,158,11,0.4)" : "var(--border)"; }}
+                        >
+                          {isGap ? "Apply Fix →" : "Get Template →"}
+                        </a>
                       </div>
-                      <a
-                        href={isGap ? "#products" : "#products"}
+                      <div
                         style={{
+                          marginTop: "8px",
                           fontFamily: "var(--font-mono)",
-                          fontSize: "10px",
-                          fontWeight: 700,
-                          color: isGap ? "var(--amber)" : "var(--text-400)",
-                          letterSpacing: "0.22em",
-                          textTransform: "uppercase",
-                          textDecoration: "none",
-                          padding: "6px 12px",
-                          border: `1px solid ${isGap ? "rgba(245,158,11,0.4)" : "var(--border)"}`,
-                          transition: "all 0.15s",
+                          fontSize: "9px",
+                          fontWeight: 600,
+                          color: "var(--text-600)",
+                          letterSpacing: "0.14em",
+                          textAlign: "right",
                         }}
-                        onMouseEnter={(e) => { e.currentTarget.style.color = "var(--text-100)"; e.currentTarget.style.borderColor = isGap ? "var(--amber)" : "var(--text-500)"; }}
-                        onMouseLeave={(e) => { e.currentTarget.style.color = isGap ? "var(--amber)" : "var(--text-400)"; e.currentTarget.style.borderColor = isGap ? "rgba(245,158,11,0.4)" : "var(--border)"; }}
                       >
-                        {isGap ? "Apply Fix →" : "Get Template →"}
-                      </a>
+                        Included in Audit Kit
+                      </div>
                     </div>
                   </div>
                 </div>

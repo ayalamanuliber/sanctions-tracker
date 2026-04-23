@@ -50,6 +50,22 @@ export default function AuditExport({ answers }: Props) {
           <p className="section-sub">
             Use this internally with your team, or preserve it as a record in case of court scrutiny. Your answers, your gaps, your exposure &mdash; on a single page.
           </p>
+          <p
+            style={{
+              marginTop: "14px",
+              fontFamily: "var(--font-serif)",
+              fontSize: "17px",
+              fontWeight: 500,
+              color: "var(--text-100)",
+              letterSpacing: "-0.015em",
+              fontStyle: "italic",
+              borderLeft: "2px solid var(--blue)",
+              paddingLeft: "14px",
+              maxWidth: "620px",
+            }}
+          >
+            This is what you show when questions are asked.
+          </p>
         </div>
 
         <div

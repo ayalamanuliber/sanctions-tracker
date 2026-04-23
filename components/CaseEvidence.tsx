@@ -37,11 +37,11 @@ const POLICY_GAP_LABELS: Record<string, string> = {
   "incident-response": "Incident Response",
 };
 
-const severityStyles: Record<string, string> = {
-  "career-ending": "text-red-400 bg-red-950/50",
-  high: "text-blue-300 bg-blue-950/50",
-  medium: "text-yellow-300 bg-yellow-950/50",
-  low: "text-emerald-300 bg-emerald-950/50",
+const severityColors: Record<string, { color: string; border: string }> = {
+  "career-ending": { color: "#ef4444", border: "rgba(239,68,68,0.35)" },
+  high: { color: "#f59e0b", border: "rgba(245,158,11,0.35)" },
+  medium: { color: "#eab308", border: "rgba(234,179,8,0.35)" },
+  low: { color: "#22c55e", border: "rgba(34,197,94,0.35)" },
 };
 
 const SEVERITY_OPTIONS = ["all", "career-ending", "high", "medium", "low"];
@@ -52,22 +52,24 @@ type SortKey = "date-desc" | "date-asc" | "amount-desc" | "amount-asc";
 function ChevronIcon({ open }: { open: boolean }) {
   return (
     <svg
-      width="16"
-      height="16"
+      width="14"
+      height="14"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={`text-white/30 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+      style={{
+        color: "var(--text-500)",
+        transition: "transform 0.3s",
+        transform: open ? "rotate(180deg)" : "none",
+      }}
     >
       <polyline points="6 9 12 15 18 9" />
     </svg>
   );
 }
-
-import questions from "@/data/questions.json";
 
 interface Props {
   answers?: Record<string, boolean>;
@@ -87,24 +89,12 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [showMyGaps, setShowMyGaps] = useState(false);
 
-  // Get gap IDs from "No" answers
-  const gapIds = Object.entries(answers)
-    .filter(([, v]) => v === false)
-    .map(([k]) => k);
+  const gapIds = Object.entries(answers).filter(([, v]) => v === false).map(([k]) => k);
   const hasGaps = gapIds.length > 0;
-
-  // Apply external state filter from map click
   const effectiveState = stateFilter || state;
 
-  const uniqueStates = useMemo(
-    () => [...new Set(typedCases.map((c) => c.state))].sort(),
-    [typedCases]
-  );
-
-  const uniqueTools = useMemo(
-    () => [...new Set(typedCases.map((c) => c.ai_tool_used))].sort(),
-    [typedCases]
-  );
+  const uniqueStates = useMemo(() => [...new Set(typedCases.map((c) => c.state))].sort(), [typedCases]);
+  const uniqueTools = useMemo(() => [...new Set(typedCases.map((c) => c.ai_tool_used))].sort(), [typedCases]);
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim();
@@ -113,8 +103,7 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
       if (effectiveState !== "all" && c.state !== effectiveState) return false;
       if (tool !== "all" && c.ai_tool_used !== tool) return false;
       if (year !== "all" && !c.date.startsWith(year)) return false;
-      if (q && !c.case_name.toLowerCase().includes(q) && !c.court.toLowerCase().includes(q))
-        return false;
+      if (q && !c.case_name.toLowerCase().includes(q) && !c.court.toLowerCase().includes(q)) return false;
       if (showMyGaps && gapIds.length > 0) {
         if (!c.policy_gap_ids.some((g: string) => gapIds.includes(g))) return false;
       }
@@ -125,174 +114,192 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
   const sorted = useMemo(() => {
     const arr = [...filtered];
     switch (sort) {
-      case "date-desc":
-        return arr.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-      case "date-asc":
-        return arr.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
-      case "amount-desc":
-        return arr.sort((a, b) => (b.amount ?? 0) - (a.amount ?? 0));
-      case "amount-asc":
-        return arr.sort((a, b) => (a.amount ?? 0) - (b.amount ?? 0));
-      default:
-        return arr;
+      case "date-desc": return arr.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+      case "date-asc": return arr.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+      case "amount-desc": return arr.sort((a, b) => (b.amount ?? 0) - (a.amount ?? 0));
+      case "amount-asc": return arr.sort((a, b) => (a.amount ?? 0) - (b.amount ?? 0));
+      default: return arr;
     }
   }, [filtered, sort]);
 
-  const toggleExpand = (id: string) =>
-    setExpandedId((prev) => (prev === id ? null : id));
+  const toggleExpand = (id: string) => setExpandedId((prev) => (prev === id ? null : id));
+  const truncate = (text: string, max = 120) => (text.length <= max ? text : text.slice(0, max).trimEnd() + "...");
 
-  /* Truncate summary to ~120 chars for compact view */
-  const truncate = (text: string, max = 120) =>
-    text.length <= max ? text : text.slice(0, max).trimEnd() + "...";
+  const selectStyle: React.CSSProperties = {
+    background: "var(--bg)",
+    border: "1px solid var(--border)",
+    color: "var(--text-300)",
+    fontFamily: "var(--font-mono)",
+    fontSize: "11px",
+    fontWeight: 600,
+    letterSpacing: "0.08em",
+    textTransform: "uppercase",
+    padding: "8px 12px",
+    outline: "none",
+    cursor: "pointer",
+    appearance: "none",
+  };
 
   return (
-    <section id="evidence" className="py-20 px-6 border-t border-white/[0.06]">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="mb-10">
-          <div className="text-white/25 text-[11px] font-semibold tracking-widest uppercase mb-3">
+    <section id="evidence" className="section alt">
+      <div className="container">
+        <div className="section-head amber">
+          <div className="section-label amber">
+            <span className="tick"></span>
             Evidence Library
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-white tracking-[-0.03em]">
-            Case Precedents
+          <h2 className="section-heading">
+            Case <em>precedents</em>.
           </h2>
+          <p className="section-sub">
+            Every documented AI-hallucination sanction across US courts. Filter by severity, state, tool, or your active policy gaps.
+          </p>
         </div>
 
-        {/* State filter from map click */}
+        {/* State filter banner from map click */}
         {stateFilter && (
-          <div className="bg-[#FF5E1A]/10 border border-[#FF5E1A]/20 rounded-2xl p-4 mb-4 flex items-center justify-between">
-            <span className="text-white/70 text-sm">
-              Showing cases in <span className="text-[#FF5E1A] font-bold">{stateFilter}</span> (from map)
+          <div
+            style={{
+              background: "var(--bg-card)",
+              border: "1px solid rgba(245,158,11,0.35)",
+              borderLeft: "2px solid var(--amber)",
+              padding: "14px 20px",
+              marginBottom: "16px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: "12px",
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "11px",
+                fontWeight: 700,
+                color: "var(--text-300)",
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+              }}
+            >
+              Filtering: <span style={{ color: "var(--amber)" }}>{stateFilter}</span> (from map)
             </span>
             <button
               onClick={onClearStateFilter}
-              className="text-white/40 hover:text-white text-sm font-semibold cursor-pointer"
+              style={{
+                background: "transparent",
+                border: "none",
+                fontFamily: "var(--font-mono)",
+                fontSize: "10px",
+                fontWeight: 700,
+                color: "var(--text-500)",
+                letterSpacing: "0.2em",
+                textTransform: "uppercase",
+                cursor: "pointer",
+              }}
             >
-              Clear filter
+              Clear →
             </button>
           </div>
         )}
 
         {/* Filter bar */}
-        <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl p-4 mb-6 space-y-4">
-          {/* Gap filter toggle */}
+        <div style={{ background: "var(--bg-card)", border: "1px solid var(--border)", padding: "20px 24px", marginBottom: "24px" }}>
           {hasGaps && (
-            <div className="flex items-center gap-3 pb-3 border-b border-white/[0.06]">
+            <div style={{ display: "flex", alignItems: "center", gap: "12px", paddingBottom: "16px", marginBottom: "16px", borderBottom: "1px solid var(--border-soft)", flexWrap: "wrap" }}>
               <button
                 onClick={() => setShowMyGaps(!showMyGaps)}
-                className={`px-4 py-2 rounded-xl text-[11px] font-bold tracking-wide transition-all cursor-pointer ${
-                  showMyGaps
-                    ? "bg-red-600 text-white"
-                    : "bg-white/[0.05] text-white/40 hover:bg-white/[0.08]"
-                }`}
+                style={{
+                  padding: "8px 16px",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  letterSpacing: "0.22em",
+                  textTransform: "uppercase",
+                  cursor: "pointer",
+                  border: showMyGaps ? "1px solid var(--red-muted)" : "1px solid var(--border)",
+                  background: showMyGaps ? "rgba(239,68,68,0.12)" : "transparent",
+                  color: showMyGaps ? "var(--red-muted)" : "var(--text-400)",
+                  transition: "all 0.2s",
+                }}
               >
-                {showMyGaps ? "Showing My Gaps" : "Show Cases Matching My Gaps"}
+                {showMyGaps ? "◆ Showing My Gaps" : "Match My Gaps"}
               </button>
               {showMyGaps && (
-                <span className="text-white/30 text-[11px]">
-                  Filtering to cases linked to your {gapIds.length} gap{gapIds.length !== 1 ? "s" : ""}
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: "10px", color: "var(--text-500)", letterSpacing: "0.08em" }}>
+                  Filtering to {gapIds.length} gap{gapIds.length !== 1 ? "s" : ""}
                 </span>
               )}
             </div>
           )}
 
-          {/* Row 1: Severity pills */}
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-white/30 text-[11px] font-semibold tracking-wide uppercase mr-1">
+          {/* Severity pills */}
+          <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: "10px", marginBottom: "14px" }}>
+            <span
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "10px",
+                fontWeight: 700,
+                color: "var(--text-500)",
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                marginRight: "4px",
+              }}
+            >
               Severity
             </span>
-            <div className="flex bg-[#050B14] border border-white/[0.06] p-1 rounded-xl">
-              {SEVERITY_OPTIONS.map((f) => (
-                <button
-                  key={f}
-                  onClick={() => setSeverity(f)}
-                  className={`px-3 py-1.5 rounded-lg text-[11px] font-semibold tracking-wide transition-all cursor-pointer ${
-                    severity === f
-                      ? "bg-white/[0.08] text-white"
-                      : "text-white/30 hover:text-white/60"
-                  }`}
-                >
-                  {f === "career-ending"
-                    ? "Career-Ending"
-                    : f === "all"
-                      ? "All"
-                      : f.charAt(0).toUpperCase() + f.slice(1)}
-                </button>
-              ))}
+            <div style={{ display: "inline-flex", border: "1px solid var(--border)", background: "var(--bg)" }}>
+              {SEVERITY_OPTIONS.map((f) => {
+                const active = severity === f;
+                return (
+                  <button
+                    key={f}
+                    onClick={() => setSeverity(f)}
+                    style={{
+                      padding: "7px 14px",
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "10px",
+                      fontWeight: 700,
+                      letterSpacing: "0.14em",
+                      textTransform: "uppercase",
+                      cursor: "pointer",
+                      background: active ? "var(--bg-card)" : "transparent",
+                      border: "none",
+                      borderRight: "1px solid var(--border-soft)",
+                      color: active ? "var(--text-100)" : "var(--text-500)",
+                      transition: "all 0.2s",
+                    }}
+                  >
+                    {f === "career-ending" ? "Career" : f === "all" ? "All" : f.charAt(0).toUpperCase() + f.slice(1)}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
-          {/* Row 2: Dropdowns + search + sort */}
-          <div className="flex flex-wrap items-center gap-3">
-            {/* State dropdown */}
-            <select
-              value={state}
-              onChange={(e) => setState(e.target.value)}
-              className="bg-[#050B14] border border-white/[0.06] text-white/60 text-[12px] font-medium rounded-xl px-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors cursor-pointer appearance-none"
-              style={{ minWidth: 130 }}
-            >
+          {/* Dropdowns + search */}
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "10px" }}>
+            <select value={state} onChange={(e) => setState(e.target.value)} style={{ ...selectStyle, minWidth: "130px" }}>
               <option value="all">All States</option>
-              {uniqueStates.map((s) => (
-                <option key={s} value={s}>
-                  {s}
-                </option>
-              ))}
+              {uniqueStates.map((s) => <option key={s} value={s}>{s}</option>)}
             </select>
-
-            {/* Tool dropdown */}
-            <select
-              value={tool}
-              onChange={(e) => setTool(e.target.value)}
-              className="bg-[#050B14] border border-white/[0.06] text-white/60 text-[12px] font-medium rounded-xl px-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors cursor-pointer appearance-none"
-              style={{ minWidth: 150 }}
-            >
+            <select value={tool} onChange={(e) => setTool(e.target.value)} style={{ ...selectStyle, minWidth: "150px" }}>
               <option value="all">All Tools</option>
-              {uniqueTools.map((t) => (
-                <option key={t} value={t}>
-                  {t}
-                </option>
-              ))}
+              {uniqueTools.map((t) => <option key={t} value={t}>{t}</option>)}
             </select>
-
-            {/* Year dropdown */}
-            <select
-              value={year}
-              onChange={(e) => setYear(e.target.value)}
-              className="bg-[#050B14] border border-white/[0.06] text-white/60 text-[12px] font-medium rounded-xl px-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors cursor-pointer appearance-none"
-              style={{ minWidth: 120 }}
-            >
-              {YEAR_OPTIONS.map((y) => (
-                <option key={y} value={y}>
-                  {y === "all" ? "All Years" : y}
-                </option>
-              ))}
+            <select value={year} onChange={(e) => setYear(e.target.value)} style={{ ...selectStyle, minWidth: "110px" }}>
+              {YEAR_OPTIONS.map((y) => <option key={y} value={y}>{y === "all" ? "All Years" : y}</option>)}
             </select>
-
-            {/* Sort dropdown */}
-            <select
-              value={sort}
-              onChange={(e) => setSort(e.target.value as SortKey)}
-              className="bg-[#050B14] border border-white/[0.06] text-white/60 text-[12px] font-medium rounded-xl px-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors cursor-pointer appearance-none"
-              style={{ minWidth: 150 }}
-            >
+            <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)} style={{ ...selectStyle, minWidth: "150px" }}>
               <option value="date-desc">Newest First</option>
               <option value="date-asc">Oldest First</option>
               <option value="amount-desc">Highest Amount</option>
               <option value="amount-asc">Lowest Amount</option>
             </select>
-
-            {/* Search input */}
-            <div className="relative flex-1 min-w-[180px]">
+            <div style={{ position: "relative", flex: 1, minWidth: "200px" }}>
               <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-white/25"
+                width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                style={{ position: "absolute", left: "12px", top: "50%", transform: "translateY(-50%)", color: "var(--text-500)", pointerEvents: "none" }}
               >
                 <circle cx="11" cy="11" r="8" />
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
@@ -301,155 +308,269 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search case or court..."
-                className="w-full bg-[#050B14] border border-white/[0.06] text-white/60 text-[12px] font-medium rounded-xl pl-9 pr-3 py-2 outline-none focus:border-[#0066FF]/40 transition-colors placeholder:text-white/20"
+                placeholder="Search case or court…"
+                style={{
+                  width: "100%",
+                  background: "var(--bg)",
+                  border: "1px solid var(--border)",
+                  color: "var(--text-300)",
+                  fontFamily: "var(--font-main)",
+                  fontSize: "12px",
+                  padding: "9px 12px 9px 32px",
+                  outline: "none",
+                }}
               />
             </div>
           </div>
 
-          {/* Result count */}
-          <div className="text-white/30 text-[11px] font-medium">
-            Showing {sorted.length} of {typedCases.length} cases
+          <div
+            style={{
+              marginTop: "14px",
+              fontFamily: "var(--font-mono)",
+              fontSize: "10px",
+              fontWeight: 700,
+              color: "var(--text-500)",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+            }}
+          >
+            {sorted.length} of {typedCases.length} cases
           </div>
         </div>
 
         {/* Case cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }} className="evidence-grid">
           {sorted.map((c) => {
             const isOpen = expandedId === c.id;
+            const sev = severityColors[c.severity] || { color: "var(--text-500)", border: "var(--border)" };
             return (
               <div
                 key={c.id}
-                className="bg-[#0A1628]/50 border border-white/[0.06] rounded-2xl flex flex-col group hover:border-[#FF5E1A]/20 hover:-translate-y-0.5 transition-all duration-300"
+                style={{
+                  background: "var(--bg-card)",
+                  border: "1px solid var(--border)",
+                  borderLeft: `2px solid ${sev.color}`,
+                  display: "flex",
+                  flexDirection: "column",
+                  transition: "border-color 0.3s",
+                }}
               >
-                {/* Compact view (always visible) */}
                 <button
                   onClick={() => toggleExpand(c.id)}
-                  className="w-full text-left p-6 cursor-pointer"
+                  style={{
+                    width: "100%",
+                    textAlign: "left",
+                    padding: "24px 24px 20px",
+                    cursor: "pointer",
+                    background: "transparent",
+                    border: "none",
+                    color: "inherit",
+                    fontFamily: "inherit",
+                  }}
                 >
-                  <div className="flex justify-between items-start mb-3">
-                    <div className="flex items-center gap-2">
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px", gap: "10px" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "6px", flexWrap: "wrap" }}>
                       <span
-                        className={`text-[10px] font-semibold tracking-wide px-2.5 py-1 rounded-full ${severityStyles[c.severity] || "text-white/40 bg-white/5"}`}
+                        style={{
+                          fontFamily: "var(--font-mono)",
+                          fontSize: "9px",
+                          fontWeight: 700,
+                          letterSpacing: "0.22em",
+                          textTransform: "uppercase",
+                          padding: "3px 8px",
+                          color: sev.color,
+                          border: `1px solid ${sev.border}`,
+                        }}
                       >
-                        {c.severity}
+                        {c.severity === "career-ending" ? "Career" : c.severity}
                       </span>
-                      <span className="text-[10px] font-semibold tracking-wide px-2 py-1 rounded-full bg-white/[0.06] text-white/50">
+                      <span
+                        style={{
+                          fontFamily: "var(--font-mono)",
+                          fontSize: "9px",
+                          fontWeight: 700,
+                          letterSpacing: "0.18em",
+                          textTransform: "uppercase",
+                          padding: "3px 8px",
+                          color: "var(--text-400)",
+                          border: "1px solid var(--border-soft)",
+                        }}
+                      >
                         {c.state}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-white/30 text-[11px] font-medium">
+                    <div style={{ display: "flex", alignItems: "center", gap: "8px", flexShrink: 0 }}>
+                      <span
+                        style={{
+                          fontFamily: "var(--font-mono)",
+                          fontSize: "10px",
+                          color: "var(--text-500)",
+                          letterSpacing: "0.08em",
+                        }}
+                      >
                         {c.date}
                       </span>
                       <ChevronIcon open={isOpen} />
                     </div>
                   </div>
-
-                  <h4 className="text-lg font-bold text-white mb-1 group-hover:text-[#0066FF] transition-colors leading-snug">
+                  <h4
+                    style={{
+                      fontFamily: "var(--font-serif)",
+                      fontSize: "19px",
+                      fontWeight: 500,
+                      color: "var(--text-100)",
+                      letterSpacing: "-0.015em",
+                      lineHeight: 1.25,
+                      marginBottom: "6px",
+                      transition: "color 0.3s",
+                    }}
+                  >
                     {c.case_name}
                   </h4>
-                  <p className="text-white/40 text-[11px] font-medium mb-3">
+                  <p
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "10px",
+                      fontWeight: 700,
+                      color: "var(--text-500)",
+                      letterSpacing: "0.14em",
+                      textTransform: "uppercase",
+                      marginBottom: "14px",
+                    }}
+                  >
                     {c.court}
                   </p>
-
-                  <p className="text-white/60 text-sm leading-relaxed mb-3">
-                    {isOpen ? "" : truncate(c.summary)}
-                  </p>
-
+                  {!isOpen && (
+                    <p style={{ fontSize: "13px", color: "var(--text-400)", lineHeight: 1.65, marginBottom: "12px", fontWeight: 300 }}>
+                      {truncate(c.summary)}
+                    </p>
+                  )}
                   {c.amount !== null && c.amount > 0 && (
-                    <div className="text-[#FF5E1A] font-black text-lg">
+                    <div
+                      style={{
+                        fontFamily: "var(--font-serif)",
+                        fontSize: "22px",
+                        fontWeight: 500,
+                        color: "var(--amber)",
+                        letterSpacing: "-0.025em",
+                        fontStyle: "italic",
+                        lineHeight: 1,
+                      }}
+                    >
                       {c.amount_display}
                     </div>
                   )}
                   {(c.amount === null || c.amount === 0) && c.amount_display && (
-                    <div className="text-white/50 font-semibold text-sm">
+                    <div
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "12px",
+                        fontWeight: 700,
+                        color: "var(--text-300)",
+                        letterSpacing: "0.08em",
+                      }}
+                    >
                       {c.amount_display}
                     </div>
                   )}
                 </button>
 
-                {/* Expanded view */}
-                <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
-                  }`}
-                >
-                  <div className="px-6 pb-6 space-y-4 bg-[#050B14]/50 rounded-b-2xl">
-                    {/* Full summary */}
-                    <p className="text-white/60 text-sm leading-relaxed">
+                {isOpen && (
+                  <div style={{ padding: "0 24px 24px", borderTop: "1px solid var(--border-soft)", paddingTop: "20px", marginTop: "4px" }}>
+                    <p style={{ fontSize: "13px", color: "var(--text-400)", lineHeight: 1.7, fontWeight: 300, marginBottom: "16px" }}>
                       {c.summary}
                     </p>
 
-                    {/* Judge */}
                     {c.judge && c.judge !== "N/A" && (
-                      <div className="text-white/40 text-[12px]">
-                        <span className="text-white/25 uppercase tracking-wide text-[10px] font-semibold mr-2">
+                      <div style={{ marginBottom: "10px", fontSize: "12px", color: "var(--text-400)" }}>
+                        <span
+                          style={{
+                            fontFamily: "var(--font-mono)",
+                            fontSize: "9px",
+                            fontWeight: 700,
+                            color: "var(--text-600)",
+                            letterSpacing: "0.22em",
+                            textTransform: "uppercase",
+                            marginRight: "8px",
+                          }}
+                        >
                           Judge
                         </span>
                         {c.judge}
                       </div>
                     )}
-
-                    {/* AI Tool */}
-                    <div className="text-white/40 text-[12px]">
-                      <span className="text-white/25 uppercase tracking-wide text-[10px] font-semibold mr-2">
+                    <div style={{ marginBottom: "14px", fontSize: "12px", color: "var(--text-400)" }}>
+                      <span
+                        style={{
+                          fontFamily: "var(--font-mono)",
+                          fontSize: "9px",
+                          fontWeight: 700,
+                          color: "var(--text-600)",
+                          letterSpacing: "0.22em",
+                          textTransform: "uppercase",
+                          marginRight: "8px",
+                        }}
+                      >
                         AI Tool
                       </span>
                       {c.ai_tool_used}
                     </div>
 
-                    {/* Sanction types */}
                     {c.sanction_types.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5">
-                        <span className="text-white/25 uppercase tracking-wide text-[10px] font-semibold mr-1 self-center">
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "10px", alignItems: "center" }}>
+                        <span
+                          style={{
+                            fontFamily: "var(--font-mono)",
+                            fontSize: "9px",
+                            fontWeight: 700,
+                            color: "var(--text-600)",
+                            letterSpacing: "0.22em",
+                            textTransform: "uppercase",
+                          }}
+                        >
                           Sanctions
                         </span>
                         {c.sanction_types.map((st) => (
-                          <span
-                            key={st}
-                            className="bg-white/[0.06] text-white/50 text-[10px] rounded-full px-2.5 py-0.5 font-medium"
-                          >
+                          <span key={st} style={{ fontFamily: "var(--font-mono)", fontSize: "9px", color: "var(--text-400)", letterSpacing: "0.1em", padding: "3px 8px", border: "1px solid var(--border-soft)" }}>
                             {st}
                           </span>
                         ))}
                       </div>
                     )}
 
-                    {/* Tags */}
-                    {c.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5">
-                        {c.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="bg-white/[0.06] text-white/50 text-[10px] rounded-full px-2.5 py-0.5 font-medium"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-
-                    {/* Policy gaps */}
                     {c.policy_gap_ids.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5">
-                        <span className="text-white/25 uppercase tracking-wide text-[10px] font-semibold mr-1 self-center">
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "14px", alignItems: "center" }}>
+                        <span
+                          style={{
+                            fontFamily: "var(--font-mono)",
+                            fontSize: "9px",
+                            fontWeight: 700,
+                            color: "var(--text-600)",
+                            letterSpacing: "0.22em",
+                            textTransform: "uppercase",
+                          }}
+                        >
                           Gaps
                         </span>
                         {c.policy_gap_ids.map((gid) => (
-                          <span
-                            key={gid}
-                            className="bg-[#0066FF]/10 text-[#0066FF]/70 text-[10px] rounded-full px-2.5 py-0.5 font-medium"
-                          >
+                          <span key={gid} style={{ fontFamily: "var(--font-mono)", fontSize: "9px", color: "var(--blue)", letterSpacing: "0.1em", padding: "3px 8px", border: "1px solid rgba(0,102,255,0.25)", background: "rgba(0,102,255,0.06)" }}>
                             {POLICY_GAP_LABELS[gid] || gid}
                           </span>
                         ))}
                       </div>
                     )}
 
-                    {/* Source link */}
-                    <div className="pt-3 border-t border-white/[0.06] flex items-center justify-between">
-                      <span className="text-[11px] text-white/25 font-medium">
+                    <div style={{ paddingTop: "14px", borderTop: "1px solid var(--border-soft)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px", flexWrap: "wrap" }}>
+                      <span
+                        style={{
+                          fontFamily: "var(--font-mono)",
+                          fontSize: "9px",
+                          fontWeight: 700,
+                          color: "var(--text-600)",
+                          letterSpacing: "0.18em",
+                          textTransform: "uppercase",
+                        }}
+                      >
                         {c.source_name}
                       </span>
                       <a
@@ -457,17 +578,21 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="text-[#0066FF] text-[11px] font-semibold flex items-center gap-1 hover:underline"
+                        style={{
+                          fontFamily: "var(--font-mono)",
+                          fontSize: "10px",
+                          fontWeight: 700,
+                          color: "var(--blue)",
+                          letterSpacing: "0.18em",
+                          textTransform: "uppercase",
+                          textDecoration: "none",
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "6px",
+                        }}
                       >
                         View Source
-                        <svg
-                          width="10"
-                          height="10"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        >
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                           <polyline points="15 3 21 3 21 9" />
                           <line x1="10" y1="14" x2="21" y2="3" />
@@ -475,18 +600,36 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
                       </a>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             );
           })}
         </div>
 
         {sorted.length === 0 && (
-          <div className="text-center py-20 text-white/25 text-sm">
+          <div
+            style={{
+              textAlign: "center",
+              padding: "60px 20px",
+              fontFamily: "var(--font-mono)",
+              fontSize: "11px",
+              color: "var(--text-500)",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+            }}
+          >
             No cases match your filters.
           </div>
         )}
       </div>
+      <style>{`
+        @media (max-width: 1024px) {
+          .evidence-grid { grid-template-columns: 1fr 1fr !important; }
+        }
+        @media (max-width: 680px) {
+          .evidence-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </section>
   );
 }

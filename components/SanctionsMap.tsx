@@ -6,7 +6,6 @@ import casesData from "@/data/cases.json";
 
 const GEO_URL = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
-/* FIPS code → state abbreviation */
 const FIPS_TO_STATE: Record<string, string> = {
   "01": "AL", "02": "AK", "04": "AZ", "05": "AR", "06": "CA",
   "08": "CO", "09": "CT", "10": "DE", "11": "DC", "12": "FL",
@@ -69,25 +68,20 @@ export default function SanctionsMap({ onStateClick }: Props) {
   }, []);
 
   const topJurisdictions = useMemo(() => {
-    return Object.entries(stateData)
-      .sort((a, b) => b[1].count - a[1].count)
-      .slice(0, 5);
+    return Object.entries(stateData).sort((a, b) => b[1].count - a[1].count).slice(0, 5);
   }, [stateData]);
 
   const maxCount = topJurisdictions[0]?.[1].count ?? 1;
 
   function getFill(stateCode: string, isHovered: boolean): string {
     const count = stateData[stateCode]?.count ?? 0;
-    if (count === 0) return isHovered ? "rgba(255,255,255,0.06)" : "rgba(255,255,255,0.03)";
+    if (count === 0) return isHovered ? "rgba(255,255,255,0.08)" : "rgba(255,255,255,0.04)";
     if (count === 1) return isHovered ? "rgba(0,102,255,0.45)" : "rgba(0,102,255,0.3)";
-    if (count === 2) return isHovered ? "rgba(0,102,255,0.65)" : "rgba(0,102,255,0.5)";
-    return isHovered ? "rgba(0,102,255,0.95)" : "rgba(0,102,255,0.8)";
+    if (count === 2) return isHovered ? "rgba(0,102,255,0.7)" : "rgba(0,102,255,0.55)";
+    return isHovered ? "rgba(0,102,255,1)" : "rgba(0,102,255,0.85)";
   }
 
-  function handleMouseMove(
-    e: React.MouseEvent,
-    stateCode: string
-  ) {
+  function handleMouseMove(e: React.MouseEvent, stateCode: string) {
     const container = (e.currentTarget as HTMLElement).closest(".map-container");
     if (!container) return;
     const rect = container.getBoundingClientRect();
@@ -108,151 +102,201 @@ export default function SanctionsMap({ onStateClick }: Props) {
   }
 
   return (
-    <section id="map" className="w-full px-4 md:px-6 py-12">
-      <div className="max-w-5xl mx-auto bg-[#0A1628]/80 backdrop-blur-xl border border-white/[0.06] rounded-2xl p-6 md:p-10 relative overflow-hidden">
-        {/* Header */}
-        <div className="mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-2">
-            Sanctions by Jurisdiction
+    <section id="map" className="section alt">
+      <div className="container">
+        <div className="section-head blue">
+          <div className="section-label blue">
+            <span className="tick blue"></span>
+            Jurisdiction Map
+          </div>
+          <h2 className="section-heading">
+            Sanctions by <span className="blue-em">jurisdiction</span>.
           </h2>
-          <p className="text-sm text-white/40">
-            Geographic distribution of AI-related court sanctions across the United States
+          <p className="section-sub">
+            Geographic distribution of AI-related court sanctions across the United States. Click a state to filter the case evidence below.
           </p>
         </div>
 
-        {/* Inner glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-[#0066FF]/5 blur-[100px] rounded-full pointer-events-none" />
+        <div style={{ background: "var(--bg-card)", border: "1px solid var(--border)", padding: "32px" }}>
+          {/* Map */}
+          <div className="map-container" style={{ position: "relative", background: "var(--bg)", border: "1px solid var(--border-soft)" }}>
+            <ComposableMap projection="geoAlbersUsa" projectionConfig={{ scale: 1000 }} width={800} height={500} style={{ width: "100%", height: "auto" }}>
+              <Geographies geography={GEO_URL}>
+                {({ geographies }) =>
+                  geographies.map((geo) => {
+                    const fips = geo.id as string;
+                    const stateCode = FIPS_TO_STATE[fips] ?? "";
+                    const count = stateData[stateCode]?.count ?? 0;
+                    const isHovered = hoveredState === stateCode;
+                    return (
+                      <Geography
+                        key={geo.rsmKey}
+                        geography={geo}
+                        fill={getFill(stateCode, isHovered)}
+                        stroke="rgba(255,255,255,0.12)"
+                        strokeWidth={0.5}
+                        style={{
+                          default: { outline: "none" },
+                          hover: { outline: "none" },
+                          pressed: { outline: "none" },
+                        }}
+                        onMouseMove={(e) => handleMouseMove(e, stateCode)}
+                        onMouseLeave={handleMouseLeave}
+                        onClick={() => {
+                          if (count > 0 && onStateClick) onStateClick(stateCode);
+                        }}
+                        cursor={count > 0 ? "pointer" : "default"}
+                      />
+                    );
+                  })
+                }
+              </Geographies>
+            </ComposableMap>
 
-        {/* Map */}
-        <div className="relative w-full map-container" style={{ background: "#050B14", borderRadius: "0.75rem" }}>
-          <ComposableMap
-            projection="geoAlbersUsa"
-            projectionConfig={{ scale: 1000 }}
-            width={800}
-            height={500}
-            style={{ width: "100%", height: "auto" }}
+            {tooltip && (
+              <div
+                style={{
+                  position: "absolute",
+                  zIndex: 50,
+                  pointerEvents: "none",
+                  background: "var(--bg)",
+                  border: "1px solid var(--border)",
+                  padding: "12px 16px",
+                  boxShadow: "0 24px 60px -20px rgba(0,0,0,0.8)",
+                  transform: "translate(-50%, -100%)",
+                  left: tooltip.x,
+                  top: tooltip.y,
+                  minWidth: "180px",
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "15px",
+                    fontWeight: 600,
+                    color: "var(--text-100)",
+                    letterSpacing: "-0.015em",
+                    marginBottom: "4px",
+                  }}
+                >
+                  {tooltip.name}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "9px",
+                    fontWeight: 700,
+                    color: "var(--blue)",
+                    letterSpacing: "0.22em",
+                    textTransform: "uppercase",
+                    marginBottom: "8px",
+                  }}
+                >
+                  {tooltip.count} {tooltip.count === 1 ? "case" : "cases"}
+                </div>
+                {tooltip.cases.length > 0 && (
+                  <ul style={{ fontSize: "11px", color: "var(--text-400)", listStyle: "none", maxWidth: "240px" }}>
+                    {tooltip.cases.map((c, i) => (
+                      <li key={i} style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", marginBottom: "2px" }}>
+                        · {c}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* Legend */}
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              gap: "18px",
+              marginTop: "24px",
+              fontFamily: "var(--font-mono)",
+              fontSize: "10px",
+              fontWeight: 700,
+              color: "var(--text-500)",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+            }}
           >
-            <Geographies geography={GEO_URL}>
-              {({ geographies }) =>
-                geographies.map((geo) => {
-                  const fips = geo.id as string;
-                  const stateCode = FIPS_TO_STATE[fips] ?? "";
-                  const count = stateData[stateCode]?.count ?? 0;
-                  const isHovered = hoveredState === stateCode;
-
-                  return (
-                    <Geography
-                      key={geo.rsmKey}
-                      geography={geo}
-                      fill={getFill(stateCode, isHovered)}
-                      stroke="rgba(255,255,255,0.08)"
-                      strokeWidth={0.5}
-                      style={{
-                        default: { outline: "none" },
-                        hover: { outline: "none" },
-                        pressed: { outline: "none" },
-                      }}
-                      onMouseMove={(e) => handleMouseMove(e, stateCode)}
-                      onMouseLeave={handleMouseLeave}
-                      onClick={() => {
-                        if (count > 0 && onStateClick) onStateClick(stateCode);
-                      }}
-                      cursor={count > 0 ? "pointer" : "default"}
-                    />
-                  );
-                })
-              }
-            </Geographies>
-          </ComposableMap>
-
-          {/* Tooltip */}
-          {tooltip && (
-            <div
-              className="absolute z-50 pointer-events-none bg-[#0A1628] border border-white/[0.08] rounded-xl px-4 py-3 shadow-2xl -translate-x-1/2 -translate-y-full"
-              style={{ left: tooltip.x, top: tooltip.y }}
-            >
-              <div className="text-white font-semibold text-sm mb-1">
-                {tooltip.name}
-              </div>
-              <div className="text-white/50 text-xs mb-1">
-                {tooltip.count} {tooltip.count === 1 ? "case" : "cases"}
-              </div>
-              {tooltip.cases.length > 0 && (
-                <ul className="text-xs text-white/40 space-y-0.5 max-w-[220px]">
-                  {tooltip.cases.map((c, i) => (
-                    <li key={i} className="truncate">
-                      &bull; {c}
-                    </li>
-                  ))}
-                </ul>
-              )}
+            <span>Cases</span>
+            <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+              <span style={{ width: "10px", height: "10px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.12)" }} /><span>0</span>
             </div>
-          )}
-        </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+              <span style={{ width: "10px", height: "10px", background: "rgba(0,102,255,0.3)" }} /><span>1</span>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+              <span style={{ width: "10px", height: "10px", background: "rgba(0,102,255,0.55)" }} /><span>2</span>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+              <span style={{ width: "10px", height: "10px", background: "rgba(0,102,255,0.85)" }} /><span>3+</span>
+            </div>
+          </div>
 
-        {/* Legend */}
-        <div className="flex flex-wrap items-center gap-4 mt-6 text-xs text-white/40">
-          <span className="font-medium text-white/50">Cases:</span>
-          <div className="flex items-center gap-1.5">
-            <span
-              className="inline-block w-3 h-3 rounded-sm"
-              style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)" }}
-            />
-            <span>0</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span
-              className="inline-block w-3 h-3 rounded-sm"
-              style={{ background: "rgba(0,102,255,0.3)" }}
-            />
-            <span>1</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span
-              className="inline-block w-3 h-3 rounded-sm"
-              style={{ background: "rgba(0,102,255,0.5)" }}
-            />
-            <span>2</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span
-              className="inline-block w-3 h-3 rounded-sm"
-              style={{ background: "rgba(0,102,255,0.8)" }}
-            />
-            <span>3+</span>
-          </div>
-        </div>
-
-        {/* Top Jurisdictions Bar Chart */}
-        <div className="mt-10">
-          <h3 className="text-lg font-bold text-white mb-4">
-            Top Jurisdictions
-          </h3>
-          <div className="space-y-3">
-            {topJurisdictions.map(([code, data]) => (
-              <div key={code} className="flex items-center gap-3">
-                <span className="text-sm text-white/60 w-36 shrink-0 text-right">
-                  {STATE_NAMES[code] ?? code}
-                </span>
-                <div className="flex-1 h-7 bg-white/[0.03] rounded-lg overflow-hidden">
-                  <div
-                    className="h-full rounded-lg flex items-center px-3 text-xs font-semibold text-white transition-all duration-500"
+          {/* Top Jurisdictions */}
+          <div style={{ marginTop: "40px", paddingTop: "32px", borderTop: "1px solid var(--border-soft)" }}>
+            <div
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "10px",
+                fontWeight: 700,
+                color: "var(--text-500)",
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                marginBottom: "18px",
+              }}
+            >
+              Top Jurisdictions
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+              {topJurisdictions.map(([code, data]) => (
+                <div key={code} style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+                  <span
                     style={{
-                      width: `${(data.count / maxCount) * 100}%`,
-                      background:
-                        data.count >= 3
-                          ? "rgba(0,102,255,0.8)"
-                          : data.count === 2
-                          ? "rgba(0,102,255,0.5)"
-                          : "rgba(0,102,255,0.3)",
-                      minWidth: "2.5rem",
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "11px",
+                      color: "var(--text-300)",
+                      width: "160px",
+                      flexShrink: 0,
+                      textAlign: "right",
+                      letterSpacing: "0.04em",
                     }}
                   >
-                    {data.count}
+                    {STATE_NAMES[code] ?? code}
+                  </span>
+                  <div style={{ flex: 1, height: "26px", background: "var(--bg-subtle)", border: "1px solid var(--border-soft)", position: "relative" }}>
+                    <div
+                      style={{
+                        height: "100%",
+                        width: `${(data.count / maxCount) * 100}%`,
+                        background:
+                          data.count >= 3
+                            ? "rgba(0,102,255,0.85)"
+                            : data.count === 2
+                            ? "rgba(0,102,255,0.55)"
+                            : "rgba(0,102,255,0.3)",
+                        minWidth: "42px",
+                        display: "flex",
+                        alignItems: "center",
+                        paddingLeft: "10px",
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "11px",
+                        fontWeight: 700,
+                        color: "var(--text-100)",
+                        transition: "all 0.5s",
+                      }}
+                    >
+                      {data.count}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

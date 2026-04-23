@@ -2,7 +2,6 @@
 
 import cases from "@/data/cases.json";
 
-/* ---------- helpers ---------- */
 function countByField<T extends string>(arr: T[]): Record<string, number> {
   const map: Record<string, number> = {};
   arr.forEach((v) => { map[v] = (map[v] || 0) + 1; });
@@ -13,21 +12,17 @@ function sorted(obj: Record<string, number>) {
   return Object.entries(obj).sort((a, b) => b[1] - a[1]);
 }
 
-/* ---------- computed data ---------- */
 const allGaps = cases.flatMap((c) => c.policy_gap_ids);
 const gapCounts = sorted(countByField(allGaps));
-
-const toolCounts = sorted(
-  countByField(cases.map((c) => c.ai_tool_used))
-);
+const toolCounts = sorted(countByField(cases.map((c) => c.ai_tool_used)));
 const maxToolCount = toolCounts[0]?.[1] ?? 1;
 
 const severityCounts = countByField(cases.map((c) => c.severity));
 const severityOrder: { key: string; color: string; label: string }[] = [
-  { key: "career-ending", color: "#FF3333", label: "Career-Ending" },
-  { key: "high", color: "#FF8800", label: "High" },
-  { key: "medium", color: "#FFCC00", label: "Medium" },
-  { key: "low", color: "#44CC44", label: "Low" },
+  { key: "career-ending", color: "#ef4444", label: "Career-Ending" },
+  { key: "high", color: "#f59e0b", label: "High" },
+  { key: "medium", color: "#eab308", label: "Medium" },
+  { key: "low", color: "#22c55e", label: "Low" },
 ];
 
 const byYear: Record<number, { total: number; count: number }> = {};
@@ -44,7 +39,6 @@ const yearAvgs = Object.entries(byYear)
   .sort((a, b) => a.year - b.year);
 const maxAvg = Math.max(...yearAvgs.map((y) => y.avg), 1);
 
-/* gap label map */
 const gapLabels: Record<string, string> = {
   "citation-verification": "Citation Verification",
   "supervision-protocol": "Supervision Protocol",
@@ -58,103 +52,114 @@ const gapLabels: Record<string, string> = {
   "engagement-letter-ai": "Engagement Letter AI",
 };
 
-/* insight cards data */
 const citationGapCount = gapCounts.find(([k]) => k === "citation-verification")?.[1] ?? 0;
 const paidToolCases = cases.filter(
   (c) => c.ai_tool_used.toLowerCase().includes("cocounsel") || c.ai_tool_used.toLowerCase().includes("westlaw")
 );
 const supervisionCases = cases.filter((c) => c.policy_gap_ids.includes("supervision-protocol"));
 const denialCases = cases.filter(
-  (c) =>
-    c.tags.includes("denial") ||
-    c.tags.includes("sustained-deception") ||
-    c.policy_gap_ids.includes("incident-response")
+  (c) => c.tags.includes("denial") || c.tags.includes("sustained-deception") || c.policy_gap_ids.includes("incident-response")
 );
 
 const insightCards = [
   {
-    title: "Citation verification is the #1 gap",
+    title: "Citation verification is the #1 gap.",
     detail: `Present in ${citationGapCount} of ${cases.length} tracked cases. Every sanctioned attorney failed to verify AI-generated citations against primary sources.`,
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    accent: "blue" as const,
   },
   {
-    title: "Paid tools are not exempt",
-    detail: `${paidToolCases.length} case${paidToolCases.length !== 1 ? "s" : ""} involved CoCounsel/Westlaw. Courts ruled: "The tool's pedigree is no defense."`,
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    title: "Paid tools are not exempt.",
+    detail: `${paidToolCases.length} case${paidToolCases.length !== 1 ? "s" : ""} involved CoCounsel or Westlaw. Courts ruled: "The tool's pedigree is no defense."`,
+    accent: "amber" as const,
   },
   {
-    title: "Supervisors are liable",
+    title: "Supervisors are liable.",
     detail: `${supervisionCases.length} case${supervisionCases.length !== 1 ? "s" : ""} cited supervision failures. Signing attorneys are individually responsible for AI-assisted work product.`,
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
+    accent: "amber" as const,
   },
   {
-    title: "Denial makes it worse",
+    title: "Denial makes it worse.",
     detail: `${denialCases.length} case${denialCases.length !== 1 ? "s" : ""} where denial or cover-up escalated sanctions. Courts treat transparency failures more harshly than the original error.`,
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-      </svg>
-    ),
+    accent: "red" as const,
   },
 ];
 
-/* ---------- component ---------- */
+function PanelHead({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      style={{
+        fontFamily: "var(--font-mono)",
+        fontSize: "10px",
+        fontWeight: 700,
+        color: "var(--text-500)",
+        letterSpacing: "0.22em",
+        textTransform: "uppercase",
+        marginBottom: "22px",
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 export default function Insights() {
   return (
-    <section className="px-6 py-16 relative overflow-hidden">
-      {/* Subtle glow orb */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0066FF]/[0.03] blur-[150px] rounded-full pointer-events-none" />
-      <div className="max-w-6xl mx-auto relative z-10">
-        {/* header */}
-        <div className="mb-10">
-          <p className="text-[11px] font-semibold text-[#FF5E1A] tracking-widest uppercase mb-2">
+    <section id="insights" className="section">
+      <div className="container">
+        <div className="section-head amber">
+          <div className="section-label amber">
+            <span className="tick"></span>
             Intelligence
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black text-white tracking-[-0.03em]">
-            What the Data Reveals
+          </div>
+          <h2 className="section-heading">
+            What the <em>data</em> reveals.
           </h2>
-          <p className="text-white/70 mt-2 max-w-2xl text-sm leading-relaxed">
+          <p className="section-sub">
             Patterns computed from {cases.length} landmark AI sanctions cases. These are the failure modes courts punish most.
           </p>
         </div>
 
-        {/* top row: gap ranking + tool breakdown */}
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
-          {/* most common gaps */}
-          <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl p-6">
-            <h3 className="text-xs font-semibold text-white/50 tracking-wide uppercase mb-5">
-              Most Common Policy Gaps
-            </h3>
-            <div className="space-y-4">
+        {/* Top row */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginBottom: "12px" }} className="insights-row">
+          <div style={{ background: "var(--bg-card)", border: "1px solid var(--border)", padding: "28px 32px" }}>
+            <PanelHead>Most Common Policy Gaps</PanelHead>
+            <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
               {gapCounts.slice(0, 3).map(([gap, count], i) => (
                 <div key={gap}>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-sm text-white/70 font-medium">
-                      <span className="text-[#FF5E1A] font-bold mr-2">#{i + 1}</span>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                    <span style={{ fontSize: "14px", color: "var(--text-300)", fontWeight: 400 }}>
+                      <span
+                        style={{
+                          fontFamily: "var(--font-mono)",
+                          fontSize: "10px",
+                          color: "var(--amber)",
+                          fontWeight: 700,
+                          marginRight: "10px",
+                          letterSpacing: "0.1em",
+                        }}
+                      >
+                        #{i + 1}
+                      </span>
                       {gapLabels[gap] || gap}
                     </span>
-                    <span className="text-sm font-bold text-white">
+                    <span
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "12px",
+                        fontWeight: 700,
+                        color: "var(--text-100)",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
                       {count} cases
                     </span>
                   </div>
-                  <div className="h-2 bg-white/[0.04] rounded-full overflow-hidden">
+                  <div style={{ height: "4px", background: "var(--border-soft)", position: "relative" }}>
                     <div
-                      className="h-full rounded-full"
                       style={{
+                        height: "100%",
                         width: `${(count / cases.length) * 100}%`,
-                        background: i === 0 ? "#0066FF" : i === 1 ? "#0066FF99" : "#0066FF55",
+                        background: i === 0 ? "var(--blue)" : i === 1 ? "rgba(0,102,255,0.6)" : "rgba(0,102,255,0.35)",
                       }}
                     />
                   </div>
@@ -163,23 +168,39 @@ export default function Insights() {
             </div>
           </div>
 
-          {/* tool breakdown */}
-          <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl p-6">
-            <h3 className="text-xs font-semibold text-white/50 tracking-wide uppercase mb-5">
-              AI Tool Breakdown
-            </h3>
-            <div className="space-y-3">
+          <div style={{ background: "var(--bg-card)", border: "1px solid var(--border)", padding: "28px 32px" }}>
+            <PanelHead>AI Tool Breakdown</PanelHead>
+            <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
               {toolCounts.map(([tool, count]) => (
                 <div key={tool}>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-sm text-white/70 font-medium truncate mr-3">{tool}</span>
-                    <span className="text-xs font-bold text-white/50 shrink-0">{count}</span>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
+                    <span
+                      style={{
+                        fontSize: "13px",
+                        color: "var(--text-300)",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                        marginRight: "12px",
+                      }}
+                    >
+                      {tool}
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "11px",
+                        fontWeight: 700,
+                        color: "var(--text-500)",
+                        letterSpacing: "0.08em",
+                        flexShrink: 0,
+                      }}
+                    >
+                      {count}
+                    </span>
                   </div>
-                  <div className="h-1.5 bg-white/[0.04] rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-[#0066FF] rounded-full transition-all"
-                      style={{ width: `${(count / maxToolCount) * 100}%` }}
-                    />
+                  <div style={{ height: "3px", background: "var(--border-soft)", position: "relative" }}>
+                    <div style={{ height: "100%", width: `${(count / maxToolCount) * 100}%`, background: "var(--blue)" }} />
                   </div>
                 </div>
               ))}
@@ -187,89 +208,137 @@ export default function Insights() {
           </div>
         </div>
 
-        {/* second row: severity + escalation trend */}
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
-          {/* severity distribution */}
-          <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl p-6">
-            <h3 className="text-xs font-semibold text-white/50 tracking-wide uppercase mb-5">
-              Severity Distribution
-            </h3>
-            {/* bar segments */}
-            <div className="flex h-4 rounded-full overflow-hidden mb-5">
+        {/* Second row */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginBottom: "12px" }} className="insights-row">
+          <div style={{ background: "var(--bg-card)", border: "1px solid var(--border)", padding: "28px 32px" }}>
+            <PanelHead>Severity Distribution</PanelHead>
+            <div style={{ display: "flex", height: "12px", overflow: "hidden", marginBottom: "20px", border: "1px solid var(--border-soft)" }}>
               {severityOrder.map(({ key, color }) => {
                 const count = severityCounts[key] || 0;
                 const pct = (count / cases.length) * 100;
-                return pct > 0 ? (
-                  <div
-                    key={key}
-                    style={{ width: `${pct}%`, backgroundColor: color }}
-                    className="first:rounded-l-full last:rounded-r-full"
-                  />
-                ) : null;
+                return pct > 0 ? <div key={key} style={{ width: `${pct}%`, backgroundColor: color }} /> : null;
               })}
             </div>
-            <div className="grid grid-cols-2 gap-3">
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
               {severityOrder.map(({ key, color, label }) => {
                 const count = severityCounts[key] || 0;
                 return (
-                  <div key={key} className="flex items-center gap-2">
-                    <div className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: color }} />
-                    <span className="text-sm text-white/70">{label}</span>
-                    <span className="text-sm font-bold text-white ml-auto">{count}</span>
+                  <div key={key} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                    <div style={{ width: "9px", height: "9px", backgroundColor: color, flexShrink: 0 }} />
+                    <span style={{ fontSize: "13px", color: "var(--text-300)" }}>{label}</span>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "11px",
+                        fontWeight: 700,
+                        color: "var(--text-100)",
+                        marginLeft: "auto",
+                        letterSpacing: "0.08em",
+                      }}
+                    >
+                      {count}
+                    </span>
                   </div>
                 );
               })}
             </div>
           </div>
 
-          {/* escalation trend */}
-          <div className="bg-[#0A1628]/70 border border-white/[0.06] rounded-2xl p-6">
-            <h3 className="text-xs font-semibold text-white/50 tracking-wide uppercase mb-5">
-              Avg. Sanction Amount by Year
-            </h3>
-            <div className="space-y-4">
+          <div style={{ background: "var(--bg-card)", border: "1px solid var(--border)", padding: "28px 32px" }}>
+            <PanelHead>Avg. Sanction by Year</PanelHead>
+            <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
               {yearAvgs.map(({ year, avg }) => (
                 <div key={year}>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-sm font-bold text-white">{year}</span>
-                    <span className="text-sm text-white/70 font-medium">
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
+                    <span style={{ fontFamily: "var(--font-mono)", fontSize: "12px", fontWeight: 700, color: "var(--text-100)", letterSpacing: "0.05em" }}>{year}</span>
+                    <span style={{ fontSize: "13px", color: "var(--text-300)", fontWeight: 400, fontFamily: "var(--font-mono)", letterSpacing: "0.04em" }}>
                       {avg > 0 ? `$${avg.toLocaleString()}` : "Non-monetary"}
                     </span>
                   </div>
-                  <div className="h-2 bg-white/[0.04] rounded-full overflow-hidden">
+                  <div style={{ height: "4px", background: "var(--border-soft)", position: "relative" }}>
                     <div
-                      className="h-full rounded-full transition-all"
                       style={{
+                        height: "100%",
                         width: avg > 0 ? `${(avg / maxAvg) * 100}%` : "4%",
-                        backgroundColor: avg > 0 ? "#FF8800" : "#FFCC0044",
+                        backgroundColor: avg > 0 ? "var(--amber)" : "rgba(234,179,8,0.25)",
                       }}
                     />
                   </div>
                 </div>
               ))}
             </div>
-            <p className="text-[11px] text-white/40 mt-4">
-              Based on cases with monetary sanctions. Non-monetary cases (disqualification, referral) excluded from average.
+            <p
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "9px",
+                color: "var(--text-600)",
+                marginTop: "18px",
+                letterSpacing: "0.1em",
+                lineHeight: 1.6,
+              }}
+            >
+              Based on cases with monetary sanctions. Non-monetary cases excluded.
             </p>
           </div>
         </div>
 
-        {/* key patterns */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {insightCards.map((card, i) => (
-            <div
-              key={i}
-              className="bg-[#0A1628]/50 border border-white/[0.06] rounded-2xl p-6 hover:border-[#FF5E1A]/30 hover:-translate-y-0.5 transition-all duration-300"
-            >
-              <div className="w-9 h-9 rounded-xl bg-[#FF5E1A]/10 text-[#FF5E1A] flex items-center justify-center mb-4">
-                {card.icon}
+        {/* Pattern cards */}
+        <div
+          style={{
+            marginTop: "40px",
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: "1px",
+            background: "var(--border)",
+            border: "1px solid var(--border)",
+          }}
+          className="insight-cards"
+        >
+          {insightCards.map((card, i) => {
+            const accentColor = card.accent === "blue" ? "var(--blue)" : card.accent === "amber" ? "var(--amber)" : "var(--red-muted)";
+            return (
+              <div key={i} style={{ background: "var(--bg-card)", padding: "32px 28px", transition: "background 0.3s" }}>
+                <div
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "10px",
+                    fontWeight: 700,
+                    color: accentColor,
+                    letterSpacing: "0.22em",
+                    textTransform: "uppercase",
+                    marginBottom: "14px",
+                  }}
+                >
+                  Pattern · {String(i + 1).padStart(2, "0")}
+                </div>
+                <h4
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "18px",
+                    fontWeight: 500,
+                    color: "var(--text-100)",
+                    letterSpacing: "-0.015em",
+                    lineHeight: 1.3,
+                    marginBottom: "12px",
+                  }}
+                >
+                  {card.title}
+                </h4>
+                <p style={{ fontSize: "13px", color: "var(--text-400)", lineHeight: 1.7, fontWeight: 300 }}>{card.detail}</p>
               </div>
-              <h4 className="text-sm font-bold text-white mb-2">{card.title}</h4>
-              <p className="text-[13px] text-white/70 leading-relaxed">{card.detail}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
+      <style>{`
+        @media (max-width: 1024px) {
+          .insights-row { grid-template-columns: 1fr !important; }
+          .insight-cards { grid-template-columns: 1fr 1fr !important; }
+        }
+        @media (max-width: 600px) {
+          .insight-cards { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </section>
   );
 }

@@ -12,14 +12,11 @@ export default function EscalationCurve() {
   const chartW = W - PAD.left - PAD.right;
   const chartH = H - PAD.top - PAD.bottom;
 
-  const scaleY = (val: number) =>
-    PAD.top + chartH - Math.sqrt(val / maxAmount) * chartH;
-  const scaleX = (i: number) =>
-    PAD.left + (i / (data.length - 1)) * chartW;
+  const scaleY = (val: number) => PAD.top + chartH - Math.sqrt(val / maxAmount) * chartH;
+  const scaleX = (i: number) => PAD.left + (i / (data.length - 1)) * chartW;
 
   const points = data.map((d, i) => ({ x: scaleX(i), y: scaleY(d.amount) }));
 
-  // Smooth curve using catmull-rom to bezier
   const buildSmoothPath = () => {
     if (points.length < 2) return "";
     let path = `M${points[0].x},${points[0].y}`;
@@ -43,158 +40,179 @@ export default function EscalationCurve() {
   const gridValues = [0, 25000, 50000, 75000, 100000];
 
   return (
-    <section id="escalation" className="py-16 px-6 border-t border-white/[0.06]">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-6 mb-6">
-          {/* Left narrative panel */}
-          <div className="lg:w-1/3 flex flex-col justify-center">
-            <h2 className="text-3xl md:text-4xl font-black text-white tracking-[-0.03em] mb-2">
-              Escalation Curve
-            </h2>
-            <p className="text-white/50 text-sm mb-6">
-              From minor fines to career removal — sanctions are accelerating
-              exponentially
-            </p>
-            <div className="bg-[#0A1628] border border-white/[0.06] rounded-xl p-4">
-              <div className="text-[10px] font-semibold text-white/30 tracking-widest uppercase mb-1">Record Sanction</div>
-              <div className="text-2xl font-black text-[#FF5E1A]">$109.7K</div>
-              <div className="text-xs text-white/40 mt-1">Brigandi v. Oregon (2026)</div>
+    <section id="escalation" className="section">
+      <div className="container">
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "32px", alignItems: "start" }} className="escalation-grid">
+          {/* Narrative panel */}
+          <div>
+            <div className="section-head blue" style={{ marginBottom: "28px" }}>
+              <div className="section-label blue">
+                <span className="tick blue"></span>
+                Escalation Curve
+              </div>
+              <h2 className="section-heading">
+                From minor fines to <em>career removal</em>.
+              </h2>
+              <p className="section-sub" style={{ marginTop: "14px" }}>
+                Sanctions are accelerating exponentially. The curve is not linear.
+              </p>
+            </div>
+            <div style={{ background: "var(--bg-card)", border: "1px solid var(--border)", padding: "20px 22px", position: "relative" }}>
+              <div
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "9px",
+                  fontWeight: 700,
+                  color: "var(--text-500)",
+                  letterSpacing: "0.22em",
+                  textTransform: "uppercase",
+                  marginBottom: "8px",
+                }}
+              >
+                Record Sanction
+              </div>
+              <div
+                style={{
+                  fontFamily: "var(--font-serif)",
+                  fontSize: "34px",
+                  fontWeight: 500,
+                  color: "var(--amber)",
+                  letterSpacing: "-0.03em",
+                  fontStyle: "italic",
+                  lineHeight: 1,
+                  marginBottom: "8px",
+                }}
+              >
+                $109.7K
+              </div>
+              <div style={{ fontSize: "12px", color: "var(--text-400)", fontWeight: 400 }}>
+                Brigandi v. Oregon <span style={{ color: "var(--text-600)" }}>· 2026</span>
+              </div>
             </div>
           </div>
 
-          {/* Right chart panel */}
-          <div className="lg:w-2/3">
-        <div className="bg-[#0A1628]/80 backdrop-blur-xl border border-white/[0.06] rounded-2xl p-4 md:p-8 overflow-x-auto">
-          <div className="flex items-center gap-2 mb-4">
-            <svg className="w-4 h-4 text-[#0066FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-            </svg>
-            <span className="text-xs font-semibold text-white/50 tracking-wide uppercase">Cumulative Judicial Sanctions</span>
-          </div>
-          <svg
-            viewBox={`0 0 ${W} ${H}`}
-            className="w-full h-auto min-w-[600px]"
-            role="img"
-            aria-label="Escalation curve showing increasing sanctions amounts over time"
-          >
-            <defs>
-              <linearGradient id="curveGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#0066FF" stopOpacity="0.25" />
-                <stop offset="100%" stopColor="#0066FF" stopOpacity="0.02" />
-              </linearGradient>
-            </defs>
-
-            {/* Grid lines */}
-            {gridValues.map((val) => (
-              <g key={val}>
-                <line
-                  x1={PAD.left}
-                  y1={scaleY(val)}
-                  x2={W - PAD.right}
-                  y2={scaleY(val)}
-                  stroke="rgba(255,255,255,0.05)"
-                  strokeDasharray="4,4"
-                />
-                <text
-                  x={PAD.left - 10}
-                  y={scaleY(val) + 4}
-                  textAnchor="end"
-                  fill="rgba(255,255,255,0.2)"
-                  fontSize="11"
-                  fontFamily="Inter, sans-serif"
-                >
-                  ${(val / 1000).toFixed(0)}K
-                </text>
-              </g>
-            ))}
-
-            {/* Area fill */}
-            <path d={areaPath} fill="url(#curveGrad)" />
-
-            {/* Smooth line */}
-            <path
-              d={linePath}
-              fill="none"
-              stroke="#0066FF"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-
-            {/* Data points + labels */}
-            {points.map((p, i) => (
-              <g key={i}>
-                <circle
-                  cx={p.x}
-                  cy={p.y}
-                  r="16"
-                  fill="transparent"
-                  className="cursor-pointer"
-                />
-                <circle
-                  cx={p.x}
-                  cy={p.y}
-                  r="5"
-                  fill="#0066FF"
-                  stroke="#050B14"
-                  strokeWidth="2.5"
-                />
-                <text
-                  x={p.x}
-                  y={PAD.top + chartH + 20}
-                  textAnchor="middle"
-                  fill="rgba(255,255,255,0.5)"
-                  fontSize="10"
-                  fontWeight="600"
-                  fontFamily="Inter, sans-serif"
-                >
-                  {data[i].label}
-                </text>
-                <text
-                  x={p.x}
-                  y={PAD.top + chartH + 34}
-                  textAnchor="middle"
-                  fill="rgba(255,255,255,0.2)"
-                  fontSize="9"
-                  fontFamily="Inter, sans-serif"
-                >
-                  {data[i].case_name}
-                </text>
-                <text
-                  x={p.x}
-                  y={PAD.top + chartH + 46}
-                  textAnchor="middle"
-                  fill="rgba(255,255,255,0.12)"
-                  fontSize="8"
-                  fontFamily="Inter, sans-serif"
-                >
-                  {data[i].year}
-                </text>
-              </g>
-            ))}
-          </svg>
-        </div>
+          {/* Chart panel */}
+          <div>
+            <div style={{ background: "var(--bg-card)", border: "1px solid var(--border)", padding: "28px", overflowX: "auto" }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  marginBottom: "16px",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  color: "var(--text-500)",
+                  letterSpacing: "0.22em",
+                  textTransform: "uppercase",
+                }}
+              >
+                <span style={{ width: "5px", height: "5px", background: "var(--blue)", display: "inline-block" }}></span>
+                Cumulative Judicial Sanctions
+              </div>
+              <svg viewBox={`0 0 ${W} ${H}`} style={{ width: "100%", height: "auto", minWidth: "600px" }} role="img">
+                <defs>
+                  <linearGradient id="curveGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#0066FF" stopOpacity="0.28" />
+                    <stop offset="100%" stopColor="#0066FF" stopOpacity="0.02" />
+                  </linearGradient>
+                </defs>
+                {gridValues.map((val) => (
+                  <g key={val}>
+                    <line x1={PAD.left} y1={scaleY(val)} x2={W - PAD.right} y2={scaleY(val)} stroke="rgba(255,255,255,0.05)" strokeDasharray="4,4" />
+                    <text x={PAD.left - 10} y={scaleY(val) + 4} textAnchor="end" fill="rgba(255,255,255,0.3)" fontSize="11" fontFamily="ui-monospace, Menlo, monospace">
+                      ${(val / 1000).toFixed(0)}K
+                    </text>
+                  </g>
+                ))}
+                <path d={areaPath} fill="url(#curveGrad)" />
+                <path d={linePath} fill="none" stroke="#0066FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                {points.map((p, i) => (
+                  <g key={i}>
+                    <circle cx={p.x} cy={p.y} r="4.5" fill="#0066FF" stroke="#0A0A0A" strokeWidth="2.5" />
+                    <text x={p.x} y={PAD.top + chartH + 22} textAnchor="middle" fill="rgba(244,244,245,0.7)" fontSize="10" fontWeight="700" fontFamily="ui-monospace, Menlo, monospace" letterSpacing="0.1em">
+                      {data[i].label}
+                    </text>
+                    <text x={p.x} y={PAD.top + chartH + 36} textAnchor="middle" fill="rgba(255,255,255,0.35)" fontSize="9" fontStyle="italic" fontFamily="Source Serif 4, Georgia, serif">
+                      {data[i].case_name}
+                    </text>
+                    <text x={p.x} y={PAD.top + chartH + 48} textAnchor="middle" fill="rgba(255,255,255,0.2)" fontSize="8" fontFamily="ui-monospace, Menlo, monospace">
+                      {data[i].year}
+                    </text>
+                  </g>
+                ))}
+              </svg>
+            </div>
           </div>
         </div>
 
         {/* 17-courts callout */}
-        <div className="mt-6 bg-[#0066FF]/5 border border-[#0066FF]/15 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-6">
-            <span className="text-5xl font-black text-[#FF5E1A]">17</span>
+        <div
+          style={{
+            marginTop: "28px",
+            background: "var(--bg-card)",
+            border: "1px solid var(--border)",
+            borderLeft: "2px solid var(--amber)",
+            padding: "28px 32px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "24px",
+            flexWrap: "wrap",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: "28px" }}>
+            <span
+              style={{
+                fontFamily: "var(--font-serif)",
+                fontSize: "56px",
+                fontWeight: 500,
+                color: "var(--amber)",
+                letterSpacing: "-0.04em",
+                fontStyle: "italic",
+                lineHeight: 1,
+              }}
+            >
+              17
+            </span>
             <div>
-              <p className="text-white font-bold text-sm">
+              <p
+                style={{
+                  fontFamily: "var(--font-serif)",
+                  fontSize: "20px",
+                  fontWeight: 500,
+                  color: "var(--text-100)",
+                  letterSpacing: "-0.015em",
+                  marginBottom: "6px",
+                }}
+              >
                 One day. Seventeen courts.
               </p>
-              <p className="text-white/60 text-sm">
-                US court decisions flagging AI hallucinations — March 31, 2026
+              <p style={{ color: "var(--text-400)", fontSize: "13px", fontWeight: 300, lineHeight: 1.6 }}>
+                US court decisions flagging AI hallucinations &mdash; March 31, 2026.
               </p>
             </div>
           </div>
-          <div className="text-white/20 text-xs font-semibold tracking-wide">
+          <div
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: "10px",
+              fontWeight: 700,
+              color: "var(--amber)",
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+            }}
+          >
             The system is accelerating
           </div>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 1024px) {
+          .escalation-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+        }
+      `}</style>
     </section>
   );
 }

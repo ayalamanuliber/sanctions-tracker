@@ -7,9 +7,7 @@ interface Props {
 }
 
 function countCasesWithGaps(gapIds: string[]): number {
-  return cases.filter((c) =>
-    c.policy_gap_ids.some((g: string) => gapIds.includes(g))
-  ).length;
+  return cases.filter((c) => c.policy_gap_ids.some((g: string) => gapIds.includes(g))).length;
 }
 
 const recommendations = [
@@ -81,8 +79,6 @@ const recommendations = [
 
 export default function PolicyRecommendations({ answers }: Props) {
   const hasAnswers = Object.keys(answers).length > 0;
-
-  // Sort: gaps first (answered No), then covered
   const sorted = [...recommendations].sort((a, b) => {
     const aIsGap = answers[a.id] === false ? 1 : 0;
     const bIsGap = answers[b.id] === false ? 1 : 0;
@@ -90,84 +86,148 @@ export default function PolicyRecommendations({ answers }: Props) {
   });
 
   return (
-    <section className="px-6 py-16 border-t border-white/[0.06]">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-10">
-          <p className="text-[11px] font-semibold text-[#FF5E1A] tracking-widest uppercase mb-2">
+    <section className="section">
+      <div className="container">
+        <div className="section-head blue">
+          <div className="section-label blue">
+            <span className="tick blue"></span>
             Action Framework
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black text-white tracking-[-0.03em]">
-            Policy Recommendations
+          </div>
+          <h2 className="section-heading">
+            Policy <span className="blue-em">recommendations</span>.
           </h2>
-          <p className="text-white/50 mt-2 max-w-2xl text-sm leading-relaxed">
+          <p className="section-sub">
             {hasAnswers
               ? "Personalized to your assessment results. Red items are your active gaps."
-              : `Based on patterns across ${cases.length} sanctions cases. Complete the assessment above to personalize these recommendations.`}
+              : `Based on patterns across ${cases.length} sanctions cases. Complete the assessment above to personalize.`}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }} className="policy-grid">
           {sorted.map((rec) => {
             const caseCount = countCasesWithGaps(rec.gaps);
             const isGap = answers[rec.id] === false;
             const isCovered = answers[rec.id] === true;
+            const borderColor = isGap ? "rgba(239,68,68,0.35)" : isCovered ? "rgba(34,197,94,0.25)" : "var(--border)";
+            const leftBorder = isGap ? "2px solid var(--red-muted)" : isCovered ? "2px solid rgba(34,197,94,0.5)" : "1px solid var(--border)";
 
             return (
               <div
                 key={rec.num}
-                className={`border rounded-2xl p-6 transition-all duration-300 group hover:border-[#FF5E1A]/20 hover:-translate-y-0.5 ${
-                  isGap
-                    ? "bg-[#0A1628]/50 border-red-500/20 shadow-lg shadow-red-950/10"
-                    : isCovered
-                      ? "bg-[#0A1628]/50 border-emerald-500/15 opacity-70"
-                      : "bg-[#0A1628]/50 border-white/[0.06]"
-                }`}
+                style={{
+                  background: "var(--bg-card)",
+                  border: `1px solid ${borderColor}`,
+                  borderLeft: leftBorder,
+                  padding: "28px 30px",
+                  transition: "border-color 0.3s",
+                  opacity: isCovered ? 0.72 : 1,
+                }}
               >
-                <div className="flex items-start gap-4">
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-sm font-black shrink-0 ${
-                    isGap
-                      ? "bg-red-500/20 text-red-400 border border-red-500/30"
-                      : isCovered
-                        ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
-                        : "bg-[#0066FF] text-white"
-                  }`}>
+                <div style={{ display: "flex", alignItems: "flex-start", gap: "18px" }}>
+                  <div
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontFamily: "var(--font-serif)",
+                      fontSize: "18px",
+                      fontWeight: 500,
+                      fontStyle: "italic",
+                      letterSpacing: "-0.02em",
+                      flexShrink: 0,
+                      border: `1px solid ${isGap ? "rgba(239,68,68,0.4)" : isCovered ? "rgba(34,197,94,0.4)" : "var(--border)"}`,
+                      background: isGap ? "rgba(239,68,68,0.08)" : isCovered ? "rgba(34,197,94,0.08)" : "var(--bg-subtle)",
+                      color: isGap ? "var(--red-muted)" : isCovered ? "#22c55e" : "var(--blue)",
+                    }}
+                  >
                     {isCovered ? (
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
                     ) : (
                       rec.num
                     )}
                   </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h3 className="text-base font-bold text-white">{rec.title}</h3>
+                  <div style={{ minWidth: 0, flex: 1 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px", flexWrap: "wrap" }}>
+                      <h3
+                        style={{
+                          fontFamily: "var(--font-serif)",
+                          fontSize: "17px",
+                          fontWeight: 500,
+                          color: "var(--text-100)",
+                          letterSpacing: "-0.015em",
+                        }}
+                      >
+                        {rec.title}
+                      </h3>
                       {isGap && (
-                        <span className="text-[9px] font-bold text-red-400 bg-red-500/10 px-2 py-0.5 rounded-full border border-red-500/20">
-                          GAP
+                        <span
+                          style={{
+                            fontFamily: "var(--font-mono)",
+                            fontSize: "9px",
+                            fontWeight: 700,
+                            color: "var(--red-muted)",
+                            letterSpacing: "0.22em",
+                            textTransform: "uppercase",
+                            padding: "3px 8px",
+                            border: "1px solid rgba(239,68,68,0.35)",
+                          }}
+                        >
+                          Gap
                         </span>
                       )}
                       {isCovered && (
-                        <span className="text-[9px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
-                          COVERED
+                        <span
+                          style={{
+                            fontFamily: "var(--font-mono)",
+                            fontSize: "9px",
+                            fontWeight: 700,
+                            color: "#22c55e",
+                            letterSpacing: "0.22em",
+                            textTransform: "uppercase",
+                            padding: "3px 8px",
+                            border: "1px solid rgba(34,197,94,0.35)",
+                          }}
+                        >
+                          Covered
                         </span>
                       )}
                     </div>
-                    <p className="text-[13px] text-white/60 leading-relaxed mb-2">
+                    <p style={{ fontSize: "13px", color: "var(--text-400)", lineHeight: 1.7, marginBottom: "12px", fontWeight: 300 }}>
                       {rec.description}
                     </p>
                     {isGap && (
-                      <div className="bg-[#050B14]/80 border border-white/[0.06] rounded-xl p-3 mb-3">
-                        <div className="text-[10px] font-semibold text-[#0066FF] tracking-wide uppercase mb-1">
+                      <div style={{ background: "var(--bg-subtle)", border: "1px solid var(--border-soft)", borderLeft: "2px solid var(--blue)", padding: "12px 14px", marginBottom: "14px" }}>
+                        <div
+                          style={{
+                            fontFamily: "var(--font-mono)",
+                            fontSize: "9px",
+                            fontWeight: 700,
+                            color: "var(--blue)",
+                            letterSpacing: "0.22em",
+                            textTransform: "uppercase",
+                            marginBottom: "6px",
+                          }}
+                        >
                           What compliant firms do
                         </div>
-                        <p className="text-white/50 text-xs leading-relaxed">
-                          {rec.remediation}
-                        </p>
+                        <p style={{ color: "var(--text-400)", fontSize: "12px", lineHeight: 1.65, fontWeight: 300 }}>{rec.remediation}</p>
                       </div>
                     )}
-                    <div className="text-[11px] font-semibold text-white/30">
-                      Based on <span className="text-[#FF5E1A]">{caseCount} case{caseCount !== 1 ? "s" : ""}</span>
+                    <div
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: "10px",
+                        fontWeight: 700,
+                        color: "var(--text-500)",
+                        letterSpacing: "0.18em",
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      Based on <span style={{ color: "var(--amber)" }}>{caseCount} case{caseCount !== 1 ? "s" : ""}</span>
                     </div>
                   </div>
                 </div>
@@ -176,24 +236,47 @@ export default function PolicyRecommendations({ answers }: Props) {
           })}
         </div>
 
-        <div className="mt-10 bg-[#0A1628]/50 border border-white/[0.06] rounded-2xl p-8 text-center">
-          <h4 className="text-xl font-black text-white tracking-[-0.02em] mb-2">
-            Need help implementing these?
-          </h4>
-          <p className="text-white/50 text-sm mb-6 max-w-lg mx-auto">
-            AI Vortex provides policy templates, compliance checklists, and
-            ongoing monitoring for firms navigating AI governance.
-          </p>
-          <a
-            href="https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit"
-            target="_blank"
-            rel="noopener"
-            className="inline-block bg-[#0066FF] hover:bg-[#004ACC] text-white px-7 py-3.5 rounded-xl font-bold text-sm transition-colors"
-          >
+        <div
+          style={{
+            marginTop: "40px",
+            background: "var(--bg-card)",
+            border: "1px solid var(--border)",
+            borderTop: "2px solid var(--blue)",
+            padding: "40px 48px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "28px",
+            flexWrap: "wrap",
+          }}
+        >
+          <div>
+            <h4
+              style={{
+                fontFamily: "var(--font-serif)",
+                fontSize: "24px",
+                fontWeight: 500,
+                color: "var(--text-100)",
+                letterSpacing: "-0.02em",
+                marginBottom: "8px",
+              }}
+            >
+              Need help implementing these?
+            </h4>
+            <p style={{ color: "var(--text-400)", fontSize: "14px", fontWeight: 300, lineHeight: 1.65, maxWidth: "520px" }}>
+              AI Vortex provides policy templates, compliance checklists, and ongoing monitoring for firms navigating AI governance.
+            </p>
+          </div>
+          <a href="https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit" target="_blank" rel="noopener" className="hero-btn-blue">
             Book a Policy Review
           </a>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 900px) {
+          .policy-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </section>
   );
 }

@@ -1,36 +1,72 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y > 120 && y > lastY) setHidden(true);
+      else setHidden(false);
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav className="border-b border-white/[0.06] bg-[#050B14]/80 backdrop-blur-md sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="https://www.aivortex.io/legal" className="flex items-center gap-2.5">
-          <Image
-            src="/av-logo-white.png"
-            alt="AI Vortex"
-            width={24}
-            height={19}
-            className="opacity-60"
-          />
-          <span className="font-bold text-[13px] text-white/40 tracking-[0.05em]">AI VORTEX</span>
-        </Link>
-        <div className="hidden md:flex items-center gap-8 text-[13px] text-white/40">
-          <a href="#map" className="hover:text-white/80 transition-colors">Map</a>
-          <a href="#assessment" className="hover:text-white/80 transition-colors">Assessment</a>
-          <a href="#insights" className="hover:text-white/80 transition-colors">Insights</a>
-          <a href="#jurisdiction" className="hover:text-white/80 transition-colors">Courts</a>
-          <a href="#evidence" className="hover:text-white/80 transition-colors">Evidence</a>
+    <>
+      <nav className={`nav ${hidden ? "hidden" : ""}`}>
+        <div className="nav-inner">
+          <a className="nav-brand" href="https://www.aivortex.io/legal">
+            <span className="nav-monogram-wrap">
+              <img src="/av-logo-white.png" alt="AI Vortex" className="nav-monogram" />
+            </span>
+            <span className="nav-brand-name">AI Vortex</span>
+          </a>
+          <div className="nav-links">
+            <a className="nav-link" href="#map">Map</a>
+            <a className="nav-link" href="#assessment">Assessment</a>
+            <a className="nav-link" href="#insights">Insights</a>
+            <a className="nav-link" href="#jurisdiction">Courts</a>
+            <a className="nav-link" href="#evidence">Evidence</a>
+            <a
+              className="nav-link"
+              href="https://www.linkedin.com/in/aivortex/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a className="nav-cta" href="https://www.aivortex.io/legal#subscribe">Subscribe</a>
+          </div>
+          <button
+            className="nav-toggle"
+            aria-label="Toggle menu"
+            onClick={() => setMobileOpen((v) => !v)}
+          >
+            <span></span><span></span><span></span>
+          </button>
         </div>
-        <Link
-          href="https://www.aivortex.io/legal"
-          className="text-[13px] text-white/40 hover:text-white/80 transition-colors hidden sm:block"
-        >
-          aivortex.io &rarr;
-        </Link>
+      </nav>
+      <div className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
+        <a href="#map" onClick={() => setMobileOpen(false)}>Map</a>
+        <a href="#assessment" onClick={() => setMobileOpen(false)}>Assessment</a>
+        <a href="#insights" onClick={() => setMobileOpen(false)}>Insights</a>
+        <a href="#jurisdiction" onClick={() => setMobileOpen(false)}>Courts</a>
+        <a href="#evidence" onClick={() => setMobileOpen(false)}>Evidence</a>
+        <a href="https://www.linkedin.com/in/aivortex/" target="_blank" rel="noopener">LinkedIn</a>
+        <a className="nav-cta" href="https://www.aivortex.io/legal#subscribe" onClick={() => setMobileOpen(false)}>Subscribe</a>
       </div>
-    </nav>
+    </>
   );
 }

@@ -153,6 +153,60 @@ def fmt_amount(amt):
         return f"${amt/1000:.1f}K"
     return f"${amt}"
 
+import re as _re
+
+# Foreign-court indicators — if present, abort US inference
+_FOREIGN_MARKERS = (
+    "Alberta", "Ontario", "Québec", "Quebec", "British Columbia", "Nova Scotia",
+    "Manitoba", "Saskatchewan", "Newfoundland", "New Brunswick",  # Canada provinces
+    "Tucumán", "Córdoba", "Argentina", "Buenos Aires",
+    "NSW", "Victoria", "Queensland", "Tasmania", "South Australia",
+    "UK", "United Kingdom", "England", "Wales", "Scotland", "Ireland",
+    "Tribunal", "Bundesgericht", "Conseil", "Cour",
+    "Jakarta", "Manila", "Seoul", "Tokyo", "Bogotá", "Medellín",
+    "de Tucumán", "de Córdoba", "BCSC", "SCC", "ONSC", "ONCA", "FCA",
+)
+
+def _infer_state_from_court(court: str) -> str | None:
+    """Conservative US-state extraction from court names. Returns None if foreign."""
+    if not court:
+        return None
+    # Bail if the court string looks international
+    for marker in _FOREIGN_MARKERS:
+        if marker in court:
+            return None
+    # Federal-ish catch-alls → DC
+    FED_KEYWORDS = ("GAO", "ASBCA", "CBCA", "PSBCA", "Court of Federal Claims", "J.P.M.L.",
+                     "BVA", "PTAB", "IPR", "Merit Systems Protection Board", "Armed Services Board",
+                     "U.S. Tax Court", "Court of International Trade", "Claims Court", "Veterans Claims")
+    for kw in FED_KEYWORDS:
+        if kw in court:
+            return "DC"
+    # Fed district map
+    for pat, st in FED_COURT_STATE_MAP.items():
+        if pat in court:
+            return st
+    # Multi-word US state names (longest first — "New York" before "York")
+    MULTI_WORD = sorted(
+        [name for name in US_STATE_NAME_TO_CODE.keys() if " " in name],
+        key=lambda x: -len(x),
+    )
+    for name in MULTI_WORD:
+        if name in court:
+            return US_STATE_NAME_TO_CODE[name]
+    # Single-word state names (case-sensitive, word-boundary)
+    single_names = [n for n in US_STATE_NAME_TO_CODE.keys() if " " not in n]
+    for name in single_names:
+        if _re.search(rf"\b{_re.escape(name)}\b", court):
+            return US_STATE_NAME_TO_CODE[name]
+    # 2-letter UPPERCASE state code at word boundary (e.g. "D. CA", "N.D. TX")
+    # Only match strict uppercase to avoid "de" → DE
+    for m in _re.finditer(r"\b([A-Z]{2})\b", court):
+        code = m.group(1)
+        if code in US_STATE_NAME_TO_CODE.values():
+            return code
+    return None
+
 def parse_country_and_state(state_cell: str, court_cell: str):
     """Returns (country_code, state_code_or_none, display_state)."""
     sc = (state_cell or "").strip().rstrip(",").rstrip()
@@ -165,18 +219,18 @@ def parse_country_and_state(state_cell: str, court_cell: str):
     state = None
     if not sc:
         # fallback: infer from court
-        for pat, st in FED_COURT_STATE_MAP.items():
-            if pat in (court_cell or ""):
-                return ("US", st, st)
+        st = _infer_state_from_court(court_cell)
+        if st:
+            return ("US", st, st)
         return ("UNKNOWN", None, "")
 
     # Multi-country or unusual
     low = sc.lower()
     if low in ("usa","us","united states"):
         # try infer state from court
-        for pat, st in FED_COURT_STATE_MAP.items():
-            if pat in (court_cell or ""):
-                return ("US", st, st)
+        st = _infer_state_from_court(court_cell or "")
+        if st:
+            return ("US", st, st)
         return ("US", None, "USA")
 
     # Is it a US state name?
@@ -189,10 +243,14 @@ def parse_country_and_state(state_cell: str, court_cell: str):
     if upper in US_STATE_NAME_TO_CODE.values():
         return ("US", upper, upper)
 
-    # Federal court abbreviation like "S.D. New York" appears in State column occasionally
-    for pat, st in FED_COURT_STATE_MAP.items():
-        if pat.lower() in low:
-            return ("US", st, st)
+    # "State(s)" column sometimes holds court name like "S.D. New York" — run court inference
+    st = _infer_state_from_court(sc)
+    if st:
+        return ("US", st, st)
+    # Also try the actual court field (backstop)
+    st = _infer_state_from_court(court_cell or "")
+    if st:
+        return ("US", st, st)
 
     # Known country strings
     country_map = {

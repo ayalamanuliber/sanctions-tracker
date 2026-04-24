@@ -109,6 +109,9 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
 
   const [activeSev, setActiveSev] = useState<string>("all");
   const [railTab, setRailTab] = useState<"cases" | "states">("cases");
+  const [railSort, setRailSort] = useState<"amount" | "date">("amount");
+  const [focusState, setFocusState] = useState<string | null>(null);
+  const [showLabels, setShowLabels] = useState(false);
   const [scope, setScope] = useState<"us" | "world">("us");
   const [requestCountry, setRequestCountry] = useState("");
   const [requestEmail, setRequestEmail] = useState("");
@@ -120,12 +123,21 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
   // Refs so d3 closures read the current value (not the one captured at setup time)
   const activeSevRef = useRef(activeSev);
   const hoverCaseIdRef = useRef(hoverCaseId);
+  const focusStateRef = useRef(focusState);
   useEffect(() => { activeSevRef.current = activeSev; }, [activeSev]);
   useEffect(() => { hoverCaseIdRef.current = hoverCaseId; }, [hoverCaseId]);
+  useEffect(() => { focusStateRef.current = focusState; }, [focusState]);
 
   const filteredCases = useMemo(() => {
-    return SX.cases.filter((c) => activeSev === "all" || c.severity === activeSev);
-  }, [activeSev]);
+    let out = SX.cases.filter((c) => activeSev === "all" || c.severity === activeSev);
+    if (focusState) out = out.filter((c) => c.state === focusState);
+    if (railSort === "amount") {
+      out = [...out].sort((a, b) => (b.amount || 0) - (a.amount || 0));
+    } else {
+      out = [...out].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+    }
+    return out;
+  }, [activeSev, focusState, railSort]);
 
   const circuits = useMemo(() => {
     const set = new Set<string>();
@@ -163,6 +175,14 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
         svg.call(zoomBehavior).on("dblclick.zoom", null);
         zoomBehaviorRef.current = zoomBehavior;
 
+        // Hard hide the tooltip on ANY movement off the map stage (fixes sticky-tip bug)
+        svg.on("mouseleave", () => { setHoverCaseId(null); hideTip(); });
+        svg.on("mousemove", (event: MouseEvent) => {
+          // If the cursor is over a <path> (state) or empty space, kill the tip
+          const target = event.target as Element | null;
+          if (target && target.tagName === "path") { hideTip(); }
+        });
+
         gStates.selectAll("*").remove();
         for (const feat of statesFeat.features) {
           const fips = String((feat as unknown as { id: string }).id);
@@ -173,9 +193,30 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
             .attr("d", pathGen(feat) || "")
             .attr("class", "smv2-state" + (hasCases ? " has-cases" : ""))
             .attr("data-state", code || "")
-            .on("click", () => {
-              if (hasCases && code && onStateClick) onStateClick(code);
+            .on("click", (event: MouseEvent) => {
+              event.stopPropagation();
+              if (hasCases && code) {
+                // In-map: focus the rail on this state's cases
+                setFocusState(code);
+                setRailTab("cases");
+              }
             });
+
+          // State abbreviation label (rendered always; CSS opacity toggles visibility)
+          if (code) {
+            const [lx, ly] = pathGen.centroid(feat) as [number, number];
+            if (!isNaN(lx) && !isNaN(ly)) {
+              gStates
+                .append("text")
+                .attr("x", lx)
+                .attr("y", ly)
+                .attr("class", "smv2-state-label" + (hasCases ? " has-cases" : ""))
+                .attr("text-anchor", "middle")
+                .attr("dominant-baseline", "middle")
+                .text(code)
+                .attr("pointer-events", "none");
+            }
+          }
         }
 
         const centroids: Record<string, [number, number]> = {};
@@ -199,6 +240,8 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
             list.forEach((c, i) => {
               const currentSev = activeSevRef.current;
               if (currentSev !== "all" && c.severity !== currentSev) return;
+              // When focused on a state, dim pins outside it (don't drop — user sees others muted)
+              const dimmed = focusStateRef.current && c.state !== focusStateRef.current;
               const n = list.length;
               let x = cx, y = cy;
               if (n > 1) {
@@ -210,13 +253,14 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
               const color = SEV_COLOR[c.severity] || "#3B82F6";
 
               const g = gPins.append("g")
-                .attr("class", "smv2-pin-g" + (hoverCaseIdRef.current === c.id ? " hi" : ""))
+                .attr("class", "smv2-pin-g" + (hoverCaseIdRef.current === c.id ? " hi" : "") + (dimmed ? " dim" : ""))
                 .attr("transform", `translate(${x},${y})`)
                 .attr("data-case-id", c.id);
 
               const vis = g.append("g").attr("class", "smv2-pin-visual");
 
-              if (c.severity === "career-ending" || c.severity === "high") {
+              // Pulse ONLY on career-ending (reduces paint cost + focuses attention)
+              if (c.severity === "career-ending") {
                 vis.append("circle")
                   .attr("class", "smv2-pulse-ring")
                   .attr("r", r)
@@ -234,10 +278,13 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
               vis.append("circle")
                 .attr("r", Math.max(2, r * 0.35))
                 .attr("fill", color);
-              vis.insert("circle", ":first-child")
-                .attr("r", r + 2)
-                .attr("class", "smv2-pin-glow")
-                .attr("fill", color);
+              // Glow blur ONLY on career-ending + high (blur filter is the perf killer with 900+ pins)
+              if (c.severity === "career-ending" || c.severity === "high") {
+                vis.insert("circle", ":first-child")
+                  .attr("r", r + 2)
+                  .attr("class", "smv2-pin-glow")
+                  .attr("fill", color);
+              }
 
               g.append("circle")
                 .attr("class", "smv2-pin-hit")
@@ -273,7 +320,22 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
   useEffect(() => {
     const redraw = (svgRef.current as unknown as { __redrawPins?: () => void })?.__redrawPins;
     if (redraw) redraw();
-  }, [activeSev, hoverCaseId]);
+  }, [activeSev, hoverCaseId, focusState]);
+
+  // Apply focus-state highlighting on state paths (CSS class)
+  useEffect(() => {
+    if (!svgRef.current) return;
+    const nodes = svgRef.current.querySelectorAll<SVGPathElement>(".smv2-state");
+    nodes.forEach((n) => {
+      n.classList.toggle("focused", n.getAttribute("data-state") === focusState);
+    });
+  }, [focusState]);
+
+  // Toggle state labels via class on SVG
+  useEffect(() => {
+    if (!svgRef.current) return;
+    svgRef.current.classList.toggle("show-labels", showLabels);
+  }, [showLabels]);
 
   function showTip(c: Case, px: number, py: number) {
     const tip = tipRef.current;
@@ -435,11 +497,19 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
             const thisMonth = Object.entries(META.by_month || {}).sort().slice(-1)[0]?.[1] ?? 0;
             const peakDaySev = META.severity_counts || {};
             const dangerous = (peakDaySev["career-ending"] || 0) + (peakDaySev["high"] || 0);
+            // US-only largest when US scope; global otherwise
+            const scopedLargest = scope === "us"
+              ? Math.max(0, ...ALL_CASES.filter((c) => c.country === "US" && c.amount).map((c) => c.amount || 0))
+              : (META.largest_single_sanction || 0);
+            const scopedLargestCase = scope === "us"
+              ? ALL_CASES.filter((c) => c.country === "US").sort((a, b) => (b.amount || 0) - (a.amount || 0))[0]
+              : ALL_CASES.slice().sort((a, b) => (b.amount || 0) - (a.amount || 0))[0];
+            const scopedNote = scopedLargestCase ? `${scopedLargestCase.case_name.slice(0, 28)}${scopedLargestCase.case_name.length > 28 ? "…" : ""}` : "single ruling";
             return [
               { label: "This week", value: last, note: weeks[weeks.length - 1]?.week || "" },
               { label: "Latest month", value: thisMonth, note: Object.keys(META.by_month || {}).sort().slice(-1)[0] || "" },
               { label: "High-risk cases", value: dangerous, note: "career-ending + high" },
-              { label: "Largest fine", value: "$" + ((META.largest_single_sanction || 0) / 1000).toFixed(1) + "K", note: "single ruling" },
+              { label: "Largest fine", value: "$" + (scopedLargest / 1000).toFixed(1) + "K", note: scopedNote },
             ];
           })().map((item, i) => (
             <div key={i} style={{ background: "var(--bg-card)", padding: "16px 18px" }}>
@@ -608,6 +678,13 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
               </div>
             </div>
             <div className="smv2-chips">
+              <button
+                className={`smv2-chip ${showLabels ? "active" : ""}`}
+                onClick={() => setShowLabels((v) => !v)}
+                style={{ marginRight: "8px" }}
+              >
+                {showLabels ? "Labels: On" : "Labels"}
+              </button>
               {(["all", "career-ending", "high", "medium", "low"] as const).map((sev) => (
                 <button
                   key={sev}
@@ -685,9 +762,83 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
                   By State
                 </button>
               </div>
+              {/* Sort toggle — only meaningful when viewing cases */}
+              {railTab === "cases" && (
+                <div style={{ display: "flex", gap: "4px", marginBottom: "12px", fontFamily: "var(--font-mono)", fontSize: "9px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" }}>
+                  <span style={{ color: "var(--text-600)", padding: "5px 8px 5px 0" }}>Sort</span>
+                  <button
+                    onClick={() => setRailSort("amount")}
+                    style={{
+                      padding: "5px 10px",
+                      background: railSort === "amount" ? "var(--bg-subtle)" : "transparent",
+                      border: "1px solid " + (railSort === "amount" ? "var(--border)" : "transparent"),
+                      color: railSort === "amount" ? "var(--text-100)" : "var(--text-500)",
+                      cursor: "pointer",
+                      fontFamily: "inherit",
+                      fontSize: "inherit",
+                      fontWeight: 700,
+                      letterSpacing: "inherit",
+                      textTransform: "inherit",
+                    }}
+                  >
+                    By Fine
+                  </button>
+                  <button
+                    onClick={() => setRailSort("date")}
+                    style={{
+                      padding: "5px 10px",
+                      background: railSort === "date" ? "var(--bg-subtle)" : "transparent",
+                      border: "1px solid " + (railSort === "date" ? "var(--border)" : "transparent"),
+                      color: railSort === "date" ? "var(--text-100)" : "var(--text-500)",
+                      cursor: "pointer",
+                      fontFamily: "inherit",
+                      fontSize: "inherit",
+                      fontWeight: 700,
+                      letterSpacing: "inherit",
+                      textTransform: "inherit",
+                    }}
+                  >
+                    By Date
+                  </button>
+                </div>
+              )}
+              {/* Focus banner — shown when a state was clicked on the map */}
+              {focusState && railTab === "cases" && (
+                <div
+                  style={{
+                    marginBottom: "12px",
+                    padding: "8px 12px",
+                    border: "1px solid rgba(0,102,255,0.35)",
+                    background: "rgba(0,102,255,0.08)",
+                    borderLeft: "2px solid var(--blue)",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <span style={{ fontFamily: "var(--font-mono)", fontSize: "10px", fontWeight: 700, color: "var(--blue)", letterSpacing: "0.18em", textTransform: "uppercase" }}>
+                    {STATE_NAMES[focusState] || focusState}
+                  </span>
+                  <button
+                    onClick={() => setFocusState(null)}
+                    style={{
+                      background: "transparent",
+                      border: "none",
+                      color: "var(--text-400)",
+                      cursor: "pointer",
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "10px",
+                      fontWeight: 700,
+                      letterSpacing: "0.14em",
+                    }}
+                  >
+                    Clear ✕
+                  </button>
+                </div>
+              )}
               <div className="smv2-rail-scroll">
                 {railTab === "cases" ? (
-                  [...filteredCases].sort((a, b) => (b.amount || 0) - (a.amount || 0)).map((c) => (
+                  filteredCases.map((c) => (
                     <div
                       key={c.id}
                       className={`smv2-case-row ${hoverCaseId === c.id ? "hi" : ""}`}
@@ -909,6 +1060,25 @@ const CSS = `
   cursor: pointer;
 }
 .smv2-state.hi { fill: rgba(0,102,255,0.14); stroke: rgba(0,102,255,0.5); }
+.smv2-state.focused { fill: rgba(0,102,255,0.2); stroke: var(--blue); stroke-width: 1; }
+
+/* State abbreviation labels — hidden by default, toggled via class on svg */
+.smv2-state-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  fill: var(--text-500);
+  letter-spacing: 0.1em;
+  opacity: 0;
+  transition: opacity 0.2s;
+  text-transform: uppercase;
+}
+.smv2-state-label.has-cases { fill: var(--text-300); }
+.smv2-stage svg.show-labels .smv2-state-label { opacity: 0.7; }
+.smv2-stage svg.show-labels .smv2-state-label.has-cases { opacity: 1; }
+
+/* Dimmed pins (when a state is focused, others fade) */
+.smv2-pin-g.dim { opacity: 0.25; pointer-events: none; }
 
 /* Pins */
 .smv2-pin-g { cursor: pointer; }

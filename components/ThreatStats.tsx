@@ -1,23 +1,43 @@
 "use client";
 
+import sanctions from "@/data/sanctions.json";
+import meta from "@/data/meta.json";
+
+type SanctionCase = { country: string; amount: number | null; case_name: string; court: string; date: string; severity: string | null };
+const SANCTIONS = (sanctions as unknown) as SanctionCase[];
+const META = meta as unknown as { by_week: Record<string, number>; us_cases: number };
+
 export default function ThreatStats() {
+  // Weekly pace — average of last 8 weeks
+  const recentWeeks = Object.entries(META.by_week || {}).sort().slice(-8).map(([, n]) => n);
+  const avgWeekly = recentWeeks.length ? Math.round(recentWeeks.reduce((a, b) => a + b, 0) / recentWeeks.length) : 0;
+
+  // US largest
+  const usCases = SANCTIONS.filter((c) => c.country === "US" && c.amount);
+  const largest = usCases.sort((a, b) => (b.amount || 0) - (a.amount || 0))[0];
+
+  // Single-day record — count cases per date, find peak
+  const byDate: Record<string, number> = {};
+  SANCTIONS.forEach((c) => { if (c.date) byDate[c.date] = (byDate[c.date] || 0) + 1; });
+  const [peakDate, peakCount] = Object.entries(byDate).sort((a, b) => b[1] - a[1])[0] || ["—", 0];
+
   const items = [
     {
       label: "Sanctioning pace",
-      headline: "Weekly",
-      note: "Judges are sanctioning attorneys for AI-hallucinated filings — every week.",
+      headline: avgWeekly > 0 ? `~${avgWeekly} / week` : "Weekly",
+      note: `Average new rulings per week over the last 8 weeks. Across ${META.us_cases} US cases tracked.`,
       accent: "amber" as const,
     },
     {
       label: "Single-day record",
-      headline: "17 courts",
-      note: "AI-hallucination rulings issued in a single day (Mar 31, 2026) across 4 circuits.",
+      headline: `${peakCount} courts`,
+      note: `Most AI-hallucination rulings on one day (${peakDate}). This curve is accelerating.`,
       accent: "blue" as const,
     },
     {
-      label: "Largest sanction",
-      headline: "$109,700",
-      note: "Couvrette v. Wisnovsky · D. Or. — AI use called a “sustained campaign of deception.”",
+      label: "Largest US sanction",
+      headline: largest ? `$${(largest.amount! / 1000).toFixed(1)}K` : "—",
+      note: largest ? `${largest.case_name} · ${largest.court}` : "",
       accent: "red" as const,
     },
   ];

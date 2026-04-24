@@ -1,19 +1,19 @@
 {
   "last_updated": "2026-04-24",
   "total_cases": 1348,
-  "us_cases": 924,
-  "us_adjudicated": 921,
+  "us_cases": 932,
+  "us_adjudicated": 929,
   "us_alleged_only": 3,
   "countries_tracked": 28,
   "monetary_sanctions_total_usd": 2410982,
   "largest_single_sanction": 620000,
   "avg_sanction": 10715,
   "by_country": {
-    "US": 924,
+    "US": 932,
     "CA": 143,
-    "AU": 72,
+    "AU": 67,
     "GB": 52,
-    "IL": 50,
+    "IL": 47,
     "FR": 11,
     "BR": 10,
     "OTHER": 9,
@@ -41,8 +41,8 @@
   "by_state": [
     {
       "state": "CA",
-      "count": 123,
-      "total": 225953,
+      "count": 128,
+      "total": 257553,
       "cases": [
         {
           "id": "krista-c-geddes-v-loancare-llc-et-al-2026-04-22",
@@ -188,7 +188,7 @@
     },
     {
       "state": "NY",
-      "count": 70,
+      "count": 76,
       "total": 37001,
       "cases": [
         {
@@ -209,6 +209,13 @@
           "id": "viral-bhagat-v-anuja-sharad-shah-2026-04-06",
           "name": "Viral Bhagat v. Anuja Sharad Shah",
           "date": "2026-04-06",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "kleyman-law-group-pc-v-james-kaloidis-2026-04-03",
+          "name": "Kleyman Law Group, P.C. v. James Kaloidis",
+          "date": "2026-04-03",
           "amount": null,
           "severity": "unclassified"
         },
@@ -323,21 +330,21 @@
           "date": "2026-01-27",
           "amount": 10000,
           "severity": "unclassified"
-        },
-        {
-          "id": "irine-corst-v-isak-mushailov-and-levsho-kukuliyeva-2026-01-15",
-          "name": "Irine Corst v. Isak Mushailov and Levsho Kukuliyeva",
-          "date": "2026-01-15",
-          "amount": null,
-          "severity": "unclassified"
         }
       ]
     },
     {
       "state": "TX",
-      "count": 53,
+      "count": 54,
       "total": 8463,
       "cases": [
+        {
+          "id": "joann-crawford-v-buffalo-creek-properties-llc-2026-04-23",
+          "name": "Joann Crawford v. Buffalo Creek Properties, LLC",
+          "date": "2026-04-23",
+          "amount": null,
+          "severity": "unclassified"
+        },
         {
           "id": "meyer-v-castroville-state-bank-2026-04-22",
           "name": "Meyer v. Castroville State Bank",
@@ -470,19 +477,12 @@
           "date": "2025-12-30",
           "amount": null,
           "severity": "unclassified"
-        },
-        {
-          "id": "allen-v-amazon-2025-12-23",
-          "name": "Allen v. Amazon",
-          "date": "2025-12-23",
-          "amount": null,
-          "severity": "unclassified"
         }
       ]
     },
     {
       "state": "FL",
-      "count": 46,
+      "count": 47,
       "total": 99019,
       "cases": [
         {
@@ -622,6 +622,153 @@
           "id": "friend-v-serpa-2025-12-17",
           "name": "Friend v. Serpa",
           "date": "2025-12-17",
+          "amount": null,
+          "severity": "unclassified"
+        }
+      ]
+    },
+    {
+      "state": "DC",
+      "count": 43,
+      "total": 3251,
+      "cases": [
+        {
+          "id": "matter-of-logmet-llc-b-4230662-2026-04-15",
+          "name": "Matter of: LOGMET LLC, B-423066.2",
+          "date": "2026-04-15",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "in-re-philips-recalled-cpap-bi-level-pap-and-mechanical-ventilator-products-liab",
+          "name": "In re: Philips Recalled CPAP, Bi-Level PAP, and Mechanical Ventilator Products Liability Litigation (Gravelyn)",
+          "date": "2026-04-06",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "zavadovsky-v-republic-of-austria-et-al-2026-03-31",
+          "name": "Zavadovsky v. Republic of Austria, et al.",
+          "date": "2026-03-31",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "nguedi-v-general-dynamics-information-technology-2026-03-31",
+          "name": "Nguedi v. General Dynamics Information Technology",
+          "date": "2026-03-31",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "mission-critical-project-services-inc-2026-03-26",
+          "name": "Mission Critical Project Services, Inc.",
+          "date": "2026-03-26",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "endure-industries-inc-v-defense-health-agency-2026-03-23",
+          "name": "Endure Industries, Inc. v. Defense Health Agency",
+          "date": "2026-03-23",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "dsme-construction-co-ltd-2026-03-13",
+          "name": "DSME Construction Co., Ltd.",
+          "date": "2026-03-13",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "andre-lamont-goddard-jr-v-city-university-of-seattle-2026-03-06",
+          "name": "Andre Lamont Goddard, Jr. v. City University of Seattle",
+          "date": "2026-03-06",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "louis-j-blazy-v-department-of-state-2026-02-24",
+          "name": "Louis J. Blazy v. Department of State",
+          "date": "2026-02-24",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "matter-of-adapt-forward-llc-2026-02-18",
+          "name": "Matter of: Adapt Forward, LLC",
+          "date": "2026-02-18",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "g2-ops-inc-2026-02-13",
+          "name": "G2 Ops, Inc.",
+          "date": "2026-02-13",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "cvtek-llc-b-423943-b-4239432-2026-02-12",
+          "name": "CVTEK, LLC (B-423943; B-423943.2)",
+          "date": "2026-02-12",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "tabitha-alberti-v-district-of-columbia-2026-02-10",
+          "name": "Tabitha Alberti v. District of Columbia",
+          "date": "2026-02-10",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "in-re-snowflake-inc-data-security-breach-litigation-2026-02-05",
+          "name": "In re: Snowflake, Inc., Data Security Breach Litigation",
+          "date": "2026-02-05",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "matter-of-bramstedt-surgical-inc-2026-01-28",
+          "name": "Matter of: Bramstedt Surgical Inc.",
+          "date": "2026-01-28",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "life-together-coaching-llc-2026-01-28",
+          "name": "Life Together Coaching, LLC",
+          "date": "2026-01-28",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "x-v-canada-2026-01-16",
+          "name": "X. v. Canada",
+          "date": "2026-01-16",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "vanderberg-v-shviro-2026-01-12",
+          "name": "Vanderberg v. Shviro",
+          "date": "2026-01-12",
+          "amount": 3000,
+          "severity": "unclassified"
+        },
+        {
+          "id": "matter-of-ke-system-services-inc-2025-12-22",
+          "name": "Matter of: KE System Services, Inc.",
+          "date": "2025-12-22",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "supplying-demand-llc-matter-of-2025-11-24",
+          "name": "Supplying Demand, LLC (Matter of)",
+          "date": "2025-11-24",
           "amount": null,
           "severity": "unclassified"
         }
@@ -769,153 +916,6 @@
           "id": "sharkys-sports-bar-et-al-v-village-of-mt-morris-illinois-et-al-2025-12-10",
           "name": "Sharky’s Sports Bar, et al. v. Village of Mt. Morris, Illinois, et al.",
           "date": "2025-12-10",
-          "amount": null,
-          "severity": "unclassified"
-        }
-      ]
-    },
-    {
-      "state": "DC",
-      "count": 35,
-      "total": 1,
-      "cases": [
-        {
-          "id": "matter-of-logmet-llc-b-4230662-2026-04-15",
-          "name": "Matter of: LOGMET LLC, B-423066.2",
-          "date": "2026-04-15",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "in-re-philips-recalled-cpap-bi-level-pap-and-mechanical-ventilator-products-liab",
-          "name": "In re: Philips Recalled CPAP, Bi-Level PAP, and Mechanical Ventilator Products Liability Litigation (Gravelyn)",
-          "date": "2026-04-06",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "zavadovsky-v-republic-of-austria-et-al-2026-03-31",
-          "name": "Zavadovsky v. Republic of Austria, et al.",
-          "date": "2026-03-31",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "nguedi-v-general-dynamics-information-technology-2026-03-31",
-          "name": "Nguedi v. General Dynamics Information Technology",
-          "date": "2026-03-31",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "mission-critical-project-services-inc-2026-03-26",
-          "name": "Mission Critical Project Services, Inc.",
-          "date": "2026-03-26",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "endure-industries-inc-v-defense-health-agency-2026-03-23",
-          "name": "Endure Industries, Inc. v. Defense Health Agency",
-          "date": "2026-03-23",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "dsme-construction-co-ltd-2026-03-13",
-          "name": "DSME Construction Co., Ltd.",
-          "date": "2026-03-13",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "andre-lamont-goddard-jr-v-city-university-of-seattle-2026-03-06",
-          "name": "Andre Lamont Goddard, Jr. v. City University of Seattle",
-          "date": "2026-03-06",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "louis-j-blazy-v-department-of-state-2026-02-24",
-          "name": "Louis J. Blazy v. Department of State",
-          "date": "2026-02-24",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "matter-of-adapt-forward-llc-2026-02-18",
-          "name": "Matter of: Adapt Forward, LLC",
-          "date": "2026-02-18",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "g2-ops-inc-2026-02-13",
-          "name": "G2 Ops, Inc.",
-          "date": "2026-02-13",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "cvtek-llc-b-423943-b-4239432-2026-02-12",
-          "name": "CVTEK, LLC (B-423943; B-423943.2)",
-          "date": "2026-02-12",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "tabitha-alberti-v-district-of-columbia-2026-02-10",
-          "name": "Tabitha Alberti v. District of Columbia",
-          "date": "2026-02-10",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "in-re-snowflake-inc-data-security-breach-litigation-2026-02-05",
-          "name": "In re: Snowflake, Inc., Data Security Breach Litigation",
-          "date": "2026-02-05",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "matter-of-bramstedt-surgical-inc-2026-01-28",
-          "name": "Matter of: Bramstedt Surgical Inc.",
-          "date": "2026-01-28",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "life-together-coaching-llc-2026-01-28",
-          "name": "Life Together Coaching, LLC",
-          "date": "2026-01-28",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "x-v-canada-2026-01-16",
-          "name": "X. v. Canada",
-          "date": "2026-01-16",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "matter-of-ke-system-services-inc-2025-12-22",
-          "name": "Matter of: KE System Services, Inc.",
-          "date": "2025-12-22",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "supplying-demand-llc-matter-of-2025-11-24",
-          "name": "Supplying Demand, LLC (Matter of)",
-          "date": "2025-11-24",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "appeals-of-huffman-construction-llc-2025-10-23",
-          "name": "Appeals of Huffman Construction, LLC",
-          "date": "2025-10-23",
           "amount": null,
           "severity": "unclassified"
         }
@@ -1363,6 +1363,153 @@
       ]
     },
     {
+      "state": "IN",
+      "count": 25,
+      "total": 15001,
+      "cases": [
+        {
+          "id": "cynthia-white-v-walmart-inc-2026-04-14",
+          "name": "Cynthia White v. Walmart, Inc.",
+          "date": "2026-04-14",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "elbert-coleman-iii-elbert-coleman-iv-v-nexo-capital-inc-2026-03-31",
+          "name": "Elbert Coleman, III; Elbert Coleman, IV v. Nexo Capital Inc.",
+          "date": "2026-03-31",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "nicole-olbera-et-al-v-tiara-sykes-2026-03-30",
+          "name": "Nicole Olbera, et al. v. Tiara Sykes",
+          "date": "2026-03-30",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "william-c-maxwell-v-dakota-michael-chelsey-smith-2026-03-26",
+          "name": "William C. Maxwell v. Dakota Michael & Chelsey Smith",
+          "date": "2026-03-26",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "jana-james-v-national-board-of-osteopathic-examiners-inc-2026-03-19",
+          "name": "Jana James v. National Board of Osteopathic Examiners, Inc.",
+          "date": "2026-03-19",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "ak-v-mr-2026-03-10",
+          "name": "A.K. v. M.R.",
+          "date": "2026-03-10",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "michael-platt-v-volunteers-of-america-ohio-indiana-2026-03-10",
+          "name": "Michael Platt v. Volunteers of America Ohio & Indiana",
+          "date": "2026-03-10",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "joseph-maldonado-v-professional-animal-retirement-center-2026-02-27",
+          "name": "Joseph Maldonado v. Professional Animal Retirement Center",
+          "date": "2026-02-27",
+          "amount": 1500,
+          "severity": "unclassified"
+        },
+        {
+          "id": "virgil-v-experian-information-solutions-et-al-2026-02-12",
+          "name": "Virgil v. Experian Information Solutions, et al.",
+          "date": "2026-02-12",
+          "amount": 1,
+          "severity": "unclassified"
+        },
+        {
+          "id": "mutugu-v-kiaraho-2026-02-06",
+          "name": "Mutugu v. Kiaraho",
+          "date": "2026-02-06",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "wilcox-v-gingrinch-2026-01-30",
+          "name": "Wilcox v. Gingrinch",
+          "date": "2026-01-30",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "north-atlantic-operating-company-inc-et-al-v-indiana-import-llc-et-al-2026-01-15",
+          "name": "North Atlantic Operating Company, Inc., et al. v. Indiana Import, LLC, et al.",
+          "date": "2026-01-15",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "donovan-v-clark-county-assessor-2025-12-22",
+          "name": "Donovan v. Clark County Assessor",
+          "date": "2025-12-22",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "mh-v-cs-2025-11-24",
+          "name": "M.H. v. C.S.",
+          "date": "2025-11-24",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "kamia-nellum-v-credit-acceptance-corporation-2025-11-18",
+          "name": "Kamia Nellum v. Credit Acceptance Corporation",
+          "date": "2025-11-18",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "xavier-jamal-smith-v-santander-consumer-usa-inc-2025-11-04",
+          "name": "Xavier Jamal Smith v. Santander Consumer USA Inc.",
+          "date": "2025-11-04",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "ih-v-ok-2025-11-03",
+          "name": "I.H. v. O.K.",
+          "date": "2025-11-03",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "in-re-the-marriage-of-melinda-johnson-v-sabastian-johnson-2025-10-30",
+          "name": "In re: the Marriage of Melinda Johnson v. Sabastian Johnson",
+          "date": "2025-10-30",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "tippecanoe-county-assessor-v-craig-goergen-2025-10-17",
+          "name": "Tippecanoe County Assessor v. Craig Goergen",
+          "date": "2025-10-17",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "tm-v-mm-2025-09-24",
+          "name": "T.M. v. M.M.",
+          "date": "2025-09-24",
+          "amount": null,
+          "severity": "unclassified"
+        }
+      ]
+    },
+    {
       "state": "NV",
       "count": 25,
       "total": 5001,
@@ -1510,147 +1657,294 @@
       ]
     },
     {
-      "state": "IN",
+      "state": "PA",
       "count": 23,
-      "total": 15001,
+      "total": 17500,
       "cases": [
         {
-          "id": "cynthia-white-v-walmart-inc-2026-04-14",
-          "name": "Cynthia White v. Walmart, Inc.",
-          "date": "2026-04-14",
+          "id": "bunce-v-visual-technology-innovations-2-2026-04-20",
+          "name": "Bunce v. Visual Technology Innovations (2)",
+          "date": "2026-04-20",
+          "amount": 5000,
+          "severity": "unclassified"
+        },
+        {
+          "id": "nancy-parkinson-v-unemployment-compensation-board-of-review-2026-04-07",
+          "name": "Nancy Parkinson v. Unemployment Compensation Board of Review",
+          "date": "2026-04-07",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "elbert-coleman-iii-elbert-coleman-iv-v-nexo-capital-inc-2026-03-31",
-          "name": "Elbert Coleman, III; Elbert Coleman, IV v. Nexo Capital Inc.",
-          "date": "2026-03-31",
+          "id": "domingo-beato-estrella-v-m-arviza-2026-03-16",
+          "name": "Domingo Beato-Estrella v. M. Arviza",
+          "date": "2026-03-16",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "nicole-olbera-et-al-v-tiara-sykes-2026-03-30",
-          "name": "Nicole Olbera, et al. v. Tiara Sykes",
-          "date": "2026-03-30",
+          "id": "ac-appellant-v-hd-and-jc-2026-03-13",
+          "name": "A.C. Appellant v. H.D. AND J.C.",
+          "date": "2026-03-13",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "william-c-maxwell-v-dakota-michael-chelsey-smith-2026-03-26",
-          "name": "William C. Maxwell v. Dakota Michael & Chelsey Smith",
-          "date": "2026-03-26",
+          "id": "nydia-rosario-v-liberty-mutual-personal-insurance-company-2026-02-13",
+          "name": "Nydia Rosario v. Liberty Mutual Personal Insurance Company",
+          "date": "2026-02-13",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "jana-james-v-national-board-of-osteopathic-examiners-inc-2026-03-19",
-          "name": "Jana James v. National Board of Osteopathic Examiners, Inc.",
+          "id": "emmanuel-s-yirenkyi-v-angela-hoover-2026-02-02",
+          "name": "Emmanuel S. Yirenkyi v. Angela Hoover",
+          "date": "2026-02-02",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "lifetime-well-llc-v-ibspotcom-inc-2026-01-26",
+          "name": "Lifetime Well LLC v. IBSpot.com Inc.",
+          "date": "2026-01-26",
+          "amount": 4000,
+          "severity": "unclassified"
+        },
+        {
+          "id": "saber-v-navy-federal-credit-union-2026-01-14",
+          "name": "Saber v. Navy Federal Credit Union",
+          "date": "2026-01-14",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "jessica-baker-v-ryan-joseph-baker-2026-01-07",
+          "name": "Jessica Baker v. Ryan Joseph Baker",
+          "date": "2026-01-07",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "russel-williams-home-services-llc-v-minleon-international-usa-limited-llc-et-al-",
+          "name": "Russel Williams Home Services LLC v. Minleon International (USA) Limited LLC, et al.",
+          "date": "2025-12-17",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "robert-w-williams-sr-v-assistant-district-attorney-john-r-canavan-et-al-2025-12-",
+          "name": "Robert W. Williams, Sr. v. Assistant District Attorney John R. Canavan, et al.",
+          "date": "2025-12-15",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "south-side-area-school-district-et-al-v-pennsylvania-human-relations-commission-",
+          "name": "South Side Area School District et. al v. Pennsylvania Human Relations Commission",
+          "date": "2025-12-10",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "mullins-v-duquesne-university-of-the-holy-spirit-2025-12-05",
+          "name": "Mullins v. Duquesne University of the Holy Spirit",
+          "date": "2025-12-05",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "associated-builders-and-contractors-v-bucks-county-community-college-2025-12-05",
+          "name": "Associated Builders and Contractors v. Bucks County Community College",
+          "date": "2025-12-05",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "united-states-v-brian-boehm-2025-12-03",
+          "name": "United States v. Brian Boehm",
+          "date": "2025-12-03",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "john-weaver-v-shasta-services-2025-10-22",
+          "name": "John Weaver v. Shasta Services",
+          "date": "2025-10-22",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "thomas-dexter-jakes-v-duane-youngblood-2025-10-06",
+          "name": "Thomas Dexter Jakes v. Duane Youngblood",
+          "date": "2025-10-06",
+          "amount": 5000,
+          "severity": "unclassified"
+        },
+        {
+          "id": "in-re-todd-elliott-koger-2025-09-30",
+          "name": "In re: Todd Elliott Koger",
+          "date": "2025-09-30",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "lonnie-allbaugh-v-university-of-scranton-2025-08-28",
+          "name": "Lonnie Allbaugh v. University of Scranton",
+          "date": "2025-08-28",
+          "amount": 1000,
+          "severity": "unclassified"
+        },
+        {
+          "id": "deleman-v-highlevel-2025-07-25",
+          "name": "Deleman v. HighLevel",
+          "date": "2025-07-25",
+          "amount": null,
+          "severity": "unclassified"
+        }
+      ]
+    },
+    {
+      "state": "CO",
+      "count": 23,
+      "total": 34000,
+      "cases": [
+        {
+          "id": "jamie-lee-saunders-v-albertsonssafeway-llc-2026-04-16",
+          "name": "Jamie Lee Saunders v. Albertsons/Safeway, LLC",
+          "date": "2026-04-16",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "coomer-v-lindellmypillow-inc-2-2026-03-25",
+          "name": "Coomer v. Lindell/MyPillow, Inc. (2)",
+          "date": "2026-03-25",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "keirton-inc-v-mersad-rahmanovic-2026-03-19",
+          "name": "Keirton Inc. v. Mersad Rahmanovic",
           "date": "2026-03-19",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "ak-v-mr-2026-03-10",
-          "name": "A.K. v. M.R.",
-          "date": "2026-03-10",
+          "id": "chp-1010-mcdowell-et-al-v-james-costello-turpen-2026-02-17",
+          "name": "CHP 1010 McDowell et al. v. James Costello Turpen",
+          "date": "2026-02-17",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "michael-platt-v-volunteers-of-america-ohio-indiana-2026-03-10",
-          "name": "Michael Platt v. Volunteers of America Ohio & Indiana",
-          "date": "2026-03-10",
+          "id": "labonte-v-bokf-et-al-2026-02-10",
+          "name": "Labonte v. Bokf, et al.",
+          "date": "2026-02-10",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "joseph-maldonado-v-professional-animal-retirement-center-2026-02-27",
-          "name": "Joseph Maldonado v. Professional Animal Retirement Center",
-          "date": "2026-02-27",
-          "amount": 1500,
-          "severity": "unclassified"
-        },
-        {
-          "id": "virgil-v-experian-information-solutions-et-al-2026-02-12",
-          "name": "Virgil v. Experian Information Solutions, et al.",
-          "date": "2026-02-12",
-          "amount": 1,
-          "severity": "unclassified"
-        },
-        {
-          "id": "mutugu-v-kiaraho-2026-02-06",
-          "name": "Mutugu v. Kiaraho",
+          "id": "nonnie-berg-v-united-airlines-inc-3-2026-02-06",
+          "name": "Nonnie Berg v. United Airlines, Inc. (3)",
           "date": "2026-02-06",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "wilcox-v-gingrinch-2026-01-30",
-          "name": "Wilcox v. Gingrinch",
-          "date": "2026-01-30",
+          "id": "nonnie-berg-v-united-airlines-inc-2-2026-01-28",
+          "name": "Nonnie Berg v. United Airlines, Inc. (2)",
+          "date": "2026-01-28",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "north-atlantic-operating-company-inc-et-al-v-indiana-import-llc-et-al-2026-01-15",
-          "name": "North Atlantic Operating Company, Inc., et al. v. Indiana Import, LLC, et al.",
-          "date": "2026-01-15",
+          "id": "alzado-lotz-v-bock-2026-01-16",
+          "name": "Alzado-Lotz v. Bock",
+          "date": "2026-01-16",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "mh-v-cs-2025-11-24",
-          "name": "M.H. v. C.S.",
-          "date": "2025-11-24",
+          "id": "saad-hanna-v-kimberly-a-nelson-2026-01-08",
+          "name": "Saad Hanna v. Kimberly A. Nelson",
+          "date": "2026-01-08",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "kamia-nellum-v-credit-acceptance-corporation-2025-11-18",
-          "name": "Kamia Nellum v. Credit Acceptance Corporation",
-          "date": "2025-11-18",
+          "id": "in-re-avi-schwalb-2025-12-02",
+          "name": "In re: Avi Schwalb",
+          "date": "2025-12-02",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "xavier-jamal-smith-v-santander-consumer-usa-inc-2025-11-04",
-          "name": "Xavier Jamal Smith v. Santander Consumer USA Inc.",
-          "date": "2025-11-04",
+          "id": "hanson-v-nest-home-lending-llc-et-al-2025-11-28",
+          "name": "Hanson v. Nest Home Lending, LLC et al.",
+          "date": "2025-11-28",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "ih-v-ok-2025-11-03",
-          "name": "I.H. v. O.K.",
-          "date": "2025-11-03",
+          "id": "ys-v-john-doe-et-al-2025-11-19",
+          "name": "Y.S. v. John Doe et al.",
+          "date": "2025-11-19",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "in-re-the-marriage-of-melinda-johnson-v-sabastian-johnson-2025-10-30",
-          "name": "In re: the Marriage of Melinda Johnson v. Sabastian Johnson",
+          "id": "cotto-v-united-states-2025-11-17",
+          "name": "Cotto v. United States",
+          "date": "2025-11-17",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "matthew-lewis-v-eagle-county-government-2025-11-14",
+          "name": "Matthew Lewis v. Eagle County Government",
+          "date": "2025-11-14",
+          "amount": 28000,
+          "severity": "unclassified"
+        },
+        {
+          "id": "nonnie-berg-v-united-airlines-inc-1-2025-10-30",
+          "name": "Nonnie Berg v. United Airlines, Inc. (1)",
           "date": "2025-10-30",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "tm-v-mm-2025-09-24",
-          "name": "T.M. v. M.M.",
-          "date": "2025-09-24",
+          "id": "in-re-sherry-ann-mcgann-2025-10-27",
+          "name": "In re: Sherry Ann McGann",
+          "date": "2025-10-27",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "cingel-v-ferreri-2025-09-19",
-          "name": "Cingel v. Ferreri",
-          "date": "2025-09-19",
+          "id": "in-re-mascio-2025-08-22",
+          "name": "In re Mascio",
+          "date": "2025-08-22",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "tsupko-v-kinetic-advantage-llc-2025-09-17",
-          "name": "Tsupko v. Kinetic Advantage, LLC",
-          "date": "2025-09-17",
+          "id": "in-re-marriage-of-haibt-2025-07-10",
+          "name": "In re Marriage of Haibt",
+          "date": "2025-07-10",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "coomer-v-lindellmypillow-inc-1-2025-07-07",
+          "name": "Coomer v. Lindell/MyPillow, Inc. (1)",
+          "date": "2025-07-07",
+          "amount": 6000,
+          "severity": "unclassified"
+        },
+        {
+          "id": "matter-of-sewell-properties-trust-2025-07-03",
+          "name": "Matter of Sewell Properties Trust",
+          "date": "2025-07-03",
           "amount": null,
           "severity": "unclassified"
         }
@@ -1804,294 +2098,147 @@
       ]
     },
     {
-      "state": "PA",
-      "count": 22,
-      "total": 17500,
+      "state": "OR",
+      "count": 20,
+      "total": 130244,
       "cases": [
         {
-          "id": "bunce-v-visual-technology-innovations-2-2026-04-20",
-          "name": "Bunce v. Visual Technology Innovations (2)",
-          "date": "2026-04-20",
-          "amount": 5000,
+          "id": "carol-l-williams-v-tracy-honl-2026-04-22",
+          "name": "Carol L. Williams v. Tracy Honl",
+          "date": "2026-04-22",
+          "amount": 8044,
           "severity": "unclassified"
         },
         {
-          "id": "nancy-parkinson-v-unemployment-compensation-board-of-review-2026-04-07",
-          "name": "Nancy Parkinson v. Unemployment Compensation Board of Review",
-          "date": "2026-04-07",
+          "id": "steven-nemec-v-kelsey-kanoelani-alao-and-alyssa-jade-alao-2026-04-10",
+          "name": "Steven Nemec v. Kelsey Kanoelani Alao and Alyssa Jade Alao",
+          "date": "2026-04-10",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "domingo-beato-estrella-v-m-arviza-2026-03-16",
-          "name": "Domingo Beato-Estrella v. M. Arviza",
-          "date": "2026-03-16",
+          "id": "kelly-bartholomew-v-public-utility-commission-of-oregon-2026-04-06",
+          "name": "Kelly Bartholomew v. Public Utility Commission of Oregon",
+          "date": "2026-04-06",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "ac-appellant-v-hd-and-jc-2026-03-13",
-          "name": "A.C. Appellant v. H.D. AND J.C.",
-          "date": "2026-03-13",
+          "id": "yves-hector-vimegnon-v-gallagher-bassett-services-inc-2026-03-30",
+          "name": "Yves Hector Vimegnon v. Gallagher Bassett Services, Inc.",
+          "date": "2026-03-30",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "nydia-rosario-v-liberty-mutual-personal-insurance-company-2026-02-13",
-          "name": "Nydia Rosario v. Liberty Mutual Personal Insurance Company",
-          "date": "2026-02-13",
+          "id": "shaun-fleck-v-del-one-federal-credit-union-2026-03-30",
+          "name": "Shaun Fleck v. Del-One Federal Credit Union",
+          "date": "2026-03-30",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "emmanuel-s-yirenkyi-v-angela-hoover-2026-02-02",
-          "name": "Emmanuel S. Yirenkyi v. Angela Hoover",
-          "date": "2026-02-02",
+          "id": "stafford-v-andrew-taffet-et-al-2026-03-23",
+          "name": "Stafford v. Andrew Taffet, et al.",
+          "date": "2026-03-23",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "lifetime-well-llc-v-ibspotcom-inc-2026-01-26",
-          "name": "Lifetime Well LLC v. IBSpot.com Inc.",
-          "date": "2026-01-26",
-          "amount": 4000,
+          "id": "couvrette-v-wisnovsky-2026-03-23",
+          "name": "Couvrette v. Wisnovsky",
+          "date": "2026-03-23",
+          "amount": 109700,
           "severity": "unclassified"
         },
         {
-          "id": "saber-v-navy-federal-credit-union-2026-01-14",
-          "name": "Saber v. Navy Federal Credit Union",
-          "date": "2026-01-14",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "russel-williams-home-services-llc-v-minleon-international-usa-limited-llc-et-al-",
-          "name": "Russel Williams Home Services LLC v. Minleon International (USA) Limited LLC, et al.",
-          "date": "2025-12-17",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "robert-w-williams-sr-v-assistant-district-attorney-john-r-canavan-et-al-2025-12-",
-          "name": "Robert W. Williams, Sr. v. Assistant District Attorney John R. Canavan, et al.",
-          "date": "2025-12-15",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "south-side-area-school-district-et-al-v-pennsylvania-human-relations-commission-",
-          "name": "South Side Area School District et. al v. Pennsylvania Human Relations Commission",
-          "date": "2025-12-10",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "mullins-v-duquesne-university-of-the-holy-spirit-2025-12-05",
-          "name": "Mullins v. Duquesne University of the Holy Spirit",
-          "date": "2025-12-05",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "associated-builders-and-contractors-v-bucks-county-community-college-2025-12-05",
-          "name": "Associated Builders and Contractors v. Bucks County Community College",
-          "date": "2025-12-05",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "united-states-v-brian-boehm-2025-12-03",
-          "name": "United States v. Brian Boehm",
-          "date": "2025-12-03",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "john-weaver-v-shasta-services-2025-10-22",
-          "name": "John Weaver v. Shasta Services",
-          "date": "2025-10-22",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "thomas-dexter-jakes-v-duane-youngblood-2025-10-06",
-          "name": "Thomas Dexter Jakes v. Duane Youngblood",
-          "date": "2025-10-06",
-          "amount": 5000,
-          "severity": "unclassified"
-        },
-        {
-          "id": "in-re-todd-elliott-koger-2025-09-30",
-          "name": "In re: Todd Elliott Koger",
-          "date": "2025-09-30",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "lonnie-allbaugh-v-university-of-scranton-2025-08-28",
-          "name": "Lonnie Allbaugh v. University of Scranton",
-          "date": "2025-08-28",
-          "amount": 1000,
-          "severity": "unclassified"
-        },
-        {
-          "id": "deleman-v-highlevel-2025-07-25",
-          "name": "Deleman v. HighLevel",
-          "date": "2025-07-25",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "victor-kholod-v-nationstar-mortgage-llc-2025-07-22",
-          "name": "Victor Kholod v. Nationstar Mortgage LLC",
-          "date": "2025-07-22",
-          "amount": null,
-          "severity": "unclassified"
-        }
-      ]
-    },
-    {
-      "state": "CO",
-      "count": 22,
-      "total": 34000,
-      "cases": [
-        {
-          "id": "jamie-lee-saunders-v-albertsonssafeway-llc-2026-04-16",
-          "name": "Jamie Lee Saunders v. Albertsons/Safeway, LLC",
-          "date": "2026-04-16",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "coomer-v-lindellmypillow-inc-2-2026-03-25",
-          "name": "Coomer v. Lindell/MyPillow, Inc. (2)",
-          "date": "2026-03-25",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "keirton-inc-v-mersad-rahmanovic-2026-03-19",
-          "name": "Keirton Inc. v. Mersad Rahmanovic",
+          "id": "kelly-bartholomew-v-clackamas-county-2026-03-19",
+          "name": "Kelly Bartholomew v. Clackamas County",
           "date": "2026-03-19",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "chp-1010-mcdowell-et-al-v-james-costello-turpen-2026-02-17",
-          "name": "CHP 1010 McDowell et al. v. James Costello Turpen",
-          "date": "2026-02-17",
+          "id": "doiban-v-oregon-liquor-and-cannabis-commission-2026-03-18",
+          "name": "Doiban v. Oregon Liquor and Cannabis Commission",
+          "date": "2026-03-18",
+          "amount": 10000,
+          "severity": "unclassified"
+        },
+        {
+          "id": "zack-jones-v-target-corporation-2026-03-06",
+          "name": "Zack Jones v. Target Corporation",
+          "date": "2026-03-06",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "labonte-v-bokf-et-al-2026-02-10",
-          "name": "Labonte v. Bokf, et al.",
-          "date": "2026-02-10",
+          "id": "david-martin-v-ods-community-dental-insurance-et-al-2026-02-18",
+          "name": "David Martin v. ODS Community Dental Insurance et al.",
+          "date": "2026-02-18",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "nonnie-berg-v-united-airlines-inc-3-2026-02-06",
-          "name": "Nonnie Berg v. United Airlines, Inc. (3)",
-          "date": "2026-02-06",
+          "id": "keith-powell-v-employment-dep-first-congregational-church-of-portland-2026-02-11",
+          "name": "Keith Powell v. Employment Dep. & First Congregational Church of Portland",
+          "date": "2026-02-11",
+          "amount": 500,
+          "severity": "unclassified"
+        },
+        {
+          "id": "mcneal-v-united-food-and-commercial-workers-local-555-safeway-inc-2026-01-22",
+          "name": "McNeal v. United Food and Commercial Workers Local 555; Safeway, Inc.",
+          "date": "2026-01-22",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "nonnie-berg-v-united-airlines-inc-2-2026-01-28",
-          "name": "Nonnie Berg v. United Airlines, Inc. (2)",
-          "date": "2026-01-28",
+          "id": "holmes-family-trust-v-multnomah-county-assessor-2025-12-16",
+          "name": "Holmes Family Trust v. Multnomah County Assessor",
+          "date": "2025-12-16",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "alzado-lotz-v-bock-2026-01-16",
-          "name": "Alzado-Lotz v. Bock",
-          "date": "2026-01-16",
+          "id": "troy-allen-berg-v-mandi-marie-wondra-2025-12-12",
+          "name": "Troy Allen Berg v. Mandi Marie Wondra",
+          "date": "2025-12-12",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "saad-hanna-v-kimberly-a-nelson-2026-01-08",
-          "name": "Saad Hanna v. Kimberly A. Nelson",
-          "date": "2026-01-08",
+          "id": "donnie-yarn-and-deshawn-murphy-v-trader-joes-2025-12-05",
+          "name": "Donnie Yarn and Deshawn Murphy v. Trader Joe's",
+          "date": "2025-12-05",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "in-re-avi-schwalb-2025-12-02",
-          "name": "In re: Avi Schwalb",
-          "date": "2025-12-02",
-          "amount": null,
+          "id": "ringo-v-colquhoun-design-studio-llc-2025-12-03",
+          "name": "Ringo v. Colquhoun Design Studio, LLC",
+          "date": "2025-12-03",
+          "amount": 2000,
           "severity": "unclassified"
         },
         {
-          "id": "hanson-v-nest-home-lending-llc-et-al-2025-11-28",
-          "name": "Hanson v. Nest Home Lending, LLC et al.",
-          "date": "2025-11-28",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "ys-v-john-doe-et-al-2025-11-19",
-          "name": "Y.S. v. John Doe et al.",
-          "date": "2025-11-19",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "cotto-v-united-states-2025-11-17",
-          "name": "Cotto v. United States",
-          "date": "2025-11-17",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "matthew-lewis-v-eagle-county-government-2025-11-14",
-          "name": "Matthew Lewis v. Eagle County Government",
-          "date": "2025-11-14",
-          "amount": 28000,
-          "severity": "unclassified"
-        },
-        {
-          "id": "nonnie-berg-v-united-airlines-inc-1-2025-10-30",
-          "name": "Nonnie Berg v. United Airlines, Inc. (1)",
-          "date": "2025-10-30",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "in-re-sherry-ann-mcgann-2025-10-27",
-          "name": "In re: Sherry Ann McGann",
+          "id": "green-building-initiative-inc-v-stephen-r-peacock-green-globe-limited-2025-10-27",
+          "name": "Green Building Initiative, Inc. v. Stephen R. Peacock & Green Globe Limited",
           "date": "2025-10-27",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "in-re-mascio-2025-08-22",
-          "name": "In re Mascio",
-          "date": "2025-08-22",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "in-re-marriage-of-haibt-2025-07-10",
-          "name": "In re Marriage of Haibt",
-          "date": "2025-07-10",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "coomer-v-lindellmypillow-inc-1-2025-07-07",
-          "name": "Coomer v. Lindell/MyPillow, Inc. (1)",
+          "id": "in-re-eugene-ezra-perkins-2025-07-07",
+          "name": "In re Eugene Ezra Perkins",
           "date": "2025-07-07",
-          "amount": 6000,
+          "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "harris-v-take-two-interactive-software-2025-05-06",
-          "name": "Harris v. Take-Two Interactive Software",
-          "date": "2025-05-06",
+          "id": "schoene-v-oregon-department-of-human-services-2025-06-25",
+          "name": "Schoene v. Oregon Department of Human Services",
+          "date": "2025-06-25",
           "amount": null,
           "severity": "unclassified"
         }
@@ -2245,133 +2392,126 @@
       ]
     },
     {
-      "state": "OR",
-      "count": 18,
-      "total": 130244,
+      "state": "GA",
+      "count": 17,
+      "total": 17632,
       "cases": [
         {
-          "id": "carol-l-williams-v-tracy-honl-2026-04-22",
-          "name": "Carol L. Williams v. Tracy Honl",
-          "date": "2026-04-22",
-          "amount": 8044,
-          "severity": "unclassified"
-        },
-        {
-          "id": "steven-nemec-v-kelsey-kanoelani-alao-and-alyssa-jade-alao-2026-04-10",
-          "name": "Steven Nemec v. Kelsey Kanoelani Alao and Alyssa Jade Alao",
-          "date": "2026-04-10",
+          "id": "slay-v-ross-2026-03-09",
+          "name": "Slay v. Ross",
+          "date": "2026-03-09",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "kelly-bartholomew-v-public-utility-commission-of-oregon-2026-04-06",
-          "name": "Kelly Bartholomew v. Public Utility Commission of Oregon",
-          "date": "2026-04-06",
+          "id": "hicks-v-city-of-albany-2026-02-26",
+          "name": "Hicks v. City of Albany",
+          "date": "2026-02-26",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "yves-hector-vimegnon-v-gallagher-bassett-services-inc-2026-03-30",
-          "name": "Yves Hector Vimegnon v. Gallagher Bassett Services, Inc.",
-          "date": "2026-03-30",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "shaun-fleck-v-del-one-federal-credit-union-2026-03-30",
-          "name": "Shaun Fleck v. Del-One Federal Credit Union",
-          "date": "2026-03-30",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "stafford-v-andrew-taffet-et-al-2026-03-23",
-          "name": "Stafford v. Andrew Taffet, et al.",
-          "date": "2026-03-23",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "couvrette-v-wisnovsky-2026-03-23",
-          "name": "Couvrette v. Wisnovsky",
-          "date": "2026-03-23",
-          "amount": 109700,
-          "severity": "unclassified"
-        },
-        {
-          "id": "kelly-bartholomew-v-clackamas-county-2026-03-19",
-          "name": "Kelly Bartholomew v. Clackamas County",
-          "date": "2026-03-19",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "doiban-v-oregon-liquor-and-cannabis-commission-2026-03-18",
-          "name": "Doiban v. Oregon Liquor and Cannabis Commission",
-          "date": "2026-03-18",
-          "amount": 10000,
-          "severity": "unclassified"
-        },
-        {
-          "id": "zack-jones-v-target-corporation-2026-03-06",
-          "name": "Zack Jones v. Target Corporation",
-          "date": "2026-03-06",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "david-martin-v-ods-community-dental-insurance-et-al-2026-02-18",
-          "name": "David Martin v. ODS Community Dental Insurance et al.",
-          "date": "2026-02-18",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "keith-powell-v-employment-dep-first-congregational-church-of-portland-2026-02-11",
-          "name": "Keith Powell v. Employment Dep. & First Congregational Church of Portland",
-          "date": "2026-02-11",
-          "amount": 500,
-          "severity": "unclassified"
-        },
-        {
-          "id": "mcneal-v-united-food-and-commercial-workers-local-555-safeway-inc-2026-01-22",
-          "name": "McNeal v. United Food and Commercial Workers Local 555; Safeway, Inc.",
+          "id": "tolbert-v-state-2026-01-22",
+          "name": "Tolbert v. State",
           "date": "2026-01-22",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "troy-allen-berg-v-mandi-marie-wondra-2025-12-12",
-          "name": "Troy Allen Berg v. Mandi Marie Wondra",
-          "date": "2025-12-12",
+          "id": "william-parker-v-patrick-pat-labat-et-al-2026-01-21",
+          "name": "William Parker v. Patrick \"Pat\" Labat, et al.",
+          "date": "2026-01-21",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "donnie-yarn-and-deshawn-murphy-v-trader-joes-2025-12-05",
-          "name": "Donnie Yarn and Deshawn Murphy v. Trader Joe's",
-          "date": "2025-12-05",
+          "id": "tamisha-shaw-v-coast-dental-of-georgia-et-al-2026-01-06",
+          "name": "Tamisha Shaw v. Coast Dental of Georgia et al/",
+          "date": "2026-01-06",
+          "amount": 2632,
+          "severity": "unclassified"
+        },
+        {
+          "id": "tiffany-regina-ringer-v-bank-of-america-na-2025-12-30",
+          "name": "Tiffany Regina Ringer v. Bank of America, N.A.",
+          "date": "2025-12-30",
+          "amount": 1500,
+          "severity": "unclassified"
+        },
+        {
+          "id": "medical-buyers-group-llc-dba-integrity-v-candice-pence-et-al-2025-10-31",
+          "name": "Medical Buyers Group LLC d/b/a Integrity v. Candice Pence, et al.",
+          "date": "2025-10-31",
+          "amount": 10000,
+          "severity": "unclassified"
+        },
+        {
+          "id": "in-re-pamela-williams-2025-10-30",
+          "name": "In re: Pamela Williams",
+          "date": "2025-10-30",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "ringo-v-colquhoun-design-studio-llc-2025-12-03",
-          "name": "Ringo v. Colquhoun Design Studio, LLC",
-          "date": "2025-12-03",
-          "amount": 2000,
-          "severity": "unclassified"
-        },
-        {
-          "id": "green-building-initiative-inc-v-stephen-r-peacock-green-globe-limited-2025-10-27",
-          "name": "Green Building Initiative, Inc. v. Stephen R. Peacock & Green Globe Limited",
-          "date": "2025-10-27",
+          "id": "in-re-loletha-hale-esq-boston-v-williams-2025-10-28",
+          "name": "In re: Loletha Hale, Esq. (Boston v. Williams)",
+          "date": "2025-10-28",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "in-re-eugene-ezra-perkins-2025-07-07",
-          "name": "In re Eugene Ezra Perkins",
-          "date": "2025-07-07",
+          "id": "ryan-andrew-nelson-v-state-farm-fire-and-casualty-company-2025-10-28",
+          "name": "Ryan Andrew Nelson v. State Farm Fire and Casualty Company",
+          "date": "2025-10-28",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "state-v-payne-2025-09-12",
+          "name": "State v. Payne",
+          "date": "2025-09-12",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "woodrow-jackson-v-auto-owners-insurance-company-2025-07-14",
+          "name": "Woodrow Jackson v. Auto-Owners Insurance Company",
+          "date": "2025-07-14",
+          "amount": 1000,
+          "severity": "unclassified"
+        },
+        {
+          "id": "shahid-v-esaam-2025-06-30",
+          "name": "Shahid v. Esaam",
+          "date": "2025-06-30",
+          "amount": 2500,
+          "severity": "unclassified"
+        },
+        {
+          "id": "sister-city-logistics-inc-v-john-fitzgerald-2025-06-27",
+          "name": "Sister City Logistics, Inc. v. John Fitzgerald",
+          "date": "2025-06-27",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "nichols-v-walmart-2025-04-23",
+          "name": "Nichols v. Walmart",
+          "date": "2025-04-23",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "leslie-v-iq-data-international-2024-11-24",
+          "name": "Leslie v. IQ Data International",
+          "date": "2024-11-24",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "thomas-v-pangburn-2023-10-06",
+          "name": "Thomas v. Pangburn",
+          "date": "2023-10-06",
           "amount": null,
           "severity": "unclassified"
         }
@@ -2610,125 +2750,6 @@
           "id": "mckeown-v-paycom-payroll-llc-2025-03-31",
           "name": "McKeown v. Paycom Payroll LLC",
           "date": "2025-03-31",
-          "amount": null,
-          "severity": "unclassified"
-        }
-      ]
-    },
-    {
-      "state": "GA",
-      "count": 16,
-      "total": 17632,
-      "cases": [
-        {
-          "id": "slay-v-ross-2026-03-09",
-          "name": "Slay v. Ross",
-          "date": "2026-03-09",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "hicks-v-city-of-albany-2026-02-26",
-          "name": "Hicks v. City of Albany",
-          "date": "2026-02-26",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "tolbert-v-state-2026-01-22",
-          "name": "Tolbert v. State",
-          "date": "2026-01-22",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "william-parker-v-patrick-pat-labat-et-al-2026-01-21",
-          "name": "William Parker v. Patrick \"Pat\" Labat, et al.",
-          "date": "2026-01-21",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "tamisha-shaw-v-coast-dental-of-georgia-et-al-2026-01-06",
-          "name": "Tamisha Shaw v. Coast Dental of Georgia et al/",
-          "date": "2026-01-06",
-          "amount": 2632,
-          "severity": "unclassified"
-        },
-        {
-          "id": "tiffany-regina-ringer-v-bank-of-america-na-2025-12-30",
-          "name": "Tiffany Regina Ringer v. Bank of America, N.A.",
-          "date": "2025-12-30",
-          "amount": 1500,
-          "severity": "unclassified"
-        },
-        {
-          "id": "medical-buyers-group-llc-dba-integrity-v-candice-pence-et-al-2025-10-31",
-          "name": "Medical Buyers Group LLC d/b/a Integrity v. Candice Pence, et al.",
-          "date": "2025-10-31",
-          "amount": 10000,
-          "severity": "unclassified"
-        },
-        {
-          "id": "in-re-pamela-williams-2025-10-30",
-          "name": "In re: Pamela Williams",
-          "date": "2025-10-30",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "in-re-loletha-hale-esq-boston-v-williams-2025-10-28",
-          "name": "In re: Loletha Hale, Esq. (Boston v. Williams)",
-          "date": "2025-10-28",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "ryan-andrew-nelson-v-state-farm-fire-and-casualty-company-2025-10-28",
-          "name": "Ryan Andrew Nelson v. State Farm Fire and Casualty Company",
-          "date": "2025-10-28",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "state-v-payne-2025-09-12",
-          "name": "State v. Payne",
-          "date": "2025-09-12",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "woodrow-jackson-v-auto-owners-insurance-company-2025-07-14",
-          "name": "Woodrow Jackson v. Auto-Owners Insurance Company",
-          "date": "2025-07-14",
-          "amount": 1000,
-          "severity": "unclassified"
-        },
-        {
-          "id": "shahid-v-esaam-2025-06-30",
-          "name": "Shahid v. Esaam",
-          "date": "2025-06-30",
-          "amount": 2500,
-          "severity": "unclassified"
-        },
-        {
-          "id": "nichols-v-walmart-2025-04-23",
-          "name": "Nichols v. Walmart",
-          "date": "2025-04-23",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "leslie-v-iq-data-international-2024-11-24",
-          "name": "Leslie v. IQ Data International",
-          "date": "2024-11-24",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "thomas-v-pangburn-2023-10-06",
-          "name": "Thomas v. Pangburn",
-          "date": "2023-10-06",
           "amount": null,
           "severity": "unclassified"
         }
@@ -3022,6 +3043,97 @@
       ]
     },
     {
+      "state": "CT",
+      "count": 12,
+      "total": 500,
+      "cases": [
+        {
+          "id": "in-re-kathleen-a-rabon-2026-04-03",
+          "name": "In re: Kathleen A Rabon",
+          "date": "2026-04-03",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "christopher-a-ambrose-v-bandy-x-lee-2026-03-31",
+          "name": "Christopher A. Ambrose v. Bandy X. Lee",
+          "date": "2026-03-31",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "mohamed-hussain-et-al-v-mansoor-quraishi-et-al-2026-03-31",
+          "name": "Mohamed Hussain et al. v. Mansoor Quraishi et al.",
+          "date": "2026-03-31",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "jacobs-v-payward-inc-2026-03-30",
+          "name": "Jacobs v. Payward, Inc.",
+          "date": "2026-03-30",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "lauren-k-morgan-v-michael-p-whitticom-2026-03-27",
+          "name": "Lauren K. Morgan v. Michael P. Whitticom",
+          "date": "2026-03-27",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "kosel-equity-v-mcgregor-2026-02-19",
+          "name": "Kosel Equity v. McGregor",
+          "date": "2026-02-19",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "raul-gonzales-davila-v-roblen-2026-02-06",
+          "name": "Raul Gonzales Davila v. Roblen",
+          "date": "2026-02-06",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "braica-v-frankowski-anthony-braica-v-tom-frankowski-2025-12-15",
+          "name": "Braica v. Frankowski (Anthony Braica v. Tom Frankowski)",
+          "date": "2025-12-15",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "jesse-andre-v-warden-fci-danbury-2025-11-25",
+          "name": "Jesse Andre v. Warden, FCI Danbury",
+          "date": "2025-11-25",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "cojom-v-roblen-2025-11-17",
+          "name": "Cojom v. Roblen",
+          "date": "2025-11-17",
+          "amount": 500,
+          "severity": "unclassified"
+        },
+        {
+          "id": "reilly-v-conn-interlocal-risk-mgmt-agency-2025-06-20",
+          "name": "Reilly v. Conn. Interlocal Risk Mgmt. Agency",
+          "date": "2025-06-20",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "moales-v-land-rover-cherry-hill-2025-04-30",
+          "name": "Moales v. Land Rover Cherry Hill",
+          "date": "2025-04-30",
+          "amount": null,
+          "severity": "unclassified"
+        }
+      ]
+    },
+    {
       "state": "LA",
       "count": 11,
       "total": 10368,
@@ -3106,85 +3218,169 @@
       ]
     },
     {
-      "state": "CT",
+      "state": "SC",
       "count": 11,
-      "total": 500,
+      "total": 0,
       "cases": [
         {
-          "id": "in-re-kathleen-a-rabon-2026-04-03",
-          "name": "In re: Kathleen A Rabon",
+          "id": "ellen-michaelis-v-wilmington-savings-fund-society-2026-04-03",
+          "name": "Ellen Michaelis v. Wilmington Savings Fund Society",
           "date": "2026-04-03",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "christopher-a-ambrose-v-bandy-x-lee-2026-03-31",
-          "name": "Christopher A. Ambrose v. Bandy X. Lee",
-          "date": "2026-03-31",
+          "id": "agc-v-registrar-of-land-titles-2026-04-02",
+          "name": "AGC v Registrar of Land Titles",
+          "date": "2026-04-02",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "mohamed-hussain-et-al-v-mansoor-quraishi-et-al-2026-03-31",
-          "name": "Mohamed Hussain et al. v. Mansoor Quraishi et al.",
-          "date": "2026-03-31",
+          "id": "gsa-v-department-of-communities-2026-03-16",
+          "name": "GSA v. Department of Communities",
+          "date": "2026-03-16",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "jacobs-v-payward-inc-2026-03-30",
-          "name": "Jacobs v. Payward, Inc.",
+          "id": "nelson-l-bruce-v-the-united-states-2026-02-09",
+          "name": "Nelson L. Bruce v. The United States",
+          "date": "2026-02-09",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "cherleatha-b-v-frank-bisignano-2025-12-29",
+          "name": "Cherleatha B. v. Frank Bisignano",
+          "date": "2025-12-29",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "re-walker-2025-11-24",
+          "name": "Re Walker",
+          "date": "2025-11-24",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "flores-v-nicha-2025-10-15",
+          "name": "Flores v. NICHA",
+          "date": "2025-10-15",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "in-re-richburg-2025-08-27",
+          "name": "In re Richburg",
+          "date": "2025-08-27",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "nikolic-anor-v-nationwide-news-pty-ltd-anor-2025-05-23",
+          "name": "Nikolic & Anor v Nationwide News Pty Ltd & Anor",
+          "date": "2025-05-23",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "kaur-v-rmit-2024-11-11",
+          "name": "Kaur v RMIT",
+          "date": "2024-11-11",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "churchill-funding-v-732-indiana-2024-10-31",
+          "name": "Churchill Funding v. 732 Indiana",
+          "date": "2024-10-31",
+          "amount": null,
+          "severity": "unclassified"
+        }
+      ]
+    },
+    {
+      "state": "MA",
+      "count": 11,
+      "total": 2000,
+      "cases": [
+        {
+          "id": "souza-v-city-of-fitchburg-2026-03-30",
+          "name": "Souza v. City of Fitchburg",
           "date": "2026-03-30",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "lauren-k-morgan-v-michael-p-whitticom-2026-03-27",
-          "name": "Lauren K. Morgan v. Michael P. Whitticom",
-          "date": "2026-03-27",
+          "id": "traver-v-general-motors-financial-company-inc-et-al-2026-03-11",
+          "name": "Traver v. General Motors Financial Company Inc., et al.",
+          "date": "2026-03-11",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "kosel-equity-v-mcgregor-2026-02-19",
-          "name": "Kosel Equity v. McGregor",
+          "id": "gregory-j-van-etten-v-stephanie-k-fattman-et-al-2026-03-06",
+          "name": "Gregory J. Van Etten v. Stephanie K. Fattman, et al.",
+          "date": "2026-03-06",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "in-re-marrett-2026-02-19",
+          "name": "In re: Marrett",
           "date": "2026-02-19",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "braica-v-frankowski-anthony-braica-v-tom-frankowski-2025-12-15",
-          "name": "Braica v. Frankowski (Anthony Braica v. Tom Frankowski)",
-          "date": "2025-12-15",
+          "id": "in-re-telexfree-securities-litigation-2026-02-13",
+          "name": "In re: Telexfree Securities Litigation",
+          "date": "2026-02-13",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "jesse-andre-v-warden-fci-danbury-2025-11-25",
-          "name": "Jesse Andre v. Warden, FCI Danbury",
-          "date": "2025-11-25",
+          "id": "kaufman-v-upton-2026-01-21",
+          "name": "Kaufman v. Upton",
+          "date": "2026-01-21",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "cojom-v-roblen-2025-11-17",
-          "name": "Cojom v. Roblen",
-          "date": "2025-11-17",
-          "amount": 500,
-          "severity": "unclassified"
-        },
-        {
-          "id": "reilly-v-conn-interlocal-risk-mgmt-agency-2025-06-20",
-          "name": "Reilly v. Conn. Interlocal Risk Mgmt. Agency",
-          "date": "2025-06-20",
+          "id": "massachusetts-housing-finance-agency-v-bradley-k-bass-et-al-2025-12-31",
+          "name": "Massachusetts Housing Finance Agency v. Bradley K. Bass, et al.",
+          "date": "2025-12-31",
           "amount": null,
           "severity": "unclassified"
         },
         {
-          "id": "moales-v-land-rover-cherry-hill-2025-04-30",
-          "name": "Moales v. Land Rover Cherry Hill",
-          "date": "2025-04-30",
+          "id": "tyrone-walker-v-juliane-pierre-2025-07-03",
+          "name": "Tyrone Walker v. Juliane Pierre",
+          "date": "2025-07-03",
           "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "dastou-v-holmes-2025-06-25",
+          "name": "Dastou v. Holmes",
+          "date": "2025-06-25",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "zherka-v-davey-et-al-2025-05-22",
+          "name": "Zherka v. Davey et al.",
+          "date": "2025-05-22",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "smith-v-farwell-2024-02-12",
+          "name": "Smith v. Farwell",
+          "date": "2024-02-12",
+          "amount": 2000,
           "severity": "unclassified"
         }
       ]
@@ -3435,83 +3631,6 @@
       ]
     },
     {
-      "state": "MA",
-      "count": 10,
-      "total": 2000,
-      "cases": [
-        {
-          "id": "souza-v-city-of-fitchburg-2026-03-30",
-          "name": "Souza v. City of Fitchburg",
-          "date": "2026-03-30",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "traver-v-general-motors-financial-company-inc-et-al-2026-03-11",
-          "name": "Traver v. General Motors Financial Company Inc., et al.",
-          "date": "2026-03-11",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "gregory-j-van-etten-v-stephanie-k-fattman-et-al-2026-03-06",
-          "name": "Gregory J. Van Etten v. Stephanie K. Fattman, et al.",
-          "date": "2026-03-06",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "in-re-marrett-2026-02-19",
-          "name": "In re: Marrett",
-          "date": "2026-02-19",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "in-re-telexfree-securities-litigation-2026-02-13",
-          "name": "In re: Telexfree Securities Litigation",
-          "date": "2026-02-13",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "kaufman-v-upton-2026-01-21",
-          "name": "Kaufman v. Upton",
-          "date": "2026-01-21",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "tyrone-walker-v-juliane-pierre-2025-07-03",
-          "name": "Tyrone Walker v. Juliane Pierre",
-          "date": "2025-07-03",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "dastou-v-holmes-2025-06-25",
-          "name": "Dastou v. Holmes",
-          "date": "2025-06-25",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "zherka-v-davey-et-al-2025-05-22",
-          "name": "Zherka v. Davey et al.",
-          "date": "2025-05-22",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "smith-v-farwell-2024-02-12",
-          "name": "Smith v. Farwell",
-          "date": "2024-02-12",
-          "amount": 2000,
-          "severity": "unclassified"
-        }
-      ]
-    },
-    {
       "state": "MN",
       "count": 10,
       "total": 8472,
@@ -3666,76 +3785,6 @@
       ]
     },
     {
-      "state": "SC",
-      "count": 9,
-      "total": 0,
-      "cases": [
-        {
-          "id": "ellen-michaelis-v-wilmington-savings-fund-society-2026-04-03",
-          "name": "Ellen Michaelis v. Wilmington Savings Fund Society",
-          "date": "2026-04-03",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "agc-v-registrar-of-land-titles-2026-04-02",
-          "name": "AGC v Registrar of Land Titles",
-          "date": "2026-04-02",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "megan-e-bryan-v-child-support-enforcement-agency-state-of-hawaiʻi-2026-03-30",
-          "name": "Megan E. Bryan v. Child Support Enforcement Agency, State of Hawaiʻi",
-          "date": "2026-03-30",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "gsa-v-department-of-communities-2026-03-16",
-          "name": "GSA v. Department of Communities",
-          "date": "2026-03-16",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "nelson-l-bruce-v-the-united-states-2026-02-09",
-          "name": "Nelson L. Bruce v. The United States",
-          "date": "2026-02-09",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "cherleatha-b-v-frank-bisignano-2025-12-29",
-          "name": "Cherleatha B. v. Frank Bisignano",
-          "date": "2025-12-29",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "flores-v-nicha-2025-10-15",
-          "name": "Flores v. NICHA",
-          "date": "2025-10-15",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "in-re-richburg-2025-08-27",
-          "name": "In re Richburg",
-          "date": "2025-08-27",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "churchill-funding-v-732-indiana-2024-10-31",
-          "name": "Churchill Funding v. 732 Indiana",
-          "date": "2024-10-31",
-          "amount": null,
-          "severity": "unclassified"
-        }
-      ]
-    },
-    {
       "state": "MO",
       "count": 9,
       "total": 1000,
@@ -3869,6 +3918,69 @@
       ]
     },
     {
+      "state": "TN",
+      "count": 8,
+      "total": 0,
+      "cases": [
+        {
+          "id": "edward-reynolds-v-progressive-technologies-inc-2026-03-30",
+          "name": "Edward Reynolds v. Progressive Technologies, Inc.",
+          "date": "2026-03-30",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "randel-edward-page-jr-v-apperson-crump-2026-03-30",
+          "name": "Randel Edward Page, Jr. v. Apperson Crump",
+          "date": "2026-03-30",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "moses-v-state-2026-02-25",
+          "name": "Moses v. State",
+          "date": "2026-02-25",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "femhealth-usa-carafem-v-rickey-nelson-williams-2026-01-23",
+          "name": "Femhealth USA Carafem v. Rickey Nelson Williams",
+          "date": "2026-01-23",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "shields-v-first-financial-2025-11-21",
+          "name": "Shields v. First Financial",
+          "date": "2025-11-21",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "jeremie-montgomery-v-afl-cio-2025-11-14",
+          "name": "Jeremie Montgomery v. AFL-CIO",
+          "date": "2025-11-14",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "jamison-warfield-v-wn-morehouse-truck-line-inc-2025-11-06",
+          "name": "Jamison Warfield v. W.N. Morehouse Truck Line, Inc.",
+          "date": "2025-11-06",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "mid-america-apartment-communities-inc-v-dennis-michael-philipson-2025-09-11",
+          "name": "Mid-America Apartment Communities, Inc. v. Dennis Michael Philipson",
+          "date": "2025-09-11",
+          "amount": null,
+          "severity": "unclassified"
+        }
+      ]
+    },
+    {
       "state": "NM",
       "count": 8,
       "total": 13140,
@@ -3932,70 +4044,21 @@
       ]
     },
     {
-      "state": "TN",
-      "count": 7,
-      "total": 0,
-      "cases": [
-        {
-          "id": "edward-reynolds-v-progressive-technologies-inc-2026-03-30",
-          "name": "Edward Reynolds v. Progressive Technologies, Inc.",
-          "date": "2026-03-30",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "randel-edward-page-jr-v-apperson-crump-2026-03-30",
-          "name": "Randel Edward Page, Jr. v. Apperson Crump",
-          "date": "2026-03-30",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "femhealth-usa-carafem-v-rickey-nelson-williams-2026-01-23",
-          "name": "Femhealth USA Carafem v. Rickey Nelson Williams",
-          "date": "2026-01-23",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "shields-v-first-financial-2025-11-21",
-          "name": "Shields v. First Financial",
-          "date": "2025-11-21",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "jeremie-montgomery-v-afl-cio-2025-11-14",
-          "name": "Jeremie Montgomery v. AFL-CIO",
-          "date": "2025-11-14",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "jamison-warfield-v-wn-morehouse-truck-line-inc-2025-11-06",
-          "name": "Jamison Warfield v. W.N. Morehouse Truck Line, Inc.",
-          "date": "2025-11-06",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "mid-america-apartment-communities-inc-v-dennis-michael-philipson-2025-09-11",
-          "name": "Mid-America Apartment Communities, Inc. v. Dennis Michael Philipson",
-          "date": "2025-09-11",
-          "amount": null,
-          "severity": "unclassified"
-        }
-      ]
-    },
-    {
       "state": "IA",
-      "count": 6,
+      "count": 7,
       "total": 150,
       "cases": [
         {
           "id": "in-the-interest-of-wg-minor-child-2026-04-01",
           "name": "In the Interest of W.G., Minor Child",
           "date": "2026-04-01",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "attorney-disciplinary-board-v-richard-louis-pazdernik-jr-2025-10-31",
+          "name": "Attorney Disciplinary Board v. Richard Louis Pazdernik, Jr.",
+          "date": "2025-10-31",
           "amount": null,
           "severity": "unclassified"
         },
@@ -4031,6 +4094,55 @@
           "id": "in-re-turner-2025-07-09",
           "name": "in re: Turner",
           "date": "2025-07-09",
+          "amount": null,
+          "severity": "unclassified"
+        }
+      ]
+    },
+    {
+      "state": "HI",
+      "count": 6,
+      "total": 200,
+      "cases": [
+        {
+          "id": "megan-e-bryan-v-child-support-enforcement-agency-state-of-hawaiʻi-2026-03-30",
+          "name": "Megan E. Bryan v. Child Support Enforcement Agency, State of Hawaiʻi",
+          "date": "2026-03-30",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "kaleb-alexander-hoosier-v-executive-centre-association-et-al-2025-10-31",
+          "name": "Kaleb Alexander Hoosier v. Executive Centre Association, et al.",
+          "date": "2025-10-31",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "taft-v-thomas-et-al-2025-07-24",
+          "name": "Taft v. Thomas et al.",
+          "date": "2025-07-24",
+          "amount": 100,
+          "severity": "unclassified"
+        },
+        {
+          "id": "keaau-development-partnership-llc-v-lawrence-2025-05-15",
+          "name": "Keaau Development Partnership LLC v. Lawrence",
+          "date": "2025-05-15",
+          "amount": 100,
+          "severity": "unclassified"
+        },
+        {
+          "id": "210s-llc-v-di-wu-2025-03-11",
+          "name": "210S LLC v. Di Wu",
+          "date": "2025-03-11",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "martin-v-hawai-2024-09-20",
+          "name": "Martin v. Hawai",
+          "date": "2024-09-20",
           "amount": null,
           "severity": "unclassified"
         }
@@ -4240,41 +4352,6 @@
       ]
     },
     {
-      "state": "HI",
-      "count": 4,
-      "total": 200,
-      "cases": [
-        {
-          "id": "taft-v-thomas-et-al-2025-07-24",
-          "name": "Taft v. Thomas et al.",
-          "date": "2025-07-24",
-          "amount": 100,
-          "severity": "unclassified"
-        },
-        {
-          "id": "keaau-development-partnership-llc-v-lawrence-2025-05-15",
-          "name": "Keaau Development Partnership LLC v. Lawrence",
-          "date": "2025-05-15",
-          "amount": 100,
-          "severity": "unclassified"
-        },
-        {
-          "id": "210s-llc-v-di-wu-2025-03-11",
-          "name": "210S LLC v. Di Wu",
-          "date": "2025-03-11",
-          "amount": null,
-          "severity": "unclassified"
-        },
-        {
-          "id": "martin-v-hawai-2024-09-20",
-          "name": "Martin v. Hawai",
-          "date": "2024-09-20",
-          "amount": null,
-          "severity": "unclassified"
-        }
-      ]
-    },
-    {
       "state": "ID",
       "count": 3,
       "total": 0,
@@ -4387,6 +4464,27 @@
       ]
     },
     {
+      "state": "WY",
+      "count": 2,
+      "total": 5000,
+      "cases": [
+        {
+          "id": "angela-and-theodore-chagnon-v-holly-nelson-2025-07-02",
+          "name": "Angela and Theodore Chagnon v. Holly Nelson",
+          "date": "2025-07-02",
+          "amount": null,
+          "severity": "unclassified"
+        },
+        {
+          "id": "wadsworth-v-walmart-morgan-morgan-2025-02-24",
+          "name": "Wadsworth v. Walmart (Morgan & Morgan)",
+          "date": "2025-02-24",
+          "amount": 5000,
+          "severity": "unclassified"
+        }
+      ]
+    },
+    {
       "state": "AK",
       "count": 1,
       "total": 0,
@@ -4395,6 +4493,20 @@
           "id": "andre-legarza-v-northern-star-alaska-inc-2026-02-12",
           "name": "Andre Legarza v. Northern Star (Alaska), Inc.",
           "date": "2026-02-12",
+          "amount": null,
+          "severity": "unclassified"
+        }
+      ]
+    },
+    {
+      "state": "WV",
+      "count": 1,
+      "total": 0,
+      "cases": [
+        {
+          "id": "hanlon-v-parkersburg-city-2026-01-06",
+          "name": "Hanlon v. Parkersburg City",
+          "date": "2026-01-06",
           "amount": null,
           "severity": "unclassified"
         }
@@ -4410,20 +4522,6 @@
           "name": "Mattson & Dostal v. Rosebud Electric Cooperative et al.",
           "date": "2025-11-17",
           "amount": null,
-          "severity": "unclassified"
-        }
-      ]
-    },
-    {
-      "state": "WY",
-      "count": 1,
-      "total": 5000,
-      "cases": [
-        {
-          "id": "wadsworth-v-walmart-morgan-morgan-2025-02-24",
-          "name": "Wadsworth v. Walmart (Morgan & Morgan)",
-          "date": "2025-02-24",
-          "amount": 5000,
           "severity": "unclassified"
         }
       ]
@@ -4550,18 +4648,18 @@
     "LEAP legal software": 1
   },
   "by_circuit": {
-    "9th Circuit": 237,
-    "2nd Circuit": 84,
-    "5th Circuit": 80,
-    "7th Circuit": 74,
-    "11th Circuit": 74,
-    "10th Circuit": 70,
-    "6th Circuit": 66,
-    "3rd Circuit": 48,
-    "4th Circuit": 43,
-    "8th Circuit": 43,
-    "D.C. Circuit": 35,
-    "1st Circuit": 17
+    "9th Circuit": 246,
+    "2nd Circuit": 91,
+    "5th Circuit": 81,
+    "7th Circuit": 76,
+    "11th Circuit": 76,
+    "10th Circuit": 72,
+    "6th Circuit": 67,
+    "3rd Circuit": 49,
+    "4th Circuit": 46,
+    "8th Circuit": 44,
+    "D.C. Circuit": 43,
+    "1st Circuit": 18
   },
   "enriched_count": 0,
   "enrichment_coverage_pct": 0

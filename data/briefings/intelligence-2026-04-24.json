@@ -1,0 +1,717 @@
+{
+  "generated_at": "2026-04-24T19:20:30.399580Z",
+  "totals": {
+    "global_cases": 1348,
+    "us_cases": 932,
+    "intl_cases": 416,
+    "countries": 26,
+    "us_states": 50,
+    "us_monetary_total_usd": 1016551,
+    "global_monetary_total_usd": 2410982,
+    "enriched": 1348,
+    "enriched_pct": 100.0
+  },
+  "severity": {
+    "low": 882,
+    "medium": 282,
+    "high": 158,
+    "career-ending": 26
+  },
+  "us_severity": {
+    "low": 628,
+    "medium": 183,
+    "high": 102,
+    "career-ending": 19
+  },
+  "top_states": [
+    {
+      "state": "CA",
+      "name": "California",
+      "cases": 128,
+      "total_usd": 257553
+    },
+    {
+      "state": "NY",
+      "name": "New York",
+      "cases": 76,
+      "total_usd": 37001
+    },
+    {
+      "state": "TX",
+      "name": "Texas",
+      "cases": 54,
+      "total_usd": 8463
+    },
+    {
+      "state": "FL",
+      "name": "Florida",
+      "cases": 47,
+      "total_usd": 99019
+    },
+    {
+      "state": "DC",
+      "name": "District of Columbia",
+      "cases": 43,
+      "total_usd": 3251
+    },
+    {
+      "state": "IL",
+      "name": "Illinois",
+      "cases": 40,
+      "total_usd": 86603
+    },
+    {
+      "state": "MI",
+      "name": "Michigan",
+      "cases": 31,
+      "total_usd": 2086
+    },
+    {
+      "state": "WA",
+      "name": "Washington",
+      "cases": 30,
+      "total_usd": 6301
+    },
+    {
+      "state": "AZ",
+      "name": "Arizona",
+      "cases": 30,
+      "total_usd": 2
+    },
+    {
+      "state": "IN",
+      "name": "Indiana",
+      "cases": 25,
+      "total_usd": 15001
+    },
+    {
+      "state": "NV",
+      "name": "Nevada",
+      "cases": 25,
+      "total_usd": 5001
+    },
+    {
+      "state": "PA",
+      "name": "Pennsylvania",
+      "cases": 23,
+      "total_usd": 17500
+    },
+    {
+      "state": "CO",
+      "name": "Colorado",
+      "cases": 23,
+      "total_usd": 34000
+    },
+    {
+      "state": "OH",
+      "name": "Ohio",
+      "cases": 23,
+      "total_usd": 17001
+    },
+    {
+      "state": "OR",
+      "name": "Oregon",
+      "cases": 20,
+      "total_usd": 130244
+    }
+  ],
+  "top_states_by_money": [
+    {
+      "state": "CA",
+      "name": "California",
+      "total_usd": 257553,
+      "cases": 128
+    },
+    {
+      "state": "OR",
+      "name": "Oregon",
+      "total_usd": 130244,
+      "cases": 20
+    },
+    {
+      "state": "FL",
+      "name": "Florida",
+      "total_usd": 99019,
+      "cases": 47
+    },
+    {
+      "state": "AL",
+      "name": "Alabama",
+      "total_usd": 96200,
+      "cases": 12
+    },
+    {
+      "state": "IL",
+      "name": "Illinois",
+      "total_usd": 86603,
+      "cases": 40
+    },
+    {
+      "state": "NY",
+      "name": "New York",
+      "total_usd": 37001,
+      "cases": 76
+    },
+    {
+      "state": "CO",
+      "name": "Colorado",
+      "total_usd": 34000,
+      "cases": 23
+    },
+    {
+      "state": "OK",
+      "name": "Oklahoma",
+      "total_usd": 29400,
+      "cases": 16
+    },
+    {
+      "state": "MS",
+      "name": "Mississippi",
+      "total_usd": 25884,
+      "cases": 16
+    },
+    {
+      "state": "PR",
+      "name": "Puerto Rico",
+      "total_usd": 25493,
+      "cases": 4
+    }
+  ],
+  "top_countries": [
+    {
+      "code": "US",
+      "name": "United States",
+      "cases": 932
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "cases": 143
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "cases": 67
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "cases": 52
+    },
+    {
+      "code": "IL",
+      "name": "Israel",
+      "cases": 47
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "cases": 11
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "cases": 10
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "cases": 8
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "cases": 7
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "cases": 7
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "cases": 6
+    },
+    {
+      "code": "NZ",
+      "name": "New Zealand",
+      "cases": 6
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "cases": 6
+    },
+    {
+      "code": "AR",
+      "name": "Argentina",
+      "cases": 5
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "cases": 4
+    }
+  ],
+  "by_year": {
+    "2023": 15,
+    "2024": 58,
+    "2025": 790,
+    "2026": 485
+  },
+  "by_year_avg_amount": {
+    "2026": 17802,
+    "2025": 8362,
+    "2024": 3750,
+    "2023": 3802
+  },
+  "top_tools": {
+    "AI (implied, unspecified)": 888,
+    "Unidentified": 281,
+    "ChatGPT / OpenAI": 102,
+    "Unspecified AI": 11,
+    "Microsoft Copilot": 9,
+    "Google Gemini": 6,
+    "Claude / Anthropic": 6,
+    "CoCounsel (Westlaw)": 5,
+    "Lexis+ AI": 4,
+    "Perplexity": 3,
+    "Grok": 3,
+    "Centient AI": 1,
+    "NotebookLM; vLex; Paxton AI": 1,
+    "Microsoft Co-Pilot": 1,
+    "Bloomberg Law": 1
+  },
+  "top_gaps": {
+    "citation-verification": 707,
+    "audit-trail": 325,
+    "supervision-protocol": 203,
+    "approved-tools-list": 123,
+    "attorney-training": 101,
+    "paid-tool-verification": 68,
+    "incident-response": 60,
+    "written-ai-policy": 51,
+    "ai-disclosure-protocol": 39,
+    "consumer-tool": 5
+  },
+  "top_us_monetary": [
+    {
+      "rank": 1,
+      "case": "Couvrette v. Wisnovsky",
+      "court": "Oregon",
+      "state": "OR",
+      "amount": 109700,
+      "severity": "career-ending",
+      "ai_tool": "Unidentified",
+      "date": "2026-03-23",
+      "source_url": ""
+    },
+    {
+      "rank": 2,
+      "case": "ByoPlanet International v. Johansson and Gilstrap",
+      "court": "S.D. Florida",
+      "state": "FL",
+      "amount": 85567,
+      "severity": "career-ending",
+      "ai_tool": "ChatGPT / OpenAI",
+      "date": "2025-07-15",
+      "source_url": ""
+    },
+    {
+      "rank": 3,
+      "case": "Minjie Zheng v. ICANN",
+      "court": "C.D. California",
+      "state": "CA",
+      "amount": 66129,
+      "severity": "low",
+      "ai_tool": "AI (implied, unspecified)",
+      "date": "2025-12-23",
+      "source_url": "https://damiencharlotin.comRobert Freund"
+    },
+    {
+      "rank": 4,
+      "case": "Howell Management Services, LLC v. Vashisht-Rota",
+      "court": "CA California",
+      "state": "CA",
+      "amount": 64235,
+      "severity": "low",
+      "ai_tool": "Unidentified",
+      "date": "2025-12-15",
+      "source_url": "https://damiencharlotin.comJesse Schaefer"
+    },
+    {
+      "rank": 5,
+      "case": "Shana Jordan, et al. v. Chicago Housing Authority et al.",
+      "court": "CC Illinois",
+      "state": "IL",
+      "amount": 59500,
+      "severity": "high",
+      "ai_tool": "ChatGPT / OpenAI",
+      "date": "2025-12-05",
+      "source_url": ""
+    },
+    {
+      "rank": 6,
+      "case": "Heimkes v. Fairhope Motorcoach Resort Condominium Owners Association, Inc.",
+      "court": "S.D. Alabama",
+      "state": "AL",
+      "amount": 55597,
+      "severity": "high",
+      "ai_tool": "CoCounsel (Westlaw)",
+      "date": "2026-03-31",
+      "source_url": ""
+    },
+    {
+      "rank": 7,
+      "case": "Joel A. Rivera v. Triad Properties Corporation, et al.",
+      "court": "N.D. Alabama",
+      "state": "AL",
+      "amount": 35603,
+      "severity": "career-ending",
+      "ai_tool": "ChatGPT / OpenAI",
+      "date": "2026-03-31",
+      "source_url": "https://reason.com/volokh/2026/04/07/ai-hallucinated-cases-lead-to-47k-sanctions/"
+    },
+    {
+      "rank": 8,
+      "case": "Lacey v. State Farm General Insurance",
+      "court": "C.D. Cal",
+      "state": "CA",
+      "amount": 31100,
+      "severity": "high",
+      "ai_tool": "Google Gemini",
+      "date": "2025-05-06",
+      "source_url": "https://www.damiencharlotin.com/documents/311/Lacey_v._State_Farm_General_Insurances_Co._D._Cal._May_6_2025.pdf"
+    },
+    {
+      "rank": 9,
+      "case": "Whiting v. City of Athens, Tenn.",
+      "court": "CA Sixth Circuit",
+      "state": "CA",
+      "amount": 30000,
+      "severity": "high",
+      "ai_tool": "AI (implied, unspecified)",
+      "date": "2026-03-13",
+      "source_url": "https://reason.com/volokh/2026/03/14/lawyers-citing-nonexistent-cases-ordered-to-pay-opponents-attorney-fees-double-costs-15k-fine/"
+    }
+  ],
+  "career_ending": [
+    {
+      "case": "Couvrette v. Wisnovsky",
+      "court": "Oregon",
+      "state": "OR",
+      "country": "US",
+      "amount": 109700,
+      "date": "2026-03-23",
+      "ai_tool": "Unidentified",
+      "lesson": "Hallucinated briefs can lose the case — $109K in sanctions and dismissal with prejudice is the worst-case AI outcome.",
+      "summary": "Order to show cause is here. Final judgment on costs is here. Final Opinion and Order is here. (Defendants prevailed partly because brief full of hallucinated material had been struck.)",
+      "source_url": ""
+    },
+    {
+      "case": "ByoPlanet International v. Johansson and Gilstrap",
+      "court": "S.D. Florida",
+      "state": "FL",
+      "country": "US",
+      "amount": 85567,
+      "date": "2025-07-15",
+      "ai_tool": "ChatGPT / OpenAI",
+      "lesson": "If confronted about AI use, disclose immediately and never blame the paralegal; denial escalates fines into bar referrals and dismissals.",
+      "summary": "In May, the court asked Counsel to show cause why they should not be sanctioned for filing briefs with hallucinations - especially since they continued filing hallucinated submissions after being warned about it.In their Answer, Counsel revealed that \"specific citations and quotes in question were inadvertently derived from internal draft text prepared using generative AI research tools designed t",
+      "source_url": ""
+    },
+    {
+      "case": "Mahala Association (מהל\"ה) v. Clalit Health Services et al.",
+      "court": "Israel",
+      "state": "",
+      "country": "UNKNOWN",
+      "amount": 50000,
+      "date": "2025-05-26",
+      "ai_tool": "Tachdin.AI",
+      "lesson": "Paid 'Takdin AI' tool did not save counsel from 50,000 ILS fine, stricken class action, and personal disqualification; vetted tools demand human verification.",
+      "summary": "AI UseCounsel admitted that incorrect citations arose from reliance on an AI-enabled database called “Takdin AI.” The tool generated incorrect references to multiple Supreme Court decisions and falsely cited them as supporting key propositions. Counsel claimed the errors stemmed from time pressure and good faith, but the Court found the explanation inadequate.Hallucination DetailsAt least 8 citati",
+      "source_url": ""
+    },
+    {
+      "case": "Joel A. Rivera v. Triad Properties Corporation, et al.",
+      "court": "N.D. Alabama",
+      "state": "AL",
+      "country": "US",
+      "amount": 35603,
+      "date": "2026-03-31",
+      "ai_tool": "ChatGPT / OpenAI",
+      "lesson": "ChatGPT is not an approved research tool; using it without verification triggers disqualification, bar referral, and $35K in costs.",
+      "summary": "",
+      "source_url": "https://reason.com/volokh/2026/04/07/ai-hallucinated-cases-lead-to-47k-sanctions/"
+    },
+    {
+      "case": "State v. Coleman",
+      "court": "Ohio CA (11th)",
+      "state": "OH",
+      "country": "US",
+      "amount": 2000,
+      "date": "2026-03-20",
+      "ai_tool": "ChatGPT / OpenAI",
+      "lesson": "Never let non-attorney staff draft filings with public AI; attorney owns every word and concealment escalates sanctions to disqualification plus bar referral.",
+      "summary": "\"{¶133} This case illustrates the peril. An attorney who, by his own counsel’s admission, was sophisticated in his understanding of AI tools permitted a non-attorney staff member to use a public generative AI platform to prepare an appellate filing. The AI tool fabricated transcript quotations—attributing specific, inflammatory statements to a real prosecutor that were never spoken. The attorney f",
+      "source_url": ""
+    },
+    {
+      "case": "United States v. Farris",
+      "court": "CA 6th Cir.",
+      "state": "CA",
+      "country": "US",
+      "amount": null,
+      "date": "2026-04-03",
+      "ai_tool": "CoCounsel (Westlaw)",
+      "lesson": "Westlaw CoCounsel output is not self-verifying; a paid tool's pedigree is no defense when the Sixth Circuit disqualifies counsel and publishes the opinion.",
+      "summary": "",
+      "source_url": "https://damiencharlotin.comRobert Freund"
+    },
+    {
+      "case": "Prososki v. Regan",
+      "court": "Nebraska SC",
+      "state": "NE",
+      "country": "US",
+      "amount": null,
+      "date": "2026-03-20",
+      "ai_tool": "AI (implied, unspecified)",
+      "lesson": "Fabricated citations in a state-supreme-court brief end appeals and trigger bar referral; verify every cite against the reporter.",
+      "summary": "",
+      "source_url": ""
+    },
+    {
+      "case": "Oberoi v. Douglas",
+      "court": "CA Victoria",
+      "state": "CA",
+      "country": "US",
+      "amount": null,
+      "date": "2026-03-05",
+      "ai_tool": "AI (implied, unspecified)",
+      "lesson": "Seven fake cases plus twelve fabricated quotes equals bar referral — institute mandatory two-step citation verification before any appellate filing.",
+      "summary": "",
+      "source_url": ""
+    },
+    {
+      "case": "State v. Garrett",
+      "court": "CC Wisconsin",
+      "state": "WI",
+      "country": "US",
+      "amount": null,
+      "date": "2026-02-06",
+      "ai_tool": "AI (implied, unspecified)",
+      "lesson": "A prosecutor who hides AI use and files fake citations loses the case; mandate written AI disclosure on every criminal filing.",
+      "summary": "From the docket record: \"Court sanctions DA Solis by striking the State's Response for failure to disclose AI, using hallucinated and false citations and for admitting failure to disclose AI. Court grants Motion to Dismiss for defective bind-over, in its entirety, without prejudice. \"",
+      "source_url": "https://wcca.wicourts.gov/caseDetail.html?caseNo=2023CF001060&countyNo=30&index=0&mode=details"
+    },
+    {
+      "case": "Flycatcher v. Affable Avenue",
+      "court": "S.D. New York",
+      "state": "NY",
+      "country": "US",
+      "amount": null,
+      "date": "2026-02-05",
+      "ai_tool": "NotebookLM; vLex; Paxton AI",
+      "lesson": "Paid legal-AI tools (vLex, Paxton, NotebookLM) do not cure verification duty; bad-faith denial converts sanctions into default judgment.",
+      "summary": "Counsel Steven A. Feldman repeatedly filed submissions containing AI-generated nonexistent case citations and misattributed quotations. Opposing counsel flagged numerous errors; the Court found fabricated citations and false quotes, concluded counsel acted in bad faith or with conscious avoidance, struck the filings, and entered default judgment against counsel's client Affable Avenue LLC. The Cou",
+      "source_url": ""
+    },
+    {
+      "case": "Mavy v. Commissioner of Social Security Administration",
+      "court": "D. Arizona",
+      "state": "AZ",
+      "country": "US",
+      "amount": null,
+      "date": "2026-01-13",
+      "ai_tool": "AI (implied, unspecified)",
+      "lesson": "Rule 11 violations with fake cases trigger pro hac vice revocation and multi-state bar referrals; no tool pedigree saves you.",
+      "summary": "In an earlier order, following Show Cause proceedings, a magistrate determined that the counsel violated Rule 11(b)(2) by failing to verify the accuracy of the citations and imposed several sanctions:\"The pro hac vice status of Counsel shall be revoked and Counsel will be removed from this case;Plaintiff’s Opening Brief shall be stricken;Counsel will be ordered to promptly serve a copy of this Ord",
+      "source_url": "https://damiencharlotin.comRobert Freund"
+    },
+    {
+      "case": "Washburn v. Houston",
+      "court": "Arizona CA",
+      "state": "AZ",
+      "country": "US",
+      "amount": null,
+      "date": "2026-01-02",
+      "ai_tool": "AI (implied, unspecified)",
+      "lesson": "Fabricating transcript quotes — not just cases — guarantees a bar referral; assign a second reviewer to spot-check every record citation.",
+      "summary": "Appellant Father's counsel submitted an opening brief containing misleading/inaccurate legal citations, mischaracterized case law, fabricated quotations attributed to Owen v. Blackhawk, and false quotations purportedly from the amended decree and hearing transcripts. The appellate court identified these errors, concluded they supported a potential ethics referral, and forwarded the decision to the",
+      "source_url": ""
+    },
+    {
+      "case": "Billups v. Louisville Municipal School District",
+      "court": "N.D. Mississippi",
+      "state": "MS",
+      "country": "US",
+      "amount": null,
+      "date": "2025-12-19",
+      "ai_tool": "Grok",
+      "lesson": "CLE alone won't save you — ban consumer chatbots like Grok and require audit trails for every AI-assisted filing.",
+      "summary": "The court also identified five other cases in which the same firm or attorney confessed having misused AI. This despite the attorneys attending CLE training",
+      "source_url": ""
+    },
+    {
+      "case": "Luis Alberto Contreras Fandinoe",
+      "court": "Tribunal Superior de Bogotá",
+      "state": "",
+      "country": "CO",
+      "amount": null,
+      "date": "2025-12-02",
+      "ai_tool": "AI (implied, unspecified)",
+      "lesson": "Colombian appellate courts are quashing judgments and referring judges to discipline for AI-fabricated authorities and doctrinal works — judicial conduct now in the crosshairs.",
+      "summary": "",
+      "source_url": "https://damiencharlotin.comAndrés Vanegas Canosa"
+    },
+    {
+      "case": "Elías Axel Roberto Rafael s/ Abuso sexual con acceso carnal",
+      "court": "CSJ de Tucumán",
+      "state": "",
+      "country": "AR",
+      "amount": null,
+      "date": "2025-11-28",
+      "ai_tool": "AI (implied, unspecified)",
+      "lesson": "Uncritical AI use in a criminal defense brief can cost you the case and your bar standing — require human-supervised review.",
+      "summary": "\"No puede soslayarse, como hecho de gravedad institucional, que la defensa técnica del imputado - en el momento procesal que constituye la última instancia de revisión extraordinaria local- haya presentado un escrito elaborado posiblemente mediante el uso de herramientas de inteligencia artificial, u obtenidos a través de medios no confiables y fidedignos sin ejercer el más mínimo control sobre la",
+      "source_url": ""
+    },
+    {
+      "case": "In re Jackson Hospital & Clinic, Inc., et al.",
+      "court": "M.D. Alabama (Bankruptcy)",
+      "state": "AL",
+      "country": "US",
+      "amount": null,
+      "date": "2025-11-20",
+      "ai_tool": "Unidentified",
+      "lesson": "Revoking pro hac vice and notifying the attorney's home bar is now standard — pervasive fabrications are treated as competence failures.",
+      "summary": "Show Cause Order here. Law firm explained what happened here.In the ultimate order, the court noted that \"In terms of competence, the threat to attorneys using generative artificial intelligence platforms powered by large language models is two-fold. First, danger exists that the attorney does not understand how the technology functions, believing that the output is real instead of “realistic-look",
+      "source_url": ""
+    },
+    {
+      "case": "In re: Loletha Hale, Esq. (Boston v. Williams)",
+      "court": "N.D. Georgia (Atlanta Division)",
+      "state": "GA",
+      "country": "US",
+      "amount": null,
+      "date": "2025-10-28",
+      "ai_tool": "AI (implied, unspecified)",
+      "lesson": "A five-year order to attach the sanction opinion to every new case is a scarlet-letter sanction; one fabrication can define a career.",
+      "summary": "Party later filed for reconsideration, arguing that the judge had been biased; this failed (see here).",
+      "source_url": ""
+    },
+    {
+      "case": "Provincia del Chubut v. PRA",
+      "court": "Chubut",
+      "state": "",
+      "country": "AR",
+      "amount": null,
+      "date": "2025-10-15",
+      "ai_tool": "AI (implied, unspecified)",
+      "lesson": "A judge pasting ChatGPT output into a ruling got the judgment annulled — disclosure and traceability are non-negotiable.",
+      "summary": "(Not an hallucination per se, but worth adding to the database anyway.)",
+      "source_url": ""
+    },
+    {
+      "case": "Gloriose Ndaryiyumvire v Birmingham City University",
+      "court": "County Court (Birmingham)",
+      "state": "",
+      "country": "GB",
+      "amount": null,
+      "date": "2025-10-14",
+      "ai_tool": "LEAP legal software",
+      "lesson": "LEAP and other paid legal AI will fabricate authority — wasted-costs plus bar referral follow automatically.",
+      "summary": "",
+      "source_url": "https://damiencharlotin.comNatural & Artificial Intelligence in Law"
+    },
+    {
+      "case": "Johnson v. Dunn",
+      "court": "N.D. Alabama",
+      "state": "AL",
+      "country": "US",
+      "amount": null,
+      "date": "2025-07-23",
+      "ai_tool": "ChatGPT / OpenAI",
+      "lesson": "Apologies do not cure AI fabrications; ChatGPT citations get you disqualified and named in a published opinion.",
+      "summary": "In their Response, Counsel confessed to the use of AI tools in their Response to the OSC.(As recounted by Above the Law, the law firm involved quickly deleted a recent post they made about using AI.)In the Order, the judge prefaced her findings by noting that \"Even in cases like this one, where lawyers who cite AI hallucinations accept responsibility and apologize profusely, much damage is done. T",
+      "source_url": ""
+    },
+    {
+      "case": "In re Thomas Grant Neusom",
+      "court": "M.D. Florida",
+      "state": "FL",
+      "country": "US",
+      "amount": null,
+      "date": "2025-05-08",
+      "ai_tool": "Unidentified",
+      "lesson": "One-year federal suspension follows when attorneys hedge on AI use and ignore court orders to produce cited cases.",
+      "summary": "(Grievance Committee Report available here.)AI UseNeusom told the grievance committee that he “may have used artificial intelligence” in preparing filings, and that any hallucinated cases were not deliberately fabricated but may have come from AI tools. The filings in question included a notice of removal and a motion for summary judgment. The judge later noted a pattern of citations inconsistent ",
+      "source_url": "https://damiencharlotin.comNatural & Artificial Intelligence in Law"
+    },
+    {
+      "case": "Bevins v. Colgate-Palmolive Co.",
+      "court": "E.D. Pa.",
+      "state": "PA",
+      "country": "US",
+      "amount": null,
+      "date": "2025-04-10",
+      "ai_tool": "Unidentified",
+      "lesson": "Ignoring a standing AI order plus refusing to explain cites gets your appearance struck and your bar notified; always comply and disclose.",
+      "summary": "AI UseCounsel filed opposition briefs citing two nonexistent cases. The court suspected generative AI use based on \"hallucination\" patterns but Counsel neither admitted nor explained the citations satisfactorily. Failure to comply with a standing AI order aggravated sanctions.Hallucination DetailsTwo fake cases cited. Citation numbers and Westlaw references pointed to irrelevant or unrelated cases",
+      "source_url": "https://www.damiencharlotin.com/documents/244/Bevins_v._Colgate_Palmolive_US_DC_Eastern_Penn._April_10_2025.pdf"
+    },
+    {
+      "case": "Mavundla v. MEC",
+      "court": "High Court",
+      "state": "",
+      "country": "ZA",
+      "amount": null,
+      "date": "2025-01-08",
+      "ai_tool": "AI (implied, unspecified)",
+      "lesson": "Never delegate citation verification to juniors without review — supervising counsel pays de bonis propriis when fakes slip through.",
+      "summary": "AI UseThe judgment does not explicitly confirm that generative AI was used, but the judge strongly suspects ChatGPT or a similar tool was the source. The judge even ran prompts into ChatGPT and confirmed that the tool responded with fabricated support for the same fake cases used in the submission. Counsel blamed overwork and delegation to a candidate attorney (Ms. Farouk), who denied AI use but g",
+      "source_url": ""
+    },
+    {
+      "case": "In re Dayal",
+      "court": "",
+      "state": "",
+      "country": "AU",
+      "amount": null,
+      "date": "2024-08-27",
+      "ai_tool": "LEAP",
+      "lesson": "LEAP's embedded AI module is not a research tool — two-year supervision and a ban on solo practice followed one unverified list.",
+      "summary": "Counsel admitted the list of authorities and accompanying summaries were generated by an AI research module embedded in his legal practice software. He stated he did not verify the content before submitting it. The judge found that neither Counsel nor any other legal practitioner at his firm had checked the validity of the generated output.The court accepted Counsel’s unconditional apology, noted ",
+      "source_url": ""
+    },
+    {
+      "case": "Grant v. City of Long Beach",
+      "court": "9th Cir. CA",
+      "state": "CA",
+      "country": "US",
+      "amount": null,
+      "date": "2024-03-22",
+      "ai_tool": "Unidentified",
+      "lesson": "A Ninth Circuit published opinion striking your brief ends appellate careers — second-attorney verification is non-negotiable before filing.",
+      "summary": "AI UseThe appellants’ lawyer submitted an opening brief riddled with hallucinated cases and mischaracterizations. The court did not directly investigate the technological origin but cited the systematic errors as consistent with known AI-generated hallucination patterns.Hallucination DetailsTwo cited cases were completely nonexistent. Additionally, a dozen cited decisions were badly misrepresented",
+      "source_url": "https://www.damiencharlotin.com/documents/236/Grant_v._City_of_Long_Beach_9th_C._CA_March_22_2024.pdf"
+    },
+    {
+      "case": "Zachariah Crabill Disciplinary Case",
+      "court": "Colorado SC",
+      "state": "CO",
+      "country": "US",
+      "amount": null,
+      "date": "2023-11-21",
+      "ai_tool": "ChatGPT / OpenAI",
+      "lesson": "If AI citations are challenged, disclose immediately and withdraw the filing — blaming staff turns negligence into suspension.",
+      "summary": "AI UseAttorney Zachariah C. Crabill, relatively new to civil practice, used ChatGPT to research case law for a motion to set aside judgment, a task he was unfamiliar with and felt pressured to complete quickly.Hallucination DetailsCrabill included incorrect or fictitious case citations provided by ChatGPT in the motion without reading or verifying them. He realized the errors (\"garbage\" cases, per",
+      "source_url": "https://www.law360.com/pulse/articles/1770085/attachments/1"
+    }
+  ],
+  "paid_tool_cases": 12,
+  "denial_cases": 33,
+  "prose_cases": 802,
+  "attorney_cases": 546
+}

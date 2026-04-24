@@ -182,23 +182,45 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
           const target = event.target as Element | null;
           if (target && target.tagName === "path") { hideTip(); }
         });
+        // Clicking empty SVG background (not on pin, not on state path) clears focus
+        svg.on("click", (event: MouseEvent) => {
+          const target = event.target as Element | null;
+          // If direct click on the svg element itself (no path, no pin) → reset
+          if (target && (target.tagName === "svg" || target.id === "smv2-g-zoom" || target.id === "smv2-g-states" || target.id === "smv2-g-pins")) {
+            setFocusState(null);
+          }
+        });
 
         gStates.selectAll("*").remove();
+        // Compute heat tiers from state case counts
+        const stateCount = (code: string) => SX.byState.find((s) => s.state === code)?.count || 0;
+        const heatTier = (n: number) => {
+          if (n === 0) return 0;
+          if (n <= 3) return 1;
+          if (n <= 10) return 2;
+          if (n <= 30) return 3;
+          return 4; // 30+
+        };
         for (const feat of statesFeat.features) {
           const fips = String((feat as unknown as { id: string }).id);
           const code = FIPS_TO_STATE[fips];
-          const hasCases = !!SX.byState.find((s) => s.state === code);
+          const n = code ? stateCount(code) : 0;
+          const tier = heatTier(n);
           gStates
             .append("path")
             .attr("d", pathGen(feat) || "")
-            .attr("class", "smv2-state" + (hasCases ? " has-cases" : ""))
+            .attr("class", "smv2-state" + (n > 0 ? ` has-cases heat-${tier}` : ""))
             .attr("data-state", code || "")
+            .attr("data-count", String(n))
             .on("click", (event: MouseEvent) => {
               event.stopPropagation();
-              if (hasCases && code) {
+              if (n > 0 && code) {
                 // In-map: focus the rail on this state's cases
                 setFocusState(code);
                 setRailTab("cases");
+              } else {
+                // Clicking an empty state = clear focus
+                setFocusState(null);
               }
             });
 
@@ -210,7 +232,7 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
                 .append("text")
                 .attr("x", lx)
                 .attr("y", ly)
-                .attr("class", "smv2-state-label" + (hasCases ? " has-cases" : ""))
+                .attr("class", "smv2-state-label" + (n > 0 ? " has-cases" : ""))
                 .attr("text-anchor", "middle")
                 .attr("dominant-baseline", "middle")
                 .text(code)
@@ -1059,7 +1081,12 @@ const CSS = `
   stroke: rgba(0,102,255,0.25);
   cursor: pointer;
 }
-.smv2-state.hi { fill: rgba(0,102,255,0.14); stroke: rgba(0,102,255,0.5); }
+/* Heat tiers — darker = more cases */
+.smv2-state.heat-1 { fill: rgba(0,102,255,0.05); stroke: rgba(0,102,255,0.2); }
+.smv2-state.heat-2 { fill: rgba(0,102,255,0.10); stroke: rgba(0,102,255,0.35); }
+.smv2-state.heat-3 { fill: rgba(0,102,255,0.16); stroke: rgba(0,102,255,0.5); }
+.smv2-state.heat-4 { fill: rgba(0,102,255,0.24); stroke: rgba(0,102,255,0.7); }
+.smv2-state.hi { fill: rgba(0,102,255,0.35); stroke: rgba(0,102,255,0.85); }
 .smv2-state.focused { fill: rgba(0,102,255,0.2); stroke: var(--blue); stroke-width: 1; }
 
 /* State abbreviation labels — hidden by default, toggled via class on svg */

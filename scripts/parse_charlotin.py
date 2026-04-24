@@ -155,26 +155,61 @@ def fmt_amount(amt):
 
 import re as _re
 
-# Foreign-court indicators — if present, abort US inference
+# Foreign-court indicators — matched at word boundaries to avoid "Cour" ⊂ "Court" collisions
 _FOREIGN_MARKERS = (
     "Alberta", "Ontario", "Québec", "Quebec", "British Columbia", "Nova Scotia",
-    "Manitoba", "Saskatchewan", "Newfoundland", "New Brunswick",  # Canada provinces
+    "Manitoba", "Saskatchewan", "Newfoundland", "New Brunswick",
     "Tucumán", "Córdoba", "Argentina", "Buenos Aires",
-    "NSW", "Victoria", "Queensland", "Tasmania", "South Australia",
-    "UK", "United Kingdom", "England", "Wales", "Scotland", "Ireland",
-    "Tribunal", "Bundesgericht", "Conseil", "Cour",
+    "NSW", "Queensland", "Tasmania", "South Australia",
+    "United Kingdom", "England", "Wales", "Scotland", "Ireland",
+    "Bundesgericht", "Conseil",
     "Jakarta", "Manila", "Seoul", "Tokyo", "Bogotá", "Medellín",
-    "de Tucumán", "de Córdoba", "BCSC", "SCC", "ONSC", "ONCA", "FCA",
+    "BCSC", "SCC", "ONSC", "ONCA",
 )
+# Markers where plain substring matching is safe (no common-English overlap)
+_FOREIGN_SUB = ("Tucumán", "Córdoba", "Bogotá", "Medellín", "Bundesgericht")
 
 def _infer_state_from_court(court: str) -> str | None:
     """Conservative US-state extraction from court names. Returns None if foreign."""
     if not court:
         return None
-    # Bail if the court string looks international
-    for marker in _FOREIGN_MARKERS:
-        if marker in court:
+    # Normalize Unicode (turns Hawai'i → Hawaii, Córdoba → Cordoba, etc.)
+    import unicodedata
+    court_ascii = unicodedata.normalize("NFKD", court).encode("ascii", "ignore").decode("ascii")
+    # Bail on unambiguous non-ASCII foreign markers (substring OK)
+    for sub in _FOREIGN_SUB:
+        if sub in court:
             return None
+    # Bail on word-boundary-matched foreign markers
+    for marker in _FOREIGN_MARKERS:
+        if _re.search(rf"\b{_re.escape(marker)}\b", court) or _re.search(rf"\b{_re.escape(marker)}\b", court_ascii):
+            return None
+    # Common abbreviation patterns that weren't in FED_COURT_STATE_MAP
+    QUICK_PATS = {
+        "C.D. Cal": "CA", "N.D. Cal": "CA", "S.D. Cal": "CA", "E.D. Cal": "CA",
+        "Tex. App": "TX", "Tex. Sup": "TX", "Tex Ct": "TX",
+        "W.V.": "WV", "W. Va.": "WV",
+        "Kings County": "NY",  # NYC borough
+        "Ill. App": "IL", "Ill. Sup": "IL",
+        "Fla. App": "FL", "Fla. Sup": "FL",
+        "N.Y.S.": "NY",
+        "Mass. Sup": "MA", "Mass. App": "MA",
+        "Pa. Sup": "PA", "Pa. Commw": "PA",
+        "Ohio App": "OH", "Ohio Sup": "OH",
+        "La. App": "LA",
+        "Mich. Ct": "MI", "Mich. App": "MI",
+        "Wash. Ct": "WA", "Wash. App": "WA",
+        "Ga. App": "GA", "Ga. Sup": "GA",
+        "Colo. App": "CO", "Colo. Sup": "CO",
+        "Minn. App": "MN",
+        "N.J. Super": "NJ",
+        "Ariz. App": "AZ",
+        "LUBA (Oregon)": "OR", "LUBA": "OR",
+        "Vt. Supr": "VT", "Vt. Env": "VT",
+    }
+    for pat, st in QUICK_PATS.items():
+        if pat in court or pat in court_ascii:
+            return st
     # Federal-ish catch-alls → DC
     FED_KEYWORDS = ("GAO", "ASBCA", "CBCA", "PSBCA", "Court of Federal Claims", "J.P.M.L.",
                      "BVA", "PTAB", "IPR", "Merit Systems Protection Board", "Armed Services Board",
@@ -184,7 +219,7 @@ def _infer_state_from_court(court: str) -> str | None:
             return "DC"
     # Fed district map
     for pat, st in FED_COURT_STATE_MAP.items():
-        if pat in court:
+        if pat in court or pat in court_ascii:
             return st
     # Multi-word US state names (longest first — "New York" before "York")
     MULTI_WORD = sorted(
@@ -192,12 +227,18 @@ def _infer_state_from_court(court: str) -> str | None:
         key=lambda x: -len(x),
     )
     for name in MULTI_WORD:
-        if name in court:
+        if name in court or name in court_ascii:
             return US_STATE_NAME_TO_CODE[name]
     # Single-word state names (case-sensitive, word-boundary)
     single_names = [n for n in US_STATE_NAME_TO_CODE.keys() if " " not in n]
     for name in single_names:
-        if _re.search(rf"\b{_re.escape(name)}\b", court):
+        if _re.search(rf"\b{_re.escape(name)}\b", court_ascii):
+            return US_STATE_NAME_TO_CODE[name]
+    # Stuck-together patterns like "CATennessee" — split CamelCase
+    m = _re.match(r"^(CA|SC|AC|CC)([A-Z][a-z]+)", court.strip())
+    if m:
+        name = m.group(2)
+        if name in US_STATE_NAME_TO_CODE:
             return US_STATE_NAME_TO_CODE[name]
     # 2-letter UPPERCASE state code at word boundary (e.g. "D. CA", "N.D. TX")
     # Only match strict uppercase to avoid "de" → DE

@@ -28,7 +28,8 @@ US_STATE_NAME_TO_CODE = {
     "Pennsylvania":"PA","Rhode Island":"RI","South Carolina":"SC","South Dakota":"SD",
     "Tennessee":"TN","Texas":"TX","Utah":"UT","Vermont":"VT","Virginia":"VA",
     "Washington":"WA","West Virginia":"WV","Wisconsin":"WI","Wyoming":"WY",
-    "Puerto Rico":"PR",
+    "Puerto Rico":"PR","Guam":"GU","Northern Mariana Islands":"MP",
+    "U.S. Virgin Islands":"VI","American Samoa":"AS",
 }
 US_CODE_SET = set(US_STATE_NAME_TO_CODE.values()) | {"USA"}
 
@@ -187,12 +188,13 @@ def _infer_state_from_court(court: str) -> str | None:
     # Common abbreviation patterns that weren't in FED_COURT_STATE_MAP
     QUICK_PATS = {
         "C.D. Cal": "CA", "N.D. Cal": "CA", "S.D. Cal": "CA", "E.D. Cal": "CA",
+        "Cal.": "CA",
         "Tex. App": "TX", "Tex. Sup": "TX", "Tex Ct": "TX",
-        "W.V.": "WV", "W. Va.": "WV",
+        "W.V.": "WV", "W. Va.": "WV", "W.Va.": "WV",
         "Kings County": "NY",  # NYC borough
         "Ill. App": "IL", "Ill. Sup": "IL",
         "Fla. App": "FL", "Fla. Sup": "FL",
-        "N.Y.S.": "NY",
+        "N.Y.S.": "NY", "N.Y. Civil": "NY", "SDNY": "NY",
         "Mass. Sup": "MA", "Mass. App": "MA",
         "Pa. Sup": "PA", "Pa. Commw": "PA",
         "Ohio App": "OH", "Ohio Sup": "OH",
@@ -201,11 +203,24 @@ def _infer_state_from_court(court: str) -> str | None:
         "Wash. Ct": "WA", "Wash. App": "WA",
         "Ga. App": "GA", "Ga. Sup": "GA",
         "Colo. App": "CO", "Colo. Sup": "CO",
-        "Minn. App": "MN",
+        "Minn. App": "MN", "Minnesotta": "MN",  # typo variant
         "N.J. Super": "NJ",
         "Ariz. App": "AZ",
         "LUBA (Oregon)": "OR", "LUBA": "OR",
         "Vt. Supr": "VT", "Vt. Env": "VT",
+        # Federal territory + specialty federal tribunals → DC
+        "Tax Court": "DC", "US Tax Court": "DC", "United States Tax Court": "DC",
+        "D.C. D.C.": "DC", "D.C.": "DC", "OCAHO": "DC",
+        "Copyright Claims Board": "DC", "Fed. claims court": "DC",
+        # Typos / compact variants
+        "E.D. N. Carolina": "NC", "N. Carolina": "NC", "N.C.": "NC", "Westner N.C.": "NC",
+        "Admin Law Court, S.C.": "SC",
+        # Territories + tribal
+        "Northern Mariana Islands": "MP", "D. Guam": "GU", "Superior Court of Guam": "GU",
+        "Ho-Chunk Nation": "WI",  # tribal court, sovereign entity in WI
+        # Edge cases with punctuation that NFKD doesn't strip
+        "Hawai'i": "HI", "Hawai": "HI",
+        # 3d Dist alone is ambiguous — skip. NAF UDRP is non-US arbitration — skip.
     }
     for pat, st in QUICK_PATS.items():
         if pat in court or pat in court_ascii:

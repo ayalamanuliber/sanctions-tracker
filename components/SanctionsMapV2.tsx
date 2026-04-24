@@ -548,15 +548,15 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
           ))}
         </div>
 
-        {/* Conditional: US map OR Worldwide teaser */}
-        {scope === "world" ? (
-          <div
-            style={{
-              background: "var(--bg-card)",
-              border: "1px solid var(--border)",
-              padding: "56px 48px",
-            }}
-          >
+        {/* US map + Worldwide teaser — both mounted (display-toggled) so d3 keeps state when toggling */}
+        <div
+          style={{
+            display: scope === "world" ? "block" : "none",
+            background: "var(--bg-card)",
+            border: "1px solid var(--border)",
+            padding: "56px 48px",
+          }}
+        >
             <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "48px", alignItems: "center" }} className="smv2-world-grid">
               <div>
                 <div
@@ -678,9 +678,8 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
             <style>{`
               @media (max-width: 880px) { .smv2-world-grid { grid-template-columns: 1fr !important; } }
             `}</style>
-          </div>
-        ) : (
-          <div className="smv2-card">
+        </div>
+        <div className="smv2-card" style={{ display: scope === "us" ? "block" : "none" }}>
           {/* Map header: severity chips */}
           <div className="smv2-head">
             <div className="smv2-head-left">
@@ -932,7 +931,6 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
             </div>
           </div>
         </div>
-        )}
       </div>
 
       {/* Drawer */}

@@ -51,11 +51,11 @@
   "by_state": [
     {
       "state": "CA",
-      "count": 128,
+      "count": 127,
       "total": 257553,
       "severities": {
         "high": 25,
-        "low": 67,
+        "low": 66,
         "medium": 33,
         "career-ending": 3
       },
@@ -83,28 +83,6 @@
             "bar-referral",
             "civil",
             "trial"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "in-the-marriage-of-sarah-lynn-nelson-2026-04-15",
-          "name": "In the Marriage of: Sarah Lynn Nelson",
-          "court": "CA Minnesotta",
-          "judge": "",
-          "date": "2026-04-15",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "family",
-            "appellate"
           ],
           "source_url": ""
         },
@@ -396,28 +374,6 @@
             "small-firm"
           ],
           "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "rushing-v-rushing-et-al-2026-03-31",
-          "name": "Rushing v. Rushing et al.",
-          "court": "CA Minnesotta",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "case-dismissed"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "appellate",
-            "family"
-          ],
-          "source_url": ""
         },
         {
           "id": "danuta-dec-v-homeland-security-2026-03-30",
@@ -739,16 +695,60 @@
             "bankruptcy"
           ],
           "source_url": ""
+        },
+        {
+          "id": "estate-of-khallid-muhammad-et-al-v-tupac-shakur-estate-et-al-2026-02-26",
+          "name": "Estate of Khallid Muhammad et al v. Tupac Shakur Estate et al",
+          "court": "C.D. California",
+          "judge": "",
+          "date": "2026-02-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "civil",
+            "trial"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "samuel-k-v-winsley-focia-2026-02-26",
+          "name": "Samuel K. v. Winsley Focia",
+          "court": "CA California",
+          "judge": "",
+          "date": "2026-02-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "appellate"
+          ],
+          "source_url": ""
         }
       ]
     },
     {
       "state": "NY",
-      "count": 76,
-      "total": 37001,
+      "count": 78,
+      "total": 38001,
       "severities": {
-        "low": 48,
-        "high": 10,
+        "low": 49,
+        "high": 11,
         "medium": 17,
         "career-ending": 1
       },
@@ -1400,6 +1400,660 @@
             "fake-citations",
             "civil",
             "trial"
+          ],
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "state": "DC",
+      "count": 58,
+      "total": 27744,
+      "severities": {
+        "low": 41,
+        "medium": 14,
+        "high": 3
+      },
+      "cases": [
+        {
+          "id": "matter-of-logmet-llc-b-4230662-2026-04-15",
+          "name": "Matter of: LOGMET LLC, B-423066.2",
+          "court": "GAO",
+          "judge": "",
+          "date": "2026-04-15",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "administrative",
+            "government-lawyer"
+          ],
+          "source_url": "https://damiencharlotin.comDavid Timm"
+        },
+        {
+          "id": "in-re-philips-recalled-cpap-bi-level-pap-and-mechanical-ventilator-products-liab",
+          "name": "In re: Philips Recalled CPAP, Bi-Level PAP, and Mechanical Ventilator Products Liability Litigation (Gravelyn)",
+          "court": "J.P.M.L.",
+          "judge": "",
+          "date": "2026-04-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "class-action",
+            "civil",
+            "multi-firm"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "zavadovsky-v-republic-of-austria-et-al-2026-03-31",
+          "name": "Zavadovsky v. Republic of Austria, et al.",
+          "court": "D. D.C.",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "civil"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "nguedi-v-general-dynamics-information-technology-2026-03-31",
+          "name": "Nguedi v. General Dynamics Information Technology",
+          "court": "D. D.C.",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "employment"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "mission-critical-project-services-inc-2026-03-26",
+          "name": "Mission Critical Project Services, Inc.",
+          "court": "GAO",
+          "judge": "",
+          "date": "2026-03-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "administrative"
+          ],
+          "source_url": "https://damiencharlotin.comDavid Timm"
+        },
+        {
+          "id": "endure-industries-inc-v-defense-health-agency-2026-03-23",
+          "name": "Endure Industries, Inc. v. Defense Health Agency",
+          "court": "ASBCA",
+          "judge": "",
+          "date": "2026-03-23",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "administrative"
+          ],
+          "source_url": "https://damiencharlotin.comDavid Timm"
+        },
+        {
+          "id": "riddle-aggregates-v-irs-2026-03-18",
+          "name": "Riddle Aggregates v. IRS",
+          "court": "Tax Court",
+          "judge": "",
+          "date": "2026-03-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "ChatGPT / OpenAI",
+          "summary": "See description and story here.",
+          "sanction_types": [
+            "none-adjudicated",
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "consumer-tool",
+            "tax"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "dsme-construction-co-ltd-2026-03-13",
+          "name": "DSME Construction Co., Ltd.",
+          "court": "ASBCA",
+          "judge": "",
+          "date": "2026-03-13",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "struck-pleading",
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "administrative",
+            "government-lawyer"
+          ],
+          "source_url": "https://damiencharlotin.comDavid Timm"
+        },
+        {
+          "id": "andre-lamont-goddard-jr-v-city-university-of-seattle-2026-03-06",
+          "name": "Andre Lamont Goddard, Jr. v. City University of Seattle",
+          "court": "D. District of Columbia",
+          "judge": "",
+          "date": "2026-03-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "louis-j-blazy-v-department-of-state-2026-02-24",
+          "name": "Louis J. Blazy v. Department of State",
+          "court": "CBCA",
+          "judge": "",
+          "date": "2026-02-24",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "administrative"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "matter-of-adapt-forward-llc-2026-02-18",
+          "name": "Matter of: Adapt Forward, LLC",
+          "court": "GAO",
+          "judge": "",
+          "date": "2026-02-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "administrative"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "g2-ops-inc-2026-02-13",
+          "name": "G2 Ops, Inc.",
+          "court": "GAO",
+          "judge": "",
+          "date": "2026-02-13",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "administrative"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "cvtek-llc-b-423943-b-4239432-2026-02-12",
+          "name": "CVTEK, LLC (B-423943; B-423943.2)",
+          "court": "GAO",
+          "judge": "",
+          "date": "2026-02-12",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "CoCounsel (Westlaw)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "paid-tool",
+            "administrative"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "tabitha-alberti-v-district-of-columbia-2026-02-10",
+          "name": "Tabitha Alberti v. District of Columbia",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2026-02-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "peter-l-clinco-v-commissioner-2026-02-09",
+          "name": "Peter L. Clinco v. Commissioner",
+          "court": "US Tax Court",
+          "judge": "",
+          "date": "2026-02-09",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "tax",
+            "administrative"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "in-re-snowflake-inc-data-security-breach-litigation-2026-02-05",
+          "name": "In re: Snowflake, Inc., Data Security Breach Litigation",
+          "court": "J.P.M.L.",
+          "judge": "",
+          "date": "2026-02-05",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "class-action"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "matter-of-bramstedt-surgical-inc-2026-01-28",
+          "name": "Matter of: Bramstedt Surgical Inc.",
+          "court": "GAO",
+          "judge": "",
+          "date": "2026-01-28",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "administrative"
+          ],
+          "source_url": "https://damiencharlotin.comDavid Timm"
+        },
+        {
+          "id": "life-together-coaching-llc-2026-01-28",
+          "name": "Life Together Coaching, LLC",
+          "court": "GAO",
+          "judge": "",
+          "date": "2026-01-28",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "administrative"
+          ],
+          "source_url": "https://damiencharlotin.comDavid Timm"
+        },
+        {
+          "id": "x-v-canada-2026-01-16",
+          "name": "X. v. Canada",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2026-01-16",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "pro-se",
+            "fabricated-quotes",
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "vanderberg-v-shviro-2026-01-12",
+          "name": "Vanderberg v. Shviro",
+          "court": "Rehovot Small Claims Court",
+          "judge": "",
+          "date": "2026-01-12",
+          "amount": 3000,
+          "amount_display": "$3.0K",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "donovan-v-clark-county-assessor-2025-12-22",
+          "name": "Donovan v. Clark County Assessor",
+          "court": "Tax Court of Indiana",
+          "judge": "",
+          "date": "2025-12-22",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "tax"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "matter-of-ke-system-services-inc-2025-12-22",
+          "name": "Matter of: KE System Services, Inc.",
+          "court": "GAO",
+          "judge": "",
+          "date": "2025-12-22",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "administrative"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "holmes-family-trust-v-multnomah-county-assessor-2025-12-16",
+          "name": "Holmes Family Trust v. Multnomah County Assessor",
+          "court": "Oregon Tax Court",
+          "judge": "",
+          "date": "2025-12-16",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "tax"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "supplying-demand-llc-matter-of-2025-11-24",
+          "name": "Supplying Demand, LLC (Matter of)",
+          "court": "U.S. Government Accountability Office (GAO)",
+          "judge": "",
+          "date": "2025-11-24",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "administrative"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "ekeocha-v-us-department-of-state-2025-11-19",
+          "name": "Ekeocha v. U.S. Department of State",
+          "court": "U.S. District Court for the District of Columbia (D.D.C.)",
+          "judge": "",
+          "date": "2025-11-19",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "nathan-strong-v-the-united-states-2025-11-13",
+          "name": "Nathan Strong v. The United States",
+          "court": "Court of Federal Claims",
+          "judge": "",
+          "date": "2025-11-13",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "administrative"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "wertheimer-v-ryanair-dac-2025-11-01",
+          "name": "Wertheimer v. Ryanair DAC",
+          "court": "Small Claims Court",
+          "judge": "",
+          "date": "2025-11-01",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "The plaintiff, who is a lawyer , filed a claim for damages against Ryanair and included citations to several judgments to support his arguments. It was discovered that the plaintiff had used artificial intelligence to search for these judgments and/o",
+          "sanction_types": [
+            "monetary",
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "solo",
+            "civil",
+            "first-in-state"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "appeals-of-huffman-construction-llc-2025-10-23",
+          "name": "Appeals of Huffman Construction, LLC",
+          "court": "Armed Services Board of Contract Appeals",
+          "judge": "",
+          "date": "2025-10-23",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "Unidentified",
+          "summary": "The Board found over 70% of citations in Huffman's reply brief inaccurate, including fabricated cases, misattributed reporter citations, cases that did not support cited propositions, and incorrect or non-existent transcript/Rule 4 citations. Counsel",
+          "sanction_types": [
+            "struck-pleading"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "administrative"
+          ],
+          "source_url": "https://damiencharlotin.comDavid Timm"
+        },
+        {
+          "id": "mccaster-v-united-states-2025-10-23",
+          "name": "McCaster v. United States",
+          "court": "Court of Federal Claims",
+          "judge": "",
+          "date": "2025-10-23",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": "https://damiencharlotin.comDavid Timm"
+        },
+        {
+          "id": "n-bar-trade-v-amazon-2025-10-22",
+          "name": "N-BAR Trade v. Amazon",
+          "court": "D.C. DC",
+          "judge": "",
+          "date": "2025-10-22",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "trial",
+            "civil"
           ],
           "source_url": ""
         }
@@ -2735,663 +3389,6 @@
             "fake-citations",
             "fabricated-quotes",
             "civil"
-          ],
-          "source_url": ""
-        }
-      ]
-    },
-    {
-      "state": "DC",
-      "count": 43,
-      "total": 3251,
-      "severities": {
-        "low": 33,
-        "medium": 8,
-        "high": 2
-      },
-      "cases": [
-        {
-          "id": "matter-of-logmet-llc-b-4230662-2026-04-15",
-          "name": "Matter of: LOGMET LLC, B-423066.2",
-          "court": "GAO",
-          "judge": "",
-          "date": "2026-04-15",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "administrative",
-            "government-lawyer"
-          ],
-          "source_url": "https://damiencharlotin.comDavid Timm"
-        },
-        {
-          "id": "in-re-philips-recalled-cpap-bi-level-pap-and-mechanical-ventilator-products-liab",
-          "name": "In re: Philips Recalled CPAP, Bi-Level PAP, and Mechanical Ventilator Products Liability Litigation (Gravelyn)",
-          "court": "J.P.M.L.",
-          "judge": "",
-          "date": "2026-04-06",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "class-action",
-            "civil",
-            "multi-firm"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "zavadovsky-v-republic-of-austria-et-al-2026-03-31",
-          "name": "Zavadovsky v. Republic of Austria, et al.",
-          "court": "D. D.C.",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "civil"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "nguedi-v-general-dynamics-information-technology-2026-03-31",
-          "name": "Nguedi v. General Dynamics Information Technology",
-          "court": "D. D.C.",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "employment"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "mission-critical-project-services-inc-2026-03-26",
-          "name": "Mission Critical Project Services, Inc.",
-          "court": "GAO",
-          "judge": "",
-          "date": "2026-03-26",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "administrative"
-          ],
-          "source_url": "https://damiencharlotin.comDavid Timm"
-        },
-        {
-          "id": "endure-industries-inc-v-defense-health-agency-2026-03-23",
-          "name": "Endure Industries, Inc. v. Defense Health Agency",
-          "court": "ASBCA",
-          "judge": "",
-          "date": "2026-03-23",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "administrative"
-          ],
-          "source_url": "https://damiencharlotin.comDavid Timm"
-        },
-        {
-          "id": "dsme-construction-co-ltd-2026-03-13",
-          "name": "DSME Construction Co., Ltd.",
-          "court": "ASBCA",
-          "judge": "",
-          "date": "2026-03-13",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "struck-pleading",
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "administrative",
-            "government-lawyer"
-          ],
-          "source_url": "https://damiencharlotin.comDavid Timm"
-        },
-        {
-          "id": "andre-lamont-goddard-jr-v-city-university-of-seattle-2026-03-06",
-          "name": "Andre Lamont Goddard, Jr. v. City University of Seattle",
-          "court": "D. District of Columbia",
-          "judge": "",
-          "date": "2026-03-06",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "louis-j-blazy-v-department-of-state-2026-02-24",
-          "name": "Louis J. Blazy v. Department of State",
-          "court": "CBCA",
-          "judge": "",
-          "date": "2026-02-24",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "administrative"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "matter-of-adapt-forward-llc-2026-02-18",
-          "name": "Matter of: Adapt Forward, LLC",
-          "court": "GAO",
-          "judge": "",
-          "date": "2026-02-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "administrative"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "g2-ops-inc-2026-02-13",
-          "name": "G2 Ops, Inc.",
-          "court": "GAO",
-          "judge": "",
-          "date": "2026-02-13",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "administrative"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "cvtek-llc-b-423943-b-4239432-2026-02-12",
-          "name": "CVTEK, LLC (B-423943; B-423943.2)",
-          "court": "GAO",
-          "judge": "",
-          "date": "2026-02-12",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "CoCounsel (Westlaw)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "paid-tool",
-            "administrative"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "tabitha-alberti-v-district-of-columbia-2026-02-10",
-          "name": "Tabitha Alberti v. District of Columbia",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2026-02-10",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "in-re-snowflake-inc-data-security-breach-litigation-2026-02-05",
-          "name": "In re: Snowflake, Inc., Data Security Breach Litigation",
-          "court": "J.P.M.L.",
-          "judge": "",
-          "date": "2026-02-05",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "class-action"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "matter-of-bramstedt-surgical-inc-2026-01-28",
-          "name": "Matter of: Bramstedt Surgical Inc.",
-          "court": "GAO",
-          "judge": "",
-          "date": "2026-01-28",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "administrative"
-          ],
-          "source_url": "https://damiencharlotin.comDavid Timm"
-        },
-        {
-          "id": "life-together-coaching-llc-2026-01-28",
-          "name": "Life Together Coaching, LLC",
-          "court": "GAO",
-          "judge": "",
-          "date": "2026-01-28",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "administrative"
-          ],
-          "source_url": "https://damiencharlotin.comDavid Timm"
-        },
-        {
-          "id": "x-v-canada-2026-01-16",
-          "name": "X. v. Canada",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2026-01-16",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "pro-se",
-            "fabricated-quotes",
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "vanderberg-v-shviro-2026-01-12",
-          "name": "Vanderberg v. Shviro",
-          "court": "Rehovot Small Claims Court",
-          "judge": "",
-          "date": "2026-01-12",
-          "amount": 3000,
-          "amount_display": "$3.0K",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "matter-of-ke-system-services-inc-2025-12-22",
-          "name": "Matter of: KE System Services, Inc.",
-          "court": "GAO",
-          "judge": "",
-          "date": "2025-12-22",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "administrative"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "supplying-demand-llc-matter-of-2025-11-24",
-          "name": "Supplying Demand, LLC (Matter of)",
-          "court": "U.S. Government Accountability Office (GAO)",
-          "judge": "",
-          "date": "2025-11-24",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "administrative"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "ekeocha-v-us-department-of-state-2025-11-19",
-          "name": "Ekeocha v. U.S. Department of State",
-          "court": "U.S. District Court for the District of Columbia (D.D.C.)",
-          "judge": "",
-          "date": "2025-11-19",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "nathan-strong-v-the-united-states-2025-11-13",
-          "name": "Nathan Strong v. The United States",
-          "court": "Court of Federal Claims",
-          "judge": "",
-          "date": "2025-11-13",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "administrative"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "wertheimer-v-ryanair-dac-2025-11-01",
-          "name": "Wertheimer v. Ryanair DAC",
-          "court": "Small Claims Court",
-          "judge": "",
-          "date": "2025-11-01",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "The plaintiff, who is a lawyer , filed a claim for damages against Ryanair and included citations to several judgments to support his arguments. It was discovered that the plaintiff had used artificial intelligence to search for these judgments and/o",
-          "sanction_types": [
-            "monetary",
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "solo",
-            "civil",
-            "first-in-state"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "appeals-of-huffman-construction-llc-2025-10-23",
-          "name": "Appeals of Huffman Construction, LLC",
-          "court": "Armed Services Board of Contract Appeals",
-          "judge": "",
-          "date": "2025-10-23",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "Unidentified",
-          "summary": "The Board found over 70% of citations in Huffman's reply brief inaccurate, including fabricated cases, misattributed reporter citations, cases that did not support cited propositions, and incorrect or non-existent transcript/Rule 4 citations. Counsel",
-          "sanction_types": [
-            "struck-pleading"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "administrative"
-          ],
-          "source_url": "https://damiencharlotin.comDavid Timm"
-        },
-        {
-          "id": "mccaster-v-united-states-2025-10-23",
-          "name": "McCaster v. United States",
-          "court": "Court of Federal Claims",
-          "judge": "",
-          "date": "2025-10-23",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": "https://damiencharlotin.comDavid Timm"
-        },
-        {
-          "id": "n-bar-trade-v-amazon-2025-10-22",
-          "name": "N-BAR Trade v. Amazon",
-          "court": "D.C. DC",
-          "judge": "",
-          "date": "2025-10-22",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "trial",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "alexandria-jones-v-dc-office-of-unified-communications-2025-10-22",
-          "name": "Alexandria Jones v. DC Office of Unified Communications",
-          "court": "D.C. DC",
-          "judge": "",
-          "date": "2025-10-22",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fabricated-quotes",
-            "trial",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "polinski-v-usa-2025-10-15",
-          "name": "Polinski v. USA",
-          "court": "Court of Federal Claims",
-          "judge": "",
-          "date": "2025-10-15",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "\"On September 3, 2025, Plaintiff filed his response to the court’s order to file copies of the cases he cited (#7). Therein, Plaintiff avers he took “concrete remedial steps” to cure the time wasted by his use of artificial-intelligence-hallucinated ",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "denial"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "in-the-matter-of-stephen-c-2025-10-07",
-          "name": "In the Matter of Stephen C.",
-          "court": "CBCA",
-          "judge": "",
-          "date": "2025-10-07",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Claimant cited several inapplicable regulations to support reimbursement. When directed to supply the texts, claimant admitted he had used artificial intelligence to create his submission and withdrew reliance on the cited regulations except for JTR ",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "administrative"
-          ],
-          "source_url": "https://damiencharlotin.comDavid Timm"
-        },
-        {
-          "id": "smith-v-athena-construction-group-inc-2025-10-03",
-          "name": "Smith v. Athena Construction Group, Inc.",
-          "court": "D.C. DC",
-          "judge": "",
-          "date": "2025-10-03",
-          "amount": 1,
-          "amount_display": "$1",
-          "severity": "high",
-          "tool": "Grammarly; ProWritingAid",
-          "summary": "Show Cause Order is available here.",
-          "sanction_types": [
-            "monetary",
-            "bar-referral",
-            "ordered-to-show-cause",
-            "referral"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "consumer-tool",
-            "civil",
-            "bar-referral"
           ],
           "source_url": ""
         }
@@ -6070,570 +6067,6 @@
       ]
     },
     {
-      "state": "IN",
-      "count": 25,
-      "total": 15001,
-      "severities": {
-        "low": 20,
-        "medium": 4,
-        "high": 1
-      },
-      "cases": [
-        {
-          "id": "cynthia-white-v-walmart-inc-2026-04-14",
-          "name": "Cynthia White v. Walmart, Inc.",
-          "court": "S.D. Indiana",
-          "judge": "",
-          "date": "2026-04-14",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "civil",
-            "trial"
-          ],
-          "source_url": "https://damiencharlotin.comRobert Freund"
-        },
-        {
-          "id": "elbert-coleman-iii-elbert-coleman-iv-v-nexo-capital-inc-2026-03-31",
-          "name": "Elbert Coleman, III; Elbert Coleman, IV v. Nexo Capital Inc.",
-          "court": "S.D. Indiana",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "nicole-olbera-et-al-v-tiara-sykes-2026-03-30",
-          "name": "Nicole Olbera, et al. v. Tiara Sykes",
-          "court": "CA Indiana",
-          "judge": "",
-          "date": "2026-03-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "appellate",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "william-c-maxwell-v-dakota-michael-chelsey-smith-2026-03-26",
-          "name": "William C. Maxwell v. Dakota Michael & Chelsey Smith",
-          "court": "S.D. Indiana",
-          "judge": "",
-          "date": "2026-03-26",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "ordered-to-show-cause",
-            "referral"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "jana-james-v-national-board-of-osteopathic-examiners-inc-2026-03-19",
-          "name": "Jana James v. National Board of Osteopathic Examiners, Inc.",
-          "court": "S.D. Indiana",
-          "judge": "",
-          "date": "2026-03-19",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil",
-            "trial"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "ak-v-mr-2026-03-10",
-          "name": "A.K. v. M.R.",
-          "court": "CA Indiana",
-          "judge": "",
-          "date": "2026-03-10",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "appellate",
-            "family"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "michael-platt-v-volunteers-of-america-ohio-indiana-2026-03-10",
-          "name": "Michael Platt v. Volunteers of America Ohio & Indiana",
-          "court": "S.D. Indiana",
-          "judge": "",
-          "date": "2026-03-10",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "struck-pleading",
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "joseph-maldonado-v-professional-animal-retirement-center-2026-02-27",
-          "name": "Joseph Maldonado v. Professional Animal Retirement Center",
-          "court": "N.D. Indiana",
-          "judge": "",
-          "date": "2026-02-27",
-          "amount": 1500,
-          "amount_display": "$1.5K",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Order to show cause is here.",
-          "sanction_types": [
-            "monetary",
-            "bar-referral",
-            "referral"
-          ],
-          "tags": [
-            "fake-citations",
-            "bar-referral",
-            "civil",
-            "trial"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "virgil-v-experian-information-solutions-et-al-2026-02-12",
-          "name": "Virgil v. Experian Information Solutions, et al.",
-          "court": "S.D. Indiana",
-          "judge": "",
-          "date": "2026-02-12",
-          "amount": 1,
-          "amount_display": "$1",
-          "severity": "high",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "monetary",
-            "bar-referral",
-            "professional",
-            "referral"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "civil",
-            "multi-attorney"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "mutugu-v-kiaraho-2026-02-06",
-          "name": "Mutugu v. Kiaraho",
-          "court": "CA Indiana",
-          "judge": "",
-          "date": "2026-02-06",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "family",
-            "appellate"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "wilcox-v-gingrinch-2026-01-30",
-          "name": "Wilcox v. Gingrinch",
-          "court": "CA Indiana",
-          "judge": "",
-          "date": "2026-01-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "appellate"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "north-atlantic-operating-company-inc-et-al-v-indiana-import-llc-et-al-2026-01-15",
-          "name": "North Atlantic Operating Company, Inc., et al. v. Indiana Import, LLC, et al.",
-          "court": "S.D. Indiana",
-          "judge": "",
-          "date": "2026-01-15",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning",
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "fake-citations",
-            "civil",
-            "trial"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "donovan-v-clark-county-assessor-2025-12-22",
-          "name": "Donovan v. Clark County Assessor",
-          "court": "Tax Court of Indiana",
-          "judge": "",
-          "date": "2025-12-22",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "tax"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "mh-v-cs-2025-11-24",
-          "name": "M.H. v. C.S.",
-          "court": "CA Indiana",
-          "judge": "",
-          "date": "2025-11-24",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "appellate",
-            "family"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "kamia-nellum-v-credit-acceptance-corporation-2025-11-18",
-          "name": "Kamia Nellum v. Credit Acceptance Corporation",
-          "court": "S.D. Indiana",
-          "judge": "",
-          "date": "2025-11-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "pro-se",
-            "civil"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "xavier-jamal-smith-v-santander-consumer-usa-inc-2025-11-04",
-          "name": "Xavier Jamal Smith v. Santander Consumer USA Inc.",
-          "court": "N.D. Indiana",
-          "judge": "",
-          "date": "2025-11-04",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Rather amazingly, plaintiff asked and was granted leave to file a \"Case Law Verification Index\" that contained further hallucinations.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil",
-            "trial"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "ih-v-ok-2025-11-03",
-          "name": "I.H. v. O.K.",
-          "court": "CA Indiana",
-          "judge": "",
-          "date": "2025-11-03",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "appellate"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "in-re-the-marriage-of-melinda-johnson-v-sabastian-johnson-2025-10-30",
-          "name": "In re: the Marriage of Melinda Johnson v. Sabastian Johnson",
-          "court": "CA Indiana",
-          "judge": "",
-          "date": "2025-10-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "ChatGPT / OpenAI",
-          "summary": "The court observed that Mother's briefs included many cited authorities that do not exist and that one statute she cited was not on point. Mother admitted using Chat GPT to prepare pleadings. The court affirmed the trial court's orders and warned lit",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "family",
-            "consumer-tool",
-            "appellate"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "tippecanoe-county-assessor-v-craig-goergen-2025-10-17",
-          "name": "Tippecanoe County Assessor v. Craig Goergen",
-          "court": "Indiana Tax Court",
-          "judge": "",
-          "date": "2025-10-17",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "tax",
-            "administrative"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "tm-v-mm-2025-09-24",
-          "name": "T.M. v. M.M.",
-          "court": "CA Indiana",
-          "judge": "",
-          "date": "2025-09-24",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "The Court preserved the invalid citations in the opinion as they are part of the record, admonished that fabricated or incorrect citations frustrate review and may lead to reprimand or sanction.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "appellate",
-            "family"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "cingel-v-ferreri-2025-09-19",
-          "name": "Cingel v. Ferreri",
-          "court": "CA Indiana",
-          "judge": "",
-          "date": "2025-09-19",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "appellate",
-            "family"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "tsupko-v-kinetic-advantage-llc-2025-09-17",
-          "name": "Tsupko v. Kinetic Advantage, LLC",
-          "court": "S.D. Indiana",
-          "judge": "",
-          "date": "2025-09-17",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "consumer-tool"
-          ],
-          "source_url": "https://damiencharlotin.comRobert Freund"
-        },
-        {
-          "id": "davis-v-juvenile-detention-center-2025-09-02",
-          "name": "Davis v. Juvenile Detention Center",
-          "court": "S.D. Indiana",
-          "judge": "",
-          "date": "2025-09-02",
-          "amount": 7500,
-          "amount_display": "$7.5K",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "monetary",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "civil",
-            "small-firm"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "williams-v-kirch-2025-08-18",
-          "name": "Williams v. Kirch",
-          "court": "CA Indiana",
-          "judge": "",
-          "date": "2025-08-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "appellate"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "mid-cent-operating-engrs-health-v-hoosiervac-2025-05-28",
-          "name": "Mid Cent. Operating Eng'rs Health v. Hoosiervac",
-          "court": "S.D. Ind.",
-          "judge": "",
-          "date": "2025-05-28",
-          "amount": 6000,
-          "amount_display": "$6.0K",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "(Earlier report and recommendation can be found here.)AI UseCounsel admitted at a show cause hearing that he used generative AI tools to draft multiple briefs and did not verify the citations provided by the AI, mistakenly trusting their apparent cre",
-          "sanction_types": [
-            "monetary",
-            "referral"
-          ],
-          "tags": [
-            "fake-citations",
-            "civil",
-            "multi-attorney"
-          ],
-          "source_url": ""
-        }
-      ]
-    },
-    {
       "state": "NV",
       "count": 25,
       "total": 5001,
@@ -8222,6 +7655,526 @@
       ]
     },
     {
+      "state": "IN",
+      "count": 23,
+      "total": 15001,
+      "severities": {
+        "low": 18,
+        "medium": 4,
+        "high": 1
+      },
+      "cases": [
+        {
+          "id": "cynthia-white-v-walmart-inc-2026-04-14",
+          "name": "Cynthia White v. Walmart, Inc.",
+          "court": "S.D. Indiana",
+          "judge": "",
+          "date": "2026-04-14",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "civil",
+            "trial"
+          ],
+          "source_url": "https://damiencharlotin.comRobert Freund"
+        },
+        {
+          "id": "elbert-coleman-iii-elbert-coleman-iv-v-nexo-capital-inc-2026-03-31",
+          "name": "Elbert Coleman, III; Elbert Coleman, IV v. Nexo Capital Inc.",
+          "court": "S.D. Indiana",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "nicole-olbera-et-al-v-tiara-sykes-2026-03-30",
+          "name": "Nicole Olbera, et al. v. Tiara Sykes",
+          "court": "CA Indiana",
+          "judge": "",
+          "date": "2026-03-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "william-c-maxwell-v-dakota-michael-chelsey-smith-2026-03-26",
+          "name": "William C. Maxwell v. Dakota Michael & Chelsey Smith",
+          "court": "S.D. Indiana",
+          "judge": "",
+          "date": "2026-03-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "ordered-to-show-cause",
+            "referral"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "jana-james-v-national-board-of-osteopathic-examiners-inc-2026-03-19",
+          "name": "Jana James v. National Board of Osteopathic Examiners, Inc.",
+          "court": "S.D. Indiana",
+          "judge": "",
+          "date": "2026-03-19",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil",
+            "trial"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "ak-v-mr-2026-03-10",
+          "name": "A.K. v. M.R.",
+          "court": "CA Indiana",
+          "judge": "",
+          "date": "2026-03-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate",
+            "family"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "michael-platt-v-volunteers-of-america-ohio-indiana-2026-03-10",
+          "name": "Michael Platt v. Volunteers of America Ohio & Indiana",
+          "court": "S.D. Indiana",
+          "judge": "",
+          "date": "2026-03-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "struck-pleading",
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "joseph-maldonado-v-professional-animal-retirement-center-2026-02-27",
+          "name": "Joseph Maldonado v. Professional Animal Retirement Center",
+          "court": "N.D. Indiana",
+          "judge": "",
+          "date": "2026-02-27",
+          "amount": 1500,
+          "amount_display": "$1.5K",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Order to show cause is here.",
+          "sanction_types": [
+            "monetary",
+            "bar-referral",
+            "referral"
+          ],
+          "tags": [
+            "fake-citations",
+            "bar-referral",
+            "civil",
+            "trial"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "virgil-v-experian-information-solutions-et-al-2026-02-12",
+          "name": "Virgil v. Experian Information Solutions, et al.",
+          "court": "S.D. Indiana",
+          "judge": "",
+          "date": "2026-02-12",
+          "amount": 1,
+          "amount_display": "$1",
+          "severity": "high",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "monetary",
+            "bar-referral",
+            "professional",
+            "referral"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "civil",
+            "multi-attorney"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "mutugu-v-kiaraho-2026-02-06",
+          "name": "Mutugu v. Kiaraho",
+          "court": "CA Indiana",
+          "judge": "",
+          "date": "2026-02-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "family",
+            "appellate"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "wilcox-v-gingrinch-2026-01-30",
+          "name": "Wilcox v. Gingrinch",
+          "court": "CA Indiana",
+          "judge": "",
+          "date": "2026-01-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "north-atlantic-operating-company-inc-et-al-v-indiana-import-llc-et-al-2026-01-15",
+          "name": "North Atlantic Operating Company, Inc., et al. v. Indiana Import, LLC, et al.",
+          "court": "S.D. Indiana",
+          "judge": "",
+          "date": "2026-01-15",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning",
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "fake-citations",
+            "civil",
+            "trial"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "mh-v-cs-2025-11-24",
+          "name": "M.H. v. C.S.",
+          "court": "CA Indiana",
+          "judge": "",
+          "date": "2025-11-24",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate",
+            "family"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "kamia-nellum-v-credit-acceptance-corporation-2025-11-18",
+          "name": "Kamia Nellum v. Credit Acceptance Corporation",
+          "court": "S.D. Indiana",
+          "judge": "",
+          "date": "2025-11-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "pro-se",
+            "civil"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "xavier-jamal-smith-v-santander-consumer-usa-inc-2025-11-04",
+          "name": "Xavier Jamal Smith v. Santander Consumer USA Inc.",
+          "court": "N.D. Indiana",
+          "judge": "",
+          "date": "2025-11-04",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Rather amazingly, plaintiff asked and was granted leave to file a \"Case Law Verification Index\" that contained further hallucinations.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil",
+            "trial"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "ih-v-ok-2025-11-03",
+          "name": "I.H. v. O.K.",
+          "court": "CA Indiana",
+          "judge": "",
+          "date": "2025-11-03",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "in-re-the-marriage-of-melinda-johnson-v-sabastian-johnson-2025-10-30",
+          "name": "In re: the Marriage of Melinda Johnson v. Sabastian Johnson",
+          "court": "CA Indiana",
+          "judge": "",
+          "date": "2025-10-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "ChatGPT / OpenAI",
+          "summary": "The court observed that Mother's briefs included many cited authorities that do not exist and that one statute she cited was not on point. Mother admitted using Chat GPT to prepare pleadings. The court affirmed the trial court's orders and warned lit",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "family",
+            "consumer-tool",
+            "appellate"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "tm-v-mm-2025-09-24",
+          "name": "T.M. v. M.M.",
+          "court": "CA Indiana",
+          "judge": "",
+          "date": "2025-09-24",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "The Court preserved the invalid citations in the opinion as they are part of the record, admonished that fabricated or incorrect citations frustrate review and may lead to reprimand or sanction.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "appellate",
+            "family"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "cingel-v-ferreri-2025-09-19",
+          "name": "Cingel v. Ferreri",
+          "court": "CA Indiana",
+          "judge": "",
+          "date": "2025-09-19",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate",
+            "family"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "tsupko-v-kinetic-advantage-llc-2025-09-17",
+          "name": "Tsupko v. Kinetic Advantage, LLC",
+          "court": "S.D. Indiana",
+          "judge": "",
+          "date": "2025-09-17",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "consumer-tool"
+          ],
+          "source_url": "https://damiencharlotin.comRobert Freund"
+        },
+        {
+          "id": "davis-v-juvenile-detention-center-2025-09-02",
+          "name": "Davis v. Juvenile Detention Center",
+          "court": "S.D. Indiana",
+          "judge": "",
+          "date": "2025-09-02",
+          "amount": 7500,
+          "amount_display": "$7.5K",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "monetary",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "civil",
+            "small-firm"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "williams-v-kirch-2025-08-18",
+          "name": "Williams v. Kirch",
+          "court": "CA Indiana",
+          "judge": "",
+          "date": "2025-08-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "mid-cent-operating-engrs-health-v-hoosiervac-2025-05-28",
+          "name": "Mid Cent. Operating Eng'rs Health v. Hoosiervac",
+          "court": "S.D. Ind.",
+          "judge": "",
+          "date": "2025-05-28",
+          "amount": 6000,
+          "amount_display": "$6.0K",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "(Earlier report and recommendation can be found here.)AI UseCounsel admitted at a show cause hearing that he used generative AI tools to draft multiple briefs and did not verify the citations provided by the AI, mistakenly trusting their apparent cre",
+          "sanction_types": [
+            "monetary",
+            "referral"
+          ],
+          "tags": [
+            "fake-citations",
+            "civil",
+            "multi-attorney"
+          ],
+          "source_url": ""
+        }
+      ]
+    },
+    {
       "state": "OH",
       "count": 23,
       "total": 17001,
@@ -8741,11 +8694,11 @@
     },
     {
       "state": "OR",
-      "count": 20,
+      "count": 19,
       "total": 130244,
       "severities": {
         "medium": 3,
-        "low": 15,
+        "low": 14,
         "career-ending": 1,
         "high": 1
       },
@@ -9040,27 +8993,6 @@
           "source_url": ""
         },
         {
-          "id": "holmes-family-trust-v-multnomah-county-assessor-2025-12-16",
-          "name": "Holmes Family Trust v. Multnomah County Assessor",
-          "court": "Oregon Tax Court",
-          "judge": "",
-          "date": "2025-12-16",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "tax"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
           "id": "troy-allen-berg-v-mandi-marie-wondra-2025-12-12",
           "name": "Troy Allen Berg v. Mandi Marie Wondra",
           "court": "D. Oregon",
@@ -9194,10 +9126,10 @@
     },
     {
       "state": "NJ",
-      "count": 20,
+      "count": 19,
       "total": 18000,
       "severities": {
-        "medium": 5,
+        "medium": 4,
         "low": 12,
         "high": 3
       },
@@ -9613,28 +9545,6 @@
             "pro-se",
             "fabricated-quotes",
             "paid-tool",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "in-re-cormedix-2025-07-23",
-          "name": "In Re CorMedix",
-          "court": "D.C. New Jersey",
-          "judge": "",
-          "date": "2025-07-23",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "ChatGPT / OpenAI",
-          "summary": "In a letter, the defendant pointed out the errors in the Opinion - prompting the judge to withdraw it through a minute order, without offering a rationale.The judge later issued a new opinion, without mentioning or addressing what had happened.In a c",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "consumer-tool",
             "civil"
           ],
           "source_url": ""
@@ -10769,6 +10679,308 @@
       ]
     },
     {
+      "state": "MN",
+      "count": 13,
+      "total": 8472,
+      "severities": {
+        "low": 8,
+        "medium": 2,
+        "high": 3
+      },
+      "cases": [
+        {
+          "id": "in-the-marriage-of-sarah-lynn-nelson-2026-04-15",
+          "name": "In the Marriage of: Sarah Lynn Nelson",
+          "court": "CA Minnesotta",
+          "judge": "",
+          "date": "2026-04-15",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "family",
+            "appellate"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "rushing-v-rushing-et-al-2026-03-31",
+          "name": "Rushing v. Rushing et al.",
+          "court": "CA Minnesotta",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate",
+            "family"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "the-advocates-for-human-rights-and-lhm-v-us-department-of-homeland-security-et-a",
+          "name": "The Advocates for Human Rights and L.H.M. v. U.S. Department of Homeland Security, et al.",
+          "court": "D. Minnesota",
+          "judge": "",
+          "date": "2026-03-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fabricated-quotes",
+            "immigration",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "sophia-madigan-v-graco-inc-2026-02-04",
+          "name": "Sophia Madigan v. Graco Inc.",
+          "court": "D. Minnesota",
+          "judge": "",
+          "date": "2026-02-04",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "civil",
+            "trial"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "yang-v-university-of-minnesota-2026-02-02",
+          "name": "Yang v. University of Minnesota",
+          "court": "CA Minnesota",
+          "judge": "",
+          "date": "2026-02-02",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "appellate"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "ramos-v-ramos-2026-01-07",
+          "name": "Ramos v. Ramos",
+          "court": "CA Minnesota",
+          "judge": "",
+          "date": "2026-01-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate",
+            "family"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "nuvola-llc-v-wright-2025-11-21",
+          "name": "Nuvola, LLC v. Wright",
+          "court": "Minnesota DC",
+          "judge": "",
+          "date": "2025-11-21",
+          "amount": 1000,
+          "amount_display": "$1.0K",
+          "severity": "high",
+          "tool": "Unidentified",
+          "summary": "",
+          "sanction_types": [
+            "monetary",
+            "training-order",
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "training-ordered",
+            "bar-referral",
+            "civil"
+          ],
+          "source_url": "https://damiencharlotin.comRobert Freund"
+        },
+        {
+          "id": "james-andrew-grimmer-v-citibank-na-2025-11-07",
+          "name": "James Andrew Grimmer v. Citibank, N.A.",
+          "court": "D. Minnesota",
+          "judge": "",
+          "date": "2025-11-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Plaintiff's opposition brief cited numerous nonexistent cases. Defendant identified the fabricated citations in its reply; plaintiff admitted reliance on an AI-based drafting tool and apologized. The court confirmed several cited cases do not exist b",
+          "sanction_types": [
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "leila-kasso-v-police-officers-federation-of-minneapolis-2025-10-21",
+          "name": "Leila Kasso v. Police Officers’ Federation of Minneapolis",
+          "court": "D. Minnesota",
+          "judge": "",
+          "date": "2025-10-21",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "The City argued—and the Court found—that the pro se plaintiff repeatedly cited nonexistent or inaccurately attributed caselaw likely generated by AI. The Court found these citations violated Rule 11, warned the plaintiff, and declined to award fees o",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "employment"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "twyla-leach-minnesota-dhs-et-al-2025-10-17",
+          "name": "Twyla Leach Minnesota DHS et al.",
+          "court": "D. Minnesota",
+          "judge": "",
+          "date": "2025-10-17",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fabricated-quotes",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "loftong-v-grove-farms-2025-09-26",
+          "name": "Loftong v. Grove Farms",
+          "court": "Cir. Ct., DeSoto Minnesota",
+          "judge": "",
+          "date": "2025-09-26",
+          "amount": 7472,
+          "amount_display": "$7.5K",
+          "severity": "medium",
+          "tool": "FastCase",
+          "summary": "",
+          "sanction_types": [
+            "monetary",
+            "training-order",
+            "bar-referral",
+            "referral"
+          ],
+          "tags": [
+            "fake-citations",
+            "paid-tool",
+            "civil",
+            "training-ordered",
+            "bar-referral"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "delano-crossing-v-county-of-wright-2025-05-29",
+          "name": "Delano Crossing v. County of Wright",
+          "court": "Minnesotta Tax Court",
+          "judge": "",
+          "date": "2025-05-29",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "Unidentified",
+          "summary": "AI UseAttorneys for Wright County submitted a memorandum in support of a motion for summary judgment that contained five case citations generated by artificial intelligence; these citations did not refer to actual judicial decisions. Much of the brie",
+          "sanction_types": [
+            "bar-referral",
+            "referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "civil",
+            "bar-referral",
+            "tax"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "kohls-v-ellison-2025-01-10",
+          "name": "Kohls v. Ellison",
+          "court": "Minnesota",
+          "judge": "",
+          "date": "2025-01-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "ChatGPT / OpenAI",
+          "summary": "AI UseProfessor Jeff Hancock, a Stanford University expert on AI and misinformation, used GPT-4o to assist in drafting an expert declaration submitted by the Minnesota Attorney General's office in defense of a state law regulating AI deepfakes in ele",
+          "sanction_types": [
+            "struck-pleading",
+            "published-opinion"
+          ],
+          "tags": [
+            "fake-citations",
+            "consumer-tool",
+            "government-lawyer",
+            "civil"
+          ],
+          "source_url": "https://reason.com/volokh/2024/11/19/apparent-ai-hallucinations-in-misinformation-experts-court-filing-supporting-anti-ai-misinformation-law/"
+        }
+      ]
+    },
+    {
       "state": "KS",
       "count": 13,
       "total": 12000,
@@ -11659,6 +11871,278 @@
       ]
     },
     {
+      "state": "SC",
+      "count": 12,
+      "total": 0,
+      "severities": {
+        "low": 9,
+        "medium": 2,
+        "high": 1
+      },
+      "cases": [
+        {
+          "id": "ellen-michaelis-v-wilmington-savings-fund-society-2026-04-03",
+          "name": "Ellen Michaelis v. Wilmington Savings Fund Society",
+          "court": "SC Dutchess County, N.Y.",
+          "judge": "",
+          "date": "2026-04-03",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unspecified AI",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "civil"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "agc-v-registrar-of-land-titles-2026-04-02",
+          "name": "AGC v Registrar of Land Titles",
+          "court": "SC Yukon",
+          "judge": "",
+          "date": "2026-04-02",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Google Gemini",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "consumer-tool",
+            "canada"
+          ],
+          "source_url": "https://damiencharlotin.comCourtready"
+        },
+        {
+          "id": "gsa-v-department-of-communities-2026-03-16",
+          "name": "GSA v. Department of Communities",
+          "court": "SC Western Australia",
+          "judge": "",
+          "date": "2026-03-16",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fabricated-quotes",
+            "australia",
+            "appellate"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "nelson-l-bruce-v-the-united-states-2026-02-09",
+          "name": "Nelson L. Bruce v. The United States",
+          "court": "D. South Carolina",
+          "judge": "",
+          "date": "2026-02-09",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "cherleatha-b-v-frank-bisignano-2025-12-29",
+          "name": "Cherleatha B. v. Frank Bisignano",
+          "court": "D. South Carolina",
+          "judge": "",
+          "date": "2025-12-29",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "re-walker-2025-11-24",
+          "name": "Re Walker",
+          "court": "SC Victoria",
+          "judge": "",
+          "date": "2025-11-24",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "ChatGPT / OpenAI",
+          "summary": "",
+          "sanction_types": [
+            "warning",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "solo",
+            "consumer-tool",
+            "AU",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "flores-v-nicha-2025-10-15",
+          "name": "Flores v. NICHA",
+          "court": "SC NY",
+          "judge": "",
+          "date": "2025-10-15",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Grok",
+          "summary": "As reported here.",
+          "sanction_types": [
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "consumer-tool",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "in-re-richburg-2025-08-27",
+          "name": "In re Richburg",
+          "court": "South Carolina (Bankruptcy)",
+          "judge": "",
+          "date": "2025-08-27",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "Microsoft Copilot",
+          "summary": "Counsel filed a motion containing case citations that did not exist; counsel admitted the citations were generated by Microsoft CoPilot and not independently verified. The court found a Rule 9011 violation, declined to impose monetary sanctions becau",
+          "sanction_types": [
+            "professional",
+            "training-order"
+          ],
+          "tags": [
+            "fake-citations",
+            "consumer-tool",
+            "training-ordered",
+            "bankruptcy"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "nikolic-anor-v-nationwide-news-pty-ltd-anor-2025-05-23",
+          "name": "Nikolic & Anor v Nationwide News Pty Ltd & Anor",
+          "court": "SC Victoria",
+          "judge": "",
+          "date": "2025-05-23",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "bischoff-v-south-carolina-department-of-education-2025-04-10",
+          "name": "Bischoff v. South Carolina Department of Education",
+          "court": "Admin Law Court, S.C.",
+          "judge": "",
+          "date": "2025-04-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "The court held that: \"It is likely that Appellant employed argument generated by an artificial intelligence (AI) program which contained the fictitious case citation and cautions Appellant that many harms flow from the use of non-existent case citati",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "administrative"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "kaur-v-rmit-2024-11-11",
+          "name": "Kaur v RMIT",
+          "court": "SC Victoria (CA)",
+          "judge": "",
+          "date": "2024-11-11",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "consumer-tool",
+            "appellate",
+            "AU"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "churchill-funding-v-732-indiana-2024-10-31",
+          "name": "Churchill Funding v. 732 Indiana",
+          "court": "SC Cal",
+          "judge": "",
+          "date": "2024-10-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": "https://damiencharlotin.comVolokh"
+        }
+      ]
+    },
+    {
       "state": "CT",
       "count": 12,
       "total": 500,
@@ -11932,6 +12416,552 @@
             "civil"
           ],
           "source_url": ""
+        }
+      ]
+    },
+    {
+      "state": "NC",
+      "count": 12,
+      "total": 11200,
+      "severities": {
+        "low": 9,
+        "medium": 2,
+        "high": 1
+      },
+      "cases": [
+        {
+          "id": "curry-v-capital-one-auto-finance-2026-03-26",
+          "name": "Curry v. Capital One Auto Finance",
+          "court": "E.D. North Carolina",
+          "judge": "",
+          "date": "2026-03-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "The court found the plaintiff's proposed amended complaints included fabricated legal authorities — including fictitious provisions of a purported North Carolina Identity Theft Protection Act and other fabricated citations — and concluded the filings",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil",
+            "trial"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "forest-ridge-townhomes-corporation-of-greensboro-v-heag-pain-management-cente-et",
+          "name": "Forest Ridge Townhomes Corporation of Greensboro v. Heag Pain Management Cente et al.",
+          "court": "CA North Carolina",
+          "judge": "",
+          "date": "2026-03-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "Perplexity",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated",
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "consumer-tool",
+            "appellate",
+            "civil"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "united-states-of-america-v-lorenzio-reshaud-simmons-2026-03-10",
+          "name": "United States of America v. Lorenzio Reshaud Simmons",
+          "court": "E.D. North Carolina",
+          "judge": "",
+          "date": "2026-03-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "criminal",
+            "trial"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "derence-v-fivehouse-v-united-states-department-of-defense-et-al-2026-03-02",
+          "name": "Derence V. Fivehouse v. United States Department of Defense et al.",
+          "court": "E.D. North Carolina",
+          "judge": "",
+          "date": "2026-03-02",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "AI (implied, unspecified)",
+          "summary": "It was later reported that the prosecutor at stake resigned over the accident.",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "government-lawyer",
+            "multi-attorney",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "ebony-sherisse-lucas-v-charles-w-scharf-et-al-2026-02-24",
+          "name": "Ebony Sherisse Lucas v. Charles W. Scharf, et al.",
+          "court": "W.D. North Carolina",
+          "judge": "",
+          "date": "2026-02-24",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "reketta-l-montgomery-v-acquisition-experts-llc-2026-01-13",
+          "name": "Reketta L. Montgomery v. Acquisition Experts, LLC",
+          "court": "E.D. North Carolina",
+          "judge": "",
+          "date": "2026-01-13",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "in-re-bryant-2025-11-18",
+          "name": "In re Bryant",
+          "court": "M.D. North Carolina (Bankruptcy)",
+          "judge": "",
+          "date": "2025-11-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "pro-se",
+            "bankruptcy"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "jacob-doe-v-the-university-of-north-carolina-system-2025-11-10",
+          "name": "Jacob Doe v. The University of North Carolina System",
+          "court": "W.D. North Carolina",
+          "judge": "",
+          "date": "2025-11-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "civil",
+            "trial"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "santree-v-eveangel-hines-2025-09-17",
+          "name": "Santree v. Eveangel Hines",
+          "court": "CA North Carolina",
+          "judge": "",
+          "date": "2025-09-17",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Defendant's reply brief contained citations that did not support her arguments and included at least one non-existent case citation; the court concluded these errors suggest use of AI and treated the issues as abandonment under Rule 28(b)(6), dismiss",
+          "sanction_types": [
+            "case-dismissed",
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate"
+          ],
+          "source_url": "https://damiencharlotin.comJesse Schaefer"
+        },
+        {
+          "id": "in-re-ryan-lashon-ford-2025-07-29",
+          "name": "In re: Ryan Lashon Ford",
+          "court": "W.D. North Carolina (Bankruptcy)",
+          "judge": "",
+          "date": "2025-07-29",
+          "amount": 11200,
+          "amount_display": "$11.2K",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "The civil contempt were later terminated and the accrued sanctions reduced to a money judgment. See here.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "bankruptcy"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "letts-v-avidien-technologies-2024-12-16",
+          "name": "Letts v. Avidien Technologies",
+          "court": "E.D. N. Carolina",
+          "judge": "",
+          "date": "2024-12-16",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "mescall-v-renaissance-at-antiquity-2023-11-13",
+          "name": "Mescall v. Renaissance at Antiquity",
+          "court": "Westner N.C.",
+          "judge": "",
+          "date": "2023-11-13",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "AI UseDefendants alleged that portions of Plaintiff’s response to a motion to dismiss were AI-generated.Hallucination DetailsNo specific fabricated cases or fake quotations were identified. The concern was broader: incoherent and procedurally imprope",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "civil"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/241/Mescall_v._Renaissance_at_Antiquity_US_DC_Western_North_Carolina_November_13_2023.pdf"
+        }
+      ]
+    },
+    {
+      "state": "WI",
+      "count": 12,
+      "total": 5000,
+      "severities": {
+        "career-ending": 1,
+        "low": 9,
+        "medium": 2
+      },
+      "cases": [
+        {
+          "id": "state-v-garrett-2026-02-06",
+          "name": "State v. Garrett",
+          "court": "CC Wisconsin",
+          "judge": "",
+          "date": "2026-02-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "career-ending",
+          "tool": "AI (implied, unspecified)",
+          "summary": "From the docket record: \"Court sanctions DA Solis by striking the State's Response for failure to disclose AI, using hallucinated and false citations and for admitting failure to disclose AI. Court grants Motion to Dismiss for defective bind-over, in",
+          "sanction_types": [
+            "struck-pleading",
+            "case-dismissed",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "denial",
+            "criminal",
+            "prosecutor",
+            "government-lawyer"
+          ],
+          "source_url": "https://wcca.wicourts.gov/caseDetail.html?caseNo=2023CF001060&countyNo=30&index=0&mode=details"
+        },
+        {
+          "id": "sec-v-joseph-nantomah-et-al-2026-01-30",
+          "name": "SEC v. Joseph Nantomah et al.",
+          "court": "E.D. Wisconsin",
+          "judge": "",
+          "date": "2026-01-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "struck-pleading"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "ann-k-cady-beth-l-corning-and-caron-g-roesler-v-matthew-c-omalley-2026-01-23",
+          "name": "Ann K. Cady, Beth L. Corning, and Caron G. Roesler v. Matthew C. O'Malley",
+          "court": "CA Wisconsin",
+          "judge": "",
+          "date": "2026-01-23",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "gerou-v-george-whitten-and-united-states-2025-12-18",
+          "name": "Gerou v. George, Whitten, and United States",
+          "court": "E.D. Wisconsin",
+          "judge": "",
+          "date": "2025-12-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "alaya-coleman-v-rpf-somers-investors-llc-et-al-2025-11-04",
+          "name": "Alaya Coleman v. RPF-Somers Investors, LLC, et al.",
+          "court": "E.D. Wisconsin",
+          "judge": "",
+          "date": "2025-11-04",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fabricated-quotes",
+            "civil",
+            "trial"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "todd-e-glass-v-foley-lardner-llp-2025-11-04",
+          "name": "Todd E. Glass v. Foley & Lardner LLP",
+          "court": "W.D. Wisconsin",
+          "judge": "",
+          "date": "2025-11-04",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil",
+            "trial"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "pelishek-v-city-of-sheboygan-2025-09-18",
+          "name": "Pelishek v. City of Sheboygan",
+          "court": "E.D. Wisconsin",
+          "judge": "",
+          "date": "2025-09-18",
+          "amount": 4500,
+          "amount_display": "$4.5K",
+          "severity": "medium",
+          "tool": "Westlaw's Quick Check and AI Case Search Tool",
+          "summary": "Case involved counsel sanctioned in Coomer v. Lindell. In the OSC Order, the court noted:\"The fact that Kachouroff and DeMaster corrected some of their misrepresentations before the court or the defendants identified them would ordinarily mitigate th",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "paid-tool",
+            "civil",
+            "multi-attorney"
+          ],
+          "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.wied.104622/gov.uscourts.wied.104622.184.0.pdf"
+        },
+        {
+          "id": "graham-jackson-v-martin-and-rock-prairie-farms-llc-2025-08-07",
+          "name": "Graham-Jackson v. Martin and Rock Prairie Farms, LLC",
+          "court": "CA Wisconsin",
+          "judge": "",
+          "date": "2025-08-07",
+          "amount": 500,
+          "amount_display": "$500",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Melvin Graham-Jackson, a pro se litigant, filed an appeal with false legal citations in his briefs, citing non-existent legal authorities and unrelated cases. The Court of Appeals identified this as a violation of Wisconsin's appellate rules. Despite",
+          "sanction_types": [
+            "monetary",
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "benjamin-gamble-v-ho-chunk-nation-election-board-2025-06-30",
+          "name": "Benjamin Gamble v. Ho-Chunk Nation Election Board",
+          "court": "Ho-Chunk Nation Trial Court",
+          "judge": "",
+          "date": "2025-06-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "administrative"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "arajuo-v-wedelstadt-et-al-2025-01-22",
+          "name": "Arajuo v. Wedelstadt et al",
+          "court": "E.D. Wisconsin",
+          "judge": "",
+          "date": "2025-01-22",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "AI UseCounsel admitted using a “new legal research medium”, appears to be a generative AI system or platform capable of generating fictitious case law. Counsel did not deny using AI, but claimed the system may have been corrupted or unreliable. The a",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "civil"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "new-credit-union-v-mehlhorn-2024-08-13",
+          "name": "N.E.W. Credit Union v. Mehlhorn",
+          "court": "Wisconsin C.A.",
+          "judge": "",
+          "date": "2024-08-13",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "The court pointed out: \"In its brief, the Credit Union points out that the cases cited by Mehlhorn do not exist and speculates that Mehlhorn used an artificial intelligence program to draft her brief-in-chief. In her reply brief, Mehlhorn does not re",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate"
+          ],
+          "source_url": "https://www.wicourts.gov/ca/smd/DisplayDocument.pdf?content=pdf&seqNo=837468"
+        },
+        {
+          "id": "plumbers-gasfitters-union-v-morris-plumbing-2024-04-18",
+          "name": "Plumbers & Gasfitters Union v. Morris Plumbing",
+          "court": "E.D. Wisconsin",
+          "judge": "",
+          "date": "2024-04-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "civil",
+            "small-firm"
+          ],
+          "source_url": "https://docs.justia.com/cases/federal/district-courts/wisconsin/wiedce/2:2023cv00616/103652/33"
         }
       ]
     },
@@ -12211,257 +13241,6 @@
       ]
     },
     {
-      "state": "SC",
-      "count": 11,
-      "total": 0,
-      "severities": {
-        "low": 8,
-        "medium": 2,
-        "high": 1
-      },
-      "cases": [
-        {
-          "id": "ellen-michaelis-v-wilmington-savings-fund-society-2026-04-03",
-          "name": "Ellen Michaelis v. Wilmington Savings Fund Society",
-          "court": "SC Dutchess County, N.Y.",
-          "judge": "",
-          "date": "2026-04-03",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unspecified AI",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "civil"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "agc-v-registrar-of-land-titles-2026-04-02",
-          "name": "AGC v Registrar of Land Titles",
-          "court": "SC Yukon",
-          "judge": "",
-          "date": "2026-04-02",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Google Gemini",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "consumer-tool",
-            "canada"
-          ],
-          "source_url": "https://damiencharlotin.comCourtready"
-        },
-        {
-          "id": "gsa-v-department-of-communities-2026-03-16",
-          "name": "GSA v. Department of Communities",
-          "court": "SC Western Australia",
-          "judge": "",
-          "date": "2026-03-16",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fabricated-quotes",
-            "australia",
-            "appellate"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "nelson-l-bruce-v-the-united-states-2026-02-09",
-          "name": "Nelson L. Bruce v. The United States",
-          "court": "D. South Carolina",
-          "judge": "",
-          "date": "2026-02-09",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "cherleatha-b-v-frank-bisignano-2025-12-29",
-          "name": "Cherleatha B. v. Frank Bisignano",
-          "court": "D. South Carolina",
-          "judge": "",
-          "date": "2025-12-29",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "re-walker-2025-11-24",
-          "name": "Re Walker",
-          "court": "SC Victoria",
-          "judge": "",
-          "date": "2025-11-24",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "ChatGPT / OpenAI",
-          "summary": "",
-          "sanction_types": [
-            "warning",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "solo",
-            "consumer-tool",
-            "AU",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "flores-v-nicha-2025-10-15",
-          "name": "Flores v. NICHA",
-          "court": "SC NY",
-          "judge": "",
-          "date": "2025-10-15",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Grok",
-          "summary": "As reported here.",
-          "sanction_types": [
-            "case-dismissed"
-          ],
-          "tags": [
-            "pro-se",
-            "consumer-tool",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "in-re-richburg-2025-08-27",
-          "name": "In re Richburg",
-          "court": "South Carolina (Bankruptcy)",
-          "judge": "",
-          "date": "2025-08-27",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "Microsoft Copilot",
-          "summary": "Counsel filed a motion containing case citations that did not exist; counsel admitted the citations were generated by Microsoft CoPilot and not independently verified. The court found a Rule 9011 violation, declined to impose monetary sanctions becau",
-          "sanction_types": [
-            "professional",
-            "training-order"
-          ],
-          "tags": [
-            "fake-citations",
-            "consumer-tool",
-            "training-ordered",
-            "bankruptcy"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "nikolic-anor-v-nationwide-news-pty-ltd-anor-2025-05-23",
-          "name": "Nikolic & Anor v Nationwide News Pty Ltd & Anor",
-          "court": "SC Victoria",
-          "judge": "",
-          "date": "2025-05-23",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "kaur-v-rmit-2024-11-11",
-          "name": "Kaur v RMIT",
-          "court": "SC Victoria (CA)",
-          "judge": "",
-          "date": "2024-11-11",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "consumer-tool",
-            "appellate",
-            "AU"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "churchill-funding-v-732-indiana-2024-10-31",
-          "name": "Churchill Funding v. 732 Indiana",
-          "court": "SC Cal",
-          "judge": "",
-          "date": "2024-10-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": "https://damiencharlotin.comVolokh"
-        }
-      ]
-    },
-    {
       "state": "MA",
       "count": 11,
       "total": 2000,
@@ -12707,259 +13486,6 @@
             "civil"
           ],
           "source_url": "https://masslawyersweekly.com/wp-content/blogs.dir/1/files/2024/02/12-007-24.pdf"
-        }
-      ]
-    },
-    {
-      "state": "WI",
-      "count": 11,
-      "total": 5000,
-      "severities": {
-        "career-ending": 1,
-        "low": 8,
-        "medium": 2
-      },
-      "cases": [
-        {
-          "id": "state-v-garrett-2026-02-06",
-          "name": "State v. Garrett",
-          "court": "CC Wisconsin",
-          "judge": "",
-          "date": "2026-02-06",
-          "amount": null,
-          "amount_display": "",
-          "severity": "career-ending",
-          "tool": "AI (implied, unspecified)",
-          "summary": "From the docket record: \"Court sanctions DA Solis by striking the State's Response for failure to disclose AI, using hallucinated and false citations and for admitting failure to disclose AI. Court grants Motion to Dismiss for defective bind-over, in",
-          "sanction_types": [
-            "struck-pleading",
-            "case-dismissed",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "denial",
-            "criminal",
-            "prosecutor",
-            "government-lawyer"
-          ],
-          "source_url": "https://wcca.wicourts.gov/caseDetail.html?caseNo=2023CF001060&countyNo=30&index=0&mode=details"
-        },
-        {
-          "id": "sec-v-joseph-nantomah-et-al-2026-01-30",
-          "name": "SEC v. Joseph Nantomah et al.",
-          "court": "E.D. Wisconsin",
-          "judge": "",
-          "date": "2026-01-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "struck-pleading"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "ann-k-cady-beth-l-corning-and-caron-g-roesler-v-matthew-c-omalley-2026-01-23",
-          "name": "Ann K. Cady, Beth L. Corning, and Caron G. Roesler v. Matthew C. O'Malley",
-          "court": "CA Wisconsin",
-          "judge": "",
-          "date": "2026-01-23",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "appellate",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "gerou-v-george-whitten-and-united-states-2025-12-18",
-          "name": "Gerou v. George, Whitten, and United States",
-          "court": "E.D. Wisconsin",
-          "judge": "",
-          "date": "2025-12-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "alaya-coleman-v-rpf-somers-investors-llc-et-al-2025-11-04",
-          "name": "Alaya Coleman v. RPF-Somers Investors, LLC, et al.",
-          "court": "E.D. Wisconsin",
-          "judge": "",
-          "date": "2025-11-04",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fabricated-quotes",
-            "civil",
-            "trial"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "todd-e-glass-v-foley-lardner-llp-2025-11-04",
-          "name": "Todd E. Glass v. Foley & Lardner LLP",
-          "court": "W.D. Wisconsin",
-          "judge": "",
-          "date": "2025-11-04",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil",
-            "trial"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "pelishek-v-city-of-sheboygan-2025-09-18",
-          "name": "Pelishek v. City of Sheboygan",
-          "court": "E.D. Wisconsin",
-          "judge": "",
-          "date": "2025-09-18",
-          "amount": 4500,
-          "amount_display": "$4.5K",
-          "severity": "medium",
-          "tool": "Westlaw's Quick Check and AI Case Search Tool",
-          "summary": "Case involved counsel sanctioned in Coomer v. Lindell. In the OSC Order, the court noted:\"The fact that Kachouroff and DeMaster corrected some of their misrepresentations before the court or the defendants identified them would ordinarily mitigate th",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "paid-tool",
-            "civil",
-            "multi-attorney"
-          ],
-          "source_url": "https://storage.courtlistener.com/recap/gov.uscourts.wied.104622/gov.uscourts.wied.104622.184.0.pdf"
-        },
-        {
-          "id": "graham-jackson-v-martin-and-rock-prairie-farms-llc-2025-08-07",
-          "name": "Graham-Jackson v. Martin and Rock Prairie Farms, LLC",
-          "court": "CA Wisconsin",
-          "judge": "",
-          "date": "2025-08-07",
-          "amount": 500,
-          "amount_display": "$500",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Melvin Graham-Jackson, a pro se litigant, filed an appeal with false legal citations in his briefs, citing non-existent legal authorities and unrelated cases. The Court of Appeals identified this as a violation of Wisconsin's appellate rules. Despite",
-          "sanction_types": [
-            "monetary",
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "appellate",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "arajuo-v-wedelstadt-et-al-2025-01-22",
-          "name": "Arajuo v. Wedelstadt et al",
-          "court": "E.D. Wisconsin",
-          "judge": "",
-          "date": "2025-01-22",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "AI UseCounsel admitted using a “new legal research medium”, appears to be a generative AI system or platform capable of generating fictitious case law. Counsel did not deny using AI, but claimed the system may have been corrupted or unreliable. The a",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "new-credit-union-v-mehlhorn-2024-08-13",
-          "name": "N.E.W. Credit Union v. Mehlhorn",
-          "court": "Wisconsin C.A.",
-          "judge": "",
-          "date": "2024-08-13",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "The court pointed out: \"In its brief, the Credit Union points out that the cases cited by Mehlhorn do not exist and speculates that Mehlhorn used an artificial intelligence program to draft her brief-in-chief. In her reply brief, Mehlhorn does not re",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "appellate"
-          ],
-          "source_url": "https://www.wicourts.gov/ca/smd/DisplayDocument.pdf?content=pdf&seqNo=837468"
-        },
-        {
-          "id": "plumbers-gasfitters-union-v-morris-plumbing-2024-04-18",
-          "name": "Plumbers & Gasfitters Union v. Morris Plumbing",
-          "court": "E.D. Wisconsin",
-          "judge": "",
-          "date": "2024-04-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "civil",
-            "small-firm"
-          ],
-          "source_url": "https://docs.justia.com/cases/federal/district-courts/wisconsin/wiedce/2:2023cv00616/103652/33"
         }
       ]
     },
@@ -13435,471 +13961,6 @@
             "appellate",
             "small-firm",
             "multi-attorney"
-          ],
-          "source_url": ""
-        }
-      ]
-    },
-    {
-      "state": "MN",
-      "count": 10,
-      "total": 8472,
-      "severities": {
-        "low": 6,
-        "medium": 2,
-        "high": 2
-      },
-      "cases": [
-        {
-          "id": "the-advocates-for-human-rights-and-lhm-v-us-department-of-homeland-security-et-a",
-          "name": "The Advocates for Human Rights and L.H.M. v. U.S. Department of Homeland Security, et al.",
-          "court": "D. Minnesota",
-          "judge": "",
-          "date": "2026-03-26",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fabricated-quotes",
-            "immigration",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "sophia-madigan-v-graco-inc-2026-02-04",
-          "name": "Sophia Madigan v. Graco Inc.",
-          "court": "D. Minnesota",
-          "judge": "",
-          "date": "2026-02-04",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "civil",
-            "trial"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "yang-v-university-of-minnesota-2026-02-02",
-          "name": "Yang v. University of Minnesota",
-          "court": "CA Minnesota",
-          "judge": "",
-          "date": "2026-02-02",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "appellate"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "ramos-v-ramos-2026-01-07",
-          "name": "Ramos v. Ramos",
-          "court": "CA Minnesota",
-          "judge": "",
-          "date": "2026-01-07",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "appellate",
-            "family"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "nuvola-llc-v-wright-2025-11-21",
-          "name": "Nuvola, LLC v. Wright",
-          "court": "Minnesota DC",
-          "judge": "",
-          "date": "2025-11-21",
-          "amount": 1000,
-          "amount_display": "$1.0K",
-          "severity": "high",
-          "tool": "Unidentified",
-          "summary": "",
-          "sanction_types": [
-            "monetary",
-            "training-order",
-            "bar-referral",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "training-ordered",
-            "bar-referral",
-            "civil"
-          ],
-          "source_url": "https://damiencharlotin.comRobert Freund"
-        },
-        {
-          "id": "james-andrew-grimmer-v-citibank-na-2025-11-07",
-          "name": "James Andrew Grimmer v. Citibank, N.A.",
-          "court": "D. Minnesota",
-          "judge": "",
-          "date": "2025-11-07",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Plaintiff's opposition brief cited numerous nonexistent cases. Defendant identified the fabricated citations in its reply; plaintiff admitted reliance on an AI-based drafting tool and apologized. The court confirmed several cited cases do not exist b",
-          "sanction_types": [
-            "case-dismissed"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "leila-kasso-v-police-officers-federation-of-minneapolis-2025-10-21",
-          "name": "Leila Kasso v. Police Officers’ Federation of Minneapolis",
-          "court": "D. Minnesota",
-          "judge": "",
-          "date": "2025-10-21",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "The City argued—and the Court found—that the pro se plaintiff repeatedly cited nonexistent or inaccurately attributed caselaw likely generated by AI. The Court found these citations violated Rule 11, warned the plaintiff, and declined to award fees o",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "employment"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "twyla-leach-minnesota-dhs-et-al-2025-10-17",
-          "name": "Twyla Leach Minnesota DHS et al.",
-          "court": "D. Minnesota",
-          "judge": "",
-          "date": "2025-10-17",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fabricated-quotes",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "loftong-v-grove-farms-2025-09-26",
-          "name": "Loftong v. Grove Farms",
-          "court": "Cir. Ct., DeSoto Minnesota",
-          "judge": "",
-          "date": "2025-09-26",
-          "amount": 7472,
-          "amount_display": "$7.5K",
-          "severity": "medium",
-          "tool": "FastCase",
-          "summary": "",
-          "sanction_types": [
-            "monetary",
-            "training-order",
-            "bar-referral",
-            "referral"
-          ],
-          "tags": [
-            "fake-citations",
-            "paid-tool",
-            "civil",
-            "training-ordered",
-            "bar-referral"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "kohls-v-ellison-2025-01-10",
-          "name": "Kohls v. Ellison",
-          "court": "Minnesota",
-          "judge": "",
-          "date": "2025-01-10",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "ChatGPT / OpenAI",
-          "summary": "AI UseProfessor Jeff Hancock, a Stanford University expert on AI and misinformation, used GPT-4o to assist in drafting an expert declaration submitted by the Minnesota Attorney General's office in defense of a state law regulating AI deepfakes in ele",
-          "sanction_types": [
-            "struck-pleading",
-            "published-opinion"
-          ],
-          "tags": [
-            "fake-citations",
-            "consumer-tool",
-            "government-lawyer",
-            "civil"
-          ],
-          "source_url": "https://reason.com/volokh/2024/11/19/apparent-ai-hallucinations-in-misinformation-experts-court-filing-supporting-anti-ai-misinformation-law/"
-        }
-      ]
-    },
-    {
-      "state": "NC",
-      "count": 10,
-      "total": 11200,
-      "severities": {
-        "low": 7,
-        "medium": 2,
-        "high": 1
-      },
-      "cases": [
-        {
-          "id": "curry-v-capital-one-auto-finance-2026-03-26",
-          "name": "Curry v. Capital One Auto Finance",
-          "court": "E.D. North Carolina",
-          "judge": "",
-          "date": "2026-03-26",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "The court found the plaintiff's proposed amended complaints included fabricated legal authorities — including fictitious provisions of a purported North Carolina Identity Theft Protection Act and other fabricated citations — and concluded the filings",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil",
-            "trial"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "forest-ridge-townhomes-corporation-of-greensboro-v-heag-pain-management-cente-et",
-          "name": "Forest Ridge Townhomes Corporation of Greensboro v. Heag Pain Management Cente et al.",
-          "court": "CA North Carolina",
-          "judge": "",
-          "date": "2026-03-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "Perplexity",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated",
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "consumer-tool",
-            "appellate",
-            "civil"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "united-states-of-america-v-lorenzio-reshaud-simmons-2026-03-10",
-          "name": "United States of America v. Lorenzio Reshaud Simmons",
-          "court": "E.D. North Carolina",
-          "judge": "",
-          "date": "2026-03-10",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "criminal",
-            "trial"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "derence-v-fivehouse-v-united-states-department-of-defense-et-al-2026-03-02",
-          "name": "Derence V. Fivehouse v. United States Department of Defense et al.",
-          "court": "E.D. North Carolina",
-          "judge": "",
-          "date": "2026-03-02",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "AI (implied, unspecified)",
-          "summary": "It was later reported that the prosecutor at stake resigned over the accident.",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "government-lawyer",
-            "multi-attorney",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "ebony-sherisse-lucas-v-charles-w-scharf-et-al-2026-02-24",
-          "name": "Ebony Sherisse Lucas v. Charles W. Scharf, et al.",
-          "court": "W.D. North Carolina",
-          "judge": "",
-          "date": "2026-02-24",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "reketta-l-montgomery-v-acquisition-experts-llc-2026-01-13",
-          "name": "Reketta L. Montgomery v. Acquisition Experts, LLC",
-          "court": "E.D. North Carolina",
-          "judge": "",
-          "date": "2026-01-13",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "in-re-bryant-2025-11-18",
-          "name": "In re Bryant",
-          "court": "M.D. North Carolina (Bankruptcy)",
-          "judge": "",
-          "date": "2025-11-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "pro-se",
-            "bankruptcy"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "jacob-doe-v-the-university-of-north-carolina-system-2025-11-10",
-          "name": "Jacob Doe v. The University of North Carolina System",
-          "court": "W.D. North Carolina",
-          "judge": "",
-          "date": "2025-11-10",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "civil",
-            "trial"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "santree-v-eveangel-hines-2025-09-17",
-          "name": "Santree v. Eveangel Hines",
-          "court": "CA North Carolina",
-          "judge": "",
-          "date": "2025-09-17",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Defendant's reply brief contained citations that did not support her arguments and included at least one non-existent case citation; the court concluded these errors suggest use of AI and treated the issues as abandonment under Rule 28(b)(6), dismiss",
-          "sanction_types": [
-            "case-dismissed",
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "appellate"
-          ],
-          "source_url": "https://damiencharlotin.comJesse Schaefer"
-        },
-        {
-          "id": "in-re-ryan-lashon-ford-2025-07-29",
-          "name": "In re: Ryan Lashon Ford",
-          "court": "W.D. North Carolina (Bankruptcy)",
-          "judge": "",
-          "date": "2025-07-29",
-          "amount": 11200,
-          "amount_display": "$11.2K",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "The civil contempt were later terminated and the accrued sanctions reduced to a money judgment. See here.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "bankruptcy"
           ],
           "source_url": ""
         }
@@ -14852,10 +14913,10 @@
     },
     {
       "state": "HI",
-      "count": 6,
+      "count": 7,
       "total": 200,
       "severities": {
-        "low": 6
+        "low": 7
       },
       "cases": [
         {
@@ -14919,6 +14980,26 @@
           "tags": [
             "pro-se",
             "fake-citations"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "iskenderian-v-southeastern-2025-06-23",
+          "name": "Iskenderian v. Southeastern",
+          "court": "Hawai'i",
+          "judge": "",
+          "date": "2025-06-23",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unspecified AI",
+          "summary": "After other side pointed out that all authorities cited were fictitious, Counsel admitted it in brief. The court seemingly did not react.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "civil"
           ],
           "source_url": ""
         },
@@ -15473,107 +15554,6 @@
       ]
     },
     {
-      "state": "PR",
-      "count": 4,
-      "total": 25493,
-      "severities": {
-        "medium": 3,
-        "high": 1
-      },
-      "cases": [
-        {
-          "id": "rivera-carrasquillo-v-usa-2025-11-07",
-          "name": "Rivera Carrasquillo v. USA",
-          "court": "D. Puerto Rico",
-          "judge": "",
-          "date": "2025-11-07",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "criminal"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "puerto-rico-soccer-league-nfp-corp-et-al-v-federación-puertorriqueña-de-futbol-e",
-          "name": "Puerto Rico Soccer League NFP, Corp., et al. v. Federación Puertorriqueña de Futbol, et al.",
-          "court": "D.C. Puerto Rico",
-          "judge": "",
-          "date": "2025-09-23",
-          "amount": 24492,
-          "amount_display": "$24.5K",
-          "severity": "high",
-          "tool": "Unidentified",
-          "summary": "In the Order, the court stated: \"A simple Google search would have shown the problems in some of Plaintiffs’ citations. In other instances, a quick search of the opinion Plaintiffs cited to would have revealed problems. Levying appropriate sanctions ",
-          "sanction_types": [
-            "monetary",
-            "published-opinion"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "civil",
-            "multi-attorney",
-            "published-opinion"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "fernando-betancourt-gómez-v-colegio-de-profesionales-2025-08-22",
-          "name": "Fernando Betancourt Gómez v. Colegio de Profesionales",
-          "court": "Puerto Rico",
-          "judge": "",
-          "date": "2025-08-22",
-          "amount": 1000,
-          "amount_display": "$1.0K",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "",
-          "sanction_types": [
-            "monetary",
-            "referral",
-            "bar-referral"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "civil"
-          ],
-          "source_url": ""
-        },
-        {
-          "id": "mintvest-capital-ltd-v-nydig-trust-company-et-al-2025-06-23",
-          "name": "Mintvest Capital, LTD v. NYDIG Trust Company, et al.",
-          "court": "D.C. Puerto Rico",
-          "judge": "",
-          "date": "2025-06-23",
-          "amount": 1,
-          "amount_display": "$1",
-          "severity": "medium",
-          "tool": "Claude / Anthropic",
-          "summary": "Plaintiff's counsel in the case of Mintvest Capital, LTD v. NYDIG Trust Company, et al., was found to have included numerous non-existent cases, false quotations, and misrepresented precedents in their filings. The errors were attributed to the use o",
-          "sanction_types": [
-            "monetary",
-            "referral"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "civil"
-          ],
-          "source_url": ""
-        }
-      ]
-    },
-    {
       "state": "ID",
       "count": 3,
       "total": 0,
@@ -15874,6 +15854,116 @@
       ]
     },
     {
+      "state": "GU",
+      "count": 2,
+      "total": 0,
+      "severities": {
+        "low": 1,
+        "medium": 1
+      },
+      "cases": [
+        {
+          "id": "eddie-lawrence-quitugua-v-donna-p-quitugua-et-al-2025-12-03",
+          "name": "Eddie Lawrence Quitugua v. Donna P. Quitugua, et al.",
+          "court": "D. Guam",
+          "judge": "",
+          "date": "2025-12-03",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "family"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "hocog-v-cook-huynh-2025-08-11",
+          "name": "Hocog v. Cook-Huynh",
+          "court": "Superior Court of Guam",
+          "judge": "",
+          "date": "2025-08-11",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "ordered-to-show-cause",
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "trial",
+            "civil"
+          ],
+          "source_url": ""
+        }
+      ]
+    },
+    {
+      "state": "PR",
+      "count": 2,
+      "total": 1000,
+      "severities": {
+        "medium": 2
+      },
+      "cases": [
+        {
+          "id": "rivera-carrasquillo-v-usa-2025-11-07",
+          "name": "Rivera Carrasquillo v. USA",
+          "court": "D. Puerto Rico",
+          "judge": "",
+          "date": "2025-11-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "criminal"
+          ],
+          "source_url": ""
+        },
+        {
+          "id": "fernando-betancourt-gómez-v-colegio-de-profesionales-2025-08-22",
+          "name": "Fernando Betancourt Gómez v. Colegio de Profesionales",
+          "court": "Puerto Rico",
+          "judge": "",
+          "date": "2025-08-22",
+          "amount": 1000,
+          "amount_display": "$1.0K",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "",
+          "sanction_types": [
+            "monetary",
+            "referral",
+            "bar-referral"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "civil"
+          ],
+          "source_url": ""
+        }
+      ]
+    },
+    {
       "state": "WY",
       "count": 2,
       "total": 5000,
@@ -16025,6 +16115,37 @@
           "source_url": "https://damiencharlotin.comJesse Schaefer"
         }
       ]
+    },
+    {
+      "state": "MP",
+      "count": 1,
+      "total": 0,
+      "severities": {
+        "low": 1
+      },
+      "cases": [
+        {
+          "id": "zajradhara-v-nmc-2025-07-22",
+          "name": "Zajradhara v. NMC",
+          "court": "Supreme Court, Northern Mariana Islands",
+          "judge": "",
+          "date": "2025-07-22",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "The pro se litigant filed an appeal with the Supreme Court of the Commonwealth of the Northern Mariana Islands, which was dismissed with prejudice due to his repeated violations of court rules, including citing non-existent legal authorities and hall",
+          "sanction_types": [
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "appellate"
+          ],
+          "source_url": ""
+        }
+      ]
     }
   ],
   "by_week": {
@@ -16148,18 +16269,18 @@
     "LEAP legal software": 1
   },
   "by_circuit": {
-    "9th Circuit": 246,
-    "2nd Circuit": 91,
+    "9th Circuit": 247,
+    "2nd Circuit": 93,
     "5th Circuit": 81,
-    "7th Circuit": 76,
     "11th Circuit": 76,
+    "7th Circuit": 75,
     "10th Circuit": 72,
     "6th Circuit": 67,
-    "3rd Circuit": 49,
-    "4th Circuit": 46,
-    "8th Circuit": 44,
-    "D.C. Circuit": 43,
-    "1st Circuit": 18
+    "D.C. Circuit": 58,
+    "4th Circuit": 49,
+    "3rd Circuit": 48,
+    "8th Circuit": 47,
+    "1st Circuit": 16
   },
   "pace_weeks": [
     {

@@ -8,7 +8,7 @@
 ## Executive snapshot
 
 - **1,348 documented AI-hallucination cases** tracked worldwide through 2026-04
-- **932 US cases** across **50 states** and all 12 federal circuits
+- **932 US cases** across **52 states** and all 12 federal circuits
 - **19 career-ending** · **102 high-severity** US sanctions
 - **$1.0M US monetary sanctions** issued across 138 rulings with fines
 - **Largest US sanction:** $109.7K — Couvrette v. Wisnovsky
@@ -29,36 +29,36 @@
 
 | Rank | State | Cases | Monetary |
 |---|---|---|---|
-| 1 | California (CA) | 128 | $257.6K |
-| 2 | New York (NY) | 76 | $37.0K |
-| 3 | Texas (TX) | 54 | $8.5K |
-| 4 | Florida (FL) | 47 | $99.0K |
-| 5 | District of Columbia (DC) | 43 | $3.3K |
+| 1 | California (CA) | 127 | $257.6K |
+| 2 | New York (NY) | 78 | $38.0K |
+| 3 | District of Columbia (DC) | 58 | $27.7K |
+| 4 | Texas (TX) | 54 | $8.5K |
+| 5 | Florida (FL) | 47 | $99.0K |
 | 6 | Illinois (IL) | 40 | $86.6K |
 | 7 | Michigan (MI) | 31 | $2.1K |
 | 8 | Washington (WA) | 30 | $6.3K |
 | 9 | Arizona (AZ) | 30 | $2 |
-| 10 | Indiana (IN) | 25 | $15.0K |
-| 11 | Nevada (NV) | 25 | $5.0K |
-| 12 | Pennsylvania (PA) | 23 | $17.5K |
-| 13 | Colorado (CO) | 23 | $34.0K |
+| 10 | Nevada (NV) | 25 | $5.0K |
+| 11 | Pennsylvania (PA) | 23 | $17.5K |
+| 12 | Colorado (CO) | 23 | $34.0K |
+| 13 | Indiana (IN) | 23 | $15.0K |
 | 14 | Ohio (OH) | 23 | $17.0K |
-| 15 | Oregon (OR) | 20 | $130.2K |
+| 15 | Oregon (OR) | 19 | $130.2K |
 
 ### Top 10 US states by total monetary sanctions
 
 | Rank | State | Total | Cases |
 |---|---|---|---|
-| 1 | California (CA) | $257.6K | 128 |
-| 2 | Oregon (OR) | $130.2K | 20 |
+| 1 | California (CA) | $257.6K | 127 |
+| 2 | Oregon (OR) | $130.2K | 19 |
 | 3 | Florida (FL) | $99.0K | 47 |
 | 4 | Alabama (AL) | $96.2K | 12 |
 | 5 | Illinois (IL) | $86.6K | 40 |
-| 6 | New York (NY) | $37.0K | 76 |
+| 6 | New York (NY) | $38.0K | 78 |
 | 7 | Colorado (CO) | $34.0K | 23 |
 | 8 | Oklahoma (OK) | $29.4K | 16 |
-| 9 | Mississippi (MS) | $25.9K | 16 |
-| 10 | Puerto Rico (PR) | $25.5K | 4 |
+| 9 | District of Columbia (DC) | $27.7K | 58 |
+| 10 | Mississippi (MS) | $25.9K | 16 |
 
 ### International footprint
 
@@ -389,6 +389,6 @@ Many sanctioned cases involve a **supervising attorney signing off on AI-assiste
 
 ---
 
-*1,348 cases · 50 US states · 26 countries · data as of 2026-04-24*
+*1,348 cases · 52 US states · 26 countries · data as of 2026-04-24*
 
 **AI Vortex** — independent AI intelligence for the legal market · aivortex.io/legal

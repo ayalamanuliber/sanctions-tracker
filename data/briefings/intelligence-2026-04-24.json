@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-24T19:20:30.399580Z",
+  "generated_at": "2026-04-24T20:37:29.020719Z",
   "totals": {
     "global_cases": 1348,
     "us_cases": 932,
     "intl_cases": 416,
     "countries": 26,
-    "us_states": 50,
+    "us_states": 52,
     "us_monetary_total_usd": 1016551,
     "global_monetary_total_usd": 2410982,
     "enriched": 1348,
@@ -27,14 +27,20 @@
     {
       "state": "CA",
       "name": "California",
-      "cases": 128,
+      "cases": 127,
       "total_usd": 257553
     },
     {
       "state": "NY",
       "name": "New York",
-      "cases": 76,
-      "total_usd": 37001
+      "cases": 78,
+      "total_usd": 38001
+    },
+    {
+      "state": "DC",
+      "name": "District of Columbia",
+      "cases": 58,
+      "total_usd": 27744
     },
     {
       "state": "TX",
@@ -47,12 +53,6 @@
       "name": "Florida",
       "cases": 47,
       "total_usd": 99019
-    },
-    {
-      "state": "DC",
-      "name": "District of Columbia",
-      "cases": 43,
-      "total_usd": 3251
     },
     {
       "state": "IL",
@@ -79,12 +79,6 @@
       "total_usd": 2
     },
     {
-      "state": "IN",
-      "name": "Indiana",
-      "cases": 25,
-      "total_usd": 15001
-    },
-    {
       "state": "NV",
       "name": "Nevada",
       "cases": 25,
@@ -103,6 +97,12 @@
       "total_usd": 34000
     },
     {
+      "state": "IN",
+      "name": "Indiana",
+      "cases": 23,
+      "total_usd": 15001
+    },
+    {
       "state": "OH",
       "name": "Ohio",
       "cases": 23,
@@ -111,7 +111,7 @@
     {
       "state": "OR",
       "name": "Oregon",
-      "cases": 20,
+      "cases": 19,
       "total_usd": 130244
     }
   ],
@@ -120,13 +120,13 @@
       "state": "CA",
       "name": "California",
       "total_usd": 257553,
-      "cases": 128
+      "cases": 127
     },
     {
       "state": "OR",
       "name": "Oregon",
       "total_usd": 130244,
-      "cases": 20
+      "cases": 19
     },
     {
       "state": "FL",
@@ -149,8 +149,8 @@
     {
       "state": "NY",
       "name": "New York",
-      "total_usd": 37001,
-      "cases": 76
+      "total_usd": 38001,
+      "cases": 78
     },
     {
       "state": "CO",
@@ -165,16 +165,16 @@
       "cases": 16
     },
     {
+      "state": "DC",
+      "name": "District of Columbia",
+      "total_usd": 27744,
+      "cases": 58
+    },
+    {
       "state": "MS",
       "name": "Mississippi",
       "total_usd": 25884,
       "cases": 16
-    },
-    {
-      "state": "PR",
-      "name": "Puerto Rico",
-      "total_usd": 25493,
-      "cases": 4
     }
   ],
   "top_countries": [

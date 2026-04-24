@@ -7,6 +7,17 @@ import type { Topology, GeometryCollection } from "topojson-specification";
 import sanctionsRaw from "@/data/sanctions.json";
 import metaRaw from "@/data/meta.json";
 
+const META = metaRaw as unknown as {
+  total_cases: number;
+  us_cases: number;
+  by_country: Record<string, number>;
+  pace_weeks: Array<{ week: string; count: number }>;
+  by_month: Record<string, number>;
+  largest_single_sanction: number;
+  severity_counts: Record<string, number>;
+  last_updated: string;
+};
+
 interface Case {
   id: string;
   case_name: string;
@@ -98,6 +109,10 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
 
   const [activeSev, setActiveSev] = useState<string>("all");
   const [railTab, setRailTab] = useState<"cases" | "states">("cases");
+  const [scope, setScope] = useState<"us" | "world">("us");
+  const [requestCountry, setRequestCountry] = useState("");
+  const [requestEmail, setRequestEmail] = useState("");
+  const [requestSent, setRequestSent] = useState(false);
   const [selectedCase, setSelectedCase] = useState<Case | null>(null);
   const [hoverCaseId, setHoverCaseId] = useState<string | null>(null);
   const [zoomLevel, setZoomLevel] = useState(1);
@@ -336,34 +351,244 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
               Every documented AI-hallucination sanction across US courts, plotted in real time. Pin size = sanction amount. Pin color = severity. Click any pin for the full case.
             </p>
           </div>
-          <a
-            href="#assessment"
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: "10px",
-              fontWeight: 700,
-              color: "var(--text-300)",
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              textDecoration: "none",
-              padding: "10px 16px",
-              border: "1px solid var(--border)",
-              background: "transparent",
-              transition: "all 0.15s",
-              flexShrink: 0,
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "10px",
-              alignSelf: "flex-start",
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = "var(--text-100)"; e.currentTarget.style.borderColor = "var(--text-500)"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.color = "var(--text-300)"; e.currentTarget.style.borderColor = "var(--border)"; }}
-          >
-            Skip to assessment →
-          </a>
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px", alignSelf: "flex-start", flexShrink: 0 }}>
+            {/* Scope toggle US / World */}
+            <div style={{ display: "inline-flex", border: "1px solid var(--border)" }}>
+              <button
+                onClick={() => setScope("us")}
+                style={{
+                  padding: "8px 14px",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  letterSpacing: "0.22em",
+                  textTransform: "uppercase",
+                  cursor: "pointer",
+                  background: scope === "us" ? "var(--bg-card)" : "transparent",
+                  border: "none",
+                  borderRight: "1px solid var(--border-soft)",
+                  color: scope === "us" ? "var(--text-100)" : "var(--text-500)",
+                }}
+              >
+                US · {META.us_cases}
+              </button>
+              <button
+                onClick={() => setScope("world")}
+                style={{
+                  padding: "8px 14px",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  letterSpacing: "0.22em",
+                  textTransform: "uppercase",
+                  cursor: "pointer",
+                  background: scope === "world" ? "var(--bg-card)" : "transparent",
+                  border: "none",
+                  color: scope === "world" ? "var(--text-100)" : "var(--text-500)",
+                }}
+              >
+                Worldwide · {META.total_cases}
+              </button>
+            </div>
+            <a
+              href="#assessment"
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "10px",
+                fontWeight: 700,
+                color: "var(--text-300)",
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                textDecoration: "none",
+                padding: "10px 16px",
+                border: "1px solid var(--border)",
+                background: "transparent",
+                transition: "all 0.15s",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "10px",
+                justifyContent: "center",
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = "var(--text-100)"; e.currentTarget.style.borderColor = "var(--text-500)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = "var(--text-300)"; e.currentTarget.style.borderColor = "var(--border)"; }}
+            >
+              Skip to assessment →
+            </a>
+          </div>
         </div>
 
-        <div className="smv2-card">
+        {/* Pace strip */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: "1px",
+            background: "var(--border)",
+            border: "1px solid var(--border)",
+            marginBottom: "20px",
+          }}
+          className="smv2-pace"
+        >
+          {(() => {
+            const weeks = META.pace_weeks || [];
+            const last = weeks[weeks.length - 1]?.count ?? 0;
+            const thisMonth = Object.entries(META.by_month || {}).sort().slice(-1)[0]?.[1] ?? 0;
+            const peakDaySev = META.severity_counts || {};
+            const dangerous = (peakDaySev["career-ending"] || 0) + (peakDaySev["high"] || 0);
+            return [
+              { label: "This week", value: last, note: weeks[weeks.length - 1]?.week || "" },
+              { label: "Latest month", value: thisMonth, note: Object.keys(META.by_month || {}).sort().slice(-1)[0] || "" },
+              { label: "High-risk cases", value: dangerous, note: "career-ending + high" },
+              { label: "Largest fine", value: "$" + ((META.largest_single_sanction || 0) / 1000).toFixed(1) + "K", note: "single ruling" },
+            ];
+          })().map((item, i) => (
+            <div key={i} style={{ background: "var(--bg-card)", padding: "16px 18px" }}>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: "9px", fontWeight: 700, color: "var(--text-500)", letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: "6px" }}>
+                {item.label}
+              </div>
+              <div style={{ fontFamily: "var(--font-serif)", fontSize: "24px", fontWeight: 500, color: "var(--text-100)", letterSpacing: "-0.025em", fontStyle: "italic", lineHeight: 1 }}>
+                {item.value}
+              </div>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: "9px", fontWeight: 600, color: "var(--text-600)", letterSpacing: "0.1em", marginTop: "6px" }}>
+                {item.note}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Conditional: US map OR Worldwide teaser */}
+        {scope === "world" ? (
+          <div
+            style={{
+              background: "var(--bg-card)",
+              border: "1px solid var(--border)",
+              padding: "56px 48px",
+            }}
+          >
+            <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "48px", alignItems: "center" }} className="smv2-world-grid">
+              <div>
+                <div
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "10px",
+                    fontWeight: 700,
+                    color: "var(--amber)",
+                    letterSpacing: "0.22em",
+                    textTransform: "uppercase",
+                    marginBottom: "12px",
+                  }}
+                >
+                  Worldwide · Coming soon
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "clamp(24px, 3vw, 34px)",
+                    fontWeight: 500,
+                    color: "var(--text-100)",
+                    letterSpacing: "-0.025em",
+                    lineHeight: 1.15,
+                    marginBottom: "18px",
+                  }}
+                >
+                  We&rsquo;re tracking <em style={{ color: "var(--amber)" }}>{META.total_cases - META.us_cases}</em> international cases across <em style={{ color: "var(--blue)" }}>{Object.keys(META.by_country || {}).filter(k => k !== "US" && k !== "OTHER" && k !== "UNKNOWN").length}</em> countries.
+                </h3>
+                <p style={{ color: "var(--text-400)", fontSize: "14px", lineHeight: 1.7, fontWeight: 300, marginBottom: "20px" }}>
+                  The interactive globe view is rolling out next. Top non-US jurisdictions by case count:
+                </p>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px" }}>
+                  {Object.entries(META.by_country).filter(([k]) => k !== "US" && k !== "OTHER" && k !== "UNKNOWN").slice(0, 8).map(([code, n]) => (
+                    <div key={code} style={{ display: "flex", justifyContent: "space-between", fontFamily: "var(--font-mono)", fontSize: "11px", padding: "8px 12px", border: "1px solid var(--border-soft)", background: "var(--bg-subtle)" }}>
+                      <span style={{ color: "var(--text-300)", letterSpacing: "0.1em" }}>{code}</span>
+                      <span style={{ color: "var(--text-500)" }}>{n}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <div
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "10px",
+                    fontWeight: 700,
+                    color: "var(--text-500)",
+                    letterSpacing: "0.22em",
+                    textTransform: "uppercase",
+                    marginBottom: "12px",
+                  }}
+                >
+                  Request your country
+                </div>
+                <p style={{ color: "var(--text-400)", fontSize: "13px", lineHeight: 1.6, fontWeight: 300, marginBottom: "16px" }}>
+                  We&rsquo;re prioritizing coverage by demand. Tell us your jurisdiction and we&rsquo;ll notify you when it&rsquo;s mapped.
+                </p>
+                {requestSent ? (
+                  <div style={{ padding: "16px 20px", border: "1px solid rgba(34,197,94,0.3)", background: "rgba(34,197,94,0.06)", color: "#22c55e", fontFamily: "var(--font-mono)", fontSize: "11px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase" }}>
+                    ✓ On the list
+                  </div>
+                ) : (
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      if (!requestCountry.trim() || !requestEmail.trim()) return;
+                      try {
+                        const arr = JSON.parse(localStorage.getItem("sv_country_reqs") || "[]");
+                        arr.push({ country: requestCountry, email: requestEmail, at: new Date().toISOString() });
+                        localStorage.setItem("sv_country_reqs", JSON.stringify(arr));
+                      } catch {}
+                      setRequestSent(true);
+                    }}
+                    style={{ display: "flex", flexDirection: "column", gap: "8px" }}
+                  >
+                    <input
+                      type="text"
+                      placeholder="Country or jurisdiction"
+                      value={requestCountry}
+                      onChange={(e) => setRequestCountry(e.target.value)}
+                      required
+                      style={{
+                        padding: "12px 14px",
+                        background: "var(--bg-subtle)",
+                        border: "1px solid var(--border)",
+                        color: "var(--text-100)",
+                        fontFamily: "var(--font-main)",
+                        fontSize: "13px",
+                        outline: "none",
+                      }}
+                    />
+                    <input
+                      type="email"
+                      placeholder="attorney@firm.com"
+                      value={requestEmail}
+                      onChange={(e) => setRequestEmail(e.target.value)}
+                      required
+                      style={{
+                        padding: "12px 14px",
+                        background: "var(--bg-subtle)",
+                        border: "1px solid var(--border)",
+                        color: "var(--text-100)",
+                        fontFamily: "var(--font-main)",
+                        fontSize: "13px",
+                        outline: "none",
+                      }}
+                    />
+                    <button
+                      type="submit"
+                      className="hero-btn-blue"
+                      style={{ padding: "12px 20px", fontSize: "11px", cursor: "pointer", border: "none" }}
+                    >
+                      Notify me
+                    </button>
+                  </form>
+                )}
+              </div>
+            </div>
+            <style>{`
+              @media (max-width: 880px) { .smv2-world-grid { grid-template-columns: 1fr !important; } }
+            `}</style>
+          </div>
+        ) : (
+          <div className="smv2-card">
           {/* Map header: severity chips */}
           <div className="smv2-head">
             <div className="smv2-head-left">
@@ -534,6 +759,7 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
             </div>
           </div>
         </div>
+        )}
       </div>
 
       {/* Drawer */}

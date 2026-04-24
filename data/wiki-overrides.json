@@ -1,0 +1,13 @@
+{
+  "_readme": "Per-case manual overrides. Edit entries and re-run scripts/merge_enrichments.py to rebuild sanctions.json with these overlays applied. All fields optional. 'reviewed' marks a case as human-verified; 'wiki_notes' adds partner-facing commentary; 'related_case_ids' links cases in the precedent web.",
+  "_schema": {
+    "<case-id>": {
+      "reviewed": true,
+      "reviewed_at": "2026-04-24",
+      "wiki_notes": "Optional partner-facing commentary. Markdown allowed.",
+      "related_case_ids": ["another-case-slug", "yet-another"],
+      "severity_override": "career-ending",
+      "lesson_override": "Override the auto-generated lesson with a sharper version."
+    }
+  }
+}

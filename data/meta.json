@@ -7,6 +7,8 @@
   "countries_tracked": 28,
   "enriched_count": 1348,
   "enrichment_coverage_pct": 100.0,
+  "reviewed_count": 0,
+  "reviewed_coverage_pct": 0.0,
   "monetary_sanctions_total_usd": 2410982,
   "largest_single_sanction": 620000,
   "avg_sanction": 10715,

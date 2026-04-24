@@ -25,7 +25,15 @@ def main():
         except Exception as e:
             print(f"skip {f.name}: {e}")
 
+    # Wiki overrides — human edits layered on top of AI enrichment
+    overrides_path = ROOT / "data" / "wiki-overrides.json"
+    overrides = {}
+    if overrides_path.exists():
+        raw_ov = json.loads(overrides_path.read_text())
+        overrides = {k: v for k, v in raw_ov.items() if not k.startswith("_") and isinstance(v, dict)}
+
     enriched_count = 0
+    reviewed_count = 0
     now = datetime.utcnow().strftime("%Y-%m-%d")
     for cid, patch in enrichments.items():
         if cid not in by_id:
@@ -48,7 +56,31 @@ def main():
             c["confidence"] = conf
         c["enriched"] = True
         c["enriched_at"] = now
+        # Wiki-grade placeholders
+        c.setdefault("reviewed", False)
+        c.setdefault("reviewed_at", None)
+        c.setdefault("wiki_notes", None)
+        c.setdefault("related_case_ids", [])
         enriched_count += 1
+
+    # Apply human overrides on top of AI enrichment
+    for cid, ov in overrides.items():
+        if cid not in by_id:
+            continue
+        c = by_id[cid]
+        if "reviewed" in ov:
+            c["reviewed"] = bool(ov["reviewed"])
+            if c["reviewed"]:
+                c["reviewed_at"] = ov.get("reviewed_at") or now
+                reviewed_count += 1
+        if "wiki_notes" in ov and ov["wiki_notes"]:
+            c["wiki_notes"] = ov["wiki_notes"]
+        if "related_case_ids" in ov:
+            c["related_case_ids"] = [r for r in (ov["related_case_ids"] or []) if isinstance(r, str)]
+        if ov.get("severity_override") in ("low","medium","high","career-ending"):
+            c["severity"] = ov["severity_override"]
+        if ov.get("lesson_override"):
+            c["lesson"] = ov["lesson_override"]
 
     # Write canonical sanctions.json
     OUT.write_text(json.dumps(cases, ensure_ascii=False, indent=2))
@@ -116,6 +148,8 @@ def main():
         "countries_tracked": len(by_country),
         "enriched_count": enriched_count,
         "enrichment_coverage_pct": round(enriched_count/len(cases)*100, 1) if cases else 0,
+        "reviewed_count": reviewed_count,
+        "reviewed_coverage_pct": round(reviewed_count/len(cases)*100, 1) if cases else 0,
         "monetary_sanctions_total_usd": sum(amounts),
         "largest_single_sanction": max(amounts) if amounts else 0,
         "avg_sanction": int(sum(amounts)/len(amounts)) if amounts else 0,

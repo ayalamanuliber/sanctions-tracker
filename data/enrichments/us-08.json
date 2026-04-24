@@ -1,0 +1,162 @@
+{
+  "domingo-beato-estrella-v-m-arviza-2026-03-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "esterra-commons-venture-llc-dba-verde-esterra-park-v-justin-norton-2026-03-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "shaquan-pridgen-v-amazoncom-services-llc-2026-03-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "meriland-keith-dillard-v-cbs-studios-inc-2026-03-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "albert-taylor-v-las-vegas-metropolitan-police-department-et-al-2026-03-13": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "whiting-v-city-of-athens-tenn-2026-03-13": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "bar-referral", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "appellate", "civil"],
+    "lesson": "Assume every AI citation is fabricated until a second attorney pulls the primary source and initials the brief.",
+    "confidence": "high"
+  },
+  "dsme-construction-co-ltd-2026-03-13": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["fake-citations", "administrative", "government-lawyer"],
+    "lesson": "Admitting AI fabrications early and striking the brief beats stonewalling — but still requires a firm verification protocol going forward.",
+    "confidence": "high"
+  },
+  "ac-appellant-v-hd-and-jc-2026-03-13": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "hartmann-v-davidson-2026-03-12": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "trial"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "in-re-scott-mitchell-obeginski-2026-03-12": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["professional", "warning"],
+    "tags": ["fake-citations", "appellate"],
+    "lesson": "Expect courts to impose forward-looking filing burdens (attach highlighted source copies) when AI fabrications are uncovered.",
+    "confidence": "medium"
+  },
+  "suiter-v-gm-general-motors-llc-2026-03-12": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "donte-mcclellon-v-e-rickard-warden-of-fci-otisville-et-al-2026-03-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "kateryna-maslovska-v-ekaterina-shigabetdinova-2026-03-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "checks-aciek-ateny-nai-v-national-asset-mortgage-llc-et-al-2026-03-11": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fabricated-quotes", "trial", "civil"],
+    "lesson": "Verify direct statutory quotes word-for-word against the code — altered statutory language triggers show-cause orders even absent Rule 11 sanctions.",
+    "confidence": "high"
+  },
+  "bolden-v-baltimore-gas-electric-co-in-re-eric-chibueze-nwaubani-2026-03-11": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["professional", "published-opinion", "warning"],
+    "tags": ["fake-citations", "appellate", "published-opinion", "civil"],
+    "lesson": "A public admonishment in a published appellate opinion is a career-marker — enforce pre-filing citation checks on every brief.",
+    "confidence": "high"
+  },
+  "traver-v-general-motors-financial-company-inc-et-al-2026-03-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "trial", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "samantha-roussell-v-the-bank-of-new-york-mellon-2026-03-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "dillon-v-myles-stephenson-et-al-2026-03-11": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["professional", "warning"],
+    "tags": ["fake-citations", "trial", "civil"],
+    "lesson": "Reporter citations must be pulled and confirmed — even one mismatched cite earns a public admonishment on the record.",
+    "confidence": "high"
+  },
+  "ak-v-mr-2026-03-10": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "hunter-v-tforce-freight-incorporated-2026-03-10": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "trial"],
+    "lesson": null,
+    "confidence": "low"
+  }
+}

@@ -1,0 +1,162 @@
+{
+ "william-mcnae-and-ronda-mcnae-v-arag-insurance-company-2025-11-13": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["monetary", "struck-pleading"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "nathan-strong-v-the-united-states-2025-11-13": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "administrative"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "robbin-y-miller-v-andrew-stuart-2025-11-13": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "richard-laroche-v-darla-sterett-laroche-2025-11-13": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol", "audit-trail"],
+  "sanction_types": ["professional", "published-opinion"],
+  "tags": ["fabricated-quotes", "family", "appellate", "published-opinion"],
+  "lesson": "Disclose AI-assisted drafting on the record and verify every quotation — unverified AI output propagates across every pending case you touch.",
+  "confidence": "high"
+ },
+ "david-j-donovan-v-kathryn-thorson-2025-11-12": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fabricated-quotes", "appellate", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "joshua-harris-v-pinnacle-bank-2025-11-12": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "jeffery-todd-henson-sr-v-lynn-a-espejo-2025-11-12": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "kuigoua-v-park-2025-11-10": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "jacob-doe-v-the-university-of-north-carolina-system-2025-11-10": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "fabricated-quotes", "civil", "trial"],
+  "lesson": "Check every jurisdictional tag on cited cases — a misidentified circuit can void your argument and draw a show-cause.",
+  "confidence": "high"
+ },
+ "united-states-v-thomas-czartorski-et-al-2025-11-10": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail", "attorney-training"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "consumer-tool", "criminal", "trial"],
+  "lesson": "Never feed cases into ChatGPT for 'favorable arguments' — fabrications flow back as quotes and holdings you cannot defend.",
+  "confidence": "high"
+ },
+ "shelton-v-parkland-health-2025-11-10": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "civil", "trial"],
+  "lesson": "Admonishment today is bar-referral tomorrow — build a verification log before the next brief goes out.",
+  "confidence": "high"
+ },
+ "kevin-l-swincher-et-al-v-fay-servicing-llc-et-al-2025-11-10": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "marques-johnson-v-capital-one-financial-corporation-2025-11-10": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fabricated-quotes", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "rivera-carrasquillo-v-usa-2025-11-07": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["fake-citations", "fabricated-quotes", "criminal"],
+  "lesson": "Verify every quotation against the slip opinion — invented Supreme Court language is the fastest route to Rule 11.",
+  "confidence": "medium"
+ },
+ "interest-of-m-o-w-2025-11-07": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["fake-citations", "family", "appellate"],
+  "lesson": "Appellate briefs get forensic treatment — one fabricated cite sinks the whole argument and your credibility with the panel.",
+  "confidence": "medium"
+ },
+ "james-andrew-grimmer-v-citibank-na-2025-11-07": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["case-dismissed"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "marc-henri-david-v-george-chiala-farms-inc-2025-11-07": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "fabricated-quotes", "civil", "employment"],
+  "lesson": "Misquoting a statute is as dangerous as inventing a case — pull the code text directly, never paraphrase from AI output.",
+  "confidence": "high"
+ },
+ "habib-miah-v-morgan-stanley-co-international-plc-et-al-2025-11-06": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "travis-c-mills-et-al-v-rocket-mortgage-llc-et-al-2025-11-06": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "jamison-warfield-v-wn-morehouse-truck-line-inc-2025-11-06": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["fake-citations", "civil", "trial"],
+  "lesson": "Jurisdictional dismissal does not erase fabricated citations from the record — opposing counsel will cite them in your next case.",
+  "confidence": "low"
+ }
+}

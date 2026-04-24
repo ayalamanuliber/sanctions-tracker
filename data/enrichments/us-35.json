@@ -1,0 +1,162 @@
+{
+  "poole-v-walmart-inc-2025-09-05": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "thompson-v-commissioner-of-social-security-administration-2025-09-05": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "administrative", "solo"],
+    "lesson": "If counsel has prior AI-citation incidents, require dual-attorney verification on every brief before filing.",
+    "confidence": "high"
+  },
+  "anthony-c-hill-v-workday-inc-2025-09-05": {
+    "severity": "high",
+    "policy_gap_ids": ["paid-tool-verification", "citation-verification", "incident-response", "attorney-training"],
+    "sanction_types": ["training-order", "professional"],
+    "tags": ["fake-citations", "paid-tool", "denial", "employment", "civil"],
+    "lesson": "Paid tools like CoCounsel or Westlaw do not absolve verification duty; blaming a tool glitch escalates sanctions.",
+    "confidence": "high"
+  },
+  "jason-stanford-v-behrooz-p-vida-et-al-2025-09-04": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "april-ann-nelson-v-navient-solutions-llc-et-al-2025-09-04": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "turner-v-garrels-2025-09-04": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "in-re-valsartan-2025-09-03": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil", "class-action"],
+    "lesson": "Vet expert reports for AI-generated citations before endorsing them; cross-examination exposure alone can sink credibility.",
+    "confidence": "high"
+  },
+  "steven-e-hobbs-sr-v-igor-goncharko-et-al-2025-09-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "pete-v-houston-methodist-hospital-2025-09-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "civil", "consumer-tool"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-re-whitehall-pharmacy-llc-2025-09-03": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "written-ai-policy", "approved-tools-list"],
+    "sanction_types": ["bar-referral", "professional", "referral"],
+    "tags": ["fake-citations", "bankruptcy", "small-firm", "bar-referral"],
+    "lesson": "Courts may decline monetary sanctions yet still refer counsel to the bar; admitting AI use does not avoid professional discipline.",
+    "confidence": "high"
+  },
+  "nixon-v-ken-ganley-ford-west-2025-09-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "blake-lewis-v-entergy-mississippi-llc-2025-09-03": {
+    "severity": "medium",
+    "policy_gap_ids": ["approved-tools-list", "citation-verification", "written-ai-policy", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "consumer-tool", "civil", "small-firm"],
+    "lesson": "Ban non-firm-approved consumer AI services in writing; unauthorized tool use is the fastest path to a show-cause order.",
+    "confidence": "high"
+  },
+  "davis-v-juvenile-detention-center-2025-09-02": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "small-firm"],
+    "lesson": "Require supervisor sign-off and documented citation checks; a $7.5K sanction plus client notice destroys trust.",
+    "confidence": "high"
+  },
+  "lothamer-tax-resolution-inc-v-paul-kimmel-1-2025-08-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "tax"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "clerk-of-the-ct-v-rangel-2025-08-29": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["bar-referral", "professional", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "appellate", "bar-referral"],
+    "lesson": "An answer brief with one fake case, 14 false quotes, and 9 misstated holdings draws an automatic bar referral, not a warning.",
+    "confidence": "high"
+  },
+  "ibs-government-services-inc-2025-08-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "usa-v-sethi-2025-08-28": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "criminal"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "lonnie-allbaugh-v-university-of-scranton-2025-08-28": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "myeesha-parker-v-costco-wholesale-corp-2025-08-28": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail", "written-ai-policy"],
+    "sanction_types": ["monetary", "bar-referral", "professional", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "employment", "bar-referral", "civil"],
+    "lesson": "Altered quotations and misattributed exhibits trigger fines plus bar referral; treat formatting fidelity as a verification step.",
+    "confidence": "high"
+  },
+  "thackston-v-driscoll-2025-08-28": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["professional", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "employment", "civil"],
+    "lesson": "Relying on overruled doctrine like Chevron plus ten fabricated authorities invites Rule 11 sanctions; require post-Loper Bright currency checks.",
+    "confidence": "high"
+  }
+}

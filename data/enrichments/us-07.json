@@ -1,0 +1,162 @@
+{
+  "pamela-blair-v-sanctuary-bluff-homeowners-association-inc-et-al-2026-03-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "daniel-gentry-v-calvin-thompson-et-al-2026-03-20": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "warning"],
+    "tags": ["fake-citations", "consumer-tool", "civil", "trial", "multi-attorney"],
+    "lesson": "Require a second attorney to Shepardize every citation before filing; ChatGPT output without verification is automatic Rule 11 exposure.",
+    "confidence": "high"
+  },
+  "dominique-lopez-v-mead-johnson-nutrition-company-2026-03-20": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fabricated-quotes", "civil", "trial"],
+    "lesson": "Pull and read every quoted opinion before filing; a misattributed quote alone triggers a show-cause order.",
+    "confidence": "medium"
+  },
+  "prososki-v-regan-2026-03-20": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol", "audit-trail"],
+    "sanction_types": ["struck-pleading", "case-dismissed", "bar-referral", "professional", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "appellate", "bar-referral", "family"],
+    "lesson": "Fabricated citations in a state-supreme-court brief end appeals and trigger bar referral; verify every cite against the reporter.",
+    "confidence": "high"
+  },
+  "state-v-coleman-2026-03-20": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "approved-tools-list", "incident-response", "written-ai-policy"],
+    "sanction_types": ["monetary", "bar-referral", "disqualification", "training-order", "professional", "published-opinion", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "denial", "criminal", "appellate", "published-opinion", "bar-referral", "disqualification", "training-ordered"],
+    "lesson": "Never let non-attorney staff draft filings with public AI; attorney owns every word and concealment escalates sanctions to disqualification plus bar referral.",
+    "confidence": "high"
+  },
+  "prisbrey-v-prisbrey-2026-03-19": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["none-adjudicated", "warning"],
+    "tags": ["fake-citations", "appellate", "family"],
+    "lesson": "If only one of seven citations in an argument section is correct, expect published criticism; verify before filing, not after challenge.",
+    "confidence": "medium"
+  },
+  "anna-sheerer-v-thomas-panas-2026-03-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "kelly-bartholomew-v-clackamas-county-2026-03-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "keirton-inc-v-mersad-rahmanovic-2026-03-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fabricated-quotes", "bankruptcy"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "oscar-brownfield-v-cherokee-county-school-district-no-35-2026-03-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "jana-james-v-national-board-of-osteopathic-examiners-inc-2026-03-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "davos-francois-v-vive-financial-2026-03-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "riddle-aggregates-v-irs-2026-03-18": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["none-adjudicated", "warning"],
+    "tags": ["fake-citations", "consumer-tool", "tax"],
+    "lesson": "Vet expert reports for AI fingerprints before adoption; a withdrawn report still taints the case record.",
+    "confidence": "medium"
+  },
+  "forest-ridge-townhomes-corporation-of-greensboro-v-heag-pain-management-cente-et": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "ai-disclosure-protocol", "audit-trail"],
+    "sanction_types": ["none-adjudicated", "warning"],
+    "tags": ["fake-citations", "consumer-tool", "appellate", "civil"],
+    "lesson": "Never file raw AI chatbot output as an exhibit; Perplexity answers are not legal authority and admitting reliance invites sanctions.",
+    "confidence": "medium"
+  },
+  "doiban-v-oregon-liquor-and-cannabis-commission-2026-03-18": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "ai-disclosure-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "struck-pleading", "training-order"],
+    "tags": ["fake-citations", "fabricated-quotes", "appellate", "administrative"],
+    "lesson": "Require a no-AI certification plus cite-verification log on every appellate brief; 15 fake cites now carries a $10K cap sanction.",
+    "confidence": "high"
+  },
+  "regan-wilkes-et-al-v-canyons-school-district-et-al-2026-03-17": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "civil", "trial"],
+    "lesson": "Fabricated circuit-court citations in pleadings trigger show-cause; validate every federal cite against the reporter before signing.",
+    "confidence": "high"
+  },
+  "zesiger-v-kansas-et-al-2026-03-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "sarah-regina-alonso-v-jackson-2026-03-17": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil", "trial"],
+    "lesson": "One fabricated citation in a motion to amend earns a Rule 11 warning on the docket; verify before you sign, not after the court flags it.",
+    "confidence": "medium"
+  },
+  "gregory-richmond-and-lynne-richmond-v-city-of-newport-washington-2026-03-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "michael-wayne-singletary-v-swbc-mortgage-corporation-et-al-2026-03-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  }
+}

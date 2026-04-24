@@ -1,0 +1,162 @@
+{
+  "hicks-v-city-of-albany-2026-02-26": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "appellate", "civil"],
+    "lesson": "Admitting AI use after the fact avoided sanctions here — but verify every citation in a primary reporter before filing.",
+    "confidence": "high"
+  },
+  "in-re-termination-of-parental-rights-hk-2026-02-25": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "supervision-protocol"],
+    "sanction_types": ["bar-referral", "professional", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "family", "appellate", "bar-referral"],
+    "lesson": "Fabricated statutory quotes in termination-of-parental-rights briefs trigger bar referral — require second-attorney verification of every quote.",
+    "confidence": "high"
+  },
+  "moses-v-state-2026-02-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "roosevelt-hunt-jr-v-true-sky-federal-credit-union-2026-02-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "kettering-adventist-healthcare-v-sandra-collier-et-al-2026-02-25": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "struck-pleading", "ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "trial"],
+    "lesson": "Ten bad citations in one brief drew $7,500 plus contempt — cap any brief's citations until a second attorney signs off.",
+    "confidence": "high"
+  },
+  "straub-v-henderson-2026-02-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "appellate"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "anthony-jama-hall-v-superior-court-of-sacramento-county-2026-02-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "christina-leas-dunn-v-nelnet-2026-02-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "gail-fung-v-liberty-university-2026-02-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "ebony-sherisse-lucas-v-charles-w-scharf-et-al-2026-02-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "juan-villalovos-gutierrez-et-al-v-gerard-van-de-pol-et-al-2-2026-02-24": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "civil", "trial"],
+    "lesson": "An OSC over two fake citations still triggers docketed discipline — treat every opposition brief as sanction-exposure.",
+    "confidence": "medium"
+  },
+  "ryan-lee-v-capital-one-bank-et-al-2026-02-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "chapter-kris-jackson-v-bok-financial-corporation-et-al-3-2026-02-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "struck-pleading"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "louis-j-blazy-v-department-of-state-2026-02-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "administrative"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "wells-fargo-bank-v-frances-w-dean-2026-02-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "zeus-realty-group-llc-v-1032-n-sycamore-owner-la-llc-et-al-2026-02-23": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "trial"],
+    "lesson": "Opposing counsel flagging fake citations is often the first strike — audit your own briefs before they do.",
+    "confidence": "medium"
+  },
+  "kenneth-hawkins-v-ic-system-inc-2026-02-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "shawn-olali-v-ampex-brands-llc-2026-02-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "zlatkin-v-gladwin-county-et-al-2026-02-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "gerow-v-falcone-2026-02-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  }
+}

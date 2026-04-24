@@ -1,0 +1,162 @@
+{
+  "joann-crawford-v-buffalo-creek-properties-llc-2026-04-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "carol-l-williams-v-tracy-honl-2026-04-22": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary", "struck-pleading"],
+    "tags": ["fake-citations", "fabricated-quotes", "appellate", "civil"],
+    "lesson": "Strike-and-costs orders hit $8K fast; require second-attorney sign-off on every cited case before filing.",
+    "confidence": "high"
+  },
+  "krista-c-geddes-v-loancare-llc-et-al-2026-04-22": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "supervision-protocol"],
+    "sanction_types": ["monetary", "bar-referral", "professional", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "bar-referral", "civil", "trial"],
+    "lesson": "A $1K fine plus bar referral is the new floor for fake quotes; verify every quotation against the primary source.",
+    "confidence": "high"
+  },
+  "meyer-v-castroville-state-bank-2026-04-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "alishia-monique-jones-v-ahmed-taylor-et-al-2026-04-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "primerica-life-insurance-company-v-daniel-vett-finlayson-michelle-johnson-2026-0": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "trial"],
+    "lesson": "Westlaw-unlocatable cites are a red flag; verify every citation on the platform before it leaves the office.",
+    "confidence": "medium"
+  },
+  "bunce-v-visual-technology-innovations-2-2026-04-20": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "training-order", "professional"],
+    "tags": ["fake-citations", "training-ordered", "civil", "trial"],
+    "lesson": "A $5K fine plus mandatory CLE shows courts now pair money with forced AI training; mandate it internally first.",
+    "confidence": "high"
+  },
+  "arthur-west-v-lower-duwamish-waterway-group-2026-04-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-re-prince-global-holdings-limited-et-al-2026-04-18": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "fabricated-quotes", "biglaw", "bankruptcy"],
+    "lesson": "Even BigLaw must prove partner-level review; log every AI-assisted cite and require supervisor sign-off before filing.",
+    "confidence": "high"
+  },
+  "jamie-lee-saunders-v-albertsonssafeway-llc-2026-04-16": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil", "trial"],
+    "lesson": "Admit AI use the moment it's challenged; immediate apology is what kept this one at a warning.",
+    "confidence": "high"
+  },
+  "essandoh-v-capital-one-bank-2026-04-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "civil", "trial"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "matter-of-logmet-llc-b-4230662-2026-04-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative", "government-lawyer"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "in-the-marriage-of-sarah-lynn-nelson-2026-04-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "family", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "fofanah-v-rockwall-rental-properties-2026-04-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "stance-strong-and-kinisha-strong-v-zubha-pop-foods-llc-dba-popeyes-chicken-2026-": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "cynthia-white-v-walmart-inc-2026-04-14": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["civil", "trial"],
+    "lesson": "AI-generated meet-and-confer talking points don't satisfy the rule; counsel must personally vet and sign off.",
+    "confidence": "high"
+  },
+  "zand-v-sukumar-2026-04-14": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "brian-smith-v-td-auto-finance-llc-et-al-2026-04-14": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "michael-t-alexander-v-michelle-baass-et-al-2026-04-14": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "shaw-v-city-of-portola-et-al-2026-04-14": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "high"
+  }
+}

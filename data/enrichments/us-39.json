@@ -1,0 +1,162 @@
+{
+  "flycatcher-v-affable-avenue-1-2025-07-18": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "incident-response", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fabricated-quotes", "trial"],
+    "lesson": "Never quote Mata v. Avianca from memory; verify every case-law quote against the primary source before filing.",
+    "confidence": "medium"
+  },
+  "in-re-marla-c-martin-2025-07-18": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "approved-tools-list"],
+    "sanction_types": ["monetary", "training-order", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "bankruptcy", "published-opinion"],
+    "lesson": "Claiming ignorance of ChatGPT hallucinations is itself sanctionable; mandate AI ethics CLE before any attorney touches generative tools.",
+    "confidence": "high"
+  },
+  "baptiste-v-baez-2025-07-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "appellate"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "rescore-hollywood-llc-v-samules-2025-07-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "augustin-v-formula-3-brooklyn-inc-2025-07-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause", "warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "byoplanet-international-v-johansson-and-gilstrap-2025-07-15": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "incident-response", "supervision-protocol", "ai-disclosure-protocol"],
+    "sanction_types": ["monetary", "case-dismissed", "bar-referral", "professional", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "denial", "bar-referral", "civil"],
+    "lesson": "If confronted about AI use, disclose immediately and never blame the paralegal; denial escalates fines into bar referrals and dismissals.",
+    "confidence": "high"
+  },
+  "woodrow-jackson-v-auto-owners-insurance-company-2025-07-14": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "supervision-protocol"],
+    "sanction_types": ["monetary", "training-order", "professional"],
+    "tags": ["fake-citations", "training-ordered", "civil"],
+    "lesson": "Staff transitions are no excuse; require a partner-level signoff verifying every cited case exists before any brief is filed.",
+    "confidence": "high"
+  },
+  "kessler-v-city-of-atwater-2025-07-11": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Pull and read every cited case before filing; OSCs follow when courts find six fabricated cases and multiple false quotes in one brief.",
+    "confidence": "medium"
+  },
+  "in-re-marriage-of-haibt-2025-07-10": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "family", "appellate"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "gurpreet-kaur-v-captain-joel-desso-2025-07-09": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "incident-response", "approved-tools-list"],
+    "sanction_types": ["monetary", "training-order", "professional"],
+    "tags": ["fabricated-quotes", "consumer-tool", "training-ordered", "immigration"],
+    "lesson": "Fabricated quotes from real cases are treated the same as fake cases; verify every quotation against the opinion before signing Rule 11.",
+    "confidence": "high"
+  },
+  "in-re-turner-2025-07-09": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["fake-citations"],
+    "lesson": "Disciplinary boards are now striking filings for imaginary cases; every citation must be clickable in Westlaw before you sign.",
+    "confidence": "medium"
+  },
+  "foster-chambers-v-village-of-oak-park-2025-07-09": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "appellate"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "coomer-v-lindellmypillow-inc-1-2025-07-07": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "approved-tools-list", "supervision-protocol"],
+    "sanction_types": ["monetary", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "paid-tool", "consumer-tool", "multi-attorney", "civil"],
+    "lesson": "Paid tools like Westlaw AI are not a defense; Rule 11 requires you to personally verify every cite, regardless of which platform produced it.",
+    "confidence": "high"
+  },
+  "smith-v-gamble-2025-07-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "family", "appellate"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "wright-brothers-aero-inc-b-4233262-2025-07-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "in-re-eugene-ezra-perkins-2025-07-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "bankruptcy"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "tyrone-walker-v-juliane-pierre-2025-07-03": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["fake-citations", "appellate"],
+    "lesson": "Appellate courts will strike portions of your brief for nonexistent citations; verify every case in Westlaw before perfecting an appeal.",
+    "confidence": "medium"
+  },
+  "sharita-hill-v-state-of-oklahoma-2025-07-03": {
+    "severity": "low",
+    "policy_gap_ids": ["ai-disclosure-protocol", "citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Know each judge's standing AI disclosure order; failure to certify verification triggers warnings that precede Rule 11 sanctions.",
+    "confidence": "medium"
+  },
+  "matter-of-sewell-properties-trust-2025-07-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "muhammad-v-gap-inc-2025-07-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause", "case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "consumer-tool", "employment"],
+    "lesson": null,
+    "confidence": "low"
+  }
+}

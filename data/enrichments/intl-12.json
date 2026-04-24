@@ -1,0 +1,162 @@
+{
+  "hassan-v-abc-international-bank-2025-10-13": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "consumer-tool"],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "employment", "GB"],
+    "lesson": "Pro-se AI filings trigger costs orders; tribunals treat 46 bad citations as reckless conduct warranting fees.",
+    "confidence": "high"
+  },
+  "gilles-dulac-c-ville-de-gatineau-2025-10-11": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative", "CA"],
+    "lesson": "Quebec tribunals routinely flag pro-se AI citations as nonexistent; verify every QCTAQ reference on CanLII.",
+    "confidence": "medium"
+  },
+  "visca-v-halton-district-school-board-2025-10-09": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative", "CA"],
+    "lesson": "HRTO applicants citing phantom cases face exclusion of authorities; CanLII verification is non-negotiable.",
+    "confidence": "medium"
+  },
+  "mr-m-peters-v-driver-and-vehicle-standards-agency-2025-10-09": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "employment", "GB"],
+    "lesson": "AI summaries of real ET judgments diverge materially; pull the full judgment before relying on any summary.",
+    "confidence": "medium"
+  },
+  "vivek-singha-v-metal-manufactures-2025-10-08": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "employment", "AU"],
+    "lesson": "FWC catches fabricated FWC citations instantly; verify every tribunal number before submission.",
+    "confidence": "medium"
+  },
+  "sap-a-15582025-ecliesapa20251558-2025-10-08": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["bar-referral", "referral"],
+    "tags": ["fabricated-quotes", "appellate", "civil", "ES", "bar-referral"],
+    "lesson": "Spanish appellate courts are now referring lawyers to the Colegio for fabricated quotes; always pull the original STS text.",
+    "confidence": "high"
+  },
+  "14-os-9525i-2025-10-07": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "criminal", "appellate", "AT"],
+    "lesson": "Austria's OGH declines to address AI-fabricated Fehlzitate entirely; unverified citations forfeit the argument.",
+    "confidence": "medium"
+  },
+  "ren-v-area-09-2025-10-07": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary", "warning"],
+    "tags": ["pro-se", "fake-citations", "administrative", "CA"],
+    "lesson": "BC PAAB imposes nominal costs and code-of-conduct breaches on pro-se AI users; expect monetary follow-on.",
+    "confidence": "high"
+  },
+  "ak-v-secretary-of-state-for-the-home-department-2025-10-06": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "approved-tools-list"],
+    "sanction_types": ["ordered-to-show-cause", "referral"],
+    "tags": ["fake-citations", "immigration", "consumer-tool", "GB", "bar-referral"],
+    "lesson": "UK Upper Tribunal sends ChatGPT-drafted grounds straight to the SRA; immigration grounds need partner sign-off on every cite.",
+    "confidence": "high"
+  },
+  "kmg-wires-private-limited-v-the-national-faceless-assessment-centre-et-al-2025-1": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["case-dismissed", "warning"],
+    "tags": ["fake-citations", "tax", "government-lawyer", "IN"],
+    "lesson": "Bombay HC quashed a tax assessment built on AI-fabricated precedents; quasi-judicial officers must verify before citing.",
+    "confidence": "high"
+  },
+  "delisle-v-canadian-association-of-professional-employees-2025-10-03": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "employment", "administrative", "CA"],
+    "lesson": "When 45 of 51 cited cases are phantom, the Board simply disregards the pleading; volume is not substance.",
+    "confidence": "medium"
+  },
+  "warwick-econometrics-ltd-v-the-university-of-warwick-2025-10-03": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "ip", "consumer-tool", "GB"],
+    "lesson": "Google AI Overviews are now a citation source for the unwary; treat overview-style results as unverified leads only.",
+    "confidence": "medium"
+  },
+  "backhaus-v-area-01-2025-10-02": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative", "CA"],
+    "lesson": "BC PAAB's Code of Conduct now requires AI disclosure; nondisclosure alone draws a recorded caution.",
+    "confidence": "high"
+  },
+  "fernando-oliveira-v-ryanair-dac-2025-10-01": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "employment", "IE"],
+    "lesson": "Irish WRC labels AI-driven phantom citations 'abuse of process'; expect dismissal on prima facie grounds.",
+    "confidence": "high"
+  },
+  "specter-aviation-limited-v-laprade-2025-10-01": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol"],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "civil", "CA"],
+    "lesson": "Quebec CS is imposing 5,000$ art.342 sanctions on pro-se AI filers; low bar for fabrication-based costs.",
+    "confidence": "high"
+  },
+  "hogan-v-treasury-board-2025-10-01": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "employment", "CA"],
+    "lesson": "AI fabricates statutory text, not just cases; verify the actual wording of every section quoted.",
+    "confidence": "medium"
+  },
+  "anpv-sapv-v-secretary-of-state-for-the-home-department-2025-09-29": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "approved-tools-list"],
+    "sanction_types": ["ordered-to-show-cause", "referral"],
+    "tags": ["fake-citations", "immigration", "consumer-tool", "GB"],
+    "lesson": "Copilot is now generating fake country-guidance authorities; immigration counsel must re-check every CG reference.",
+    "confidence": "high"
+  },
+  "tajudin-bin-gulam-rasul-and-another-v-suriaya-bte-haja-mohideen-2025-09-29": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol"],
+    "sanction_types": ["monetary", "professional"],
+    "tags": ["fake-citations", "civil", "SG"],
+    "lesson": "Singapore HC orders personal costs and client notification for AI-fabricated cites; disclosure to the client is now part of the remedy.",
+    "confidence": "high"
+  },
+  "sonkin-v-roll-profile-ltd-2025-09-29": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "employment", "IL"],
+    "lesson": "Twenty fabricated citations draw four-figure fines in Israeli labour courts; volume of errors directly scales penalty.",
+    "confidence": "medium"
+  },
+  "ilan-harush-v-roee-alfasi-2025-09-28": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "civil", "IL"],
+    "lesson": "Israeli courts now disallow costs entirely when fabricated AI cites are in the record; fees are the first line of defense.",
+    "confidence": "medium"
+  }
+}

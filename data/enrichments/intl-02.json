@@ -1,0 +1,162 @@
+{
+  "re-reza-khoshnik-2026-03-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "canada", "bankruptcy"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "gsa-v-department-of-communities-2026-03-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fabricated-quotes", "australia", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "juerg-von-geitz-v-kieran-kelly-ors-2026-03-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "law-society-of-alberta-v-tiwana-2026-03-12": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "canada", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "kamal-v-tax-policy-associates-2026-03-11": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "written-ai-policy"],
+    "sanction_types": ["struck-pleading", "case-dismissed"],
+    "tags": ["fake-citations", "civil", "trial"],
+    "lesson": "Deploying unverified AI citations in pleadings can cost you the case at summary judgment — verify every authority before filing.",
+    "confidence": "medium"
+  },
+  "krivaia-v-hungerford-2026-03-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "canada", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "nicole-levey-wilson-v-the-trustee-for-attivita-group-unit-trust-2026-03-10": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "australia", "employment", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "siemens-v-the-owners-strata-plan-eps3699-2026-03-10": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "canada", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "kapahi-real-estate-inc-v-elite-real-estate-club-of-toronto-inc-2026-03-10": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["bar-referral", "referral", "professional"],
+    "tags": ["fabricated-quotes", "canada", "civil", "bar-referral"],
+    "lesson": "Every block quote in a factum must be pulled from the primary source — invented quotations trigger Law Society referrals.",
+    "confidence": "high"
+  },
+  "thabize-c-immobilière-montérégienne-imr-inc-2026-03-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "canada", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "malik-v-insurance-australia-limited-2026-03-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "australia", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "re-a-b-c-d-extension-of-assessment-use-of-ai-hallucinations-2026-03-05": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "family"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "oberoi-v-douglas-2026-03-05": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail", "written-ai-policy"],
+    "sanction_types": ["bar-referral", "referral", "professional", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "australia", "appellate", "bar-referral"],
+    "lesson": "Seven fake cases plus twelve fabricated quotes equals bar referral — institute mandatory two-step citation verification before any appellate filing.",
+    "confidence": "high"
+  },
+  "erin-gray-v-attorney-general-of-canada-2026-03-05": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "canada"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "elg20-v-minister-for-immigration-and-citizenship-2026-03-05": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "australia", "immigration", "consumer-tool"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "asey-v-the-association-of-justice-counsel-2026-03-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "canada", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "makongo-c-montpetit-2026-03-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "professional"],
+    "tags": ["pro-se", "fake-citations", "canada", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "maruta-v-mahon-2026-03-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "canada", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "re-gary-man-kin-ng-2026-03-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "canada", "bankruptcy"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "white-v-the-owners-strata-plan-bcs3946-2026-02-27": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "canada", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  }
+}

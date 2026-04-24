@@ -1,0 +1,162 @@
+{
+  "sophia-madigan-v-graco-inc-2026-02-04": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil", "trial"],
+    "lesson": "Verify every Westlaw citation against the primary source before filing; opposing counsel will catch fabrications.",
+    "confidence": "high"
+  },
+  "offen-petroleum-v-lj-express-2026-02-04": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "written-ai-policy"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "trial"],
+    "lesson": "Treat AI-drafted motions as untrusted first drafts; verify cites and quotes against the actual opinions.",
+    "confidence": "high"
+  },
+  "joann-ledoux-v-outliers-inc-2026-02-04": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "trial"],
+    "lesson": "Expert reports are counsel's responsibility; audit every cited article and quoted deposition line before submission.",
+    "confidence": "high"
+  },
+  "kizzie-sims-estate-of-gregory-neil-davis-v-board-of-county-commissioners-2026-02": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Even a single misstatement draws a judicial note; every citation must be vetted against the primary source.",
+    "confidence": "low"
+  },
+  "1s-reo-opportunity-1-llc-v-223-howard-llc-2026-02-03": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "civil", "trial"],
+    "lesson": "A Westlaw pincite that resolves to a different case is a red flag; shepardize every cite before filing.",
+    "confidence": "medium"
+  },
+  "azad-alamgir-kabir-v-webmd-2026-02-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "lexos-media-ip-llc-v-overstockcom-inc-2026-02-02": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "written-ai-policy", "audit-trail"],
+    "sanction_types": ["monetary", "struck-pleading", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "ip", "civil"],
+    "lesson": "Ban ChatGPT for legal research; a struck brief plus $12K sanction plus firm-wide compliance order is the going rate.",
+    "confidence": "high"
+  },
+  "yang-v-university-of-minnesota-2026-02-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "appellate"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "emmanuel-s-yirenkyi-v-angela-hoover-2026-02-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "wilcox-v-gingrinch-2026-01-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "stephen-schaaf-v-nellis-auction-holdings-llc-et-al-2026-01-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil", "trial"],
+    "lesson": "Admonishment today becomes monetary sanction on repeat; treat the first warning as your only warning.",
+    "confidence": "medium"
+  },
+  "theoda-e-mills-jr-v-city-of-st-louis-et-al-2026-01-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "sec-v-joseph-nantomah-et-al-2026-01-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "ava-naeini-v-confluent-inc-2026-01-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "dana-serine-greene-v-gsk-plc-2026-01-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "matter-of-bramstedt-surgical-inc-2026-01-28": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "administrative"],
+    "lesson": "GAO protests are not a low-stakes venue; invalid B-number citations will surface and torch your credibility with the tribunal.",
+    "confidence": "high"
+  },
+  "abybatou-mbow-v-officer-michael-mackert-et-al-2026-01-28": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "trial"],
+    "lesson": "A show-cause order is one step from bar referral; require partner sign-off on every cite before filing in federal court.",
+    "confidence": "high"
+  },
+  "gregory-hardy-v-genesee-county-community-action-resource-department-et-al-2026-0": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "life-together-coaching-llc-2026-01-28": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "nonnie-berg-v-united-airlines-inc-2-2026-01-28": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  }
+}

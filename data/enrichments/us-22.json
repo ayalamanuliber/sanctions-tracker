@@ -1,0 +1,162 @@
+{
+  "dorsey-v-jones-2025-12-16": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol", "audit-trail"],
+    "sanction_types": ["warning", "training-order"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Expect courts to order prospective AI certification once fabricated citations surface; build certification templates now.",
+    "confidence": "medium"
+  },
+  "in-re-ricardo-andres-romeu-2025-12-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "mcmillian-v-zimmer-us-inc-2025-12-16": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "civil", "small-firm"],
+    "lesson": "Conceding AI errors early mitigates but does not eliminate monetary sanctions; verification is still the only defense.",
+    "confidence": "high"
+  },
+  "christina-garcia-v-atwater-elementary-teachers-association-2025-12-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "administrative"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "sayali-kulkarni-abhijit-kulkarni-v-merit-systems-protection-board-2025-12-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "liza-gardner-v-sean-combs-et-al-2025-12-15": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "bar-referral", "professional"],
+    "tags": ["fake-citations", "bar-referral", "civil", "training-ordered"],
+    "lesson": "Prior CLE on GenAI is an aggravator, not a shield — repeat offenders get bar-referred even on small fines.",
+    "confidence": "high"
+  },
+  "harvey-v-torrent-leasing-us-bank-2025-12-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "consumer-tool"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "braica-v-frankowski-anthony-braica-v-tom-frankowski-2025-12-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "robert-w-williams-sr-v-assistant-district-attorney-john-r-canavan-et-al-2025-12-": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "howell-management-services-llc-v-vashisht-rota-2025-12-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "johnson-estate-of-fisher-v-city-of-annapolis-2025-12-13": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["professional"],
+    "tags": ["fake-citations", "civil", "small-firm"],
+    "lesson": "Client dismissal is the quiet career hit — fabricated citations cost relationships before courts even rule.",
+    "confidence": "medium"
+  },
+  "jordan-v-beskrone-in-re-prehired-llc-2025-12-12": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["fake-citations", "pro-se", "bankruptcy"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "troy-allen-berg-v-mandi-marie-wondra-2025-12-12": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "family"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "mclain-v-board-of-county-commissioners-of-sedgwick-county-kansas-et-al-2025-12-1": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "preston-house-v-th-foods-inc-2025-12-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "sean-gottlieb-v-adtalem-global-education-2025-12-10": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "south-side-area-school-district-et-al-v-pennsylvania-human-relations-commission-": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "fabricated-quotes", "administrative"],
+    "lesson": "Public-record AI miscites draw press coverage even without a ruling — media risk precedes sanctions risk.",
+    "confidence": "low"
+  },
+  "russell-v-mells-2025-12-10": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause", "bar-referral", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "bar-referral", "appellate"],
+    "lesson": "Appellate fabricated citations now trigger automatic bar referrals in Florida — treat every appellate cite as a show-cause risk.",
+    "confidence": "high"
+  },
+  "russell-v-mells-2025-12-10-2": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["bar-referral", "published-opinion", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "bar-referral", "appellate", "published-opinion"],
+    "lesson": "Florida appellate panel published a naming-and-shaming opinion — assume every fabricated cite becomes a bar referral of public record.",
+    "confidence": "high"
+  },
+  "sharkys-sports-bar-et-al-v-village-of-mt-morris-illinois-et-al-2025-12-10": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil", "small-firm"],
+    "lesson": "Even 'real' cases with wrong reporter cites now draw AI-misuse warnings — verify reporter, page, and holding for every citation.",
+    "confidence": "medium"
+  }
+}

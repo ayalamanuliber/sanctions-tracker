@@ -1,0 +1,162 @@
+{
+  "mark-khoury-v-nira-kooij-2025-09-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "AU", "civil"],
+    "lesson": "Pro-se fabricated-citation dismissals signal courts everywhere are spotting AI hallucinations; cite the case when counseling clients.",
+    "confidence": "high"
+  },
+  "backhoe-center-ltd-v-abu-gwaid-2025-09-01": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "IL", "civil"],
+    "lesson": "Nine fabricated citations drew a 7,500 ILS sanction abroad; verify every case name against the primary database before filing.",
+    "confidence": "high"
+  },
+  "givati-et-al-v-peri-2025-08-31": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "IL", "civil"],
+    "lesson": "Courts in Israel now order pro-se filers to correct AI-fabricated citations; expect the same screening of our filings.",
+    "confidence": "high"
+  },
+  "gribble-v-essential-energy-2025-08-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["pro-se", "fake-citations", "AU", "civil"],
+    "lesson": "Plaintiff invented a judgment by the presiding judge; courts will strike all AI-tainted material when caught.",
+    "confidence": "high"
+  },
+  "cunningham-v-healthalliance-nz-limited-2025-08-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "NZ", "employment"],
+    "lesson": "Even pro-se AI fabrications now draw formal warnings in NZ Employment Court; warn self-represented adversaries too.",
+    "confidence": "high"
+  },
+  "stewart-v-good-shepherd-2025-08-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "AU", "civil"],
+    "lesson": "Victoria CA calls AI citations 'phantom authorities'; flag any unverifiable cite to opposing pro-se litigants immediately.",
+    "confidence": "medium"
+  },
+  "alana-kotler-v-ontario-secondary-school-teachers-federation-2025-08-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "administrative", "CA", "employment"],
+    "lesson": "Fifteen-plus unlocatable cites got the application dismissed; a single bad cite poisons the whole brief in labour tribunals.",
+    "confidence": "high"
+  },
+  "case-no-2025구합53-2025-08-28": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "KR", "administrative"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "myers-v-tarion-warranty-corporation-2025-08-28": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "CA", "administrative"],
+    "lesson": "Ontario tribunals ignore arguments built on AI-fabricated quotes; never file quoted language you haven't copy-verified.",
+    "confidence": "high"
+  },
+  "butler-and-national-disability-insurance-agency-2025-08-28": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "AU", "administrative"],
+    "lesson": "Expert reports drafted with AI got reduced evidentiary weight; require experts to certify no unverified AI assistance.",
+    "confidence": "high"
+  },
+  "the-boys-of-rockanje-v-dwaard-2025-08-27": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "incident-response"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "denial", "NL", "civil"],
+    "lesson": "Blaming 'Word-to-PDF conversion' for fabricated ECLI numbers fooled no one; own the AI use immediately when challenged.",
+    "confidence": "medium"
+  },
+  "orano-mining-v-niger-2-2025-08-26": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "fabricated-quotes", "OTHER", "civil"],
+    "lesson": "ICSID tribunals now cross-check investment-arbitration citations; fabricated Antin/Crystallex/Rusoro cites can sink a disqualification bid.",
+    "confidence": "medium"
+  },
+  "babbar-v-tarion-warranty-corporation-2025-08-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative", "CA"],
+    "lesson": "Ontario LAT keeps catching AI-invented Tarion precedents; pro-se adversary briefs need full citation audits.",
+    "confidence": "medium"
+  },
+  "maceachern-flatt-v-university-health-network-2025-08-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative", "CA", "employment"],
+    "lesson": "HRTO refused to credit non-existent precedents; always check adversary's 'conflicting jurisprudence' against primary databases.",
+    "confidence": "medium"
+  },
+  "3-orbs-16425-2025-08-25": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "DE", "criminal"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "giacomino-y-otros-v-montserrat-y-otros-2025-08-22": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "written-ai-policy", "audit-trail"],
+    "sanction_types": ["bar-referral", "referral"],
+    "tags": ["fake-citations", "bar-referral", "AR", "civil"],
+    "lesson": "Rosario CA referred counsel to the Bar for fabricating a precedent from the same court; same-court citations get verified first.",
+    "confidence": "high"
+  },
+  "the-meniscus-trust-v-chief-commissioner-of-state-revenue-2025-08-21": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "consumer-tool", "AU", "tax"],
+    "lesson": "NCAT Procedural Direction 7 mandates citation verification when using Gemini/ChatGPT; non-compliance downgrades evidentiary weight.",
+    "confidence": "high"
+  },
+  "jml-rose-pty-ltd-v-jorgensen-no-3-2025-08-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["published-opinion"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "published-opinion", "AU"],
+    "lesson": "Federal Court of Australia now calls AI 'hallucinations' fabrications; expect hostile framing when we defend AI-assisted filings.",
+    "confidence": "high"
+  },
+  "xh-v-canada-employment-insurance-commission-2025-08-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative", "CA", "employment"],
+    "lesson": "Canadian SST warns pro-se filers over multiple fake cites; the same standard will reach counsel soon.",
+    "confidence": "high"
+  },
+  "wcat-decision-a2501051-hilary-thomson-2025-08-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative", "CA"],
+    "lesson": "BC WCAT caught citation-format drift plus fabricated cases; check both the format and the existence of cited tribunal decisions.",
+    "confidence": "medium"
+  }
+}

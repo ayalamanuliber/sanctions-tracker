@@ -1,0 +1,162 @@
+{
+  "zaykariya-v-freedom-mortgage-corporation-et-al-2026-01-09": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "hayes-v-chipotle-mexican-grill-2026-01-09": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "saad-hanna-v-kimberly-a-nelson-2026-01-08": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "deutsche-bank-national-bank-v-jean-letennier-2026-01-08": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Twenty-three fake cites across five filings equals $10K sanctions — mandate cite-check before every filing, not just the first.",
+    "confidence": "high"
+  },
+  "ramos-v-ramos-2026-01-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "kamps-v-british-crown-corporation-et-al-2026-01-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "jessica-baker-v-ryan-joseph-baker-2026-01-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "thu-thuy-nguyen-v-pennymac-loan-services-2026-01-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "united-states-v-juliet-payseur-and-20-22-mcgregor-avenue-llc-2026-01-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "hector-salvatori-v-the-huntington-national-bank-2026-01-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "desmond-cunningham-v-pentagon-federal-credit-union-et-al-2026-01-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed", "warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "sammie-dwayne-mcphaul-v-college-hills-opco-2026-01-06": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fabricated-quotes", "fake-citations", "civil"],
+    "lesson": "Five fabricated quotations in one brief triggers show-cause — require line-by-line quote verification against the source opinion.",
+    "confidence": "high"
+  },
+  "tamisha-shaw-v-coast-dental-of-georgia-et-al-2026-01-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "hanlon-v-parkersburg-city-2026-01-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "ayatollah-hylton-v-chivone-janee-hylton-et-al-2026-01-05": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "family"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "allen-v-experian-information-solutions-2026-01-04": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "washburn-v-houston-2026-01-02": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["bar-referral", "referral", "published-opinion"],
+    "tags": ["fabricated-quotes", "fake-citations", "appellate", "bar-referral", "family"],
+    "lesson": "Fabricating transcript quotes — not just cases — guarantees a bar referral; assign a second reviewer to spot-check every record citation.",
+    "confidence": "high"
+  },
+  "eric-hildebrandt-v-siparadigm-llc-et-al-2025-12-31": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol", "approved-tools-list"],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Leaving AI prompt artifacts in a filing is strict-liability malpractice — require a human proofread pass before any AI-assisted brief ships.",
+    "confidence": "high"
+  },
+  "burnett-v-the-city-of-new-york-2025-12-31": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "One unverified cite is enough for a show-cause order — no exceptions to the cite-check rule, even for routine motions.",
+    "confidence": "high"
+  },
+  "massachusetts-housing-finance-agency-v-bradley-k-bass-et-al-2025-12-31": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  }
+}

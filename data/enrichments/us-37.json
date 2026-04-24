@@ -1,0 +1,162 @@
+{
+  "goya-v-hayashida-2025-08-13": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "oready-llc-1-2025-08-13": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "lori-chavez-deremer-v-nab-llc-asia-trinh-and-nicole-brown-2025-08-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "herr-v-elos-environmental-llc-2025-08-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "hocog-v-cook-huynh-2025-08-11": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause", "none-adjudicated"],
+    "tags": ["fake-citations", "fabricated-quotes", "trial", "civil"],
+    "lesson": "Before filing briefs citing statutes or slip opinions, require a clerk to pull every citation from the primary source.",
+    "confidence": "medium"
+  },
+  "jackson-v-bok-financial-corporation-et-al-1-2025-08-08": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["pro-se", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "hall-v-the-academy-charter-school-2025-08-07": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "employment", "trial", "published-opinion"],
+    "lesson": "Admonishment today is a bar referral tomorrow — require supervising attorney sign-off on every AI-assisted brief before filing.",
+    "confidence": "high"
+  },
+  "pineda-v-campos-2025-08-07": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "supervision-protocol"],
+    "sanction_types": ["monetary", "professional", "bar-referral", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "bar-referral", "appellate", "family"],
+    "lesson": "A nominal $1 sanction plus bar referral still destroys a license — build mandatory citation-verification into the docketing workflow.",
+    "confidence": "high"
+  },
+  "graham-jackson-v-martin-and-rock-prairie-farms-llc-2025-08-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-re-sm-a-minor-2025-08-07": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "bar-referral", "referral"],
+    "tags": ["fake-citations", "appellate", "family", "bar-referral"],
+    "lesson": "$1,000 plus an ARDC report ends careers — treat any AI-drafted brief as requiring a second attorney's Westlaw verification.",
+    "confidence": "high"
+  },
+  "luke-v-iowa-dhhs-2025-08-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "administrative"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "carla-bender-4thdistrict-appellate-ct-v-julian-s-2025-08-04": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "bar-referral", "referral", "published-opinion"],
+    "tags": ["fake-citations", "appellate", "family", "bar-referral", "published-opinion"],
+    "lesson": "Repeat offenders face escalating discipline — after any AI-citation incident, impose mandatory dual-verification and document it in the file.",
+    "confidence": "high"
+  },
+  "tellez-v-proiettii-2025-08-04": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "advani-v-appellate-term-2025-08-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "jd-v-kern-county-dhs-2025-07-31": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "appellate", "family"],
+    "lesson": "Fabricated statutory quotes violate Rule 3.3 even without monetary sanctions — verify every statute's text against the code before quoting.",
+    "confidence": "medium"
+  },
+  "ligeri-v-amazoncom-services-2025-07-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "employment"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "coronavirus-reporter-corporation-v-apple-inc-2025-07-30": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "trial", "civil"],
+    "lesson": "ChatGPT is not an approved research tool — ban consumer LLMs for drafting and require tool-disclosure on every filing.",
+    "confidence": "medium"
+  },
+  "rollins-v-premier-motorcar-gallery-2025-07-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "in-re-ryan-lashon-ford-2025-07-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "bankruptcy"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "damilola-obembe-v-droisys-inc-2025-07-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "administrative", "employment"],
+    "lesson": null,
+    "confidence": "medium"
+  }
+}

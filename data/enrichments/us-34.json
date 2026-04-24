@@ -1,0 +1,162 @@
+{
+  "latasha-hill-v-auto-club-family-insurance-company-2025-09-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "tsupko-v-kinetic-advantage-llc-2025-09-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "jeramiah-brown-v-fat-dough-incorp-doing-business-as-dominos-pizza-2025-09-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "fagan-v-barnhiser-nanologix-et-al-2025-09-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "bka-holdings-v-sam-2025-09-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "struck-pleading"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "facey-v-fisher-liane-et-al-2025-09-15": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "warning"],
+    "tags": ["fake-citations", "civil", "trial"],
+    "lesson": "Every AI-assisted cite must be Shepardized against primary sources and disclosed to the court before filing.",
+    "confidence": "medium"
+  },
+  "ezenwa-ebem-v-bondi-et-al-2025-09-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "immigration", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "nga-huynh-v-joseph-desimone-2025-09-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "yi-sheng-fang-et-al-v-hechalou-us-llc-et-al-2025-09-12": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "bar-referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "A sub-$3K fine with a State Bar notice is still a career hit — require second-chair verification on every AI-assisted brief.",
+    "confidence": "high"
+  },
+  "nicholas-george-dicristina-v-the-department-of-employment-security-et-al-2025-09": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "administrative"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "state-v-payne-2025-09-12": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["criminal", "appellate"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "noland-v-land-2025-09-12": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "bar-referral", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "appellate", "published-opinion", "bar-referral"],
+    "lesson": "If 21 of 23 quotes are fabricated you lose the case and your license — mandate quote-level verification, not just cite-checking.",
+    "confidence": "high"
+  },
+  "nz-et-al-v-fenix-international-ltd-et-al-onlyfans-2025-09-12": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "bar-referral"],
+    "tags": ["fake-citations", "consumer-tool", "civil", "bar-referral"],
+    "lesson": "ChatGPT output without verification costs $13K plus a bar referral — ban consumer tools for substantive drafting.",
+    "confidence": "high"
+  },
+  "usa-v-brewer-2025-09-11": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail", "attorney-training"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "criminal", "public-defender"],
+    "lesson": "When nearly every cite is fabricated, a show-cause order is the floor — criminal defense briefs need line-by-line verification.",
+    "confidence": "high"
+  },
+  "mid-america-apartment-communities-inc-v-dennis-michael-philipson-2025-09-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "calvin-bradley-v-matthew-eichhorn-et-al-2025-09-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "criminal"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "teniah-tercero-v-sacramento-logistics-llc-et-al-2025-09-09": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "bar-referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "bar-referral"],
+    "lesson": "Even a $1,500 sanction triggers State Bar notice and client disclosure — treat every AI cite as a bar-referral risk.",
+    "confidence": "high"
+  },
+  "shantell-robinson-v-oglala-sioux-tribe-et-al-2025-09-09": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "ariel-mendones-et-al-v-cushman-and-wakefield-et-al-2025-09-09": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed", "struck-pleading"],
+    "tags": ["pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "uni-2025-09-05": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "training-order"],
+    "tags": ["fake-citations", "training-ordered"],
+    "lesson": "Courts now offer CLE-teaching duty as an alternative to fines — document AI training hours to show good faith.",
+    "confidence": "medium"
+  }
+}

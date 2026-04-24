@@ -1,0 +1,162 @@
+{
+  "south-central-ohio-job-and-family-services-v-corey-mason-2025-11-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "jesse-andre-v-warden-fci-danbury-2025-11-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "struck-pleading"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "criminal"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "jane-doe-v-taro-pharmaceuticals-usa-inc-2025-11-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "in-re-tf-pf-and-ss-minor-children-2025-11-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "family", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "brian-smith-v-wells-fargo-bank-na-2025-11-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "in-re-marguerite-latete-kilpatrick-2025-11-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "bankruptcy"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "supplying-demand-llc-matter-of-2025-11-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "mh-v-cs-2025-11-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "zero-point-mgmt-v-chase-bankjp-morgan-chase-co-2025-11-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "david-morris-clayman-v-scott-bessant-2025-11-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "pletcher-v-village-of-libertyville-police-pension-board-2025-11-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "bryan-pletcher-v-village-of-libertyville-police-pension-board-2025-11-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "case-dismissed", "monetary"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "yakov-magdalasov-v-bytedance-inc-tiktok-inc-and-maria-malvar-2025-11-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "michael-izquierdo-v-wipro-limited-2025-11-21": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "employment"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "linda-oliver-v-christian-dribusch-2025-11-21": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "nuvola-llc-v-wright-2025-11-21": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary", "training-order", "bar-referral", "professional"],
+    "tags": ["fake-citations", "training-ordered", "bar-referral", "civil"],
+    "lesson": "Mandate supervised CLE plus verification sign-off before any AI-drafted brief files; unvetted output draws bar referrals even at $1K.",
+    "confidence": "high"
+  },
+  "shields-v-first-financial-2025-11-21": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Cross-check every reporter and docket number against primary databases before signing the brief; parallel-citation swaps are the tell.",
+    "confidence": "medium"
+  },
+  "ege-kilinc-v-pmmue-eduservices-private-limited-et-al-2025-11-21": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fabricated-quotes", "fake-citations", "civil"],
+    "lesson": "Require attorneys to paste every quoted passage directly from the cited opinion; fabricated quotes trigger sworn-statement orders.",
+    "confidence": "medium"
+  },
+  "morris-gafni-v-rapid-foreclosure-refunds-et-al-2025-11-21": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "alexey-dubinin-v-varsenik-papazian-2025-11-21": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "bar-referral", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "bar-referral", "civil"],
+    "lesson": "Ten fake citations across a Complaint and Response equals bar referral; require second-attorney verification before any filing.",
+    "confidence": "high"
+  }
+}

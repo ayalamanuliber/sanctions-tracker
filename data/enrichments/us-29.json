@@ -1,0 +1,162 @@
+{
+ "nonnie-berg-v-united-airlines-inc-1-2025-10-30": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning", "struck-pleading"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "in-re-tracy-johnson-2025-10-30": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "appellate"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "in-re-the-marriage-of-melinda-johnson-v-sabastian-johnson-2025-10-30": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "family", "consumer-tool", "appellate"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "lareina-a-sauls-v-pierce-county-et-al-2025-10-30": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "mezu-v-mezu-2025-10-29": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "consumer-tool", "attorney-training"],
+  "sanction_types": ["professional", "bar-referral", "referral"],
+  "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "bar-referral", "appellate"],
+  "lesson": "A bar referral follows fabricated citations plus misquoted precedent; require second-chair verification against Westlaw before every filing.",
+  "confidence": "medium"
+ },
+ "robert-cole-stemkowski-goldman-v-arizona-board-of-regents-2025-10-29": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "fabricated-quotes", "civil"],
+  "lesson": "Misrepresenting precedent is treated like fabrication; verify each holding, not just the citation string.",
+  "confidence": "medium"
+ },
+ "joy-wilson-v-kipp-texas-inc-2025-10-29": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "attorney-training", "supervision-protocol"],
+  "sanction_types": ["monetary", "training-order"],
+  "tags": ["fabricated-quotes", "consumer-tool", "employment", "training-ordered"],
+  "lesson": "Even nominal $1 cost orders come with mandatory CLE when AI fabricates quotes in a declaration; verify exhibits word-for-word.",
+  "confidence": "high"
+ },
+ "ronald-h-foster-v-author-success-publishing-et-al-2025-10-29": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "sehra-waheed-v-sm-1-mms-llc-et-al-2025-10-28": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "in-re-loletha-hale-esq-boston-v-williams-2025-10-28": {
+  "severity": "career-ending",
+  "policy_gap_ids": ["citation-verification", "written-ai-policy", "audit-trail"],
+  "sanction_types": ["professional", "published-opinion"],
+  "tags": ["fake-citations", "published-opinion", "civil", "solo"],
+  "lesson": "A five-year order to attach the sanction opinion to every new case is a scarlet-letter sanction; one fabrication can define a career.",
+  "confidence": "high"
+ },
+ "ryan-andrew-nelson-v-state-farm-fire-and-casualty-company-2025-10-28": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "us-bank-national-association-v-richmond-2025-10-27": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "jayroe-v-progressive-casualty-insurance-company-2025-10-27": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "in-re-sherry-ann-mcgann-2025-10-27": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "bankruptcy"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "green-building-initiative-inc-v-stephen-r-peacock-green-globe-limited-2025-10-27": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "consumer-tool", "civil"],
+  "lesson": "Using Copilot for grammar edits still introduces hallucinated citations; ban AI touching any text containing case cites.",
+  "confidence": "high"
+ },
+ "crowder-v-yussman-2025-10-24": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail", "written-ai-policy"],
+  "sanction_types": ["warning", "published-opinion"],
+  "tags": ["fake-citations", "appellate", "published-opinion"],
+  "lesson": "Placeholder citations left unreplaced become fabrications; enforce a no-placeholder rule with cite-checking as the last pre-filing step.",
+  "confidence": "high"
+ },
+ "appeals-of-huffman-construction-llc-2025-10-23": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "attorney-training", "supervision-protocol", "audit-trail"],
+  "sanction_types": ["struck-pleading"],
+  "tags": ["fake-citations", "fabricated-quotes", "administrative"],
+  "lesson": "Over 70% bad citations gets a brief struck wholesale; run a 100% citation audit before any AI-drafted filing leaves the firm.",
+  "confidence": "high"
+ },
+ "mccaster-v-united-states-2025-10-23": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "in-re-sanctions-order-of-kenney-2025-10-23": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "attorney-training", "consumer-tool", "approved-tools-list"],
+  "sanction_types": ["monetary", "training-order", "bar-referral", "professional", "referral"],
+  "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "bar-referral", "training-ordered", "multi-firm"],
+  "lesson": "Stacking ChatGPT, Copilot, and Google without verification triggers costs, mandatory CLE, and disciplinary referral in one order.",
+  "confidence": "high"
+ },
+ "richard-m-zelma-v-wonder-group-inc-2025-10-22": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ }
+}

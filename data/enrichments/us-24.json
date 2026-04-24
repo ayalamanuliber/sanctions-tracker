@@ -1,0 +1,162 @@
+{
+  "jason-m-hatfield-pa-v-tony-pirani-and-pirani-law-pa-2025-12-03": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "bar-referral", "struck-pleading", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "bar-referral", "small-firm", "civil"],
+    "lesson": "Even a $1,000 fine with a bar referral ends careers; require co-counsel verification before filing AI-assisted briefs.",
+    "confidence": "high"
+  },
+  "ringo-v-colquhoun-design-studio-llc-2025-12-03": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary", "struck-pleading"],
+    "tags": ["fake-citations", "fabricated-quotes", "appellate", "civil"],
+    "lesson": "Two fabricated citations in a single appellate brief triggered a $2K sanction — verify every case against Westlaw before filing.",
+    "confidence": "high"
+  },
+  "eddie-lawrence-quitugua-v-donna-p-quitugua-et-al-2025-12-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "family"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "saregama-india-ltd-v-bharath-aiyer-et-al-2025-12-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "ip"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "de-ford-bader-and-key-v-james-koutoulas-and-lgbcoin-ltd-2025-12-02": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "incident-response"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "small-firm", "civil"],
+    "lesson": "Failing to dispute fabricated-citation allegations compounds sanctions risk; respond and concede verification failures immediately.",
+    "confidence": "medium"
+  },
+  "in-re-avi-schwalb-2025-12-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "bankruptcy"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "jarrus-et-al-v-governor-of-michigan-et-al-2025-12-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "consumer-tool", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "magee-v-new-balance-athletics-inc-2025-12-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "kingdom-of-sweden-v-samantha-ashhadi-soliman-2025-12-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "peiman-shayan-v-ebby-shakib-2025-12-01": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "incident-response", "audit-trail"],
+    "sanction_types": ["monetary", "struck-pleading", "bar-referral", "referral", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "bar-referral", "appellate", "published-opinion"],
+    "lesson": "Calling fabricated citations 'clerical errors' escalates sanctions — accept responsibility immediately to avoid the bar referral.",
+    "confidence": "high"
+  },
+  "john-doe-v-james-p-ehrhard-esq-2025-12-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "ali-taj-bey-v-mark-glass-2025-12-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "brick-v-gallatin-county-et-al-2025-12-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "lothamer-tax-resolution-inc-v-paul-kimmel-2-2025-12-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "tax"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "hanson-v-nest-home-lending-llc-et-al-2025-11-28": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "tameer-peak-v-onika-tanya-maraj-petty-et-al-2025-11-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "the-doc-app-inc-dba-my-florida-green-v-leafwell-inc-2025-11-26": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "training-order", "bar-referral", "professional", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "bar-referral", "training-ordered", "civil"],
+    "lesson": "Courts now order mandatory CLE plus bar referral for fabricated citations — budget AI-ethics training before discipline forces it.",
+    "confidence": "high"
+  },
+  "boyd-v-protestant-memorial-medical-center-2025-11-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "carlos-maturin-v-t-mobile-usa-inc-2025-11-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "sebastian-rako-v-vmware-llc-1-2025-11-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "employment"],
+    "lesson": null,
+    "confidence": "medium"
+  }
+}

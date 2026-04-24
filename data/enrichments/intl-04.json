@@ -1,0 +1,162 @@
+{
+ "jorgensen-v-jml-rose-pty-ltd-security-for-costs-2026-02-09": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["monetary"],
+  "tags": ["pro-se", "fake-citations", "AU", "civil"],
+  "lesson": "Repeat AI-citation offenders invite security-for-costs orders; flag prior hallucination history when opposing pro-se litigants.",
+  "confidence": "medium"
+ },
+ "application-by-pennisi-2026-02-05": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "AU", "administrative"],
+  "lesson": "Fabricated authorities cannot establish exceptional circumstances; verify every cited case against primary sources.",
+  "confidence": "medium"
+ },
+ "zeng-v-zuo-2026-02-05": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "CA", "civil"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "applicant-v-bc-college-of-physicians-and-surgeons-2026-02-05": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "CA", "administrative"],
+  "lesson": "Always run cite-checks in CanLII before filing; unlocatable authorities undermine the entire submission.",
+  "confidence": "medium"
+ },
+ "rsr-road-surface-recycling-v-bonnechere-excavating-et-al-2026-02-04": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "paid-tool-verification", "audit-trail"],
+  "sanction_types": ["monetary"],
+  "tags": ["fabricated-quotes", "fake-citations", "CA", "civil"],
+  "lesson": "If counsel cannot produce the quoted passage on demand, the quote is AI-hallucinated; verify quotations against the source decision pre-filing.",
+  "confidence": "medium"
+ },
+ "pasuengos-v-minister-for-immigration-and-citizenship-no-2-2026-02-03": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "approved-tools-list", "attorney-training"],
+  "sanction_types": ["bar-referral", "referral"],
+  "tags": ["fake-citations", "immigration", "AU", "consumer-tool", "bar-referral"],
+  "lesson": "Never cite from AI-generated Google summaries; treat any Overview snippet as unverified until confirmed in primary databases.",
+  "confidence": "high"
+ },
+ "ortiz-fatima-cecilia-v-bookingcom-y-otros-2026-02-02": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "audit-trail", "attorney-training"],
+  "sanction_types": ["monetary", "bar-referral", "professional", "referral"],
+  "tags": ["fake-citations", "AR", "civil", "bar-referral"],
+  "lesson": "Attach verifiable copies and full citations (sala, jurisdiction, date) for every precedent; generic AI-style cites trigger sanctions and bar referral.",
+  "confidence": "high"
+ },
+ "broadwater-tower-2026-02-02": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "AU", "administrative"],
+  "lesson": "AI routinely invents statutory content; read the actual section text before citing any provision.",
+  "confidence": "medium"
+ },
+ "health-care-complaints-commission-v-campbell-2026-01-30": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "AU", "administrative"],
+  "lesson": "AI hallucinates both case names and paragraph numbers; verify pinpoint cites, not just the case reference.",
+  "confidence": "medium"
+ },
+ "psahsc-v-tchampet-2026-01-30": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "paid-tool-verification", "approved-tools-list"],
+  "sanction_types": ["warning"],
+  "tags": ["fabricated-quotes", "fake-citations", "GB", "consumer-tool", "appellate"],
+  "lesson": "Microsoft Co-Pilot is not a legal research tool; ban consumer chatbots for drafting submissions and quote-pull every authority.",
+  "confidence": "high"
+ },
+ "mme-y-2026-01-30": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "FR", "administrative"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "rasko-v-icbc-2026-01-30": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "CA", "civil"],
+  "lesson": "Opposing parties now routinely flag AI hallucinations; expect adversarial cite-checks on every submission.",
+  "confidence": "medium"
+ },
+ "roux-v-van-greunen-2026-01-29": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "ZA", "civil"],
+  "lesson": "A 'compiled' Word document of a judgment is a red flag; courts expect neutral citations traceable to official reporters.",
+  "confidence": "medium"
+ },
+ "howse-v-coulton-2026-01-29": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "CA", "civil"],
+  "lesson": "Jurisdictional arguments built on hallucinated appellate authority collapse on verification; cite-check before relying on procedural case law.",
+  "confidence": "medium"
+ },
+ "folarin-v-the-immigration-services-commissionner-2026-01-29": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "consumer-tool", "immigration", "GB"],
+  "lesson": "ChatGPT confidently cites cases that do not exist across multiple jurisdictions; never use it for legal research without primary-source verification.",
+  "confidence": "high"
+ },
+ "sas-la-volumerie-2026-01-28": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+  "sanction_types": ["case-dismissed"],
+  "tags": ["fake-citations", "FR", "administrative"],
+  "lesson": "Courts are dismissing filings that read as AI-drafted without specifics; a human lawyer must substantively edit every AI-assisted pleading.",
+  "confidence": "medium"
+ },
+ "davidson-v-pcl-constructors-inc-2026-01-27": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "CA", "employment"],
+  "lesson": "Opposing counsel should flag suspected AI fabrications on the record; it shifts the burden and preserves cost arguments.",
+  "confidence": "medium"
+ },
+ "cohen-v-egged-transportation-ltd-2026-01-25": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["pro-se", "fake-citations", "IL", "civil"],
+  "lesson": "Courts are ordering amendments rather than dismissals for pro-se AI errors; attorneys will not get the same leniency.",
+  "confidence": "medium"
+ },
+ "gummadi-usha-rani-v-sure-mallikarjuna-rao-2026-01-25": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "attorney-training", "approved-tools-list"],
+  "sanction_types": ["published-opinion", "referral"],
+  "tags": ["fake-citations", "IN", "civil", "published-opinion"],
+  "lesson": "Judges using AI to draft orders is now appellate-reversible error; never let AI generate reasoning or authority in judicial work product.",
+  "confidence": "high"
+ },
+ "tarek-jabarin-v-national-insurance-institute-2026-01-25": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail", "attorney-training"],
+  "sanction_types": ["monetary"],
+  "tags": ["fake-citations", "IL", "administrative"],
+  "lesson": "Even small monetary penalties now attach to fake AI citations; a single fabricated case is enough to draw a fine.",
+  "confidence": "medium"
+ }
+}

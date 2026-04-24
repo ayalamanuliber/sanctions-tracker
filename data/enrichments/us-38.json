@@ -1,0 +1,162 @@
+{
+  "happiness-idehen-felix-ogieva-v-gloria-stoute-phillip-2025-07-29": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "ai-disclosure-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "bar-referral", "referral", "ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "bar-referral", "trial"],
+    "lesson": "Never file AI-generated case summaries verbatim; telltale AI disclaimers in briefs trigger bar referrals.",
+    "confidence": "high"
+  },
+  "robbins-v-martin-law-firm-pl-2025-07-28": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Conceding fabricated citations avoids monetary sanctions but leaves a public warning on the record.",
+    "confidence": "medium"
+  },
+  "seither-cherry-quad-cities-v-oakland-automation-2025-07-28": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "training-order"],
+    "tags": ["fabricated-quotes", "civil"],
+    "lesson": "Even modest fee-shifting orders come with CLE recommendations; mandate AI ethics training firm-wide proactively.",
+    "confidence": "high"
+  },
+  "deleman-v-highlevel-2025-07-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "pop-top-corp-v-rakuten-kobo-2025-07-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "malone-bey-v-lauderdale-county-school-board-2025-07-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "bionex-llc-b-423630-2025-07-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "everett-j-prescott-inc-v-timothy-j-beall-2025-07-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "nunez-v-american-airlines-inc-2025-07-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "taft-v-thomas-et-al-2025-07-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "karina-elizondo-vs-city-of-laredo-2025-07-23": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "training-order", "professional"],
+    "tags": ["fake-citations", "trial", "civil"],
+    "lesson": "A law clerk's AI output is the supervising attorney's sanction; review every citation before signing.",
+    "confidence": "high"
+  },
+  "vita-law-offices-v-lockridge-grindal-nauen-pllp-2025-07-23": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "attorney-training"],
+    "sanction_types": ["training-order", "professional"],
+    "tags": ["fabricated-quotes", "consumer-tool", "training-ordered", "civil"],
+    "lesson": "Copilot-fabricated quotes trigger mandatory CLE; ban consumer chatbots for any legal drafting.",
+    "confidence": "high"
+  },
+  "johnson-v-dunn-2025-07-23": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "written-ai-policy", "supervision-protocol"],
+    "sanction_types": ["disqualification", "bar-referral", "published-opinion", "professional"],
+    "tags": ["fake-citations", "consumer-tool", "biglaw", "disqualification", "bar-referral", "published-opinion"],
+    "lesson": "Apologies do not cure AI fabrications; ChatGPT citations get you disqualified and named in a published opinion.",
+    "confidence": "high"
+  },
+  "in-re-cormedix-2025-07-23": {
+    "severity": "medium",
+    "policy_gap_ids": ["supervision-protocol", "citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "civil"],
+    "lesson": "Judges who blame interns still face congressional scrutiny; supervise every AI-assisted draft before signing.",
+    "confidence": "high"
+  },
+  "victor-kholod-v-nationstar-mortgage-llc-2025-07-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "zajradhara-v-nmc-2025-07-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-re-cao-2025-07-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "mccarthy-v-dea-2025-07-21": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "attorney-training"],
+    "sanction_types": ["ordered-to-show-cause", "struck-pleading"],
+    "tags": ["fake-citations", "appellate", "administrative"],
+    "lesson": "AI-generated agency-adjudication summaries are high-risk; verify every administrative citation against primary sources.",
+    "confidence": "high"
+  },
+  "in-re-boy-2025-07-21": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail", "incident-response"],
+    "sanction_types": ["monetary", "bar-referral", "professional", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "appellate", "bar-referral", "family"],
+    "lesson": "Disgorgement plus bar referral is the floor for unverified AI citations; require second-attorney verification pre-filing.",
+    "confidence": "high"
+  },
+  "jackson-federation-of-teachers-et-al-v-lynn-fitch-2025-07-20": {
+    "severity": "medium",
+    "policy_gap_ids": ["supervision-protocol", "citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning"],
+    "tags": ["fabricated-quotes", "consumer-tool", "civil"],
+    "lesson": "Judges blaming law clerks still draw congressional inquiries; chambers need written AI policies matching firms'.",
+    "confidence": "high"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "multiphone-latin-america-v-millicom-international-cellular-2025-08-28": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "written-ai-policy"],
+    "sanction_types": ["professional", "bar-referral", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "trial"],
+    "lesson": "Bar referrals follow fabricated citations even without monetary fines; verify every quote against the actual opinion text.",
+    "confidence": "high"
+  },
+  "lee-v-rr-home-care-inc-2025-08-28": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "written-ai-policy"],
+    "sanction_types": ["monetary", "professional", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "civil"],
+    "lesson": "Ban consumer tools like Gemini for legal drafting; even $1K sanctions come with disciplinary referrals.",
+    "confidence": "high"
+  },
+  "united-states-v-michael-shane-debaere-1-2025-08-27": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "criminal"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "takefman-v-the-pickleball-club-llc-2025-08-27": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-re-richburg-2025-08-27": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "approved-tools-list", "written-ai-policy"],
+    "sanction_types": ["professional", "training-order"],
+    "tags": ["fake-citations", "consumer-tool", "training-ordered", "bankruptcy"],
+    "lesson": "Microsoft CoPilot is not a legal research tool; mandate an approved-tools list and require independent verification before any filing.",
+    "confidence": "high"
+  },
+  "helgen-industries-2025-08-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "chenco-v-do-fluoride-2025-08-22": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training"],
+    "sanction_types": ["warning", "struck-pleading"],
+    "tags": ["fabricated-quotes", "fake-citations", "civil"],
+    "lesson": "Accusing opposing counsel of misstating the law while submitting fake quotes compounds the ethics exposure; verify before accusing.",
+    "confidence": "high"
+  },
+  "fernando-betancourt-gómez-v-colegio-de-profesionales-2025-08-22": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["monetary", "referral", "bar-referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Spanish-language and local-jurisdiction citations require the same verification rigor as federal reporters; assign a shepardizing step.",
+    "confidence": "high"
+  },
+  "in-re-mascio-2025-08-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "bankruptcy"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-re-rl-2025-08-20": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "appellate", "multi-firm"],
+    "lesson": "Repeat offenders face compounded sanctions across appeals; track AI-citation incidents across every matter firm-wide.",
+    "confidence": "medium"
+  },
+  "clark-v-jpmorgan-chase-bank-na-2025-08-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "garces-v-hernandez-2025-08-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "lahti-v-consensys-software-inc-2025-08-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "in-re-sonja-helvig-derosa-grund-2025-08-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "bankruptcy"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "williams-v-kirch-2025-08-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-re-nasser-2025-08-15": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fabricated-quotes", "bankruptcy"],
+    "lesson": "Block-quoted statutes must be copy-pasted from primary sources, never paraphrased or AI-summarized as verbatim text.",
+    "confidence": "medium"
+  },
+  "clonan-v-centrastate-healthcare-system-2025-08-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fabricated-quotes", "paid-tool", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "johnny-mcmurry-jr-v-neiders-company-llc-et-al-2025-08-14": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "monster-energy-company-v-john-h-owoc-2025-08-14": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["professional", "training-order"],
+    "tags": ["pro-se", "fake-citations", "civil", "ip"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "woody-nora-v-m-a-transport-inc-et-al-2025-08-13": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "written-ai-policy"],
+    "sanction_types": ["monetary", "training-order", "bar-referral", "referral"],
+    "tags": ["fake-citations", "training-ordered", "civil"],
+    "lesson": "A $1K fine plus mandatory CLE and a disciplinary referral is now the floor for fabricated citations in the Fifth Circuit.",
+    "confidence": "high"
+  }
+}

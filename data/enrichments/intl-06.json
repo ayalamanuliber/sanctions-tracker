@@ -1,0 +1,162 @@
+{
+  "elden-v-hmrc-2026-01-08": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause", "warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "tax", "GB"],
+    "lesson": "Require sworn statements of truth about AI use in every tribunal filing; misattributed case headings are traceable.",
+    "confidence": "high"
+  },
+  "mr-deepak-so-shivkumar-bahry-v-heart-soul-entertainment-ltd-2026-01-07": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "pro-se", "civil", "IN"],
+    "lesson": "Even nominal pro-se cost awards signal courts now detect AI-fabricated citations routinely.",
+    "confidence": "high"
+  },
+  "ta-orléans-reconduite-à-la-frontière-n-2506907-2026-01-07": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "immigration", "small-firm", "FR"],
+    "lesson": "French administrative courts now admonish counsel by name for unverified Conseil d'Etat citations; verify every reference pre-filing.",
+    "confidence": "high"
+  },
+  "case-no-2025가단10169-2026-01-06": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "consumer-tool", "civil", "KR"],
+    "lesson": "Pro-se ChatGPT submissions draw warnings; South Korean courts are now scrutinizing AI filings.",
+    "confidence": "low"
+  },
+  "riley-pollard-v-unifor-local-324-2026-01-06": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "administrative", "employment", "CA"],
+    "lesson": "Boards will ignore mischaracterized rule citations rather than sanction pro-se filers; volume filler risk.",
+    "confidence": "medium"
+  },
+  "bahrani-v-peters-2026-01-05": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "pro-se", "appellate", "civil", "CA"],
+    "lesson": "Appellate courts count non-existent citations one by one and impose opposing-counsel time costs.",
+    "confidence": "high"
+  },
+  "greenwood-v-the-owners-strata-plan-2026-01-05": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "pro-se", "administrative", "civil", "CA"],
+    "lesson": "Tribunals silently discount entire arguments when AI-generated citations permeate submissions.",
+    "confidence": "medium"
+  },
+  "dudak-re-2026-01-02": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "pro-se", "consumer-tool", "administrative", "CA"],
+    "lesson": "ChatGPT-generated authorities are uniformly disregarded by Alberta roadside adjudicators; no relief follows.",
+    "confidence": "medium"
+  },
+  "sentencia-0001262025-2025-12-31": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "audit-trail"],
+    "sanction_types": ["warning", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "criminal", "small-firm", "ES"],
+    "lesson": "Spanish panels now name counsel for negligent reliance on 'what the algorithm suggested'; verify every STS quotation.",
+    "confidence": "high"
+  },
+  "mazaheri-v-law-society-of-ontario-2025-12-30": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["professional", "published-opinion"],
+    "tags": ["fake-citations", "consumer-tool", "administrative", "bar-referral", "CA"],
+    "lesson": "Law Society tribunals now compile multi-page charts of fabricated citations — any Grok/unsanctioned tool use in discipline proceedings compounds exposure.",
+    "confidence": "high"
+  },
+  "m-peiu-v-hywel-dda-university-local-health-board-2025-12-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "pro-se", "consumer-tool", "employment", "GB"],
+    "lesson": "UK tribunals disregard ChatGPT-sourced authorities without sanction when filer is pro se.",
+    "confidence": "high"
+  },
+  "n-2506461-2025-12-29": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "immigration", "small-firm", "FR"],
+    "lesson": "Mass-fabricated Conseil d'Etat and CNDA citations now earn formal admonishment from French administrative courts.",
+    "confidence": "high"
+  },
+  "chaudhary-v-genest-2025-12-29": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fabricated-quotes", "pro-se", "administrative", "civil", "CA"],
+    "lesson": "Human rights tribunals catch misattributed judicial quotations line by line against Supreme Court of Canada sources.",
+    "confidence": "medium"
+  },
+  "herzel-hagigi-v-official-receiver-2025-12-28": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary", "case-dismissed"],
+    "tags": ["fake-citations", "pro-se", "appellate", "bankruptcy", "IL"],
+    "lesson": "Israeli Supreme Court dismisses appeals with costs when fabricated authorities drive the argument.",
+    "confidence": "medium"
+  },
+  "mag-7-ltd-et-al-v-tederi-et-al-2025-12-25": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary", "struck-pleading"],
+    "tags": ["fake-citations", "civil", "small-firm", "IL"],
+    "lesson": "Tel Aviv District now hits attorneys with 10K ILS and forced repleading for a single fabricated citation.",
+    "confidence": "high"
+  },
+  "unknown-case-number-2025-12-25": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "small-firm", "civil", "BE"],
+    "lesson": "Belgian courts now impose 25K-euro monetary sanctions for fabricated case law — cost of skipping verification is real money.",
+    "confidence": "medium"
+  },
+  "mrs-sandra-archer-v-gtc-contracting-2025-12-24": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "incident-response"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "pro-se", "employment", "administrative", "AU"],
+    "lesson": "Fair Work Commissioners now ask representatives directly whether they used AI; admission leads to link-or-disregard protocol.",
+    "confidence": "high"
+  },
+  "jf-v-canada-employment-insurance-commission-2025-12-24": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "pro-se", "administrative", "employment", "CA"],
+    "lesson": "Tribunals routinely check neutral citation numbers against CanLII and find mismatched authorities.",
+    "confidence": "high"
+  },
+  "kalala-v-coopérative-dhabitation-la-fraternité-micheloise-2025-12-23": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "pro-se", "civil", "CA"],
+    "lesson": "Quebec Superior Court now imposes modest cost sanctions on pro-se filers for fabricated QCCS/QCCA citations.",
+    "confidence": "high"
+  },
+  "tekla-tekla-2025-12-23": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "family", "appellate", "AU"],
+    "lesson": "Family appellate courts itemize each fabricated authority by name in reasons; mischaracterizations are published record.",
+    "confidence": "high"
+  }
+}

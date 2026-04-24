@@ -1,0 +1,162 @@
+{
+  "wang-v-moutidis-2025-08-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fabricated-quotes", "fake-citations", "civil", "AU"],
+    "lesson": "When opposing a pro-se litigant's AI-fabricated quotes, demand the primary exhibit to expose the fabrication fast.",
+    "confidence": "medium"
+  },
+  "ploni-v-ashdod-port-company-ltd-2025-08-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "employment", "IL"],
+    "lesson": "Israeli courts will impose costs on pro-se AI misuse even without fabricated-citation detail on record.",
+    "confidence": "low"
+  },
+  "jne24-v-minister-for-immigration-and-citizenship-2025-08-15": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "bar-referral"],
+    "tags": ["fake-citations", "immigration", "consumer-tool", "bar-referral", "AU"],
+    "lesson": "Consumer tools like Claude or Copilot in immigration filings trigger personal costs and Bar referral — mandate approved-tools list.",
+    "confidence": "high"
+  },
+  "kuzniar-v-general-dental-council-2025-08-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "consumer-tool", "GB"],
+    "lesson": "Even when costs are declined, a pro-se ChatGPT bundle with 28 bad authorities shows why opposing counsel must Shepardize everything.",
+    "confidence": "high"
+  },
+  "maxwell-v-westjet-airlines-ltd-2025-08-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "civil", "CA"],
+    "lesson": "ChatGPT will cite repealed statutes as live law; verify every statutory citation against the current code, not AI output.",
+    "confidence": "high"
+  },
+  "yashcheshen-v-saskatchewan-government-insurance-2025-08-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fabricated-quotes", "denial", "civil", "CA"],
+    "lesson": "Denying AI use when confronted does not erase a fabricated SCC quote — denial only deepens the court's adverse inference.",
+    "confidence": "medium"
+  },
+  "director-of-public-prosecutions-v-gr-2025-08-14": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause", "warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "criminal", "prosecutor", "multi-attorney", "AU"],
+    "lesson": "Joint submissions require independent verification by each firm — do not assume opposing counsel vetted the AI-drafted citations.",
+    "confidence": "high"
+  },
+  "holloway-v-beckles-2025-08-12": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "civil", "GB"],
+    "lesson": "UK tribunals now treat fabricated citations as unreasonable conduct sufficient for costs — flag AI risks in every pro-se matter.",
+    "confidence": "high"
+  },
+  "ms-bangladesh-2025-08-12": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "attorney-training"],
+    "sanction_types": ["bar-referral", "professional"],
+    "tags": ["fake-citations", "immigration", "consumer-tool", "bar-referral", "GB"],
+    "lesson": "Handing the Panel ChatGPT-fabricated 'Y (China)' printouts triggered BSB referral — ban consumer AI from appellate immigration bundles.",
+    "confidence": "high"
+  },
+  "meital-kasantini-v-hagivaa-proyectim-handasiim-ltd-2025-08-12": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary", "struck-pleading"],
+    "tags": ["fake-citations", "civil", "small-firm", "IL"],
+    "lesson": "Admitting AI fabrication post-filing still costs you money and your evidence — verify before the statement of claim goes out.",
+    "confidence": "high"
+  },
+  "blinds-to-go-inc-c-blachley-2025-08-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil", "CA"],
+    "lesson": "Courts now spot hallucinations by the tell of 'cited but not filed' — require the actual judgment copy for every authority.",
+    "confidence": "medium"
+  },
+  "licksun-company-limited-v-occupiers-of-lot-no-552-2025-08-08": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "HK"],
+    "lesson": "Delegating authority lists to non-legal staff is no defence when six of six cases are fictitious — lawyers sign the list, lawyers verify it.",
+    "confidence": "high"
+  },
+  "musselman-v-vanderstelt-2025-08-08": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil", "CA"],
+    "lesson": "BC appellate courts now cite hallucinations as a factor granting security for costs — raise it early in your response materials.",
+    "confidence": "high"
+  },
+  "deysel-v-electra-lift-co-2025-08-08": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "consumer-tool", "employment", "AU"],
+    "lesson": "ChatGPT's advice to commence unfounded applications past limitation kills cases — warn clients that AI is not legal counsel.",
+    "confidence": "high"
+  },
+  "may-v-costaras-2025-08-08": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil", "AU"],
+    "lesson": "NSW Court of Appeal flagged the need for judicial vigilance — assume any pro-se authority list contains at least one hallucination.",
+    "confidence": "medium"
+  },
+  "gadban-v-israel-land-authority-2025-08-06": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil", "IL"],
+    "lesson": "Thirty fabricated judgments in one brief is career-risk territory — enforce 100% citation sampling on any AI-drafted pleading.",
+    "confidence": "medium"
+  },
+  "pinchas-v-supervisor-of-insolvency-2025-08-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "bankruptcy", "IL"],
+    "lesson": "Withdrawing the motion does not purge the sanction — Israeli courts punish the filing, not just reliance at hearing.",
+    "confidence": "high"
+  },
+  "marcus-groesser-and-ira-hess-v-robert-phelps-herman-2025-08-01": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "incident-response", "audit-trail"],
+    "sanction_types": ["monetary", "bar-referral", "professional", "published-opinion"],
+    "tags": ["fake-citations", "consumer-tool", "bar-referral", "civil", "published-opinion", "OTHER"],
+    "lesson": "Speaking notes are submissions — courts reject the 'not on the official record' defence and will refer to the Bar.",
+    "confidence": "high"
+  },
+  "halton-regional-municipality-v-rewa-et-al-2025-08-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "civil", "CA"],
+    "lesson": "AI will invent whole legal doctrines ('train of inquiry' disclosure) — verify the proposition exists, not just the citation.",
+    "confidence": "high"
+  },
+  "the-father-v-the-mother-2025-07-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "family", "under-seal", "GB"],
+    "lesson": "Family courts now treat AI-faked authorities as litigation misconduct warranting costs — flag to every self-represented opposing party.",
+    "confidence": "high"
+  }
+}

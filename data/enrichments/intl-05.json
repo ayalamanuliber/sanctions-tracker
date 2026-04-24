@@ -1,0 +1,162 @@
+{
+  "gu-v-fogler-rubinoff-2026-01-23": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "When opposing a pro-se filer, check every citation yourself—courts reward counsel who surface AI hallucinations.",
+    "confidence": "medium"
+  },
+  "gonen-v-ashkenazi-2026-01-22": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "A dismissed claim tied to fake citations can end the matter—verify every authority before filing, even in small-claims forums.",
+    "confidence": "medium"
+  },
+  "cruz-v-manzano-y-asociados-2026-01-21": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "small-firm", "civil"],
+    "lesson": "Monetary sanctions now cross borders—require a second-attorney cite-check before every filing, no exceptions.",
+    "confidence": "medium"
+  },
+  "zou-v-miracon-development-inc-2026-01-20": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Even token costs against pro-se filers set precedent—cite these in motions to deter opposing AI misuse.",
+    "confidence": "high"
+  },
+  "waddell-re-2026-01-20": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Facta without hyperlinks or reporter cites now trigger AI-hallucination suspicion—include verifiable links on every authority.",
+    "confidence": "medium"
+  },
+  "pellegrino-v-york-condominium-corporation-no-486-2026-01-20": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": "Tribunals are now pre-warning fabricators that future hallucinations will draw costs—cite that warning in your own briefs.",
+    "confidence": "high"
+  },
+  "the-republic-of-uganda-v-tugume-abubakar-2026-01-19": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "criminal", "first-in-state"],
+    "lesson": "AI hallucinations are a global lawyer problem—verify every Commonwealth citation against the actual reporter before filing.",
+    "confidence": "medium"
+  },
+  "amit-arora-v-canadian-national-railway-2026-01-19": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Federal courts now catch hallucinated citations and misstated rules—build checklists that flag both fake cites and fake legal propositions.",
+    "confidence": "high"
+  },
+  "riley-v-nuvei-australia-merchant-services-2026-01-19": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "employment", "administrative"],
+    "lesson": "Commissions flag fabricated authorities even without sanctions—log these dismissals to train opposing-counsel detection.",
+    "confidence": "medium"
+  },
+  "your-home-partners-v-kellichan-2026-01-19": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Fabricated statutes are now appearing alongside fake cases—verify the existence of the statute section, not just the case number.",
+    "confidence": "high"
+  },
+  "robert-huish-v-hrmc-2026-01-16": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "incident-response"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "tax", "administrative"],
+    "lesson": "When a filer admits AI use after being caught, push the tribunal to disregard the entire filing, not just the fake cites.",
+    "confidence": "high"
+  },
+  "lutfi-v-tucker-2026-01-16": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "family"],
+    "lesson": "Family-court self-reps are a major AI-hallucination vector—request authority-by-authority verification orders up front.",
+    "confidence": "medium"
+  },
+  "case-no-2025가단214167-2026-01-13": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Korean courts are now tracking AI hallucinations—international clients should assume no jurisdiction is safe for unverified cites.",
+    "confidence": "low"
+  },
+  "smith-and-commissioner-of-taxation-2026-01-12": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "tax", "administrative"],
+    "lesson": "AI also misapplies real cases—verify both that the cite exists and that it actually supports the proposition claimed.",
+    "confidence": "high"
+  },
+  "vanderberg-v-shviro-2026-01-12": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Small-claims fines for fake cites are now standardized globally—expect monetary consequences even in low-value matters.",
+    "confidence": "high"
+  },
+  "vasina-v-york-condominium-corporation-no-486-2026-01-12": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": "Condo tribunals are seeing repeat AI hallucination patterns—flag prior fabricator filings when you spot the same filer.",
+    "confidence": "medium"
+  },
+  "ms-f-green-v-imprint-creative-print-solutions-limited-2026-01-12": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "incident-response"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "employment", "administrative"],
+    "lesson": "Employment tribunals now disregard AI-sourced authorities wholesale—challenge the entire argument, not just the cites.",
+    "confidence": "medium"
+  },
+  "alami-nature-electricity-ltd-v-nof-ganusar-agricultural-cooperative-2026-01-11": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "civil", "small-firm"],
+    "lesson": "Winning on the merits no longer guarantees costs—fake cites can strip a prevailing party's fee award.",
+    "confidence": "high"
+  },
+  "alexandra-philomena-brigid-roy-v-attorney-general-of-canada-2026-01-09": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Federal Court now routinely disregards unreliable citations—attack opponent's authorities as a threshold matter.",
+    "confidence": "medium"
+  },
+  "esteme-v-aquitaine-co-investment-2026-01-09": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "civil", "small-firm"],
+    "lesson": "Allegations of 14 fake cites in one brief signal systemic AI reliance—audit counsel's entire practice, not just the filing.",
+    "confidence": "low"
+  }
+}

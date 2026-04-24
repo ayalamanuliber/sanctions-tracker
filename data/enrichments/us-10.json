@@ -1,0 +1,162 @@
+{
+  "lawand-hill-v-sloppy-vinyl-llc-et-al-2026-03-05": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-the-matter-of-the-estate-of-kuerschner-2026-03-05": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "jeriyah-ford-v-troy-city-school-district-et-al-2026-03-04": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "civil", "trial"],
+    "lesson": "Verify every cited case pulls up on Westlaw or Lexis before filing — show-cause orders start with unverifiable citations.",
+    "confidence": "high"
+  },
+  "ryan-adam-dixon-v-multicare-health-system-2026-03-04": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "medal-v-amazoncom-services-llc-2026-03-04": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "approved-tools-list"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "consumer-tool", "class-action", "civil"],
+    "lesson": "Supervise every associate's LLM output; admitting insufficient supervision escalates from warning to show-cause.",
+    "confidence": "high"
+  },
+  "in-the-matter-of-the-estate-of-carol-m-carey-2026-03-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-re-lusine-hakhverdyan-2026-03-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "bankruptcy"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "derence-v-fivehouse-v-united-states-department-of-defense-et-al-2026-03-02": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "written-ai-policy", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "government-lawyer", "multi-attorney", "civil"],
+    "lesson": "Government counsel face heightened scrutiny — repeated fabricated quotes across multiple filings end careers; log every AI-assisted draft.",
+    "confidence": "high"
+  },
+  "fabian-antonio-thomas-v-officer-skylar-sillivent-et-al-2026-03-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "hardy-v-whitaker-2026-03-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "put-a-bird-on-it-llc-v-seattle-arena-holdings-llc-2026-03-02": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "appellate", "civil"],
+    "lesson": "Ban consumer AI search engines for appellate briefs; apologies don't erase fabricated captions on the record.",
+    "confidence": "medium"
+  },
+  "horton-v-colvin-2026-02-27": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "appellate"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "in-the-matter-of-the-estate-of-arturo-lopez-2026-02-27": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "joseph-maldonado-v-professional-animal-retirement-center-2026-02-27": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "attorney-training"],
+    "sanction_types": ["monetary", "bar-referral", "referral"],
+    "tags": ["fake-citations", "bar-referral", "civil", "trial"],
+    "lesson": "A $1,500 fine plus bar referral follows from misrepresenting holdings — never rely on AI to summarize a case's proposition.",
+    "confidence": "high"
+  },
+  "david-thomas-v-the-quikrete-companies-llc-2026-02-26": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "trial"],
+    "lesson": "Pull every quote from the reporter text before filing — hallucinated Fifth Circuit quotes surface fast in opposition.",
+    "confidence": "medium"
+  },
+  "perry-v-exeter-finance-llc-2026-02-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "united-states-v-robert-ponce-jr-2026-02-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "criminal"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "estate-of-khallid-muhammad-et-al-v-tupac-shakur-estate-et-al-2026-02-26": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "trial"],
+    "lesson": "Mischaracterizing a state decision is as sanctionable as inventing one — require holdings to be quoted verbatim from the opinion.",
+    "confidence": "high"
+  },
+  "volker-v-nygaard-2026-02-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "samuel-k-v-winsley-focia-2026-02-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  }
+}

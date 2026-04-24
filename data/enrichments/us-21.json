@@ -1,0 +1,162 @@
+{
+  "disability-rights-mississippi-v-palmer-home-for-children-2025-12-19": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "supervision-protocol"],
+    "sanction_types": ["monetary", "professional", "training-order", "bar-referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "trial", "bar-referral", "training-ordered"],
+    "lesson": "Counsel who admits not reading a cited case invites bar referral; mandate pre-filing read-and-sign verification.",
+    "confidence": "high"
+  },
+  "gavin-simpson-v-portfolio-recovery-associates-llc-2025-12-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "groux-v-csl-2025-12-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "fantini-v-westrock-services-llc-2025-12-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "billups-v-louisville-municipal-school-district-2025-12-19": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "disqualification"],
+    "tags": ["fake-citations", "consumer-tool", "disqualification", "multi-attorney", "trial"],
+    "lesson": "CLE alone won't save you — ban consumer chatbots like Grok and require audit trails for every AI-assisted filing.",
+    "confidence": "high"
+  },
+  "gerou-v-george-whitten-and-united-states-2025-12-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "jpmorgan-chase-bank-na-v-christina-buenzli-2025-12-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "wireless-investors-llc-v-semtech-incorporated-et-al-2025-12-18": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "A warning today sets up sanctions tomorrow — treat any 'nonexistent quote' flag as a mandatory internal audit trigger.",
+    "confidence": "medium"
+  },
+  "edward-starski-v-chandler-holderness-2025-12-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "robert-lafayette-v-alex-abrami-et-al-2025-12-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "halpern-v-federal-reserve-bank-of-new-york-et-al-2025-12-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "russel-williams-home-services-llc-v-minleon-international-usa-limited-llc-et-al-": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fabricated-quotes", "civil", "trial"],
+    "lesson": "Invented quotes draw show-cause orders — require a quote-matching pass against primary sources before any brief ships.",
+    "confidence": "high"
+  },
+  "burlingame-v-argo-private-client-group-ltd-et-al-2025-12-17": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Every quote must be traceable to the cited opinion; missing quotes in a brief signal unverified AI drafting.",
+    "confidence": "medium"
+  },
+  "friend-v-serpa-2025-12-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "la-housing-outreach-llc-v-medoff-2025-12-17": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "struck-pleading", "bar-referral"],
+    "tags": ["fake-citations", "appellate", "bar-referral", "small-firm"],
+    "lesson": "When the majority of your cites are wrong, expect the brief struck and a bar referral — require second-attorney cite-check on every appellate brief.",
+    "confidence": "high"
+  },
+  "prm-group-inc-v-paralegal-bootcamp-llc-2025-12-16": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "incident-response", "supervision-protocol"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "denial", "civil"],
+    "lesson": "Silently amending to cover fake cites compounds the sanction — disclose the AI error to the court the moment it surfaces.",
+    "confidence": "high"
+  },
+  "taylor-v-prince-georges-county-maryland-2025-12-16": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Miscited reporters and wrong panel designations are AI tells — verify reporter pages and panel type before citing.",
+    "confidence": "medium"
+  },
+  "holmes-family-trust-v-multnomah-county-assessor-2025-12-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "tax"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "michael-redwine-v-unum-life-insurance-company-of-america-2025-12-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "angelica-e-cruz-et-al-v-united-states-of-america-2025-12-16": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "multi-firm", "civil"],
+    "lesson": "Outsourcing a brief doesn't outsource Rule 11 — you own every citation outside counsel submits under your name.",
+    "confidence": "high"
+  }
+}

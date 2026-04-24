@@ -1,0 +1,162 @@
+{
+  "powhatan-county-school-board-v-skinger-et-al-2025-06-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "andersen-v-olympus-as-daybreak-2025-05-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "anita-krishnakumar-et-al-v-eichler-swim-and-tennis-club-2025-05-29": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Withdrawing the motion does not erase fake citations; verify before filing because courts still note them on the record.",
+    "confidence": "medium"
+  },
+  "delano-crossing-v-county-of-wright-2025-05-29": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "attorney-training"],
+    "sanction_types": ["bar-referral", "referral", "professional"],
+    "tags": ["fake-citations", "civil", "bar-referral", "tax"],
+    "lesson": "A bar referral can follow even without monetary fines when AI-drafted briefs show a fundamental misunderstanding of the law.",
+    "confidence": "high"
+  },
+  "mid-cent-operating-engrs-health-v-hoosiervac-2025-05-28": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "written-ai-policy", "audit-trail"],
+    "sanction_types": ["monetary", "referral"],
+    "tags": ["fake-citations", "civil", "multi-attorney"],
+    "lesson": "Shepardize every AI-surfaced case before filing; repeated unverified briefs stack sanctions across filings.",
+    "confidence": "high"
+  },
+  "brick-v-gallatin-county-2025-05-27": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "concord-v-anthropic-2025-05-23": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["fake-citations", "civil", "ip", "class-action"],
+    "lesson": "Experts must verify AI-assisted citations; unverified AI output shatters expert credibility even in high-profile cases.",
+    "confidence": "medium"
+  },
+  "rotonde-v-stewart-title-insurance-company-2025-05-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "luther-v-oklahoma-dhs-2025-05-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "garner-v-kadince-2025-05-22": {
+    "severity": "medium",
+    "policy_gap_ids": ["written-ai-policy", "citation-verification", "supervision-protocol", "approved-tools-list"],
+    "sanction_types": ["monetary", "professional"],
+    "tags": ["fake-citations", "consumer-tool", "appellate", "small-firm", "multi-attorney"],
+    "lesson": "Ban unsupervised AI use by non-lawyer staff and require attorney review of every filing before submission.",
+    "confidence": "high"
+  },
+  "zherka-v-davey-et-al-2025-05-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "ordered-to-show-cause"],
+    "tags": ["pro-se", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "evans-et-al-v-robertson-et-al-1-2025-05-21": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "versant-funding-v-teras-breakbulk-ocean-navigation-enterprises-2025-05-20": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "attorney-training", "written-ai-policy"],
+    "sanction_types": ["monetary", "training-order", "professional"],
+    "tags": ["fake-citations", "civil", "multi-attorney", "training-ordered"],
+    "lesson": "Local counsel who signs without checking is jointly liable; require both drafting and signing counsel to verify citations.",
+    "confidence": "high"
+  },
+  "bauche-v-commissioner-of-internal-revenue-2025-05-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "tax"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "gjovik-v-apple-inc-2025-05-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "civil", "employment"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "usa-v-burke-2025-05-15": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "audit-trail"],
+    "sanction_types": ["struck-pleading", "ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "paid-tool", "criminal"],
+    "lesson": "Paid tools like Westlaw AI and GPT Pro still hallucinate quotes; independently pull every quotation from the underlying opinion.",
+    "confidence": "high"
+  },
+  "beenshoof-v-chin-2025-05-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "keaau-development-partnership-llc-v-lawrence-2025-05-15": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "appellate", "small-firm"],
+    "lesson": "Delegating briefs to per-diem attorneys does not shift the signer's duty to verify every citation before filing.",
+    "confidence": "high"
+  },
+  "ramirez-v-humala-2025-05-13": {
+    "severity": "medium",
+    "policy_gap_ids": ["supervision-protocol", "citation-verification", "approved-tools-list", "written-ai-policy"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "civil", "small-firm", "employment"],
+    "lesson": "Paralegal AI research must be verified by the signing attorney; trust is not a defense to Rule 11.",
+    "confidence": "high"
+  },
+  "newbern-v-desoto-county-school-district-et-al-2025-05-12": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  }
+}

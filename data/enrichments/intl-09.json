@@ -1,0 +1,162 @@
+{
+  "pl-v-minister-of-employment-and-social-development-2025-11-28": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "CA", "administrative"],
+    "lesson": "Pro-se fabricated-authority rulings abroad strengthen our argument that verification duties are universal.",
+    "confidence": "medium"
+  },
+  "chan-v-british-columbia-2025-11-28": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "CA", "appellate"],
+    "lesson": "Courts now order security-for-costs when AI-fabricated citations surface — verify before filing to avoid cost exposure.",
+    "confidence": "medium"
+  },
+  "elías-axel-roberto-rafael-s-abuso-sexual-con-acceso-carnal-2025-11-28": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "attorney-training", "written-ai-policy"],
+    "sanction_types": ["disqualification", "bar-referral", "professional", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "criminal", "AR", "bar-referral", "disqualification"],
+    "lesson": "Uncritical AI use in a criminal defense brief can cost you the case and your bar standing — require human-supervised review.",
+    "confidence": "high"
+  },
+  "lessard-c-longuépée-2025-11-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "CA", "civil"],
+    "lesson": "ChatGPT-generated citations continue to draw public warnings — document any AI use and verify in primary sources.",
+    "confidence": "medium"
+  },
+  "in-re-robert-giroux-2025-11-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "CA"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "oxford-hotel-investments-ltd-v-great-yarmouth-borough-council-2025-11-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fabricated-quotes", "GB", "appellate"],
+    "lesson": "UK tribunals now call out AI-generated misquotations by name — treat false quotes as seriously as fake cases.",
+    "confidence": "medium"
+  },
+  "re-walker-2025-11-24": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "paid-tool-verification"],
+    "sanction_types": ["warning", "professional"],
+    "tags": ["fake-citations", "solo", "consumer-tool", "AU", "civil"],
+    "lesson": "Using legal-tech tools like CourtAid alongside ChatGPT does not excuse verification — reprimands follow regardless of tool pedigree.",
+    "confidence": "high"
+  },
+  "walker-v-collingwood-general-and-marine-hospital-2025-11-21": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "CA", "administrative"],
+    "lesson": "Reconsideration denials citing AI-invented precedent reinforce that every cite must resolve on CanLII before filing.",
+    "confidence": "medium"
+  },
+  "syndicat-des-travailleuses-et-travailleurs-c-centre-lautre-maison-inc-2025-11-21": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "written-ai-policy"],
+    "sanction_types": ["warning", "professional"],
+    "tags": ["fake-citations", "CA", "administrative", "employment"],
+    "lesson": "Arbitration panels now publish warnings for hallucinated citations — informality of the forum is no defense.",
+    "confidence": "high"
+  },
+  "mark-jennings-v-natwest-group-plc-2025-11-21": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "GB", "appellate"],
+    "lesson": "Scottish appellate courts are now naming ChatGPT submissions as unreliable — expect the same scrutiny for counsel.",
+    "confidence": "medium"
+  },
+  "rr-v-fraser-health-authority-and-others-no3-2025-11-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "CA", "administrative"],
+    "lesson": "Opposing counsel can now replicate AI hallucinations by re-prompting — build an audit trail proving your cites are human-verified.",
+    "confidence": "medium"
+  },
+  "r-v-wallace-2025-11-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "CA", "criminal"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "wang-v-mongeon-2025-11-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "CA", "administrative"],
+    "lesson": "Tribunals cross-check citation numbers against their own docket — invented HRTO numbers are exposed within one filing.",
+    "confidence": "medium"
+  },
+  "dj-v-sn-2025-11-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "CA", "appellate", "family"],
+    "lesson": "Admission of AI use at hearing now draws cost orders — counsel who conceal face far worse.",
+    "confidence": "high"
+  },
+  "eclinlrbnne20254814-2025-11-19": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["warning", "professional"],
+    "tags": ["fake-citations", "consumer-tool", "NL", "civil"],
+    "lesson": "Dutch courts are cross-checking ECLI numbers and flagging ChatGPT-sourced citations — verify every ECLI on rechtspraak.nl.",
+    "confidence": "high"
+  },
+  "yuehong-v-the-minister-of-citizenship-immigration-2025-11-19": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "published-opinion"],
+    "tags": ["fake-citations", "consumer-tool", "CA", "immigration", "published-opinion"],
+    "lesson": "Federal Court will refuse to anonymize counsel who file AI-hallucinated cites — expect your name in the published opinion.",
+    "confidence": "high"
+  },
+  "ms-j-m-jain-prop-sh-jeetmal-choraria-v-union-of-india-ors-2025-11-18": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training"],
+    "sanction_types": ["warning", "professional"],
+    "tags": ["fake-citations", "IN", "tax", "appellate"],
+    "lesson": "Indian High Courts now physically verify reporters against cited volumes — wrong ITR cites draw public warnings against AI misuse.",
+    "confidence": "high"
+  },
+  "kim-v-insurance-australia-2025-11-18": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol", "approved-tools-list"],
+    "sanction_types": ["professional", "published-opinion"],
+    "tags": ["fake-citations", "consumer-tool", "AU", "administrative"],
+    "lesson": "Even judges get their decisions pulled for AI hallucinations — require second-set verification for every cited authority.",
+    "confidence": "high"
+  },
+  "small-moves-canada-inc-v-garner-2025-11-18": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training"],
+    "sanction_types": ["warning"],
+    "tags": ["CA", "civil", "small-firm"],
+    "lesson": "AI can invent entire statutes, not just cases — confirm every named Act exists on the official legislature site before pleading.",
+    "confidence": "high"
+  },
+  "133-blackstock-road-v-assethold-limited-2025-11-17": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause", "professional"],
+    "tags": ["fake-citations", "GB", "civil", "small-firm"],
+    "lesson": "UK property tribunals now issue show-cause orders when authorities cannot be produced — treat failure to supply a cite as sanction-triggering.",
+    "confidence": "high"
+  }
+}

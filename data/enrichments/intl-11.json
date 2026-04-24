@@ -1,0 +1,162 @@
+{
+  "wertheimer-v-ryanair-dac-2025-11-01": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary", "warning"],
+    "tags": ["fake-citations", "solo", "civil", "first-in-state"],
+    "lesson": "Even a partial win becomes a loss when AI-fabricated citations strip your costs award.",
+    "confidence": "high"
+  },
+  "s-f-c-i-o-2025-10-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "consumer-tool"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "consumer-tool", "civil"],
+    "lesson": "ChatGPT flips statutory meaning — never quote a code provision without pulling the primary source.",
+    "confidence": "high"
+  },
+  "huang-v-champion-homes-sales-2025-10-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "appellate", "administrative"],
+    "lesson": "Tribunals will disregard AI-drafted grounds wholesale when the filer cannot verify authorities.",
+    "confidence": "high"
+  },
+  "oscartech-uk-ltd-v-orthofix-srl-2025-10-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "incident-response"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "ip", "administrative"],
+    "lesson": "Withdrawing AI citations only after opponent catches them still damages credibility — verify before filing.",
+    "confidence": "high"
+  },
+  "ok-v-southern-ontario-secondary-schools-association-2025-10-30": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "small-firm", "administrative", "civil"],
+    "lesson": "If a tribunal cannot locate your cited decision, expect an ethics inquiry before a merits ruling.",
+    "confidence": "medium"
+  },
+  "bourse-de-limmobilier-multilogements-inc-c-lanthier-2025-10-29": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "pro-se", "consumer-tool", "civil"],
+    "lesson": "Quebec courts will impose costs for ChatGPT-generated fictitious citations even against self-represented parties.",
+    "confidence": "high"
+  },
+  "sky-gardens-2025-10-29": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "administrative", "civil"],
+    "lesson": "Fabricated exhibits plus phantom cases equals adverse costs — produce source documents when requested.",
+    "confidence": "high"
+  },
+  "stelian-gheorghe-v-1-bsa-ahmad-bin-hezeem-associates-llp-2-jimmy-haoula-2025-10-": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "fabricated-quotes", "biglaw", "civil", "first-in-state"],
+    "lesson": "Witness statements are not exempt from citation verification — DIFC will tag the firm, not just the witness.",
+    "confidence": "high"
+  },
+  "the-vancor-group-inc-v-2744364-ontario-limited-et-al-2025-10-28": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "civil"],
+    "lesson": "Monitor review still catches AI fabrications — expect your factum to be audited line by line.",
+    "confidence": "high"
+  },
+  "victoria-place-flats-rtm-company-ltd-ors-v-assethold-limited-2025-10-23": {
+    "severity": "medium",
+    "policy_gap_ids": ["paid-tool-verification", "citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "paid-tool", "small-firm", "administrative", "civil"],
+    "lesson": "Microsoft Copilot hallucinates EWCA citations — enterprise AI is not a verification substitute.",
+    "confidence": "high"
+  },
+  "re-sriram-aka-roy-2025-10-22": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "civil"],
+    "lesson": "Courts now assume invented citations come from AI, not research error — the excuse is gone.",
+    "confidence": "medium"
+  },
+  "wu-v-murray-2025-10-21": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "pro-se", "appellate", "civil"],
+    "lesson": "Admitting AI fabrication does not mitigate costs — British Columbia factors it into the award.",
+    "confidence": "high"
+  },
+  "chi-keung-lee-others-v-blackpool-bb-limited-2025-10-17": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "pro-se", "administrative", "civil"],
+    "lesson": "AI will invent statutory subsections wholesale — always verify every code provision you quote.",
+    "confidence": "high"
+  },
+  "xl-v-zl-et-al-2025-10-16": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "pro-se", "family", "civil"],
+    "lesson": "When hyperlinks point to unrelated cases, the court infers AI drafting and awards costs.",
+    "confidence": "high"
+  },
+  "yk-v-the-high-state-prosecutors-office-in-prague-2025-10-15": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "solo", "appellate", "criminal"],
+    "lesson": "Supreme Administrative Court verifies every quoted passage — phantom quotes surface on first read.",
+    "confidence": "medium"
+  },
+  "provincia-del-chubut-v-pra-2025-10-15": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["ai-disclosure-protocol", "audit-trail", "written-ai-policy"],
+    "sanction_types": ["professional", "published-opinion"],
+    "tags": ["government-lawyer", "criminal", "first-in-state", "published-opinion"],
+    "lesson": "A judge pasting ChatGPT output into a ruling got the judgment annulled — disclosure and traceability are non-negotiable.",
+    "confidence": "high"
+  },
+  "lugasi-aklim-systems-v-netivot-municipality-2025-10-15": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "consumer-tool", "civil"],
+    "lesson": "Israeli courts now spot ChatGPT citation strings and discard the evidence without prompting.",
+    "confidence": "medium"
+  },
+  "tb-v-km-2025-10-15": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["fake-citations", "pro-se", "family", "civil"],
+    "lesson": "Mismatched citations and case names trigger pleading strikes — verify every authority by name and neutral cite.",
+    "confidence": "high"
+  },
+  "gloriose-ndaryiyumvire-v-birmingham-city-university-2025-10-14": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["paid-tool-verification", "citation-verification", "approved-tools-list", "attorney-training"],
+    "sanction_types": ["monetary", "bar-referral", "professional", "referral"],
+    "tags": ["fake-citations", "paid-tool", "bar-referral", "small-firm", "civil"],
+    "lesson": "LEAP and other paid legal AI will fabricate authority — wasted-costs plus bar referral follow automatically.",
+    "confidence": "high"
+  },
+  "ric-n-30542025-2025-10-14": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "attorney-training"],
+    "sanction_types": ["monetary", "bar-referral", "referral"],
+    "tags": ["fake-citations", "bar-referral", "small-firm", "administrative", "civil"],
+    "lesson": "Italian TARs now refer AI-hallucinating counsel to the bar — 1,500 EUR costs are the smaller half of the penalty.",
+    "confidence": "high"
+  }
+}

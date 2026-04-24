@@ -1,0 +1,162 @@
+{
+ "in-re-telexfree-securities-litigation-2026-02-13": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "fabricated-quotes", "civil", "class-action"],
+  "lesson": "Order-to-show-cause on fabricated citations escalates fast; treat an OSC as a bar-complaint dress rehearsal.",
+  "confidence": "medium"
+ },
+ "nydia-rosario-v-liberty-mutual-personal-insurance-company-2026-02-13": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+  "sanction_types": ["warning", "professional"],
+  "tags": ["fake-citations", "fabricated-quotes", "civil", "multi-firm"],
+  "lesson": "Copy-pasting citations across matters spreads hallucinations firm-wide; re-verify every carried-forward cite before filing.",
+  "confidence": "high"
+ },
+ "lindsey-newell-v-the-law-offices-of-travis-r-walker-et-al-2026-02-13": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["fake-citations", "civil", "small-firm"],
+  "lesson": "Withdrawing an AI-hallucinated filing only works if you catch it before the court does.",
+  "confidence": "medium"
+ },
+ "landmark-development-group-llc-v-lonnie-lupardus-2026-02-13": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "seifert-v-nationstar-mortgage-llc-et-al-2026-02-12": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "city-of-dickinson-v-helgeson-2026-02-12": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["monetary"],
+  "tags": ["pro-se", "fake-citations", "appellate"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "virgil-v-experian-information-solutions-et-al-2026-02-12": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail", "written-ai-policy"],
+  "sanction_types": ["monetary", "bar-referral", "professional", "referral"],
+  "tags": ["fake-citations", "fabricated-quotes", "civil", "multi-attorney"],
+  "lesson": "Ten-plus fabricated cites across multiple filings triggers bar referral; one missed verification audit can end careers.",
+  "confidence": "high"
+ },
+ "city-of-dickinson-v-helgeson-2026-02-12-2": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["monetary"],
+  "tags": ["pro-se", "fake-citations", "appellate"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "cvtek-llc-b-423943-b-4239432-2026-02-12": {
+  "severity": "medium",
+  "policy_gap_ids": ["paid-tool-verification", "citation-verification", "audit-trail"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "paid-tool", "administrative"],
+  "lesson": "CoCounsel and Westlaw AI output is not self-verifying; pull and read every case before filing.",
+  "confidence": "high"
+ },
+ "tqj-llc-v-jennifer-esquivel-et-al-2026-02-12": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "civil", "trial"],
+  "lesson": "Four fabricated cites in one brief means counsel never opened a reporter; mandate primary-source pull-through.",
+  "confidence": "high"
+ },
+ "andre-legarza-v-northern-star-alaska-inc-2026-02-12": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "fabricated-quotes", "civil"],
+  "lesson": "Seventeen fake quotations is not a drafting error; it is an unsupervised AI workflow — require quote-matching before filing.",
+  "confidence": "high"
+ },
+ "thomas-carl-dodds-jr-v-carrie-bridges-2026-02-11": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "consumer-tool", "appellate"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "flora-chumpitaz-morales-v-pamela-j-bondi-2026-02-11": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "immigration", "appellate"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "keith-powell-v-employment-dep-first-congregational-church-of-portland-2026-02-11": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["monetary"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "employment"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "labonte-v-bokf-et-al-2026-02-10": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "tabitha-alberti-v-district-of-columbia-2026-02-10": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["fake-citations", "fabricated-quotes", "civil"],
+  "lesson": "A brief riddled with fake cites means no one proofread it; require partner sign-off before filing any AI-assisted draft.",
+  "confidence": "medium"
+ },
+ "united-states-v-clint-travis-rodgers-2026-02-10": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "criminal", "trial"],
+  "lesson": "Cases that deny your position or were reversed on appeal are not supportive authority; check subsequent history every time.",
+  "confidence": "high"
+ },
+ "matter-of-zareh-2026-02-10": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol", "approved-tools-list", "written-ai-policy"],
+  "sanction_types": ["professional", "published-opinion"],
+  "tags": ["fake-citations", "consumer-tool", "published-opinion", "bar-referral"],
+  "lesson": "Reciprocal discipline follows a federal AI admonishment into state bar censure; one unreviewed ChatGPT brief becomes a permanent public record.",
+  "confidence": "high"
+ },
+ "peter-l-clinco-v-commissioner-2026-02-09": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "tax", "administrative"],
+  "lesson": "Tax Court reads every citation; fabricated Tax Court cites are instantly caught and attributed to AI.",
+  "confidence": "high"
+ },
+ "daniel-james-cummins-v-moises-becerra-2026-02-09": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "civil"],
+  "lesson": "Filing an errata does not cure a brief full of hallucinations; courts still issue OSCs on the underlying AI misuse.",
+  "confidence": "high"
+ }
+}

@@ -1,0 +1,162 @@
+{
+  "mission-critical-project-services-inc-2026-03-26": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "administrative"],
+    "lesson": "Before any GAO protest filing, have a second attorney pull and read every cited decision.",
+    "confidence": "medium"
+  },
+  "william-c-maxwell-v-dakota-michael-chelsey-smith-2026-03-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause", "referral"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "state-national-insurance-company-inc-v-damon-treadwell-et-al-2026-03-26": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["professional", "warning", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "civil"],
+    "lesson": "A public reprimand follows ChatGPT fabrications even when admitted — ban consumer tools and require source-pull verification.",
+    "confidence": "high"
+  },
+  "dixon-v-multicare-health-system-2026-03-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "fecteau-v-safety-national-casualty-corporation-2026-03-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "coomer-v-lindellmypillow-inc-2-2026-03-25": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "incident-response"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "civil", "multi-attorney"],
+    "lesson": "Repeat AI-citation offenders escalate fast — one prior sanction means every future brief needs partner sign-off.",
+    "confidence": "high"
+  },
+  "michael-a-devita-v-midtown-motors-et-al-2026-03-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "elilton-alves-gouveia-v-meridian-financial-investments-2026-03-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "jared-ashcraft-v-first-citizens-bank-and-trust-company-et-al-2026-03-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "hong-chris-lu-v-capital-one-na-et-al-2026-03-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "segui-v-moniz-2026-03-24": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "A single fabricated state-court cite triggers Rule 11 show-cause — verify every cite against the official reporter before filing.",
+    "confidence": "high"
+  },
+  "kevin-lee-biglow-v-dell-technologies-inc-2026-03-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "jorge-a-zea-v-national-association-of-realtors-2026-03-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "nicholas-and-barbara-moulder-v-davis-school-district-on-behalf-of-mm-2026-03-23": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "training-order"],
+    "tags": ["fake-citations", "fabricated-quotes", "training-ordered", "civil"],
+    "lesson": "Courts pair monetary sanctions with mandatory CLE — budget for training now or pay for it after a fabrication.",
+    "confidence": "high"
+  },
+  "endure-industries-inc-v-defense-health-agency-2026-03-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "gregory-hardy-v-k-jones-et-al-2026-03-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "stafford-v-andrew-taffet-et-al-2026-03-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "couvrette-v-wisnovsky-2026-03-23": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "struck-pleading", "case-dismissed"],
+    "tags": ["fake-citations", "fabricated-quotes", "disqualification", "civil"],
+    "lesson": "Hallucinated briefs can lose the case — $109K in sanctions and dismissal with prejudice is the worst-case AI outcome.",
+    "confidence": "high"
+  },
+  "jane-doe-et-al-v-lincoln-consolidated-schools-et-al-2026-03-23": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Courts now order fee-shifting for opposing counsel's wasted research on fake cites — verify or pay their bill.",
+    "confidence": "high"
+  },
+  "hessert-v-hessert-wieland-pulayya-2026-03-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": null,
+    "confidence": "high"
+  }
+}

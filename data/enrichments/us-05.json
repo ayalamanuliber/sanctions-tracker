@@ -1,0 +1,162 @@
+{
+  "yves-hector-vimegnon-v-gallagher-bassett-services-inc-2026-03-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": "Pro-se fabricated citations trigger warnings now; expect sanctions on the next filing.",
+    "confidence": "high"
+  },
+  "edward-reynolds-v-progressive-technologies-inc-2026-03-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": "Courts are now actively locating pro-se fake cites; warnings become monetary on repeat.",
+    "confidence": "high"
+  },
+  "nicole-olbera-et-al-v-tiara-sykes-2026-03-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": "Appellate editors now scrub invalid AI citations from published opinions — reputational trail persists.",
+    "confidence": "medium"
+  },
+  "shaun-fleck-v-del-one-federal-credit-union-2026-03-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": "Westlaw self-citation loops are a tell: if only the filer's own brief shows, the cite is fabricated.",
+    "confidence": "high"
+  },
+  "beedemariam-kassaw-v-wal-mart-corporation-2026-03-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": "Courts will strike entire briefs sua sponte when AI hallucinations are apparent — no motion required.",
+    "confidence": "high"
+  },
+  "randel-edward-page-jr-v-apperson-crump-2026-03-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "appellate"],
+    "lesson": "Three fabricated cites in one motion is now the norm — courts catch them on independent research.",
+    "confidence": "high"
+  },
+  "76-route-6-holdings-inc-v-town-of-yorktown-ny-2026-03-30": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "supervision-protocol"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "trial"],
+    "lesson": "False-quote admonishments go on the record — verify every quoted passage against the source opinion.",
+    "confidence": "high"
+  },
+  "jacobs-v-payward-inc-2026-03-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": "A single hallucinated cite now 'undermines credibility' of the entire filing — judges read everything skeptically.",
+    "confidence": "high"
+  },
+  "danuta-dec-v-homeland-security-2026-03-30": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "incident-response"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "immigration", "appellate"],
+    "lesson": "Counsel who 'cannot explain' a fabricated cite when questioned escalate admonishment into discipline risk.",
+    "confidence": "high"
+  },
+  "megan-e-bryan-v-child-support-enforcement-agency-state-of-hawaiʻi-2026-03-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "family", "appellate"],
+    "lesson": "Reporter-number mismatches are the single fastest tell of an AI hallucination — check the volume, not just the name.",
+    "confidence": "high"
+  },
+  "lauren-k-morgan-v-michael-p-whitticom-2026-03-27": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "family", "trial"],
+    "lesson": "State courts are invoking practice-book sanction rules for AI fabrications — pro-se is no longer a shield on the second filing.",
+    "confidence": "high"
+  },
+  "amtrust-north-america-obo-justin-mcginness-v-liberty-mutual-insurance-company-20": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "attorney-training", "supervision-protocol"],
+    "sanction_types": ["monetary", "training-order"],
+    "tags": ["fake-citations", "civil", "trial", "training-ordered"],
+    "lesson": "Four fabricated NJ cites drew $9K plus recommended CLE — subrogation briefs now warrant supervisor sign-off.",
+    "confidence": "high"
+  },
+  "patrick-c-shaltry-i-v-brent-benzing-et-al-2026-03-27": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Quoted passages contradicting the cited case's holding are red flags — read the opinion, not just the pincite.",
+    "confidence": "high"
+  },
+  "andrea-k-tantaros-v-fox-news-network-llc-et-al-2026-03-27": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "AI will fabricate statutory language as readily as case law — verify every quoted statute against the code.",
+    "confidence": "high"
+  },
+  "pizzimenti-v-city-of-detroit-et-al-2026-03-27": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Misapplied real cases are as damaging as fake ones — confirm the cited opinion actually addresses your proposition.",
+    "confidence": "high"
+  },
+  "mccarthy-v-us-drug-enforcement-administration-2026-03-27": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["professional", "referral", "bar-referral", "published-opinion"],
+    "tags": ["fake-citations", "appellate", "administrative", "bar-referral"],
+    "lesson": "Third Circuit now notifies the National Disciplinary Data Bank on AI fabrications — one reprimand follows you circuit-wide.",
+    "confidence": "high"
+  },
+  "the-advocates-for-human-rights-and-lhm-v-us-department-of-homeland-security-et-a": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fabricated-quotes", "immigration", "civil"],
+    "lesson": "A brief 'riddled with misquotations' is enough for the court to flag AI use — quote discipline is the new diligence.",
+    "confidence": "low"
+  },
+  "curry-v-capital-one-auto-finance-2026-03-26": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": "Fabricated statutory provisions now constitute bad faith and support denial of leave to amend — not just admonishment.",
+    "confidence": "high"
+  },
+  "baker-v-rastelli-foods-llc-2026-03-26": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "incident-response"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Courts now order PDF copies of cited cases as a gating step — if you can't produce them, you're on an OSC.",
+    "confidence": "high"
+  },
+  "anthony-wallace-v-pennymac-loan-services-llc-et-al-2026-03-26": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Docket-number mismatches with case names are a deterministic hallucination signature — always cross-check PACER.",
+    "confidence": "high"
+  }
+}

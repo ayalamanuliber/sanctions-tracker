@@ -1,0 +1,162 @@
+{
+  "oready-llc-2-2025-09-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed", "warning"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "eric-andrew-perez-v-dr-neil-c-evans-et-al-2025-09-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "consumer-tool", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "alexander-shaporov-v-pippd-po-matthew-levine-et-al-2025-09-25": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "attorney-training"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Independent judicial audits are now routine — assume every brief will be cross-checked and verify each pincite against the primary source.",
+    "confidence": "high"
+  },
+  "melinda-lshay-johnson-v-mini-of-las-vegas-2025-09-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "tm-v-mm-2025-09-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "family"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "bfg-aka-byline-financial-v-pierce-re-holdings-brewster-2025-09-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "kenisha-black-v-mississippi-drs-howard-2025-09-24": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Self-correcting after the fact saved this firm — but Rule 11 violations are now on the record; build a pre-filing verification gate.",
+    "confidence": "high"
+  },
+  "puerto-rico-soccer-league-nfp-corp-et-al-v-federación-puertorriqueña-de-futbol-e": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "incident-response", "written-ai-policy"],
+    "sanction_types": ["monetary", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "multi-attorney", "published-opinion"],
+    "lesson": "When a show-cause response contains MORE hallucinated cites, courts escalate — treat the first AI-error finding as an emergency, not a formality.",
+    "confidence": "high"
+  },
+  "lipe-v-albuquerque-public-schools-1-2025-09-22": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "incident-response", "supervision-protocol"],
+    "sanction_types": ["monetary", "bar-referral", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "bar-referral", "civil"],
+    "lesson": "Self-reporting to state bars is now a standard add-on sanction — stop using AI while show-cause is pending, or the penalty compounds.",
+    "confidence": "high"
+  },
+  "in-re-molina-2025-09-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "bankruptcy"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "vision-management-group-v-constant-aviation-2025-09-22": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Disregarded arguments are a silent career tax — every unverified cite thrown out is a merits loss you chose to accept.",
+    "confidence": "medium"
+  },
+  "united-states-v-malik-2025-09-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "criminal"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "cingel-v-ferreri-2025-09-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "ali-v-it-people-corporation-2025-09-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "employment"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "martin-v-redstone-federal-credit-union-2025-09-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "gibralter-v-dms-flowers-2025-09-19": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning", "ordered-to-show-cause"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Even one fabricated citation with a full reporter pin cite triggers a show-cause order — spot-check every AI-generated case before filing.",
+    "confidence": "high"
+  },
+  "otg-new-york-inc-v-ottogi-america-inc-2025-09-18": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["monetary", "struck-pleading", "bar-referral", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "bar-referral", "civil"],
+    "lesson": "Striking the reply plus self-reporting to the bar now accompanies sub-$5K fines — the reputational cost dwarfs the dollars.",
+    "confidence": "high"
+  },
+  "eric-v-mitchel-ii-v-stellantis-financial-services-2025-09-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "pelishek-v-city-of-sheboygan-2025-09-18": {
+    "severity": "medium",
+    "policy_gap_ids": ["paid-tool-verification", "citation-verification", "incident-response"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "fabricated-quotes", "paid-tool", "civil", "multi-attorney"],
+    "lesson": "Paid tools do not absolve you — Westlaw Quick Check output must still be human-verified against the source before any quoted language leaves the firm.",
+    "confidence": "high"
+  },
+  "santree-v-eveangel-hines-2025-09-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed", "warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  }
+}

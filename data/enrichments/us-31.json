@@ -1,0 +1,162 @@
+{
+  "artur-sargsyan-v-amazoncom-inc-2025-10-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "conrad-smith-et-al-v-donald-j-trump-et-al-2025-10-16": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Verify every rule citation — fabricated local-rule quotes trigger show-cause orders even without case-law hallucinations.",
+    "confidence": "medium"
+  },
+  "serafin-v-united-states-department-of-state-et-al-2025-10-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "immigration"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "nima-ghadimi-v-arizona-bank-trust-et-al-2025-10-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "charles-c-force-v-capital-one-na-et-al-2025-10-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "polinski-v-usa-2025-10-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "denial"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "flores-v-nicha-2025-10-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "consumer-tool", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "yasiel-puig-valdes-v-all3media-america-llc-et-al-2025-10-15": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "attorney-training"],
+    "sanction_types": ["professional", "referral", "bar-referral"],
+    "tags": ["fake-citations", "consumer-tool", "civil", "bar-referral"],
+    "lesson": "Ban ChatGPT for legal research — admitting its use after the fact escalates from fines to bar referrals.",
+    "confidence": "high"
+  },
+  "robert-allen-reed-et-al-v-community-health-care-et-al-2025-10-14": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "united-states-v-glennie-antonio-mcgee-2025-10-10": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "referral", "bar-referral", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "paid-tool", "criminal", "published-opinion", "bar-referral"],
+    "lesson": "A tool marketed as legal-grade is no defense — require second-attorney Westlaw verification of every cite regardless of source.",
+    "confidence": "high"
+  },
+  "roy-j-oneto-v-melvin-watson-et-al-2025-10-10": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "training-order", "bar-referral"],
+    "tags": ["fake-citations", "civil", "training-ordered", "bar-referral"],
+    "lesson": "Never cite a case you have not personally read — admitting it triggers monetary sanctions, CLE, bar notice, and client disclosure.",
+    "confidence": "high"
+  },
+  "david-r-pete-v-united-states-department-of-justice-et-al-2025-10-10": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "denial", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "lipe-v-albuquerque-public-schools-2-2025-10-08": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "incident-response"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Prior AI sanctions trigger heightened scrutiny — stripping citations without fixing the underlying research still draws admonishment.",
+    "confidence": "high"
+  },
+  "souders-v-lazor-2025-10-08": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "douglas-stuart-queen-v-kansas-city-et-al-2025-10-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "in-the-matter-of-stephen-c-2025-10-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "jose-villavicencio-v-judge-stephanie-mingo-2025-10-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "support-community-v-mph-international-2025-10-06": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["professional", "referral", "bar-referral"],
+    "tags": ["fake-citations", "civil", "bar-referral"],
+    "lesson": "Multiple fabricated cites in one brief forces bar and client notification — mandate partner sign-off on all authorities before filing.",
+    "confidence": "high"
+  },
+  "thomas-dexter-jakes-v-duane-youngblood-2025-10-06": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "disqualification"],
+    "tags": ["fake-citations", "fabricated-quotes", "disqualification", "civil"],
+    "lesson": "Fabricated quotes ending in pro hac vice revocation — verify every quotation character-for-character against the source opinion.",
+    "confidence": "high"
+  },
+  "tovar-v-american-automatic-fire-suppression-inc-2025-10-03": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Procedural safe-harbor saved counsel this time — do not count on it; verify cites before filing, not after a motion is denied.",
+    "confidence": "medium"
+  }
+}

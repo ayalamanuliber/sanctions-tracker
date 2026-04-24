@@ -1,0 +1,162 @@
+{
+  "state-of-ohio-v-abdullah-m-alqahtani-2026-04-13": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "criminal"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "allen-v-hunt-2026-04-13": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "trial"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "bruno-roberto-rodriguez-v-kathryn-louise-rodriguez-2026-04-10": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "family", "appellate", "small-firm"],
+    "lesson": "Verify every cited case exists and supports the exact proposition before filing a petition.",
+    "confidence": "high"
+  },
+  "avalon-holdings-corp-v-guy-gentile-2026-04-10": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "steven-nemec-v-kelsey-kanoelani-alao-and-alyssa-jade-alao-2026-04-10": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "robert-s-hulvat-v-juli-gumina-stg-divorce-law-and-jennifer-b-hulvat-2026-04-09": {
+    "severity": "medium",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "family", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-re-troylond-malon-wise-2026-04-09": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "training-order", "struck-pleading"],
+    "tags": ["fake-citations", "bankruptcy", "training-ordered", "trial", "small-firm"],
+    "lesson": "Complete AI-ethics CLE and verify every citation against primary sources before filing any pleading.",
+    "confidence": "high"
+  },
+  "ifeoma-delliane-chinedu-obi-v-cook-county-illinois-et-al-2026-04-09": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "struck-pleading"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "that-xiong-v-minga-wofford-2026-04-09": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "immigration", "trial", "small-firm"],
+    "lesson": "Cross-check every Westlaw citation against the actual case name before filing; hallucinated reporters repeat.",
+    "confidence": "high"
+  },
+  "pleasant-v-burns-2026-04-08": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "joseph-c-zoghaib-v-societe-generale-de-banque-au-liban-et-al-2026-04-08": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "james-c-young-tahnee-r-young-v-happy-money-2026-04-08": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "bankruptcy", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "nancy-parkinson-v-unemployment-compensation-board-of-review-2026-04-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "herbert-brooks-v-lowes-home-centers-llc-2026-04-07": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fabricated-quotes", "fake-citations", "civil", "trial", "small-firm"],
+    "lesson": "Pull and re-read every quoted passage at the pincite; never copy quotes from AI-generated briefs unverified.",
+    "confidence": "high"
+  },
+  "aurore-sims-v-assia-souily-lefave-around-vegas-llc-2026-04-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "blackburn-v-united-states-2026-04-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "thanh-nguy-v-jabil-inc-2026-04-07": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "employment", "trial", "small-firm"],
+    "lesson": "File a corrected brief immediately when a fabricated citation surfaces; prompt correction often avoids sanctions.",
+    "confidence": "high"
+  },
+  "james-jordan-v-usa-clinicas-del-camino-real-inc-et-al-2026-04-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-re-philips-recalled-cpap-bi-level-pap-and-mechanical-ventilator-products-liab": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "class-action", "civil", "multi-firm"],
+    "lesson": "Verify reporter citations in JPML briefs; wrong reporters expose misrepresentation even when the case name is real.",
+    "confidence": "high"
+  },
+  "viral-bhagat-v-anuja-sharad-shah-2026-04-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "high"
+  }
+}

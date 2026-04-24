@@ -1,6 +1,9 @@
 "use client";
 
-import cases from "@/data/cases.json";
+import sanctions from "@/data/sanctions.json";
+// Filter to adjudicated US cases with enrichment (exclude alleged-only and cases without severity)
+const cases = ((sanctions as unknown) as Array<{ country: string; alleged: boolean; severity: string; date: string; policy_gap_ids: string[]; ai_tool_used: string; tags: string[]; amount: number | null }>)
+  .filter((c) => c.country === "US" && !c.alleged && !!c.severity);
 
 function countByField<T extends string>(arr: T[]): Record<string, number> {
   const map: Record<string, number> = {};

@@ -1,6 +1,8 @@
 "use client";
 
-import cases from "@/data/cases.json";
+import sanctions from "@/data/sanctions.json";
+const cases = (sanctions as Array<{ country: string; alleged: boolean; severity: string | null; policy_gap_ids: string[] }>)
+  .filter((c) => c.country === "US" && !c.alleged && c.severity);
 
 interface Props {
   answers: Record<string, boolean>;

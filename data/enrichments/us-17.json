@@ -1,0 +1,162 @@
+{
+  "kaufman-v-upton-2026-01-21": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "incident-response", "ai-disclosure-protocol"],
+    "sanction_types": ["bar-referral", "referral", "professional"],
+    "tags": ["fake-citations", "bar-referral", "denial", "civil"],
+    "lesson": "If citations are challenged, disclose AI use immediately; blaming 'clerical error' escalates a fine into a bar referral.",
+    "confidence": "high"
+  },
+  "volesky-v-department-of-child-safety-2026-01-21": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "william-parker-v-patrick-pat-labat-et-al-2026-01-21": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["training-order", "professional", "ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "training-ordered", "civil"],
+    "lesson": "Require a sworn pre-filing verification of every citation and quote; CLE plus ongoing attestation is now the baseline remedy.",
+    "confidence": "high"
+  },
+  "yue-v-reaction-labs-llc-2026-01-20": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil", "ip"],
+    "lesson": "Verify pinpoint page cites against the actual opinion length before filing — impossible pincites are the cheapest hallucination tell.",
+    "confidence": "medium"
+  },
+  "oluronke-briana-adusei-v-colleen-auer-et-al-2026-01-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "mitchell-taylor-button-et-al-v-john-jimison-2-2026-01-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "mary-stephens-v-helena-west-helena-school-district-2026-01-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "peter-j-allsot-as-next-friend-of-bpla-v-naseem-latif-2026-01-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "tafah-et-al-v-lake-village-townhomes-et-al-2026-01-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "rev-heidi-grossman-lepp-v-conrad-mallett-jr-et-al-2026-01-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "riverchase-v-paula-goldwyn-2026-01-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "tiffany-k-v-commissioner-of-social-security-2026-01-16": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "administrative", "solo"],
+    "lesson": "Courts now name-and-shame 'phantom' citations as AI-generated — a single unverified cite is enough to trigger public admonishment.",
+    "confidence": "high"
+  },
+  "steven-e-hobbs-sr-v-igor-goncharko-et-al-2-2026-01-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "alzado-lotz-v-bock-2026-01-16": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Fabricated circuit-court cites with invented pinpoint quotes are the fastest path to an on-the-record finding — run every quote through a text search before filing.",
+    "confidence": "medium"
+  },
+  "hodges-v-meridian-waste-rieske-v-afs-2026-01-16": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "written-ai-policy", "audit-trail"],
+    "sanction_types": ["monetary", "training-order", "professional"],
+    "tags": ["fake-citations", "multi-firm", "training-ordered", "civil"],
+    "lesson": "Admitting AI use only buys leniency; a $7K fine plus mandatory public 'lessons-learned' talks are now the floor for fabricated cites.",
+    "confidence": "high"
+  },
+  "robby-mendez-v-city-of-topeka-et-al-2026-01-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "x-v-canada-2026-01-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fabricated-quotes", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "james-fahey-v-wallys-las-vegas-llc-et-al-2026-01-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fabricated-quotes", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "irine-corst-v-isak-mushailov-and-levsho-kukuliyeva-2026-01-15": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "civil", "small-firm"],
+    "lesson": "Reporter-volume mismatches are a red flag — always pull the actual slip opinion, never trust the headnote.",
+    "confidence": "medium"
+  },
+  "re-imo-the-estate-of-joseph-l-weddington-2026-01-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations"],
+    "lesson": null,
+    "confidence": "low"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "d-a-child-recusal-2025-12-09": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "family", "appellate"],
+    "lesson": "Pro-se family-law filers in UK appellate courts are now flagged for AI-fabricated authorities; verify every cite on opposing submissions.",
+    "confidence": "high"
+  },
+  "omkara-assets-reconstruction-private-limited-v-gstaad-hotels-private-limited-202": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "written-ai-policy"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil", "appellate"],
+    "lesson": "Indian Supreme Court is openly warning counsel on AI-fabricated authorities mid-hearing; assume zero tolerance in apex courts.",
+    "confidence": "medium"
+  },
+  "s-peggie-v-fife-health-dr-b-upton-2025-12-08": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol", "incident-response"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fabricated-quotes", "employment", "denial"],
+    "lesson": "Even judges are being accused of AI hallucinations; if a quote you filed is challenged, verify and correct before the bench beats you to it.",
+    "confidence": "low"
+  },
+  "barrette-v-wevers-2025-12-08": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": "Alberta courts are imposing enhanced costs against pro-se appellants for AI-fabricated authorities and regulations.",
+    "confidence": "high"
+  },
+  "chu-v-darmali-2025-12-08": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "family", "consumer-tool"],
+    "lesson": "Australian Federal Circuit is flagging generative-AI submissions filled with inapt authorities; expect courts to discount whole briefs.",
+    "confidence": "medium"
+  },
+  "onyinye-udokporo-v-enrich-international-2025-12-05": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "ip", "appellate"],
+    "lesson": "UK IPO tribunals are catching AI-fabricated trademark citations and altered quotations; IP disputes are no safe harbor.",
+    "confidence": "high"
+  },
+  "balogun-v-wentworth-standard-condominium-corporation-no-382-2025-12-05": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative", "civil"],
+    "lesson": "Ontario condo tribunals openly label AI-hallucinated jurisdictional cites and refuse to consider them.",
+    "confidence": "high"
+  },
+  "carrington-v-tafe-queensland-2025-12-05": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "audit-trail"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "employment", "administrative"],
+    "lesson": "Neutral-citation numbers that point to different cases are a tell — cross-check every QIRC/neutral citation against the actual decision.",
+    "confidence": "high"
+  },
+  "jvec-v-smd-2025-12-04": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "family", "consumer-tool"],
+    "lesson": "Saskatchewan courts are treating 'I used Google' as equivalent to AI misuse — consumer tools get no leniency.",
+    "confidence": "medium"
+  },
+  "n-2509827-2025-12-03": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": "French administrative tribunals are now documenting AI fabrications in pro-se filings; precedent is spreading across civil-law jurisdictions.",
+    "confidence": "low"
+  },
+  "taiwo-v-homelets-of-bath-limited-2025-12-03": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "UK High Court imposed an adverse costs order for bogus AI cites even at nominal amount — the order itself is the reputational penalty.",
+    "confidence": "high"
+  },
+  "husni-al-qawasmi-association-et-al-v-ziad-oweisat-sharfi-et-al-2025-12-03": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "civil", "appellate"],
+    "lesson": "Israeli Supreme Court now issues monetary sanctions for AI-fabricated citations even against pro-se litigants.",
+    "confidence": "high"
+  },
+  "luis-alberto-contreras-fandinoe-2025-12-02": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "ai-disclosure-protocol", "audit-trail"],
+    "sanction_types": ["professional", "referral", "case-dismissed", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "criminal", "appellate"],
+    "lesson": "Colombian appellate courts are quashing judgments and referring judges to discipline for AI-fabricated authorities and doctrinal works — judicial conduct now in the crosshairs.",
+    "confidence": "high"
+  },
+  "avard-v-mornington-peninsula-sc-2025-12-02": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": "Victorian CAT is proceeding past AI cites by applying the real underlying authority — courts will no longer be derailed by fake names.",
+    "confidence": "medium"
+  },
+  "heneghan-v-the-owners-strata-plan-187-2025-12-02": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative", "civil"],
+    "lesson": "BC Civil Resolution Tribunal is explicitly labeling three-cite fabrications as 'AI hallucinations' in reasons — the record follows the litigant.",
+    "confidence": "high"
+  },
+  "unknown-criminal-case-2025-12-01": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "criminal", "prosecutor"],
+    "lesson": "Spanish criminal proceedings now allege AI hallucinations against prosecutors and judges — government lawyers are not exempt.",
+    "confidence": "low"
+  },
+  "wang-fengxi-re-2025-12-01": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Ontario SCJ admonishments for AI fabrications are stacking up in reported reasons — the public record compounds over time.",
+    "confidence": "high"
+  },
+  "internet-sciences-inc-v-cnsx-markets-inc-2025-12-01": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": "Ontario capital-markets tribunal is warning pro-se filers for fabricated and misrepresented legal norms — regulators have joined the enforcement wave.",
+    "confidence": "medium"
+  },
+  "obermann-v-spring-financial-inc-2025-11-28": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil", "administrative"],
+    "lesson": "BC CRT is refusing to engage AI-hallucinated arguments on the merits — fabrication now causes your argument to disappear, not just get corrected.",
+    "confidence": "high"
+  },
+  "mertz-mertz-no-3-2025-11-28": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail", "written-ai-policy"],
+    "sanction_types": ["monetary", "bar-referral", "professional"],
+    "tags": ["fake-citations", "family", "bar-referral"],
+    "lesson": "Australian family courts are now pairing AUD 10K costs orders with bar referrals when counsel files unverified AI authorities — professional jeopardy is real.",
+    "confidence": "high"
+  }
+}

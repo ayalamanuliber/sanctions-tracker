@@ -1,0 +1,162 @@
+{
+ "kusmin-l-amarsingh-v-frontier-airlines-inc-2026-02-09": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+  "sanction_types": ["monetary", "bar-referral", "referral"],
+  "tags": ["fake-citations", "fabricated-quotes", "appellate", "consumer-tool", "bar-referral"],
+  "lesson": "Consumer ChatGPT output in an appellate brief triggers bar referral regardless of sanction size; ban it firmwide.",
+  "confidence": "high"
+ },
+ "plaintiff-v-webb-chevrolet-inc-et-al-2026-02-09": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "nelson-l-bruce-v-the-united-states-2026-02-09": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "bettis-v-gaston-2026-02-09": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "valve-corporation-v-rothschild-et-al-2026-02-09": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "fabricated-quotes", "ip", "civil"],
+  "lesson": "An open-letter apology does not moot a show-cause order; require pre-filing citation audits to avoid needing one.",
+  "confidence": "high"
+ },
+ "ave-capital-group-llc-v-strum-2026-02-09": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "civil"],
+  "lesson": "Every cited case must be pulled from Westlaw/Lexis by a human before filing; no AI-generated citation gets a pass.",
+  "confidence": "medium"
+ },
+ "ravi-kadiyala-v-shellpoint-mortgage-servicing-et-al-2026-02-06": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "raul-gonzales-davila-v-roblen-2026-02-06": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+  "sanction_types": ["training-order", "professional"],
+  "tags": ["fake-citations", "fabricated-quotes", "training-ordered", "employment", "civil"],
+  "lesson": "Repeat AI-citation errors trigger mandatory CLE; build a firm AI-ethics training log before the court builds one for you.",
+  "confidence": "high"
+ },
+ "state-v-garrett-2026-02-06": {
+  "severity": "career-ending",
+  "policy_gap_ids": ["ai-disclosure-protocol", "citation-verification", "incident-response"],
+  "sanction_types": ["struck-pleading", "case-dismissed", "professional"],
+  "tags": ["fake-citations", "denial", "criminal", "prosecutor", "government-lawyer"],
+  "lesson": "A prosecutor who hides AI use and files fake citations loses the case; mandate written AI disclosure on every criminal filing.",
+  "confidence": "high"
+ },
+ "nonnie-berg-v-united-airlines-inc-3-2026-02-06": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "david-angel-sifuentes-iii-v-capital-one-2026-02-06": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "mutugu-v-kiaraho-2026-02-06": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "family", "appellate"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "arkansas-dhs-v-april-ward-and-minor-child-respondents-2026-02-05": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+  "sanction_types": ["bar-referral", "referral", "professional"],
+  "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "bar-referral", "family"],
+  "lesson": "Copilot output cited without verification draws Office of Professional Conduct referral; restrict consumer AI tools to non-filing work.",
+  "confidence": "high"
+ },
+ "flycatcher-v-affable-avenue-2026-02-05": {
+  "severity": "career-ending",
+  "policy_gap_ids": ["citation-verification", "paid-tool-verification", "incident-response", "audit-trail"],
+  "sanction_types": ["struck-pleading", "case-dismissed", "monetary"],
+  "tags": ["fake-citations", "fabricated-quotes", "paid-tool", "denial", "civil"],
+  "lesson": "Paid legal-AI tools (vLex, Paxton, NotebookLM) do not cure verification duty; bad-faith denial converts sanctions into default judgment.",
+  "confidence": "high"
+ },
+ "woodward-harbor-llc-et-al-v-city-of-mandeville-2026-02-05": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+  "sanction_types": ["monetary", "training-order"],
+  "tags": ["fake-citations", "fabricated-quotes", "training-ordered", "civil"],
+  "lesson": "A $1K fine plus mandatory CLE is the new floor for unverified AI citations; verification protocol pays for itself.",
+  "confidence": "high"
+ },
+ "in-re-snowflake-inc-data-security-breach-litigation-2026-02-05": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "class-action"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "in-re-the-matter-of-abius-rosas-carreon-2026-02-04": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "fabricated-quotes", "family", "appellate"],
+  "lesson": "Warnings today become fines tomorrow; treat any court-flagged fabricated quote as a firm-level incident.",
+  "confidence": "medium"
+ },
+ "ericka-holmes-v-the-university-of-texas-at-austin-2026-02-04": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "employment", "civil"],
+  "lesson": "Hallucinated Fifth Circuit cites draw show-cause orders; require supervising attorney sign-off on every cite in employment briefs.",
+  "confidence": "high"
+ },
+ "mitchell-taylor-button-dusty-button-v-sigrid-mccawley-2026-02-04": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "sebastian-rako-v-vmware-llc-2-2026-02-04": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "employment", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ }
+}

@@ -1,0 +1,162 @@
+{
+  "daniel-jaiyong-an-v-archblock-inc-2025-04-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "consumer-tool"],
+    "lesson": "Courts now require GenAI-use certifications on future filings; build disclosure language into every brief template today.",
+    "confidence": "high"
+  },
+  "dehghani-v-castro-2025-04-02": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "training-order", "bar-referral", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "small-firm", "immigration", "multi-attorney", "training-ordered"],
+    "lesson": "Outsourced drafting is still your signature; verify every cite from freelance work before filing or face dual-state bar referrals.",
+    "confidence": "high"
+  },
+  "dangelo-v-vaught-2025-04-02": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "approved-tools-list"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "paid-tool", "small-firm"],
+    "lesson": "Vendor-branded legal AI tools like Smokeball's Archie still hallucinate; treat every output as unverified until cite-checked.",
+    "confidence": "medium"
+  },
+  "boggess-v-chamness-2025-04-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Pro-se hallucinations get arguments ignored without sanctions; reserve energy for attorney-authored filings in similar disputes.",
+    "confidence": "medium"
+  },
+  "mckeown-v-paycom-payroll-llc-2025-03-31": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["pro-se", "fake-citations", "employment"],
+    "lesson": "Repeat pro-se hallucinations get pleadings struck but no fee-shift; move for strike early to clear the docket.",
+    "confidence": "high"
+  },
+  "sanders-v-united-states-2025-03-31": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Federal Claims court tolerates first-time pro-se AI errors with a warning; flag fabricated cites in your 12(b)(1) brief to accelerate dismissal.",
+    "confidence": "high"
+  },
+  "kruglyak-v-home-depot-usa-inc-2025-03-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "civil"],
+    "lesson": "Candor and prompt admission avoided monetary sanctions here; if AI use surfaces, disclose immediately rather than deny.",
+    "confidence": "high"
+  },
+  "francois-v-medina-2025-03-24": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "New York trial courts are still issuing warnings rather than fines; this leniency window is closing fast.",
+    "confidence": "low"
+  },
+  "loyer-v-wayne-county-michigan-2025-03-21": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["training-order", "professional"],
+    "tags": ["fake-citations", "training-ordered", "civil", "small-firm"],
+    "lesson": "Mandatory ethics seminars are now a default professional sanction; budget CLE time as a cost of any unverified AI brief.",
+    "confidence": "high"
+  },
+  "buckner-v-hilton-global-2025-03-21": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "employment"],
+    "lesson": "Courts reject recusal motions built on judicial hallucination findings; preserve the issue for appeal instead.",
+    "confidence": "medium"
+  },
+  "stevens-v-bjc-health-system-2025-03-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "alkuda-v-mcdonald-hopkins-co-lpa-2025-03-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "mark-lillard-v-offit-kurman-pa-2025-03-12": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes"],
+    "lesson": "Delaware Superior Court is now requiring forward-looking AI certifications from pro-se litigants; expect the same for attorneys soon.",
+    "confidence": "medium"
+  },
+  "sheets-v-presseller-2025-03-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "210s-llc-v-di-wu-2025-03-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "arnaoudoff-v-tivity-health-incorporated-2025-03-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "civil"],
+    "lesson": "Opponents benefit from flagging fake cites early; a motion to disregard was granted without needing full Rule 11 briefing.",
+    "confidence": "high"
+  },
+  "nguyen-v-wheeler-2025-03-03": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "fabricated-quotes", "small-firm", "civil"],
+    "lesson": "Apologizing and admitting AI \"may have contributed\" doesn't avoid Rule 11 fines; verify every cite on Westlaw or Lexis before filing.",
+    "confidence": "high"
+  },
+  "bunce-v-visual-technology-innovations-1-2025-02-27": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary", "training-order"],
+    "tags": ["fake-citations", "consumer-tool", "training-ordered", "small-firm"],
+    "lesson": "Novelty of AI is explicitly rejected as a defense; assume every ChatGPT cite is fabricated until independently verified.",
+    "confidence": "high"
+  },
+  "merz-v-kalama-2025-02-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "civil"],
+    "lesson": "AI-generated procedural advice is unreliable; Rule 15 leave-to-amend cannot be bypassed by a scheduling order.",
+    "confidence": "medium"
+  },
+  "wadsworth-v-walmart-morgan-morgan-2025-02-24": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "supervision-protocol", "approved-tools-list"],
+    "sanction_types": ["monetary", "professional", "disqualification"],
+    "tags": ["fake-citations", "biglaw", "paid-tool", "multi-attorney", "disqualification", "civil"],
+    "lesson": "Internal firm AI platforms do not shield signers; every attorney on the signature block owes an independent Rule 11 inquiry.",
+    "confidence": "high"
+  }
+}

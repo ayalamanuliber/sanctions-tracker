@@ -1,0 +1,162 @@
+{
+  "hardy-v-genesee-county-community-action-resource-department-et-al-2-2026-04-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["pro-se", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "gamez-v-county-of-fresno-2026-04-06": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "trial"],
+    "lesson": "An order to show cause is your last warning before monetary sanctions; verify every AI citation against primary sources before filing.",
+    "confidence": "medium"
+  },
+  "wendy-wolkenstein-and-rebecca-knepp-v-dan-heinrich-and-samual-tillery-2026-04-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "kelly-bartholomew-v-public-utility-commission-of-oregon-2026-04-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "appellate", "administrative"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "najafpir-v-wells-fargo-bank-na-2026-04-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "ellen-michaelis-v-wilmington-savings-fund-society-2026-04-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "modern-floor-specialists-inc-et-al-v-city-of-los-angeles-et-al-2026-04-03": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "civil", "small-firm"],
+    "lesson": "Check reporter citations against the actual case name; pincite-only matching is how fabricated cites hide in plain sight.",
+    "confidence": "high"
+  },
+  "in-re-kathleen-a-rabon-2026-04-03": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fabricated-quotes", "bankruptcy", "small-firm"],
+    "lesson": "Pull-quote every AI-supplied case language directly from the opinion text before filing; paraphrase is not verification.",
+    "confidence": "medium"
+  },
+  "ward-v-amazoncom-services-llc-2026-04-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "employment"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "kleyman-law-group-pc-v-james-kaloidis-2026-04-03": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail", "written-ai-policy"],
+    "sanction_types": ["monetary", "professional"],
+    "tags": ["fake-citations", "civil", "small-firm", "trial"],
+    "lesson": "Eighty-three misstated holdings in one brief means no one read the cases; require a human-read verification log per filing.",
+    "confidence": "high"
+  },
+  "united-states-v-farris-2026-04-03": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["paid-tool-verification", "citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["disqualification", "bar-referral", "published-opinion", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "paid-tool", "criminal", "appellate", "published-opinion", "bar-referral", "disqualification"],
+    "lesson": "Westlaw CoCounsel output is not self-verifying; a paid tool's pedigree is no defense when the Sixth Circuit disqualifies counsel and publishes the opinion.",
+    "confidence": "high"
+  },
+  "stanford-v-leinart-2026-04-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "kevin-d-turnage-v-robert-f-kennedy-jr-et-al-2026-04-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "saqib-kafeel-v-apple-inc-et-al-2026-04-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "patrick-hrdlichka-v-samantha-bengston-2026-04-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-the-interest-of-wg-minor-child-2026-04-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "family", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "staley-v-city-of-elba-et-al-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated", "case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "joel-a-rivera-v-triad-properties-corporation-et-al-2026-03-31": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "written-ai-policy", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "disqualification", "bar-referral", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "civil", "bar-referral", "disqualification", "published-opinion"],
+    "lesson": "ChatGPT is not an approved research tool; using it without verification triggers disqualification, bar referral, and $35K in costs.",
+    "confidence": "high"
+  },
+  "ella-and-ramin-llc-v-travelers-insurance-company-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "ford-v-sherwin-williams-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "michael-cohen-matter-2024-03-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "consumer-tool", "fake-citations"],
+    "lesson": "When clients supply AI-generated research, attorneys remain the gatekeeper — verify every citation before filing.",
+    "confidence": "high"
+  },
+  "martin-v-taylor-county-2024-03-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "kruse-v-karlen-2024-02-13": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "smith-v-farwell-2024-02-12": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "small-firm", "multi-attorney", "civil"],
+    "lesson": "Signing partners must verify citations themselves and demand disclosure of any AI use by junior drafters.",
+    "confidence": "high"
+  },
+  "park-v-kim-2024-01-30": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "ai-disclosure-protocol"],
+    "sanction_types": ["professional", "bar-referral", "referral"],
+    "tags": ["fake-citations", "consumer-tool", "appellate", "bar-referral"],
+    "lesson": "Unverified ChatGPT citations trigger grievance-panel referrals — personally confirm every authority before filing.",
+    "confidence": "high"
+  },
+  "matter-of-samuel-2024-01-11": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["struck-pleading", "ordered-to-show-cause"],
+    "tags": ["fake-citations", "small-firm", "trial"],
+    "lesson": "A two-minute Lexis check on every cite is non-negotiable; time pressure is not a defense to Rule 130-1.1 sanctions.",
+    "confidence": "high"
+  },
+  "zachariah-crabill-disciplinary-case-2023-11-21": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "incident-response", "supervision-protocol"],
+    "sanction_types": ["professional", "published-opinion"],
+    "tags": ["fake-citations", "consumer-tool", "denial", "first-in-state", "solo"],
+    "lesson": "If AI citations are challenged, disclose immediately and withdraw the filing — blaming staff turns negligence into suspension.",
+    "confidence": "high"
+  },
+  "whaley-v-experian-information-solutions-2023-11-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "mescall-v-renaissance-at-antiquity-2023-11-13": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "in-re-celsius-network-llc-2023-11-09": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["struck-pleading", "professional"],
+    "tags": ["bankruptcy", "fabricated-quotes", "civil"],
+    "lesson": "AI-drafted expert reports must be cite-checked and source-anchored before counsel signs off — unreliable reports get excluded under Rule 702.",
+    "confidence": "high"
+  },
+  "morgan-v-community-against-violence-2023-10-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "thomas-v-pangburn-2023-10-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "ruggierlo-et-al-v-lancaster-2023-09-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "ex-parte-lee-2023-07-19": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "attorney-training"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "appellate", "criminal"],
+    "lesson": "AI-drafted briefs with bad jump-cites get affirmed for inadequate briefing — structure and record cites must come from a human.",
+    "confidence": "medium"
+  },
+  "mata-v-avianca-inc-2023-06-22": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "incident-response", "attorney-training", "approved-tools-list"],
+    "sanction_types": ["monetary", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "denial", "small-firm", "multi-attorney", "published-opinion", "civil"],
+    "lesson": "When a citation is challenged, never double down — immediate candor is the only way to keep a mistake from becoming bad-faith sanctions.",
+    "confidence": "high"
+  },
+  "scott-v-federal-national-mortgage-association-2023-06-14": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  }
+}

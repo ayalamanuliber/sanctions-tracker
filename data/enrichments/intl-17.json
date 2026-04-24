@@ -1,0 +1,162 @@
+{
+  "pulserate-investments-v-andrew-zuze-and-others-2025-07-03": {
+    "severity": "medium",
+    "policy_gap_ids": ["supervision-protocol", "citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["Zimbabwe", "small-firm", "multi-attorney"],
+    "lesson": "Supervising counsel is personally accountable for subordinates' AI output; build a sign-off checkpoint before filing.",
+    "confidence": "low"
+  },
+  "plonit-et-al-v-the-administrator-general-in-the-tel-aviv-district-et-al-2025-07-": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["Israel", "fake-citations", "fabricated-quotes", "family"],
+    "lesson": "Verify every doctrinal quote against the physical treatise; AI invents both cases and scholarly passages.",
+    "confidence": "high"
+  },
+  "atsum-0010525-4720255030037-2025-07-02": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["monetary"],
+    "tags": ["Brazil", "fake-citations", "employment", "consumer-tool"],
+    "lesson": "Admitting AI use and apologizing reduced the fine — disclose early when citations collapse.",
+    "confidence": "high"
+  },
+  "murray-v-state-of-victoria-2025-07-02": {
+    "severity": "medium",
+    "policy_gap_ids": ["supervision-protocol", "citation-verification", "attorney-training"],
+    "sanction_types": ["monetary", "published-opinion"],
+    "tags": ["Australia", "fake-citations", "small-firm", "published-opinion"],
+    "lesson": "Juniors working remotely without source access must never finalize citations; require partner verification against primary docs.",
+    "confidence": "high"
+  },
+  "rafi-najib-v-mss-security-pty-limited-2025-07-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["Australia", "pro-se", "employment", "fake-citations"],
+    "lesson": "Pro-se AI filings get dismissed on merits — courts increasingly flag hallucinated cites sua sponte.",
+    "confidence": "medium"
+  },
+  "cologne-district-court-312-f-13025-2025-07-02": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol"],
+    "sanction_types": ["warning", "ordered-to-show-cause"],
+    "tags": ["Germany", "fabricated-quotes", "family", "fake-citations"],
+    "lesson": "German courts invoke BRAO §43a(3) for fictitious citations; treat doctrinal references as regulated speech.",
+    "confidence": "high"
+  },
+  "bucher-v-appeals-committee-2025-07-02": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol"],
+    "sanction_types": ["monetary", "warning"],
+    "tags": ["Israel", "fake-citations", "administrative"],
+    "lesson": "Prompt apology and responsibility can blunt sanctions — script an immediate disclosure protocol for surfaced hallucinations.",
+    "confidence": "medium"
+  },
+  "lapointe-v-chief-animal-welfare-inspector-2025-06-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["Canada", "pro-se", "consumer-tool", "administrative", "fake-citations"],
+    "lesson": "Tribunals now exclude ChatGPT-generated evidence outright — fabricated expert opinions risk full evidentiary bar.",
+    "confidence": "high"
+  },
+  "case-no-525309-08-22-2025-06-30": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["Israel", "fake-citations", "administrative"],
+    "lesson": "Verify statutory subsections and amendment dates directly — AI routinely invents code sections that sound plausible.",
+    "confidence": "medium"
+  },
+  "northbound-processing-v-south-african-diamond-regulator-2025-06-30": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "paid-tool-verification"],
+    "sanction_types": ["bar-referral", "referral", "published-opinion"],
+    "tags": ["South Africa", "fake-citations", "paid-tool", "bar-referral", "published-opinion"],
+    "lesson": "Even 'legal-specific' AI tools trigger Legal Practice Council referral; negligent reliance equals professional misconduct.",
+    "confidence": "high"
+  },
+  "page-v-long-2025-06-27": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["Australia", "pro-se", "civil", "fake-citations"],
+    "lesson": "Pro-se AI filings collapse cases on merits — opposing counsel should surface AI-hallucinated cites early to win fast.",
+    "confidence": "high"
+  },
+  "enviro-plus-duct-cleaning-v-department-of-public-works-2025-06-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["Canada", "pro-se", "administrative", "fake-citations"],
+    "lesson": "Procurement tribunals catch pro-se AI fabrications fast; verify every cited statutory subsection verbatim.",
+    "confidence": "medium"
+  },
+  "auto-test-ltd-v-ministry-of-transport-2025-06-25": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "incident-response"],
+    "sanction_types": ["monetary", "warning"],
+    "tags": ["Israel", "fake-citations", "administrative"],
+    "lesson": "Winning on merits still costs you fees if AI hallucinations taint the petition; clean filings come before good arguments.",
+    "confidence": "high"
+  },
+  "hussein-v-canada-2025-06-24": {
+    "severity": "high",
+    "policy_gap_ids": ["paid-tool-verification", "ai-disclosure-protocol", "incident-response", "citation-verification"],
+    "sanction_types": ["monetary", "published-opinion"],
+    "tags": ["Canada", "fake-citations", "paid-tool", "denial", "immigration", "published-opinion"],
+    "lesson": "Concealing AI use through four court directions converts a small slip into published reprimand — disclose on first inquiry.",
+    "confidence": "high"
+  },
+  "malone-anor-v-laois-county-council-ors-2025-06-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["Ireland", "pro-se", "fabricated-quotes", "civil"],
+    "lesson": "Pro-se fake-quote cases still burn judicial time — opposing counsel should demand verbatim source production early.",
+    "confidence": "high"
+  },
+  "pro-health-solutions-ltd-v-prohealth-inc-2025-06-20": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning"],
+    "tags": ["UK", "fabricated-quotes", "consumer-tool", "ip", "fake-citations"],
+    "lesson": "Both sides used AI and the IPO cancelled costs — assume opposing counsel may have hallucinations too, audit their cites.",
+    "confidence": "high"
+  },
+  "monfared-v-minister-of-citizenship-and-immigration-2025-06-20": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning"],
+    "tags": ["Canada", "fake-citations", "consumer-tool", "immigration"],
+    "lesson": "Immigration tribunals now cross-reference prior AI-misconduct cases — one hallucination pattern marks counsel repeat-offender-adjacent.",
+    "confidence": "medium"
+  },
+  "bottrill-v-graham-anor-no-2-2025-06-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["Australia", "pro-se", "fake-citations", "civil"],
+    "lesson": "Courts refuse to repeat fake citations to avoid AI retraining them — your citations now carry evidentiary risk beyond the case.",
+    "confidence": "high"
+  },
+  "jrv-v-nlv-2025-06-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["Canada", "pro-se", "fake-citations", "family"],
+    "lesson": "Even sympathetic pro-se AI users pay costs — when opposing counsel hallucinates, document time spent chasing ghost cites for fee-shifting.",
+    "confidence": "high"
+  },
+  "ub-v-secretary-of-state-for-the-home-department-2025-06-18": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["UK", "fake-citations", "immigration"],
+    "lesson": "UT flags both non-existent cases and real cases cited for wrong propositions — verify the holding, not just the cite.",
+    "confidence": "medium"
+  }
+}

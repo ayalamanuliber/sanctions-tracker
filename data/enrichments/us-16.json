@@ -1,0 +1,162 @@
+{
+  "ihor-chopko-v-fidelity-national-title-insurance-company-2026-01-27": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "brian-bailey-v-hon-clark-a-ritchie-et-al-2026-01-27": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "nelson-henry-v-joseph-iannone-and-james-deacetis-2026-01-27": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fabricated-quotes", "civil", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "cassata-v-michael-macrina-architect-pc-2026-01-27": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "struck-pleading"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "small-firm"],
+    "lesson": "Never adopt authorities from another brief without independent verification — borrowed citations carry borrowed fabrications.",
+    "confidence": "high"
+  },
+  "lifetime-well-llc-v-ibspotcom-inc-2026-01-26": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "supervision-protocol"],
+    "sanction_types": ["monetary", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "paid-tool", "civil", "multi-attorney"],
+    "lesson": "Paid tools like Lexis+ AI do not replace verification — supervising attorneys must check every junior-drafted citation.",
+    "confidence": "high"
+  },
+  "ralph-j-massetti-jr-v-greenspring-capital-management-llc-et-al-2026-01-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "farag-v-persante-et-al-2026-01-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "macrocharts-research-llc-v-tony-chou-2026-01-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "united-states-v-michael-shane-debaere-2-2026-01-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "criminal"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "future-field-solutions-llc-v-van-norstrand-2026-01-23": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "civil", "small-firm"],
+    "lesson": "Reply briefs are not low-stakes — factual mischaracterizations plus AI-like citation errors invite sanctions motions.",
+    "confidence": "medium"
+  },
+  "ann-k-cady-beth-l-corning-and-caron-g-roesler-v-matthew-c-omalley-2026-01-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "femhealth-usa-carafem-v-rickey-nelson-williams-2026-01-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "dennis-thornton-v-flathead-county-et-al-2026-01-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "future-field-solutions-v-nordstrand-2026-01-23": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["none-adjudicated", "warning"],
+    "tags": ["fake-citations", "civil", "small-firm"],
+    "lesson": "Courts now treat unusual grammatical errors as red flags for unvetted AI drafting — polish and verify before filing.",
+    "confidence": "medium"
+  },
+  "mykhal-lloyd-polite-v-titlemax-of-arizona-2026-01-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "that-xiong-v-minga-wofford-2026-01-22": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "supervision-protocol"],
+    "sanction_types": ["training-order", "warning"],
+    "tags": ["fake-citations", "immigration", "small-firm"],
+    "lesson": "Order counsel to brief staff and client on AI citation failures — transparency up the chain is now the expected remedy.",
+    "confidence": "high"
+  },
+  "sidni-campbell-v-john-campbell-jr-2026-01-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "family", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "tolbert-v-state-2026-01-22": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "ai-disclosure-protocol", "audit-trail"],
+    "sanction_types": ["professional", "bar-referral", "training-order", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "criminal", "appellate", "bar-referral", "training-ordered"],
+    "lesson": "Appellate brief fabrications trigger bar referrals and mandatory CLE — verify every quote against the actual transcript and opinion.",
+    "confidence": "high"
+  },
+  "mcneal-v-united-food-and-commercial-workers-local-555-safeway-inc-2026-01-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "employment", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "solomon-a-jones-v-kankakee-county-sheriffs-department-et-al-2026-01-21": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fabricated-quotes", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  }
+}

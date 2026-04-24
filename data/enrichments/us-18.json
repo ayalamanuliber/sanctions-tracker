@@ -1,0 +1,162 @@
+{
+ "north-atlantic-operating-company-inc-et-al-v-indiana-import-llc-et-al-2026-01-15": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+  "sanction_types": ["warning", "ordered-to-show-cause"],
+  "tags": ["fake-citations", "civil", "trial"],
+  "lesson": "Require local counsel sign-off on every brief citing case law; unverified AI citations trigger supervision orders.",
+  "confidence": "medium"
+ },
+ "kisha-peters-v-banner-health-2026-01-15": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["case-dismissed", "warning"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "consumer-tool", "civil"],
+  "lesson": "Pro-se ChatGPT filings still harden the verification-certification norm courts will apply to attorneys next.",
+  "confidence": "high"
+ },
+ "kjoller-v-california-2026-01-14": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol", "attorney-training"],
+  "sanction_types": ["ordered-to-show-cause", "professional"],
+  "tags": ["fake-citations", "prosecutor", "government-lawyer", "criminal", "appellate"],
+  "lesson": "Prosecutors face heightened scrutiny; OSC over fake citations can escalate to bar discipline fast.",
+  "confidence": "medium"
+ },
+ "lindalbeth-lopez-hernandez-v-leanna-lundy-2026-01-14": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["fake-citations", "civil", "multi-firm"],
+  "lesson": "Pattern of fake citations across multiple filings exposes attorneys to cross-case sanctions; audit all recent briefs.",
+  "confidence": "medium"
+ },
+ "boyd-v-lee-2026-01-14": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "appellate", "civil"],
+  "lesson": "Eight fabricated or misrepresented citations in one appellate brief is career-threatening; OSC is just the opening.",
+  "confidence": "medium"
+ },
+ "suday-v-suday-2026-01-14": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "family", "appellate"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "hc-xiong-v-becerra-et-al-2026-01-14": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "attorney-training"],
+  "sanction_types": ["training-order", "warning"],
+  "tags": ["fake-citations", "civil", "training-ordered"],
+  "lesson": "Courts ordering staff to read transcript is a soft training order; treat it as a formal CLE trigger firm-wide.",
+  "confidence": "medium"
+ },
+ "hang-zhang-v-daniel-driscoll-2026-01-14": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["monetary", "warning"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "saber-v-navy-federal-credit-union-2026-01-14": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "smith-v-eighth-judicial-district-court-in-and-for-county-of-clark-2026-01-13": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "mavy-v-commissioner-of-social-security-administration-2026-01-13": {
+  "severity": "career-ending",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol", "written-ai-policy", "incident-response"],
+  "sanction_types": ["professional", "bar-referral", "struck-pleading", "published-opinion", "disqualification"],
+  "tags": ["fake-citations", "fabricated-quotes", "bar-referral", "disqualification", "administrative"],
+  "lesson": "Rule 11 violations with fake cases trigger pro hac vice revocation and multi-state bar referrals; no tool pedigree saves you.",
+  "confidence": "high"
+ },
+ "heiting-v-i-am-beyond-llc-2026-01-13": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+  "sanction_types": ["warning"],
+  "tags": ["fabricated-quotes", "fake-citations", "appellate", "civil"],
+  "lesson": "Invented quotations from real cases are the new hallucination signature; verify every quoted passage against the opinion text.",
+  "confidence": "medium"
+ },
+ "reketta-l-montgomery-v-acquisition-experts-llc-2026-01-13": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "collins-v-nova-association-management-partners-llc-2026-01-13": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "civil", "trial"],
+  "lesson": "When OSC issues, produce a per-citation source log immediately; silence compounds the violation into sanctions.",
+  "confidence": "medium"
+ },
+ "nguyen-v-pennymac-loan-services-llc-2026-01-13": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "o-gene-bicknell-v-richard-m-silanskas-jr-et-al-2026-01-12": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "gharavi-v-google-llc-2026-01-12": {
+  "severity": "low",
+  "policy_gap_ids": ["paid-tool-verification", "citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["fake-citations", "paid-tool", "civil"],
+  "lesson": "Reliance on Bloomberg Law defeats bad-faith findings, but only if the error is isolated and acknowledged.",
+  "confidence": "high"
+ },
+ "wurtenberg-v-the-city-of-new-york-2026-01-12": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "civil", "appellate"],
+  "lesson": "Courts now tie both fabrications and misrepresentations to a single genAI misuse finding; verify propositions, not just reporter strings.",
+  "confidence": "medium"
+ },
+ "pearl-gardner-v-nationstar-mortgage-llc-2026-01-09": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["bar-referral", "referral"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "consumer-tool", "civil"],
+  "lesson": null,
+  "confidence": "high"
+ },
+ "garibay-robledo-v-noem-2026-01-09": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "fabricated-quotes", "immigration", "consumer-tool"],
+  "lesson": "Never cite authority sourced from social media or unvetted forums; treat every citation as requiring a primary-source check.",
+  "confidence": "high"
+ }
+}

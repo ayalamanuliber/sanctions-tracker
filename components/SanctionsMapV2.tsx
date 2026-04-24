@@ -4,7 +4,8 @@ import { useEffect, useRef, useState, useMemo } from "react";
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
 import type { Topology, GeometryCollection } from "topojson-specification";
-import sx from "@/data/sx.json";
+import sanctionsRaw from "@/data/sanctions.json";
+import metaRaw from "@/data/meta.json";
 
 interface Case {
   id: string;
@@ -13,6 +14,7 @@ interface Case {
   circuit: string | null;
   jurisdiction: string;
   state: string;
+  country: string;
   judge: string;
   date: string;
   sanction_types: string[];
@@ -32,9 +34,15 @@ interface StateEntry {
   cases: Array<{ id: string; name: string; court: string; judge: string; date: string; amount: number | null; amount_display: string; severity: string; tool: string; summary: string; sanction_types: string[]; tags: string[]; source_url: string }>;
 }
 
-const SX = sx as unknown as {
-  cases: Case[];
-  byState: StateEntry[];
+// All cases (US + international)
+const ALL_CASES = sanctionsRaw as unknown as Case[];
+// US-only for the map (primary view)
+const US_CASES = ALL_CASES.filter((c) => c.country === "US" && c.state);
+
+// Compatibility shim with old SX shape: cases=US cases, byState=meta.by_state
+const SX = {
+  cases: US_CASES,
+  byState: (metaRaw as unknown as { by_state: StateEntry[] }).by_state,
 };
 
 const STATE_NAMES: Record<string, string> = {

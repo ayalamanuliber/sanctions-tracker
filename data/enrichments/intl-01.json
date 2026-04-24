@@ -1,0 +1,162 @@
+{
+  "amit-arora-v-canadian-national-railway-2026-04-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "canada"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "langen-v-the-owners-strata-plan-eps5455-2026-04-14": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "administrative", "canada"],
+    "lesson": "Verify every AI-generated case summary and quote against the primary source before relying on it in pleadings.",
+    "confidence": "medium"
+  },
+  "m-w-y-c-cpam-du-loiret-2026-04-09": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil", "france"],
+    "lesson": "French courts will flag invented jurisprudence as AI hallucinations; verify all cited authorities before filing.",
+    "confidence": "medium"
+  },
+  "harry-v-arie-jan-2026-04-09": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "civil", "netherlands"],
+    "lesson": "Courts across Europe are identifying fabricated citations; treat AI output as untrusted until verified.",
+    "confidence": "low"
+  },
+  "rvv-x-ix-2026-04-07": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["immigration", "administrative", "belgium"],
+    "lesson": "Never submit AI-altered documentary exhibits; courts treat modified translations as misleading the tribunal.",
+    "confidence": "medium"
+  },
+  "9525-1260-québec-inc-c-donato-2026-04-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil", "canada"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "agc-v-registrar-of-land-titles-2026-04-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "consumer-tool", "canada"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "galang-v-canada-attorney-general-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["pro-se", "fake-citations", "civil", "canada"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "ezequiel-cunha-de-moura-e-outro-v-wallace-de-moura-silva-2026-03-30": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["bar-referral", "referral"],
+    "tags": ["fake-citations", "bar-referral", "civil", "brazil"],
+    "lesson": "Brazilian courts now refer attorneys to the OAB for fabricated citations; citation verification is not optional.",
+    "confidence": "medium"
+  },
+  "guerin-v-odoherty-2026-03-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "ireland"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "singh-v-director-of-the-residential-tenancy-branch-2026-03-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative", "canada"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "iyer-v-nazir-2026-03-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "canada"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "ben-cohen-v-ramat-gan-2026-03-22": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "appellate", "israel"],
+    "lesson": "Israeli Supreme Court issues costs orders for fabricated citations; verify every authority before appellate filings.",
+    "confidence": "medium"
+  },
+  "kibbutz-beit-nir-v-ronen-marciano-2026-03-22": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "employment", "israel"],
+    "lesson": "Even small monetary penalties mark the record; treat any AI-drafted pleading as requiring manual authority verification.",
+    "confidence": "medium"
+  },
+  "ben-cohen-v-municipality-of-ramat-gan-2026-03-22": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "written-ai-policy", "audit-trail"],
+    "sanction_types": ["monetary", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "government-lawyer", "published-opinion", "israel"],
+    "lesson": "Government lawyers face published adverse-costs orders when AI-invented regulations and cases reach pleadings; require dual-source verification.",
+    "confidence": "high"
+  },
+  "national-indigenous-fisheries-institute-v-canada-ag-2026-03-20": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "published-opinion"],
+    "tags": ["fake-citations", "civil", "published-opinion", "canada"],
+    "lesson": "In-house counsel affidavits get no pass; every cited authority in sworn evidence must be independently verified.",
+    "confidence": "high"
+  },
+  "salah-v-peel-condominium-corporation-2026-03-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative", "canada"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "natalia-geller-v-eyal-nun-adv-2026-03-19": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary"],
+    "tags": ["employment", "israel"],
+    "lesson": "Even modest monetary sanctions from labor courts create a paper trail; treat any AI use as billable-grade verification work.",
+    "confidence": "low"
+  },
+  "jenson-lockridge-no-2-2026-03-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "case-dismissed"],
+    "tags": ["pro-se", "family", "appellate", "australia"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "edmonds-v-barrington-winstanley-group-2026-03-18": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil", "australia"],
+    "lesson": "Australian courts are now warning counsel for unverified citations; document every authority check before filing.",
+    "confidence": "medium"
+  }
+}

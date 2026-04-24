@@ -1,0 +1,162 @@
+{
+  "kosel-equity-v-mcgregor-2026-02-19": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "consumer-tool", "trial"],
+    "lesson": "ChatGPT-assisted formatting still requires a full cite-check pass before any brief is filed.",
+    "confidence": "medium"
+  },
+  "johnson-v-florida-department-of-juvenile-justice-et-al-2026-02-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "in-re-marrett-2026-02-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "bankruptcy"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "juandel-pena-and-martina-ruiz-v-wells-fargo-bank-na-2026-02-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "bixler-v-church-of-scientology-2026-02-19": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "appellate", "civil"],
+    "lesson": "Ten mischaracterized cites across fifteen passages guarantees an OSC; assign a dedicated cite-checker on appellate briefs.",
+    "confidence": "high"
+  },
+  "matter-of-adapt-forward-llc-2026-02-18": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "administrative"],
+    "lesson": "GAO bid protest cites must be pulled from primary source B-numbers, not AI summaries, before filing.",
+    "confidence": "high"
+  },
+  "fletcher-v-experian-information-solutions-bridgecrest-credit-company-2026-02-18": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "fabricated-quotes", "appellate", "civil"],
+    "lesson": "Reply briefs are where hallucinated quotes slip through; require a partner to verify every quoted passage against the opinion text.",
+    "confidence": "high"
+  },
+  "efd-usa-inc-et-al-v-band-pro-film-and-digital-inc-et-al-2026-02-18": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fabricated-quotes", "fake-citations", "appellate", "consumer-tool"],
+    "lesson": "AI word-count trimmers silently rewrite quotations; ban their use on filed briefs or force a final primary-source diff.",
+    "confidence": "high"
+  },
+  "kennon-v-ashley-2026-02-18": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fabricated-quotes", "fake-citations", "civil", "trial"],
+    "lesson": "Every block quote from a deposition must be copy-pasted from the certified transcript, not paraphrased by AI.",
+    "confidence": "high"
+  },
+  "shaerica-l-walder-v-experian-information-solutions-2026-02-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "kendle-mardis-v-dealer-loyalty-protection-inc-et-al-2026-02-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "david-martin-v-ods-community-dental-insurance-et-al-2026-02-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "chp-1010-mcdowell-et-al-v-james-costello-turpen-2026-02-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "bankruptcy"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "nia-elan-davis-v-american-airlines-et-al-2026-02-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "alejandro-rios-v-puente-hills-ford-2026-02-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "in-re-social-media-adolescent-addiction-litigation-2026-02-17": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "class-action", "civil"],
+    "lesson": "Expert reports must be cite-audited before service; AI citation-formatters have already produced fake academic sources on the record.",
+    "confidence": "high"
+  },
+  "merz-v-city-of-kalama-2026-02-13": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "martha-liliana-picon-diaz-et-al-v-pamela-j-bondi-2026-02-13": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["warning", "published-opinion"],
+    "tags": ["fake-citations", "appellate", "immigration"],
+    "lesson": "Pull every circuit-court cite directly from Westlaw or the court's PACER docket; AI will invent plausible F.4th numbers.",
+    "confidence": "high"
+  },
+  "creditors-adjustment-bureau-inc-v-all-season-power-llc-et-al-2026-02-13": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "multi-firm", "civil"],
+    "lesson": "When opposing counsel parrots your bad cite into their reply, both sides get named; require independent verification even of internal brief templates.",
+    "confidence": "high"
+  },
+  "g2-ops-inc-2026-02-13": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "written-ai-policy"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "administrative"],
+    "lesson": "GAO has now put the bar on notice: next AI-hallucinated bid protest filing risks sanctions, not warnings.",
+    "confidence": "high"
+  }
+}

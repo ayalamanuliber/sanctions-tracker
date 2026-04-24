@@ -1,0 +1,162 @@
+{
+  "hanna-v-flinders-university-2025-01-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "AU"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "olsen-v-finansiel-stabilitet-2025-01-25": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil", "GB"],
+    "lesson": "Pro-se fake citations still cost your client costs — flag AI drafts for mandatory citation audit.",
+    "confidence": "medium"
+  },
+  "body-by-michael-pty-ltd-and-industry-innovation-and-science-australia-2025-01-24": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "administrative", "AU"],
+    "lesson": "Tribunals cross-check every citation — withdrawing fakes before hearing avoids adverse inferences but not the warning.",
+    "confidence": "high"
+  },
+  "candice-dias-v-angle-auto-finance-2025-01-20": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "employment", "administrative", "AU"],
+    "lesson": "Pro-se AI filings are a map signal, not a firm threat; stay focused on attorney-party cases.",
+    "confidence": "medium"
+  },
+  "mavundla-v-mec-2025-01-08": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "incident-response", "written-ai-policy"],
+    "sanction_types": ["monetary", "bar-referral", "referral", "published-opinion", "professional"],
+    "tags": ["fake-citations", "denial", "multi-attorney", "published-opinion", "bar-referral", "ZA"],
+    "lesson": "Never delegate citation verification to juniors without review — supervising counsel pays de bonis propriis when fakes slip through.",
+    "confidence": "high"
+  },
+  "buckeye-trust-v-pcit-2024-12-30": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["published-opinion"],
+    "tags": ["fake-citations", "tax", "published-opinion", "IN"],
+    "lesson": "When counsel feeds hallucinations, even judges get burned — verify every authority before citing it back in opinions.",
+    "confidence": "medium"
+  },
+  "duarte-v-city-of-richmond-2024-12-18": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative", "CA"],
+    "lesson": "Tribunal cautions against AI use set precedent — expect costs next time lawyers do the same.",
+    "confidence": "high"
+  },
+  "hamdan-v-the-national-insurance-institute-2024-12-12": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "approved-tools-list"],
+    "sanction_types": ["monetary", "case-dismissed"],
+    "tags": ["fake-citations", "paid-tool", "civil", "IL"],
+    "lesson": "Blaming an unnamed legal database does not shift the verification duty — the submitting lawyer owns every citation.",
+    "confidence": "high"
+  },
+  "john-coulsto-et-al-v-elliott-2024-12-10": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil", "IE"],
+    "lesson": "Repealed-law claims from AI drafts collapse instantly — always confirm statutes are still in force before filing.",
+    "confidence": "medium"
+  },
+  "crypto-open-patent-alliance-v-wright-1-2024-12-06": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "incident-response"],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "GB"],
+    "lesson": "Doubling down on fake citations in appeal papers turns a litigation loss into a GBP 100K costs order.",
+    "confidence": "high"
+  },
+  "wikeley-v-kea-investments-ltd-2024-11-21": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "NZ"],
+    "lesson": "Undisclosed AI use triggers referral to guidance even without sanctions — always disclose the tool when citations fail.",
+    "confidence": "medium"
+  },
+  "monster-energy-company-v-pacific-smoke-international-inc-2024-11-20": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "ip", "administrative", "CA"],
+    "lesson": "IP boards now flag AI hallucinations on sight — unverified citations erase your argument before the merits.",
+    "confidence": "medium"
+  },
+  "kaur-v-rmit-2024-11-11": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "appellate", "AU"],
+    "lesson": "Appellate courts now silently strip fake citations from reasons — the record memorializes the failure anyway.",
+    "confidence": "medium"
+  },
+  "carb-188903m-2024-calgary-assessment-review-board-2024-11-07": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["referral", "warning"],
+    "tags": ["fake-citations", "tax", "administrative", "CA"],
+    "lesson": "Assessment boards escalate repeat AI fakes to the General Chair — three unverifiable cites is one too many.",
+    "confidence": "medium"
+  },
+  "rajabi-c-lassalle-2024-11-01": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil", "CA"],
+    "lesson": "French-language tribunals catch fake CanLII cites just as fast — jurisdiction is no shield.",
+    "confidence": "medium"
+  },
+  "anonymous-spanish-lawyer-2024-09-09": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "incident-response"],
+    "sanction_types": ["professional", "bar-referral", "referral", "warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "appellate", "bar-referral", "ES"],
+    "lesson": "Nineteen fake cites to the Constitutional Court = apercibimiento plus bar referral — blaming the database does not help.",
+    "confidence": "high"
+  },
+  "atsj-na-382024-2024-09-04": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "consumer-tool", "criminal", "ES"],
+    "lesson": "ChatGPT cited a Colombian statute as Spanish law — never let a consumer chatbot quote foreign codes into your brief.",
+    "confidence": "high"
+  },
+  "in-re-dayal-2024-08-27": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "supervision-protocol", "approved-tools-list"],
+    "sanction_types": ["bar-referral", "referral", "professional"],
+    "tags": ["fake-citations", "paid-tool", "solo", "bar-referral", "AU"],
+    "lesson": "LEAP's embedded AI module is not a research tool — two-year supervision and a ban on solo practice followed one unverified list.",
+    "confidence": "high"
+  },
+  "nitzan-v-adar-baemakim-properties-ltd-2024-08-13": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "incident-response"],
+    "sanction_types": ["monetary", "referral", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "denial", "civil", "IL"],
+    "lesson": "Claiming you wrote the fake summaries yourself is worse than blaming AI — judges escalate for misrepresenting origin.",
+    "confidence": "high"
+  },
+  "industria-de-diseño-textil-sa-v-sara-ghassai-2024-08-12": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "ip", "administrative", "CA"],
+    "lesson": "Even a warning becomes public record — trademark boards now name-and-shame fake citations in routine oppositions.",
+    "confidence": "low"
+  }
+}

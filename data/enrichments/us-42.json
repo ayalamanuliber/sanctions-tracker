@@ -1,0 +1,162 @@
+{
+  "in-re-thomas-grant-neusom-2025-05-08": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "incident-response", "audit-trail", "attorney-training"],
+    "sanction_types": ["professional", "bar-referral", "training-order", "published-opinion"],
+    "tags": ["fake-citations", "solo", "denial", "training-ordered", "bar-referral"],
+    "lesson": "One-year federal suspension follows when attorneys hedge on AI use and ignore court orders to produce cited cases.",
+    "confidence": "high"
+  },
+  "matter-of-raven-investigations-security-consulting-b-423447-2025-05-07": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "administrative"],
+    "lesson": "Even GAO protests now flag AI-pattern citations; unrepresented protesters face future bar referrals if counsel enters.",
+    "confidence": "high"
+  },
+  "harris-v-take-two-interactive-software-2025-05-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Pro-se Rule 11 warnings are multiplying; treat them as early-warning indicators for your pro-se opposing parties.",
+    "confidence": "high"
+  },
+  "rotonde-v-stewart-title-insurance-co-2025-05-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": "New York trial courts now cite Dowlah and Samuel as the baseline warning for fabricated AI citations.",
+    "confidence": "high"
+  },
+  "x-v-board-of-trustees-of-governors-state-university-2025-05-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Rule 11 applies fully to pro-se litigants; a single unlocatable citation is enough to trigger an on-record warning.",
+    "confidence": "medium"
+  },
+  "lacey-v-state-farm-general-insurance-2025-05-06": {
+    "severity": "high",
+    "policy_gap_ids": ["paid-tool-verification", "citation-verification", "supervision-protocol", "ai-disclosure-protocol"],
+    "sanction_types": ["monetary", "struck-pleading"],
+    "tags": ["fake-citations", "fabricated-quotes", "biglaw", "paid-tool", "multi-firm", "civil"],
+    "lesson": "Paid tools like CoCounsel and Westlaw AI are not a defense; require a second-attorney verification pass before any AI-assisted brief is filed.",
+    "confidence": "high"
+  },
+  "flowz-digital-v-caroline-dalal-2025-05-05": {
+    "severity": "medium",
+    "policy_gap_ids": ["paid-tool-verification", "citation-verification"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "paid-tool", "civil"],
+    "lesson": "LexisNexis marketing 'hallucination-free' does not shift the verification duty; counsel still owns every cite.",
+    "confidence": "high"
+  },
+  "wilt-v-department-of-the-navy-2025-05-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Courts now openly label plausible-but-nonexistent FTCA and Title VII cites as AI-generated on the face of the pleading.",
+    "confidence": "medium"
+  },
+  "gustafson-v-amazoncom-2025-04-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Exhibit misrepresentations paired with fake citations increase Rule 11 exposure even for pro-se litigants.",
+    "confidence": "medium"
+  },
+  "moales-v-land-rover-cherry-hill-2025-04-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "District of Connecticut treats pervasive AI-style misstatements of law as Rule 11 risk, not just jurisdictional failure.",
+    "confidence": "high"
+  },
+  "willis-v-us-bank-national-association-as-trustee-igloo-series-trust-2025-04-28": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "benjamin-v-costco-wholesale-corp-2025-04-24": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "warning"],
+    "tags": ["fake-citations", "solo", "consumer-tool", "civil"],
+    "lesson": "Consumer AI tools under time pressure produce five fake cases; ban non-approved tools and require verification logs for sworn filings.",
+    "confidence": "high"
+  },
+  "nichols-v-walmart-2025-04-23": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil", "appellate"],
+    "lesson": "Eleventh Circuit affirmance of Rule 11 dismissal for fake AI cites signals appellate appetite is hardening.",
+    "confidence": "medium"
+  },
+  "brown-v-patel-et-al-2025-04-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Misrepresenting what a real case stands for is treated alongside fabrications when the pattern looks AI-generated.",
+    "confidence": "high"
+  },
+  "ferris-v-amazoncom-services-2025-04-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "civil", "employment"],
+    "lesson": "Seven ChatGPT-fabricated cites cost a pro-se plaintiff a cost-shifting sanction; courts are monetizing AI misconduct.",
+    "confidence": "high"
+  },
+  "sims-v-souily-lefave-2025-04-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "crystal-truong-et-al-v-flint-hills-resources-llc-et-al-2025-04-14": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "attorney-training"],
+    "sanction_types": ["ordered-to-show-cause", "training-order"],
+    "tags": ["fake-citations", "consumer-tool", "small-firm", "training-ordered", "civil"],
+    "lesson": "Non-suiting the case dodges a show-cause ruling but the CLE commitment still goes on your file; act before the OSC issues.",
+    "confidence": "medium"
+  },
+  "graciela-dela-torre-v-davies-life-health-inc-et-al-2025-04-11": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "bischoff-v-south-carolina-department-of-education-2025-04-10": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": "State administrative courts are now invoking frivolous-proceedings statutes against AI-fabricated cites.",
+    "confidence": "high"
+  },
+  "bevins-v-colgate-palmolive-co-2025-04-10": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol", "incident-response", "audit-trail"],
+    "sanction_types": ["professional", "bar-referral", "struck-pleading", "referral"],
+    "tags": ["fake-citations", "solo", "denial", "bar-referral", "civil"],
+    "lesson": "Ignoring a standing AI order plus refusing to explain cites gets your appearance struck and your bar notified; always comply and disclose.",
+    "confidence": "high"
+  }
+}

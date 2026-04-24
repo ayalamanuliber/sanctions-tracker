@@ -1,0 +1,162 @@
+{
+  "saxena-v-martinez-hernandez-et-al-2025-02-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "denial", "civil"],
+    "lesson": "Pro-se filer; log as volume data point. No partner exposure.",
+    "confidence": "high"
+  },
+  "state-v-saher-2025-02-11": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause", "warning"],
+    "tags": ["fake-citations", "consumer-tool", "criminal", "small-firm"],
+    "lesson": "Scrub every filing for prompt text before submission; ChatGPT artifacts signal unreviewed output.",
+    "confidence": "medium"
+  },
+  "gonzalez-v-texas-taxpayers-and-research-association-2025-01-29": {
+    "severity": "medium",
+    "policy_gap_ids": ["paid-tool-verification", "citation-verification", "incident-response"],
+    "sanction_types": ["monetary", "struck-pleading"],
+    "tags": ["fake-citations", "paid-tool", "denial", "civil"],
+    "lesson": "Lexis AI output must be Shepardized against primary sources; initial denial of AI use escalates exposure.",
+    "confidence": "high"
+  },
+  "fora-financial-asset-securitization-v-teona-ostrov-public-relations-2025-01-24": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning", "struck-pleading"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Reply briefs get the same verification as opening briefs; courts strike fabricated quotes on sight.",
+    "confidence": "medium"
+  },
+  "strike-3-holdings-llc-v-doe-2025-01-22": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Judges now recognize AI-hallucination patterns; one unverified citation triggers scrutiny of the entire brief.",
+    "confidence": "medium"
+  },
+  "arajuo-v-wedelstadt-et-al-2025-01-22": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Blaming a 'corrupted research tool' is no defense; attorneys must read every cited case before filing.",
+    "confidence": "high"
+  },
+  "united-states-v-hayes-2025-01-17": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "incident-response", "audit-trail"],
+    "sanction_types": ["professional", "published-opinion", "warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "denial", "public-defender", "criminal", "government-lawyer"],
+    "lesson": "Denying AI use under questioning converts a citation error into professional sanction and future discipline exposure.",
+    "confidence": "high"
+  },
+  "strong-v-rushmore-loan-management-services-2025-01-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Pro-se filer; log as volume data point.",
+    "confidence": "high"
+  },
+  "kohls-v-ellison-2025-01-10": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "ai-disclosure-protocol"],
+    "sanction_types": ["struck-pleading", "published-opinion"],
+    "tags": ["fake-citations", "consumer-tool", "government-lawyer", "civil"],
+    "lesson": "Ask every expert witness about AI use and verification; a struck declaration can sink the underlying case.",
+    "confidence": "high"
+  },
+  "obrien-v-flick-and-chamberlain-2025-01-10": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed", "struck-pleading"],
+    "tags": ["pro-se", "fake-citations", "denial", "civil"],
+    "lesson": "Pro-se filer; log as volume data point.",
+    "confidence": "high"
+  },
+  "al-hamim-v-star-hearthstone-2024-12-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": "Pro-se filer; log as volume data point.",
+    "confidence": "high"
+  },
+  "letts-v-avidien-technologies-2024-12-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Pro-se filer; log as volume data point.",
+    "confidence": "medium"
+  },
+  "mojtabavi-v-blinken-2024-12-12": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "immigration", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "carlos-e-gutierrez-v-in-re-noemi-d-gutierrez-2024-12-04": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed", "warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "family"],
+    "lesson": "Pro-se filer; log as volume data point.",
+    "confidence": "high"
+  },
+  "rubio-v-district-of-columbia-dhs-2024-12-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed", "warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Pro-se filer; log as volume data point.",
+    "confidence": "high"
+  },
+  "gauthier-v-goodyear-tire-rubber-co-2024-11-25": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "training-order", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "training-ordered", "first-in-circuit", "civil", "employment"],
+    "lesson": "Mandate a primary-source verification pass on every AI draft and require client disclosure when sanctions follow.",
+    "confidence": "high"
+  },
+  "leslie-v-iq-data-international-2024-11-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "civil"],
+    "lesson": "Pro-se filer; log as volume data point.",
+    "confidence": "low"
+  },
+  "berry-v-stewart-2024-11-14": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["ordered-to-show-cause", "monetary"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Quoting contract language not in the record is a Rule 11 trap; cross-check every quoted clause against the filed document.",
+    "confidence": "high"
+  },
+  "vargas-v-salazar-2024-11-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Pro-se filer; log as volume data point.",
+    "confidence": "low"
+  },
+  "churchill-funding-v-732-indiana-2024-10-31": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "OSCs for false pleadings now follow a single unverified cite; Shepardize before every CMC statement.",
+    "confidence": "medium"
+  }
+}

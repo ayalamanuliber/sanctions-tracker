@@ -1,0 +1,162 @@
+{
+  "angela-and-theodore-chagnon-v-holly-nelson-2025-07-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "doe-v-noem-2025-07-01": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "consumer-tool", "civil"],
+    "lesson": "Ban ChatGPT for legal research; apologies after the fact do not cure a Rule 11 violation.",
+    "confidence": "medium"
+  },
+  "crespo-v-tesla-inc-2025-06-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil", "trial"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "benjamin-gamble-v-ho-chunk-nation-election-board-2025-06-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "shahid-v-esaam-2025-06-30": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "appellate", "family", "published-opinion"],
+    "lesson": "Never submit a draft order written by counsel without verifying every case cited — the judge's credibility rides on yours.",
+    "confidence": "high"
+  },
+  "assessment-and-training-solutions-consulting-b-423398-2025-06-27": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "administrative"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "twist-it-up-inc-v-annie-international-inc-2025-06-27": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "civil", "trial"],
+    "lesson": "Even a $500 sanction creates a discoverable record — verify every Westlaw cite against the actual opinion, not just the headnote.",
+    "confidence": "high"
+  },
+  "sister-city-logistics-inc-v-john-fitzgerald-2025-06-27": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "parra-v-united-states-2025-06-27": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "schoene-v-oregon-department-of-human-services-2025-06-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "romero-v-goldman-sachs-bank-usa-2025-06-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "dastou-v-holmes-2025-06-25": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "approved-tools-list"],
+    "sanction_types": ["professional", "training-order"],
+    "tags": ["fake-citations", "consumer-tool", "training-ordered", "civil"],
+    "lesson": "Mandatory CLE is now a routine remedy — invest in AI ethics training before a judge orders it for your associates.",
+    "confidence": "medium"
+  },
+  "iskenderian-v-southeastern-2025-06-23": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Courts may let a confession slide this time, but opposing counsel will preserve the admission for future Rule 11 motions.",
+    "confidence": "medium"
+  },
+  "mintvest-capital-ltd-v-nydig-trust-company-et-al-2025-06-23": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Claude, ChatGPT, or any LLM still requires independent Westlaw verification — Rule 11 does not care which brand hallucinated.",
+    "confidence": "high"
+  },
+  "reilly-v-conn-interlocal-risk-mgmt-agency-2025-06-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "in-re-marriage-of-isom-and-kareem-2025-06-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "taylor-v-cooper-power-lighting-corp-2025-06-13": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "incident-response", "audit-trail"],
+    "sanction_types": ["warning", "ordered-to-show-cause"],
+    "tags": ["fake-citations", "denial", "civil"],
+    "lesson": "The \"placeholder\" excuse does not survive scrutiny — never cite a case you have not read, and never lie to the court about why.",
+    "confidence": "high"
+  },
+  "rochon-eidsvig-rochon-hafer-v-jgb-collateral-2025-06-12": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "supervision-protocol"],
+    "sanction_types": ["professional", "training-order"],
+    "tags": ["fake-citations", "appellate", "training-ordered", "civil"],
+    "lesson": "Eight hours of mandatory AI ethics CLE is the new baseline sanction — train your attorneys now or let a court do it publicly.",
+    "confidence": "high"
+  },
+  "reed-v-community-health-care-2025-06-10": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "goins-v-father-flanagans-boys-home-2025-06-05": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  }
+}

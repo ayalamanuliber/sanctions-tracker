@@ -1,0 +1,162 @@
+{
+  "david-angel-sifuentes-iii-v-christian-brothers-automotive-2025-11-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "ross-logan-v-lvnv-funding-et-al-2025-11-05": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "civil", "trial"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "coleman-lewis-v-pnc-bank-na-2025-11-05": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fabricated-quotes", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "lowrey-v-city-of-rio-rancho-2025-11-05": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "borsody-v-frontier-heritage-communities-2025-11-04": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "kheir-v-titan-team-the-money-source-inc-and-auctioncom-2025-11-04": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "training-order", "bar-referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "bankruptcy", "bar-referral", "training-ordered"],
+    "lesson": "Pervasive fabricated citations draw CLE orders and bar referral even with nominal costs — verify every cite against primary sources.",
+    "confidence": "high"
+  },
+  "lnu-et-al-v-bondi-2025-11-04": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "immigration", "trial"],
+    "lesson": "Treat every AI-drafted brief as unverified until a human checks each citation against Westlaw or Lexis.",
+    "confidence": "medium"
+  },
+  "alaya-coleman-v-rpf-somers-investors-llc-et-al-2025-11-04": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fabricated-quotes", "civil", "trial"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "todd-e-glass-v-foley-lardner-llp-2025-11-04": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "xavier-jamal-smith-v-santander-consumer-usa-inc-2025-11-04": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "ih-v-ok-2025-11-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "wheat-v-vichie-2025-11-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "isaacs-v-novartis-pharmaceuticals-corporation-2025-11-03": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "approved-tools-list", "supervision-protocol"],
+    "sanction_types": ["professional", "training-order"],
+    "tags": ["fake-citations", "consumer-tool", "training-ordered", "civil"],
+    "lesson": "Client-supplied ChatGPT cites are still counsel's responsibility — verify before filing or face mandatory AI CLE.",
+    "confidence": "high"
+  },
+  "medical-buyers-group-llc-dba-integrity-v-candice-pence-et-al-2025-10-31": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "incident-response"],
+    "sanction_types": ["monetary", "warning"],
+    "tags": ["fake-citations", "civil", "trial"],
+    "lesson": "Leaving a fabricated cite in an amended brief after challenge converts a warning into a $10K fee-shift order.",
+    "confidence": "high"
+  },
+  "kaleb-alexander-hoosier-v-executive-centre-association-et-al-2025-10-31": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "attorney-disciplinary-board-v-richard-louis-pazdernik-jr-2025-10-31": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "attorney-training"],
+    "sanction_types": ["professional", "published-opinion", "bar-referral"],
+    "tags": ["fake-citations", "consumer-tool", "bar-referral", "published-opinion"],
+    "lesson": "Unverified ChatGPT output in an Iowa filing will land you a published Supreme Court reprimand on your record.",
+    "confidence": "high"
+  },
+  "state-ex-rel-soretha-marie-eldridge-v-judge-ashley-kilbane-2025-10-31": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "county-of-los-angeles-v-neill-francis-niblett-2025-10-31": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "government-lawyer", "appellate"],
+    "lesson": "AI editing tools can silently insert phantom cites — require second-attorney verification of every authority in appellate briefs.",
+    "confidence": "high"
+  },
+  "warner-v-gilbarco-inc-2025-10-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil", "trial"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "in-re-pamela-williams-2025-10-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "bankruptcy"],
+    "lesson": null,
+    "confidence": "medium"
+  }
+}

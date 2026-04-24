@@ -1,0 +1,162 @@
+{
+  "gutierrez-v-lorenzo-food-group-inc-2025-11-21": {
+    "severity": "low",
+    "policy_gap_ids": ["audit-trail", "citation-verification"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Preserve drafts, metadata, and timesheets — courts now demand an audit trail when AI use is suspected.",
+    "confidence": "medium"
+  },
+  "evans-et-al-v-robertson-et-al-3-2025-11-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "buchanan-v-vuori-inc-2025-11-20": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "approved-tools-list"],
+    "sanction_types": ["monetary", "bar-referral", "struck-pleading", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "paid-tool", "bar-referral", "civil"],
+    "lesson": "Mixing consumer AI (ChatGPT/Claude) with paid tools (Westlaw/Lexis) still triggers bar referral — verify every cite against primary source.",
+    "confidence": "high"
+  },
+  "in-re-jackson-hospital-clinic-inc-et-al-2025-11-20": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "written-ai-policy"],
+    "sanction_types": ["professional", "published-opinion", "disqualification", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "bankruptcy", "disqualification", "published-opinion"],
+    "lesson": "Revoking pro hac vice and notifying the attorney's home bar is now standard — pervasive fabrications are treated as competence failures.",
+    "confidence": "high"
+  },
+  "ys-v-john-doe-et-al-2025-11-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "ekeocha-v-us-department-of-state-2025-11-19": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Even a single fabricated D.C. Circuit cite earns an on-record admonishment — check every citation against the reporter.",
+    "confidence": "high"
+  },
+  "jorge-paredes-guevara-v-ap-restaurant-corp-et-al-2025-11-18": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "fabricated-quotes", "employment"],
+    "lesson": "Fabricated statutory quotes (NYLL §215) are as damning as fake cases — verify statutes against the code, not AI.",
+    "confidence": "medium"
+  },
+  "in-re-bryant-2025-11-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "bankruptcy"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "kamia-nellum-v-credit-acceptance-corporation-2025-11-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "moorehead-v-goodwill-industries-of-northeast-texas-2025-11-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "cotto-v-united-states-2025-11-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "mattson-dostal-v-rosebud-electric-cooperative-et-al-2025-11-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "schlichter-v-kennedy-2025-11-17": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "bar-referral", "professional"],
+    "tags": ["fake-citations", "bar-referral", "appellate", "civil"],
+    "lesson": "A small monetary sanction plus bar referral is the new baseline — the dollar amount is irrelevant, the referral is the career risk.",
+    "confidence": "high"
+  },
+  "neal-v-frayer-2025-11-17": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Cross-jurisdictional cite-swapping (Connecticut reporter attributed to Maryland) is an AI tell — verify jurisdiction alongside the cite.",
+    "confidence": "high"
+  },
+  "gittemeier-v-liberty-mutual-personal-insurance-company-2025-11-17": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "incident-response", "supervision-protocol"],
+    "sanction_types": ["monetary", "professional", "ordered-to-show-cause"],
+    "tags": ["fake-citations", "denial", "civil", "biglaw"],
+    "lesson": "Blaming typos or vision impairment for AI hallucinations enrages courts — disclose the tool immediately when confronted.",
+    "confidence": "high"
+  },
+  "cojom-v-roblen-2025-11-17": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training"],
+    "sanction_types": ["monetary", "published-opinion"],
+    "tags": ["fake-citations", "civil", "published-opinion"],
+    "lesson": "Exploiting a pro-se opponent's inability to catch fake cites aggravates sanctions — the court, not opposing counsel, is your verifier.",
+    "confidence": "high"
+  },
+  "matthew-lewis-v-eagle-county-government-2025-11-14": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "employment", "civil"],
+    "lesson": "Costs add up fast — a $3K fine ballooned to $28K once opposing fees were taxed; every unverified cite is a fee-shifting risk.",
+    "confidence": "high"
+  },
+  "jeremie-montgomery-v-afl-cio-2025-11-14": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "pro-se", "employment"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "virginia-montoya-cabanas-v-pamela-bondi-et-al-2025-11-13": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "immigration"],
+    "lesson": "Misquoting a conference report is as sanctionable as fake case law — legislative history needs the same verification discipline.",
+    "confidence": "medium"
+  },
+  "matter-of-matos-2025-11-13": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training"],
+    "sanction_types": ["professional", "published-opinion", "referral"],
+    "tags": ["fake-citations", "ip", "published-opinion", "administrative"],
+    "lesson": "A public censure in a TTAB/attorney-discipline matter follows you through PACER searches — assume every AI misstep becomes permanent public record.",
+    "confidence": "high"
+  }
+}

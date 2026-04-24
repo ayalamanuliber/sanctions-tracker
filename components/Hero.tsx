@@ -1,9 +1,21 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import stats from "@/data/stats.json";
-import cases from "@/data/cases.json";
+import meta from "@/data/meta.json";
+import sanctions from "@/data/sanctions.json";
 import { ESCALATION_DATA } from "@/lib/constants";
+
+// Shim old stats shape → meta
+const stats = {
+  total_cases_tracked: (meta as { us_cases: number }).us_cases,
+  q1_2026_sanctions_usd: (meta as { monetary_sanctions_total_usd: number }).monetary_sanctions_total_usd,
+  last_updated: (meta as { last_updated: string }).last_updated,
+};
+
+// Use top US cases for the live panel carousel
+const cases = (sanctions as Array<{ id: string; country: string; date: string; case_name: string; court: string; amount: number | null; amount_display: string; severity: string | null }>)
+  .filter((c) => c.country === "US" && c.date)
+  .sort((a, b) => b.date.localeCompare(a.date));
 
 function CountUp({ target, duration = 1800, formatter }: { target: number; duration?: number; formatter?: (n: number) => string }) {
   const [count, setCount] = useState(0);

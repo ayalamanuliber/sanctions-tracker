@@ -1,0 +1,98 @@
+{
+  "mr-d-rollo-v-marstons-trading-ltd-2024-08-01": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "consumer-tool"],
+    "sanction_types": ["warning", "none-adjudicated"],
+    "tags": ["pro-se", "consumer-tool", "employment", "GB"],
+    "lesson": "ChatGPT conversation logs are not expert evidence; tribunals will exclude them outright.",
+    "confidence": "high"
+  },
+  "munchang-choi-v-lloyds-register-canada-limited-2024-07-23": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative", "CA"],
+    "lesson": "Over 30 fabricated citations in a single reply still drew only admonishment for pro-se filers; attorneys will not be so lucky.",
+    "confidence": "high"
+  },
+  "lakaev-v-mcconkey-2024-07-12": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "appellate", "AU"],
+    "lesson": "Appeals die on fabricated citations even when formal sanctions are withheld from unrepresented parties.",
+    "confidence": "high"
+  },
+  "x-bv-in-z-v-tax-inspector-2024-06-26": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "ai-disclosure-protocol"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "consumer-tool", "tax", "appellate", "NL"],
+    "lesson": "If you cannot produce the exact prompt and verification trail, expect Dutch courts to discard the AI-derived argument entirely.",
+    "confidence": "high"
+  },
+  "x-bv-in-z-v-tax-inspector-2024-03-05": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["consumer-tool", "tax", "appellate", "NL"],
+    "lesson": "Log every ChatGPT prompt and output; unverifiable AI statements carry zero evidentiary weight.",
+    "confidence": "high"
+  },
+  "finch-v-the-heat-group-2024-02-27": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["case-dismissed", "warning"],
+    "tags": ["pro-se", "fake-citations", "AU"],
+    "lesson": "Pro-se filers presenting 24 fabricated authorities still collapse the application; treat any uncited list as suspect on intake.",
+    "confidence": "high"
+  },
+  "zhang-v-chen-2024-02-20": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "approved-tools-list"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "consumer-tool", "civil", "first-in-state", "CA"],
+    "lesson": "BC Supreme Court equated fake AI citations with making a false statement to the court - costs attach and careers follow.",
+    "confidence": "high"
+  },
+  "harber-v-hmrc-2023-12-04": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "tax", "GB"],
+    "lesson": "UK tribunals excused the pro-se taxpayer but telegraphed that solicitors filing the same fake cases will be punished.",
+    "confidence": "high"
+  },
+  "parker-v-forsyth-nno-and-others-2023-06-29": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary", "case-dismissed", "published-opinion"],
+    "tags": ["fake-citations", "consumer-tool", "civil", "published-opinion", "first-in-state", "ZA"],
+    "lesson": "Punitive attorney-and-client costs landed for ChatGPT citations even after candid concession - verify before you file, not after.",
+    "confidence": "high"
+  },
+  "unknown-case-2023-05-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "tags": ["pro-se", "GB"],
+    "sanction_types": ["none-adjudicated"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "nash-v-director-of-public-prosecutions-2023-05-08": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "criminal", "appellate", "AU"],
+    "lesson": "Appellate courts now flag ChatGPT-style fake authorities sua sponte; screen pro-se cited cases before oral argument.",
+    "confidence": "high"
+  },
+  "nº-0600814-8520226000000-2023-04-14": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol", "approved-tools-list"],
+    "sanction_types": ["monetary", "struck-pleading"],
+    "tags": ["consumer-tool", "fabricated-quotes", "administrative", "BR"],
+    "lesson": "Brazilian electoral court fined an attorney for bad-faith ChatGPT submissions - novelty is no defense when the filing is manifestly unfounded.",
+    "confidence": "high"
+  }
+}

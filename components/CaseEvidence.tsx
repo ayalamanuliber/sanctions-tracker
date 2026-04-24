@@ -1,7 +1,55 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import cases from "@/data/cases.json";
+import sanctionsRaw from "@/data/sanctions.json";
+interface WikiCase {
+  id: string;
+  case_name: string;
+  court: string;
+  circuit: string | null;
+  jurisdiction: string;
+  state: string;
+  country: string;
+  judge: string;
+  date: string;
+  sanction_types: string[];
+  amount: number | null;
+  amount_display: string;
+  severity: string;
+  ai_tool_used: string;
+  summary: string;
+  source_url: string;
+  source_name: string;
+  tags: string[];
+  policy_gap_ids: string[];
+  alleged: boolean;
+}
+// Show all enriched US cases; add missing fields as empty
+const cases: WikiCase[] = ((sanctionsRaw as unknown) as Array<Partial<WikiCase> & { country: string; alleged: boolean; severity: string | null }>)
+  .filter((c) => c.country === "US" && !c.alleged && c.severity)
+  .sort((a, b) => (b.amount || 0) - (a.amount || 0))
+  .map((c) => ({
+    id: c.id || "",
+    case_name: c.case_name || "",
+    court: c.court || "",
+    circuit: c.circuit ?? null,
+    jurisdiction: c.jurisdiction || "state",
+    state: c.state || "",
+    country: c.country,
+    judge: c.judge || "",
+    date: c.date || "",
+    sanction_types: c.sanction_types || [],
+    amount: c.amount ?? null,
+    amount_display: c.amount_display || "",
+    severity: c.severity as string,
+    ai_tool_used: c.ai_tool_used || "",
+    summary: c.summary || "",
+    source_url: c.source_url || "",
+    source_name: c.source_name || "",
+    tags: c.tags || [],
+    policy_gap_ids: c.policy_gap_ids || [],
+    alleged: c.alleged,
+  }));
 
 interface SanctionCase {
   id: string;

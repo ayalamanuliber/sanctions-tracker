@@ -1,0 +1,162 @@
+{
+  "bandla-v-solicitors-regulation-authority-2025-05-13": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "incident-response"],
+    "sanction_types": ["monetary", "case-dismissed", "published-opinion"],
+    "tags": ["pro-se", "fake-citations", "appellate", "denial", "GB"],
+    "lesson": "Former solicitors filing pro se still face indemnity costs when fake authorities are maintained after challenge.",
+    "confidence": "high"
+  },
+  "crypto-open-patent-alliance-v-wright-2-2025-05-12": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["monetary", "referral", "published-opinion"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "civil", "GB"],
+    "lesson": "Pro-se AI filings can trigger GCROs and AG referrals when fabricated authorities accompany a pattern of abuse.",
+    "confidence": "high"
+  },
+  "reclamação-rcl-78890-ba-2025-05-12": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "supervision-protocol"],
+    "sanction_types": ["monetary", "bar-referral", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "paid-tool", "appellate", "BR"],
+    "lesson": "AI watermarks on filings are red flags—review every output before submission or face OAB referral and doubled costs.",
+    "confidence": "high"
+  },
+  "case-no-72079-11-24-2025-05-12": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["referral", "bar-referral", "professional"],
+    "tags": ["fake-citations", "civil", "IL"],
+    "lesson": "Separating personal AI drafts from court filings requires a verification checkpoint—one wrong-file error triggers bar referral.",
+    "confidence": "high"
+  },
+  "jamisson-roriz-de-santana-andrade-v-tribunal-superior-do-trabalho-2025-05-12": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "supervision-protocol"],
+    "sanction_types": ["monetary", "bar-referral", "case-dismissed", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "paid-tool", "appellate", "BR"],
+    "lesson": "MobiOffice and similar built-in AI assistants require the same verification discipline as ChatGPT—courts treat watermarks as admission.",
+    "confidence": "high"
+  },
+  "peter-gilmai-v-abel-tol-ors-2025-05-09": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "written-ai-policy"],
+    "sanction_types": ["referral", "ordered-to-show-cause", "professional"],
+    "tags": ["fake-citations", "consumer-tool", "trial", "civil", "OTHER"],
+    "lesson": "ChatGPT citations must be verified against PacLII or equivalent before filing—admission triggers Law Society referral.",
+    "confidence": "high"
+  },
+  "israel-v-ibrahim-mahajneh-2025-05-07": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "attorney-training"],
+    "sanction_types": ["warning", "published-opinion"],
+    "tags": ["fake-citations", "criminal", "prosecutor", "government-lawyer", "IL"],
+    "lesson": "Prosecutors must verify statutes exist before citing—fictional laws damage institutional credibility even without formal sanction.",
+    "confidence": "high"
+  },
+  "lozano-gonzález-v-roberge-2025-05-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "consumer-tool", "administrative", "CA"],
+    "lesson": "AI translations of foreign-language statutes are unreliable—always engage qualified counsel for cross-border civil code interpretation.",
+    "confidence": "medium"
+  },
+  "nexgen-pathology-services-ltd-v-darcueil-duncan-2025-04-30": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "incident-response", "audit-trail"],
+    "sanction_types": ["referral", "bar-referral", "professional"],
+    "tags": ["fake-citations", "denial", "employment", "civil", "OTHER"],
+    "lesson": "Blaming a junior researcher does not shield you—supervising counsel is liable for unverified citations attributed to anyone.",
+    "confidence": "high"
+  },
+  "beschluss-5-u-125-2025-04-29": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil", "appellate", "DE"],
+    "lesson": "German courts will silently discard Fehlzitate—unverified citations waste advocacy even without formal sanction.",
+    "confidence": "medium"
+  },
+  "anonymous-v-anonymous-2025-04-29": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "incident-response", "audit-trail"],
+    "sanction_types": ["monetary", "case-dismissed", "professional"],
+    "tags": ["fake-citations", "denial", "family", "IL", "under-seal"],
+    "lesson": "Misnumbering is not a credible defense when citations do not exist anywhere—personal costs follow denial.",
+    "confidence": "high"
+  },
+  "simpson-v-hung-long-enterprises-inc-2025-04-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "administrative", "CA"],
+    "lesson": "Pro-se AI submissions still trigger costs when opposing parties waste time chasing fake authorities.",
+    "confidence": "high"
+  },
+  "goshen-multiservice-limited-v-accuro-environmental-limited-2025-04-22": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "employment", "GB"],
+    "lesson": "Tribunals flag AI-generated authorities even without sanction—unverifiable citations erode credibility entirely.",
+    "confidence": "medium"
+  },
+  "rowe-v-national-australia-bank-ltd-2025-04-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil", "AU"],
+    "lesson": "Fabricated High Court authorities in pro-se filings are detected quickly—no tactical advantage, only wasted credibility.",
+    "confidence": "low"
+  },
+  "vilmar-martins-dos-santos-v-state-of-parana-2025-04-11": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "criminal", "appellate", "BR"],
+    "lesson": "Defense counsel must cross-check relator names and process numbers—implausible patterns expose AI fabrication fast.",
+    "confidence": "medium"
+  },
+  "shekartz-v-assuta-ashdod-ltd-2025-04-07": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary"],
+    "tags": ["civil", "IL"],
+    "lesson": "Israeli courts are now imposing monetary sanctions on AI-related filing errors without requiring detailed proof of bad faith.",
+    "confidence": "low"
+  },
+  "zzaman-v-hmrc-2025-04-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "published-opinion"],
+    "tags": ["pro-se", "tax", "GB"],
+    "lesson": "Even accurate case names can be misapplied by AI—verify that cited authority actually supports your proposition.",
+    "confidence": "high"
+  },
+  "ayinde-v-borough-of-haringey-2025-04-03": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "incident-response", "written-ai-policy"],
+    "sanction_types": ["monetary", "bar-referral", "referral", "published-opinion", "professional"],
+    "tags": ["fake-citations", "multi-attorney", "civil", "published-opinion", "GB"],
+    "lesson": "Both barrister and solicitor face wasted costs when fake cases slip through—dual-review is non-negotiable.",
+    "confidence": "high"
+  },
+  "bangholme-investments-pty-ltd-v-greater-dandenong-cc-2025-04-03": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "administrative", "AU"],
+    "lesson": "AI search summaries of procedural rules are routinely wrong—read the statute directly before relying on AI inference.",
+    "confidence": "medium"
+  },
+  "mazurek-et-al-v-thomazoni-2025-04-02": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary", "bar-referral", "professional"],
+    "tags": ["fake-citations", "consumer-tool", "civil", "BR"],
+    "lesson": "ChatGPT-generated TJPR citations with retired judges are easily detected—verify relator chamber and tenure before filing.",
+    "confidence": "high"
+  }
+}

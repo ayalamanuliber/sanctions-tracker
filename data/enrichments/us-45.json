@@ -1,0 +1,162 @@
+{
+  "mortazavi-v-booz-allen-hamilton-inc-2024-10-30": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "bar-referral", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Mandatory State Bar notification is now standard — treat every AI-assisted filing as a bar-reportable event absent verification.",
+    "confidence": "high"
+  },
+  "thomas-v-commissioner-of-internal-revenue-2024-10-23": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["fake-citations", "tax", "small-firm"],
+    "lesson": "Partners must personally read paralegal-prepared memos before signing — delegation is not a defense when citations are wrong.",
+    "confidence": "high"
+  },
+  "iovino-v-michael-stapleton-associates-ltd-2024-10-10": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "ai-disclosure-protocol"],
+    "sanction_types": ["bar-referral", "ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "paid-tool", "civil"],
+    "lesson": "Using Westlaw/Lexis alongside Claude does not immunize you — bar referrals now issue even without a monetary fine.",
+    "confidence": "high"
+  },
+  "matter-of-weber-2024-10-10": {
+    "severity": "medium",
+    "policy_gap_ids": ["ai-disclosure-protocol", "audit-trail", "approved-tools-list"],
+    "sanction_types": ["warning", "published-opinion"],
+    "tags": ["consumer-tool", "civil", "first-in-state"],
+    "lesson": "Disclose any AI-assisted evidence before offering it — undisclosed use triggers Frye hearings and automatic exclusion.",
+    "confidence": "high"
+  },
+  "jones-v-simploy-2024-09-24": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "administrative"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "martin-v-hawai-2024-09-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "transamerica-life-v-williams-2024-09-06": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "rule-v-braiman-2024-09-04": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "usa-v-michel-2024-08-30": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "supervision-protocol"],
+    "sanction_types": ["warning", "published-opinion"],
+    "tags": ["fabricated-quotes", "criminal", "consumer-tool"],
+    "lesson": "Vet any AI tool against an approved-tools list before trial use — novel tools invite post-trial attacks on competence.",
+    "confidence": "medium"
+  },
+  "rasmussen-v-rasmussen-2024-08-23": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["bar-referral", "ordered-to-show-cause"],
+    "tags": ["fake-citations", "family", "bar-referral"],
+    "lesson": "Settlement does not moot bar referrals — courts will still report fabricated citations after a case resolves.",
+    "confidence": "high"
+  },
+  "new-credit-union-v-mehlhorn-2024-08-13": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "dukuray-v-experian-information-solutions-2024-07-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "joe-w-byrd-v-woodland-springs-ha-2024-07-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "anonymous-v-nyc-department-of-education-2024-07-18": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "under-seal"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "zeng-v-chell-2024-07-09": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "francesco-santora-v-copyright-claims-board-2024-06-12": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["professional"],
+    "tags": ["pro-se", "fabricated-quotes", "administrative", "ip"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "dowlah-v-professional-staff-congress-2024-05-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "employment"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "robert-lafayette-v-blueprint-basketball-et-al-2024-04-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "plumbers-gasfitters-union-v-morris-plumbing-2024-04-18": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["civil", "small-firm"],
+    "lesson": "Log every AI-drafted paragraph and verification step — courts increasingly demand an audit trail on request.",
+    "confidence": "low"
+  },
+  "grant-v-city-of-long-beach-2024-03-22": {
+    "severity": "career-ending",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["struck-pleading", "case-dismissed", "published-opinion"],
+    "tags": ["fake-citations", "appellate", "published-opinion", "civil"],
+    "lesson": "A Ninth Circuit published opinion striking your brief ends appellate careers — second-attorney verification is non-negotiable before filing.",
+    "confidence": "high"
+  }
+}

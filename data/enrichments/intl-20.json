@@ -1,0 +1,162 @@
+{
+  "sqbox-solutions-ltd-v-oak-2025-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["none-adjudicated", "warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "administrative", "civil"],
+    "lesson": "Pro-se AI filings still hurt the party's case — tribunals reject fabricated authorities and quoted statutes.",
+    "confidence": "high"
+  },
+  "aq-v-bt-2025-03-28": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "administrative", "civil"],
+    "lesson": "Tribunals silently ignore AI-fabricated statutes and misapplied precedents; arguments collapse without challenge.",
+    "confidence": "medium"
+  },
+  "lyj-v-occupational-therapy-board-of-australia-2025-03-26": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "administrative"],
+    "lesson": "Queensland tribunals now attach AI-use guidelines to rulings — consumer ChatGPT output must be independently verified before filing.",
+    "confidence": "high"
+  },
+  "anonymous-v-anonymous-2025-03-24": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary", "case-dismissed"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Israeli courts are issuing small-dollar costs orders as baseline punishment for AI-tainted filings.",
+    "confidence": "low"
+  },
+  "williams-v-capital-one-bank-2025-03-18": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "audit-trail"],
+    "sanction_types": ["case-dismissed", "warning"],
+    "tags": ["pro-se", "fake-citations", "paid-tool", "civil"],
+    "lesson": "Even CoCounsel output triggers dismissal with prejudice when unverified — paid tools carry the same verification duty as consumer ones.",
+    "confidence": "high"
+  },
+  "lmn-v-stc-no-2-2025-03-17": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "NZ courts are now issuing express warnings on generative AI reliance even without monetary penalty.",
+    "confidence": "medium"
+  },
+  "condominium-v-lati-initiation-and-construction-ltd-2025-03-17": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary", "case-dismissed"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Israeli courts are imposing nominal costs orders on AI-tainted filings even in low-value disputes.",
+    "confidence": "low"
+  },
+  "a-v-b-2025-03-13": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "civil"],
+    "lesson": "Partner liability is real: Italian court stigmatized the lead lawyer for failing to verify ChatGPT output produced by an assistant.",
+    "confidence": "high"
+  },
+  "reddan-an-bord-pleanála-v-trustees-of-nenagh-golf-club-2025-03-13": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["case-dismissed", "warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Irish High Court signals that AI misuse can itself constitute abuse of process — pseudo-legal terminology is a red flag.",
+    "confidence": "high"
+  },
+  "ahmad-harsha-v-reuven-bornovski-2025-03-02": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["monetary"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Israeli courts impose four-figure costs and demand corrected summaries when attorneys rely on AI without verification.",
+    "confidence": "low"
+  },
+  "dog-rights-v-ministry-of-agriculture-2025-02-28": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "incident-response"],
+    "sanction_types": ["monetary", "case-dismissed", "warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "denial"],
+    "lesson": "Failing to produce cited judgments when the court demands them is treated as bad-faith conduct, not mere error.",
+    "confidence": "high"
+  },
+  "yu-hon-tong-thomas-v-centaline-property-agency-2025-02-26": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "employment", "civil"],
+    "lesson": "AI tends to hallucinate cross-jurisdictional authorities; foreign citations in local disputes are a hallmark of unverified output.",
+    "confidence": "medium"
+  },
+  "plonit-v-sharia-court-of-appeals-2025-02-23": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "attorney-training"],
+    "sanction_types": ["case-dismissed", "warning", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "first-in-state"],
+    "lesson": "Israeli Supreme Court put attorneys on notice: future AI-fabrication cases will carry personal sanctions — leniency window is closing.",
+    "confidence": "high"
+  },
+  "re-nicholson-2025-02-18": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "bankruptcy"],
+    "lesson": "Ontario judges now routinely check CanLII against filed citations; fabricated case numbers are quickly flagged.",
+    "confidence": "medium"
+  },
+  "unnamed-brazilian-litigant-2025-02-18": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "incident-response"],
+    "sanction_types": ["monetary", "bar-referral", "professional"],
+    "tags": ["fake-citations", "consumer-tool", "civil", "bar-referral"],
+    "lesson": "Brazilian appellate courts now send fabricated-citation filings to the OAB as bad-faith litigation — 'unintentional' ChatGPT use is no defense.",
+    "confidence": "high"
+  },
+  "geismayr-v-the-owners-strata-plan-kas-1970-2025-02-14": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "consumer-tool", "civil"],
+    "lesson": "Microsoft Copilot hallucinates case citations as reliably as ChatGPT — no consumer AI tool is safe for legal research.",
+    "confidence": "high"
+  },
+  "goodchild-v-state-of-queensland-2025-02-13": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated", "warning"],
+    "tags": ["pro-se", "fake-citations", "employment", "administrative"],
+    "lesson": "Queensland Commission frames AI-fabricated authorities as a 'salutary lesson' about search-engine reliance; submissions given zero weight.",
+    "confidence": "high"
+  },
+  "luck-v-commonwealth-of-australia-2025-02-11": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fake-citations", "civil"],
+    "lesson": "Federal Court chambers are actively querying cited authorities; applicants failing to produce them must admit the citation was wrong.",
+    "confidence": "medium"
+  },
+  "qwyn-and-commissioner-of-taxation-2025-02-05": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "approved-tools-list"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["fabricated-quotes", "paid-tool", "tax", "administrative"],
+    "lesson": "Copilot fabricates legislative Explanatory Memorandum text — paid Microsoft tools hallucinate statutory materials just like case law.",
+    "confidence": "high"
+  },
+  "valu-v-minister-for-immigration-and-multicultural-affairs-2025-01-31": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "attorney-training", "audit-trail"],
+    "sanction_types": ["referral", "bar-referral", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "immigration", "bar-referral", "solo"],
+    "lesson": "Time pressure and health issues won't shield counsel — Australian courts are referring ChatGPT-fabrication cases straight to the Legal Services Commissioner.",
+    "confidence": "high"
+  }
+}

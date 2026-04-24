@@ -1,0 +1,162 @@
+{
+  "smith-v-athena-construction-group-inc-2025-10-03": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary", "bar-referral", "ordered-to-show-cause", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "civil", "bar-referral"],
+    "lesson": "Grammar tools are not legal research; ban non-legal AI from any citation workflow and mandate primary-source verification.",
+    "confidence": "high"
+  },
+  "the-people-v-raziel-ruiz-alvarez-2025-10-02": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["monetary", "bar-referral", "published-opinion", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "criminal", "published-opinion", "bar-referral"],
+    "lesson": "Criminal defense counsel must confirm every citation exists and says what's claimed before filing; published opinions make names permanent.",
+    "confidence": "high"
+  },
+  "newrez-llc-v-morton-2025-10-02": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "none-adjudicated"],
+    "tags": ["fake-citations", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "robenson-lafontant-v-coolidge-clk-st-germaine-2025-10-02": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "training-order", "bar-referral", "referral"],
+    "tags": ["fake-citations", "civil", "training-ordered", "bar-referral", "small-firm"],
+    "lesson": "Admitting 'I didn't verify' costs $1K plus CLE plus a bar referral; verification is the minimum bar, not best practice.",
+    "confidence": "high"
+  },
+  "jackson-v-united-states-dhs-2025-10-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-the-interest-of-ra-2025-10-01": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail"],
+    "sanction_types": ["monetary", "struck-pleading", "training-order", "bar-referral", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "family", "training-ordered", "bar-referral"],
+    "lesson": "A struck brief plus mandatory AI-CLE plus bar referral is now the floor for fabricated citations — verification is non-negotiable.",
+    "confidence": "high"
+  },
+  "gavin-b-davis-v-chief-officer-gina-faubion-et-al-2025-10-01": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "ader-v-ader-2025-10-01": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "incident-response", "audit-trail"],
+    "sanction_types": ["monetary", "bar-referral", "referral"],
+    "tags": ["fake-citations", "fabricated-quotes", "family", "bar-referral", "multi-attorney"],
+    "lesson": "Never defend AI misuse with more unvetted AI; supervising partners must personally verify every citation in sanctions responses.",
+    "confidence": "high"
+  },
+  "tomlin-v-state-of-new-mexico-2025-09-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "ordered-to-show-cause"],
+    "tags": ["fake-citations", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-re-the-marriage-of-dx-and-sp-2025-09-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "family", "appellate"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "in-re-todd-elliott-koger-2025-09-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning", "case-dismissed"],
+    "tags": ["fake-citations", "pro-se", "bankruptcy"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "khoury-et-al-v-intermountain-health-care-inc-et-al-2025-09-30": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["fake-citations", "consumer-tool", "civil"],
+    "lesson": "Experts using ChatGPT can sink the whole case — require written AI-disclosure from every expert before retention.",
+    "confidence": "high"
+  },
+  "mitchell-taylor-button-dusty-button-v-juliet-doherty-et-al-2025-09-30": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "kertesz-v-colony-tire-corp-et-al-2025-09-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "A Notice of Errata won't always save you — next judge may sanction; build verification before filing, not after.",
+    "confidence": "high"
+  },
+  "chapter-kris-jackson-v-bok-financial-corporation-et-al-2-2025-09-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["struck-pleading", "ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "munoz-v-lopez-2025-09-29": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "loftong-v-grove-farms-2025-09-26": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "attorney-training"],
+    "sanction_types": ["monetary", "training-order", "bar-referral", "referral"],
+    "tags": ["fake-citations", "paid-tool", "civil", "training-ordered", "bar-referral"],
+    "lesson": "Paid legal-AI tools like Fastcase do not absolve verification duties; 14 bad cites cost $7K plus 6 CLE hours plus bar referral.",
+    "confidence": "high"
+  },
+  "pennantia-v-rose-cay-maritime-2025-09-26": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning", "none-adjudicated"],
+    "tags": ["fabricated-quotes", "civil"],
+    "lesson": "Prompt acknowledgment and remedial protocols can avert sanctions — own the error fast and document the fix.",
+    "confidence": "high"
+  },
+  "jade-riley-burch-v-hca-healthcare-2025-09-26": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "evans-et-al-v-robertson-et-al-2-2025-09-25": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "pro-se", "civil"],
+    "lesson": null,
+    "confidence": "high"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "in-the-matter-of-bayfoyle-2025-12-23": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["monetary", "warning"],
+    "tags": ["fake-citations", "AU", "trial"],
+    "lesson": "Verify every AI-surfaced authority against the primary source before filing; adverse costs follow unverified citations.",
+    "confidence": "medium"
+  },
+  "pasuengos-v-minister-for-immigration-and-citizenship-2025-12-22": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["ordered-to-show-cause", "monetary"],
+    "tags": ["fake-citations", "AU", "immigration"],
+    "lesson": "Opposing counsel will check your authorities; a show-cause order is the inevitable next step when citations do not exist.",
+    "confidence": "medium"
+  },
+  "leytcorp-v-mimbim-enterprises-2025-12-22": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["warning", "none-adjudicated"],
+    "tags": ["fake-citations", "AU", "ip", "administrative"],
+    "lesson": "Trade mark delegates now flag AI hallucinations on the record; screen every authority and proposition before submission.",
+    "confidence": "medium"
+  },
+  "rathi-rathi-2025-12-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "AU", "family", "appellate"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "nelligan-obrien-payne-v-amy-french-2025-12-19": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "CA", "ip", "administrative"],
+    "lesson": "Misrepresented precedent is treated the same as fabricated citations; re-read every case you cite, do not just trust AI summaries.",
+    "confidence": "high"
+  },
+  "obermann-v-icbc-2025-12-19": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "CA", "civil", "administrative"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "m-c-c-caf-de-la-dpt-caf-2025-12-18": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "FR", "civil", "trial"],
+    "lesson": "French courts now publicly flag AI hallucinations by pourvoi number; verify every jurisprudence reference in the official database.",
+    "confidence": "medium"
+  },
+  "arabyads-holding-limited-v-gulrez-alam-marghoob-alam-2025-12-18": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail", "written-ai-policy"],
+    "sanction_types": ["monetary", "published-opinion"],
+    "tags": ["fake-citations", "fabricated-quotes", "AE", "civil", "published-opinion"],
+    "lesson": "Indemnity costs follow reckless AI use; institute mandatory second-attorney citation verification before any defence is filed.",
+    "confidence": "high"
+  },
+  "pakuza-v-workers-compensation-regulator-2025-12-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "AU", "administrative", "employment"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "vicki-boomer-v-hospital-employees-union-and-interior-health-authority-2025-12-16": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "CA", "employment", "administrative"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "roll-q250025-2025-12-15": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "written-ai-policy"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "BE", "civil", "trial"],
+    "lesson": "Courts are using AI-assisted search to detect your AI hallucinations; a dedicated sanctions hearing is now the default response.",
+    "confidence": "high"
+  },
+  "st-roch-c-andritz-hydro-canada-inc-2025-12-15": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "CA", "administrative", "employment"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "advokatnævnet-sagsnr-2025-1655-2025-12-15": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "incident-response"],
+    "sanction_types": ["monetary", "professional", "bar-referral"],
+    "tags": ["fake-citations", "DK", "bar-referral", "civil"],
+    "lesson": "Danish bar disciplinary body now fines DKK 10K per fabricated citation; lawyers pay personally even without client harm.",
+    "confidence": "high"
+  },
+  "bégin-létourneau-c-syndicat-des-spécialistes-et-professionnels-dhydro-québec-202": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "CA", "employment", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "tsafrir-v-goldberg-2025-12-14": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "IL", "appellate", "fake-citations"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "mr-t-de-carvalho-ferreira-v-magic-life-limited-ors-2025-12-12": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "GB", "employment", "administrative"],
+    "lesson": "Employment Tribunals warn on first offence; the warning is discoverable and weaponized at the next sanctions hearing.",
+    "confidence": "high"
+  },
+  "am-fa-c-cnh-y-otros-2025-12-12": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning", "published-opinion"],
+    "tags": ["fake-citations", "AR", "civil", "appellate"],
+    "lesson": "Argentine appellate courts are admonishing counsel for AI hallucinations on the record; admonishments stay published and traceable.",
+    "confidence": "high"
+  },
+  "huseyin-turgut-v-the-minister-of-citizenship-and-immigration-2025-12-10": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol"],
+    "sanction_types": ["struck-pleading", "warning"],
+    "tags": ["fake-citations", "CA", "immigration", "trial"],
+    "lesson": "When hallucinated authorities are caught, withdraw them immediately; denial transforms a correction into a professional complaint.",
+    "confidence": "high"
+  },
+  "mr-j-harrison-v-mr-d-may-ta-leeds-gymnastics-academy-2025-12-10": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "GB", "employment", "consumer-tool"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "case-n-2512468-2025-12-09": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "FR", "administrative"],
+    "lesson": null,
+    "confidence": "low"
+  }
+}

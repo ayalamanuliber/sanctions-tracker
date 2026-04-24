@@ -1,0 +1,162 @@
+{
+ "tina-rose-v-city-of-west-frankfort-et-al-2026-03-10": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "consumer-tool", "civil"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "united-states-of-america-v-lorenzio-reshaud-simmons-2026-03-10": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "fabricated-quotes", "criminal", "trial"],
+  "lesson": "Treat every out-of-circuit citation as suspect; confirm jurisdiction and quoted text against the reporter before filing.",
+  "confidence": "medium"
+ },
+ "arno-kuigoua-v-adam-michael-sacks-2026-03-10": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "cartagena-v-dixon-blackburn-and-ta-blackburn-law-pllc-2026-03-10": {
+  "severity": "medium",
+  "policy_gap_ids": ["paid-tool-verification", "citation-verification", "audit-trail"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "paid-tool", "small-firm", "civil"],
+  "lesson": "Paid tools like Protege do not absolve counsel; verify every AI-generated citation against Westlaw or Lexis before filing.",
+  "confidence": "high"
+ },
+ "michael-platt-v-volunteers-of-america-ohio-indiana-2026-03-10": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["struck-pleading", "warning"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "helen-allen-v-cass-casper-and-disparti-law-group-2026-03-10": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["monetary"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "brown-v-state-of-mississippi-2026-03-10": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification", "audit-trail", "attorney-training"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "fabricated-quotes", "criminal", "appellate"],
+  "lesson": "A brief with phantom cases and fake quotes earns a published rebuke; have a second attorney verify every citation before filing on appeal.",
+  "confidence": "medium"
+ },
+ "in-re-ar-and-nr-minors-2026-03-10": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "family", "appellate"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "m7-indústria-e-comércio-de-compensados-e-laminados-v-us-structural-plywood-integ": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fabricated-quotes", "civil", "trial"],
+  "lesson": "Certify in writing that every quoted passage was read in the cited opinion; show-cause orders follow when quotes cannot be located.",
+  "confidence": "high"
+ },
+ "slay-v-ross-2026-03-09": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "appellate", "civil"],
+  "lesson": "Four fabricated citations in one brief is a pattern, not a typo; require a verification log before any appellate filing leaves the firm.",
+  "confidence": "medium"
+ },
+ "hatch-v-college-ave-student-loans-2026-03-06": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail", "incident-response"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "civil"],
+  "lesson": "Keep a sworn-ready record of how each brief was drafted; courts now demand declarations when citations cannot be produced.",
+  "confidence": "high"
+ },
+ "dewayne-clark-v-corecivic-2026-03-06": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "sai-malena-jimenez-fogarty-v-thomas-fogarty-2026-03-06": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "family"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "kattom-v-bondi-2026-03-06": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "approved-tools-list", "audit-trail"],
+  "sanction_types": ["monetary"],
+  "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "immigration"],
+  "lesson": "ChatGPT is not an approved legal research tool; ban consumer LLMs from citation drafting and log every research tool used.",
+  "confidence": "high"
+ },
+ "kim-elizabeth-harwell-v-westcare-nevada-inc-2026-03-06": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "consumer-tool", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "zack-jones-v-target-corporation-2026-03-06": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["case-dismissed"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "gregory-j-van-etten-v-stephanie-k-fattman-et-al-2026-03-06": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "andre-lamont-goddard-jr-v-city-university-of-seattle-2026-03-06": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "medium"
+ },
+ "nelson-lin-v-the-honorable-jonathan-h-shim-et-al-2026-03-06": {
+  "severity": "low",
+  "policy_gap_ids": [],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "civil"],
+  "lesson": null,
+  "confidence": "low"
+ },
+ "joan-pablo-torres-campos-v-leslie-ann-munoz-2026-03-05": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "attorney-training", "supervision-protocol", "audit-trail"],
+  "sanction_types": ["monetary", "bar-referral", "professional"],
+  "tags": ["fake-citations", "bar-referral", "family", "appellate"],
+  "lesson": "A single fictitious case plus a misquoted real one triggers a $5K fine and bar referral; mandate partner sign-off on every cited authority.",
+  "confidence": "high"
+ }
+}

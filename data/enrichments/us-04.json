@@ -1,0 +1,162 @@
+{
+  "zavadovsky-v-republic-of-austria-et-al-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Pro-se fake-citation warnings set the baseline courts now apply to represented parties.",
+    "confidence": "high"
+  },
+  "feldman-trost-v-district-6-board-of-education-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "small-firm", "civil"],
+    "lesson": "Verify every quoted phrase against the opinion text — courts catch the wording, not just the reporter cite.",
+    "confidence": "medium"
+  },
+  "edward-c-allen-v-western-governors-university-et-al-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["case-dismissed", "monetary"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Dismissal with prejudice plus token costs shows courts will end cases built on hallucinated authority.",
+    "confidence": "high"
+  },
+  "hampton-v-lofton-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "appellate", "family"],
+    "lesson": "Never manufacture record citations — appellate courts read the trial order and will call hallucinations by name.",
+    "confidence": "medium"
+  },
+  "leonard-colbert-v-county-of-riverside-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "written-ai-policy"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "civil", "small-firm"],
+    "lesson": "Confirm every quoted statutory provision against the code — courts now name AI when statutes don't read as quoted.",
+    "confidence": "medium"
+  },
+  "rushing-v-rushing-et-al-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["case-dismissed"],
+    "tags": ["pro-se", "fake-citations", "appellate", "family"],
+    "lesson": "Appellate courts will affirm dismissal outright when AI-fabricated authority drives the briefing.",
+    "confidence": "medium"
+  },
+  "jaii-leshawn-quinones-v-unknown-love-et-al-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Show-cause orders are now the reflex response to fabricated reporter citations — respond with full AI disclosure.",
+    "confidence": "high"
+  },
+  "christopher-a-ambrose-v-bandy-x-lee-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Courts explicitly warn that AI-hallucinated propositions invite Rule 11 sanctions even before monetary orders issue.",
+    "confidence": "high"
+  },
+  "mohamed-hussain-et-al-v-mansoor-quraishi-et-al-2026-03-31": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "small-firm", "civil"],
+    "lesson": "Eight fabricated citations in one brief will trigger show-cause — build a verification log before filing.",
+    "confidence": "high"
+  },
+  "heimkes-v-fairhope-motorcoach-resort-condominium-owners-association-inc-2026-03-": {
+    "severity": "high",
+    "policy_gap_ids": ["paid-tool-verification", "citation-verification", "attorney-training", "written-ai-policy"],
+    "sanction_types": ["monetary", "bar-referral", "professional", "referral"],
+    "tags": ["paid-tool", "fake-citations", "fabricated-quotes", "bar-referral", "small-firm"],
+    "lesson": "CoCounsel output is not presumptively accurate — a $55K sanction plus bar referral proves vendor pedigree is no shield.",
+    "confidence": "high"
+  },
+  "elbert-coleman-iii-elbert-coleman-iv-v-nexo-capital-inc-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Repealed statutes are the tell of AI drafting — always confirm statutory status before citing.",
+    "confidence": "high"
+  },
+  "chelsea-montes-v-suns-legacy-partners-llc-2026-03-31": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "attorney-training", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["monetary", "training-order", "professional"],
+    "tags": ["fake-citations", "fabricated-quotes", "training-ordered", "employment", "small-firm"],
+    "lesson": "Mandatory CLE plus costs attaches once fabricated citations appear across multiple filings — one audit would catch the pattern.",
+    "confidence": "high"
+  },
+  "nguedi-v-general-dynamics-information-technology-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "employment"],
+    "lesson": "Fabricated quotes are caught on cross-check against the actual opinion — read the case, don't trust the snippet.",
+    "confidence": "medium"
+  },
+  "evgeny-yaroshevsky-v-karlin-et-al-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list"],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "consumer-tool", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": "Consumer chatbots like Gemini are not research tools — ban them from the legal research workflow outright.",
+    "confidence": "high"
+  },
+  "quandel-construction-group-inc-v-hunt-construction-group-inc-2026-03-31": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "civil", "small-firm"],
+    "lesson": "Match case name, docket number, and quoted language to the opinion itself — mismatches now generate show-cause orders.",
+    "confidence": "high"
+  },
+  "federal-trade-commission-v-james-d-noland-jr-et-al-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Even unnamed hallucinations draw judicial warnings — treat any AI-assisted filing as audit-required.",
+    "confidence": "medium"
+  },
+  "rosa-maria-cabrera-thompson-v-seattle-public-schools-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "employment"],
+    "lesson": "Docket-number mismatches are an instant tell — courts pull the record and issue show-cause the same day.",
+    "confidence": "high"
+  },
+  "syreeta-lashawn-mcneal-v-vera-l-calvin-et-al-2026-03-31": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": "Repeat citations to a nonexistent opinion escalate from warning to show-cause fast — pull every cite before filing.",
+    "confidence": "high"
+  },
+  "souza-v-city-of-fitchburg-2026-03-30": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "civil"],
+    "lesson": "Telltale AI phrasing addressing the filer in second person tips courts off — strip all AI artifacts from drafts.",
+    "confidence": "medium"
+  },
+  "williams-v-chicago-board-of-education-2026-03-30": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "fabricated-quotes", "employment", "small-firm"],
+    "lesson": "A single 'totally made-up quotation' in a response brief now triggers a show-cause — verify every quoted line against the opinion.",
+    "confidence": "high"
+  }
+}

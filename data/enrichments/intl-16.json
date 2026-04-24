@@ -1,0 +1,162 @@
+{
+ "wcat-decision-a2402099-2025-07-30": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "administrative", "CA"],
+  "lesson": "Repeat AI-citation offenders are labeled vexatious; track prior incidents before filing in any tribunal.",
+  "confidence": "medium"
+ },
+ "chanda-v-royal-mail-group-ltd-2025-07-28": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["ordered-to-show-cause"],
+  "tags": ["fake-citations", "employment", "GB", "trial"],
+  "lesson": "UK tribunals require claimants to account for every citation; concede inability to locate before oral argument, not after.",
+  "confidence": "medium"
+ },
+ "shenaar-v-the-quarries-rehabilitation-fund-2025-07-27": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "incident-response"],
+  "sanction_types": ["monetary"],
+  "tags": ["fake-citations", "employment", "IL", "denial"],
+  "lesson": "Israeli courts reject 'technical error' defenses for fabricated citations; own the AI use or face cost-shifting plus fines.",
+  "confidence": "high"
+ },
+ "silva-cordeiro-v-municipio-de-santana-do-parnaiba-2025-07-25": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "audit-trail"],
+  "sanction_types": ["monetary", "bar-referral", "professional"],
+  "tags": ["fabricated-quotes", "fake-citations", "BR", "civil"],
+  "lesson": "Brazilian courts now auto-notify OAB for fabricated quotes; assume any false citation triggers a disciplinary referral.",
+  "confidence": "high"
+ },
+ "hakemi-v-icbc-2025-07-24": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "CA", "administrative"],
+  "lesson": "Fabricated statutory citations are as disqualifying as fake caselaw; verify every section number against primary sources.",
+  "confidence": "medium"
+ },
+ "hmrc-v-gunnarson-2025-07-23": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "tax", "GB", "appellate"],
+  "lesson": "Opposing counsel will independently verify skeleton citations; expect HMRC-level scrutiny in any tax appeal.",
+  "confidence": "medium"
+ },
+ "pennytech-inc-v-superior-building-group-limited-2025-07-21": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "paid-tool-verification", "audit-trail"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "CA", "administrative", "small-firm"],
+  "lesson": "Every neutral citation must be clicked and read; AI frequently generates real-looking citations pointing to unrelated cases.",
+  "confidence": "high"
+ },
+ "moradi-v-british-columbia-human-rights-tribunal-2025-07-18": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol", "approved-tools-list"],
+  "sanction_types": ["monetary"],
+  "tags": ["pro-se", "fake-citations", "consumer-tool", "CA"],
+  "lesson": "ChatGPT-generated case indexes are now a named cost-allocation factor; name the tool used when challenged.",
+  "confidence": "high"
+ },
+ "blaser-v-campbell-2025-07-15": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["warning"],
+  "tags": ["pro-se", "fake-citations", "CA", "civil"],
+  "lesson": "BC tribunals now routinely flag AI hallucinations sua sponte; do not assume low-stakes matters escape scrutiny.",
+  "confidence": "medium"
+ },
+ "fam-v-zam-2025-07-15": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "attorney-training"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "family", "trial", "first-in-state"],
+  "lesson": "Tanzanian courts now issue published reminders of advocate duties re AI; treat every jurisdiction as enforcement-active.",
+  "confidence": "medium"
+ },
+ "ps-v-london-borough-of-wandsworth-2025-07-14": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "GB", "appellate"],
+  "lesson": "Valid neutral citations paired with wrong case summaries are a signature AI error; verify the case body, not just the cite.",
+  "confidence": "medium"
+ },
+ "zlatin-v-assayag-et-al-2025-07-11": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+  "sanction_types": ["monetary"],
+  "tags": ["fake-citations", "IL", "civil", "trial"],
+  "lesson": "Filing an AI-generated draft with placeholder prompts triggers exemplary costs; require a final-review checklist before submission.",
+  "confidence": "high"
+ },
+ "lloyds-register-canada-v-munchang-choi-2025-07-10": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification", "ai-disclosure-protocol"],
+  "sanction_types": ["monetary", "struck-pleading"],
+  "tags": ["pro-se", "fake-citations", "CA", "civil"],
+  "lesson": "Federal Court of Canada's AI Practice Direction requires an affirmative declaration; silence plus fabrication escalates to vexatious status.",
+  "confidence": "high"
+ },
+ "di-rocco-isabelle-corte-di-cassazione-sez-pen-3-sent-n-254552025-2025-07-10": {
+  "severity": "high",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["published-opinion"],
+  "tags": ["fake-citations", "criminal", "appellate", "IT", "published-opinion"],
+  "lesson": "Italian Cassazione will quash lower-court rulings citing nonexistent Supreme Court precedents; judges must verify their own cites.",
+  "confidence": "medium"
+ },
+ "ncr-v-kkb-2025-07-09": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "CA", "family"],
+  "lesson": "Alberta courts disregard fabricated citations without costs for pro-se parties; do not rely on that leniency if you are counsel.",
+  "confidence": "low"
+ },
+ "dhuruvasangary-v-toronto-standard-condominium-corporation-no-1532-2025-07-09": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["pro-se", "fake-citations", "CA", "administrative"],
+  "lesson": "Tribunals now ignore arguments built on fabricated citations entirely; hallucinated cases cost the filer the issue, not just credibility.",
+  "confidence": "medium"
+ },
+ "case-no-14748-08-21-2025-07-09": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "supervision-protocol", "incident-response"],
+  "sanction_types": ["monetary"],
+  "tags": ["fake-citations", "fabricated-quotes", "IL", "denial"],
+  "lesson": "Blaming the software or an intern is not a defense; the signing attorney owns every citation regardless of tool or delegation.",
+  "confidence": "high"
+ },
+ "vgh-3-s-101225-vg-2-k-189925-2025-07-08": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["none-adjudicated"],
+  "tags": ["fake-citations", "administrative", "DE", "appellate"],
+  "lesson": "German administrative courts treat mass-fabricated citations as lack of substantive engagement, forfeiting the appeal on the merits.",
+  "confidence": "medium"
+ },
+ "various-leaseholders-v-assethold-limited-2025-07-07": {
+  "severity": "medium",
+  "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol"],
+  "sanction_types": ["warning"],
+  "tags": ["fake-citations", "GB", "administrative", "multi-attorney"],
+  "lesson": "When a filing contains eleven-plus flagged citations, tribunals infer systemic AI use; require line-by-line verification logs before submission.",
+  "confidence": "high"
+ },
+ "aq-v-bw-2025-07-04": {
+  "severity": "low",
+  "policy_gap_ids": ["citation-verification"],
+  "sanction_types": ["monetary"],
+  "tags": ["pro-se", "fabricated-quotes", "CA", "civil"],
+  "lesson": "BC CRT now awards time-wasted costs for AI-fabricated statutory text; hallucinated norms are as sanctionable as fake cases.",
+  "confidence": "high"
+ }
+}

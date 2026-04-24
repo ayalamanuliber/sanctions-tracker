@@ -1,0 +1,162 @@
+{
+  "guardian-piazza-doro-llc-v-ward-ozaeta-2025-10-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "fca-us-llc-v-stan-steelesteele-services-2025-10-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fabricated-quotes", "administrative", "ip"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "n-bar-trade-v-amazon-2025-10-22": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification", "audit-trail"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "trial", "civil"],
+    "lesson": "A court warning is the last free pass; treat it as a firm-wide event and require dual-attorney citation sign-off.",
+    "confidence": "medium"
+  },
+  "university-mall-v-okorie-et-al-2025-10-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary", "none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "in-re-bittrex-2025-10-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "appellate", "bankruptcy"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "corey-v-kenneh-2025-10-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["monetary"],
+    "tags": ["pro-se", "fake-citations", "appellate", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "pete-v-facebook-meta-platforms-2025-10-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fabricated-quotes", "trial", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "mattox-v-product-innovation-research-2025-10-22": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "approved-tools-list", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["monetary", "professional", "struck-pleading", "training-order", "warning"],
+    "tags": ["fake-citations", "fabricated-quotes", "consumer-tool", "multi-attorney", "civil"],
+    "lesson": "Ban ChatGPT for legal research firm-wide; 28 bad cites across 11 pleadings cost $28K and public reprimands.",
+    "confidence": "high"
+  },
+  "alexandria-jones-v-dc-office-of-unified-communications-2025-10-22": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fabricated-quotes", "trial", "civil"],
+    "lesson": "Warnings are discoverable by opposing counsel; one citation slip gets flagged firm-wide going forward.",
+    "confidence": "medium"
+  },
+  "john-weaver-v-shasta-services-2025-10-22": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "trial", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "rimu-capital-ltd-v-ader-et-al-2025-10-21": {
+    "severity": "low",
+    "policy_gap_ids": ["citation-verification"],
+    "sanction_types": ["warning"],
+    "tags": ["fake-citations", "trial", "civil"],
+    "lesson": "Even a one-citation warning in SDNY gets noticed; log every court admonishment in the firm's risk register.",
+    "confidence": "low"
+  },
+  "thomas-joseph-goddard-v-sares-regis-group-inc-et-al-2025-10-21": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "civil"],
+    "lesson": null,
+    "confidence": "low"
+  },
+  "leila-kasso-v-police-officers-federation-of-minneapolis-2025-10-21": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "employment"],
+    "lesson": null,
+    "confidence": "high"
+  },
+  "arch-insurance-company-v-a3-development-llc-2025-10-21": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "supervision-protocol", "audit-trail"],
+    "sanction_types": ["ordered-to-show-cause"],
+    "tags": ["fake-citations", "trial", "civil"],
+    "lesson": "Order-to-show-cause means the clock starts now; prepare a candor submission with AI disclosure before the hearing.",
+    "confidence": "medium"
+  },
+  "megan-cowden-v-us-treasury-irs-2025-10-20": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["none-adjudicated"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "tax"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "safe-choice-llc-v-city-of-cleveland-2025-10-17": {
+    "severity": "high",
+    "policy_gap_ids": ["citation-verification", "paid-tool-verification", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["monetary", "bar-referral", "professional"],
+    "tags": ["fake-citations", "paid-tool", "civil", "bar-referral"],
+    "lesson": "Casemine output is not verified law; require Westlaw/Lexis shepardizing on every cite regardless of tool pedigree.",
+    "confidence": "high"
+  },
+  "mitchell-taylor-button-et-al-v-john-jimison-1-2025-10-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "twyla-leach-minnesota-dhs-et-al-2025-10-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fabricated-quotes", "civil"],
+    "lesson": null,
+    "confidence": "medium"
+  },
+  "mundy-v-clickstop-inc-2025-10-17": {
+    "severity": "medium",
+    "policy_gap_ids": ["citation-verification", "audit-trail", "supervision-protocol"],
+    "sanction_types": ["monetary", "struck-pleading", "bar-referral", "training-order"],
+    "tags": ["fake-citations", "fabricated-quotes", "bar-referral", "civil", "training-ordered"],
+    "lesson": "A $2K sanction plus bar referral starts with one unchecked Westlaw cite; require a signed verification cert on every brief.",
+    "confidence": "high"
+  },
+  "tippecanoe-county-assessor-v-craig-goergen-2025-10-17": {
+    "severity": "low",
+    "policy_gap_ids": [],
+    "sanction_types": ["warning"],
+    "tags": ["pro-se", "fake-citations", "tax", "administrative"],
+    "lesson": null,
+    "confidence": "medium"
+  }
+}

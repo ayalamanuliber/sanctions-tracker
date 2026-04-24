@@ -8,6 +8,7 @@ import SanctionsMapV2 from "@/components/SanctionsMapV2";
 import EscalationCurve from "@/components/EscalationCurve";
 import RiskAssessment from "@/components/RiskAssessment";
 import ResultsMirror from "@/components/ResultsMirror";
+import EmailCapture from "@/components/EmailCapture";
 import AuditExport from "@/components/AuditExport";
 import PolicyRecommendations from "@/components/PolicyRecommendations";
 import Insights from "@/components/Insights";
@@ -92,6 +93,9 @@ export default function SanctionsTracker() {
 
       {/* 5 — RESULTS + DECISION MOMENT (3-option force choice) */}
       <ResultsMirror answers={answers} />
+
+      {/* 5b — EMAIL CAPTURE: primary list builder after results */}
+      <EmailCapture answers={answers} />
 
       {/* 6 — AUDIT EXPORT: compliance document */}
       <AuditExport answers={answers} />

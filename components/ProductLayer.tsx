@@ -90,7 +90,7 @@ export default function ProductLayer({ answers }: Props) {
             </div>
             <ul className="tier-list">
               <li>Full precedent database — all cases, every jurisdiction</li>
-              <li>Compliance templates (rolling out monthly)</li>
+              <li>Compliance templates (updated monthly)</li>
               <li>Monthly updates + ruling alerts</li>
               <li>Priority email support</li>
               <li>New cases surfaced within 48h of filing</li>
@@ -210,6 +210,20 @@ export default function ProductLayer({ answers }: Props) {
               }}
             >
               {LIFETIME_LEFT} spots remaining
+            </div>
+            <div
+              style={{
+                marginTop: "4px",
+                textAlign: "center",
+                fontFamily: "var(--font-mono)",
+                fontSize: "9px",
+                fontWeight: 700,
+                color: "var(--text-500)",
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+              }}
+            >
+              Closes once filled
             </div>
           </div>
         </div>

@@ -305,9 +305,10 @@ export default function ResultsMirror({ answers }: Props) {
                       fontStyle: "italic",
                       letterSpacing: "-0.015em",
                       marginBottom: "20px",
+                      lineHeight: 1.35,
                     }}
                   >
-                    This is not hypothetical.
+                    This is not hypothetical. <span style={{ color: "var(--red-muted)" }}>This has already happened.</span>
                   </p>
                 )}
                 <div

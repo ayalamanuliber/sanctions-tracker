@@ -259,31 +259,57 @@ export default function ResultsMirror({ answers }: Props) {
                 <h4
                   style={{
                     fontFamily: "var(--font-serif)",
-                    fontSize: "clamp(26px, 3vw, 34px)",
+                    fontSize: "clamp(28px, 3.2vw, 38px)",
                     fontWeight: 500,
                     color: "var(--text-100)",
                     letterSpacing: "-0.025em",
-                    lineHeight: 1.2,
-                    marginBottom: "14px",
+                    lineHeight: 1.15,
+                    marginBottom: "18px",
                   }}
                 >
-                  {scoreData.percent < 50 ? (
+                  {scoreData.gaps.length > 0 ? (
                     <>You would <em style={{ color: "var(--red-muted)" }}>not pass</em> a Rule 11 challenge today.</>
-                  ) : scoreData.percent < 75 ? (
-                    <>You&rsquo;d <em style={{ color: "var(--amber)" }}>barely survive</em> a Rule 11 challenge.</>
                   ) : (
                     <>You&rsquo;d likely <em style={{ color: "#22c55e" }}>pass</em> a Rule 11 challenge &mdash; but not perfectly.</>
                   )}
                 </h4>
-                <p style={{ color: "var(--text-400)", fontSize: "15px", fontWeight: 300, lineHeight: 1.7, marginBottom: "20px" }}>
+                <ul style={{ listStyle: "none", padding: 0, margin: "0 0 16px", display: "flex", flexDirection: "column", gap: "8px" }}>
                   {scoreData.gaps.length > 0 ? (
                     <>
-                      <strong style={{ color: "var(--text-100)", fontWeight: 500 }}>{scoreData.gaps.length} gap{scoreData.gaps.length > 1 ? "s" : ""} match{scoreData.gaps.length === 1 ? "es" : ""} real sanction cases.</strong> Firms have been sanctioned for exactly this pattern &mdash; fines from $2,000 to $109,700.
+                      <li style={{ fontSize: "15px", color: "var(--text-300)", lineHeight: 1.6, fontWeight: 400, paddingLeft: "22px", position: "relative" }}>
+                        <span style={{ position: "absolute", left: 0, top: 2, color: "var(--red-muted)", fontFamily: "var(--font-mono)" }}>◆</span>
+                        You have <strong style={{ color: "var(--text-100)", fontWeight: 600 }}>{scoreData.gaps.length} gap{scoreData.gaps.length > 1 ? "s" : ""}</strong>
+                      </li>
+                      <li style={{ fontSize: "15px", color: "var(--text-300)", lineHeight: 1.6, fontWeight: 400, paddingLeft: "22px", position: "relative" }}>
+                        <span style={{ position: "absolute", left: 0, top: 2, color: "var(--red-muted)", fontFamily: "var(--font-mono)" }}>◆</span>
+                        These match real sanction cases
+                      </li>
+                      <li style={{ fontSize: "15px", color: "var(--text-300)", lineHeight: 1.6, fontWeight: 400, paddingLeft: "22px", position: "relative" }}>
+                        <span style={{ position: "absolute", left: 0, top: 2, color: "var(--red-muted)", fontFamily: "var(--font-mono)" }}>◆</span>
+                        Firms have already been sanctioned for this exact pattern
+                      </li>
                     </>
                   ) : (
-                    <>No exposure gaps detected. You&rsquo;re positioned better than most. Help your network &mdash; share this with firms that aren&rsquo;t.</>
+                    <li style={{ fontSize: "15px", color: "var(--text-300)", lineHeight: 1.6, fontWeight: 300 }}>
+                      No exposure gaps detected. You&rsquo;re positioned better than most &mdash; share this with firms that aren&rsquo;t.
+                    </li>
                   )}
-                </p>
+                </ul>
+                {scoreData.gaps.length > 0 && (
+                  <p
+                    style={{
+                      fontFamily: "var(--font-serif)",
+                      fontSize: "20px",
+                      fontWeight: 500,
+                      color: "var(--text-100)",
+                      fontStyle: "italic",
+                      letterSpacing: "-0.015em",
+                      marginBottom: "20px",
+                    }}
+                  >
+                    This is not hypothetical.
+                  </p>
+                )}
                 <div
                   style={{
                     padding: "14px 18px",
@@ -392,7 +418,7 @@ export default function ResultsMirror({ answers }: Props) {
                         textAlign: "center",
                       }}
                     >
-                      Get Audit Kit →
+                      Get Firm Access →
                     </span>
                   </a>
 
@@ -461,7 +487,7 @@ export default function ResultsMirror({ answers }: Props) {
 
                   {/* Option 3: Stay exposed */}
                   <a
-                    href="#products"
+                    href="#audit-export"
                     className="decision-card"
                     style={{
                       background: "var(--bg-card)",
@@ -517,7 +543,7 @@ export default function ResultsMirror({ answers }: Props) {
                         textAlign: "center",
                       }}
                     >
-                      Join Feed →
+                      Continue reading →
                     </span>
                   </a>
                 </div>

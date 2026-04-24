@@ -77,23 +77,13 @@ export default function Hero() {
       <div className="wrap">
         <div className="hub-hero-grid">
           <div className="hub-hero-inner">
-            <div className="hero-credentials-top">
-              <span>Five years inside a US law firm</span>
-              <span className="sep"></span>
-              <span>Tracked across <strong>94</strong> US districts</span>
-              <span className="sep"></span>
-              <span>Live ruling feed &middot; updated {lastUpdated}</span>
-            </div>
-
             <div className="hero-eyebrow">
               <span className="pulse-wrap">
                 <span className="pulse"></span>
                 Sanctions Tracker &middot; Live
               </span>
               <span className="eyebrow-divider"></span>
-              <span className="eyebrow-label">
-                <strong style={{ color: "var(--text-100)" }}>{stats.total_cases_tracked.toLocaleString()}</strong> rulings &middot; <strong style={{ color: "var(--amber)" }}>${(stats.q1_2026_sanctions_usd / 1000).toFixed(0)}K+</strong> in Q1 sanctions &middot; <strong style={{ color: "var(--text-100)" }}>15</strong> jurisdictions
-              </span>
+              <span className="eyebrow-label">Updated {lastUpdated}</span>
             </div>
 
             <h1 className="hub-title">
@@ -103,50 +93,24 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="hub-subtitle">
-              Courts are already sanctioning AI misuse. This page shows where firms fail &mdash; and <strong>whether you would</strong>.
+            <p className="hub-subtitle" style={{ marginBottom: "32px" }}>
+              Courts are already sanctioning AI misuse. <strong>{stats.total_cases_tracked.toLocaleString()} rulings tracked. ${(stats.q1_2026_sanctions_usd / 1000).toFixed(0)}K+ in Q1 sanctions.</strong> See if your firm would pass a Rule 11 challenge.
             </p>
 
-            <div className="hero-thesis" data-label="The Gap">
-              <div className="thesis-half left">
-                <svg className="thesis-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2v20M2 12h20" />
-                  <circle cx="12" cy="12" r="10" />
-                </svg>
-                <div className="thesis-num blue-n">
-                  <CountUp target={stats.total_cases_tracked} />
-                </div>
-                <div className="thesis-role">Rulings Tracked</div>
-                <div className="thesis-meta">Every published AI-hallucination sanction in US courts, updated as judges file them.</div>
-              </div>
-              <div className="thesis-div"></div>
-              <div className="thesis-half right">
-                <svg className="thesis-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M3 3v18h18" />
-                  <path d="M7 14l4-4 4 4 5-5" />
-                </svg>
-                <div className="thesis-num amber-n">
-                  ${(stats.q1_2026_sanctions_usd / 1000).toFixed(0)}<span style={{ fontSize: "0.55em", fontWeight: 500, fontStyle: "italic" }}>K</span>
-                </div>
-                <div className="thesis-role">Q1 2026 Fines</div>
-                <div className="thesis-meta">Monetary sanctions issued in just the first quarter &mdash; the curve is accelerating.</div>
-              </div>
-            </div>
-
             <div className="hero-ctas">
-              <a className="hero-btn-primary" href="#assessment">
-                Run your AI exposure check
+              <a className="hero-btn-primary" href="#assessment" style={{ padding: "18px 32px", fontSize: "12px" }}>
+                Take the free assessment
                 <span className="arrow-line"></span>
               </a>
             </div>
 
-            <div className="hero-trust">
+            <div className="hero-trust" style={{ marginTop: "32px", paddingTop: "20px" }}>
               <span className="dot"></span>
-              <span>Updated <strong>{lastUpdated}</strong></span>
+              <span><strong>Free.</strong> Takes 3 minutes.</span>
               <span className="pipe"></span>
-              <span>Independent</span>
+              <span>Answers never leave your browser</span>
               <span className="pipe"></span>
-              <span>No vendor pitch</span>
+              <span>Independent &middot; no vendor pitch</span>
             </div>
           </div>
 

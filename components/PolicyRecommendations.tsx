@@ -276,7 +276,7 @@ export default function PolicyRecommendations({ answers }: Props) {
                           textAlign: "right",
                         }}
                       >
-                        Included in Audit Kit
+                        Included in Firm Access
                       </div>
                     </div>
                   </div>

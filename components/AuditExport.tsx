@@ -196,6 +196,38 @@ export default function AuditExport({ answers }: Props) {
             </button>
           </div>
         </div>
+
+        {/* Bottom CTA — bridge back to product */}
+        <div
+          style={{
+            marginTop: "28px",
+            textAlign: "center",
+            paddingTop: "28px",
+            borderTop: "1px solid var(--border-soft)",
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "var(--font-mono)",
+              fontSize: "10px",
+              fontWeight: 700,
+              color: "var(--text-500)",
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              marginBottom: "14px",
+            }}
+          >
+            Documentation is defense. Not a solution.
+          </div>
+          <a
+            href="#products"
+            className="hero-btn-primary"
+            style={{ padding: "14px 26px", fontSize: "11px" }}
+          >
+            Fix this now
+            <span className="arrow-line"></span>
+          </a>
+        </div>
       </div>
       <style>{`
         @media (max-width: 768px) {

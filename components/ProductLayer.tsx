@@ -15,18 +15,10 @@ interface Props {
   answers: Record<string, boolean>;
 }
 
-const GAP_TO_PRODUCT_AREA: Record<string, string> = {
-  "written-ai-policy": "Firm-wide AI policy",
-  "citation-verification": "Citation verification protocol",
-  "paid-tool-verification": "Vendor tool review",
-  "attorney-training": "Ethics CLE curriculum",
-  "supervision-protocol": "Supervision sign-off",
-  "ai-disclosure-protocol": "Court disclosure templates",
-  "engagement-letter-ai": "Engagement letter clause",
-  "approved-tools-list": "Approved tools list",
-  "audit-trail": "AI audit trail SOP",
-  "incident-response": "Incident response playbook",
-};
+// Placeholder: update when real lifetime sales start
+const LIFETIME_TAKEN = 3;
+const LIFETIME_TOTAL = 50;
+const LIFETIME_LEFT = LIFETIME_TOTAL - LIFETIME_TAKEN;
 
 export default function ProductLayer({ answers }: Props) {
   const typedQuestions = questions as PolicyQuestion[];
@@ -65,64 +57,12 @@ export default function ProductLayer({ answers }: Props) {
             </p>
           )}
           <p className="section-sub">
-            {hasAnswers && gaps.length > 0 ? (
-              <>These map directly to the gaps we just identified. Pick the depth your firm needs.</>
-            ) : (
-              <>Three depths of coverage — from a drop-in policy kit to a firm-wide compliance system with lifetime updates.</>
-            )}
+            Two ways in. Monthly for firms that want coverage. One-time for early users who want to lock it in before this becomes standard firm pricing.
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "12px" }} className="product-grid">
-          {/* TIER 1 — AUDIT KIT */}
-          <div className="product-tier" style={{ borderTop: "2px solid var(--amber)" }}>
-            <div className="tier-top">
-              <div
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "10px",
-                  fontWeight: 700,
-                  color: "var(--amber)",
-                  letterSpacing: "0.22em",
-                  textTransform: "uppercase",
-                  marginBottom: "10px",
-                }}
-              >
-                Fix this fast
-              </div>
-              <h3 className="tier-name">Audit Kit</h3>
-              <p className="tier-tag">Drop-in policies + checklists. Fix this internally in 30 minutes.</p>
-            </div>
-            <div className="tier-price">
-              <div className="price-line-through">$297</div>
-              <div className="price-main amber">Free</div>
-              <div className="price-sub">During beta</div>
-            </div>
-            <ul className="tier-list">
-              <li>Written AI policy template</li>
-              <li>Citation verification checklist</li>
-              <li>Court disclosure language</li>
-              <li>Engagement letter AI clause</li>
-              <li>Incident response playbook</li>
-            </ul>
-            {hasAnswers && gaps.length > 0 && (
-              <div className="tier-match">
-                <div className="tier-match-label">Covers your gaps in</div>
-                <div className="tier-match-chips">
-                  {gaps.slice(0, 3).map((g) => (
-                    <span key={g.id} className="tier-match-chip">{GAP_TO_PRODUCT_AREA[g.id] || g.id}</span>
-                  ))}
-                  {gaps.length > 3 && <span className="tier-match-chip muted">+{gaps.length - 3} more</span>}
-                </div>
-              </div>
-            )}
-            <a href="mailto:manuel@aivortex.io?subject=Audit%20Kit%20-%20Beta%20Request" className="tier-cta primary">
-              Get Audit Kit
-              <span className="arrow-line"></span>
-            </a>
-          </div>
-
-          {/* TIER 2 — COMPLIANCE PACK */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }} className="product-grid">
+          {/* TIER 1 — FIRM ACCESS */}
           <div className="product-tier" style={{ borderTop: "2px solid var(--blue)" }}>
             <div className="tier-top">
               <div
@@ -136,78 +76,165 @@ export default function ProductLayer({ answers }: Props) {
                   marginBottom: "10px",
                 }}
               >
-                Make this defensible
+                Stay out of sanctions
               </div>
-              <h3 className="tier-name">Compliance Pack</h3>
-              <p className="tier-tag">Governance, workflows, SOPs. For firms that want defensible, documented compliance.</p>
+              <h3 className="tier-name">Firm Access</h3>
+              <p className="tier-tag">Full system for firms that want to stay out of sanctions. Cancel anytime.</p>
             </div>
             <div className="tier-price">
-              <div className="price-line-through">$1,497</div>
-              <div className="price-main blue">Beta access</div>
-              <div className="price-sub">Priced for early users</div>
+              <div className="price-main blue">
+                $299
+                <span style={{ fontSize: "16px", fontWeight: 500, color: "var(--text-500)", fontStyle: "normal", marginLeft: "4px", letterSpacing: "0" }}>/ month</span>
+              </div>
+              <div className="price-sub">Monthly subscription</div>
             </div>
             <ul className="tier-list">
-              <li>Everything in Audit Kit</li>
-              <li>Firm-wide AI governance policy</li>
-              <li>Attorney onboarding + CLE</li>
-              <li>Approved tools registry</li>
-              <li>Supervision sign-off workflow</li>
-              <li>AI audit trail SOP</li>
+              <li>Full precedent database — all cases, every jurisdiction</li>
+              <li>Compliance templates (rolling out monthly)</li>
+              <li>Monthly updates + ruling alerts</li>
+              <li>Priority email support</li>
+              <li>New cases surfaced within 48h of filing</li>
             </ul>
             {hasAnswers && gaps.length > 0 && (
               <div className="tier-match">
-                <div className="tier-match-label">Covers all {gaps.length} of your gaps</div>
+                <div className="tier-match-label">Covers your {gaps.length} gap{gaps.length === 1 ? "" : "s"}</div>
                 <div className="tier-match-chips">
                   {gaps.slice(0, 4).map((g) => (
-                    <span key={g.id} className="tier-match-chip">{GAP_TO_PRODUCT_AREA[g.id] || g.id}</span>
+                    <span key={g.id} className="tier-match-chip">
+                      {g.id.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}
+                    </span>
                   ))}
                   {gaps.length > 4 && <span className="tier-match-chip muted">+{gaps.length - 4} more</span>}
                 </div>
               </div>
             )}
-            <a href="https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit" target="_blank" rel="noopener" className="tier-cta blue">
-              Request Access
+            <a
+              href="mailto:manuel@aivortex.io?subject=Firm%20Access%20%E2%80%94%20%24299%2Fmo"
+              className="tier-cta blue"
+            >
+              Get Firm Access
               <span className="arrow-line"></span>
             </a>
+            <div
+              style={{
+                marginTop: "10px",
+                textAlign: "center",
+                fontFamily: "var(--font-mono)",
+                fontSize: "9px",
+                fontWeight: 600,
+                color: "var(--text-600)",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+              }}
+            >
+              Cancel anytime &middot; No setup
+            </div>
           </div>
 
-          {/* TIER 3 — LIFETIME */}
-          <div className="product-tier" style={{ borderTop: "2px solid #a855f7" }}>
+          {/* TIER 2 — FOUNDING LIFETIME */}
+          <div className="product-tier founding" style={{ borderTop: "2px solid #a855f7" }}>
             <div className="tier-top">
               <div
                 style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "10px",
-                  fontWeight: 700,
-                  color: "#a855f7",
-                  letterSpacing: "0.22em",
-                  textTransform: "uppercase",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
                   marginBottom: "10px",
+                  flexWrap: "wrap",
+                  gap: "8px",
                 }}
               >
-                Stay ahead of courts
+                <div
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "10px",
+                    fontWeight: 700,
+                    color: "#a855f7",
+                    letterSpacing: "0.22em",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Stay ahead of courts
+                </div>
+                <div
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "10px",
+                    fontWeight: 700,
+                    color: "#a855f7",
+                    letterSpacing: "0.16em",
+                    textTransform: "uppercase",
+                    padding: "4px 10px",
+                    border: "1px solid rgba(168,85,247,0.4)",
+                    background: "rgba(168,85,247,0.08)",
+                  }}
+                >
+                  ◆ {LIFETIME_LEFT} / {LIFETIME_TOTAL} left
+                </div>
               </div>
-              <h3 className="tier-name">Lifetime</h3>
-              <p className="tier-tag">Everything, forever. Updates as the case law evolves. Priority access to new playbooks.</p>
+              <h3 className="tier-name">Founding Member Access</h3>
+              <p className="tier-tag">Lock access before this becomes standard firm pricing.</p>
             </div>
             <div className="tier-price">
-              <div className="price-line-through">Launch price</div>
-              <div className="price-main" style={{ color: "#a855f7" }}>Early user pricing</div>
-              <div className="price-sub">Priced once, access forever</div>
+              <div className="price-main" style={{ color: "#a855f7" }}>
+                $999
+                <span style={{ fontSize: "16px", fontWeight: 500, color: "var(--text-500)", fontStyle: "normal", marginLeft: "4px", letterSpacing: "0" }}>one-time</span>
+              </div>
+              <div className="price-sub">Priced once &middot; access forever</div>
             </div>
             <ul className="tier-list">
-              <li>Everything in Compliance Pack</li>
-              <li>Lifetime updates as courts evolve</li>
-              <li>All future playbooks included</li>
-              <li>Priority review of new sanctions</li>
-              <li>Private intelligence feed</li>
-              <li>Direct line for urgent questions</li>
+              <li>Everything in Firm Access</li>
+              <li>All future updates — forever</li>
+              <li>Priority access to new playbooks</li>
+              <li>Private ruling-alert channel</li>
+              <li>Direct line to Manu (limited)</li>
+              <li>Early user lock &mdash; price never raised on you</li>
             </ul>
-            <a href="mailto:manuel@aivortex.io?subject=Lifetime%20Access%20-%20Early%20User" className="tier-cta purple">
-              Lock Early Price
+            <a
+              href="mailto:manuel@aivortex.io?subject=Founding%20Lifetime%20%E2%80%94%20%24999"
+              className="tier-cta purple"
+            >
+              Lock Lifetime Access
               <span className="arrow-line"></span>
             </a>
+            <div
+              style={{
+                marginTop: "10px",
+                textAlign: "center",
+                fontFamily: "var(--font-mono)",
+                fontSize: "9px",
+                fontWeight: 600,
+                color: "#a855f7",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+              }}
+            >
+              {LIFETIME_LEFT} spots remaining
+            </div>
           </div>
+        </div>
+
+        {/* Small note below */}
+        <div
+          style={{
+            marginTop: "24px",
+            textAlign: "center",
+            fontFamily: "var(--font-mono)",
+            fontSize: "10px",
+            fontWeight: 600,
+            color: "var(--text-500)",
+            letterSpacing: "0.14em",
+          }}
+        >
+          Need a one-time review of your existing workflows instead?{" "}
+          <a
+            href="https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit"
+            target="_blank"
+            rel="noopener"
+            style={{ color: "var(--text-300)", textDecoration: "none", borderBottom: "1px solid var(--border)" }}
+          >
+            Request an audit →
+          </a>
         </div>
       </div>
 
@@ -215,16 +242,18 @@ export default function ProductLayer({ answers }: Props) {
         .product-tier {
           background: var(--bg-card);
           border: 1px solid var(--border);
-          padding: 28px 28px 32px;
+          padding: 32px 32px 36px;
           display: flex;
           flex-direction: column;
           transition: border-color 0.25s;
+          position: relative;
         }
         .product-tier:hover { border-color: var(--text-500); }
-        .tier-top { margin-bottom: 20px; }
+        .product-tier.founding { background: linear-gradient(180deg, var(--bg-card) 0%, rgba(168,85,247,0.04) 100%); }
+        .tier-top { margin-bottom: 22px; }
         .tier-name {
           font-family: var(--font-serif);
-          font-size: 30px;
+          font-size: 34px;
           font-weight: 500;
           color: var(--text-100);
           letter-spacing: -0.025em;
@@ -233,35 +262,25 @@ export default function ProductLayer({ answers }: Props) {
         }
         .tier-tag {
           color: var(--text-400);
-          font-size: 13px;
+          font-size: 14px;
           line-height: 1.6;
           font-weight: 300;
         }
         .tier-price {
           padding: 18px 0;
-          margin-bottom: 20px;
+          margin-bottom: 22px;
           border-top: 1px solid var(--border-soft);
           border-bottom: 1px solid var(--border-soft);
         }
-        .price-line-through {
-          font-family: var(--font-mono);
-          font-size: 11px;
-          font-weight: 700;
-          color: var(--text-600);
-          text-decoration: line-through;
-          letter-spacing: 0.12em;
-          margin-bottom: 4px;
-        }
         .price-main {
           font-family: var(--font-serif);
-          font-size: 32px;
+          font-size: 48px;
           font-weight: 500;
           font-style: italic;
-          letter-spacing: -0.03em;
+          letter-spacing: -0.035em;
           line-height: 1;
           color: var(--text-100);
         }
-        .price-main.amber { color: var(--amber); }
         .price-main.blue { color: var(--blue); }
         .price-sub {
           font-family: var(--font-mono);
@@ -270,19 +289,19 @@ export default function ProductLayer({ answers }: Props) {
           color: var(--text-500);
           letter-spacing: 0.18em;
           text-transform: uppercase;
-          margin-top: 8px;
+          margin-top: 10px;
         }
         .tier-list {
           list-style: none;
           padding: 0;
-          margin: 0 0 20px;
+          margin: 0 0 24px;
           flex: 1;
         }
         .tier-list li {
-          font-size: 13px;
+          font-size: 13.5px;
           color: var(--text-300);
           line-height: 1.6;
-          padding: 8px 0 8px 22px;
+          padding: 10px 0 10px 22px;
           position: relative;
           border-bottom: 1px solid var(--border-soft);
         }
@@ -291,13 +310,13 @@ export default function ProductLayer({ answers }: Props) {
           content: '→';
           position: absolute;
           left: 0;
-          top: 8px;
+          top: 10px;
           color: var(--text-500);
           font-family: var(--font-mono);
           font-size: 12px;
         }
         .tier-match {
-          margin-bottom: 20px;
+          margin-bottom: 22px;
           padding: 14px 16px;
           background: var(--bg-subtle);
           border: 1px solid var(--border-soft);
@@ -311,11 +330,7 @@ export default function ProductLayer({ answers }: Props) {
           text-transform: uppercase;
           margin-bottom: 8px;
         }
-        .tier-match-chips {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 6px;
-        }
+        .tier-match-chips { display: flex; flex-wrap: wrap; gap: 6px; }
         .tier-match-chip {
           font-family: var(--font-mono);
           font-size: 9px;
@@ -326,41 +341,21 @@ export default function ProductLayer({ answers }: Props) {
           background: var(--bg);
           border: 1px solid var(--border-soft);
         }
-        .tier-match-chip.muted {
-          color: var(--text-500);
-        }
+        .tier-match-chip.muted { color: var(--text-500); }
         .tier-cta {
           display: inline-flex;
           align-items: center;
           justify-content: center;
           gap: 12px;
-          padding: 14px 20px;
+          padding: 16px 22px;
           font-family: var(--font-mono);
-          font-size: 11px;
+          font-size: 12px;
           font-weight: 700;
-          letter-spacing: 0.18em;
+          letter-spacing: 0.2em;
           text-transform: uppercase;
           text-decoration: none;
           transition: all 0.2s;
           margin-top: auto;
-        }
-        .tier-cta.primary {
-          background: var(--bone);
-          color: var(--bg);
-          border: 1px solid var(--bone);
-        }
-        .tier-cta.primary:hover {
-          background: var(--white);
-          border-color: var(--white);
-        }
-        .tier-cta.primary .arrow-line {
-          width: 20px; height: 1px; background: var(--bg); position: relative;
-        }
-        .tier-cta.primary .arrow-line::after {
-          content: ''; position: absolute; right: -1px; top: -3px;
-          width: 7px; height: 7px;
-          border-top: 1px solid var(--bg); border-right: 1px solid var(--bg);
-          transform: rotate(45deg);
         }
         .tier-cta.blue {
           background: var(--blue);
@@ -381,13 +376,14 @@ export default function ProductLayer({ answers }: Props) {
           transform: rotate(45deg);
         }
         .tier-cta.purple {
-          background: transparent;
+          background: rgba(168,85,247,0.12);
           color: #a855f7;
-          border: 1px solid rgba(168,85,247,0.4);
+          border: 1px solid rgba(168,85,247,0.5);
         }
         .tier-cta.purple:hover {
-          background: rgba(168,85,247,0.08);
+          background: rgba(168,85,247,0.2);
           border-color: #a855f7;
+          color: #c084fc;
         }
         .tier-cta.purple .arrow-line {
           width: 20px; height: 1px; background: #a855f7; position: relative;
@@ -398,7 +394,7 @@ export default function ProductLayer({ answers }: Props) {
           border-top: 1px solid #a855f7; border-right: 1px solid #a855f7;
           transform: rotate(45deg);
         }
-        @media (max-width: 1024px) {
+        @media (max-width: 900px) {
           .product-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>

@@ -89,15 +89,15 @@ export default function FinalClose() {
             }}
           >
             <a href="#assessment" className="hero-btn-primary">
-              Re-run the check
+              Take the assessment
               <span className="arrow-line"></span>
             </a>
-            <a href="#products" className="hero-btn-secondary">Get the Kit</a>
+            <a href="#products" className="hero-btn-blue">Get Firm Access</a>
             <a
               href="https://calendly.com/manuel-aivortex/ai-infrastructure-workflow-audit"
               target="_blank"
               rel="noopener"
-              className="hero-btn-blue"
+              className="hero-btn-secondary"
             >
               Request Audit
             </a>

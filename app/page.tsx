@@ -12,7 +12,6 @@ import AuditExport from "@/components/AuditExport";
 import PolicyRecommendations from "@/components/PolicyRecommendations";
 import Insights from "@/components/Insights";
 import ProductLayer from "@/components/ProductLayer";
-import ScarcityStrip from "@/components/ScarcityStrip";
 import JurisdictionRequirements from "@/components/JurisdictionRequirements";
 import CaseEvidence from "@/components/CaseEvidence";
 import FinalClose from "@/components/FinalClose";
@@ -103,11 +102,8 @@ export default function SanctionsTracker() {
       {/* 8 — INTELLIGENCE LAYER (what courts enforce) */}
       <Insights />
 
-      {/* 9 — PRODUCT LAYER: tiered offers tied to gaps */}
+      {/* 9 — PRODUCT LAYER: tiered offers tied to gaps (scarcity lives inside the Lifetime tier) */}
       <ProductLayer answers={answers} />
-
-      {/* 10 — SCARCITY */}
-      <ScarcityStrip />
 
       {/* Proof / Reference layer */}
       <JurisdictionRequirements />

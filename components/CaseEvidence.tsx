@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import sanctionsRaw from "@/data/sanctions.json";
 interface WikiCase {
   id: string;
@@ -136,6 +136,8 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
   const [sort, setSort] = useState<SortKey>("date-desc");
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [showMyGaps, setShowMyGaps] = useState(false);
+  const [page, setPage] = useState(1);
+  const PAGE_SIZE = 24;
 
   const gapIds = Object.entries(answers).filter(([, v]) => v === false).map(([k]) => k);
   const hasGaps = gapIds.length > 0;
@@ -169,6 +171,14 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
       default: return arr;
     }
   }, [filtered, sort]);
+
+  // Reset to page 1 whenever the filter set changes
+  useEffect(() => { setPage(1); }, [severity, effectiveState, tool, year, search, showMyGaps, sort]);
+
+  const totalPages = Math.max(1, Math.ceil(sorted.length / PAGE_SIZE));
+  const safePage = Math.min(page, totalPages);
+  const pageStart = (safePage - 1) * PAGE_SIZE;
+  const paged = sorted.slice(pageStart, pageStart + PAGE_SIZE);
 
   const toggleExpand = (id: string) => setExpandedId((prev) => (prev === id ? null : id));
   const truncate = (text: string, max = 120) => (text.length <= max ? text : text.slice(0, max).trimEnd() + "...");
@@ -383,12 +393,15 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
             }}
           >
             {sorted.length} of {typedCases.length} cases
+            {sorted.length > PAGE_SIZE && (
+              <> &middot; page {safePage} of {totalPages}</>
+            )}
           </div>
         </div>
 
         {/* Case cards */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }} className="evidence-grid">
-          {sorted.map((c) => {
+          {paged.map((c) => {
             const isOpen = expandedId === c.id;
             const sev = severityColors[c.severity] || { color: "var(--text-500)", border: "var(--border)" };
             return (
@@ -653,6 +666,124 @@ export default function CaseEvidence({ answers = {}, stateFilter, onClearStateFi
             );
           })}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div
+            style={{
+              marginTop: "32px",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: "12px",
+              flexWrap: "wrap",
+              padding: "20px 24px",
+              background: "var(--bg-card)",
+              border: "1px solid var(--border)",
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "10px",
+                fontWeight: 700,
+                color: "var(--text-500)",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+              }}
+            >
+              Showing {pageStart + 1}&ndash;{Math.min(pageStart + PAGE_SIZE, sorted.length)} of {sorted.length}
+            </div>
+            <div style={{ display: "flex", gap: "6px", alignItems: "center" }}>
+              <button
+                onClick={() => { setPage(1); setExpandedId(null); document.getElementById("evidence")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
+                disabled={safePage === 1}
+                style={{
+                  padding: "8px 12px",
+                  background: "transparent",
+                  border: "1px solid var(--border)",
+                  color: safePage === 1 ? "var(--text-600)" : "var(--text-300)",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  cursor: safePage === 1 ? "not-allowed" : "pointer",
+                }}
+              >
+                First
+              </button>
+              <button
+                onClick={() => { setPage((p) => Math.max(1, p - 1)); setExpandedId(null); document.getElementById("evidence")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
+                disabled={safePage === 1}
+                style={{
+                  padding: "8px 14px",
+                  background: "transparent",
+                  border: "1px solid var(--border)",
+                  color: safePage === 1 ? "var(--text-600)" : "var(--text-300)",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  cursor: safePage === 1 ? "not-allowed" : "pointer",
+                }}
+              >
+                ← Prev
+              </button>
+              <span
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  color: "var(--text-100)",
+                  letterSpacing: "0.14em",
+                  padding: "0 14px",
+                  minWidth: "70px",
+                  textAlign: "center",
+                }}
+              >
+                {safePage} / {totalPages}
+              </span>
+              <button
+                onClick={() => { setPage((p) => Math.min(totalPages, p + 1)); setExpandedId(null); document.getElementById("evidence")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
+                disabled={safePage === totalPages}
+                style={{
+                  padding: "8px 14px",
+                  background: "transparent",
+                  border: "1px solid var(--border)",
+                  color: safePage === totalPages ? "var(--text-600)" : "var(--text-300)",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  cursor: safePage === totalPages ? "not-allowed" : "pointer",
+                }}
+              >
+                Next →
+              </button>
+              <button
+                onClick={() => { setPage(totalPages); setExpandedId(null); document.getElementById("evidence")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}
+                disabled={safePage === totalPages}
+                style={{
+                  padding: "8px 12px",
+                  background: "transparent",
+                  border: "1px solid var(--border)",
+                  color: safePage === totalPages ? "var(--text-600)" : "var(--text-300)",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "10px",
+                  fontWeight: 700,
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  cursor: safePage === totalPages ? "not-allowed" : "pointer",
+                }}
+              >
+                Last
+              </button>
+            </div>
+          </div>
+        )}
 
         {sorted.length === 0 && (
           <div

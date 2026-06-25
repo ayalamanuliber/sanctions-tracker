@@ -147,6 +147,21 @@ function compactCaseLine(item: PublicSanctionCase): string {
   return `- ${item.case_name} (${item.date}, ${item.court}): ${item.severity}; ${item.sanction_types.join(", ") || "no sanction listed"}${penalty}`;
 }
 
+function compactCaseLineWithSource(item: PublicSanctionCase): string {
+  const source = item.source_url
+    ? `\n  Source: ${item.source_url}`
+    : `\n  Source: unavailable${item.source_name ? ` (${item.source_name})` : ""}`;
+  return `${compactCaseLine(item)}${source}`;
+}
+
+function suggestedArtifacts(items: string[]): string[] {
+  return [
+    "Suggested artifacts to offer next",
+    ...items.map((item) => `- ${item}`),
+    "- Source appendix with case links",
+  ];
+}
+
 function dateCoverage(caseItems: PublicSanctionCase[]): string[] {
   if (caseItems.length === 0) return ["Date coverage: no matched cases"];
   const dates = caseItems.map((item) => item.date).filter(Boolean).sort();
@@ -266,10 +281,17 @@ export function formatJurisdictionRiskBrief(params: {
     ...(policyGaps.length > 0 ? policyGaps.map(([label, count]) => `- ${label}: ${count}`) : ["- None tagged"]),
     "",
     "Most important cases",
-    ...importantCases(caseItems).map(compactCaseLine),
+    ...importantCases(caseItems).map(compactCaseLineWithSource),
     "",
     "Recommended controls",
     ...controlRecommendations(caseItems).map((item) => `- ${item}`),
+    "",
+    ...suggestedArtifacts([
+      "Managing partner one-page brief",
+      "Practice-group checklist",
+      "Weekly jurisdiction digest",
+      "PDF-ready or Markdown risk report",
+    ]),
     "",
     "Best next question: are you checking your own draft, opposing counsel's filing, or building a firm policy?",
   ].join("\n");
@@ -307,7 +329,7 @@ export function formatToolRiskProfile(caseItems: PublicSanctionCase[], tool: str
     ...failures.map(([label, count]) => `- ${label}: ${count}`),
     "",
     "Representative cases",
-    ...importantCases(caseItems).map(compactCaseLine),
+    ...importantCases(caseItems).map(compactCaseLineWithSource),
     "",
     "Controls for firms using this tool",
     "- Treat generated legal authority as unverified until checked in a primary legal research source.",
@@ -315,7 +337,84 @@ export function formatToolRiskProfile(caseItems: PublicSanctionCase[], tool: str
     "- Do not let vendor branding or paid-tool status replace attorney supervision.",
     "- Preserve an audit note showing what the tool produced and what a human verified.",
     "",
+    ...suggestedArtifacts([
+      "Vendor procurement risk memo",
+      "Approved-use checklist",
+      "Training slide outline",
+      "Matter audit template",
+    ]),
+    "",
     "Best next question: should I turn this into a procurement checklist, training module, or pre-filing review packet?",
+  ].join("\n");
+}
+
+export function formatToolRiskComparison(params: {
+  profiles: { tool: string; caseItems: PublicSanctionCase[] }[];
+  state?: string;
+  practiceArea?: string;
+}): string {
+  const { profiles, state, practiceArea } = params;
+  const rows = profiles.map(({ tool, caseItems }) => {
+    const high = caseItems.filter((item) => item.severity === "high").length;
+    const career = caseItems.filter((item) => item.severity === "career-ending").length;
+    const severeShare = caseItems.length > 0 ? Math.round(((high + career) / caseItems.length) * 100) : 0;
+    const withSource = caseItems.filter((item) => item.source_url).length;
+    const failures = rankedEntries(countBy(riskTags(caseItems)), 3).map(([label, count]) => `${label} (${count})`);
+
+    return {
+      tool,
+      cases: caseItems.length,
+      high,
+      career,
+      severeShare,
+      sourceCoverage: caseItems.length > 0 ? `${withSource}/${caseItems.length}` : "0/0",
+      topFailures: failures.length > 0 ? failures.join("; ") : "No matched failure tags",
+    };
+  });
+
+  const mostSevere = rows
+    .filter((row) => row.cases > 0)
+    .sort((a, b) => b.severeShare - a.severeShare || b.cases - a.cases)[0];
+
+  return [
+    "Vortex AI tool risk comparison",
+    "",
+    `Context: ${[state, practiceArea].filter(Boolean).join(" / ") || "all tracked cases"}`,
+    "Important caveat: case counts show tracked public incidents, not true usage-adjusted incident rates.",
+    "",
+    "Comparison table",
+    "| Tool | Tracked cases | High | Career-ending | High+career share | Source coverage | Top failure signals |",
+    "| --- | ---: | ---: | ---: | ---: | --- | --- |",
+    ...rows.map(
+      (row) =>
+        `| ${row.tool} | ${row.cases} | ${row.high} | ${row.career} | ${row.severeShare}% | ${row.sourceCoverage} | ${row.topFailures} |`,
+    ),
+    "",
+    mostSevere
+      ? `Readout: ${mostSevere.tool} has the highest severe-case concentration in this matched set, but do not treat that as a definitive tool-safety ranking without usage-volume data.`
+      : "Readout: no matched public cases were found for the requested tools.",
+    "",
+    "Representative source-backed cases",
+    ...profiles.flatMap(({ tool, caseItems }) => [
+      `${tool}:`,
+      ...(importantCases(caseItems, 2).length > 0
+        ? importantCases(caseItems, 2).map(compactCaseLineWithSource)
+        : ["- No matched representative cases."]),
+    ]),
+    "",
+    "Controls that apply across tools",
+    "- Do not use vendor category or paid-tool status as a substitute for authority verification.",
+    "- Separate drafting, legal research, citation verification, and filing approval into visible workflow steps.",
+    "- Track tool used, reviewer, verification date, and unresolved issues at matter level.",
+    "",
+    ...suggestedArtifacts([
+      "Procurement comparison memo",
+      "Approved-tools matrix",
+      "Risk committee briefing",
+      "Training example packet by tool",
+    ]),
+    "",
+    "Best next question: do you want this framed for procurement, litigation leadership, or attorney training?",
   ].join("\n");
 }
 
@@ -348,11 +447,18 @@ export function formatPrefilingReviewPacket(params: {
     "",
     "Comparable cases to review",
     ...(importantCases(caseItems, 6).length > 0
-      ? importantCases(caseItems, 6).map(compactCaseLine)
+      ? importantCases(caseItems, 6).map(compactCaseLineWithSource)
       : ["- No direct matches; use the generic controls above."]),
     "",
     "Recommended controls",
     ...controlRecommendations(caseItems).map((item) => `- ${item}`),
+    "",
+    ...suggestedArtifacts([
+      "Partner signoff checklist",
+      "Matter audit note",
+      "Citation verification table",
+      "Client-safe explanation",
+    ]),
     "",
     "Best next question: do you want a partner signoff checklist, a client-safe explanation, or an opposing-counsel risk scan?",
   ].join("\n");
@@ -375,7 +481,7 @@ export function formatOpposingFilingReview(caseItems: PublicSanctionCase[], issu
     "",
     "Comparable failure patterns",
     ...(importantCases(caseItems, 6).length > 0
-      ? importantCases(caseItems, 6).map(compactCaseLine)
+      ? importantCases(caseItems, 6).map(compactCaseLineWithSource)
       : ["- No direct matches; broaden the jurisdiction or issue search."]),
     "",
     "Possible outputs to generate next",
@@ -407,6 +513,13 @@ export function formatPolicyGapReport(caseItems: PublicSanctionCase[], audience:
     "- Require signoff for court-facing AI-assisted work.",
     "- Keep a matter-level record of tool use and human verification.",
     "- Train with recent local cases so lawyers see the risk as real and current.",
+    "",
+    ...suggestedArtifacts([
+      "Firm policy draft",
+      "Associate training module",
+      "Implementation checklist",
+      "Weekly risk digest",
+    ]),
     "",
     "Best next question: should I convert this into a firm policy, associate training module, or weekly risk digest?",
   ].join("\n");
@@ -442,7 +555,14 @@ export function formatVisualSummaryData(caseItems: PublicSanctionCase[], title: 
       severity: item.severity,
       sanctions: item.sanction_types,
       amount: item.amount_display || "",
+      source_url: item.source_url || "",
     })),
+    artifact_options: [
+      "Managing partner dashboard",
+      "PDF-ready risk report",
+      "Markdown source appendix",
+      "Practice-group checklist",
+    ],
   };
 
   return [

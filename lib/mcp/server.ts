@@ -12,6 +12,7 @@ import {
   formatPolicyGapReport,
   formatPrefilingReviewPacket,
   formatToolRiskProfile,
+  formatToolRiskComparison,
   formatTrainingExamples,
   formatVisualSummaryData,
 } from "./format";
@@ -363,6 +364,48 @@ export function createMcpServer(): McpServer {
       const matches = matchContextCases({ ai_tool, state, practice_area, limit });
       return {
         content: [{ type: "text", text: formatToolRiskProfile(matches, ai_tool) }],
+      };
+    },
+  );
+
+  server.registerTool(
+    "compare_tool_risk_profiles",
+    {
+      title: "Compare Tool Risk Profiles",
+      description:
+        "Use this when a user asks to compare legal AI risk across multiple tools such as ChatGPT, Claude, CoCounsel, Lexis+ AI, Westlaw, or other AI/legal AI tools. Returns a side-by-side profile with caveats, severe-case concentration, source-backed representative cases, controls, and suggested artifacts.",
+      annotations: {
+        readOnlyHint: true,
+      },
+      inputSchema: {
+        ai_tools: z.array(z.string().min(2)).min(2).max(6),
+        state: z.string().optional(),
+        practice_area: z.string().optional(),
+        limit_per_tool: z.number().int().min(1).max(250).default(100),
+      },
+    },
+    async ({ ai_tools, state, practice_area, limit_per_tool }) => {
+      const profiles = ai_tools.map((tool) => ({
+        tool,
+        caseItems: matchContextCases({
+          ai_tool: tool,
+          state,
+          practice_area,
+          limit: limit_per_tool,
+        }),
+      }));
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: formatToolRiskComparison({
+              profiles,
+              state: state?.toUpperCase(),
+              practiceArea: practice_area,
+            }),
+          },
+        ],
       };
     },
   );

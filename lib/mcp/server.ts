@@ -6,16 +6,21 @@ import metaRaw from "@/data/meta.json";
 import {
   formatCase,
   formatChecklist,
+  formatDashboardDeepLink,
   formatImplementationWorkflow,
+  formatImplementationPackage,
   formatJurisdictionComparison,
   formatJurisdictionRiskBrief,
   formatMeta,
   formatOpposingFilingReview,
   formatPolicyGapReport,
   formatPrefilingReviewPacket,
+  formatReportArtifact,
+  formatSourceAppendix,
   formatToolRiskProfile,
   formatToolRiskComparison,
   formatTrainingExamples,
+  formatVerificationLedgerTemplate,
   formatVisualSummaryData,
 } from "./format";
 import { filterCases, limitCases } from "./query";
@@ -37,6 +42,8 @@ const meta = metaRaw as {
   avg_sanction: number;
   severity_counts: Record<string, number>;
 };
+
+const publicBaseUrl = "https://sanctions-tracker.vercel.app/";
 
 function uniqueValues(values: string[]): string[] {
   return [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b));
@@ -317,7 +324,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Get Jurisdiction Risk Brief",
       description:
-        "Use this when a user asks what legal AI risk means for a state, court, or practice area. Returns a Vortex-style advisor brief with provenance, stats, failure modes, source-backed important cases, controls, guardrails, and next actions.",
+        "Use this when a user asks what legal AI risk means for a state, court, or practice area. Return a concise professional advisor brief by default: evidence note, essential metrics, main risk signal, top source-backed examples, controls, and suggested next step. Do not write a long consultant report unless asked.",
       annotations: {
         readOnlyHint: true,
       },
@@ -352,7 +359,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Compare Jurisdiction Risk",
       description:
-        "Use this when a user asks to compare states, offices, courts, or jurisdictions, such as New Jersey vs New York. Returns side-by-side risk, source coverage, date coverage, failure patterns, and an advisor readout.",
+        "Use this when a user asks to compare states, offices, courts, or jurisdictions, such as New Jersey vs New York. Return a concise side-by-side comparison with source coverage, date coverage, failure patterns, and an advisor readout.",
       annotations: {
         readOnlyHint: true,
       },
@@ -402,7 +409,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Get Tool Risk Profile",
       description:
-        "Use this when a user asks about risk patterns for ChatGPT, Claude, CoCounsel, Lexis+ AI, Westlaw, or another AI/legal AI tool. Frame the answer as workflow risk, not a simplistic tool danger ranking.",
+        "Use this when a user asks about risk patterns for ChatGPT, Claude, CoCounsel, Lexis+ AI, Westlaw, or another AI/legal AI tool. Be concise and frame the answer as workflow risk, not a simplistic tool danger ranking.",
       annotations: {
         readOnlyHint: true,
       },
@@ -426,7 +433,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Compare Tool Risk Profiles",
       description:
-        "Use this when a user asks to compare legal AI risk across multiple tools such as ChatGPT, Claude, CoCounsel, Lexis+ AI, Westlaw, or other AI/legal AI tools. Returns a side-by-side profile with caveats, severe-case concentration, source-backed representative cases, controls, and suggested artifacts.",
+        "Use this when a user asks to compare legal AI risk across multiple tools such as ChatGPT, Claude, CoCounsel, Lexis+ AI, Westlaw, or other AI/legal AI tools. Return a concise side-by-side profile with caveats, severe-case concentration, source-backed representative cases, controls, and suggested deliverables.",
       annotations: {
         readOnlyHint: true,
       },
@@ -469,7 +476,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Pre-Filing Review Packet",
       description:
-        "Use this when a lawyer or firm says they are filing a draft, motion, brief, memo, or other court-facing document and used or may have used AI. If the prompt says tomorrow, tonight, same day, midnight, urgent, or filing window, set urgency to filing_tomorrow or same_day and produce emergency triage.",
+        "Use this when a lawyer or firm says they are filing a draft, motion, brief, memo, or other court-facing document and used or may have used AI. If the prompt says tomorrow, tonight, same day, midnight, urgent, or filing window, set urgency to filing_tomorrow or same_day and produce emergency triage. Prefer a usable checklist/ledger over long explanation.",
       annotations: {
         readOnlyHint: true,
       },
@@ -513,7 +520,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Opposing Filing Review",
       description:
-        "Use this when a user is reviewing opposing counsel's filing, suspicious citations, fabricated quotes, unsupported authority, or potential Rule 11 issues. Do not accuse AI use without evidence; focus on verification, preservation, and proportional escalation.",
+        "Use this when a user is reviewing opposing counsel's filing, suspicious citations, fabricated quotes, unsupported authority, or potential Rule 11 issues. Do not accuse AI use without evidence; focus on verification, preservation, proportional escalation, and a discrepancy matrix.",
       annotations: {
         readOnlyHint: true,
       },
@@ -538,7 +545,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Policy Gap Report",
       description:
-        "Use this when a firm, risk partner, KM team, innovation team, vendor, solo practitioner, court, or legal ops user asks what controls or policy gaps matter based on tracked legal AI failure patterns. Push back on unrealistic timelines and recommend workflow gates, not vague policy language.",
+        "Use this when a firm, risk partner, KM team, innovation team, vendor, solo practitioner, court, or legal ops user asks what controls or policy gaps matter based on tracked legal AI failure patterns. Be concise unless asked for the full policy. Push back on unrealistic timelines and recommend workflow gates, not vague policy language.",
       annotations: {
         readOnlyHint: true,
       },
@@ -563,7 +570,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate AI Filing Workflow",
       description:
-        "Use this when a user asks for the exact workflow, implementation plan, next-week controls, operational rollout, or what the firm/professional should actually do. This should be advisory, realistic, source-grounded, and avoid dumping case lists.",
+        "Use this when a user asks for the exact workflow, implementation plan, next-week controls, operational rollout, or what the firm/professional should actually do. This should be advisory, realistic, source-grounded, concise, and avoid dumping case lists.",
       annotations: {
         readOnlyHint: true,
       },
@@ -593,6 +600,172 @@ export function createMcpServer(): McpServer {
               caseItems: matches,
               audience,
               timeline,
+              state: state?.toUpperCase(),
+              court,
+              aiTools: ai_tools,
+              meta,
+            }),
+          },
+        ],
+      };
+    },
+  );
+
+  server.registerTool(
+    "generate_dashboard_deep_link",
+    {
+      title: "Generate Dashboard Deep Link",
+      description:
+        "Use this when the user needs a visual dashboard, managing-partner view, or presentation layer. Return a live AI Vortex dashboard URL with filters and a short evidence note instead of trying to make a long text dashboard.",
+      annotations: {
+        readOnlyHint: true,
+      },
+      inputSchema: {
+        state: z.string().optional(),
+        court: z.string().optional(),
+        audience: z.string().optional(),
+        practice_area: z.string().optional(),
+        limit: z.number().int().min(1).max(250).default(100),
+      },
+    },
+    async ({ state, court, audience, practice_area, limit }) => {
+      const matches = matchContextCases({ state, court, practice_area, limit });
+      return {
+        content: [
+          {
+            type: "text",
+            text: formatDashboardDeepLink({
+              baseUrl: publicBaseUrl,
+              state: state?.toUpperCase(),
+              court,
+              audience,
+              caseItems: matches,
+              meta,
+            }),
+          },
+        ],
+      };
+    },
+  );
+
+  server.registerTool(
+    "generate_report_artifact",
+    {
+      title: "Generate Report Artifact",
+      description:
+        "Use this when the user asks for a policy, memo, report, brief, implementation packet, PDF-ready text, Markdown, Word-ready content, or distributable artifact. Return clean artifact-ready Markdown and source-backed examples.",
+      annotations: {
+        readOnlyHint: true,
+      },
+      inputSchema: {
+        report_type: z.string().default("AI Filing Risk Report"),
+        audience: z.string().optional(),
+        state: z.string().optional(),
+        court: z.string().optional(),
+        practice_area: z.string().optional(),
+        format: z.enum(["markdown", "pdf-ready", "word-ready", "google-doc-ready"]).default("markdown"),
+        limit: z.number().int().min(1).max(250).default(100),
+      },
+    },
+    async ({ report_type, audience, state, court, practice_area, format, limit }) => {
+      const matches = matchContextCases({ state, court, practice_area, limit });
+      return {
+        content: [
+          {
+            type: "text",
+            text: formatReportArtifact({
+              reportType: report_type,
+              audience,
+              caseItems: matches,
+              state: state?.toUpperCase(),
+              court,
+              format,
+              meta,
+            }),
+          },
+        ],
+      };
+    },
+  );
+
+  server.registerTool(
+    "generate_verification_ledger_template",
+    {
+      title: "Generate Verification Ledger Template",
+      description:
+        "Use this when the user needs a practical citation, quote, proposition-support, partner exception, or signing-attorney template for an active filing.",
+      annotations: {
+        readOnlyHint: true,
+      },
+      inputSchema: {
+        title: z.string().optional(),
+        court: z.string().optional(),
+        ai_tools: z.array(z.string()).default([]),
+      },
+    },
+    async ({ title, court, ai_tools }) => ({
+      content: [
+        {
+          type: "text",
+          text: formatVerificationLedgerTemplate({ title, court, aiTools: ai_tools }),
+        },
+      ],
+    }),
+  );
+
+  server.registerTool(
+    "generate_source_appendix",
+    {
+      title: "Generate Source Appendix",
+      description:
+        "Use this when the user needs sources, links, citations, appendix material, or substantiation for a memo, dashboard, brief, or policy discussion.",
+      annotations: {
+        readOnlyHint: true,
+      },
+      inputSchema: {
+        title: z.string().default("AI Vortex Source Appendix"),
+        state: z.string().optional(),
+        court: z.string().optional(),
+        practice_area: z.string().optional(),
+        ai_tool: z.string().optional(),
+        limit: z.number().int().min(1).max(250).default(100),
+      },
+    },
+    async ({ title, state, court, practice_area, ai_tool, limit }) => {
+      const matches = matchContextCases({ state, court, practice_area, ai_tool, limit });
+      return {
+        content: [{ type: "text", text: formatSourceAppendix(matches, title, meta) }],
+      };
+    },
+  );
+
+  server.registerTool(
+    "compile_implementation_package",
+    {
+      title: "Compile Implementation Package",
+      description:
+        "Use this near the end of a session or after multiple analyses when the user needs a complete package for leadership, risk, litigation, chambers, vendors, or solo practice. Return a concise package index and suggested deliverables.",
+      annotations: {
+        readOnlyHint: true,
+      },
+      inputSchema: {
+        audience: z.string().default("legal team"),
+        state: z.string().optional(),
+        court: z.string().optional(),
+        practice_area: z.string().optional(),
+        ai_tools: z.array(z.string()).default([]),
+        limit: z.number().int().min(1).max(250).default(100),
+      },
+    },
+    async ({ audience, state, court, practice_area, ai_tools, limit }) => {
+      const matches = matchContextCases({ state, court, practice_area, limit });
+      return {
+        content: [
+          {
+            type: "text",
+            text: formatImplementationPackage({
+              caseItems: matches,
+              audience,
               state: state?.toUpperCase(),
               court,
               aiTools: ai_tools,

@@ -163,7 +163,7 @@ function compactCaseLineWithSource(item: PublicSanctionCase): string {
 
 function suggestedArtifacts(items: string[]): string[] {
   return [
-    "Useful next artifact",
+    "Optional deliverables",
     ...items.map((item) => `- ${item}`),
     "- Source appendix with case links",
   ];
@@ -178,7 +178,7 @@ function sourceCoverage(caseItems: PublicSanctionCase[]): { withSource: number; 
 function provenanceBlock(caseItems: PublicSanctionCase[], meta?: PublicMeta): string[] {
   const coverage = sourceCoverage(caseItems);
   return [
-    "Data provenance",
+    "Evidence note",
     `- Corpus: AI Vortex legal AI risk tracker${meta ? `, ${meta.total_cases.toLocaleString("en-US")} tracked global matters` : ""}`,
     `- Corpus last updated: ${meta?.last_updated || "not provided in this response"}`,
     `- Matched set: ${caseItems.length} cases`,
@@ -189,7 +189,7 @@ function provenanceBlock(caseItems: PublicSanctionCase[], meta?: PublicMeta): st
 
 function advisorGuardrails(context: "tool" | "opposing" | "workflow" | "policy" | "brief"): string[] {
   const base = [
-    "Advisor guardrail",
+    "Professional judgment",
   ];
 
   if (context === "tool") {
@@ -224,7 +224,7 @@ function advisorGuardrails(context: "tool" | "opposing" | "workflow" | "policy" 
 
 function naturalNextAction(items: string[]): string[] {
   return [
-    "Next practical move",
+    "Suggested next step",
     ...items.map((item) => `- ${item}`),
   ];
 }
@@ -308,6 +308,10 @@ function controlRecommendations(caseItems: PublicSanctionCase[]): string[] {
   return [...controls].slice(0, 6);
 }
 
+function topControls(caseItems: PublicSanctionCase[], limit = 3): string[] {
+  return controlRecommendations(caseItems).slice(0, limit);
+}
+
 export function formatJurisdictionRiskBrief(params: {
   caseItems: PublicSanctionCase[];
   state?: string;
@@ -324,7 +328,7 @@ export function formatJurisdictionRiskBrief(params: {
     "",
     `No tracked cases matched ${[state, court, practiceArea].filter(Boolean).join(" / ") || "the requested filters"}.`,
       "",
-      "Best next question: do you want a broader state, federal district, or practice-area scan?",
+      ...naturalNextAction(["Broaden to state, federal district, or practice-area level before drawing a risk conclusion."]),
     ].join("\n");
   }
 
@@ -358,11 +362,11 @@ export function formatJurisdictionRiskBrief(params: {
     "Policy/control gaps",
     ...(policyGaps.length > 0 ? policyGaps.map(([label, count]) => `- ${label}: ${count}`) : ["- None tagged"]),
     "",
-    "Most important cases",
-    ...importantCases(caseItems).map(compactCaseLineWithSource),
+    "Leading source-backed examples",
+    ...importantCases(caseItems, 3).map(compactCaseLineWithSource),
     "",
     "Recommended controls",
-    ...controlRecommendations(caseItems).map((item) => `- ${item}`),
+    ...topControls(caseItems).map((item) => `- ${item}`),
     "",
     ...advisorGuardrails("brief"),
     "",
@@ -374,8 +378,8 @@ export function formatJurisdictionRiskBrief(params: {
     ]),
     "",
     ...naturalNextAction([
-      "If this is for leadership, generate the one-page partner memo with the source appendix.",
-      "If this is for an active filing, switch to the pre-filing packet instead of reading more background.",
+      "For leadership, use a one-page memo plus source appendix.",
+      "For an active filing, move directly to the pre-filing packet.",
     ]),
   ].join("\n");
 }
@@ -425,7 +429,7 @@ export function formatJurisdictionComparison(params: {
       ? `Advisor readout: ${highest.label} should be treated as the higher-priority office for workflow controls in this matched set. That does not mean the other office is safe; it means the observed public-risk signal is stronger for ${highest.label}.`
       : "Advisor readout: no matched cases were available for this comparison.",
     "",
-    "Recommended cross-office decision",
+    "Recommended decision",
     "- Use one firmwide court-facing filing gate so lawyers do not treat NJ and NY as separate risk cultures.",
     "- Add office-specific training examples only after the universal gate exists.",
     "- Start with litigation filings, not every AI use case in the firm.",
@@ -446,7 +450,7 @@ export function formatToolRiskProfile(caseItems: PublicSanctionCase[], tool: str
       "",
       "No tracked cases matched this tool name. That does not mean the tool is risk-free; courts often describe AI use as implied or unidentified.",
       "",
-      "Best next question: do you want a broader scan for paid legal AI tools, general ChatGPT/OpenAI cases, or implied AI cases?",
+      ...naturalNextAction(["Broaden the query to paid legal AI tools, general ChatGPT/OpenAI cases, or implied/unidentified AI cases."]),
     ].join("\n");
   }
 
@@ -472,8 +476,8 @@ export function formatToolRiskProfile(caseItems: PublicSanctionCase[], tool: str
     "Recurring failure modes",
     ...failures.map(([label, count]) => `- ${label}: ${count}`),
     "",
-    "Representative cases",
-    ...importantCases(caseItems).map(compactCaseLineWithSource),
+    "Representative source-backed cases",
+    ...importantCases(caseItems, 3).map(compactCaseLineWithSource),
     "",
     "Controls for firms using this tool",
     "- Treat generated legal authority as unverified until checked in a primary legal research source.",
@@ -491,8 +495,8 @@ export function formatToolRiskProfile(caseItems: PublicSanctionCase[], tool: str
     ]),
     "",
     ...naturalNextAction([
-      "For procurement, convert this into an approved-use matrix.",
-      "For active litigation, convert this into a pre-filing review packet tied to the court and document type.",
+      "For procurement, use an approved-use matrix.",
+      "For active litigation, use a court-specific pre-filing packet.",
     ]),
   ].join("\n");
 }
@@ -550,8 +554,8 @@ export function formatToolRiskComparison(params: {
     "Representative source-backed cases",
     ...profiles.flatMap(({ tool, caseItems }) => [
       `${tool}:`,
-      ...(importantCases(caseItems, 2).length > 0
-        ? importantCases(caseItems, 2).map(compactCaseLineWithSource)
+      ...(importantCases(caseItems, 1).length > 0
+        ? importantCases(caseItems, 1).map(compactCaseLineWithSource)
         : ["- No matched representative cases."]),
     ]),
     "",
@@ -595,7 +599,7 @@ export function formatPrefilingReviewPacket(params: {
     "",
     `Matter context: ${[documentType, court, state, practiceArea, aiTool].filter(Boolean).join(" / ") || "not specified"}`,
     `Urgency mode: ${urgent ? "high - filing window appears imminent" : "standard"}`,
-    `Comparable cases found: ${caseItems.length}`,
+    `Comparable matched cases: ${caseItems.length}`,
     `Risk level: ${riskLevel(caseItems)}`,
     ...dateCoverage(caseItems),
     "",
@@ -626,13 +630,13 @@ export function formatPrefilingReviewPacket(params: {
     "[ ] Supervising attorney signoff is documented.",
     "[ ] Verification notes are saved to the matter file.",
     "",
-    "Comparable cases to review",
-    ...(importantCases(caseItems, 6).length > 0
-      ? importantCases(caseItems, 6).map(compactCaseLineWithSource)
+    "Source-backed examples",
+    ...(importantCases(caseItems, 3).length > 0
+      ? importantCases(caseItems, 3).map(compactCaseLineWithSource)
       : ["- No direct matches; use the generic controls above."]),
     "",
     "Recommended controls",
-    ...controlRecommendations(caseItems).map((item) => `- ${item}`),
+    ...topControls(caseItems).map((item) => `- ${item}`),
     "",
     ...advisorGuardrails("workflow"),
     "",
@@ -659,7 +663,7 @@ export function formatOpposingFilingReview(caseItems: PublicSanctionCase[], issu
     ...provenanceBlock(caseItems, meta),
     "",
     `Observed issue: ${issue || "suspicious legal authority or AI-like citation pattern"}`,
-    `Comparable cases found: ${caseItems.length}`,
+    `Comparable matched cases: ${caseItems.length}`,
     ...dateCoverage(caseItems),
     "",
     "First-pass review sequence",
@@ -670,14 +674,14 @@ export function formatOpposingFilingReview(caseItems: PublicSanctionCase[], issu
     "5. Process check: preserve PDFs/screenshots and ask for correction before escalating.",
     "6. Escalation check: if counsel does not correct or explain, prepare a narrow court filing focused on the verified discrepancies, not speculation about AI use.",
     "",
-    "Comparable failure patterns",
-    ...(importantCases(caseItems, 6).length > 0
-      ? importantCases(caseItems, 6).map(compactCaseLineWithSource)
+    "Source-backed analogues",
+    ...(importantCases(caseItems, 3).length > 0
+      ? importantCases(caseItems, 3).map(compactCaseLineWithSource)
       : ["- No direct matches; broaden the jurisdiction or issue search."]),
     "",
     ...advisorGuardrails("opposing"),
     "",
-    "Possible outputs to generate next",
+    "Optional deliverables",
     "- Citation verification table",
     "- Meet-and-confer email",
     "- Motion outline",
@@ -701,7 +705,7 @@ export function formatPolicyGapReport(caseItems: PublicSanctionCase[], audience:
     ...(gaps.length > 0 ? gaps.map(([label, count]) => `- ${label}: ${count}`) : ["- No tagged policy gaps in the matched set."]),
     "",
     "Controls to adopt",
-    ...controlRecommendations(caseItems).map((item) => `- ${item}`),
+    ...topControls(caseItems, 4).map((item) => `- ${item}`),
     "",
     "Implementation notes",
     "- Make citation and quote verification a workflow step, not a reminder in a policy PDF.",
@@ -789,6 +793,151 @@ export function formatImplementationWorkflow(params: {
   ].join("\n");
 }
 
+export function formatDashboardDeepLink(params: {
+  baseUrl: string;
+  state?: string;
+  court?: string;
+  audience?: string;
+  caseItems: PublicSanctionCase[];
+  meta?: PublicMeta;
+}): string {
+  const { baseUrl, state, court, audience, caseItems, meta } = params;
+  const url = new URL(baseUrl);
+  if (state) url.searchParams.set("state", state.toUpperCase());
+  if (court) url.searchParams.set("court", court);
+  if (audience) url.searchParams.set("audience", audience);
+
+  return [
+    "AI Vortex dashboard link",
+    "",
+    ...provenanceBlock(caseItems, meta),
+    "",
+    `Dashboard: ${url.toString()}`,
+    "",
+    "Use this when the user needs a visual rather than another written brief. The dashboard should be treated as the presentation layer; the MCP response is the evidence layer.",
+  ].join("\n");
+}
+
+export function formatSourceAppendix(caseItems: PublicSanctionCase[], title: string, meta?: PublicMeta): string {
+  return [
+    `${title || "AI Vortex source appendix"}`,
+    "",
+    ...provenanceBlock(caseItems, meta),
+    "",
+    "| Date | Case | Court | Severity | Source |",
+    "| --- | --- | --- | --- | --- |",
+    ...importantCases(caseItems, 12).map(
+      (item) =>
+        `| ${item.date} | ${item.case_name} | ${item.court} | ${item.severity} | ${item.source_url || "Unavailable"} |`,
+    ),
+  ].join("\n");
+}
+
+export function formatVerificationLedgerTemplate(params: {
+  title?: string;
+  court?: string;
+  aiTools?: string[];
+}): string {
+  const { title, court, aiTools = [] } = params;
+  return [
+    title || "AI filing verification ledger",
+    "",
+    `Court/matter: ${court || "__________"}`,
+    `AI tools disclosed for internal review: ${aiTools.length > 0 ? aiTools.join(", ") : "__________"}`,
+    "",
+    "| # | Draft page | Citation / quote / proposition | Source checked | AI touched? | Exists? | Pincite correct? | Quote exact? | Supports proposition? | Status | Reviewer |",
+    "| ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+    "| 1 |  |  |  | Yes / No / Unknown | Yes / No | Yes / No / N.A. | Yes / No / N.A. | Yes / No | Verified / Fix / Remove / Escalate |  |",
+    "| 2 |  |  |  | Yes / No / Unknown | Yes / No | Yes / No / N.A. | Yes / No / N.A. | Yes / No | Verified / Fix / Remove / Escalate |  |",
+    "| 3 |  |  |  | Yes / No / Unknown | Yes / No | Yes / No / N.A. | Yes / No / N.A. | Yes / No | Verified / Fix / Remove / Escalate |  |",
+    "",
+    "Signing attorney exception report",
+    "- Citations checked: ___ / ___",
+    "- Quotes checked: ___ / ___",
+    "- Propositions checked: ___ / ___",
+    "- Items corrected: ___",
+    "- Items removed: ___",
+    "- Items escalated: ___",
+    "- Court/judge AI rule checked: Yes / No",
+    "- Disclosure/certification needed: Yes / No / Unclear",
+    "- Recommendation: File / File after edits / Do not file yet",
+  ].join("\n");
+}
+
+export function formatReportArtifact(params: {
+  reportType: string;
+  audience?: string;
+  caseItems: PublicSanctionCase[];
+  state?: string;
+  court?: string;
+  format?: string;
+  meta?: PublicMeta;
+}): string {
+  const { reportType, audience, caseItems, state, court, format = "markdown", meta } = params;
+  const failures = rankedEntries(countBy(riskTags(caseItems)), 5);
+  const gaps = rankedEntries(countBy(caseItems.flatMap((item) => item.policy_gap_ids)), 5);
+
+  return [
+    `# ${reportType || "AI Filing Risk Report"}`,
+    "",
+    `Audience: ${audience || "legal professional"}`,
+    `Scope: ${[court, state].filter(Boolean).join(" / ") || "matched legal AI risk corpus"}`,
+    `Format target: ${format}`,
+    "",
+    "## Evidence Note",
+    ...provenanceBlock(caseItems, meta).slice(1).map((line) => line.replace(/^- /, "- ")),
+    "",
+    "## Executive Readout",
+    `The matched evidence points to ${riskLevel(caseItems).toLowerCase()} legal AI filing risk. The recurring control failure is not AI use by itself; it is unverified authority, quotes, and propositions reaching court-facing work.`,
+    "",
+    "## Priority Controls",
+    ...topControls(caseItems).map((item) => `- ${item}`),
+    "",
+    "## Observed Signals",
+    ...failures.map(([label, count]) => `- ${label}: ${count}`),
+    ...gaps.map(([label, count]) => `- ${label}: ${count}`),
+    "",
+    "## Source-Backed Examples",
+    ...importantCases(caseItems, 5).map(compactCaseLineWithSource),
+    "",
+    "## Recommended Next Step",
+    "Use this report as the draft artifact. For distribution, convert it to Word/PDF and attach the source appendix.",
+  ].join("\n");
+}
+
+export function formatImplementationPackage(params: {
+  caseItems: PublicSanctionCase[];
+  audience?: string;
+  state?: string;
+  court?: string;
+  aiTools?: string[];
+  meta?: PublicMeta;
+}): string {
+  const { caseItems, audience, state, court, aiTools = [], meta } = params;
+  return [
+    "AI Vortex implementation package",
+    "",
+    ...provenanceBlock(caseItems, meta),
+    "",
+    `Audience: ${audience || "legal team"}`,
+    `Scope: ${[court, state, aiTools.join(" + ")].filter(Boolean).join(" / ") || "court-facing legal AI use"}`,
+    "",
+    "Package contents",
+    "1. Leadership readout: adopt a filing gate, not a broad policy rollout first.",
+    "2. Workflow: AI-use intake, frozen draft, citation gate, quote gate, proposition gate, rule check, exception report, audit trail.",
+    "3. Templates: verification ledger, partner exception report, signing-attorney certification.",
+    "4. Evidence: source appendix for the leading tracked cases.",
+    "5. Rollout: 7-day pilot followed by 30-day policy adoption.",
+    "",
+    "Suggested deliverables",
+    "- Word/PDF policy memo",
+    "- Markdown implementation packet",
+    "- Verification ledger template",
+    "- Source appendix",
+    "- Dashboard link for leadership",
+  ].join("\n");
+}
+
 export function formatVisualSummaryData(caseItems: PublicSanctionCase[], title: string, meta?: PublicMeta): string {
   const payload = {
     title,
@@ -844,8 +993,8 @@ export function formatVisualSummaryData(caseItems: PublicSanctionCase[], title: 
     ...Object.entries(payload.failure_modes).map(([label, count]) => `- ${label}: ${count}`),
     "",
     "Top source-backed cases",
-    ...(importantCases(caseItems, 6).length > 0
-      ? importantCases(caseItems, 6).map(compactCaseLineWithSource)
+    ...(importantCases(caseItems, 4).length > 0
+      ? importantCases(caseItems, 4).map(compactCaseLineWithSource)
       : ["- No matched cases."]),
     "",
     "Chart-ready JSON",

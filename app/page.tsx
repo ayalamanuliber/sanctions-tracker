@@ -40,9 +40,21 @@ function decodeHash(hash: string): Record<string, boolean> {
 
 export default function SanctionsTracker() {
   const [answers, setAnswers] = useState<Record<string, boolean>>({});
-  const [stateFilter, setStateFilter] = useState<string | null>(null);
+  const [stateFilter, setStateFilter] = useState<string | null>(() => {
+    if (typeof window === "undefined") return null;
+    return new URLSearchParams(window.location.search).get("state")?.toUpperCase() || null;
+  });
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      const state = new URLSearchParams(window.location.search).get("state");
+      if (state) {
+        setTimeout(() => {
+          document.getElementById("evidence")?.scrollIntoView({ behavior: "smooth" });
+        }, 500);
+      }
+    }
+
     if (typeof window !== "undefined" && window.location.hash.includes("r=")) {
       const decoded = decodeHash(window.location.hash);
       if (Object.keys(decoded).length > 0) {

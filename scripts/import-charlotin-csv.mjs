@@ -61,6 +61,7 @@ const stateByName = {
   Guam: "GU",
   "Puerto Rico": "PR",
   "Northern Mariana Islands": "MP",
+  "District of Columbia": "DC",
 };
 
 const districtState = {
@@ -99,6 +100,7 @@ const districtState = {
   "N.Y": "NY",
   "N.C": "NC",
   "N.D": "ND",
+  "N. Carolina": "NC",
   Ohio: "OH",
   Okla: "OK",
   Or: "OR",
@@ -116,6 +118,10 @@ const districtState = {
   "W. Va": "WV",
   Wis: "WI",
   Wyo: "WY",
+  "D.C": "DC",
+  DC: "DC",
+  "District of Columbia": "DC",
+  Lousiana: "LA",
 };
 
 const stateFromAbbrev = Object.fromEntries(Object.values(stateByName).map((code) => [code, code]));
@@ -190,6 +196,21 @@ function inferCircuit(court) {
   const value = court.toLowerCase();
   const direct = value.match(/\b([1-9]|1[0-1])(st|nd|rd|th)?\s+cir/);
   if (direct) return `${direct[1]}${direct[1] === "1" ? "st" : direct[1] === "2" ? "nd" : direct[1] === "3" ? "rd" : "th"} Circuit`;
+  const wordCircuit = value.match(/\b(first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth|eleventh)\s+circuit\b/);
+  const wordMap = {
+    first: "1st Circuit",
+    second: "2nd Circuit",
+    third: "3rd Circuit",
+    fourth: "4th Circuit",
+    fifth: "5th Circuit",
+    sixth: "6th Circuit",
+    seventh: "7th Circuit",
+    eighth: "8th Circuit",
+    ninth: "9th Circuit",
+    tenth: "10th Circuit",
+    eleventh: "11th Circuit",
+  };
+  if (wordCircuit) return wordMap[wordCircuit[1]];
   if (value.includes("fed. cir")) return "Federal Circuit";
   if (value.includes("d.c. cir")) return "D.C. Circuit";
 
@@ -252,9 +273,28 @@ function inferCircuit(court) {
 function inferState(court, country) {
   if (country !== "US") return "";
   const value = court.replace(/\./g, "").replace(/\s+/g, " ").trim();
+  const compact = court.replace(/\s+/g, "");
+
+  if (/^CA,?\s*(?:[1-9]|1[0-1])(st|nd|rd|th)?\s+Circuit/i.test(court)) return "";
+  if (/^CA,?\s*(?:First|Second|Third|Fourth|Fifth|Sixth|Seventh|Eighth|Ninth|Tenth|Eleventh)\s+Circuit/i.test(court)) {
+    return "";
+  }
+  if (/(?:Circuit|Cir\.)\s+CA$/i.test(court)) return "";
 
   const caAbbrevMatch = value.match(/^CA\s+([A-Z]{2})\b/);
   if (caAbbrevMatch && stateFromAbbrev[caAbbrevMatch[1]]) return stateFromAbbrev[caAbbrevMatch[1]];
+
+  const districtCompact = compact.match(/\b[CENSW]\.D\.([A-Z][A-Za-z.]*)/);
+  if (districtCompact) {
+    const key = districtCompact[1].replace(/\.$/, "");
+    for (const [needle, code] of Object.entries(districtState)) {
+      if (key.startsWith(needle.replace(/\s+/g, ""))) return code;
+    }
+  }
+
+  if (/\bD\.?D\.?C\.?\b|District of Columbia|D\. DC|D\.D\.C\.|D\.C\. D\.C\./i.test(court)) {
+    return "DC";
+  }
 
   const caMatch = value.match(/^CA\s+([A-Za-z ]+?)(?:\s+\(|$)/);
   if (caMatch && stateByName[caMatch[1].trim()]) return stateByName[caMatch[1].trim()];
@@ -264,10 +304,11 @@ function inferState(court, country) {
   }
 
   for (const [abbr, code] of Object.entries(stateFromAbbrev)) {
+    if (abbr === "CA" && /^CA\b/.test(court)) continue;
     if (new RegExp(`\\b${abbr}\\b`).test(court)) return code;
   }
 
-  const district = court.match(/\b(?:[ENDS]\.D\.|D\.)\s+([A-Z][A-Za-z. ]+)/);
+  const district = court.match(/\b(?:[CENSW]\.D\.|D\.)\s*([A-Z][A-Za-z. ]+)/);
   if (district) {
     const key = district[1].replace(/\.$/, "").trim();
     for (const [needle, code] of Object.entries(districtState)) {
@@ -276,6 +317,25 @@ function inferState(court, country) {
   }
 
   return "";
+}
+
+function inferJurisdiction(row, country) {
+  const court = row.Court || "";
+  if (country !== "US") return "international";
+  if (
+    /\b(?:[CENSW]\.D\.|D\.)\s*/i.test(court) ||
+    /\b(?:[1-9]|1[0-1])(st|nd|rd|th)?\s+Cir\.?\b/i.test(court) ||
+    /\b(?:First|Second|Third|Fourth|Fifth|Sixth|Seventh|Eighth|Ninth|Tenth|Eleventh)\s+Circuit\b/i.test(court) ||
+    /(?:Circuit|Cir\.)\s+CA$/i.test(court) ||
+    /Fed\.?\s*Cir\.?|Federal Circuit|Court of Appeals|S\.Ct\.|Supreme Court of the United States/i.test(court) ||
+    /GAO|Government Accountability Office|Court of Federal Claims|Fed\.? claims court/i.test(court) ||
+    /Tax Court|ASBCA|CBCA|J\.?P\.?M\.?L\.?|OCAHO|Copyright Claims Board/i.test(court) ||
+    /Bankruptcy/i.test(court)
+  ) {
+    return "federal";
+  }
+
+  return "state";
 }
 
 function parseAmount(value) {
@@ -491,9 +551,7 @@ const cases = rows
       state_display: state || country,
       country,
       circuit: inferCircuit(row.Court),
-      jurisdiction: row.Court.match(/\b(?:[ENDS]\.D\.|D\.|Cir\.|GAO|Fed\. Cir\.|Bankruptcy)\b/i)
-        ? "federal"
-        : "state",
+      jurisdiction: inferJurisdiction(row, country),
       date: row.Date,
       party: row["Party(ies)"],
       ai_tool_used:

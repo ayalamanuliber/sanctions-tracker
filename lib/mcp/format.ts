@@ -29,7 +29,7 @@ export function formatCase(caseItem: PublicSanctionCase): string {
   return [
     `${caseItem.case_name} (${caseItem.date})`,
     `Court: ${caseItem.court}`,
-    `Jurisdiction: ${caseItem.jurisdiction}${caseItem.state ? ` / ${caseItem.state}` : ""}`,
+    `Jurisdiction: ${caseItem.jurisdiction}${caseItem.state ? ` / ${caseItem.state}` : caseItem.country ? ` / ${caseItem.country}` : ""}`,
     `Judge: ${caseItem.judge || "Unknown"}`,
     `Severity: ${caseItem.severity}`,
     `AI tool: ${caseItem.ai_tool_used}`,
@@ -147,6 +147,20 @@ function compactCaseLine(item: PublicSanctionCase): string {
   return `- ${item.case_name} (${item.date}, ${item.court}): ${item.severity}; ${item.sanction_types.join(", ") || "no sanction listed"}${penalty}`;
 }
 
+function dateCoverage(caseItems: PublicSanctionCase[]): string[] {
+  if (caseItems.length === 0) return ["Date coverage: no matched cases"];
+  const dates = caseItems.map((item) => item.date).filter(Boolean).sort();
+  const latest = dates[dates.length - 1];
+  const oldest = dates[0];
+  const withSource = caseItems.filter((item) => item.source_url).length;
+  const sourcePct = Math.round((withSource / caseItems.length) * 100);
+
+  return [
+    `Date coverage: ${oldest} to ${latest}`,
+    `Source-link coverage: ${withSource}/${caseItems.length} cases (${sourcePct}%)`,
+  ];
+}
+
 function riskTags(caseItems: PublicSanctionCase[]): string[] {
   const contextTags = new Set([
     "trial",
@@ -235,6 +249,7 @@ export function formatJurisdictionRiskBrief(params: {
     `Vortex jurisdiction risk brief${state ? `: ${state}` : ""}${court ? ` / ${court}` : ""}`,
     "",
     `Risk level: ${riskLevel(caseItems)}`,
+    ...dateCoverage(caseItems),
     `Cases tracked: ${caseItems.length}`,
     `Lawyer-related cases: ${lawyer}`,
     `Pro se cases: ${proSe}`,
@@ -280,6 +295,7 @@ export function formatToolRiskProfile(caseItems: PublicSanctionCase[], tool: str
     "",
     `Tracked matching cases: ${caseItems.length}`,
     `Risk level: ${riskLevel(caseItems)}`,
+    ...dateCoverage(caseItems),
     "",
     "Severity mix",
     ...formatBars(severity, ["low", "medium", "high", "career-ending"]),
@@ -318,6 +334,7 @@ export function formatPrefilingReviewPacket(params: {
     `Matter context: ${[documentType, court, state, practiceArea, aiTool].filter(Boolean).join(" / ") || "not specified"}`,
     `Comparable cases found: ${caseItems.length}`,
     `Risk level: ${riskLevel(caseItems)}`,
+    ...dateCoverage(caseItems),
     "",
     "Required checks before filing",
     "[ ] Every cited case exists exactly as cited.",
@@ -347,6 +364,7 @@ export function formatOpposingFilingReview(caseItems: PublicSanctionCase[], issu
     "",
     `Observed issue: ${issue || "suspicious legal authority or AI-like citation pattern"}`,
     `Comparable cases found: ${caseItems.length}`,
+    ...dateCoverage(caseItems),
     "",
     "First-pass review sequence",
     "1. Existence check: confirm every cited case exists exactly as cited.",
@@ -376,6 +394,7 @@ export function formatPolicyGapReport(caseItems: PublicSanctionCase[], audience:
     "",
     `Cases analyzed: ${caseItems.length}`,
     `Risk level: ${riskLevel(caseItems)}`,
+    ...dateCoverage(caseItems),
     "",
     "Most common control gaps",
     ...(gaps.length > 0 ? gaps.map(([label, count]) => `- ${label}: ${count}`) : ["- No tagged policy gaps in the matched set."]),
@@ -396,6 +415,17 @@ export function formatPolicyGapReport(caseItems: PublicSanctionCase[], audience:
 export function formatVisualSummaryData(caseItems: PublicSanctionCase[], title: string): string {
   const payload = {
     title,
+    date_coverage:
+      caseItems.length > 0
+        ? {
+            oldest: caseItems.map((item) => item.date).filter(Boolean).sort()[0],
+            latest: caseItems.map((item) => item.date).filter(Boolean).sort().at(-1),
+          }
+        : null,
+    source_link_coverage: {
+      with_source_url: caseItems.filter((item) => item.source_url).length,
+      total: caseItems.length,
+    },
     cards: [
       { label: "Cases", value: caseItems.length },
       { label: "Known monetary total", value: formatCurrency(caseItems.reduce((sum, item) => sum + (item.amount || 0), 0)) },

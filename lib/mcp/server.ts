@@ -6,6 +6,8 @@ import metaRaw from "@/data/meta.json";
 import {
   formatCase,
   formatChecklist,
+  formatImplementationWorkflow,
+  formatJurisdictionComparison,
   formatJurisdictionRiskBrief,
   formatMeta,
   formatOpposingFilingReview,
@@ -98,7 +100,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Get Summary Stats",
       description:
-        "Use this when you need high-level tracker statistics for the public legal AI risk corpus.",
+        "Use this when you need high-level tracker statistics for the public legal AI risk corpus and need to explain what the tracker can do.",
       annotations: {
         readOnlyHint: true,
       },
@@ -114,7 +116,7 @@ export function createMcpServer(): McpServer {
     {
       title: "List Recent Cases",
       description:
-        "Use this when you need the most recent legal AI sanctions or governance cases.",
+        "Use this when you need the most recent legal AI sanctions or governance cases. Include sources when presenting important cases to users.",
       annotations: {
         readOnlyHint: true,
       },
@@ -159,7 +161,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Search Cases",
       description:
-        "Use this when you need a free-text case search across names, summaries, tags, tools, and policy gaps.",
+        "Use this when you need a free-text case search across names, summaries, tags, tools, and policy gaps. Use this for named cases like Mata v Avianca.",
       annotations: {
         readOnlyHint: true,
       },
@@ -315,7 +317,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Get Jurisdiction Risk Brief",
       description:
-        "Use this when a user asks what legal AI risk means for a state, court, or practice area. Returns a Vortex-style brief with stats, failure modes, important cases, controls, and next questions.",
+        "Use this when a user asks what legal AI risk means for a state, court, or practice area. Returns a Vortex-style advisor brief with provenance, stats, failure modes, source-backed important cases, controls, guardrails, and next actions.",
       annotations: {
         readOnlyHint: true,
       },
@@ -337,7 +339,58 @@ export function createMcpServer(): McpServer {
               state: state?.toUpperCase(),
               court,
               practiceArea: practice_area,
+              meta,
             }),
+          },
+        ],
+      };
+    },
+  );
+
+  server.registerTool(
+    "compare_jurisdiction_risk",
+    {
+      title: "Compare Jurisdiction Risk",
+      description:
+        "Use this when a user asks to compare states, offices, courts, or jurisdictions, such as New Jersey vs New York. Returns side-by-side risk, source coverage, date coverage, failure patterns, and an advisor readout.",
+      annotations: {
+        readOnlyHint: true,
+      },
+      inputSchema: {
+        states: z.array(z.string().min(2)).min(2).max(6).optional(),
+        courts: z.array(z.string().min(2)).min(2).max(6).optional(),
+        practice_area: z.string().optional(),
+        limit_per_jurisdiction: z.number().int().min(1).max(250).default(100),
+      },
+    },
+    async ({ states, courts, practice_area, limit_per_jurisdiction }) => {
+      const profiles = [
+        ...(states || []).map((state) => ({
+          label: state.toUpperCase(),
+          caseItems: matchContextCases({
+            state,
+            practice_area,
+            limit: limit_per_jurisdiction,
+          }),
+        })),
+        ...(courts || []).map((court) => ({
+          label: court,
+          caseItems: matchContextCases({
+            court,
+            practice_area,
+            limit: limit_per_jurisdiction,
+          }),
+        })),
+      ];
+
+      return {
+        content: [
+          {
+            type: "text",
+            text:
+              profiles.length > 0
+                ? formatJurisdictionComparison({ profiles, meta })
+                : "Provide at least two states or two courts to compare.",
           },
         ],
       };
@@ -349,7 +402,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Get Tool Risk Profile",
       description:
-        "Use this when a user asks about risk patterns for ChatGPT, Claude, CoCounsel, Lexis+ AI, Westlaw, or another AI/legal AI tool.",
+        "Use this when a user asks about risk patterns for ChatGPT, Claude, CoCounsel, Lexis+ AI, Westlaw, or another AI/legal AI tool. Frame the answer as workflow risk, not a simplistic tool danger ranking.",
       annotations: {
         readOnlyHint: true,
       },
@@ -363,7 +416,7 @@ export function createMcpServer(): McpServer {
     async ({ ai_tool, state, practice_area, limit }) => {
       const matches = matchContextCases({ ai_tool, state, practice_area, limit });
       return {
-        content: [{ type: "text", text: formatToolRiskProfile(matches, ai_tool) }],
+        content: [{ type: "text", text: formatToolRiskProfile(matches, ai_tool, meta) }],
       };
     },
   );
@@ -403,6 +456,7 @@ export function createMcpServer(): McpServer {
               profiles,
               state: state?.toUpperCase(),
               practiceArea: practice_area,
+              meta,
             }),
           },
         ],
@@ -415,7 +469,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Pre-Filing Review Packet",
       description:
-        "Use this when a lawyer or firm says they are filing a draft, motion, brief, memo, or other court-facing document and used or may have used AI.",
+        "Use this when a lawyer or firm says they are filing a draft, motion, brief, memo, or other court-facing document and used or may have used AI. If the prompt says tomorrow, tonight, same day, midnight, urgent, or filing window, set urgency to filing_tomorrow or same_day and produce emergency triage.",
       annotations: {
         readOnlyHint: true,
       },
@@ -425,10 +479,11 @@ export function createMcpServer(): McpServer {
         practice_area: z.string().optional(),
         document_type: z.string().optional(),
         ai_tool: z.string().optional(),
+        urgency: z.enum(["standard", "filing_this_week", "filing_tomorrow", "same_day"]).default("standard"),
         limit: z.number().int().min(1).max(100).default(50),
       },
     },
-    async ({ state, court, practice_area, document_type, ai_tool, limit }) => {
+    async ({ state, court, practice_area, document_type, ai_tool, urgency, limit }) => {
       let matches = matchContextCases({ state, court, practice_area, ai_tool, limit });
       if (matches.length === 0 && ai_tool) {
         matches = matchContextCases({ state, court, practice_area, limit });
@@ -444,6 +499,8 @@ export function createMcpServer(): McpServer {
               practiceArea: practice_area,
               documentType: document_type,
               aiTool: ai_tool,
+              urgency,
+              meta,
             }),
           },
         ],
@@ -456,7 +513,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Opposing Filing Review",
       description:
-        "Use this when a user is reviewing opposing counsel's filing, suspicious citations, fabricated quotes, unsupported authority, or potential Rule 11 issues.",
+        "Use this when a user is reviewing opposing counsel's filing, suspicious citations, fabricated quotes, unsupported authority, or potential Rule 11 issues. Do not accuse AI use without evidence; focus on verification, preservation, and proportional escalation.",
       annotations: {
         readOnlyHint: true,
       },
@@ -471,7 +528,7 @@ export function createMcpServer(): McpServer {
     async ({ issue, state, court, practice_area, limit }) => {
       const matches = matchContextCases({ issue, state, court, practice_area, limit });
       return {
-        content: [{ type: "text", text: formatOpposingFilingReview(matches, issue) }],
+        content: [{ type: "text", text: formatOpposingFilingReview(matches, issue, meta) }],
       };
     },
   );
@@ -481,7 +538,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Policy Gap Report",
       description:
-        "Use this when a firm, risk partner, KM team, innovation team, or vendor asks what controls or policy gaps matter based on tracked legal AI failure patterns.",
+        "Use this when a firm, risk partner, KM team, innovation team, vendor, solo practitioner, court, or legal ops user asks what controls or policy gaps matter based on tracked legal AI failure patterns. Push back on unrealistic timelines and recommend workflow gates, not vague policy language.",
       annotations: {
         readOnlyHint: true,
       },
@@ -496,7 +553,53 @@ export function createMcpServer(): McpServer {
     async ({ audience, state, practice_area, ai_tool, limit }) => {
       const matches = matchContextCases({ state, practice_area, ai_tool, limit });
       return {
-        content: [{ type: "text", text: formatPolicyGapReport(matches, audience) }],
+        content: [{ type: "text", text: formatPolicyGapReport(matches, audience, meta) }],
+      };
+    },
+  );
+
+  server.registerTool(
+    "generate_ai_filing_workflow",
+    {
+      title: "Generate AI Filing Workflow",
+      description:
+        "Use this when a user asks for the exact workflow, implementation plan, next-week controls, operational rollout, or what the firm/professional should actually do. This should be advisory, realistic, source-grounded, and avoid dumping case lists.",
+      annotations: {
+        readOnlyHint: true,
+      },
+      inputSchema: {
+        audience: z.string().default("law firm litigation department"),
+        timeline: z.string().default("next week"),
+        state: z.string().optional(),
+        court: z.string().optional(),
+        practice_area: z.string().optional(),
+        ai_tools: z.array(z.string()).default([]),
+        limit: z.number().int().min(1).max(250).default(100),
+      },
+    },
+    async ({ audience, timeline, state, court, practice_area, ai_tools, limit }) => {
+      const matches = matchContextCases({
+        state,
+        court,
+        practice_area,
+        limit,
+      });
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: formatImplementationWorkflow({
+              caseItems: matches,
+              audience,
+              timeline,
+              state: state?.toUpperCase(),
+              court,
+              aiTools: ai_tools,
+              meta,
+            }),
+          },
+        ],
       };
     },
   );
@@ -506,7 +609,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Visual Summary Data",
       description:
-        "Use this when an assistant should proactively render cards, bars, tables, dashboards, or chart-ready summaries for a jurisdiction, tool, practice area, or issue.",
+        "Use this when an assistant should proactively render cards, bars, tables, dashboards, chart-ready summaries, or managing-partner visual summaries for a jurisdiction, tool, practice area, or issue. Return source-backed top cases and chart-ready JSON.",
       annotations: {
         readOnlyHint: true,
       },
@@ -523,7 +626,7 @@ export function createMcpServer(): McpServer {
     async ({ title, state, court, practice_area, ai_tool, issue, limit }) => {
       const matches = matchContextCases({ state, court, practice_area, ai_tool, issue, limit });
       return {
-        content: [{ type: "text", text: formatVisualSummaryData(matches, title) }],
+        content: [{ type: "text", text: formatVisualSummaryData(matches, title, meta) }],
       };
     },
   );

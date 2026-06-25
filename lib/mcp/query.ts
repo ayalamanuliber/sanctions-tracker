@@ -10,10 +10,54 @@ export interface CaseFilters {
   search?: string;
 }
 
-export function filterCases(cases: PublicSanctionCase[], filters: CaseFilters): PublicSanctionCase[] {
-  const search = filters.search?.trim().toLowerCase();
+function normalizeSearch(value: string): string {
+  return value
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\bversus\b/g, " v ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
-  return cases.filter((item) => {
+function searchableText(item: PublicSanctionCase): string {
+  return [
+    item.case_name,
+    item.court,
+    item.judge,
+    item.summary,
+    item.ai_tool_used,
+    item.tags.join(" "),
+    item.policy_gap_ids.join(" "),
+    item.source_name,
+    item.source_url,
+  ].join(" ");
+}
+
+function searchScore(item: PublicSanctionCase, search: string, searchTerms: string[]): number {
+  const name = normalizeSearch(item.case_name);
+  const court = normalizeSearch(item.court);
+  const source = normalizeSearch(`${item.source_name || ""} ${item.source_url || ""}`);
+  const full = normalizeSearch(searchableText(item));
+
+  let score = 0;
+  if (name === search) score += 500;
+  if (name.includes(search)) score += 300;
+  if (searchTerms.every((term) => name.includes(term))) score += 200;
+  if (court.includes(search)) score += 60;
+  if (source.includes(search)) score += 30;
+  if (full.includes(search)) score += 20;
+  score += searchTerms.filter((term) => full.includes(term)).length;
+
+  return score;
+}
+
+export function filterCases(cases: PublicSanctionCase[], filters: CaseFilters): PublicSanctionCase[] {
+  const search = normalizeSearch(filters.search || "");
+  const searchTerms = search.split(" ").filter((term) => term.length > 1);
+
+  const filtered = cases.filter((item) => {
     if (filters.jurisdiction && item.jurisdiction !== filters.jurisdiction) {
       return false;
     }
@@ -35,26 +79,24 @@ export function filterCases(cases: PublicSanctionCase[], filters: CaseFilters): 
     if (filters.sanctionType && !item.sanction_types.includes(filters.sanctionType)) {
       return false;
     }
-    if (search) {
-      const haystack = [
-        item.case_name,
-        item.court,
-        item.judge,
-        item.summary,
-        item.ai_tool_used,
-        item.tags.join(" "),
-        item.policy_gap_ids.join(" "),
-      ]
-        .join(" ")
-        .toLowerCase();
+    if (searchTerms.length > 0) {
+      const normalizedHaystack = normalizeSearch(searchableText(item));
 
-      if (!haystack.includes(search)) {
+      if (!normalizedHaystack.includes(search) && !searchTerms.every((term) => normalizedHaystack.includes(term))) {
         return false;
       }
     }
 
     return true;
   });
+
+  if (searchTerms.length === 0) {
+    return filtered;
+  }
+
+  return filtered.sort(
+    (a, b) => searchScore(b, search, searchTerms) - searchScore(a, search, searchTerms) || b.date.localeCompare(a.date),
+  );
 }
 
 export function limitCases(cases: PublicSanctionCase[], limit: number): PublicSanctionCase[] {

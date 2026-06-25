@@ -802,7 +802,7 @@ export function formatDashboardDeepLink(params: {
   meta?: PublicMeta;
 }): string {
   const { baseUrl, state, court, audience, caseItems, meta } = params;
-  const url = new URL(baseUrl);
+  const url = new URL("/dashboard", baseUrl);
   if (state) url.searchParams.set("state", state.toUpperCase());
   if (court) url.searchParams.set("court", court);
   if (audience) url.searchParams.set("audience", audience);
@@ -872,10 +872,20 @@ export function formatReportArtifact(params: {
   court?: string;
   format?: string;
   meta?: PublicMeta;
+  baseUrl?: string;
 }): string {
-  const { reportType, audience, caseItems, state, court, format = "markdown", meta } = params;
+  const { reportType, audience, caseItems, state, court, format = "markdown", meta, baseUrl } = params;
   const failures = rankedEntries(countBy(riskTags(caseItems)), 5);
   const gaps = rankedEntries(countBy(caseItems.flatMap((item) => item.policy_gap_ids)), 5);
+  const downloads = baseUrl
+    ? [
+        "",
+        "## Downloads",
+        `- Markdown: ${artifactUrl(baseUrl, { type: "report", format: "md", title: reportType, audience, state, court })}`,
+        `- Word-compatible: ${artifactUrl(baseUrl, { type: "report", format: "doc", title: reportType, audience, state, court })}`,
+        `- PDF: ${artifactUrl(baseUrl, { type: "report", format: "pdf", title: reportType, audience, state, court })}`,
+      ]
+    : [];
 
   return [
     `# ${reportType || "AI Filing Risk Report"}`,
@@ -902,6 +912,7 @@ export function formatReportArtifact(params: {
     "",
     "## Recommended Next Step",
     "Use this report as the draft artifact. For distribution, convert it to Word/PDF and attach the source appendix.",
+    ...downloads,
   ].join("\n");
 }
 
@@ -912,8 +923,19 @@ export function formatImplementationPackage(params: {
   court?: string;
   aiTools?: string[];
   meta?: PublicMeta;
+  baseUrl?: string;
 }): string {
-  const { caseItems, audience, state, court, aiTools = [], meta } = params;
+  const { caseItems, audience, state, court, aiTools = [], meta, baseUrl } = params;
+  const links = baseUrl
+    ? [
+        "",
+        "Working links",
+        `- Dashboard: ${dashboardUrl(baseUrl, { state, court, audience })}`,
+        `- Policy memo PDF: ${artifactUrl(baseUrl, { type: "report", format: "pdf", audience, state, court })}`,
+        `- Verification ledger: ${artifactUrl(baseUrl, { type: "ledger", format: "doc", state, court, aiTool: aiTools.join(", ") })}`,
+        `- Source appendix: ${artifactUrl(baseUrl, { type: "source", format: "md", state, court })}`,
+      ]
+    : [];
   return [
     "AI Vortex implementation package",
     "",
@@ -935,7 +957,46 @@ export function formatImplementationPackage(params: {
     "- Verification ledger template",
     "- Source appendix",
     "- Dashboard link for leadership",
+    ...links,
   ].join("\n");
+}
+
+function artifactUrl(
+  baseUrl: string,
+  params: {
+    type: string;
+    format: string;
+    title?: string;
+    audience?: string;
+    state?: string;
+    court?: string;
+    aiTool?: string;
+  },
+): string {
+  const url = new URL("/api/artifact", baseUrl);
+  url.searchParams.set("type", params.type);
+  url.searchParams.set("format", params.format);
+  if (params.title) url.searchParams.set("title", params.title);
+  if (params.audience) url.searchParams.set("audience", params.audience);
+  if (params.state) url.searchParams.set("state", params.state);
+  if (params.court) url.searchParams.set("court", params.court);
+  if (params.aiTool) url.searchParams.set("ai_tool", params.aiTool);
+  return url.toString();
+}
+
+function dashboardUrl(
+  baseUrl: string,
+  params: {
+    state?: string;
+    court?: string;
+    audience?: string;
+  },
+): string {
+  const url = new URL("/dashboard", baseUrl);
+  if (params.state) url.searchParams.set("state", params.state);
+  if (params.court) url.searchParams.set("court", params.court);
+  if (params.audience) url.searchParams.set("audience", params.audience);
+  return url.toString();
 }
 
 export function formatVisualSummaryData(caseItems: PublicSanctionCase[], title: string, meta?: PublicMeta): string {

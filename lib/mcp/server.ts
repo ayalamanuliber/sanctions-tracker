@@ -681,6 +681,7 @@ export function createMcpServer(): McpServer {
               court,
               format,
               meta,
+              baseUrl: publicBaseUrl,
             }),
           },
         ],
@@ -703,14 +704,27 @@ export function createMcpServer(): McpServer {
         ai_tools: z.array(z.string()).default([]),
       },
     },
-    async ({ title, court, ai_tools }) => ({
-      content: [
-        {
-          type: "text",
-          text: formatVerificationLedgerTemplate({ title, court, aiTools: ai_tools }),
-        },
-      ],
-    }),
+    async ({ title, court, ai_tools }) => {
+      const url = new URL("/api/artifact", publicBaseUrl);
+      url.searchParams.set("type", "ledger");
+      url.searchParams.set("format", "doc");
+      if (title) url.searchParams.set("title", title);
+      if (court) url.searchParams.set("court", court);
+      if (ai_tools.length > 0) url.searchParams.set("ai_tool", ai_tools.join(", "));
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: [
+              formatVerificationLedgerTemplate({ title, court, aiTools: ai_tools }),
+              "",
+              `Download Word-compatible ledger: ${url.toString()}`,
+            ].join("\n"),
+          },
+        ],
+      };
+    },
   );
 
   server.registerTool(
@@ -733,8 +747,16 @@ export function createMcpServer(): McpServer {
     },
     async ({ title, state, court, practice_area, ai_tool, limit }) => {
       const matches = matchContextCases({ state, court, practice_area, ai_tool, limit });
+      const url = new URL("/api/artifact", publicBaseUrl);
+      url.searchParams.set("type", "source");
+      url.searchParams.set("format", "md");
+      url.searchParams.set("title", title);
+      if (state) url.searchParams.set("state", state.toUpperCase());
+      if (court) url.searchParams.set("court", court);
+      if (practice_area) url.searchParams.set("practice_area", practice_area);
+      if (ai_tool) url.searchParams.set("ai_tool", ai_tool);
       return {
-        content: [{ type: "text", text: formatSourceAppendix(matches, title, meta) }],
+        content: [{ type: "text", text: `${formatSourceAppendix(matches, title, meta)}\n\nDownload source appendix: ${url.toString()}` }],
       };
     },
   );
@@ -770,6 +792,7 @@ export function createMcpServer(): McpServer {
               court,
               aiTools: ai_tools,
               meta,
+              baseUrl: publicBaseUrl,
             }),
           },
         ],

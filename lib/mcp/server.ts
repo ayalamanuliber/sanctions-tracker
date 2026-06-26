@@ -417,7 +417,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Setup User Profile",
       description:
-        "Use this when a legal professional, firm, court, vendor, or legal operations user wants AI Vortex to remember session context such as role, jurisdictions, AI tools, output preferences, artifact preferences, dashboard preferences, and risk posture. This is session-level unless persistent storage is separately available.",
+        "Legacy compatibility tool. Prefer set_session_preferences for new calls. Use only for lightweight, non-persistent current-session context. This does not store personal data, client data, or persistent firm profile information.",
       annotations: {
         readOnlyHint: true,
       },
@@ -457,6 +457,74 @@ export function createMcpServer(): McpServer {
             dashboardPreference: dashboard_preference,
             outputLength: output_length_preference,
             riskPosture: risk_posture,
+            meta,
+          }),
+        },
+      ],
+    }),
+  );
+
+  server.registerTool(
+    "set_session_preferences",
+    {
+      title: "Set Session Preferences",
+      description:
+        "Configure non-persistent response preferences for the current MCP request/session. This does not store personal data, client data, or create persistent memory. Prefer compact enum/boolean fields instead of rich free-text profile data.",
+      annotations: {
+        readOnlyHint: true,
+      },
+      inputSchema: {
+        role: z.enum([
+          "managing_partner",
+          "litigation_partner",
+          "associate",
+          "judge_chambers",
+          "gc_legal_ops",
+          "legal_vendor",
+          "insurer_risk",
+          "researcher",
+          "legal_professional",
+        ]).default("legal_professional"),
+        organization_type: z.enum(["law_firm", "court", "in_house", "vendor", "insurer", "research", "other"]).default("law_firm"),
+        jurisdictions: z.array(z.string()).default([]),
+        courts: z.array(z.string()).default([]),
+        ai_tools: z.array(z.string()).default([]),
+        output_length: z.enum(["concise", "standard", "detailed"]).default("concise"),
+        include_tables: z.boolean().default(true),
+        include_case_links: z.boolean().default(true),
+        recommend_artifacts: z.boolean().default(true),
+        prefer_workflow_controls: z.boolean().default(true),
+        caution_level: z.enum(["standard", "high"]).default("high"),
+      },
+    },
+    async ({
+      role,
+      organization_type,
+      jurisdictions,
+      courts,
+      ai_tools,
+      output_length,
+      include_tables,
+      include_case_links,
+      recommend_artifacts,
+      prefer_workflow_controls,
+      caution_level,
+    }) => ({
+      content: [
+        {
+          type: "text",
+          text: formatProfileSetup({
+            role,
+            organizationType: organization_type,
+            jurisdictions,
+            courts,
+            aiTools: ai_tools,
+            outputLength: output_length,
+            includeTables: include_tables,
+            includeCaseLinks: include_case_links,
+            recommendArtifacts: recommend_artifacts,
+            preferWorkflowControls: prefer_workflow_controls,
+            cautionLevel: caution_level,
             meta,
           }),
         },

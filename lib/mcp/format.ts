@@ -1341,6 +1341,11 @@ export function formatProfileSetup(params: {
   dashboardPreference?: string;
   outputLength?: string;
   riskPosture?: string;
+  includeTables?: boolean;
+  includeCaseLinks?: boolean;
+  recommendArtifacts?: boolean;
+  preferWorkflowControls?: boolean;
+  cautionLevel?: string;
   meta?: PublicMeta;
 }): string {
   const {
@@ -1353,6 +1358,11 @@ export function formatProfileSetup(params: {
     dashboardPreference,
     outputLength,
     riskPosture,
+    includeTables,
+    includeCaseLinks,
+    recommendArtifacts,
+    preferWorkflowControls,
+    cautionLevel,
     meta,
   } = params;
 
@@ -1360,18 +1370,20 @@ export function formatProfileSetup(params: {
     "AI Vortex session profile",
     "",
     "Persistence note",
-    "- I can apply this profile for the current chat/session. Persistent saved firm profiles require an account/storage layer and are not assumed here.",
+    "- These are non-persistent response preferences for the current request/session. This does not store personal data, client data, or a persistent firm profile.",
     "",
-    "Profile captured",
+    "Context captured",
     `- Role: ${role || "legal professional"}`,
     `- Organization type: ${organizationType || "not specified"}`,
     `- Jurisdictions: ${jurisdictions.length > 0 ? jurisdictions.join(", ") : "not specified"}`,
     `- Courts: ${courts.length > 0 ? courts.join(", ") : "not specified"}`,
     `- AI tools: ${aiTools.length > 0 ? aiTools.join(", ") : "not specified"}`,
     `- Output length: ${outputLength || "concise advisor answers first"}`,
-    `- Artifact preference: ${artifactPreference || "recommend reusable artifacts when output is operational"}`,
-    `- Dashboard preference: ${dashboardPreference || "include for leadership, comparison, and visual summaries"}`,
-    `- Risk posture: ${riskPosture || "balanced but conservative for court-facing work"}`,
+    `- Artifact preference: ${artifactPreference || (recommendArtifacts === false ? "do not recommend artifacts by default" : "recommend reusable artifacts when output is operational")}`,
+    `- Dashboard preference: ${dashboardPreference || (includeTables === false ? "text-first unless asked" : "include tables/visual summaries where helpful")}`,
+    `- Case links: ${includeCaseLinks === false ? "do not include by default" : "include source links for named cases when available"}`,
+    `- Workflow controls: ${preferWorkflowControls === false ? "standard analysis" : "prefer operational workflow controls over generic advice"}`,
+    `- Caution level: ${cautionLevel || riskPosture || "standard/high for court-facing work"}`,
     "",
     "How I will use it",
     "- Keep answers concise unless you ask for a full report.",

@@ -93,6 +93,23 @@ export default async function DashboardPage({ searchParams }: PageProps) {
           ))}
         </section>
 
+        <section style={{ border: "1px solid #1f2937", background: "#111827", padding: 16, marginBottom: 24 }}>
+          <div style={{ color: "#94a3b8", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 10 }}>
+            Active filters
+          </div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, fontSize: 13 }}>
+            {[
+              state ? `state=${state}` : "state=all",
+              court ? `court=${court}` : "court=all",
+              practiceArea ? `practice_area=${practiceArea}` : "practice_area=all",
+              aiTool ? `ai_tool=${aiTool}` : "ai_tool=all",
+              `audience=${audience}`,
+            ].map((item) => (
+              <span key={item} style={{ border: "1px solid #334155", padding: "6px 8px", color: "#cbd5e1" }}>{item}</span>
+            ))}
+          </div>
+        </section>
+
         <section style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 24 }}>
           <div style={{ border: "1px solid #1f2937", background: "#111827", padding: 20 }}>
             <h2 style={{ fontSize: 18, marginBottom: 16 }}>Severity Breakdown</h2>

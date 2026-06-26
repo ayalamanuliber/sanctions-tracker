@@ -907,7 +907,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Dashboard Deep Link",
       description:
-        "Use this when the user needs a visual dashboard, managing-partner view, or presentation layer. Return a live AI Vortex dashboard URL with filters and a short evidence note instead of trying to make a long text dashboard.",
+        "Use this when the user needs a visual dashboard, managing-partner view, deterministic cards/tables, or a presentation layer. Return a live AI Vortex dashboard URL with filters and a short evidence note. Do not ask the host to generate an image unless the user explicitly asks for an image.",
       annotations: {
         readOnlyHint: true,
       },
@@ -1102,7 +1102,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Visual Summary Data",
       description:
-        "Use this when an assistant should proactively render cards, bars, tables, dashboards, chart-ready summaries, or managing-partner visual summaries for a jurisdiction, tool, practice area, or issue. Return source-backed top cases and chart-ready JSON.",
+        "Use this when an assistant should render deterministic executive cards, bars, tables, dashboards, chart-ready summaries, or managing-partner visual summaries for a jurisdiction, tool, practice area, or issue. Return source-backed top cases and chart-ready JSON. Do not rely on generated images unless the user explicitly asks for an image.",
       annotations: {
         readOnlyHint: true,
       },
@@ -1119,7 +1119,17 @@ export function createMcpServer(): McpServer {
     async ({ title, state, court, practice_area, ai_tool, issue, limit }) => {
       const { caseItems, evidence } = resolveContextCases({ state, court, practice_area, ai_tool, issue, limit });
       return {
-        content: [{ type: "text", text: formatVisualSummaryData(caseItems, title, meta, evidence, publicBaseUrl) }],
+        content: [
+          {
+            type: "text",
+            text: formatVisualSummaryData(caseItems, title, meta, evidence, publicBaseUrl, {
+              state: state?.toUpperCase(),
+              court,
+              practiceArea: practice_area,
+              aiTool: ai_tool,
+            }),
+          },
+        ],
       };
     },
   );

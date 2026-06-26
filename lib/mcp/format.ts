@@ -196,12 +196,16 @@ function sourceCoverage(caseItems: PublicSanctionCase[]): { withSource: number; 
 
 function provenanceBlock(caseItems: PublicSanctionCase[], meta?: PublicMeta, evidence?: EvidenceNoteInput): string[] {
   const coverage = sourceCoverage(caseItems);
+  const exact = evidence?.exactMatchCount ?? caseItems.length;
+  const fallback = evidence?.fallbackUsed ? "yes" : "no";
+  const updated = meta?.last_updated || "not provided";
   return [
     "Evidence note",
+    `- Summary: exact matches: ${exact}; fallback used: ${fallback}; source coverage: ${coverage.withSource}/${coverage.total} (${coverage.pct}%); tracker updated: ${updated}; public incidents are not usage-adjusted rates.`,
     `- Corpus: AI Vortex legal AI risk tracker${meta ? `, ${meta.total_cases.toLocaleString("en-US")} tracked global matters` : ""}`,
-    `- Corpus last updated: ${meta?.last_updated || "not provided in this response"}`,
-    `- Exact matches: ${evidence?.exactMatchCount ?? caseItems.length}`,
-    `- Fallback used: ${evidence?.fallbackUsed ? "yes" : "no"}`,
+    `- Corpus last updated: ${updated}`,
+    `- Exact matches: ${exact}`,
+    `- Fallback used: ${fallback}`,
     ...(evidence?.fallbackUsed
       ? [
           `- Fallback level: ${evidence.fallbackLevel || "broader matched evidence"}`,
@@ -290,6 +294,9 @@ function formatArtifactLinks(
 
   if (["jurisdiction", "comparison", "dashboard", "package", "policy", "tool"].includes(params.scenario)) {
     rows.add(`- Dashboard: ${dashboardUrl(baseUrl, { state: params.state, court: params.court, audience: params.audience, aiTool: params.aiTool, practiceArea: params.practiceArea })}`);
+  }
+  if (["jurisdiction", "comparison", "dashboard"].includes(params.scenario)) {
+    rows.add(`- Map view: ${mapUrl(baseUrl, { state: params.state, aiTool: params.aiTool })}`);
   }
   if (["jurisdiction", "comparison", "policy", "tool", "dashboard", "package"].includes(params.scenario)) {
     rows.add(`- PDF-ready report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "pdf" })}`);
@@ -1247,12 +1254,32 @@ function dashboardUrl(
   return url.toString();
 }
 
+function mapUrl(
+  baseUrl: string,
+  params: {
+    state?: string;
+    aiTool?: string;
+  },
+): string {
+  const url = new URL("/map", baseUrl);
+  url.searchParams.set("metric", "cases");
+  if (params.state) url.searchParams.set("states", params.state);
+  if (params.aiTool) url.searchParams.set("tool", params.aiTool);
+  return url.toString();
+}
+
 export function formatVisualSummaryData(
   caseItems: PublicSanctionCase[],
   title: string,
   meta?: PublicMeta,
   evidence?: EvidenceNoteInput,
   baseUrl?: string,
+  filters: {
+    state?: string;
+    court?: string;
+    practiceArea?: string;
+    aiTool?: string;
+  } = {},
 ): string {
   const payload = {
     title,
@@ -1320,6 +1347,10 @@ export function formatVisualSummaryData(
       scenario: "dashboard",
       title,
       audience: "managing_partner",
+      state: filters.state,
+      court: filters.court,
+      practiceArea: filters.practiceArea,
+      aiTool: filters.aiTool,
     }),
     "",
     ...naturalNextAction([

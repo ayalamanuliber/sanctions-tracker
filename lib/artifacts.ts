@@ -2,7 +2,7 @@ import sanctionsRaw from "@/data/sanctions.json";
 import metaRaw from "@/data/meta.json";
 import type { PublicSanctionCase } from "@/lib/mcp/types";
 
-type ArtifactFormat = "md" | "markdown" | "html" | "doc" | "word" | "pdf";
+type ArtifactFormat = "md" | "markdown" | "html" | "doc" | "word" | "pdf" | "docx";
 
 const cases = (sanctionsRaw as unknown as PublicSanctionCase[]).slice().sort((a, b) => b.date.localeCompare(a.date));
 const meta = metaRaw as {
@@ -278,6 +278,20 @@ export function markdownToHtml(markdown: string): string {
     .join("\n");
 
   return `<!doctype html><html><head><meta charset="utf-8"><title>AI Vortex Artifact</title><style>body{font-family:Arial,sans-serif;line-height:1.45;max-width:900px;margin:40px auto;padding:0 24px;color:#111827}h1{font-size:28px}h2{font-size:18px;margin-top:28px}pre{background:#f3f4f6;padding:8px;white-space:pre-wrap}li{margin:6px 0}</style></head><body>${html}</body></html>`;
+}
+
+export function unsupportedArtifactMessage(format: string): string {
+  return [
+    `Unsupported artifact format: ${format}`,
+    "",
+    "DOCX export is not available yet. Supported formats are:",
+    "- Markdown: format=md",
+    "- HTML: format=html",
+    "- Word-compatible HTML document: format=doc",
+    "- Basic PDF: format=pdf",
+    "",
+    "Use format=doc for a Word-compatible file, or format=md for clean copy/paste into Word or Google Docs.",
+  ].join("\n");
 }
 
 function pdfEscape(value: string): string {

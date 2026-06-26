@@ -6,6 +6,7 @@ import {
   markdownToBasicPdf,
   markdownToHtml,
   readArtifactParams,
+  unsupportedArtifactMessage,
 } from "@/lib/artifacts";
 
 export const runtime = "nodejs";
@@ -15,6 +16,11 @@ export async function GET(request: NextRequest): Promise<Response> {
   const params = readArtifactParams(request.nextUrl.searchParams);
   const markdown = buildArtifactMarkdown(params);
   const headers = new Headers();
+
+  if (params.format === "docx") {
+    headers.set("content-type", "text/plain; charset=utf-8");
+    return new Response(unsupportedArtifactMessage(params.format), { status: 415, headers });
+  }
 
   if (params.format === "pdf") {
     headers.set("content-type", "application/pdf");

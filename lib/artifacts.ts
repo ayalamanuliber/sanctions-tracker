@@ -171,6 +171,46 @@ export function buildArtifactMarkdown(params: {
     ].join("\n");
   }
 
+  if (type === "opposing") {
+    return [
+      `# ${title}`,
+      "",
+      `Audience: ${params.audience || "litigation team"}`,
+      `Scope: ${[params.court, params.state, params.aiTool, params.practiceArea].filter(Boolean).join(" / ") || "opposing filing integrity review"}`,
+      "",
+      "## Guardrail",
+      "Do not allege that opposing counsel used AI unless there is independent evidence. Focus on verified citation, quote, and proposition discrepancies.",
+      "",
+      "## Discrepancy Matrix",
+      "| Item | Citation / quote | Problem type | Verification step | Severity | Evidence needed | Recommended action |",
+      "| --- | --- | --- | --- | --- | --- | --- |",
+      "| 1 |  | fake_case / fake_quote / unsupported_proposition / bad_pincite / unclear | Check primary source and cited page | low / medium / high / critical | Filed brief, source PDF, quote comparison | Correct request / meet-and-confer / court notice |",
+      "| 2 |  | fake_case / fake_quote / unsupported_proposition / bad_pincite / unclear | Check proposition support | low / medium / high / critical | Source text and brief excerpt | Preserve and escalate proportionally |",
+      "",
+      "## Preservation Steps",
+      "- Save the filed brief exactly as filed.",
+      "- Save PDFs or screenshots of each cited authority checked.",
+      "- Create a side-by-side quote/proposition comparison.",
+      "- Preserve meet-and-confer correspondence and timestamps.",
+      "- Keep the review neutral until the evidentiary record is clean.",
+      "",
+      "## Meet-and-Confer Draft",
+      "Counsel, we are reviewing the authorities cited at [pages/sections]. We have not been able to locate the quoted language/proposition in the cited opinions. Please identify the source text or confirm whether a correction is needed by [date/time]. We are not making assumptions about how the issue arose; we are asking to resolve the authority discrepancy before raising it with the Court.",
+      "",
+      "## Escalation Matrix",
+      "- Minor or isolated mismatch: request correction and preserve the record.",
+      "- Material quote/proposition problem: meet and confer, then seek leave or file a narrow notice if unresolved.",
+      "- Nonexistent authority or repeated fabricated text: prepare a targeted motion/OSC request focused on verified discrepancies.",
+      "- Bad-faith denial after notice: consider sanctions only with a clean evidentiary record.",
+      "",
+      "## Source-Backed Examples",
+      ...importantCases(caseItems, 5).map(
+        (item) =>
+          `- ${item.case_name} (${item.date}, ${item.court}): ${item.severity}; ${item.sanction_types.join(", ") || "no sanction listed"}${item.amount_display ? ` / ${item.amount_display}` : ""}\n  Source: ${item.source_url || "Unavailable"}`,
+      ),
+    ].join("\n");
+  }
+
   const failures = rankedEntries(countBy(failureTags(caseItems)), 6);
   const gaps = rankedEntries(countBy(caseItems.flatMap((item) => item.policy_gap_ids)), 6);
   const examples = importantCases(caseItems, type === "source" ? 12 : 5);
@@ -188,6 +228,7 @@ export function buildArtifactMarkdown(params: {
     `- Date coverage: ${dateCoverage(caseItems)}`,
     `- Source-link coverage: ${sourceCoverage(caseItems)}`,
     "- Boundary: tracked public incidents are evidence of observed risk patterns, not usage-adjusted incident rates or legal advice.",
+    ...(caseItems.length === 0 ? ["- Warning: this artifact has no matched cases under the current filters. Broaden filters before treating it as complete."] : []),
     "",
     ...(type === "package"
       ? [

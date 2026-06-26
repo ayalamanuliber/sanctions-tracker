@@ -6,6 +6,7 @@ import metaRaw from "@/data/meta.json";
 import {
   formatCase,
   formatChecklist,
+  formatControlMaturityScore,
   formatDashboardDeepLink,
   formatImplementationWorkflow,
   formatImplementationPackage,
@@ -14,6 +15,7 @@ import {
   formatMeta,
   formatOpposingFilingReview,
   formatPolicyGapReport,
+  formatProfileSetup,
   formatPrefilingReviewPacket,
   formatReportArtifact,
   formatSourceAppendix,
@@ -23,6 +25,7 @@ import {
   formatVerificationLedgerTemplate,
   formatVisualSummaryData,
 } from "./format";
+import type { EvidenceNoteInput } from "./format";
 import { filterCases, limitCases } from "./query";
 import type { PublicSanctionCase } from "./types";
 
@@ -94,6 +97,96 @@ function matchContextCases(input: {
   });
 
   return limitCases(results, limit);
+}
+
+function resolveContextCases(input: {
+  state?: string;
+  court?: string;
+  practice_area?: string;
+  ai_tool?: string;
+  issue?: string;
+  limit?: number;
+}): { caseItems: PublicSanctionCase[]; evidence: EvidenceNoteInput } {
+  const exact = matchContextCases(input);
+  if (exact.length > 0) {
+    return {
+      caseItems: exact,
+      evidence: { exactMatchCount: exact.length, fallbackUsed: false },
+    };
+  }
+
+  const candidates: Array<{
+    level: string;
+    reason: string;
+    filters: Parameters<typeof matchContextCases>[0];
+  }> = [];
+
+  if (input.state) {
+    candidates.push({
+      level: "same_jurisdiction_broader",
+      reason: "No exact tracked matters matched all requested filters; broadened to the requested state.",
+      filters: { state: input.state, limit: input.limit },
+    });
+  }
+  if (input.court) {
+    candidates.push({
+      level: "same_court_broader",
+      reason: "No exact tracked matters matched all requested filters; broadened to the requested court.",
+      filters: { court: input.court, limit: input.limit },
+    });
+  }
+  if (input.practice_area) {
+    candidates.push({
+      level: "same_practice_area",
+      reason: "No exact tracked matters matched all requested filters; broadened to the requested practice area.",
+      filters: { practice_area: input.practice_area, limit: input.limit },
+    });
+  }
+  if (input.issue) {
+    candidates.push({
+      level: "same_failure_mode",
+      reason: "No exact tracked matters matched all requested filters; broadened to similar issue/failure-mode matters.",
+      filters: { issue: input.issue, limit: input.limit },
+    });
+  }
+  if (input.ai_tool) {
+    candidates.push({
+      level: "same_tool",
+      reason: "No exact tracked matters matched all requested filters; broadened to matters involving the requested AI tool.",
+      filters: { ai_tool: input.ai_tool, limit: input.limit },
+    });
+  }
+
+  candidates.push({
+    level: "national_or_global_analogue",
+    reason: "No exact or close contextual matches were found; using recent high-signal tracker matters as analogues.",
+    filters: { limit: input.limit },
+  });
+
+  for (const candidate of candidates) {
+    const caseItems = matchContextCases(candidate.filters);
+    if (caseItems.length > 0) {
+      return {
+        caseItems,
+        evidence: {
+          exactMatchCount: 0,
+          fallbackUsed: true,
+          fallbackLevel: candidate.level,
+          fallbackReason: candidate.reason,
+        },
+      };
+    }
+  }
+
+  return {
+    caseItems: [],
+    evidence: {
+      exactMatchCount: 0,
+      fallbackUsed: true,
+      fallbackLevel: "no_tracked_analogue",
+      fallbackReason: "No exact or broader tracked matters were found.",
+    },
+  };
 }
 
 export function createMcpServer(): McpServer {
@@ -320,6 +413,58 @@ export function createMcpServer(): McpServer {
   );
 
   server.registerTool(
+    "setup_user_profile",
+    {
+      title: "Setup User Profile",
+      description:
+        "Use this when a legal professional, firm, court, vendor, or legal operations user wants AI Vortex to remember session context such as role, jurisdictions, AI tools, output preferences, artifact preferences, dashboard preferences, and risk posture. This is session-level unless persistent storage is separately available.",
+      annotations: {
+        readOnlyHint: true,
+      },
+      inputSchema: {
+        role: z.string().optional(),
+        organization_type: z.string().optional(),
+        jurisdictions: z.array(z.string()).default([]),
+        courts: z.array(z.string()).default([]),
+        ai_tools: z.array(z.string()).default([]),
+        artifact_preference: z.string().optional(),
+        dashboard_preference: z.string().optional(),
+        output_length_preference: z.string().optional(),
+        risk_posture: z.string().optional(),
+      },
+    },
+    async ({
+      role,
+      organization_type,
+      jurisdictions,
+      courts,
+      ai_tools,
+      artifact_preference,
+      dashboard_preference,
+      output_length_preference,
+      risk_posture,
+    }) => ({
+      content: [
+        {
+          type: "text",
+          text: formatProfileSetup({
+            role,
+            organizationType: organization_type,
+            jurisdictions,
+            courts,
+            aiTools: ai_tools,
+            artifactPreference: artifact_preference,
+            dashboardPreference: dashboard_preference,
+            outputLength: output_length_preference,
+            riskPosture: risk_posture,
+            meta,
+          }),
+        },
+      ],
+    }),
+  );
+
+  server.registerTool(
     "get_jurisdiction_risk_brief",
     {
       title: "Get Jurisdiction Risk Brief",
@@ -336,17 +481,19 @@ export function createMcpServer(): McpServer {
       },
     },
     async ({ state, court, practice_area, limit }) => {
-      const matches = matchContextCases({ state, court, practice_area, limit });
+      const { caseItems, evidence } = resolveContextCases({ state, court, practice_area, limit });
       return {
         content: [
           {
             type: "text",
             text: formatJurisdictionRiskBrief({
-              caseItems: matches,
+              caseItems,
               state: state?.toUpperCase(),
               court,
               practiceArea: practice_area,
               meta,
+              evidence,
+              baseUrl: publicBaseUrl,
             }),
           },
         ],
@@ -372,22 +519,30 @@ export function createMcpServer(): McpServer {
     },
     async ({ states, courts, practice_area, limit_per_jurisdiction }) => {
       const profiles = [
-        ...(states || []).map((state) => ({
-          label: state.toUpperCase(),
-          caseItems: matchContextCases({
+        ...(states || []).map((state) => {
+          const result = resolveContextCases({
             state,
             practice_area,
             limit: limit_per_jurisdiction,
-          }),
-        })),
-        ...(courts || []).map((court) => ({
-          label: court,
-          caseItems: matchContextCases({
+          });
+          return {
+            label: state.toUpperCase(),
+            caseItems: result.caseItems,
+            evidence: result.evidence,
+          };
+        }),
+        ...(courts || []).map((court) => {
+          const result = resolveContextCases({
             court,
             practice_area,
             limit: limit_per_jurisdiction,
-          }),
-        })),
+          });
+          return {
+            label: court,
+            caseItems: result.caseItems,
+            evidence: result.evidence,
+          };
+        }),
       ];
 
       return {
@@ -396,7 +551,7 @@ export function createMcpServer(): McpServer {
             type: "text",
             text:
               profiles.length > 0
-                ? formatJurisdictionComparison({ profiles, meta })
+                ? formatJurisdictionComparison({ profiles, meta, baseUrl: publicBaseUrl })
                 : "Provide at least two states or two courts to compare.",
           },
         ],
@@ -421,9 +576,9 @@ export function createMcpServer(): McpServer {
       },
     },
     async ({ ai_tool, state, practice_area, limit }) => {
-      const matches = matchContextCases({ ai_tool, state, practice_area, limit });
+      const { caseItems, evidence } = resolveContextCases({ ai_tool, state, practice_area, limit });
       return {
-        content: [{ type: "text", text: formatToolRiskProfile(matches, ai_tool, meta) }],
+        content: [{ type: "text", text: formatToolRiskProfile(caseItems, ai_tool, meta, evidence, publicBaseUrl) }],
       };
     },
   );
@@ -445,15 +600,15 @@ export function createMcpServer(): McpServer {
       },
     },
     async ({ ai_tools, state, practice_area, limit_per_tool }) => {
-      const profiles = ai_tools.map((tool) => ({
-        tool,
-        caseItems: matchContextCases({
+      const profiles = ai_tools.map((tool) => {
+        const result = resolveContextCases({
           ai_tool: tool,
           state,
           practice_area,
           limit: limit_per_tool,
-        }),
-      }));
+        });
+        return { tool, caseItems: result.caseItems, evidence: result.evidence };
+      });
 
       return {
         content: [
@@ -464,6 +619,7 @@ export function createMcpServer(): McpServer {
               state: state?.toUpperCase(),
               practiceArea: practice_area,
               meta,
+              baseUrl: publicBaseUrl,
             }),
           },
         ],
@@ -491,16 +647,13 @@ export function createMcpServer(): McpServer {
       },
     },
     async ({ state, court, practice_area, document_type, ai_tool, urgency, limit }) => {
-      let matches = matchContextCases({ state, court, practice_area, ai_tool, limit });
-      if (matches.length === 0 && ai_tool) {
-        matches = matchContextCases({ state, court, practice_area, limit });
-      }
+      const { caseItems, evidence } = resolveContextCases({ state, court, practice_area, ai_tool, limit });
       return {
         content: [
           {
             type: "text",
             text: formatPrefilingReviewPacket({
-              caseItems: matches,
+              caseItems,
               state: state?.toUpperCase(),
               court,
               practiceArea: practice_area,
@@ -508,6 +661,8 @@ export function createMcpServer(): McpServer {
               aiTool: ai_tool,
               urgency,
               meta,
+              evidence,
+              baseUrl: publicBaseUrl,
             }),
           },
         ],
@@ -533,9 +688,9 @@ export function createMcpServer(): McpServer {
       },
     },
     async ({ issue, state, court, practice_area, limit }) => {
-      const matches = matchContextCases({ issue, state, court, practice_area, limit });
+      const { caseItems, evidence } = resolveContextCases({ issue, state, court, practice_area, limit });
       return {
-        content: [{ type: "text", text: formatOpposingFilingReview(matches, issue, meta) }],
+        content: [{ type: "text", text: formatOpposingFilingReview(caseItems, issue, meta, evidence, publicBaseUrl) }],
       };
     },
   );
@@ -558,9 +713,75 @@ export function createMcpServer(): McpServer {
       },
     },
     async ({ audience, state, practice_area, ai_tool, limit }) => {
-      const matches = matchContextCases({ state, practice_area, ai_tool, limit });
+      const { caseItems, evidence } = resolveContextCases({ state, practice_area, ai_tool, limit });
       return {
-        content: [{ type: "text", text: formatPolicyGapReport(matches, audience, meta) }],
+        content: [{ type: "text", text: formatPolicyGapReport(caseItems, audience, meta, evidence, publicBaseUrl) }],
+      };
+    },
+  );
+
+  server.registerTool(
+    "generate_control_maturity_score",
+    {
+      title: "Generate Control Maturity Score",
+      description:
+        "Use this when a firm, court, legal ops team, vendor, GC, insurer, solo practitioner, or risk committee wants an 8-question maturity score for legal AI filing controls. Return a 0-100 score, band, priority gaps, next-week controls, 30-day controls, tracker-backed evidence, and recommended artifacts.",
+      annotations: {
+        readOnlyHint: true,
+      },
+      inputSchema: {
+        audience: z.string().default("legal team"),
+        state: z.string().optional(),
+        court: z.string().optional(),
+        written_policy: z.number().int().min(0).max(3).optional(),
+        citation_verification: z.number().int().min(0).max(3).optional(),
+        quote_verification: z.number().int().min(0).max(3).optional(),
+        proposition_support: z.number().int().min(0).max(3).optional(),
+        disclosure_check: z.number().int().min(0).max(3).optional(),
+        supervisor_signoff: z.number().int().min(0).max(3).optional(),
+        audit_trail: z.number().int().min(0).max(3).optional(),
+        incident_response: z.number().int().min(0).max(3).optional(),
+        limit: z.number().int().min(1).max(250).default(100),
+      },
+    },
+    async ({
+      audience,
+      state,
+      court,
+      written_policy,
+      citation_verification,
+      quote_verification,
+      proposition_support,
+      disclosure_check,
+      supervisor_signoff,
+      audit_trail,
+      incident_response,
+      limit,
+    }) => {
+      const { caseItems, evidence } = resolveContextCases({ state, court, limit });
+      return {
+        content: [
+          {
+            type: "text",
+            text: formatControlMaturityScore({
+              audience,
+              answers: {
+                written_policy,
+                citation_verification,
+                quote_verification,
+                proposition_support,
+                disclosure_check,
+                supervisor_signoff,
+                audit_trail,
+                incident_response,
+              },
+              caseItems,
+              meta,
+              evidence,
+              baseUrl: publicBaseUrl,
+            }),
+          },
+        ],
       };
     },
   );
@@ -585,7 +806,7 @@ export function createMcpServer(): McpServer {
       },
     },
     async ({ audience, timeline, state, court, practice_area, ai_tools, limit }) => {
-      const matches = matchContextCases({
+      const { caseItems, evidence } = resolveContextCases({
         state,
         court,
         practice_area,
@@ -597,13 +818,15 @@ export function createMcpServer(): McpServer {
           {
             type: "text",
             text: formatImplementationWorkflow({
-              caseItems: matches,
+              caseItems,
               audience,
               timeline,
               state: state?.toUpperCase(),
               court,
               aiTools: ai_tools,
               meta,
+              evidence,
+              baseUrl: publicBaseUrl,
             }),
           },
         ],
@@ -625,11 +848,12 @@ export function createMcpServer(): McpServer {
         court: z.string().optional(),
         audience: z.string().optional(),
         practice_area: z.string().optional(),
+        ai_tool: z.string().optional(),
         limit: z.number().int().min(1).max(250).default(100),
       },
     },
-    async ({ state, court, audience, practice_area, limit }) => {
-      const matches = matchContextCases({ state, court, practice_area, limit });
+    async ({ state, court, audience, practice_area, ai_tool, limit }) => {
+      const { caseItems, evidence } = resolveContextCases({ state, court, practice_area, ai_tool, limit });
       return {
         content: [
           {
@@ -639,8 +863,11 @@ export function createMcpServer(): McpServer {
               state: state?.toUpperCase(),
               court,
               audience,
-              caseItems: matches,
+              caseItems,
               meta,
+              evidence,
+              practiceArea: practice_area,
+              aiTool: ai_tool,
             }),
           },
         ],
@@ -668,7 +895,7 @@ export function createMcpServer(): McpServer {
       },
     },
     async ({ report_type, audience, state, court, practice_area, format, limit }) => {
-      const matches = matchContextCases({ state, court, practice_area, limit });
+      const { caseItems, evidence } = resolveContextCases({ state, court, practice_area, limit });
       return {
         content: [
           {
@@ -676,12 +903,13 @@ export function createMcpServer(): McpServer {
             text: formatReportArtifact({
               reportType: report_type,
               audience,
-              caseItems: matches,
+              caseItems,
               state: state?.toUpperCase(),
               court,
               format,
               meta,
               baseUrl: publicBaseUrl,
+              evidence,
             }),
           },
         ],
@@ -746,7 +974,7 @@ export function createMcpServer(): McpServer {
       },
     },
     async ({ title, state, court, practice_area, ai_tool, limit }) => {
-      const matches = matchContextCases({ state, court, practice_area, ai_tool, limit });
+      const { caseItems, evidence } = resolveContextCases({ state, court, practice_area, ai_tool, limit });
       const url = new URL("/api/artifact", publicBaseUrl);
       url.searchParams.set("type", "source");
       url.searchParams.set("format", "md");
@@ -756,7 +984,7 @@ export function createMcpServer(): McpServer {
       if (practice_area) url.searchParams.set("practice_area", practice_area);
       if (ai_tool) url.searchParams.set("ai_tool", ai_tool);
       return {
-        content: [{ type: "text", text: `${formatSourceAppendix(matches, title, meta)}\n\nDownload source appendix: ${url.toString()}` }],
+        content: [{ type: "text", text: `${formatSourceAppendix(caseItems, title, meta, evidence)}\n\nDownload source appendix: ${url.toString()}` }],
       };
     },
   );
@@ -780,19 +1008,20 @@ export function createMcpServer(): McpServer {
       },
     },
     async ({ audience, state, court, practice_area, ai_tools, limit }) => {
-      const matches = matchContextCases({ state, court, practice_area, limit });
+      const { caseItems, evidence } = resolveContextCases({ state, court, practice_area, limit });
       return {
         content: [
           {
             type: "text",
             text: formatImplementationPackage({
-              caseItems: matches,
+              caseItems,
               audience,
               state: state?.toUpperCase(),
               court,
               aiTools: ai_tools,
               meta,
               baseUrl: publicBaseUrl,
+              evidence,
             }),
           },
         ],
@@ -820,9 +1049,9 @@ export function createMcpServer(): McpServer {
       },
     },
     async ({ title, state, court, practice_area, ai_tool, issue, limit }) => {
-      const matches = matchContextCases({ state, court, practice_area, ai_tool, issue, limit });
+      const { caseItems, evidence } = resolveContextCases({ state, court, practice_area, ai_tool, issue, limit });
       return {
-        content: [{ type: "text", text: formatVisualSummaryData(matches, title, meta) }],
+        content: [{ type: "text", text: formatVisualSummaryData(caseItems, title, meta, evidence, publicBaseUrl) }],
       };
     },
   );

@@ -7,6 +7,8 @@ type PageProps = {
     state?: string;
     court?: string;
     audience?: string;
+    practice_area?: string;
+    ai_tool?: string;
   }>;
 };
 
@@ -33,8 +35,10 @@ export default async function DashboardPage({ searchParams }: PageProps) {
   const resolved = await searchParams;
   const state = resolved?.state?.toUpperCase();
   const court = resolved?.court;
+  const practiceArea = resolved?.practice_area;
+  const aiTool = resolved?.ai_tool;
   const audience = resolved?.audience || "legal professional";
-  const caseItems = getArtifactCases({ state, court, limit: 250 });
+  const caseItems = getArtifactCases({ state, court, practiceArea, aiTool, limit: 250 });
   const severity = countBy(caseItems.map((item) => item.severity));
   const failures = rankedEntries(countBy(caseItems.flatMap((item) => item.tags).filter((tag) =>
     ["fake-citations", "fabricated-quotes", "misrepresented-authority", "bar-referral", "disqualification"].includes(tag),
@@ -51,6 +55,8 @@ export default async function DashboardPage({ searchParams }: PageProps) {
   const artifactQuery = new URLSearchParams();
   if (state) artifactQuery.set("state", state);
   if (court) artifactQuery.set("court", court);
+  if (practiceArea) artifactQuery.set("practice_area", practiceArea);
+  if (aiTool) artifactQuery.set("ai_tool", aiTool);
   artifactQuery.set("audience", audience);
 
   return (
@@ -62,10 +68,10 @@ export default async function DashboardPage({ searchParams }: PageProps) {
               AI Vortex Legal AI Risk
             </p>
             <h1 style={{ margin: "8px 0", fontSize: 36, lineHeight: 1.05 }}>
-              {state || court || "Global"} risk dashboard
+              {state || court || aiTool || practiceArea || "Global"} risk dashboard
             </h1>
             <p style={{ color: "#94a3b8", maxWidth: 720 }}>
-              Source-backed view for {audience.replace(/_/g, " ")}. Tracked incidents are public risk signals, not usage-adjusted incident rates.
+              Source-backed view for {audience.replace(/_/g, " ")}{aiTool ? ` using ${aiTool}` : ""}{practiceArea ? ` in ${practiceArea}` : ""}. Tracked incidents are public risk signals, not usage-adjusted incident rates.
             </p>
           </div>
           <Link href="/" style={{ color: "#fbbf24", textDecoration: "none", fontWeight: 700 }}>

@@ -16,6 +16,25 @@ export type PublicMeta = {
 type JurisdictionProfile = {
   label: string;
   caseItems: PublicSanctionCase[];
+  evidence?: EvidenceNoteInput;
+};
+
+export type VortexAudience =
+  | "managing_partner"
+  | "litigation_partner"
+  | "associate"
+  | "judge_chambers"
+  | "gc_legal_ops"
+  | "legal_vendor"
+  | "insurer_risk"
+  | "researcher"
+  | "legal_professional";
+
+export type EvidenceNoteInput = {
+  exactMatchCount?: number;
+  fallbackUsed?: boolean;
+  fallbackLevel?: string;
+  fallbackReason?: string;
 };
 
 export function formatCurrency(amount: number | null): string {
@@ -175,13 +194,21 @@ function sourceCoverage(caseItems: PublicSanctionCase[]): { withSource: number; 
   return { withSource, total, pct: total > 0 ? Math.round((withSource / total) * 100) : 0 };
 }
 
-function provenanceBlock(caseItems: PublicSanctionCase[], meta?: PublicMeta): string[] {
+function provenanceBlock(caseItems: PublicSanctionCase[], meta?: PublicMeta, evidence?: EvidenceNoteInput): string[] {
   const coverage = sourceCoverage(caseItems);
   return [
     "Evidence note",
     `- Corpus: AI Vortex legal AI risk tracker${meta ? `, ${meta.total_cases.toLocaleString("en-US")} tracked global matters` : ""}`,
     `- Corpus last updated: ${meta?.last_updated || "not provided in this response"}`,
-    `- Matched set: ${caseItems.length} cases`,
+    `- Exact matches: ${evidence?.exactMatchCount ?? caseItems.length}`,
+    `- Fallback used: ${evidence?.fallbackUsed ? "yes" : "no"}`,
+    ...(evidence?.fallbackUsed
+      ? [
+          `- Fallback level: ${evidence.fallbackLevel || "broader matched evidence"}`,
+          `- Fallback reason: ${evidence.fallbackReason || "No narrower tracked cases matched the requested filters."}`,
+        ]
+      : []),
+    `- Matched set used: ${caseItems.length} cases`,
     `- Source-link coverage for matched set: ${coverage.withSource}/${coverage.total} (${coverage.pct}%)`,
     "- Boundary: tracked public incidents are evidence of observed risk patterns, not usage-adjusted incident rates or legal advice.",
   ];
@@ -227,6 +254,57 @@ function naturalNextAction(items: string[]): string[] {
     "Suggested next step",
     ...items.map((item) => `- ${item}`),
   ];
+}
+
+function vortexFooter(meta?: PublicMeta): string[] {
+  return [
+    "AI Vortex note",
+    `- Generated with AI Vortex Legal AI Risk | https://sanctions-tracker.vercel.app | Data: Damien Charlotin AI Hallucination Cases Database + AI Vortex enrichment | Updated: ${meta?.last_updated || "not provided"}`,
+  ];
+}
+
+function formatArtifactLinks(
+  baseUrl: string | undefined,
+  params: {
+    scenario: "jurisdiction" | "comparison" | "filing" | "opposing" | "policy" | "tool" | "dashboard" | "package";
+    title?: string;
+    audience?: string;
+    state?: string;
+    court?: string;
+    aiTool?: string;
+    practiceArea?: string;
+  },
+): string[] {
+  if (!baseUrl) {
+    return [
+      "Recommended artifacts",
+      "- Source appendix",
+      "- Word/PDF-ready memo",
+      "- Dashboard link when available",
+    ];
+  }
+
+  const reportTitle = params.title || "AI Vortex Legal AI Risk Report";
+  const common = { title: reportTitle, audience: params.audience, state: params.state, court: params.court, aiTool: params.aiTool, practiceArea: params.practiceArea };
+  const rows = new Set<string>();
+
+  if (["jurisdiction", "comparison", "dashboard", "package", "policy", "tool"].includes(params.scenario)) {
+    rows.add(`- Dashboard: ${dashboardUrl(baseUrl, { state: params.state, court: params.court, audience: params.audience, aiTool: params.aiTool, practiceArea: params.practiceArea })}`);
+  }
+  if (["jurisdiction", "comparison", "policy", "tool", "dashboard", "package"].includes(params.scenario)) {
+    rows.add(`- PDF-ready report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "pdf" })}`);
+    rows.add(`- Word-ready report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "doc" })}`);
+    rows.add(`- Markdown report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "md" })}`);
+  }
+  if (["filing", "package"].includes(params.scenario)) {
+    rows.add(`- Verification ledger: ${artifactUrl(baseUrl, { ...common, type: "ledger", format: "doc" })}`);
+  }
+  if (["opposing"].includes(params.scenario)) {
+    rows.add(`- Discrepancy matrix / review memo: ${artifactUrl(baseUrl, { ...common, type: "opposing", format: "doc" })}`);
+  }
+  rows.add(`- Source appendix: ${artifactUrl(baseUrl, { ...common, type: "source", format: "md" })}`);
+
+  return ["Recommended artifacts", ...rows];
 }
 
 function dateCoverage(caseItems: PublicSanctionCase[]): string[] {
@@ -318,17 +396,21 @@ export function formatJurisdictionRiskBrief(params: {
   court?: string;
   practiceArea?: string;
   meta?: PublicMeta;
+  evidence?: EvidenceNoteInput;
+  baseUrl?: string;
 }): string {
-  const { caseItems, state, court, practiceArea, meta } = params;
+  const { caseItems, state, court, practiceArea, meta, evidence, baseUrl } = params;
   if (caseItems.length === 0) {
     return [
     "Vortex jurisdiction risk brief",
     "",
-    ...provenanceBlock(caseItems, meta),
+    ...provenanceBlock(caseItems, meta, evidence),
     "",
     `No tracked cases matched ${[state, court, practiceArea].filter(Boolean).join(" / ") || "the requested filters"}.`,
       "",
       ...naturalNextAction(["Broaden to state, federal district, or practice-area level before drawing a risk conclusion."]),
+      "",
+      ...vortexFooter(meta),
     ].join("\n");
   }
 
@@ -343,7 +425,7 @@ export function formatJurisdictionRiskBrief(params: {
   return [
     `Vortex jurisdiction risk brief${state ? `: ${state}` : ""}${court ? ` / ${court}` : ""}`,
     "",
-    ...provenanceBlock(caseItems, meta),
+    ...provenanceBlock(caseItems, meta, evidence),
     "",
     `Risk level: ${riskLevel(caseItems)}`,
     ...dateCoverage(caseItems),
@@ -370,25 +452,29 @@ export function formatJurisdictionRiskBrief(params: {
     "",
     ...advisorGuardrails("brief"),
     "",
-    ...suggestedArtifacts([
-      "Managing partner one-page brief",
-      "Practice-group checklist",
-      "Weekly jurisdiction digest",
-      "PDF-ready or Markdown risk report",
-    ]),
+    ...formatArtifactLinks(baseUrl, {
+      scenario: "jurisdiction",
+      title: `${state || court || "Jurisdiction"} legal AI risk brief`,
+      audience: "legal_professional",
+      state,
+      court,
+    }),
     "",
     ...naturalNextAction([
       "For leadership, use a one-page memo plus source appendix.",
       "For an active filing, move directly to the pre-filing packet.",
     ]),
+    "",
+    ...vortexFooter(meta),
   ].join("\n");
 }
 
 export function formatJurisdictionComparison(params: {
   profiles: JurisdictionProfile[];
   meta?: PublicMeta;
+  baseUrl?: string;
 }): string {
-  const { profiles, meta } = params;
+  const { profiles, meta, baseUrl } = params;
   const allCases = profiles.flatMap((profile) => profile.caseItems);
   const rows = profiles.map(({ label, caseItems }) => {
     const severity = countBy(caseItems.map((item) => item.severity));
@@ -416,7 +502,12 @@ export function formatJurisdictionComparison(params: {
   return [
     "Vortex jurisdiction comparison",
     "",
-    ...provenanceBlock(allCases, meta),
+    ...provenanceBlock(allCases, meta, {
+      exactMatchCount: profiles.reduce((sum, profile) => sum + (profile.evidence?.exactMatchCount ?? profile.caseItems.length), 0),
+      fallbackUsed: profiles.some((profile) => profile.evidence?.fallbackUsed),
+      fallbackLevel: "per-jurisdiction comparison fallback",
+      fallbackReason: "One or more compared jurisdictions used broader evidence.",
+    }),
     "",
     "| Office/Jurisdiction | Risk level | Cases | Date coverage | High/career | Lawyer-related | Monetary cases | Source coverage | Top failure signals |",
     "| --- | --- | ---: | --- | ---: | ---: | ---: | --- | --- |",
@@ -434,23 +525,39 @@ export function formatJurisdictionComparison(params: {
     "- Add office-specific training examples only after the universal gate exists.",
     "- Start with litigation filings, not every AI use case in the firm.",
     "",
+    ...formatArtifactLinks(baseUrl, {
+      scenario: "comparison",
+      title: "Jurisdiction comparison",
+      audience: "managing_partner",
+    }),
+    "",
     ...naturalNextAction([
       "Generate a two-office rollout plan with a 7-day pilot and a 30-day policy path.",
       "If a filing is imminent, run the D.N.J./S.D.N.Y. pre-filing packet for that matter.",
     ]),
+    "",
+    ...vortexFooter(meta),
   ].join("\n");
 }
 
-export function formatToolRiskProfile(caseItems: PublicSanctionCase[], tool: string, meta?: PublicMeta): string {
+export function formatToolRiskProfile(
+  caseItems: PublicSanctionCase[],
+  tool: string,
+  meta?: PublicMeta,
+  evidence?: EvidenceNoteInput,
+  baseUrl?: string,
+): string {
   if (caseItems.length === 0) {
     return [
       `Vortex tool risk profile: ${tool}`,
       "",
-      ...provenanceBlock(caseItems, meta),
+      ...provenanceBlock(caseItems, meta, evidence),
       "",
       "No tracked cases matched this tool name. That does not mean the tool is risk-free; courts often describe AI use as implied or unidentified.",
       "",
       ...naturalNextAction(["Broaden the query to paid legal AI tools, general ChatGPT/OpenAI cases, or implied/unidentified AI cases."]),
+      "",
+      ...vortexFooter(meta),
     ].join("\n");
   }
 
@@ -461,7 +568,9 @@ export function formatToolRiskProfile(caseItems: PublicSanctionCase[], tool: str
   return [
     `Vortex tool risk profile: ${tool}`,
     "",
-    ...provenanceBlock(caseItems, meta),
+    ...provenanceBlock(caseItems, meta, evidence),
+    "",
+    "Important caveat: tracked matters are public incident reports, not usage-adjusted safety rates.",
     "",
     `Tracked matching cases: ${caseItems.length}`,
     `Risk level: ${riskLevel(caseItems)}`,
@@ -493,21 +602,30 @@ export function formatToolRiskProfile(caseItems: PublicSanctionCase[], tool: str
       "Training slide outline",
       "Matter audit template",
     ]),
+    ...formatArtifactLinks(baseUrl, {
+      scenario: "tool",
+      title: `${tool} risk profile`,
+      audience: "legal_ops",
+      aiTool: tool,
+    }),
     "",
     ...naturalNextAction([
       "For procurement, use an approved-use matrix.",
       "For active litigation, use a court-specific pre-filing packet.",
     ]),
+    "",
+    ...vortexFooter(meta),
   ].join("\n");
 }
 
 export function formatToolRiskComparison(params: {
-  profiles: { tool: string; caseItems: PublicSanctionCase[] }[];
+  profiles: { tool: string; caseItems: PublicSanctionCase[]; evidence?: EvidenceNoteInput }[];
   state?: string;
   practiceArea?: string;
   meta?: PublicMeta;
+  baseUrl?: string;
 }): string {
-  const { profiles, state, practiceArea, meta } = params;
+  const { profiles, state, practiceArea, meta, baseUrl } = params;
   const allCases = profiles.flatMap((profile) => profile.caseItems);
   const rows = profiles.map(({ tool, caseItems }) => {
     const high = caseItems.filter((item) => item.severity === "high").length;
@@ -534,10 +652,15 @@ export function formatToolRiskComparison(params: {
   return [
     "Vortex AI tool risk comparison",
     "",
-    ...provenanceBlock(allCases, meta),
+    ...provenanceBlock(allCases, meta, {
+      exactMatchCount: profiles.reduce((sum, profile) => sum + (profile.evidence?.exactMatchCount ?? profile.caseItems.length), 0),
+      fallbackUsed: profiles.some((profile) => profile.evidence?.fallbackUsed),
+      fallbackLevel: "per-tool comparison fallback",
+      fallbackReason: "One or more tool profiles used broader evidence.",
+    }),
     "",
     `Context: ${[state, practiceArea].filter(Boolean).join(" / ") || "all tracked cases"}`,
-    "Important caveat: case counts show tracked public incidents, not true usage-adjusted incident rates.",
+    "Important caveat: case counts show tracked public incidents, not true usage-adjusted incident rates. Higher counts may reflect adoption and reporting, not inherent tool danger.",
     "",
     "Comparison table",
     "| Tool | Tracked cases | High | Career-ending | High+career share | Source coverage | Top failure signals |",
@@ -572,11 +695,19 @@ export function formatToolRiskComparison(params: {
       "Risk committee briefing",
       "Training example packet by tool",
     ]),
+    ...formatArtifactLinks(baseUrl, {
+      scenario: "tool",
+      title: "AI tool risk comparison",
+      audience: "legal_ops",
+      state,
+    }),
     "",
     ...naturalNextAction([
       "If this is for leadership, frame it as workflow risk and procurement controls, not a tool danger ranking.",
       "If this is for lawyers, generate a one-page approved-use checklist by tool.",
     ]),
+    "",
+    ...vortexFooter(meta),
   ].join("\n");
 }
 
@@ -589,13 +720,15 @@ export function formatPrefilingReviewPacket(params: {
   aiTool?: string;
   urgency?: string;
   meta?: PublicMeta;
+  evidence?: EvidenceNoteInput;
+  baseUrl?: string;
 }): string {
-  const { caseItems, state, court, practiceArea, documentType, aiTool, urgency, meta } = params;
+  const { caseItems, state, court, practiceArea, documentType, aiTool, urgency, meta, evidence, baseUrl } = params;
   const urgent = urgency === "filing_tomorrow" || urgency === "same_day" || /tomorrow|tonight|midnight|same day|24/i.test(documentType || "");
   return [
     urgent ? "Vortex emergency pre-filing triage packet" : "Vortex pre-filing AI risk packet",
     "",
-    ...provenanceBlock(caseItems, meta),
+    ...provenanceBlock(caseItems, meta, evidence),
     "",
     `Matter context: ${[documentType, court, state, practiceArea, aiTool].filter(Boolean).join(" / ") || "not specified"}`,
     `Urgency mode: ${urgent ? "high - filing window appears imminent" : "standard"}`,
@@ -646,6 +779,14 @@ export function formatPrefilingReviewPacket(params: {
       "Citation verification table",
       "Client-safe explanation",
     ]),
+    ...formatArtifactLinks(baseUrl, {
+      scenario: "filing",
+      title: "Pre-filing AI risk packet",
+      audience: "litigation_team",
+      state,
+      court,
+      aiTool,
+    }),
     "",
     ...naturalNextAction([
       urgent
@@ -653,14 +794,22 @@ export function formatPrefilingReviewPacket(params: {
         : "Generate the partner signoff checklist and matter audit note.",
       "If the draft is available, extract citations and quotes before writing more policy language.",
     ]),
+    "",
+    ...vortexFooter(meta),
   ].join("\n");
 }
 
-export function formatOpposingFilingReview(caseItems: PublicSanctionCase[], issue: string, meta?: PublicMeta): string {
+export function formatOpposingFilingReview(
+  caseItems: PublicSanctionCase[],
+  issue: string,
+  meta?: PublicMeta,
+  evidence?: EvidenceNoteInput,
+  baseUrl?: string,
+): string {
   return [
     "Vortex opposing filing review",
     "",
-    ...provenanceBlock(caseItems, meta),
+    ...provenanceBlock(caseItems, meta, evidence),
     "",
     `Observed issue: ${issue || "suspicious legal authority or AI-like citation pattern"}`,
     `Comparable matched cases: ${caseItems.length}`,
@@ -673,6 +822,28 @@ export function formatOpposingFilingReview(caseItems: PublicSanctionCase[], issu
     "4. Pattern check: look for fake reporters, impossible pincites, generic case names, or mismatched jurisdictions.",
     "5. Process check: preserve PDFs/screenshots and ask for correction before escalating.",
     "6. Escalation check: if counsel does not correct or explain, prepare a narrow court filing focused on the verified discrepancies, not speculation about AI use.",
+    "",
+    "Discrepancy matrix",
+    "| Item | Citation / quote | Problem type | Verification step | Severity | Evidence needed | Recommended action |",
+    "| --- | --- | --- | --- | --- | --- | --- |",
+    "| 1 | [insert cite/quote] | fake_case / fake_quote / unsupported_proposition / bad_pincite / unclear | Check primary source and cited page | low / medium / high / critical | PDF/source screenshot, quote comparison, docket copy | Correct request / meet-and-confer / court notice |",
+    "| 2 | [insert cite/quote] | fake_case / fake_quote / unsupported_proposition / bad_pincite / unclear | Check proposition support | low / medium / high / critical | Source text and brief excerpt | Preserve and escalate proportionally |",
+    "",
+    "Preservation steps",
+    "- Save the filed brief exactly as filed.",
+    "- Save PDFs or screenshots of each cited authority checked.",
+    "- Create a side-by-side quote/proposition comparison.",
+    "- Preserve meet-and-confer correspondence and timestamps.",
+    "- Do not characterize the issue as AI use unless independent evidence supports that statement.",
+    "",
+    "Meet-and-confer draft",
+    "Counsel, we are reviewing the authorities cited at [pages/sections]. We have not been able to locate the quoted language/proposition in the cited opinions. Please identify the source text or confirm whether a correction is needed by [date/time]. We are not making assumptions about how the issue arose; we are asking to resolve the authority discrepancy before raising it with the Court.",
+    "",
+    "Escalation matrix",
+    "- Minor or isolated mismatch: request correction and preserve the record.",
+    "- Material quote/proposition problem: meet and confer, then seek leave or file a narrow notice if unresolved.",
+    "- Nonexistent authority or repeated fabricated text: prepare a targeted motion/OSC request focused on verified discrepancies.",
+    "- Bad-faith denial after notice: consider sanctions only with a clean evidentiary record.",
     "",
     "Source-backed analogues",
     ...(importantCases(caseItems, 3).length > 0
@@ -687,15 +858,33 @@ export function formatOpposingFilingReview(caseItems: PublicSanctionCase[], issu
     "- Motion outline",
     "- Sanctions precedent appendix",
     "- Court-neutral order-to-show-cause checklist",
+    ...formatArtifactLinks(baseUrl, {
+      scenario: "opposing",
+      title: "Opposing filing integrity review",
+      audience: "litigation_team",
+    }),
+    "",
+    ...naturalNextAction([
+      "Fill the discrepancy matrix with the exact citations/quotes before alleging misconduct.",
+      "If the discrepancies are material, draft a neutral meet-and-confer email first.",
+    ]),
+    "",
+    ...vortexFooter(meta),
   ].join("\n");
 }
 
-export function formatPolicyGapReport(caseItems: PublicSanctionCase[], audience: string, meta?: PublicMeta): string {
+export function formatPolicyGapReport(
+  caseItems: PublicSanctionCase[],
+  audience: string,
+  meta?: PublicMeta,
+  evidence?: EvidenceNoteInput,
+  baseUrl?: string,
+): string {
   const gaps = rankedEntries(countBy(caseItems.flatMap((item) => item.policy_gap_ids)), 10);
   return [
     `Vortex policy gap report${audience ? `: ${audience}` : ""}`,
     "",
-    ...provenanceBlock(caseItems, meta),
+    ...provenanceBlock(caseItems, meta, evidence),
     "",
     `Cases analyzed: ${caseItems.length}`,
     `Risk level: ${riskLevel(caseItems)}`,
@@ -722,11 +911,18 @@ export function formatPolicyGapReport(caseItems: PublicSanctionCase[], audience:
       "Implementation checklist",
       "Weekly risk digest",
     ]),
+    ...formatArtifactLinks(baseUrl, {
+      scenario: "policy",
+      title: "AI filing policy gap report",
+      audience,
+    }),
     "",
     ...naturalNextAction([
       "Convert this into a 7-day pilot checklist for litigation filings.",
       "Then generate a 30-day policy rollout memo for firm leadership.",
     ]),
+    "",
+    ...vortexFooter(meta),
   ].join("\n");
 }
 
@@ -738,15 +934,17 @@ export function formatImplementationWorkflow(params: {
   court?: string;
   aiTools?: string[];
   meta?: PublicMeta;
+  evidence?: EvidenceNoteInput;
+  baseUrl?: string;
 }): string {
-  const { caseItems, audience, timeline, state, court, aiTools = [], meta } = params;
+  const { caseItems, audience, timeline, state, court, aiTools = [], meta, evidence, baseUrl } = params;
   const failures = rankedEntries(countBy(riskTags(caseItems)), 5);
   const gaps = rankedEntries(countBy(caseItems.flatMap((item) => item.policy_gap_ids)), 5);
 
   return [
     "Vortex next-week legal AI filing workflow",
     "",
-    ...provenanceBlock(caseItems, meta),
+    ...provenanceBlock(caseItems, meta, evidence),
     "",
     `Operating context: ${[audience, court, state, aiTools.join(" + "), timeline].filter(Boolean).join(" / ") || "court-facing legal work"}`,
     "",
@@ -785,11 +983,21 @@ export function formatImplementationWorkflow(params: {
       "Signing-attorney certification form",
       "30-day rollout plan",
     ]),
+    ...formatArtifactLinks(baseUrl, {
+      scenario: "package",
+      title: "Next-week legal AI filing workflow",
+      audience,
+      state,
+      court,
+      aiTool: aiTools.join(", "),
+    }),
     "",
     ...naturalNextAction([
       "Generate the one-page implementation memo for leadership.",
       "Generate the verification ledger template the associates can use this week.",
     ]),
+    "",
+    ...vortexFooter(meta),
   ].join("\n");
 }
 
@@ -800,29 +1008,55 @@ export function formatDashboardDeepLink(params: {
   audience?: string;
   caseItems: PublicSanctionCase[];
   meta?: PublicMeta;
+  evidence?: EvidenceNoteInput;
+  practiceArea?: string;
+  aiTool?: string;
 }): string {
-  const { baseUrl, state, court, audience, caseItems, meta } = params;
+  const { baseUrl, state, court, audience, caseItems, meta, evidence, practiceArea, aiTool } = params;
   const url = new URL("/dashboard", baseUrl);
   if (state) url.searchParams.set("state", state.toUpperCase());
   if (court) url.searchParams.set("court", court);
   if (audience) url.searchParams.set("audience", audience);
+  if (practiceArea) url.searchParams.set("practice_area", practiceArea);
+  if (aiTool) url.searchParams.set("ai_tool", aiTool);
 
   return [
     "AI Vortex dashboard link",
     "",
-    ...provenanceBlock(caseItems, meta),
+    ...provenanceBlock(caseItems, meta, evidence),
     "",
     `Dashboard: ${url.toString()}`,
     "",
     "Use this when the user needs a visual rather than another written brief. The dashboard should be treated as the presentation layer; the MCP response is the evidence layer.",
+    "",
+    ...vortexFooter(meta),
   ].join("\n");
 }
 
-export function formatSourceAppendix(caseItems: PublicSanctionCase[], title: string, meta?: PublicMeta): string {
+export function formatSourceAppendix(
+  caseItems: PublicSanctionCase[],
+  title: string,
+  meta?: PublicMeta,
+  evidence?: EvidenceNoteInput,
+): string {
+  if (caseItems.length === 0) {
+    return [
+      `${title || "AI Vortex source appendix"}`,
+      "",
+      ...provenanceBlock(caseItems, meta, evidence),
+      "",
+      "No cases are available for this appendix under the current filters. Broaden the query before treating this as a complete source set.",
+      "",
+      ...vortexFooter(meta),
+    ].join("\n");
+  }
+
+  const missing = caseItems.filter((item) => !item.source_url).length;
   return [
     `${title || "AI Vortex source appendix"}`,
     "",
-    ...provenanceBlock(caseItems, meta),
+    ...provenanceBlock(caseItems, meta, evidence),
+    ...(missing > 0 ? ["", `Source warning: ${missing} matched case${missing === 1 ? "" : "s"} lack direct source URLs.`] : []),
     "",
     "| Date | Case | Court | Severity | Source |",
     "| --- | --- | --- | --- | --- |",
@@ -830,6 +1064,8 @@ export function formatSourceAppendix(caseItems: PublicSanctionCase[], title: str
       (item) =>
         `| ${item.date} | ${item.case_name} | ${item.court} | ${item.severity} | ${item.source_url || "Unavailable"} |`,
     ),
+    "",
+    ...vortexFooter(meta),
   ].join("\n");
 }
 
@@ -873,8 +1109,9 @@ export function formatReportArtifact(params: {
   format?: string;
   meta?: PublicMeta;
   baseUrl?: string;
+  evidence?: EvidenceNoteInput;
 }): string {
-  const { reportType, audience, caseItems, state, court, format = "markdown", meta, baseUrl } = params;
+  const { reportType, audience, caseItems, state, court, format = "markdown", meta, baseUrl, evidence } = params;
   const failures = rankedEntries(countBy(riskTags(caseItems)), 5);
   const gaps = rankedEntries(countBy(caseItems.flatMap((item) => item.policy_gap_ids)), 5);
   const downloads = baseUrl
@@ -895,7 +1132,7 @@ export function formatReportArtifact(params: {
     `Format target: ${format}`,
     "",
     "## Evidence Note",
-    ...provenanceBlock(caseItems, meta).slice(1).map((line) => line.replace(/^- /, "- ")),
+    ...provenanceBlock(caseItems, meta, evidence).slice(1).map((line) => line.replace(/^- /, "- ")),
     "",
     "## Executive Readout",
     `The matched evidence points to ${riskLevel(caseItems).toLowerCase()} legal AI filing risk. The recurring control failure is not AI use by itself; it is unverified authority, quotes, and propositions reaching court-facing work.`,
@@ -913,6 +1150,8 @@ export function formatReportArtifact(params: {
     "## Recommended Next Step",
     "Use this report as the draft artifact. For distribution, convert it to Word/PDF and attach the source appendix.",
     ...downloads,
+    "",
+    ...vortexFooter(meta),
   ].join("\n");
 }
 
@@ -924,8 +1163,9 @@ export function formatImplementationPackage(params: {
   aiTools?: string[];
   meta?: PublicMeta;
   baseUrl?: string;
+  evidence?: EvidenceNoteInput;
 }): string {
-  const { caseItems, audience, state, court, aiTools = [], meta, baseUrl } = params;
+  const { caseItems, audience, state, court, aiTools = [], meta, baseUrl, evidence } = params;
   const links = baseUrl
     ? [
         "",
@@ -939,7 +1179,7 @@ export function formatImplementationPackage(params: {
   return [
     "AI Vortex implementation package",
     "",
-    ...provenanceBlock(caseItems, meta),
+    ...provenanceBlock(caseItems, meta, evidence),
     "",
     `Audience: ${audience || "legal team"}`,
     `Scope: ${[court, state, aiTools.join(" + ")].filter(Boolean).join(" / ") || "court-facing legal AI use"}`,
@@ -958,6 +1198,8 @@ export function formatImplementationPackage(params: {
     "- Source appendix",
     "- Dashboard link for leadership",
     ...links,
+    "",
+    ...vortexFooter(meta),
   ].join("\n");
 }
 
@@ -971,6 +1213,7 @@ function artifactUrl(
     state?: string;
     court?: string;
     aiTool?: string;
+    practiceArea?: string;
   },
 ): string {
   const url = new URL("/api/artifact", baseUrl);
@@ -981,6 +1224,7 @@ function artifactUrl(
   if (params.state) url.searchParams.set("state", params.state);
   if (params.court) url.searchParams.set("court", params.court);
   if (params.aiTool) url.searchParams.set("ai_tool", params.aiTool);
+  if (params.practiceArea) url.searchParams.set("practice_area", params.practiceArea);
   return url.toString();
 }
 
@@ -990,16 +1234,26 @@ function dashboardUrl(
     state?: string;
     court?: string;
     audience?: string;
+    aiTool?: string;
+    practiceArea?: string;
   },
 ): string {
   const url = new URL("/dashboard", baseUrl);
   if (params.state) url.searchParams.set("state", params.state);
   if (params.court) url.searchParams.set("court", params.court);
   if (params.audience) url.searchParams.set("audience", params.audience);
+  if (params.aiTool) url.searchParams.set("ai_tool", params.aiTool);
+  if (params.practiceArea) url.searchParams.set("practice_area", params.practiceArea);
   return url.toString();
 }
 
-export function formatVisualSummaryData(caseItems: PublicSanctionCase[], title: string, meta?: PublicMeta): string {
+export function formatVisualSummaryData(
+  caseItems: PublicSanctionCase[],
+  title: string,
+  meta?: PublicMeta,
+  evidence?: EvidenceNoteInput,
+  baseUrl?: string,
+): string {
   const payload = {
     title,
     date_coverage:
@@ -1042,7 +1296,7 @@ export function formatVisualSummaryData(caseItems: PublicSanctionCase[], title: 
   return [
     "Vortex managing partner visual summary",
     "",
-    ...provenanceBlock(caseItems, meta),
+    ...provenanceBlock(caseItems, meta, evidence),
     "",
     "Executive cards",
     ...payload.cards.map((card) => `- ${card.label}: ${card.value}`),
@@ -1062,9 +1316,150 @@ export function formatVisualSummaryData(caseItems: PublicSanctionCase[], title: 
     "",
     JSON.stringify(payload, null, 2),
     "",
+    ...formatArtifactLinks(baseUrl, {
+      scenario: "dashboard",
+      title,
+      audience: "managing_partner",
+    }),
+    "",
     ...naturalNextAction([
       "Use the JSON for cards/charts if the host app supports visuals.",
       "Generate a one-page managing partner memo with the same source-backed case appendix.",
     ]),
+    "",
+    ...vortexFooter(meta),
+  ].join("\n");
+}
+
+export function formatProfileSetup(params: {
+  role?: string;
+  organizationType?: string;
+  jurisdictions?: string[];
+  courts?: string[];
+  aiTools?: string[];
+  artifactPreference?: string;
+  dashboardPreference?: string;
+  outputLength?: string;
+  riskPosture?: string;
+  meta?: PublicMeta;
+}): string {
+  const {
+    role,
+    organizationType,
+    jurisdictions = [],
+    courts = [],
+    aiTools = [],
+    artifactPreference,
+    dashboardPreference,
+    outputLength,
+    riskPosture,
+    meta,
+  } = params;
+
+  return [
+    "AI Vortex session profile",
+    "",
+    "Persistence note",
+    "- I can apply this profile for the current chat/session. Persistent saved firm profiles require an account/storage layer and are not assumed here.",
+    "",
+    "Profile captured",
+    `- Role: ${role || "legal professional"}`,
+    `- Organization type: ${organizationType || "not specified"}`,
+    `- Jurisdictions: ${jurisdictions.length > 0 ? jurisdictions.join(", ") : "not specified"}`,
+    `- Courts: ${courts.length > 0 ? courts.join(", ") : "not specified"}`,
+    `- AI tools: ${aiTools.length > 0 ? aiTools.join(", ") : "not specified"}`,
+    `- Output length: ${outputLength || "concise advisor answers first"}`,
+    `- Artifact preference: ${artifactPreference || "recommend reusable artifacts when output is operational"}`,
+    `- Dashboard preference: ${dashboardPreference || "include for leadership, comparison, and visual summaries"}`,
+    `- Risk posture: ${riskPosture || "balanced but conservative for court-facing work"}`,
+    "",
+    "How I will use it",
+    "- Keep answers concise unless you ask for a full report.",
+    "- Include source links for named cases when available.",
+    "- Distinguish exact matches from fallback evidence.",
+    "- Recommend checklists, ledgers, source appendices, dashboards, or reports when useful.",
+    "- Avoid accusing any party of AI use without independent evidence.",
+    "",
+    ...naturalNextAction([
+      "Ask for a jurisdiction risk brief for your NJ/NY offices, or run a filing packet for an active matter.",
+    ]),
+    "",
+    ...vortexFooter(meta),
+  ].join("\n");
+}
+
+export function formatControlMaturityScore(params: {
+  audience?: string;
+  answers: Record<string, number | undefined>;
+  caseItems: PublicSanctionCase[];
+  meta?: PublicMeta;
+  evidence?: EvidenceNoteInput;
+  baseUrl?: string;
+}): string {
+  const { audience, answers, caseItems, meta, evidence, baseUrl } = params;
+  const questions = [
+    ["written_policy", "Written AI filing policy for court-facing work"],
+    ["citation_verification", "Citation existence verification before filing"],
+    ["quote_verification", "Quote and pincite verification"],
+    ["proposition_support", "Proposition-support verification"],
+    ["disclosure_check", "Court/judge/local AI disclosure check"],
+    ["supervisor_signoff", "Supervising attorney signoff for AI-assisted filings"],
+    ["audit_trail", "Matter-level audit trail"],
+    ["incident_response", "Incident response path for discovered fake authority"],
+  ] as const;
+  const normalized = questions.map(([id, label]) => ({
+    id,
+    label,
+    score: Math.max(0, Math.min(3, Number(answers[id]) || 0)),
+  }));
+  const raw = normalized.reduce((sum, item) => sum + item.score, 0);
+  const pct = Math.round((raw / 24) * 100);
+  const band = pct >= 90 ? "defensible" : pct >= 75 ? "controlled" : pct >= 50 ? "developing" : pct >= 25 ? "basic/ad hoc" : "exposed";
+  const gaps = normalized.filter((item) => item.score < 2).slice(0, 4);
+
+  return [
+    "AI Vortex control maturity score",
+    "",
+    ...provenanceBlock(caseItems, meta, evidence),
+    "",
+    `Audience: ${audience || "legal team"}`,
+    `Score: ${pct}/100`,
+    `Maturity band: ${band}`,
+    "",
+    "Scoring scale",
+    "- 0 = no control",
+    "- 1 = informal/ad hoc",
+    "- 2 = documented but inconsistent",
+    "- 3 = documented, enforced, auditable",
+    "",
+    "Control scores",
+    "| Control | Score |",
+    "| --- | ---: |",
+    ...normalized.map((item) => `| ${item.label} | ${item.score}/3 |`),
+    "",
+    "Priority gaps",
+    ...(gaps.length > 0 ? gaps.map((item) => `- ${item.label}: move from ${item.score}/3 to at least 2/3.`) : ["- No sub-2 controls provided."]),
+    "",
+    "Next-week controls",
+    "- Make citation, quote, and proposition verification mandatory for court-facing filings.",
+    "- Require signing-attorney review of an exception report, not a long narrative memo.",
+    "- Save reviewer, date, AI tools used, unresolved issues, and final disposition to the matter file.",
+    "",
+    "30-day controls",
+    "- Adopt a written court-facing AI filing policy.",
+    "- Train attorneys with source-backed local examples.",
+    "- Add incident response steps for discovered fake authority or unsupported quotes.",
+    "",
+    ...formatArtifactLinks(baseUrl, {
+      scenario: "policy",
+      title: "AI control maturity score",
+      audience,
+    }),
+    "",
+    ...naturalNextAction([
+      "Use the score to generate a 7-day filing-gate pilot and a 30-day policy rollout memo.",
+    ]),
+    "",
+    ...vortexFooter(meta),
   ].join("\n");
 }

@@ -1003,7 +1003,7 @@ export function createMcpServer(): McpServer {
     async ({ title, court, ai_tools }) => {
       const url = new URL("/api/artifact", publicBaseUrl);
       url.searchParams.set("type", "ledger");
-      url.searchParams.set("format", "doc");
+      url.searchParams.set("format", "csv");
       if (title) url.searchParams.set("title", title);
       if (court) url.searchParams.set("court", court);
       if (ai_tools.length > 0) url.searchParams.set("ai_tool", ai_tools.join(", "));
@@ -1015,7 +1015,7 @@ export function createMcpServer(): McpServer {
             text: [
               formatVerificationLedgerTemplate({ title, court, aiTools: ai_tools }),
               "",
-              `Download Word-compatible ledger: ${url.toString()}`,
+              `Download ledger CSV: ${url.toString()}`,
             ].join("\n"),
           },
         ],
@@ -1068,15 +1068,19 @@ export function createMcpServer(): McpServer {
       },
       inputSchema: {
         audience: z.string().default("legal team"),
+        jurisdiction: z.string().optional(),
         state: z.string().optional(),
         court: z.string().optional(),
         practice_area: z.string().optional(),
         ai_tools: z.array(z.string()).default([]),
+        tools: z.array(z.string()).optional(),
         limit: z.number().int().min(1).max(250).default(100),
       },
     },
-    async ({ audience, state, court, practice_area, ai_tools, limit }) => {
-      const { caseItems, evidence } = resolveContextCases({ state, court, practice_area, limit });
+    async ({ audience, jurisdiction, state, court, practice_area, ai_tools, tools, limit }) => {
+      const resolvedState = state || jurisdiction;
+      const resolvedTools = ai_tools.length > 0 ? ai_tools : tools || [];
+      const { caseItems, evidence } = resolveContextCases({ state: resolvedState, court, practice_area, limit });
       return {
         content: [
           {
@@ -1084,9 +1088,9 @@ export function createMcpServer(): McpServer {
             text: formatImplementationPackage({
               caseItems,
               audience,
-              state: state?.toUpperCase(),
+              state: resolvedState?.toUpperCase(),
               court,
-              aiTools: ai_tools,
+              aiTools: resolvedTools,
               meta,
               baseUrl: publicBaseUrl,
               evidence,

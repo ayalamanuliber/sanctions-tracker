@@ -299,15 +299,16 @@ function formatArtifactLinks(
     rows.add(`- Map view: ${mapUrl(baseUrl, { state: params.state, aiTool: params.aiTool })}`);
   }
   if (["jurisdiction", "comparison", "policy", "tool", "dashboard", "package"].includes(params.scenario)) {
-    rows.add(`- PDF-ready report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "pdf" })}`);
-    rows.add(`- Word-ready report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "doc" })}`);
+    rows.add(`- PDF-ready report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "pdf-ready" })}`);
+    rows.add(`- Word-ready report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "word-ready" })}`);
     rows.add(`- Markdown report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "md" })}`);
   }
   if (["filing", "package"].includes(params.scenario)) {
-    rows.add(`- Verification ledger: ${artifactUrl(baseUrl, { ...common, type: "ledger", format: "doc" })}`);
+    rows.add(`- Verification ledger CSV: ${artifactUrl(baseUrl, { ...common, type: "ledger", format: "csv" })}`);
+    rows.add(`- Verification ledger Word-ready: ${artifactUrl(baseUrl, { ...common, type: "ledger", format: "word-ready" })}`);
   }
   if (["opposing"].includes(params.scenario)) {
-    rows.add(`- Discrepancy matrix / review memo: ${artifactUrl(baseUrl, { ...common, type: "opposing", format: "doc" })}`);
+    rows.add(`- Discrepancy matrix / review memo: ${artifactUrl(baseUrl, { ...common, type: "opposing", format: "word-ready" })}`);
   }
   rows.add(`- Source appendix: ${artifactUrl(baseUrl, { ...common, type: "source", format: "md" })}`);
 
@@ -1177,9 +1178,12 @@ export function formatImplementationPackage(params: {
     ? [
         "",
         "Working links",
-        `- Dashboard: ${dashboardUrl(baseUrl, { state, court, audience })}`,
-        `- Policy memo PDF: ${artifactUrl(baseUrl, { type: "report", format: "pdf", audience, state, court })}`,
-        `- Verification ledger: ${artifactUrl(baseUrl, { type: "ledger", format: "doc", state, court, aiTool: aiTools.join(", ") })}`,
+        `- Dashboard: ${dashboardUrl(baseUrl, { state, court, audience, aiTool: aiTools.join(", ") })}`,
+        `- Map: ${mapUrl(baseUrl, { state, court, audience, aiTool: aiTools.join(", ") })}`,
+        `- Leadership memo PDF-ready: ${artifactUrl(baseUrl, { type: "report", format: "pdf-ready", audience, state, court })}`,
+        `- Leadership memo Markdown: ${artifactUrl(baseUrl, { type: "report", format: "md", audience, state, court })}`,
+        `- Verification ledger CSV: ${artifactUrl(baseUrl, { type: "ledger", format: "csv", state, court, aiTool: aiTools.join(", ") })}`,
+        `- Verification ledger Word-ready: ${artifactUrl(baseUrl, { type: "ledger", format: "word-ready", state, court, aiTool: aiTools.join(", ") })}`,
         `- Source appendix: ${artifactUrl(baseUrl, { type: "source", format: "md", state, court })}`,
       ]
     : [];
@@ -1198,12 +1202,13 @@ export function formatImplementationPackage(params: {
     "4. Evidence: source appendix for the leading tracked cases.",
     "5. Rollout: 7-day pilot followed by 30-day policy adoption.",
     "",
-    "Suggested deliverables",
-    "- Word/PDF policy memo",
-    "- Markdown implementation packet",
-    "- Verification ledger template",
-    "- Source appendix",
-    "- Dashboard link for leadership",
+    "Implementation package generated",
+    "- Leadership memo: PDF-ready + Markdown",
+    "- Filing checklist: printable Markdown",
+    "- Verification ledger: CSV + Word-ready",
+    "- Source appendix: Markdown",
+    "- Dashboard: live link",
+    "- Map: live link",
     ...links,
     "",
     ...vortexFooter(meta),
@@ -1258,12 +1263,16 @@ function mapUrl(
   baseUrl: string,
   params: {
     state?: string;
+    court?: string;
+    audience?: string;
     aiTool?: string;
   },
 ): string {
   const url = new URL("/map", baseUrl);
   url.searchParams.set("metric", "cases");
   if (params.state) url.searchParams.set("states", params.state);
+  if (params.court) url.searchParams.set("court", params.court);
+  if (params.audience) url.searchParams.set("audience", params.audience);
   if (params.aiTool) url.searchParams.set("tool", params.aiTool);
   return url.toString();
 }

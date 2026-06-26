@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useMemo } from "react";
+import { useCallback, useEffect, useRef, useState, useMemo } from "react";
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
 import type { Topology, GeometryCollection } from "topojson-specification";
@@ -100,17 +100,44 @@ const pinR = (c: Case) => {
 
 interface Props {
   onStateClick?: (stateCode: string) => void;
+  initialStates?: string[];
+  initialSeverity?: string;
+  initialTool?: string;
+  initialFailure?: string;
+  initialCourt?: string;
+  initialAudience?: string;
+  embedded?: boolean;
+  showIntro?: boolean;
+  showControls?: boolean;
+  showSideRail?: boolean;
+  showExportLinks?: boolean;
+  dataMode?: "cases" | "severity";
 }
 
-export default function SanctionsMapV2({ onStateClick }: Props) {
+export default function SanctionsMapV2({
+  onStateClick,
+  initialStates = [],
+  initialSeverity = "all",
+  initialTool,
+  initialFailure,
+  initialCourt,
+  initialAudience = "legal professional",
+  embedded = false,
+  showIntro = true,
+  showControls = true,
+  showSideRail = true,
+  showExportLinks = false,
+  dataMode = "cases",
+}: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const tipRef = useRef<HTMLDivElement>(null);
   const zoomBehaviorRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown> | null>(null);
 
-  const [activeSev, setActiveSev] = useState<string>("all");
+  const normalizedStates = useMemo(() => initialStates.map((item) => item.toUpperCase()).filter(Boolean), [initialStates]);
+  const [activeSev, setActiveSev] = useState<string>(initialSeverity || "all");
   const [railTab, setRailTab] = useState<"cases" | "states">("cases");
   const [railSort, setRailSort] = useState<"amount" | "date">("amount");
-  const [focusState, setFocusState] = useState<string | null>(null);
+  const [focusState, setFocusState] = useState<string | null>(normalizedStates.length === 1 ? normalizedStates[0] : null);
   const [showLabels, setShowLabels] = useState(false);
   const [scope, setScope] = useState<"us" | "world">("us");
   const [requestCountry, setRequestCountry] = useState("");
@@ -128,8 +155,48 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
   useEffect(() => { hoverCaseIdRef.current = hoverCaseId; }, [hoverCaseId]);
   useEffect(() => { focusStateRef.current = focusState; }, [focusState]);
 
+  const mapCases = useMemo(() => {
+    return SX.cases.filter((c) => {
+      if (normalizedStates.length > 0 && !normalizedStates.includes(c.state)) return false;
+      if (initialTool && !c.ai_tool_used.toLowerCase().includes(initialTool.toLowerCase())) return false;
+      if (initialFailure && !c.tags.includes(initialFailure)) return false;
+      if (initialCourt && !c.court.toLowerCase().includes(initialCourt.toLowerCase())) return false;
+      return true;
+    });
+  }, [normalizedStates, initialTool, initialFailure, initialCourt]);
+
+  const activeMapCases = useMemo(() => {
+    return mapCases.filter((c) => activeSev === "all" || c.severity === activeSev);
+  }, [activeSev, mapCases]);
+
+  const byState = useMemo<StateEntry[]>(() => {
+    const grouped = new Map<string, StateEntry>();
+    activeMapCases.forEach((c) => {
+      const current = grouped.get(c.state) || { state: c.state, count: 0, total: 0, cases: [] };
+      current.count += 1;
+      current.total += c.amount || 0;
+      current.cases.push({
+        id: c.id,
+        name: c.case_name,
+        court: c.court,
+        judge: c.judge,
+        date: c.date,
+        amount: c.amount,
+        amount_display: c.amount_display,
+        severity: c.severity,
+        tool: c.ai_tool_used,
+        summary: c.summary,
+        sanction_types: c.sanction_types,
+        tags: c.tags,
+        source_url: c.source_url,
+      });
+      grouped.set(c.state, current);
+    });
+    return [...grouped.values()].sort((a, b) => b.count - a.count || a.state.localeCompare(b.state));
+  }, [activeMapCases]);
+
   const filteredCases = useMemo(() => {
-    let out = SX.cases.filter((c) => activeSev === "all" || c.severity === activeSev);
+    let out = activeMapCases;
     if (focusState) out = out.filter((c) => c.state === focusState);
     if (railSort === "amount") {
       out = [...out].sort((a, b) => (b.amount || 0) - (a.amount || 0));
@@ -137,12 +204,71 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
       out = [...out].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
     }
     return out;
-  }, [activeSev, focusState, railSort]);
+  }, [activeMapCases, focusState, railSort]);
 
   const circuits = useMemo(() => {
     const set = new Set<string>();
-    SX.cases.forEach((c) => { if (c.circuit) set.add(c.circuit); });
+    activeMapCases.forEach((c) => { if (c.circuit) set.add(c.circuit); });
     return set.size;
+  }, [activeMapCases]);
+
+  const sourceCoverage = useMemo(() => {
+    const withSource = activeMapCases.filter((c) => c.source_url).length;
+    return `${withSource}/${activeMapCases.length}`;
+  }, [activeMapCases]);
+  const modeLabel = dataMode === "severity" ? "severity-weighted view" : "case-count view";
+
+  const hideTip = useCallback(() => {
+    if (tipRef.current) tipRef.current.classList.remove("show");
+  }, []);
+
+  const showTip = useCallback((c: Case, px: number, py: number) => {
+    const tip = tipRef.current;
+    if (!tip) return;
+    tip.innerHTML = `
+      <div class="smv2-tip-head">
+        <span class="smv2-tip-state">${STATE_NAMES[c.state] || c.state}</span>
+        <span class="smv2-tip-code">${c.state}</span>
+      </div>
+      <div style="font-family: var(--font-serif); font-size:15px; font-weight:500; color:var(--text-100); letter-spacing:-0.015em; margin-bottom:6px; line-height:1.25;">${c.case_name}</div>
+      <div class="smv2-tip-row"><span>Court</span><b>${c.court}</b></div>
+      <div class="smv2-tip-row"><span>Sanction</span><b>${c.amount_display}</b></div>
+      <div class="smv2-tip-row"><span>Date</span><b>${fmtDate(c.date)}</b></div>
+      <div class="smv2-tip-foot">
+        <span class="smv2-sev-pill smv2-sev-${c.severity}">${c.severity.replace("-", " ")}</span>
+        <span style="color:var(--text-500); margin-left:8px; font-size:10px; font-family: var(--font-mono); letter-spacing: 0.08em;">${c.ai_tool_used}</span>
+      </div>
+    `;
+    tip.style.left = px + "px";
+    tip.style.top = py + "px";
+    tip.classList.add("show");
+    requestAnimationFrame(() => {
+      if (!tip) return;
+      const tipRect = tip.getBoundingClientRect();
+      const vw = window.innerWidth;
+      const margin = 12;
+      let placement = "above";
+      let tx = "-50%", ty = "calc(-100% - 14px)";
+      if (py - tipRect.height - 24 < margin) {
+        placement = "below";
+        ty = "calc(14px)";
+      }
+      let arrowX = 50;
+      const halfW = tipRect.width / 2;
+      if (px - halfW < margin) {
+        const shift = margin - (px - halfW);
+        tx = `calc(-50% + ${shift}px)`;
+        arrowX = 50 - (shift / tipRect.width) * 100;
+      } else if (px + halfW > vw - margin) {
+        const shift = (px + halfW) - (vw - margin);
+        tx = `calc(-50% - ${shift}px)`;
+        arrowX = 50 + (shift / tipRect.width) * 100;
+      }
+      tip.style.setProperty("--smv2-tx", tx);
+      tip.style.setProperty("--smv2-ty", ty);
+      tip.style.setProperty("--smv2-arrow-x", arrowX + "%");
+      tip.setAttribute("data-placement", placement);
+    });
   }, []);
 
   // d3 map setup
@@ -193,7 +319,7 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
 
         gStates.selectAll("*").remove();
         // Compute heat tiers from state case counts
-        const stateCount = (code: string) => SX.byState.find((s) => s.state === code)?.count || 0;
+        const stateCount = (code: string) => byState.find((s) => s.state === code)?.count || 0;
         const heatTier = (n: number) => {
           if (n === 0) return 0;
           if (n <= 3) return 1;
@@ -252,7 +378,7 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
         const redrawPins = () => {
           gPins.selectAll("*").remove();
           const byState: Record<string, Case[]> = {};
-          SX.cases.forEach((c) => { (byState[c.state] = byState[c.state] || []).push(c); });
+          mapCases.forEach((c) => { (byState[c.state] = byState[c.state] || []).push(c); });
 
           for (const [code, list] of Object.entries(byState)) {
             const centroid = centroids[code];
@@ -336,8 +462,7 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
       }
     })();
     return () => { cancelled = true; };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [mapCases, byState, hideTip, showTip]);
 
   useEffect(() => {
     const redraw = (svgRef.current as unknown as { __redrawPins?: () => void })?.__redrawPins;
@@ -359,58 +484,6 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
     svgRef.current.classList.toggle("show-labels", showLabels);
   }, [showLabels]);
 
-  function showTip(c: Case, px: number, py: number) {
-    const tip = tipRef.current;
-    if (!tip) return;
-    tip.innerHTML = `
-      <div class="smv2-tip-head">
-        <span class="smv2-tip-state">${STATE_NAMES[c.state] || c.state}</span>
-        <span class="smv2-tip-code">${c.state}</span>
-      </div>
-      <div style="font-family: var(--font-serif); font-size:15px; font-weight:500; color:var(--text-100); letter-spacing:-0.015em; margin-bottom:6px; line-height:1.25;">${c.case_name}</div>
-      <div class="smv2-tip-row"><span>Court</span><b>${c.court}</b></div>
-      <div class="smv2-tip-row"><span>Sanction</span><b>${c.amount_display}</b></div>
-      <div class="smv2-tip-row"><span>Date</span><b>${fmtDate(c.date)}</b></div>
-      <div class="smv2-tip-foot">
-        <span class="smv2-sev-pill smv2-sev-${c.severity}">${c.severity.replace("-", " ")}</span>
-        <span style="color:var(--text-500); margin-left:8px; font-size:10px; font-family: var(--font-mono); letter-spacing: 0.08em;">${c.ai_tool_used}</span>
-      </div>
-    `;
-    tip.style.left = px + "px";
-    tip.style.top = py + "px";
-    tip.classList.add("show");
-    requestAnimationFrame(() => {
-      if (!tip) return;
-      const tipRect = tip.getBoundingClientRect();
-      const vw = window.innerWidth;
-      const margin = 12;
-      let placement = "above";
-      let tx = "-50%", ty = "calc(-100% - 14px)";
-      if (py - tipRect.height - 24 < margin) {
-        placement = "below";
-        ty = "calc(14px)";
-      }
-      let arrowX = 50;
-      const halfW = tipRect.width / 2;
-      if (px - halfW < margin) {
-        const shift = margin - (px - halfW);
-        tx = `calc(-50% + ${shift}px)`;
-        arrowX = 50 - (shift / tipRect.width) * 100;
-      } else if (px + halfW > vw - margin) {
-        const shift = (px + halfW) - (vw - margin);
-        tx = `calc(-50% - ${shift}px)`;
-        arrowX = 50 + (shift / tipRect.width) * 100;
-      }
-      tip.style.setProperty("--smv2-tx", tx);
-      tip.style.setProperty("--smv2-ty", ty);
-      tip.style.setProperty("--smv2-arrow-x", arrowX + "%");
-      tip.setAttribute("data-placement", placement);
-    });
-  }
-  function hideTip() {
-    if (tipRef.current) tipRef.current.classList.remove("show");
-  }
-
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setSelectedCase(null); };
     window.addEventListener("keydown", onKey);
@@ -420,8 +493,9 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
   const order: Record<string, number> = { low: 1, medium: 2, high: 3, "career-ending": 4 };
 
   return (
-    <section id="map" className="section alt smv2-root">
+    <section id="map" className={embedded ? "smv2-root" : "section alt smv2-root"}>
       <div className="wrap">
+        {showIntro && (
         <div className="section-head blue" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "24px", flexWrap: "wrap" }}>
           <div style={{ flex: 1, minWidth: "280px" }}>
             <div className="section-label blue">
@@ -429,11 +503,20 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
               Credibility · Proof
             </div>
             <h2 className="section-heading">
-              This is <span className="blue-em">real</span>. Here's where.
+              This is <span className="blue-em">real</span>. Here&apos;s where.
             </h2>
             <p className="section-sub">
               Every documented AI-hallucination sanction across US courts, plotted in real time. Pin size = sanction amount. Pin color = severity. Click any pin for the full case.
             </p>
+            {embedded && (
+              <p className="section-sub" style={{ marginTop: 10 }}>
+                Active view: {normalizedStates.length > 0 ? normalizedStates.join(", ") : "all states"} · {modeLabel}
+                {initialTool ? ` · tool=${initialTool}` : ""}
+                {initialFailure ? ` · failure=${initialFailure}` : ""}
+                {initialCourt ? ` · court=${initialCourt}` : ""}
+                {` · audience=${initialAudience}`}
+              </p>
+            )}
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "10px", alignSelf: "flex-start", flexShrink: 0 }}>
             {/* Scope toggle US / World */}
@@ -500,8 +583,10 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
             </a>
           </div>
         </div>
+        )}
 
         {/* Pace strip */}
+        {showIntro && (
         <div
           style={{
             display: "grid",
@@ -547,6 +632,7 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
             </div>
           ))}
         </div>
+        )}
 
         {/* US map + Worldwide teaser — both mounted (display-toggled) so d3 keeps state when toggling */}
         <div
@@ -695,9 +781,10 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
                 }}
               >
                 <span style={{ display: "inline-block", width: "5px", height: "5px", background: "var(--blue)", marginRight: "8px", verticalAlign: "middle" }}></span>
-                {SX.cases.length} cases · {SX.byState.length} states · {circuits} circuits
+                {activeMapCases.length} cases · {byState.length} states · {circuits} circuits · sources {sourceCoverage}
               </div>
             </div>
+            {showControls && (
             <div className="smv2-chips">
               <button
                 className={`smv2-chip ${showLabels ? "active" : ""}`}
@@ -728,14 +815,23 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
                 </button>
               ))}
             </div>
+            )}
           </div>
+
+          {showExportLinks && (
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, padding: "0 20px 14px", fontFamily: "var(--font-mono)", fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }}>
+              <a href={`/dashboard${normalizedStates[0] ? `?state=${normalizedStates[0]}&audience=${encodeURIComponent(initialAudience)}` : `?audience=${encodeURIComponent(initialAudience)}`}`} style={{ color: "var(--blue)", textDecoration: "none" }}>Dashboard</a>
+              <a href={`/api/artifact?type=source&format=md${normalizedStates[0] ? `&state=${normalizedStates[0]}` : ""}`} style={{ color: "var(--blue)", textDecoration: "none" }}>Sources</a>
+              <a href={`/api/artifact?type=report&format=pdf${normalizedStates[0] ? `&state=${normalizedStates[0]}` : ""}`} style={{ color: "var(--blue)", textDecoration: "none" }}>PDF-ready</a>
+            </div>
+          )}
 
           {/* Map body */}
           <div className="smv2-body">
             <div className="smv2-stage">
               <div className="smv2-compass">
-                <div><span className="num">{SX.cases.length}</span> <span>rulings</span></div>
-                <div><span className="num">{SX.byState.length}</span> <span>states</span></div>
+                <div><span className="num">{activeMapCases.length}</span> <span>rulings</span></div>
+                <div><span className="num">{byState.length}</span> <span>states</span></div>
                 <div><span className="num">{circuits}</span> <span>circuits</span></div>
               </div>
               <svg ref={svgRef} viewBox="0 0 960 600" preserveAspectRatio="xMidYMid meet">
@@ -774,6 +870,7 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
               </div>
             </div>
 
+            {showSideRail && (
             <aside className="smv2-rail">
               <div className="smv2-rail-tabs">
                 <button className={`smv2-rail-tab ${railTab === "cases" ? "active" : ""}`} onClick={() => setRailTab("cases")}>
@@ -886,7 +983,7 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
                     </div>
                   ))
                 ) : (
-                  SX.byState.map((s) => {
+                  byState.map((s) => {
                     const maxSev = s.cases.reduce((acc, c) => (order[c.severity] > order[acc] ? c.severity : acc), "low");
                     return (
                       <div key={s.state} className="smv2-case-row" onClick={() => onStateClick && onStateClick(s.state)}>
@@ -911,6 +1008,7 @@ export default function SanctionsMapV2({ onStateClick }: Props) {
                 )}
               </div>
             </aside>
+            )}
           </div>
 
           {/* Legend bar */}

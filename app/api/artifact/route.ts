@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 
 import {
   artifactFilename,
+  buildArtifactCsv,
   buildArtifactMarkdown,
   markdownToBasicPdf,
   markdownToHtml,
@@ -17,9 +18,15 @@ export async function GET(request: NextRequest): Promise<Response> {
   const markdown = buildArtifactMarkdown(params);
   const headers = new Headers();
 
-  if (params.format === "docx") {
+  if (params.format === "docx" || params.format === "xlsx") {
     headers.set("content-type", "text/plain; charset=utf-8");
     return new Response(unsupportedArtifactMessage(params.format), { status: 415, headers });
+  }
+
+  if (params.format === "csv") {
+    headers.set("content-type", "text/csv; charset=utf-8");
+    headers.set("content-disposition", `attachment; filename="${artifactFilename(params.type, params.format, params.state)}"`);
+    return new Response(buildArtifactCsv(params), { headers });
   }
 
   if (params.format === "pdf") {
@@ -34,8 +41,8 @@ export async function GET(request: NextRequest): Promise<Response> {
     return new Response(markdownToHtml(markdown), { headers });
   }
 
-  if (params.format === "doc" || params.format === "word") {
-    headers.set("content-type", "application/msword; charset=utf-8");
+  if (params.format === "doc" || params.format === "word" || params.format === "word-ready") {
+    headers.set("content-type", "text/html; charset=utf-8");
     headers.set("content-disposition", `attachment; filename="${artifactFilename(params.type, params.format, params.state)}"`);
     return new Response(markdownToHtml(markdown), { headers });
   }

@@ -2,7 +2,7 @@ import sanctionsRaw from "@/data/sanctions.json";
 import metaRaw from "@/data/meta.json";
 import type { PublicSanctionCase } from "@/lib/mcp/types";
 
-type ArtifactFormat = "md" | "markdown" | "html" | "doc" | "word" | "pdf" | "docx";
+type ArtifactFormat = "md" | "markdown" | "html" | "doc" | "word" | "pdf" | "pdf-ready" | "word-ready" | "csv" | "xlsx" | "docx";
 
 const cases = (sanctionsRaw as unknown as PublicSanctionCase[]).slice().sort((a, b) => b.date.localeCompare(a.date));
 const meta = metaRaw as {
@@ -280,17 +280,45 @@ export function markdownToHtml(markdown: string): string {
   return `<!doctype html><html><head><meta charset="utf-8"><title>AI Vortex Artifact</title><style>body{font-family:Arial,sans-serif;line-height:1.45;max-width:900px;margin:40px auto;padding:0 24px;color:#111827}h1{font-size:28px}h2{font-size:18px;margin-top:28px}pre{background:#f3f4f6;padding:8px;white-space:pre-wrap}li{margin:6px 0}</style></head><body>${html}</body></html>`;
 }
 
+export function buildArtifactCsv(params: {
+  type?: string;
+  state?: string;
+  court?: string;
+  aiTool?: string;
+  practiceArea?: string;
+  caseItems?: PublicSanctionCase[];
+}): string {
+  const caseItems = params.caseItems || getArtifactCases({
+    state: params.state,
+    court: params.court,
+    aiTool: params.aiTool,
+    practiceArea: params.practiceArea,
+  });
+  const rows = [
+    ["item", "citation_or_quote", "source_checked", "ai_touched", "exists", "pincite_correct", "quote_exact", "supports_proposition", "status", "reviewer"],
+    ["1", "", "", "Yes / No / Unknown", "Yes / No", "Yes / No / N.A.", "Yes / No / N.A.", "Yes / No", "Verified / Fix / Remove / Escalate", ""],
+    ["2", "", "", "Yes / No / Unknown", "Yes / No", "Yes / No / N.A.", "Yes / No / N.A.", "Yes / No", "Verified / Fix / Remove / Escalate", ""],
+    [],
+    ["source_case", "date", "court", "severity", "source_url"],
+    ...caseItems.slice(0, 20).map((item) => [item.case_name, item.date, item.court, item.severity, item.source_url || ""]),
+  ];
+  return rows.map((row) => row.map((cell) => `"${String(cell || "").replace(/"/g, '""')}"`).join(",")).join("\n");
+}
+
 export function unsupportedArtifactMessage(format: string): string {
   return [
     `Unsupported artifact format: ${format}`,
     "",
-    "DOCX export is not available yet. Supported formats are:",
+    "Native DOCX/XLSX export is not available yet. Supported formats are:",
     "- Markdown: format=md",
+    "- PDF-ready Markdown: format=pdf-ready",
+    "- Word-ready HTML/text: format=word-ready",
+    "- CSV ledger/table: format=csv",
     "- HTML: format=html",
     "- Word-compatible HTML document: format=doc",
     "- Basic PDF: format=pdf",
     "",
-    "Use format=doc for a Word-compatible file, or format=md for clean copy/paste into Word or Google Docs.",
+    "Use format=word-ready for a Word-ready file, or format=md for clean copy/paste into Word or Google Docs.",
   ].join("\n");
 }
 
@@ -344,7 +372,12 @@ export function markdownToBasicPdf(markdown: string): Uint8Array {
 }
 
 export function artifactFilename(type: string, format: ArtifactFormat, state?: string): string {
-  const extension = format === "pdf" ? "pdf" : format === "doc" || format === "word" ? "doc" : format === "html" ? "html" : "md";
+  const extension =
+    format === "pdf" ? "pdf" :
+    format === "doc" || format === "word" || format === "word-ready" ? "html" :
+    format === "html" ? "html" :
+    format === "csv" ? "csv" :
+    "md";
   return `ai-vortex-${type || "artifact"}${state ? `-${state.toLowerCase()}` : ""}.${extension}`;
 }
 

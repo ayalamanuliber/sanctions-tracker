@@ -6,6 +6,7 @@ import * as topojson from "topojson-client";
 import type { Topology, GeometryCollection } from "topojson-specification";
 import sanctionsRaw from "@/data/sanctions.json";
 import metaRaw from "@/data/meta.json";
+import { matchesCourt, matchesTool } from "@/lib/filtering";
 
 const META = metaRaw as unknown as {
   total_cases: number;
@@ -158,9 +159,9 @@ export default function SanctionsMapV2({
   const mapCases = useMemo(() => {
     return SX.cases.filter((c) => {
       if (normalizedStates.length > 0 && !normalizedStates.includes(c.state)) return false;
-      if (initialTool && !c.ai_tool_used.toLowerCase().includes(initialTool.toLowerCase())) return false;
+      if (initialTool && !matchesTool(c.ai_tool_used, initialTool, c.summary)) return false;
       if (initialFailure && !c.tags.includes(initialFailure)) return false;
-      if (initialCourt && !c.court.toLowerCase().includes(initialCourt.toLowerCase())) return false;
+      if (initialCourt && !matchesCourt(c.court, initialCourt)) return false;
       return true;
     });
   }, [normalizedStates, initialTool, initialFailure, initialCourt]);
@@ -822,7 +823,7 @@ export default function SanctionsMapV2({
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8, padding: "0 20px 14px", fontFamily: "var(--font-mono)", fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }}>
               <a href={`/dashboard${normalizedStates[0] ? `?state=${normalizedStates[0]}&audience=${encodeURIComponent(initialAudience)}` : `?audience=${encodeURIComponent(initialAudience)}`}`} style={{ color: "var(--blue)", textDecoration: "none" }}>Dashboard</a>
               <a href={`/api/artifact?type=source&format=md${normalizedStates[0] ? `&state=${normalizedStates[0]}` : ""}`} style={{ color: "var(--blue)", textDecoration: "none" }}>Sources</a>
-              <a href={`/api/artifact?type=report&format=pdf${normalizedStates[0] ? `&state=${normalizedStates[0]}` : ""}`} style={{ color: "var(--blue)", textDecoration: "none" }}>PDF-ready</a>
+              <a href={`/artifact/print?type=report${normalizedStates[0] ? `&state=${normalizedStates[0]}` : ""}`} style={{ color: "var(--blue)", textDecoration: "none" }}>Print view</a>
             </div>
           )}
 

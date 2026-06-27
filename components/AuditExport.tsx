@@ -174,7 +174,7 @@ export default function AuditExport({ answers }: Props) {
               className="hero-btn-primary"
               style={{ justifyContent: "center", padding: "14px 20px", fontSize: "11px", border: "none", cursor: "pointer" }}
             >
-              Download PDF
+              Print / Save PDF
               <span className="arrow-line"></span>
             </button>
             <button

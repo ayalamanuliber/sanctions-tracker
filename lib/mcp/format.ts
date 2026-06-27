@@ -283,7 +283,7 @@ function formatArtifactLinks(
     return [
       "Recommended artifacts",
       "- Source appendix",
-      "- Word/PDF-ready memo",
+      "- Print-ready memo",
       "- Dashboard link when available",
     ];
   }
@@ -296,16 +296,17 @@ function formatArtifactLinks(
     rows.add(`- Dashboard: ${dashboardUrl(baseUrl, { state: params.state, court: params.court, audience: params.audience, aiTool: params.aiTool, practiceArea: params.practiceArea })}`);
   }
   if (["jurisdiction", "comparison", "dashboard"].includes(params.scenario)) {
-    rows.add(`- Map view: ${mapUrl(baseUrl, { state: params.state, aiTool: params.aiTool })}`);
+    rows.add(`- Map view: ${mapUrl(baseUrl, { state: params.state, court: params.court, audience: params.audience, aiTool: params.aiTool })}`);
   }
   if (["jurisdiction", "comparison", "policy", "tool", "dashboard", "package"].includes(params.scenario)) {
-    rows.add(`- PDF-ready report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "pdf-ready" })}`);
-    rows.add(`- Word-ready report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "word-ready" })}`);
+    rows.add(`- Print-ready Markdown report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "pdf-ready" })}`);
+    rows.add(`- Word-compatible HTML report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "word-ready" })}`);
+    rows.add(`- Open print view: ${printUrl(baseUrl, { ...common, type: "report" })}`);
     rows.add(`- Markdown report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "md" })}`);
   }
   if (["filing", "package"].includes(params.scenario)) {
     rows.add(`- Verification ledger CSV: ${artifactUrl(baseUrl, { ...common, type: "ledger", format: "csv" })}`);
-    rows.add(`- Verification ledger Word-ready: ${artifactUrl(baseUrl, { ...common, type: "ledger", format: "word-ready" })}`);
+    rows.add(`- Verification ledger Word-compatible HTML: ${artifactUrl(baseUrl, { ...common, type: "ledger", format: "word-ready" })}`);
   }
   if (["opposing"].includes(params.scenario)) {
     rows.add(`- Discrepancy matrix / review memo: ${artifactUrl(baseUrl, { ...common, type: "opposing", format: "word-ready" })}`);
@@ -898,6 +899,10 @@ export function formatPolicyGapReport(
     `Risk level: ${riskLevel(caseItems)}`,
     ...dateCoverage(caseItems),
     "",
+    "Context completeness",
+    "- This is a default tracker-backed policy gap readout. Before turning it into a firmwide policy, confirm: main filing courts, approved vs informal AI tools, allowed AI uses, signer/reviewer workflow, verification platforms, and whether the artifact is internal, client-facing, or court-facing.",
+    "- If the matter is urgent, use the filing gate first and defer broader policy drafting.",
+    "",
     "Most common control gaps",
     ...(gaps.length > 0 ? gaps.map(([label, count]) => `- ${label}: ${count}`) : ["- No tagged policy gaps in the matched set."]),
     "",
@@ -931,6 +936,47 @@ export function formatPolicyGapReport(
     ]),
     "",
     ...vortexFooter(meta),
+  ].join("\n");
+}
+
+export function formatContextIntake(params: {
+  scenario?: string;
+  audience?: string;
+  urgency?: "urgent_filing" | "normal" | "implementation";
+}): string {
+  const scenario = params.scenario || "policy or implementation request";
+  if (params.urgency === "urgent_filing") {
+    return [
+      "Context intake decision",
+      "",
+      "This looks urgent. Do not slow the user down with a long intake.",
+      "",
+      "Proceed with emergency filing triage:",
+      "- Identify the filing court and deadline.",
+      "- Freeze the draft version to be checked.",
+      "- Run citation, quote, proposition-support, disclosure, signoff, and audit gates.",
+      "- Preserve the verification ledger and unresolved exceptions.",
+      "",
+      "Suggested next step",
+      "- Call the pre-filing review packet tool and produce a concise same-day checklist.",
+    ].join("\n");
+  }
+
+  return [
+    "Context intake",
+    "",
+    `Use before overbuilding a ${scenario} for ${params.audience || "a legal professional"}.`,
+    "",
+    "Ask these tailoring questions first, then offer a default if they want speed:",
+    "1. Which courts or jurisdictions matter most?",
+    "2. Which AI tools are approved, and which are only informally used?",
+    "3. What AI uses are allowed: research, drafting, summaries, quote extraction, cite checking, or client communications?",
+    "4. Who reviews and signs court-facing filings?",
+    "5. Which systems are used for verification: Westlaw, Lexis, Bloomberg, vLex, PACER, CourtListener, or internal KM?",
+    "6. Is the needed artifact internal policy, client-facing guidance, court-facing workflow, training, or vendor/procurement material?",
+    "",
+    "Default offer",
+    "- If the user does not want intake, produce a conservative default for court-facing litigation work only and label it as a default.",
   ].join("\n");
 }
 
@@ -1180,10 +1226,11 @@ export function formatImplementationPackage(params: {
         "Working links",
         `- Dashboard: ${dashboardUrl(baseUrl, { state, court, audience, aiTool: aiTools.join(", ") })}`,
         `- Map: ${mapUrl(baseUrl, { state, court, audience, aiTool: aiTools.join(", ") })}`,
-        `- Leadership memo PDF-ready: ${artifactUrl(baseUrl, { type: "report", format: "pdf-ready", audience, state, court })}`,
+        `- Leadership memo print-ready Markdown: ${artifactUrl(baseUrl, { type: "report", format: "pdf-ready", audience, state, court })}`,
+        `- Leadership memo print view: ${printUrl(baseUrl, { type: "report", audience, state, court })}`,
         `- Leadership memo Markdown: ${artifactUrl(baseUrl, { type: "report", format: "md", audience, state, court })}`,
         `- Verification ledger CSV: ${artifactUrl(baseUrl, { type: "ledger", format: "csv", state, court, aiTool: aiTools.join(", ") })}`,
-        `- Verification ledger Word-ready: ${artifactUrl(baseUrl, { type: "ledger", format: "word-ready", state, court, aiTool: aiTools.join(", ") })}`,
+        `- Verification ledger Word-compatible HTML: ${artifactUrl(baseUrl, { type: "ledger", format: "word-ready", state, court, aiTool: aiTools.join(", ") })}`,
         `- Source appendix: ${artifactUrl(baseUrl, { type: "source", format: "md", state, court })}`,
       ]
     : [];
@@ -1203,9 +1250,9 @@ export function formatImplementationPackage(params: {
     "5. Rollout: 7-day pilot followed by 30-day policy adoption.",
     "",
     "Implementation package generated",
-    "- Leadership memo: PDF-ready + Markdown",
+    "- Leadership memo: print-ready Markdown + browser print view + Markdown",
     "- Filing checklist: printable Markdown",
-    "- Verification ledger: CSV + Word-ready",
+    "- Verification ledger: CSV + Word-compatible HTML",
     "- Source appendix: Markdown",
     "- Dashboard: live link",
     "- Map: live link",
@@ -1231,6 +1278,29 @@ function artifactUrl(
   const url = new URL("/api/artifact", baseUrl);
   url.searchParams.set("type", params.type);
   url.searchParams.set("format", params.format);
+  if (params.title) url.searchParams.set("title", params.title);
+  if (params.audience) url.searchParams.set("audience", params.audience);
+  if (params.state) url.searchParams.set("state", params.state);
+  if (params.court) url.searchParams.set("court", params.court);
+  if (params.aiTool) url.searchParams.set("ai_tool", params.aiTool);
+  if (params.practiceArea) url.searchParams.set("practice_area", params.practiceArea);
+  return url.toString();
+}
+
+function printUrl(
+  baseUrl: string,
+  params: {
+    type: string;
+    title?: string;
+    audience?: string;
+    state?: string;
+    court?: string;
+    aiTool?: string;
+    practiceArea?: string;
+  },
+): string {
+  const url = new URL("/artifact/print", baseUrl);
+  url.searchParams.set("type", params.type);
   if (params.title) url.searchParams.set("title", params.title);
   if (params.audience) url.searchParams.set("audience", params.audience);
   if (params.state) url.searchParams.set("state", params.state);
@@ -1323,7 +1393,7 @@ export function formatVisualSummaryData(
     })),
     artifact_options: [
       "Managing partner dashboard",
-      "PDF-ready risk report",
+      "Print-ready risk report and live map",
       "Markdown source appendix",
       "Practice-group checklist",
     ],

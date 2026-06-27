@@ -12,7 +12,7 @@ export default function SourcesPage() {
             ["All source appendix", "/api/artifact?type=source&format=md"],
             ["New Jersey source appendix", "/api/artifact?type=source&format=md&state=NJ"],
             ["New York source appendix", "/api/artifact?type=source&format=md&state=NY"],
-            ["PDF-ready report", "/api/artifact?type=report&format=pdf-ready"],
+            ["Print-ready report", "/artifact/print?type=report"],
           ].map(([label, href]) => (
             <Link key={href} href={href} style={{ border: "1px solid #1f2937", background: "#111827", color: "#fbbf24", padding: 16, textDecoration: "none", fontWeight: 800 }}>
               {label}

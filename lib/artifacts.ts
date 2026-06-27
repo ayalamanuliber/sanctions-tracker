@@ -1,5 +1,6 @@
 import sanctionsRaw from "@/data/sanctions.json";
 import metaRaw from "@/data/meta.json";
+import { matchesCourt, matchesTool } from "@/lib/filtering";
 import type { PublicSanctionCase } from "@/lib/mcp/types";
 
 type ArtifactFormat = "md" | "markdown" | "html" | "doc" | "word" | "pdf" | "pdf-ready" | "word-ready" | "csv" | "xlsx" | "docx";
@@ -25,8 +26,8 @@ export function getArtifactCases(params: {
   return cases
     .filter((item) => {
       if (state && item.state !== state.toUpperCase()) return false;
-      if (court && !item.court.toLowerCase().includes(court.toLowerCase())) return false;
-      if (aiTool && !item.ai_tool_used.toLowerCase().includes(aiTool.toLowerCase())) return false;
+      if (court && !matchesCourt(item.court, court)) return false;
+      if (aiTool && !matchesTool(item.ai_tool_used, aiTool, item.summary)) return false;
       if (practiceArea) {
         const haystack = [item.legal_field_primary, item.legal_field_secondary, item.tags.join(" ")].join(" ");
         if (!haystack.toLowerCase().includes(practiceArea.toLowerCase())) return false;
@@ -311,14 +312,14 @@ export function unsupportedArtifactMessage(format: string): string {
     "",
     "Native DOCX/XLSX export is not available yet. Supported formats are:",
     "- Markdown: format=md",
-    "- PDF-ready Markdown: format=pdf-ready",
-    "- Word-ready HTML/text: format=word-ready",
+    "- Print-ready Markdown: format=pdf-ready",
+    "- Word-compatible HTML/text: format=word-ready",
     "- CSV ledger/table: format=csv",
     "- HTML: format=html",
     "- Word-compatible HTML document: format=doc",
     "- Basic PDF: format=pdf",
     "",
-    "Use format=word-ready for a Word-ready file, or format=md for clean copy/paste into Word or Google Docs.",
+    "Use format=word-ready for a Word-compatible HTML file, format=pdf for a basic generated PDF, or format=md for clean copy/paste into Word or Google Docs.",
   ].join("\n");
 }
 

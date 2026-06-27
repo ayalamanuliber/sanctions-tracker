@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { removeQueryParam } from "@/lib/filtering";
 import { getArtifactCases } from "@/lib/artifacts";
 
 type PageProps = {
@@ -39,6 +40,7 @@ export default async function DashboardPage({ searchParams }: PageProps) {
   const aiTool = resolved?.ai_tool;
   const audience = resolved?.audience || "legal professional";
   const caseItems = getArtifactCases({ state, court, practiceArea, aiTool, limit: 250 });
+  const broaderStateItems = caseItems.length === 0 && state ? getArtifactCases({ state, limit: 250 }) : [];
   const severity = countBy(caseItems.map((item) => item.severity));
   const failures = rankedEntries(countBy(caseItems.flatMap((item) => item.tags).filter((tag) =>
     ["fake-citations", "fabricated-quotes", "misrepresented-authority", "bar-referral", "disqualification"].includes(tag),
@@ -58,6 +60,14 @@ export default async function DashboardPage({ searchParams }: PageProps) {
   if (practiceArea) artifactQuery.set("practice_area", practiceArea);
   if (aiTool) artifactQuery.set("ai_tool", aiTool);
   artifactQuery.set("audience", audience);
+  const currentQuery = { state, court, practice_area: practiceArea, ai_tool: aiTool, audience };
+  const chips = [
+    state ? { key: "state", label: `state=${state}` } : null,
+    court ? { key: "court", label: `court=${court}` } : null,
+    practiceArea ? { key: "practice_area", label: `practice_area=${practiceArea}` } : null,
+    aiTool ? { key: "ai_tool", label: `ai_tool=${aiTool}` } : null,
+    audience ? { key: "audience", label: `audience=${audience}` } : null,
+  ].filter(Boolean) as Array<{ key: string; label: string }>;
 
   return (
     <main className="min-h-screen" style={{ background: "#0b0d12", color: "#f8fafc" }}>
@@ -74,9 +84,10 @@ export default async function DashboardPage({ searchParams }: PageProps) {
               Source-backed view for {audience.replace(/_/g, " ")}{aiTool ? ` using ${aiTool}` : ""}{practiceArea ? ` in ${practiceArea}` : ""}. Tracked incidents are public risk signals, not usage-adjusted incident rates.
             </p>
           </div>
-          <Link href="/" style={{ color: "#fbbf24", textDecoration: "none", fontWeight: 700 }}>
-            Open full tracker
-          </Link>
+          <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "flex-end" }}>
+            <Link href="/dashboard" style={{ color: "#fbbf24", textDecoration: "none", fontWeight: 700 }}>Reset filters</Link>
+            <Link href="/" style={{ color: "#fbbf24", textDecoration: "none", fontWeight: 700 }}>Open full tracker</Link>
+          </div>
         </header>
 
         <section style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: 14, marginBottom: 24 }}>
@@ -97,18 +108,30 @@ export default async function DashboardPage({ searchParams }: PageProps) {
           <div style={{ color: "#94a3b8", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 10 }}>
             Active filters
           </div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, fontSize: 13 }}>
-            {[
-              state ? `state=${state}` : "state=all",
-              court ? `court=${court}` : "court=all",
-              practiceArea ? `practice_area=${practiceArea}` : "practice_area=all",
-              aiTool ? `ai_tool=${aiTool}` : "ai_tool=all",
-              `audience=${audience}`,
-            ].map((item) => (
-              <span key={item} style={{ border: "1px solid #334155", padding: "6px 8px", color: "#cbd5e1" }}>{item}</span>
-            ))}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8, fontSize: 13, alignItems: "center" }}>
+            {chips.length > 0 ? chips.map((item) => (
+              <Link key={item.key} href={removeQueryParam("/dashboard", currentQuery, item.key)} style={{ border: "1px solid #334155", padding: "6px 8px", color: "#cbd5e1", textDecoration: "none" }} title={`Remove ${item.key}`}>
+                {item.label} ×
+              </Link>
+            )) : <span style={{ border: "1px solid #334155", padding: "6px 8px", color: "#cbd5e1" }}>all matters</span>}
+            {chips.length > 0 && <Link href="/dashboard" style={{ color: "#fbbf24", marginLeft: 8 }}>Reset</Link>}
           </div>
         </section>
+
+        {caseItems.length === 0 && (
+          <section style={{ border: "1px solid #7f1d1d", background: "#1f1111", padding: 18, marginBottom: 24 }}>
+            <h2 style={{ fontSize: 18, marginBottom: 8 }}>No exact matches for these filters</h2>
+            <p style={{ color: "#fecaca", marginBottom: 14 }}>
+              The exact filter combination returned 0 matters. That does not mean there is no risk; broaden one filter and rerun the view.
+            </p>
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              {state && <Link href={`/dashboard?state=${state}&audience=${audience}`} style={{ color: "#fbbf24" }}>Show all {state} ({broaderStateItems.length})</Link>}
+              {court && <Link href={removeQueryParam("/dashboard", currentQuery, "court")} style={{ color: "#fbbf24" }}>Remove court</Link>}
+              {aiTool && <Link href={removeQueryParam("/dashboard", currentQuery, "ai_tool")} style={{ color: "#fbbf24" }}>Remove tool</Link>}
+              <Link href="/dashboard" style={{ color: "#fbbf24" }}>Show national analogues</Link>
+            </div>
+          </section>
+        )}
 
         <section style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18, marginBottom: 24 }}>
           <div style={{ border: "1px solid #1f2937", background: "#111827", padding: 20 }}>
@@ -149,8 +172,9 @@ export default async function DashboardPage({ searchParams }: PageProps) {
           <div style={{ display: "flex", justifyContent: "space-between", gap: 20, alignItems: "center", marginBottom: 16 }}>
             <h2 style={{ fontSize: 18 }}>Top Source-Backed Matters</h2>
             <div style={{ display: "flex", gap: 12, fontSize: 13 }}>
-              <a href={`/api/artifact?type=report&format=pdf&${artifactQuery.toString()}`} style={{ color: "#fbbf24" }}>PDF</a>
-              <a href={`/api/artifact?type=report&format=doc&${artifactQuery.toString()}`} style={{ color: "#fbbf24" }}>Word</a>
+              <a href={`/artifact/print?type=report&${artifactQuery.toString()}`} style={{ color: "#fbbf24" }}>Open print view</a>
+              <a href={`/api/artifact?type=report&format=md&${artifactQuery.toString()}`} style={{ color: "#fbbf24" }}>Markdown</a>
+              <a href={`/api/artifact?type=report&format=word-ready&${artifactQuery.toString()}`} style={{ color: "#fbbf24" }}>Word-compatible HTML</a>
               <a href={`/api/artifact?type=source&format=md&${artifactQuery.toString()}`} style={{ color: "#fbbf24" }}>Sources</a>
             </div>
           </div>

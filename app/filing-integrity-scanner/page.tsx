@@ -39,7 +39,7 @@ export default function FilingIntegrityScannerPage() {
         </section>
 
         <div style={{ display: "flex", gap: 14, marginTop: 22, flexWrap: "wrap" }}>
-          <Link href="/api/artifact?type=opposing&format=word-ready" style={{ color: "#fbbf24", fontWeight: 800 }}>Word-ready scanner</Link>
+          <Link href="/api/artifact?type=opposing&format=word-ready" style={{ color: "#fbbf24", fontWeight: 800 }}>Word-compatible scanner</Link>
           <Link href="/api/artifact?type=source&format=md" style={{ color: "#fbbf24", fontWeight: 800 }}>Source appendix</Link>
         </div>
       </div>

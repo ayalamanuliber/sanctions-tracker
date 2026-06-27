@@ -16,7 +16,7 @@ export default function PolicyStudioPage() {
           ))}
         </section>
         <div style={{ display: "flex", gap: 14, marginTop: 22, flexWrap: "wrap" }}>
-          <Link href="/api/artifact?type=report&format=word-ready&title=AI%20Filing%20Policy%20Gap%20Report" style={{ color: "#fbbf24", fontWeight: 800 }}>Word-ready policy</Link>
+          <Link href="/api/artifact?type=report&format=word-ready&title=AI%20Filing%20Policy%20Gap%20Report" style={{ color: "#fbbf24", fontWeight: 800 }}>Word-compatible policy</Link>
           <Link href="/api/artifact?type=source&format=md" style={{ color: "#fbbf24", fontWeight: 800 }}>Source appendix</Link>
         </div>
       </div>

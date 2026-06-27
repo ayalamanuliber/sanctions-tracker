@@ -29,7 +29,7 @@ export default function ControlMaturityPage() {
         </section>
         <div style={{ display: "flex", gap: 14, marginTop: 22, flexWrap: "wrap" }}>
           <Link href="/dashboard?audience=risk_committee" style={{ color: "#fbbf24", fontWeight: 800 }}>Risk dashboard</Link>
-          <Link href="/api/artifact?type=report&format=pdf-ready&title=AI%20Control%20Maturity%20Score" style={{ color: "#fbbf24", fontWeight: 800 }}>PDF-ready score memo</Link>
+          <Link href="/artifact/print?type=report&title=AI%20Control%20Maturity%20Score" style={{ color: "#fbbf24", fontWeight: 800 }}>Open print-ready score memo</Link>
         </div>
       </div>
     </main>

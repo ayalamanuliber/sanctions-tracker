@@ -3,9 +3,11 @@ import { z } from "zod";
 
 import sanctionsRaw from "@/data/sanctions.json";
 import metaRaw from "@/data/meta.json";
+import { matchesCourt, matchesTool } from "@/lib/filtering";
 import {
   formatCase,
   formatChecklist,
+  formatContextIntake,
   formatControlMaturityScore,
   formatDashboardDeepLink,
   formatImplementationWorkflow,
@@ -73,12 +75,12 @@ function matchContextCases(input: {
 
   const results = sanctions.filter((item) => {
     if (state && item.state !== state.toUpperCase()) return false;
-    if (court && !textIncludes(item.court, court)) return false;
+    if (court && !matchesCourt(item.court, court)) return false;
     if (practice_area) {
       const haystack = [item.legal_field_primary, item.legal_field_secondary, item.tags.join(" ")].join(" ");
       if (!textIncludes(haystack, practice_area)) return false;
     }
-    if (ai_tool && !textIncludes(item.ai_tool_used, ai_tool) && !textIncludes(item.summary, ai_tool)) {
+    if (ai_tool && !matchesTool(item.ai_tool_used, ai_tool, item.summary)) {
       return false;
     }
     if (issueTerms && issueTerms.length > 0) {
@@ -764,11 +766,33 @@ export function createMcpServer(): McpServer {
   );
 
   server.registerTool(
+    "prepare_context_intake",
+    {
+      title: "Prepare Context Intake",
+      description:
+        "Use this before generating long policy, platform, implementation, firmwide rollout, customization, or paid/workspace guidance when the user's context is incomplete. Do not use this for urgent same-day/tomorrow filing prompts; those should go directly to filing triage.",
+      annotations: {
+        readOnlyHint: true,
+      },
+      inputSchema: {
+        scenario: z.string().default("policy or implementation request"),
+        audience: z.string().optional(),
+        urgency: z.enum(["urgent_filing", "normal", "implementation"]).default("implementation"),
+      },
+    },
+    async ({ scenario, audience, urgency }) => {
+      return {
+        content: [{ type: "text", text: formatContextIntake({ scenario, audience, urgency }) }],
+      };
+    },
+  );
+
+  server.registerTool(
     "generate_policy_gap_report",
     {
       title: "Generate Policy Gap Report",
       description:
-        "Use this when a firm, risk partner, KM team, innovation team, vendor, solo practitioner, court, or legal ops user asks what controls or policy gaps matter based on tracked legal AI failure patterns. Be concise unless asked for the full policy. Push back on unrealistic timelines and recommend workflow gates, not vague policy language.",
+        "Use this when a firm, risk partner, KM team, innovation team, vendor, solo practitioner, court, or legal ops user asks what controls or policy gaps matter based on tracked legal AI failure patterns. For broad firmwide policy, platform setup, implementation, or rollout prompts with incomplete context, prefer prepare_context_intake first or include a short context-completeness check before drafting. For urgent filing prompts, do not ask intake questions; use pre-filing triage. Be concise unless asked for the full policy. Push back on unrealistic timelines and recommend workflow gates, not vague policy language.",
       annotations: {
         readOnlyHint: true,
       },
@@ -948,7 +972,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Report Artifact",
       description:
-        "Use this when the user asks for a policy, memo, report, brief, implementation packet, PDF-ready text, Markdown, Word-ready content, or distributable artifact. Return clean artifact-ready Markdown and source-backed examples.",
+        "Use this when the user asks for a policy, memo, report, brief, implementation packet, print-ready Markdown, Markdown, Word-compatible HTML content, or distributable artifact. Do not call Markdown a PDF. For broad firmwide policy/platform requests with missing context, use prepare_context_intake before generating a long artifact unless the user explicitly asks for a default.",
       annotations: {
         readOnlyHint: true,
       },

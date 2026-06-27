@@ -19,7 +19,7 @@ export default function FilingGatePage() {
         </section>
         <div style={{ display: "flex", gap: 14, marginTop: 22, flexWrap: "wrap" }}>
           <Link href="/api/artifact?type=ledger&format=csv" style={{ color: "#fbbf24", fontWeight: 800 }}>Ledger CSV</Link>
-          <Link href="/api/artifact?type=ledger&format=word-ready" style={{ color: "#fbbf24", fontWeight: 800 }}>Word-ready ledger</Link>
+          <Link href="/api/artifact?type=ledger&format=word-ready" style={{ color: "#fbbf24", fontWeight: 800 }}>Word-compatible ledger</Link>
           <Link href="/dashboard?audience=litigation_partner" style={{ color: "#fbbf24", fontWeight: 800 }}>Dashboard</Link>
         </div>
       </div>

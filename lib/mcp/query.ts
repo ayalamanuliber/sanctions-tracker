@@ -1,3 +1,4 @@
+import { matchesTool } from "@/lib/filtering";
 import type { PublicSanctionCase } from "./types";
 
 export interface CaseFilters {
@@ -67,10 +68,7 @@ export function filterCases(cases: PublicSanctionCase[], filters: CaseFilters): 
     if (filters.severity && item.severity !== filters.severity) {
       return false;
     }
-    if (
-      filters.aiTool &&
-      !item.ai_tool_used.toLowerCase().includes(filters.aiTool.toLowerCase())
-    ) {
+    if (filters.aiTool && !matchesTool(item.ai_tool_used, filters.aiTool, item.summary)) {
       return false;
     }
     if (filters.failureTag && !item.tags.includes(filters.failureTag)) {

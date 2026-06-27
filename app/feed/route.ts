@@ -1,5 +1,6 @@
 import sanctionsRaw from "@/data/sanctions.json";
 import metaRaw from "@/data/meta.json";
+import { matchesTool } from "@/lib/filtering";
 import type { PublicSanctionCase } from "@/lib/mcp/types";
 
 export const dynamic = "force-dynamic";
@@ -15,7 +16,7 @@ export async function GET(request: Request): Promise<Response> {
   const severity = url.searchParams.get("severity");
   const filtered = cases.filter((item) => {
     if (state && item.state !== state) return false;
-    if (tool && !item.ai_tool_used.toLowerCase().includes(tool.toLowerCase())) return false;
+    if (tool && !matchesTool(item.ai_tool_used, tool, item.summary)) return false;
     if (failure && !item.tags.includes(failure)) return false;
     if (severity && item.severity !== severity) return false;
     return true;

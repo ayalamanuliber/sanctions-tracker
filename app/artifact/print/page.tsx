@@ -50,7 +50,9 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
         <div className="artifact-body" dangerouslySetInnerHTML={{ __html: html }} />
         <footer>
           <div>Generated with AI Vortex Legal AI Risk. Public tracker evidence is a risk signal, not legal advice or a usage-adjusted incident rate.</div>
-          <div className="export-cta">Need unbranded or firm-branded exports? Email <a href="mailto:manuel@aivortex.io">manuel@aivortex.io</a>.</div>
+          <div className="export-cta">
+            Want this unbranded or firm-branded? <a href="https://www.aivortex.io/legal#subscribe">Subscribe</a> or <a href="mailto:manuel@aivortex.io?subject=AI%20Vortex%20Pro%20Export%20Access">email Manu</a>.
+          </div>
         </footer>
       </article>
       <script dangerouslySetInnerHTML={{ __html: "document.querySelector('.print-button')?.addEventListener('click',()=>window.print())" }} />

@@ -182,7 +182,7 @@ function compactCaseLineWithSource(item: PublicSanctionCase): string {
 
 function suggestedArtifacts(items: string[]): string[] {
   return [
-    "Optional deliverables",
+    "Recommended artifacts",
     ...items.map((item) => `- ${item}`),
     "- Source appendix with case links",
   ];
@@ -282,9 +282,9 @@ function formatArtifactLinks(
   if (!baseUrl) {
     return [
       "Recommended artifacts",
+      "- Print view for browser Save as PDF",
+      "- Word-compatible version",
       "- Source appendix",
-      "- Print-ready memo",
-      "- Dashboard link when available",
     ];
   }
 
@@ -295,14 +295,12 @@ function formatArtifactLinks(
   if (["jurisdiction", "comparison", "dashboard", "package", "policy", "tool"].includes(params.scenario)) {
     rows.add(`- Dashboard: ${dashboardUrl(baseUrl, { state: params.state, court: params.court, audience: params.audience, aiTool: params.aiTool, practiceArea: params.practiceArea })}`);
   }
-  if (["jurisdiction", "comparison", "dashboard"].includes(params.scenario)) {
+  if (["jurisdiction", "comparison", "dashboard", "package"].includes(params.scenario)) {
     rows.add(`- Map view: ${mapUrl(baseUrl, { state: params.state, court: params.court, audience: params.audience, aiTool: params.aiTool })}`);
   }
   if (["jurisdiction", "comparison", "policy", "tool", "dashboard", "package"].includes(params.scenario)) {
-    rows.add(`- Print-ready Markdown report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "pdf-ready" })}`);
-    rows.add(`- Word-compatible HTML report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "word-ready" })}`);
-    rows.add(`- Open print view: ${printUrl(baseUrl, { ...common, type: "report" })}`);
-    rows.add(`- Markdown report: ${artifactUrl(baseUrl, { ...common, type: "report", format: "md" })}`);
+    rows.add(`- Print / Save as PDF: ${printUrl(baseUrl, { ...common, type: "report" })}`);
+    rows.add(`- Word-compatible version: ${artifactUrl(baseUrl, { ...common, type: "report", format: "word-ready" })}`);
   }
   if (["filing", "package"].includes(params.scenario)) {
     rows.add(`- Verification ledger CSV: ${artifactUrl(baseUrl, { ...common, type: "ledger", format: "csv" })}`);
@@ -312,6 +310,7 @@ function formatArtifactLinks(
     rows.add(`- Discrepancy matrix / review memo: ${artifactUrl(baseUrl, { ...common, type: "opposing", format: "word-ready" })}`);
   }
   rows.add(`- Source appendix: ${artifactUrl(baseUrl, { ...common, type: "source", format: "md" })}`);
+  rows.add("- More formats on request: Markdown, basic PDF, or CSV exports.");
 
   return ["Recommended artifacts", ...rows];
 }
@@ -888,10 +887,15 @@ export function formatPolicyGapReport(
   meta?: PublicMeta,
   evidence?: EvidenceNoteInput,
   baseUrl?: string,
+  filters: {
+    state?: string;
+    practiceArea?: string;
+    aiTool?: string;
+  } = {},
 ): string {
   const gaps = rankedEntries(countBy(caseItems.flatMap((item) => item.policy_gap_ids)), 10);
   return [
-    `Vortex policy gap report${audience ? `: ${audience}` : ""}`,
+    `Vortex policy gap readout${audience ? `: ${audience}` : ""}`,
     "",
     ...provenanceBlock(caseItems, meta, evidence),
     "",
@@ -899,40 +903,40 @@ export function formatPolicyGapReport(
     `Risk level: ${riskLevel(caseItems)}`,
     ...dateCoverage(caseItems),
     "",
-    "Context completeness",
-    "- This is a default tracker-backed policy gap readout. Before turning it into a firmwide policy, confirm: main filing courts, approved vs informal AI tools, allowed AI uses, signer/reviewer workflow, verification platforms, and whether the artifact is internal, client-facing, or court-facing.",
-    "- If the matter is urgent, use the filing gate first and defer broader policy drafting.",
+    "Before drafting a firmwide policy",
+    "- Confirm the main courts, approved AI tools, allowed uses, signer/reviewer workflow, verification systems, and whether the output is internal, client-facing, or court-facing.",
+    "- If the user wants speed, use the default below for court-facing litigation work only. Label it as a default, not the firm's final policy.",
+    "- If the matter is urgent, skip policy drafting and run the filing gate first.",
     "",
     "Most common control gaps",
     ...(gaps.length > 0 ? gaps.map(([label, count]) => `- ${label}: ${count}`) : ["- No tagged policy gaps in the matched set."]),
     "",
-    "Controls to adopt",
+    "Default control skeleton",
     ...topControls(caseItems, 4).map((item) => `- ${item}`),
-    "",
-    "Implementation notes",
     "- Make citation and quote verification a workflow step, not a reminder in a policy PDF.",
     "- Require signoff for court-facing AI-assisted work.",
     "- Keep a matter-level record of tool use and human verification.",
-    "- Train with recent local cases so lawyers see the risk as real and current.",
-    "- Keep next week's rollout narrow: court-facing litigation work first, all other AI governance later.",
     "",
     ...advisorGuardrails("policy"),
     "",
     ...suggestedArtifacts([
-      "Firm policy draft",
-      "Associate training module",
-      "Implementation checklist",
-      "Weekly risk digest",
+      "Policy intake worksheet",
+      "Court-facing filing gate",
+      "Verification ledger",
+      "Leadership memo with source appendix",
     ]),
     ...formatArtifactLinks(baseUrl, {
       scenario: "policy",
       title: "AI filing policy gap report",
       audience,
+      state: filters.state,
+      practiceArea: filters.practiceArea,
+      aiTool: filters.aiTool,
     }),
     "",
     ...naturalNextAction([
-      "Convert this into a 7-day pilot checklist for litigation filings.",
-      "Then generate a 30-day policy rollout memo for firm leadership.",
+      "Ask the six intake questions before drafting a final firmwide policy.",
+      "For immediate value, generate the 7-day filing gate and verification ledger.",
     ]),
     "",
     ...vortexFooter(meta),
@@ -1171,10 +1175,11 @@ export function formatReportArtifact(params: {
   const downloads = baseUrl
     ? [
         "",
-        "## Downloads",
-        `- Markdown: ${artifactUrl(baseUrl, { type: "report", format: "md", title: reportType, audience, state, court })}`,
-        `- Word-compatible: ${artifactUrl(baseUrl, { type: "report", format: "doc", title: reportType, audience, state, court })}`,
-        `- PDF: ${artifactUrl(baseUrl, { type: "report", format: "pdf", title: reportType, audience, state, court })}`,
+        "## Delivery Links",
+        `- Print / Save as PDF: ${printUrl(baseUrl, { type: "report", title: reportType, audience, state, court })}`,
+        `- Word-compatible version: ${artifactUrl(baseUrl, { type: "report", format: "word-ready", title: reportType, audience, state, court })}`,
+        `- Source appendix: ${artifactUrl(baseUrl, { type: "source", format: "md", title: `${reportType} Source Appendix`, audience, state, court })}`,
+        "- More formats on request: Markdown or basic PDF export.",
       ]
     : [];
 
@@ -1202,7 +1207,7 @@ export function formatReportArtifact(params: {
     ...importantCases(caseItems, 5).map(compactCaseLineWithSource),
     "",
     "## Recommended Next Step",
-    "Use this report as the draft artifact. For distribution, convert it to Word/PDF and attach the source appendix.",
+    "Use the print view for partner review or browser Save as PDF. Use the Word-compatible version when the team needs to edit.",
     ...downloads,
     "",
     ...vortexFooter(meta),
@@ -1223,40 +1228,40 @@ export function formatImplementationPackage(params: {
   const links = baseUrl
     ? [
         "",
-        "Working links",
-        `- Dashboard: ${dashboardUrl(baseUrl, { state, court, audience, aiTool: aiTools.join(", ") })}`,
-        `- Map: ${mapUrl(baseUrl, { state, court, audience, aiTool: aiTools.join(", ") })}`,
-        `- Leadership memo print-ready Markdown: ${artifactUrl(baseUrl, { type: "report", format: "pdf-ready", audience, state, court })}`,
-        `- Leadership memo print view: ${printUrl(baseUrl, { type: "report", audience, state, court })}`,
-        `- Leadership memo Markdown: ${artifactUrl(baseUrl, { type: "report", format: "md", audience, state, court })}`,
+        "Open these first",
+        `- Print / Save as PDF: ${printUrl(baseUrl, { type: "package", title: "AI Vortex Implementation Package", audience, state, court, aiTool: aiTools.join(", ") })}`,
+        `- Word-compatible package: ${artifactUrl(baseUrl, { type: "package", format: "word-ready", title: "AI Vortex Implementation Package", audience, state, court, aiTool: aiTools.join(", ") })}`,
+        `- Dashboard: ${dashboardUrl(baseUrl, { state, court, audience })}`,
+        `- Map: ${mapUrl(baseUrl, { state, court, audience })}`,
         `- Verification ledger CSV: ${artifactUrl(baseUrl, { type: "ledger", format: "csv", state, court, aiTool: aiTools.join(", ") })}`,
-        `- Verification ledger Word-compatible HTML: ${artifactUrl(baseUrl, { type: "ledger", format: "word-ready", state, court, aiTool: aiTools.join(", ") })}`,
         `- Source appendix: ${artifactUrl(baseUrl, { type: "source", format: "md", state, court })}`,
       ]
     : [];
   return [
-    "AI Vortex implementation package",
+    "AI Vortex implementation package index",
     "",
-    ...provenanceBlock(caseItems, meta, evidence),
+    provenanceBlock(caseItems, meta, evidence)[0],
+    provenanceBlock(caseItems, meta, evidence)[1],
     "",
     `Audience: ${audience || "legal team"}`,
     `Scope: ${[court, state, aiTools.join(" + ")].filter(Boolean).join(" / ") || "court-facing legal AI use"}`,
     "",
     "Package contents",
-    "1. Leadership readout: adopt a filing gate, not a broad policy rollout first.",
-    "2. Workflow: AI-use intake, frozen draft, citation gate, quote gate, proposition gate, rule check, exception report, audit trail.",
-    "3. Templates: verification ledger, partner exception report, signing-attorney certification.",
-    "4. Evidence: source appendix for the leading tracked cases.",
-    "5. Rollout: 7-day pilot followed by 30-day policy adoption.",
-    "",
-    "Implementation package generated",
-    "- Leadership memo: print-ready Markdown + browser print view + Markdown",
-    "- Filing checklist: printable Markdown",
-    "- Verification ledger: CSV + Word-compatible HTML",
-    "- Source appendix: Markdown",
-    "- Dashboard: live link",
-    "- Map: live link",
+    "- Leadership memo: why the first move is a filing gate, not a broad policy rollout.",
+    "- Workflow: AI-use intake, frozen draft, citation gate, quote gate, proposition gate, rule check, exception report, audit trail.",
+    "- Templates: verification ledger, partner exception report, signing-attorney certification.",
+    "- Evidence: source appendix for the leading tracked cases.",
+    "- Rollout: 7-day pilot followed by 30-day policy adoption.",
     ...links,
+    "",
+    "Chat behavior",
+    "- Keep this as a package index in chat. Do not paste the full memo/checklist/ledger unless the user asks to expand a specific item.",
+    "- If the user wants a lawyer-friendly deliverable, point them to the print view first.",
+    "",
+    ...naturalNextAction([
+      "Open the print package and decide whether it is for leadership, litigation team rollout, or training.",
+      "Ask to expand only one artifact at a time: memo, ledger, source appendix, or rollout plan.",
+    ]),
     "",
     ...vortexFooter(meta),
   ].join("\n");
@@ -1393,16 +1398,18 @@ export function formatVisualSummaryData(
     })),
     artifact_options: [
       "Managing partner dashboard",
-      "Print-ready risk report and live map",
-      "Markdown source appendix",
-      "Practice-group checklist",
+      "Live map",
+      "Print / Save as PDF report",
+      "Word-compatible report",
+      "Source appendix",
     ],
   };
 
   return [
     "Vortex managing partner visual summary",
     "",
-    ...provenanceBlock(caseItems, meta, evidence),
+    provenanceBlock(caseItems, meta, evidence)[0],
+    provenanceBlock(caseItems, meta, evidence)[1],
     "",
     "Executive cards",
     ...payload.cards.map((card) => `- ${card.label}: ${card.value}`),
@@ -1418,9 +1425,11 @@ export function formatVisualSummaryData(
       ? importantCases(caseItems, 4).map(compactCaseLineWithSource)
       : ["- No matched cases."]),
     "",
-    "Chart-ready JSON",
-    "",
-    JSON.stringify(payload, null, 2),
+    "Suggested visuals",
+    "- Cards: cases, source coverage, lawyer-related matters, known monetary total.",
+    "- Bars: severity mix and failure modes.",
+    "- Map: geographic distribution using the live map link.",
+    "- Memo: one-page print view with source-backed examples.",
     "",
     ...formatArtifactLinks(baseUrl, {
       scenario: "dashboard",

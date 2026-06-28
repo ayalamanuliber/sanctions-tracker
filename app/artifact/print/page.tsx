@@ -1,4 +1,4 @@
-import { buildArtifactMarkdown, readArtifactParams } from "@/lib/artifacts";
+import { buildArtifactMarkdown, markdownToBodyHtml, readArtifactParams } from "@/lib/artifacts";
 
 type PageProps = {
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
@@ -6,24 +6,6 @@ type PageProps = {
 
 function first(value: string | string[] | undefined): string {
   return Array.isArray(value) ? value[0] || "" : value || "";
-}
-
-function escapeHtml(value: string): string {
-  return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-}
-
-function markdownToPrintHtml(markdown: string): string {
-  return markdown
-    .split("\n")
-    .map((line) => {
-      if (line.startsWith("# ")) return `<h1>${escapeHtml(line.slice(2))}</h1>`;
-      if (line.startsWith("## ")) return `<h2>${escapeHtml(line.slice(3))}</h2>`;
-      if (line.startsWith("- ")) return `<li>${escapeHtml(line.slice(2))}</li>`;
-      if (line.startsWith("|")) return `<pre>${escapeHtml(line)}</pre>`;
-      if (!line.trim()) return "";
-      return `<p>${escapeHtml(line)}</p>`;
-    })
-    .join("\n");
 }
 
 export default async function ArtifactPrintPage({ searchParams }: PageProps) {
@@ -35,33 +17,55 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
   }
   const artifactParams = readArtifactParams(params);
   const markdown = buildArtifactMarkdown(artifactParams);
-  const html = markdownToPrintHtml(markdown);
+  const html = markdownToBodyHtml(markdown);
+  const generated = new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(new Date());
 
   return (
     <main style={{ background: "#f8fafc", color: "#111827", minHeight: "100vh", padding: "32px 18px" }}>
-      <article style={{ maxWidth: 860, margin: "0 auto", background: "#fff", border: "1px solid #e5e7eb", padding: "44px 52px", boxShadow: "0 20px 70px rgba(15, 23, 42, 0.10)" }}>
-        <div className="screen-only" style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "center", borderBottom: "1px solid #e5e7eb", paddingBottom: 16, marginBottom: 24 }}>
+      <article style={{ maxWidth: 900, margin: "0 auto", background: "#fff", border: "1px solid #e5e7eb", padding: "44px 52px", boxShadow: "0 20px 70px rgba(15, 23, 42, 0.10)" }}>
+        <div className="screen-only report-shell" style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "center", borderBottom: "1px solid #e5e7eb", paddingBottom: 16, marginBottom: 24 }}>
           <div>
             <div style={{ color: "#92400e", fontSize: 11, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>AI Vortex Legal AI Risk</div>
-            <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>Print-ready view. Use your browser print dialog to save as PDF.</div>
+            <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>Partner-ready print view. Use your browser print dialog to save as PDF.</div>
           </div>
           <button className="print-button" style={{ border: "1px solid #111827", background: "#111827", color: "#fff", padding: "9px 12px", fontWeight: 800 }}>
             Print / Save PDF
           </button>
         </div>
+        <div className="print-brand">
+          <div>
+            <div className="brand-kicker">AI Vortex Legal AI Risk</div>
+            <div className="brand-subtitle">Source-backed legal AI risk workflow artifact</div>
+          </div>
+          <div className="brand-date">{generated}</div>
+        </div>
         <div className="artifact-body" dangerouslySetInnerHTML={{ __html: html }} />
+        <footer>
+          Generated with AI Vortex Legal AI Risk. Public tracker evidence is a risk signal, not legal advice or a usage-adjusted incident rate.
+        </footer>
       </article>
       <script dangerouslySetInnerHTML={{ __html: "document.querySelector('.print-button')?.addEventListener('click',()=>window.print())" }} />
       <style>{`
-        .artifact-body h1 { font-size: 28px; line-height: 1.15; margin: 0 0 22px; }
-        .artifact-body h2 { font-size: 16px; margin: 26px 0 10px; border-top: 1px solid #e5e7eb; padding-top: 14px; }
+        .print-brand { display: none; justify-content: space-between; gap: 20px; border-bottom: 2px solid #111827; padding-bottom: 12px; margin-bottom: 22px; }
+        .brand-kicker { color: #92400e; font-size: 10px; font-weight: 900; letter-spacing: 0.16em; text-transform: uppercase; }
+        .brand-subtitle, .brand-date { color: #64748b; font-size: 11px; margin-top: 4px; }
+        .artifact-body h1 { font-size: 28px; line-height: 1.15; margin: 0 0 22px; color: #0f172a; }
+        .artifact-body h2 { font-size: 16px; margin: 26px 0 10px; border-top: 1px solid #e5e7eb; padding-top: 14px; color: #111827; }
         .artifact-body p { font-size: 13px; line-height: 1.55; margin: 8px 0; }
         .artifact-body li { font-size: 13px; line-height: 1.5; margin: 5px 0 5px 18px; }
-        .artifact-body pre { white-space: pre-wrap; background: #f8fafc; border: 1px solid #e5e7eb; padding: 8px; font-size: 11px; overflow-wrap: anywhere; }
+        .artifact-body table { width: 100%; border-collapse: collapse; margin: 14px 0 18px; font-size: 11px; page-break-inside: avoid; }
+        .artifact-body th, .artifact-body td { border: 1px solid #d1d5db; padding: 7px; text-align: left; vertical-align: top; }
+        .artifact-body th { background: #f1f5f9; color: #334155; font-weight: 800; }
+        .artifact-body a { color: #0369a1; text-decoration: underline; overflow-wrap: anywhere; }
+        .artifact-body .source-line { color: #475569; font-size: 12px; margin-left: 18px; }
+        footer { border-top: 1px solid #e5e7eb; margin-top: 28px; padding-top: 12px; color: #64748b; font-size: 11px; }
         @media print {
           main { background: #fff !important; padding: 0 !important; }
           article { border: 0 !important; box-shadow: none !important; max-width: none !important; padding: 0 !important; }
           .screen-only { display: none !important; }
+          .print-brand { display: flex !important; }
+          .artifact-body h1 { font-size: 24px; }
+          .artifact-body h2 { break-after: avoid; }
         }
       `}</style>
     </main>

@@ -265,20 +265,58 @@ function escapeHtml(value: string): string {
     .replace(/"/g, "&quot;");
 }
 
-export function markdownToHtml(markdown: string): string {
-  const lines = markdown.split("\n");
-  const html = lines
-    .map((line) => {
-      if (line.startsWith("# ")) return `<h1>${escapeHtml(line.slice(2))}</h1>`;
-      if (line.startsWith("## ")) return `<h2>${escapeHtml(line.slice(3))}</h2>`;
-      if (line.startsWith("- ")) return `<li>${escapeHtml(line.slice(2))}</li>`;
-      if (line.startsWith("|")) return `<pre>${escapeHtml(line)}</pre>`;
-      if (!line.trim()) return "";
-      return `<p>${escapeHtml(line)}</p>`;
-    })
-    .join("\n");
+function linkifyEscaped(value: string): string {
+  return escapeHtml(value).replace(
+    /(https?:\/\/[^\s<]+)/g,
+    (url) => `<a href="${url}" target="_blank" rel="noreferrer">open source</a>`,
+  );
+}
 
-  return `<!doctype html><html><head><meta charset="utf-8"><title>AI Vortex Artifact</title><style>body{font-family:Arial,sans-serif;line-height:1.45;max-width:900px;margin:40px auto;padding:0 24px;color:#111827}h1{font-size:28px}h2{font-size:18px;margin-top:28px}pre{background:#f3f4f6;padding:8px;white-space:pre-wrap}li{margin:6px 0}</style></head><body>${html}</body></html>`;
+export function markdownToBodyHtml(markdown: string): string {
+  const lines = markdown.split("\n");
+  const html: string[] = [];
+  let index = 0;
+
+  while (index < lines.length) {
+    const line = lines[index];
+
+    if (line.startsWith("|")) {
+      const tableLines: string[] = [];
+      while (index < lines.length && lines[index].startsWith("|")) {
+        tableLines.push(lines[index]);
+        index += 1;
+      }
+      const rows = tableLines
+        .map((row) => row.split("|").slice(1, -1).map((cell) => cell.trim()))
+        .filter((cells) => !cells.every((cell) => /^:?-{3,}:?$/.test(cell)));
+      const [head, ...body] = rows;
+      if (head) {
+        html.push("<table>");
+        html.push(`<thead><tr>${head.map((cell) => `<th>${linkifyEscaped(cell)}</th>`).join("")}</tr></thead>`);
+        html.push("<tbody>");
+        body.forEach((row) => html.push(`<tr>${row.map((cell) => `<td>${linkifyEscaped(cell)}</td>`).join("")}</tr>`));
+        html.push("</tbody></table>");
+      }
+      continue;
+    }
+
+    if (line.startsWith("# ")) html.push(`<h1>${escapeHtml(line.slice(2))}</h1>`);
+    else if (line.startsWith("## ")) html.push(`<h2>${escapeHtml(line.slice(3))}</h2>`);
+    else if (line.startsWith("- ")) html.push(`<li>${linkifyEscaped(line.slice(2))}</li>`);
+    else if (/^Source:\s+https?:\/\//.test(line)) html.push(`<p class="source-line"><strong>Source:</strong> ${linkifyEscaped(line.replace(/^Source:\s+/, ""))}</p>`);
+    else if (!line.trim()) html.push("");
+    else html.push(`<p>${linkifyEscaped(line)}</p>`);
+
+    index += 1;
+  }
+
+  return html.join("\n");
+}
+
+export function markdownToHtml(markdown: string): string {
+  const html = markdownToBodyHtml(markdown);
+
+  return `<!doctype html><html><head><meta charset="utf-8"><title>AI Vortex Artifact</title><style>body{font-family:Arial,sans-serif;line-height:1.45;max-width:900px;margin:40px auto;padding:0 24px;color:#111827}h1{font-size:28px}h2{font-size:18px;margin-top:28px}table{width:100%;border-collapse:collapse;margin:14px 0;font-size:12px}th,td{border:1px solid #d1d5db;padding:7px;text-align:left;vertical-align:top}th{background:#f3f4f6}li{margin:6px 0}a{color:#0369a1}</style></head><body>${html}</body></html>`;
 }
 
 export function buildArtifactCsv(params: {
@@ -312,14 +350,14 @@ export function unsupportedArtifactMessage(format: string): string {
     "",
     "Native DOCX/XLSX export is not available yet. Supported formats are:",
     "- Markdown: format=md",
-    "- Print-ready Markdown: format=pdf-ready",
+    "- Browser print view: /artifact/print?...",
     "- Word-compatible HTML/text: format=word-ready",
     "- CSV ledger/table: format=csv",
     "- HTML: format=html",
     "- Word-compatible HTML document: format=doc",
     "- Basic PDF: format=pdf",
     "",
-    "Use format=word-ready for a Word-compatible HTML file, format=pdf for a basic generated PDF, or format=md for clean copy/paste into Word or Google Docs.",
+    "For legal users, use the browser print view to save as PDF or format=word-ready for an editable Word-compatible HTML file.",
   ].join("\n");
 }
 

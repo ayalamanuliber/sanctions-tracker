@@ -792,7 +792,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Policy Gap Report",
       description:
-        "Use this when a firm, risk partner, KM team, innovation team, vendor, solo practitioner, court, or legal ops user asks what controls or policy gaps matter based on tracked legal AI failure patterns. For broad firmwide policy, platform setup, implementation, or rollout prompts with incomplete context, prefer prepare_context_intake first or include a short context-completeness check before drafting. For urgent filing prompts, do not ask intake questions; use pre-filing triage. Be concise unless asked for the full policy. Push back on unrealistic timelines and recommend workflow gates, not vague policy language.",
+        "Use this when a firm, risk partner, KM team, innovation team, vendor, solo practitioner, court, or legal ops user asks what controls or policy gaps matter based on tracked legal AI failure patterns. For broad firmwide policy, platform setup, implementation, or rollout prompts with incomplete context, ask short intake questions first or provide only a conservative default skeleton. Do not draft a long firmwide policy unless the user explicitly asks for the full draft. For urgent filing prompts, do not ask intake questions; use pre-filing triage. Be concise, push back on unrealistic timelines, and recommend workflow gates, not vague policy language.",
       annotations: {
         readOnlyHint: true,
       },
@@ -807,7 +807,16 @@ export function createMcpServer(): McpServer {
     async ({ audience, state, practice_area, ai_tool, limit }) => {
       const { caseItems, evidence } = resolveContextCases({ state, practice_area, ai_tool, limit });
       return {
-        content: [{ type: "text", text: formatPolicyGapReport(caseItems, audience, meta, evidence, publicBaseUrl) }],
+        content: [
+          {
+            type: "text",
+            text: formatPolicyGapReport(caseItems, audience, meta, evidence, publicBaseUrl, {
+              state: state?.toUpperCase(),
+              practiceArea: practice_area,
+              aiTool: ai_tool,
+            }),
+          },
+        ],
       };
     },
   );
@@ -972,7 +981,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Report Artifact",
       description:
-        "Use this when the user asks for a policy, memo, report, brief, implementation packet, print-ready Markdown, Markdown, Word-compatible HTML content, or distributable artifact. Do not call Markdown a PDF. For broad firmwide policy/platform requests with missing context, use prepare_context_intake before generating a long artifact unless the user explicitly asks for a default.",
+        "Use this when the user asks for a policy, memo, report, brief, implementation packet, print-ready view, Word-compatible content, or distributable artifact. Default to print view plus Word-compatible version and source appendix. Do not lead with Markdown for legal users and do not call Markdown a PDF. For broad firmwide policy/platform requests with missing context, use prepare_context_intake before generating a long artifact unless the user explicitly asks for a default.",
       annotations: {
         readOnlyHint: true,
       },
@@ -1086,7 +1095,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Compile Implementation Package",
       description:
-        "Use this near the end of a session or after multiple analyses when the user needs a complete package for leadership, risk, litigation, chambers, vendors, or solo practice. Return a concise package index and suggested deliverables.",
+        "Use this near the end of a session or after multiple analyses when the user needs a complete package for leadership, risk, litigation, chambers, vendors, or solo practice. Return a concise package index and live links only. Do not paste the full memo, checklist, source appendix, or ledger into chat unless the user asks to expand one specific artifact.",
       annotations: {
         readOnlyHint: true,
       },
@@ -1130,7 +1139,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Visual Summary Data",
       description:
-        "Use this when an assistant should render deterministic executive cards, bars, tables, dashboards, chart-ready summaries, or managing-partner visual summaries for a jurisdiction, tool, practice area, or issue. Return source-backed top cases and chart-ready JSON. Do not rely on generated images unless the user explicitly asks for an image.",
+        "Use this when an assistant should render deterministic executive cards, bars, tables, dashboards, chart-ready summaries, maps, or managing-partner visual summaries for a jurisdiction, tool, practice area, or issue. Return source-backed top cases, chart-ready JSON, dashboard/map/print/source links, and a short readout. Do not rely on generated images unless the user explicitly asks for an image.",
       annotations: {
         readOnlyHint: true,
       },

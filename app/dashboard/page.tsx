@@ -32,6 +32,16 @@ function severityScore(severity: string): number {
   return { "career-ending": 5, high: 4, medium: 3, low: 1 }[severity] || 1;
 }
 
+function riskLevel(caseItems: ReturnType<typeof getArtifactCases>): string {
+  const severity = countBy(caseItems.map((item) => item.severity));
+  const highImpact = (severity.high || 0) + (severity["career-ending"] || 0);
+  const monetary = caseItems.filter((item) => item.amount || item.sanction_types.includes("monetary")).length;
+  if ((severity["career-ending"] || 0) > 0 || highImpact >= 5) return "High";
+  if (highImpact > 0 || monetary >= 3 || caseItems.length >= 20) return "Moderate";
+  if (caseItems.length > 0) return "Emerging";
+  return "No tracked signal";
+}
+
 export default async function DashboardPage({ searchParams }: PageProps) {
   const resolved = await searchParams;
   const state = resolved?.state?.toUpperCase();
@@ -45,9 +55,11 @@ export default async function DashboardPage({ searchParams }: PageProps) {
   const failures = rankedEntries(countBy(caseItems.flatMap((item) => item.tags).filter((tag) =>
     ["fake-citations", "fabricated-quotes", "misrepresented-authority", "bar-referral", "disqualification"].includes(tag),
   )), 5);
+  const primaryFailure = failures[0]?.[0] || "no dominant failure mode";
   const monetary = caseItems.reduce((sum, item) => sum + (item.amount || 0), 0);
   const lawyer = caseItems.filter((item) => item.party?.toLowerCase().includes("lawyer")).length;
   const sourceLinks = caseItems.filter((item) => item.source_url).length;
+  const highImpact = (severity.high || 0) + (severity["career-ending"] || 0);
   const topCases = caseItems
     .slice()
     .sort((a, b) => severityScore(b.severity) - severityScore(a.severity) || (b.amount || 0) - (a.amount || 0))
@@ -92,10 +104,10 @@ export default async function DashboardPage({ searchParams }: PageProps) {
 
         <section style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: 14, marginBottom: 24 }}>
           {[
+            ["Risk level", riskLevel(caseItems)],
             ["Matched matters", caseItems.length.toLocaleString("en-US")],
             ["Source coverage", `${sourceLinks}/${caseItems.length}`],
-            ["Lawyer-related", lawyer.toLocaleString("en-US")],
-            ["Known monetary", money(monetary)],
+            ["High-impact", highImpact.toLocaleString("en-US")],
           ].map(([label, value]) => (
             <div key={label} style={{ border: "1px solid #1f2937", background: "#111827", padding: 18 }}>
               <div style={{ color: "#94a3b8", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.08em" }}>{label}</div>
@@ -115,6 +127,23 @@ export default async function DashboardPage({ searchParams }: PageProps) {
               </Link>
             )) : <span style={{ border: "1px solid #334155", padding: "6px 8px", color: "#cbd5e1" }}>all matters</span>}
             {chips.length > 0 && <Link href="/dashboard" style={{ color: "#fbbf24", marginLeft: 8 }}>Reset</Link>}
+          </div>
+        </section>
+
+        <section style={{ border: "1px solid #273449", background: "#101923", padding: 20, marginBottom: 24 }}>
+          <div style={{ color: "#f59e0b", fontSize: 12, textTransform: "uppercase", letterSpacing: "0.1em", fontWeight: 800, marginBottom: 8 }}>
+            Advisor readout
+          </div>
+          <p style={{ color: "#e5e7eb", fontSize: 18, lineHeight: 1.45, margin: "0 0 12px" }}>
+            {caseItems.length === 0
+              ? "No exact tracked matter matches these filters. Broaden one filter before treating this as a risk conclusion."
+              : `The main signal is ${primaryFailure.replace(/-/g, " ")}, not AI use by itself. The practical control is a filing gate with citation, quote, proposition-support, signoff, and matter-audit checks.`}
+          </p>
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", fontSize: 13 }}>
+            <a href={`/artifact/print?type=report&${artifactQuery.toString()}`} style={{ color: "#0f172a", background: "#fbbf24", padding: "8px 10px", textDecoration: "none", fontWeight: 800 }}>Open print view</a>
+            <a href={`/api/artifact?type=report&format=word-ready&${artifactQuery.toString()}`} style={{ color: "#fbbf24", border: "1px solid #fbbf24", padding: "7px 10px", textDecoration: "none", fontWeight: 700 }}>Word-compatible</a>
+            <a href={`/map?metric=cases${state ? `&states=${state}` : ""}${court ? `&court=${encodeURIComponent(court)}` : ""}${aiTool ? `&tool=${encodeURIComponent(aiTool)}` : ""}`} style={{ color: "#fbbf24", border: "1px solid #334155", padding: "7px 10px", textDecoration: "none", fontWeight: 700 }}>Map view</a>
+            <a href={`/api/artifact?type=source&format=md&${artifactQuery.toString()}`} style={{ color: "#fbbf24", border: "1px solid #334155", padding: "7px 10px", textDecoration: "none", fontWeight: 700 }}>Source appendix</a>
           </div>
         </section>
 
@@ -173,8 +202,7 @@ export default async function DashboardPage({ searchParams }: PageProps) {
             <h2 style={{ fontSize: 18 }}>Top Source-Backed Matters</h2>
             <div style={{ display: "flex", gap: 12, fontSize: 13 }}>
               <a href={`/artifact/print?type=report&${artifactQuery.toString()}`} style={{ color: "#fbbf24" }}>Open print view</a>
-              <a href={`/api/artifact?type=report&format=md&${artifactQuery.toString()}`} style={{ color: "#fbbf24" }}>Markdown</a>
-              <a href={`/api/artifact?type=report&format=word-ready&${artifactQuery.toString()}`} style={{ color: "#fbbf24" }}>Word-compatible HTML</a>
+              <a href={`/api/artifact?type=report&format=word-ready&${artifactQuery.toString()}`} style={{ color: "#fbbf24" }}>Word-compatible</a>
               <a href={`/api/artifact?type=source&format=md&${artifactQuery.toString()}`} style={{ color: "#fbbf24" }}>Sources</a>
             </div>
           </div>
@@ -204,6 +232,15 @@ export default async function DashboardPage({ searchParams }: PageProps) {
               </tbody>
             </table>
           </div>
+        </section>
+
+        <section style={{ border: "1px solid #1f2937", background: "#111827", padding: 20 }}>
+          <h2 style={{ fontSize: 18, marginBottom: 10 }}>Recommended Controls</h2>
+          <ol style={{ color: "#d1d5db", lineHeight: 1.6, margin: 0, paddingLeft: 20 }}>
+            <li>Use a court-facing filing gate before partner review.</li>
+            <li>Verify citations, quotations, and proposition support against primary or approved legal research sources.</li>
+            <li>Save an exception report and source appendix to the matter file.</li>
+          </ol>
         </section>
       </div>
     </main>

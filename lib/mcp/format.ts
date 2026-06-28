@@ -1047,7 +1047,6 @@ export function formatImplementationWorkflow(params: {
       audience,
       state,
       court,
-      aiTool: aiTools.join(", "),
     }),
     "",
     ...naturalNextAction([

@@ -144,7 +144,9 @@ export function buildArtifactMarkdown(params: {
         ? "AI Vortex Source Appendix"
         : type === "package"
           ? "AI Vortex Implementation Package"
-          : "AI Filing Risk Report");
+          : type === "policy"
+            ? "One-Page Court-Facing AI Filing Policy"
+            : "AI Filing Risk Report");
 
   if (type === "ledger") {
     return [
@@ -206,6 +208,47 @@ export function buildArtifactMarkdown(params: {
       "",
       "## Source-Backed Examples",
       ...importantCases(caseItems, 5).map(
+        (item) =>
+          `- ${item.case_name} (${item.date}, ${item.court}): ${item.severity}; ${item.sanction_types.join(", ") || "no sanction listed"}${item.amount_display ? ` / ${item.amount_display}` : ""}\n  Source: ${item.source_url || "Unavailable"}`,
+      ),
+    ].join("\n");
+  }
+
+  if (type === "policy") {
+    return [
+      `# ${title}`,
+      "",
+      `Audience: ${params.audience || "legal professional"}`,
+      `Scope: ${[params.court, params.state, params.aiTool, params.practiceArea].filter(Boolean).join(" / ") || "court-facing litigation work"}`,
+      "",
+      "## Policy Statement",
+      "AI tools may assist with research, drafting, summarizing, organization, and internal preparation, but AI output is never legal authority. No court-facing filing may rely on AI-assisted citations, quotations, or legal propositions unless they have been independently verified against an authoritative source.",
+      "",
+      "## Required Filing Gate",
+      "Before any AI-assisted motion, brief, letter, declaration, or other court-facing filing is submitted, the responsible attorney must ensure that:",
+      "1. Every cited authority exists exactly as cited.",
+      "2. Every pincite is accurate.",
+      "3. Every quotation matches the source text.",
+      "4. Every cited authority supports the proposition for which it is used.",
+      "5. Any court, judge, standing-order, or local-rule AI disclosure requirement has been checked.",
+      "6. A short verification record is saved to the matter file.",
+      "",
+      "## Verification Record",
+      "The matter file should identify the AI tools used, what AI touched, who verified the filing, the date of verification, unresolved exceptions, and the final disposition of any corrected or removed authority.",
+      "",
+      "## Escalation Rule",
+      "If a fake citation, fabricated quotation, unsupported proposition, or unclear authority is found before filing, the team must pause filing on that language, preserve the draft/version history, notify the supervising attorney, and correct, remove, or escalate the issue before signature.",
+      "",
+      "## Evidence Note",
+      `- Corpus: AI Vortex legal AI risk tracker, ${meta.total_cases.toLocaleString("en-US")} tracked global matters`,
+      `- Corpus last updated: ${meta.last_updated}`,
+      `- Matched set: ${caseItems.length} cases`,
+      `- Date coverage: ${dateCoverage(caseItems)}`,
+      `- Source-link coverage: ${sourceCoverage(caseItems)}`,
+      "- Boundary: tracked public incidents are evidence of observed risk patterns, not usage-adjusted incident rates or legal advice.",
+      "",
+      "## Source-Backed Examples",
+      ...importantCases(caseItems, 3).map(
         (item) =>
           `- ${item.case_name} (${item.date}, ${item.court}): ${item.severity}; ${item.sanction_types.join(", ") || "no sanction listed"}${item.amount_display ? ` / ${item.amount_display}` : ""}\n  Source: ${item.source_url || "Unavailable"}`,
       ),

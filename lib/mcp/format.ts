@@ -299,8 +299,10 @@ function formatArtifactLinks(
     rows.add(`- Map view: ${mapUrl(baseUrl, { state: params.state, court: params.court, audience: params.audience, aiTool: params.aiTool })}`);
   }
   if (["jurisdiction", "comparison", "policy", "tool", "dashboard", "package"].includes(params.scenario)) {
-    rows.add(`- Print / Save as PDF: ${printUrl(baseUrl, { ...common, type: "report" })}`);
-    rows.add(`- Word-compatible version: ${artifactUrl(baseUrl, { ...common, type: "report", format: "word-ready" })}`);
+    const artifactType = params.scenario === "policy" ? "policy" : "report";
+    const label = params.scenario === "policy" ? "One-page policy" : "Report";
+    rows.add(`- ${label} print / Save as PDF: ${printUrl(baseUrl, { ...common, type: artifactType })}`);
+    rows.add(`- ${label} Word-compatible version: ${artifactUrl(baseUrl, { ...common, type: artifactType, format: "word-ready" })}`);
   }
   if (["filing", "package"].includes(params.scenario)) {
     rows.add(`- Verification ledger CSV: ${artifactUrl(baseUrl, { ...common, type: "ledger", format: "csv" })}`);

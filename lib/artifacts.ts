@@ -75,6 +75,20 @@ function dateCoverage(caseItems: PublicSanctionCase[]): string {
   return `${dates[0]} to ${dates[dates.length - 1]}`;
 }
 
+function evidenceTable(caseItems: PublicSanctionCase[]): string[] {
+  return [
+    "## Evidence At A Glance",
+    "| Signal | Value |",
+    "| --- | ---: |",
+    `| Corpus | ${meta.total_cases.toLocaleString("en-US")} tracked global matters |`,
+    `| Tracker updated | ${meta.last_updated} |`,
+    `| Matched set | ${caseItems.length} cases |`,
+    `| Date coverage | ${dateCoverage(caseItems)} |`,
+    `| Source-link coverage | ${sourceCoverage(caseItems)} |`,
+    "| Boundary | Public incidents; not usage-adjusted rates or legal advice |",
+  ];
+}
+
 function failureTags(caseItems: PublicSanctionCase[]): string[] {
   const contextTags = new Set([
     "trial",
@@ -243,13 +257,7 @@ export function buildArtifactMarkdown(params: {
       "## Escalation Rule",
       "If a fake citation, fabricated quotation, unsupported proposition, or unclear authority is found before filing, the team must pause filing on that language, preserve the draft/version history, notify the supervising attorney, and correct, remove, or escalate the issue before signature.",
       "",
-      "## Evidence Note",
-      `- Corpus: AI Vortex legal AI risk tracker, ${meta.total_cases.toLocaleString("en-US")} tracked global matters`,
-      `- Corpus last updated: ${meta.last_updated}`,
-      `- Matched set: ${caseItems.length} cases`,
-      `- Date coverage: ${dateCoverage(caseItems)}`,
-      `- Source-link coverage: ${sourceCoverage(caseItems)}`,
-      "- Boundary: tracked public incidents are evidence of observed risk patterns, not usage-adjusted incident rates or legal advice.",
+      ...evidenceTable(caseItems),
       "",
       "## Source-Backed Examples",
       ...importantCases(caseItems, 3).map(
@@ -303,13 +311,7 @@ export function buildArtifactMarkdown(params: {
       "- Disclosure/certification needed: Yes / No / Unclear",
       "- Recommendation: File / File after edits / Do not file yet",
       "",
-      "## Evidence Note",
-      `- Corpus: AI Vortex legal AI risk tracker, ${meta.total_cases.toLocaleString("en-US")} tracked global matters`,
-      `- Corpus last updated: ${meta.last_updated}`,
-      `- Matched set: ${caseItems.length} cases`,
-      `- Date coverage: ${dateCoverage(caseItems)}`,
-      `- Source-link coverage: ${sourceCoverage(caseItems)}`,
-      "- Boundary: tracked public incidents are evidence of observed risk patterns, not usage-adjusted incident rates or legal advice.",
+      ...evidenceTable(caseItems),
       "",
       "## Source-Backed Examples",
       ...importantCases(caseItems, 3).map(
@@ -370,13 +372,7 @@ export function buildArtifactMarkdown(params: {
       "- Require signing-attorney review of unresolved exceptions, not the entire verification history.",
       "- Keep the source appendix with the matter or training file so the risk signal is auditable.",
       "",
-      "## Evidence Note",
-      `- Corpus: AI Vortex legal AI risk tracker, ${meta.total_cases.toLocaleString("en-US")} tracked global matters`,
-      `- Corpus last updated: ${meta.last_updated}`,
-      `- Matched set: ${caseItems.length} cases`,
-      `- Date coverage: ${dateCoverage(caseItems)}`,
-      `- Source-link coverage: ${sourceCoverage(caseItems)}`,
-      "- Boundary: tracked public incidents are evidence of observed risk patterns, not usage-adjusted incident rates or legal advice.",
+      ...evidenceTable(caseItems),
     ].join("\n");
   }
 
@@ -386,13 +382,7 @@ export function buildArtifactMarkdown(params: {
     `Audience: ${params.audience || "legal professional"}`,
     `Scope: ${[params.court, params.state, params.aiTool, params.practiceArea].filter(Boolean).join(" / ") || "matched corpus"}`,
     "",
-    "## Evidence Note",
-    `- Corpus: AI Vortex legal AI risk tracker, ${meta.total_cases.toLocaleString("en-US")} tracked global matters`,
-    `- Corpus last updated: ${meta.last_updated}`,
-    `- Matched set: ${caseItems.length} cases`,
-    `- Date coverage: ${dateCoverage(caseItems)}`,
-    `- Source-link coverage: ${sourceCoverage(caseItems)}`,
-    "- Boundary: tracked public incidents are evidence of observed risk patterns, not usage-adjusted incident rates or legal advice.",
+    ...evidenceTable(caseItems),
     ...(caseItems.length === 0 ? ["- Warning: this artifact has no matched cases under the current filters. Broaden filters before treating it as complete."] : []),
     "",
     ...(type === "package"
@@ -440,6 +430,7 @@ export function markdownToBodyHtml(markdown: string): string {
   const lines = markdown.split("\n");
   const html: string[] = [];
   let index = 0;
+  let lastHeading = "";
 
   while (index < lines.length) {
     const line = lines[index];
@@ -455,7 +446,8 @@ export function markdownToBodyHtml(markdown: string): string {
         .filter((cells) => !cells.every((cell) => /^:?-{3,}:?$/.test(cell)));
       const [head, ...body] = rows;
       if (head) {
-        html.push("<table>");
+        const tableClass = lastHeading === "Evidence At A Glance" ? ' class="evidence-table"' : "";
+        html.push(`<table${tableClass}>`);
         html.push(`<thead><tr>${head.map((cell) => `<th>${linkifyEscaped(cell)}</th>`).join("")}</tr></thead>`);
         html.push("<tbody>");
         body.forEach((row) => html.push(`<tr>${row.map((cell) => `<td>${linkifyEscaped(cell)}</td>`).join("")}</tr>`));
@@ -464,8 +456,13 @@ export function markdownToBodyHtml(markdown: string): string {
       continue;
     }
 
-    if (line.startsWith("# ")) html.push(`<h1>${escapeHtml(line.slice(2))}</h1>`);
-    else if (line.startsWith("## ")) html.push(`<h2>${escapeHtml(line.slice(3))}</h2>`);
+    if (line.startsWith("# ")) {
+      lastHeading = line.slice(2);
+      html.push(`<h1>${escapeHtml(lastHeading)}</h1>`);
+    } else if (line.startsWith("## ")) {
+      lastHeading = line.slice(3);
+      html.push(`<h2>${escapeHtml(lastHeading)}</h2>`);
+    }
     else if (line.startsWith("- ")) html.push(`<li>${linkifyEscaped(line.slice(2))}</li>`);
     else if (/^Source:\s+https?:\/\//.test(line)) html.push(`<p class="source-line"><strong>Source:</strong> ${linkifyEscaped(line.replace(/^Source:\s+/, ""))}</p>`);
     else if (!line.trim()) html.push("");

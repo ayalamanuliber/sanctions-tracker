@@ -446,7 +446,23 @@ export function markdownToBodyHtml(markdown: string): string {
         .filter((cells) => !cells.every((cell) => /^:?-{3,}:?$/.test(cell)));
       const [head, ...body] = rows;
       if (head) {
-        const tableClass = lastHeading === "Evidence At A Glance" ? ' class="evidence-table"' : "";
+        if (lastHeading === "Evidence At A Glance") {
+          html.push('<div class="evidence-grid">');
+          body.forEach(([label, value]) => {
+            const isBoundary = label === "Boundary";
+            html.push(
+              `<div class="evidence-metric${isBoundary ? " evidence-boundary" : ""}"><span>${linkifyEscaped(label)}</span><strong>${linkifyEscaped(value || "")}</strong></div>`,
+            );
+          });
+          html.push("</div>");
+          continue;
+        }
+        const tableClasses = [
+          lastHeading === "Verification Ledger" ? "ledger-table" : "",
+          lastHeading === "Emergency Filing Gate" ? "gate-table" : "",
+          lastHeading === "Top Source-Backed Matters" ? "source-table" : "",
+        ].filter(Boolean);
+        const tableClass = tableClasses.length ? ` class="${tableClasses.join(" ")}"` : "";
         html.push(`<table${tableClass}>`);
         html.push(`<thead><tr>${head.map((cell) => `<th>${linkifyEscaped(cell)}</th>`).join("")}</tr></thead>`);
         html.push("<tbody>");

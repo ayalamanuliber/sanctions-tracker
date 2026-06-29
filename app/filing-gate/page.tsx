@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const gates = ["AI-use intake", "Citation gate", "Quote gate", "Proposition gate", "Disclosure gate", "Partner exception report", "Audit trail", "Incident pause rule"];
+const gates = ["AI-use intake", "Citation gate", "Quote gate", "Proposition gate", "Disclosure gate", "Final review / exception report", "Audit trail", "Incident pause rule"];
 
 export default function FilingGatePage() {
   return (

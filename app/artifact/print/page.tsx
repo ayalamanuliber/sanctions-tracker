@@ -30,11 +30,11 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
             <img src="/av-logo-nav.png" alt="AI Vortex" className="screen-logo" />
             <div>
               <div style={{ color: "#92400e", fontSize: 11, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>AI Vortex Legal AI Risk</div>
-              <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>Partner-ready print view. Use your browser print dialog to save as PDF.</div>
+              <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>Review-ready print view. Use your browser print dialog to save as PDF.</div>
             </div>
           </div>
           <div className="report-actions">
-            <a className="email-button" href={emailHref}>Send to partner</a>
+            <a className="email-button" href={emailHref}>Send for review</a>
             <button className="print-button" style={{ border: "1px solid #111827", background: "#111827", color: "#fff", padding: "9px 12px", fontWeight: 800 }}>
               Print / Save PDF
             </button>
@@ -65,7 +65,7 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
             </div>
           </div>
           <div className="footer-right">
-            <div className="footer-label">Client-ready or firm-branded?</div>
+            <div className="footer-label">Need firm-branded review packets?</div>
             <div className="footer-links">
               <a href="https://www.aivortex.io/legal#subscribe">Subscribe</a>
               <span>or</span>

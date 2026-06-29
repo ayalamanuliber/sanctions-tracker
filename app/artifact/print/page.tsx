@@ -20,7 +20,7 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
   const html = markdownToBodyHtml(markdown);
   const generated = new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(new Date());
   const shareUrl = `https://sanctions-tracker.vercel.app/artifact/print?${params.toString()}`;
-  const emailHref = `mailto:?subject=${encodeURIComponent(`AI Vortex Legal AI Risk - ${artifactParams.title || "Report"}`)}&body=${encodeURIComponent(`Here is the AI Vortex legal AI risk artifact:\n\n${shareUrl}`)}`;
+  const emailHref = `mailto:?subject=${encodeURIComponent(`AI Vortex Legal AI Risk - ${artifactParams.title || "Packet"}`)}&body=${encodeURIComponent(`Here is the AI Vortex legal AI risk packet:\n\n${shareUrl}`)}`;
 
   return (
     <main style={{ background: "#f8fafc", color: "#111827", minHeight: "100vh", padding: "32px 18px" }}>
@@ -34,7 +34,7 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
             </div>
           </div>
           <div className="report-actions">
-            <a className="email-button" href={emailHref}>Email report</a>
+            <a className="email-button" href={emailHref}>Send to partner</a>
             <button className="print-button" style={{ border: "1px solid #111827", background: "#111827", color: "#fff", padding: "9px 12px", fontWeight: 800 }}>
               Print / Save PDF
             </button>
@@ -65,7 +65,7 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
             </div>
           </div>
           <div className="footer-right">
-            <div className="footer-label">Unbranded / firm-branded exports</div>
+            <div className="footer-label">Client-ready or firm-branded?</div>
             <div className="footer-links">
               <a href="https://www.aivortex.io/legal#subscribe">Subscribe</a>
               <span>or</span>
@@ -93,15 +93,14 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
         .artifact-body .gate-table td:first-child { width: 16%; font-weight: 800; color: #0f172a; }
         .artifact-body .gate-table td:nth-child(3) { width: 18%; }
         .artifact-body .gate-table td:nth-child(4) { width: 9%; color: #475569; }
-        .artifact-body .ledger-table { font-size: 9px; table-layout: fixed; }
-        .artifact-body .ledger-table th, .artifact-body .ledger-table td { padding: 5px; overflow-wrap: anywhere; }
-        .artifact-body .ledger-table th:first-child, .artifact-body .ledger-table td:first-child { width: 3%; text-align: center; }
-        .artifact-body .ledger-table th:nth-child(2), .artifact-body .ledger-table td:nth-child(2) { width: 6%; }
-        .artifact-body .ledger-table th:nth-child(3), .artifact-body .ledger-table td:nth-child(3) { width: 14%; }
-        .artifact-body .ledger-table th:nth-child(4), .artifact-body .ledger-table td:nth-child(4) { width: 15%; }
-        .artifact-body .ledger-table th:nth-child(5), .artifact-body .ledger-table td:nth-child(5) { width: 10%; }
-        .artifact-body .ledger-table th:nth-child(9), .artifact-body .ledger-table td:nth-child(9) { width: 12%; }
-        .artifact-body .ledger-table th:nth-child(10), .artifact-body .ledger-table td:nth-child(10) { width: 12%; }
+        .artifact-body .ledger-table { font-size: 10px; table-layout: fixed; }
+        .artifact-body .ledger-table th, .artifact-body .ledger-table td { padding: 7px; overflow-wrap: anywhere; }
+        .artifact-body .ledger-table th:first-child, .artifact-body .ledger-table td:first-child { width: 4%; text-align: center; }
+        .artifact-body .ledger-table th:nth-child(2), .artifact-body .ledger-table td:nth-child(2) { width: 9%; }
+        .artifact-body .ledger-table th:nth-child(3), .artifact-body .ledger-table td:nth-child(3) { width: 20%; }
+        .artifact-body .ledger-table th:nth-child(4), .artifact-body .ledger-table td:nth-child(4) { width: 21%; }
+        .artifact-body .ledger-table th:nth-child(5), .artifact-body .ledger-table td:nth-child(5) { width: 20%; }
+        .artifact-body .ledger-table th:nth-child(6), .artifact-body .ledger-table td:nth-child(6) { width: 17%; }
         .evidence-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 14px 0 20px; page-break-inside: avoid; }
         .evidence-metric { border: 1px solid #cbd5e1; background: #f8fafc; padding: 11px 12px; min-height: 62px; display: flex; flex-direction: column; justify-content: space-between; }
         .evidence-metric span { color: #64748b; font-size: 10px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
@@ -116,7 +115,7 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
         .footer-brand-line { display: flex; align-items: center; gap: 8px; color: #111827; font-weight: 700; }
         .footer-brand-line span { color: #cbd5e1; }
         .footer-note { max-width: 470px; margin-top: 7px; line-height: 1.45; }
-        .footer-right { min-width: 265px; text-align: right; }
+        .footer-right { min-width: 285px; text-align: right; }
         .footer-label { color: #64748b; font-size: 9px; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
         .footer-links { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-top: 6px; color: #94a3b8; font-size: 12px; }
         @media print {
@@ -127,7 +126,7 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
           .artifact-body h1 { font-size: 24px; }
           .artifact-body h2 { break-after: avoid; }
           .artifact-body table { font-size: 10px; }
-          .artifact-body .ledger-table { font-size: 8px; }
+          .artifact-body .ledger-table { font-size: 9px; }
           .evidence-grid { gap: 8px; }
           .artifact-footer { position: running(artifact-footer); }
         }

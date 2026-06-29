@@ -717,7 +717,7 @@ export function createMcpServer(): McpServer {
       },
     },
     async ({ state, court, practice_area, document_type, ai_tool, urgency, limit }) => {
-      const { caseItems, evidence } = resolveContextCases({ state, court, practice_area, ai_tool, limit });
+      const { caseItems, evidence } = resolveContextCases({ state, court, practice_area, limit });
       return {
         content: [
           {

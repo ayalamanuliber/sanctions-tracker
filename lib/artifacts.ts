@@ -146,6 +146,10 @@ export function buildArtifactMarkdown(params: {
           ? "AI Vortex Implementation Package"
           : type === "policy"
             ? "One-Page Court-Facing AI Filing Policy"
+            : type === "prefiling"
+              ? "Emergency Pre-Filing AI Risk Packet"
+              : type === "visual"
+                ? "Managing Partner Legal AI Risk Visual Summary"
             : "AI Filing Risk Report");
 
   if (type === "ledger") {
@@ -258,6 +262,123 @@ export function buildArtifactMarkdown(params: {
   const failures = rankedEntries(countBy(failureTags(caseItems)), 6);
   const gaps = rankedEntries(countBy(caseItems.flatMap((item) => item.policy_gap_ids)), 6);
   const examples = importantCases(caseItems, type === "source" ? 12 : 5);
+
+  if (type === "prefiling") {
+    return [
+      `# ${title}`,
+      "",
+      `Matter: ${[params.court, params.state].filter(Boolean).join(" / ") || "court-facing filing"}`,
+      `AI tools used for internal review: ${params.aiTool || "__________"}`,
+      "Urgency: filing window imminent",
+      "",
+      "## Tonight's Decision Rule",
+      "Do not keep editing substance until the verification ledger is complete. Any citation, quotation, pincite, or legal proposition that cannot be verified before filing must be corrected, removed, or escalated to the signing attorney.",
+      "",
+      "## Emergency Filing Gate",
+      "| Gate | Required action | Owner | Status |",
+      "| --- | --- | --- | --- |",
+      "| Freeze draft | Save the version being checked before further edits | Responsible attorney | Pending |",
+      "| Extract authority | Pull every citation, pincite, quote, and AI-assisted proposition into the ledger | Associate/verifier | Pending |",
+      "| Citation check | Confirm each authority exists exactly as cited | Verifier | Pending |",
+      "| Quote check | Match quoted text word-for-word to the source and pincite | Verifier | Pending |",
+      "| Proposition check | Confirm the cited authority supports the sentence it is attached to | Verifier | Pending |",
+      "| Disclosure check | Review court, judge, standing-order, local-rule, and client requirements | Responsible attorney | Pending |",
+      "| Signoff | Signing attorney reviews unresolved exceptions and final recommendation | Signing attorney | Pending |",
+      "",
+      "## Verification Ledger",
+      "| # | Draft page | Citation / quote / proposition | Source checked | AI touched? | Exists? | Pincite correct? | Quote exact? | Supports proposition? | Status | Reviewer |",
+      "| ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+      "| 1 |  |  | Westlaw / Lexis / Bloomberg / PACER / Official source | Yes / No / Unknown | Yes / No | Yes / No / N.A. | Yes / No / N.A. | Yes / No | Verified / Corrected / Removed / Escalated |  |",
+      "| 2 |  |  | Westlaw / Lexis / Bloomberg / PACER / Official source | Yes / No / Unknown | Yes / No | Yes / No / N.A. | Yes / No / N.A. | Yes / No | Verified / Corrected / Removed / Escalated |  |",
+      "| 3 |  |  | Westlaw / Lexis / Bloomberg / PACER / Official source | Yes / No / Unknown | Yes / No | Yes / No / N.A. | Yes / No / N.A. | Yes / No | Verified / Corrected / Removed / Escalated |  |",
+      "",
+      "## Signing Attorney Exception Report",
+      "- Citations checked: ___ / ___",
+      "- Quotes checked: ___ / ___",
+      "- Propositions checked: ___ / ___",
+      "- Items corrected: ___",
+      "- Items removed: ___",
+      "- Items escalated: ___",
+      "- Court/judge AI rule checked: Yes / No",
+      "- Disclosure/certification needed: Yes / No / Unclear",
+      "- Recommendation: File / File after edits / Do not file yet",
+      "",
+      "## Evidence Note",
+      `- Corpus: AI Vortex legal AI risk tracker, ${meta.total_cases.toLocaleString("en-US")} tracked global matters`,
+      `- Corpus last updated: ${meta.last_updated}`,
+      `- Matched set: ${caseItems.length} cases`,
+      `- Date coverage: ${dateCoverage(caseItems)}`,
+      `- Source-link coverage: ${sourceCoverage(caseItems)}`,
+      "- Boundary: tracked public incidents are evidence of observed risk patterns, not usage-adjusted incident rates or legal advice.",
+      "",
+      "## Source-Backed Examples",
+      ...importantCases(caseItems, 3).map(
+        (item) =>
+          `- ${item.case_name} (${item.date}, ${item.court}): ${item.severity}; ${item.sanction_types.join(", ") || "no sanction listed"}${item.amount_display ? ` / ${item.amount_display}` : ""}\n  Source: ${item.source_url || "Unavailable"}`,
+      ),
+    ].join("\n");
+  }
+
+  if (type === "visual") {
+    const severity = countBy(caseItems.map((item) => item.severity));
+    const failureModes = rankedEntries(countBy(failureTags(caseItems)), 6);
+    const sourceCount = caseItems.filter((item) => item.source_url).length;
+    const lawyer = caseItems.filter((item) => item.party?.toLowerCase().includes("lawyer")).length;
+    const proSe = caseItems.filter((item) => item.party?.toLowerCase().includes("pro se")).length;
+    const monetary = caseItems.reduce((sum, item) => sum + (item.amount || 0), 0);
+    return [
+      `# ${title}`,
+      "",
+      `Audience: ${params.audience || "managing partner"}`,
+      `Scope: ${[params.court, params.state, params.aiTool, params.practiceArea].filter(Boolean).join(" / ") || "matched corpus"}`,
+      "",
+      "## Executive Readout",
+      "The observed risk is not AI use in the abstract. The observed risk is unverified AI-assisted authority reaching court-facing work. The management control is a filing gate: citation existence, quote accuracy, proposition support, disclosure check, and signing-attorney certification.",
+      "",
+      "## Executive Cards",
+      "| Metric | Value |",
+      "| --- | ---: |",
+      `| Matched matters | ${caseItems.length} |`,
+      `| Source-linked coverage | ${caseItems.length ? `${Math.round((sourceCount / caseItems.length) * 100)}%` : "0%"} |`,
+      `| Lawyer-related matters | ${lawyer} |`,
+      `| Pro se matters | ${proSe} |`,
+      `| Known monetary sanctions | ${new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(monetary)} |`,
+      "",
+      "## Severity Breakdown",
+      "| Severity | Count |",
+      "| --- | ---: |",
+      `| Low | ${severity.low || 0} |`,
+      `| Medium | ${severity.medium || 0} |`,
+      `| High | ${severity.high || 0} |`,
+      `| Career-ending | ${severity["career-ending"] || 0} |`,
+      "",
+      "## Main Failure Modes",
+      "| Failure mode | Count |",
+      "| --- | ---: |",
+      ...failureModes.map(([label, count]) => `| ${label.replace(/-/g, " ")} | ${count} |`),
+      "",
+      "## Top Source-Backed Matters",
+      "| Date | Case | Court | Severity | Signal | Source |",
+      "| --- | --- | --- | --- | --- | --- |",
+      ...importantCases(caseItems, 5).map(
+        (item) =>
+          `| ${item.date} | ${item.case_name} | ${item.court} | ${item.severity} | ${item.sanction_types.join(", ") || "tracked matter"}${item.amount_display ? ` / ${item.amount_display}` : ""} | ${item.source_url || "Unavailable"} |`,
+      ),
+      "",
+      "## Management Action",
+      "- Adopt the pre-filing verification ledger for all AI-assisted court-facing filings.",
+      "- Require signing-attorney review of unresolved exceptions, not the entire verification history.",
+      "- Keep the source appendix with the matter or training file so the risk signal is auditable.",
+      "",
+      "## Evidence Note",
+      `- Corpus: AI Vortex legal AI risk tracker, ${meta.total_cases.toLocaleString("en-US")} tracked global matters`,
+      `- Corpus last updated: ${meta.last_updated}`,
+      `- Matched set: ${caseItems.length} cases`,
+      `- Date coverage: ${dateCoverage(caseItems)}`,
+      `- Source-link coverage: ${sourceCoverage(caseItems)}`,
+      "- Boundary: tracked public incidents are evidence of observed risk patterns, not usage-adjusted incident rates or legal advice.",
+    ].join("\n");
+  }
 
   return [
     `# ${title}`,

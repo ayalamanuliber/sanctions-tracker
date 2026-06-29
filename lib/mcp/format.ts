@@ -290,28 +290,34 @@ function formatArtifactLinks(
 
   const reportTitle = params.title || "AI Vortex Legal AI Risk Report";
   const common = { title: reportTitle, audience: params.audience, state: params.state, court: params.court, aiTool: params.aiTool, practiceArea: params.practiceArea };
+  const evidenceCommon = params.scenario === "filing" ? { ...common, aiTool: undefined } : common;
   const rows = new Set<string>();
+  const link = (label: string, url: string) => `- [${label}](${url})`;
 
   if (["jurisdiction", "comparison", "dashboard", "package", "policy", "tool"].includes(params.scenario)) {
-    rows.add(`- Dashboard: ${dashboardUrl(baseUrl, { state: params.state, court: params.court, audience: params.audience, aiTool: params.aiTool, practiceArea: params.practiceArea })}`);
+    rows.add(link("Dashboard", dashboardUrl(baseUrl, { state: params.state, court: params.court, audience: params.audience, aiTool: params.aiTool, practiceArea: params.practiceArea })));
   }
   if (["jurisdiction", "comparison", "dashboard", "package"].includes(params.scenario)) {
-    rows.add(`- Map view: ${mapUrl(baseUrl, { state: params.state, court: params.court, audience: params.audience, aiTool: params.aiTool })}`);
+    rows.add(link("Map view", mapUrl(baseUrl, { state: params.state, court: params.court, audience: params.audience, aiTool: params.aiTool })));
   }
   if (["jurisdiction", "comparison", "policy", "tool", "dashboard", "package"].includes(params.scenario)) {
-    const artifactType = params.scenario === "policy" ? "policy" : "report";
-    const label = params.scenario === "policy" ? "One-page policy" : "Report";
-    rows.add(`- ${label} print / Save as PDF: ${printUrl(baseUrl, { ...common, type: artifactType })}`);
-    rows.add(`- ${label} Word-compatible version: ${artifactUrl(baseUrl, { ...common, type: artifactType, format: "word-ready" })}`);
+    const artifactType = params.scenario === "policy" ? "policy" : params.scenario === "dashboard" ? "visual" : "report";
+    const label = params.scenario === "policy" ? "One-page policy" : params.scenario === "dashboard" ? "Visual brief" : "Report";
+    rows.add(link(`${label} print / Save as PDF`, printUrl(baseUrl, { ...common, type: artifactType })));
+    rows.add(link(`${label} Word-compatible version`, artifactUrl(baseUrl, { ...common, type: artifactType, format: "word-ready" })));
   }
   if (["filing", "package"].includes(params.scenario)) {
-    rows.add(`- Verification ledger CSV: ${artifactUrl(baseUrl, { ...common, type: "ledger", format: "csv" })}`);
-    rows.add(`- Verification ledger Word-compatible HTML: ${artifactUrl(baseUrl, { ...common, type: "ledger", format: "word-ready" })}`);
+    if (params.scenario === "filing") {
+      rows.add(link("Emergency packet print / Save as PDF", printUrl(baseUrl, { ...evidenceCommon, type: "prefiling" })));
+      rows.add(link("Emergency packet Word-compatible version", artifactUrl(baseUrl, { ...evidenceCommon, type: "prefiling", format: "word-ready" })));
+    }
+    rows.add(link("Verification ledger CSV", artifactUrl(baseUrl, { ...common, type: "ledger", format: "csv" })));
+    rows.add(link("Verification ledger Word-compatible HTML", artifactUrl(baseUrl, { ...common, type: "ledger", format: "word-ready" })));
   }
   if (["opposing"].includes(params.scenario)) {
-    rows.add(`- Discrepancy matrix / review memo: ${artifactUrl(baseUrl, { ...common, type: "opposing", format: "word-ready" })}`);
+    rows.add(link("Discrepancy matrix / review memo", artifactUrl(baseUrl, { ...common, type: "opposing", format: "word-ready" })));
   }
-  rows.add(`- Source appendix: ${artifactUrl(baseUrl, { ...common, type: "source", format: "md" })}`);
+  rows.add(link("Source appendix", artifactUrl(baseUrl, { ...evidenceCommon, type: "source", format: "md" })));
   rows.add("- More formats on request: Markdown, basic PDF, or CSV exports.");
 
   return ["Recommended artifacts", ...rows];
@@ -738,57 +744,42 @@ export function formatPrefilingReviewPacket(params: {
   return [
     urgent ? "Vortex emergency pre-filing triage packet" : "Vortex pre-filing AI risk packet",
     "",
-    ...provenanceBlock(caseItems, meta, evidence),
+    provenanceBlock(caseItems, meta, evidence)[0],
+    provenanceBlock(caseItems, meta, evidence)[1],
     "",
     `Matter context: ${[documentType, court, state, practiceArea, aiTool].filter(Boolean).join(" / ") || "not specified"}`,
     `Urgency mode: ${urgent ? "high - filing window appears imminent" : "standard"}`,
-    `Comparable matched cases: ${caseItems.length}`,
-    `Risk level: ${riskLevel(caseItems)}`,
-    ...dateCoverage(caseItems),
     "",
     ...(urgent
       ? [
-          "",
           "Operational pushback",
           "- Do not attempt a full firm policy rollout before tomorrow's filing. That is not realistic.",
-          "- For this matter, run only the controls that can prevent a bad filing tonight: citation existence, quote accuracy, proposition support, disclosure check, and signing-attorney certification.",
+          "- For this matter, run only the controls that can prevent a bad filing tonight.",
         ]
       : []),
     "",
-    "Immediate filing gate",
-    "1. Freeze the draft version that will be checked.",
-    "2. Extract every citation, pincite, quotation, and AI-assisted legal proposition into a verification table.",
-    "3. Assign one verifier who did not generate the AI-assisted text.",
-    "4. Mark each item verified, corrected, removed, or escalated.",
-    "5. Signing attorney reviews only unresolved items and the final verification ledger.",
-    "6. Save the ledger to the matter file before filing.",
+    "Immediate readout",
+    "- Freeze the draft before further edits.",
+    "- Extract every citation, pincite, quotation, and AI-assisted proposition into the ledger.",
+    "- Verify citation existence, quote accuracy, proposition support, and disclosure/local-rule status.",
+    "- Mark every item Verified, Corrected, Removed, or Escalated.",
+    "- Signing attorney reviews unresolved exceptions and the final recommendation before filing.",
     "",
-    "Required checks before filing",
-    "[ ] Every cited case exists exactly as cited.",
-    "[ ] Every pincite is valid.",
-    "[ ] Every quoted passage matches the source opinion.",
-    "[ ] Every cited authority supports the proposition attached to it.",
-    "[ ] AI-generated summaries were replaced or verified against primary sources.",
-    "[ ] Court, judge, and local AI disclosure requirements were checked.",
-    "[ ] Supervising attorney signoff is documented.",
-    "[ ] Verification notes are saved to the matter file.",
+    "Signing-attorney certification fields",
+    "- Citations checked: ___ / ___",
+    "- Quotes checked: ___ / ___",
+    "- Propositions checked: ___ / ___",
+    "- Court/judge AI rule checked: Yes / No",
+    "- Items corrected / removed / escalated: ___ / ___ / ___",
+    "- Recommendation: File / File after edits / Do not file yet",
     "",
-    "Source-backed examples",
+    "Local source-backed examples",
     ...(importantCases(caseItems, 3).length > 0
       ? importantCases(caseItems, 3).map(compactCaseLineWithSource)
       : ["- No direct matches; use the generic controls above."]),
     "",
-    "Recommended controls",
-    ...topControls(caseItems).map((item) => `- ${item}`),
-    "",
     ...advisorGuardrails("workflow"),
     "",
-    ...suggestedArtifacts([
-      "Partner signoff checklist",
-      "Matter audit note",
-      "Citation verification table",
-      "Client-safe explanation",
-    ]),
     ...formatArtifactLinks(baseUrl, {
       scenario: "filing",
       title: "Pre-filing AI risk packet",
@@ -799,10 +790,8 @@ export function formatPrefilingReviewPacket(params: {
     }),
     "",
     ...naturalNextAction([
-      urgent
-        ? "Generate the one-page emergency verification ledger for tonight's filing."
-        : "Generate the partner signoff checklist and matter audit note.",
-      "If the draft is available, extract citations and quotes before writing more policy language.",
+      "Open the emergency packet print view first.",
+      "Then complete the ledger before any additional drafting or partner review.",
     ]),
     "",
     ...vortexFooter(meta),

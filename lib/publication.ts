@@ -1,4 +1,5 @@
 import readinessRaw from "@/data/publication-readiness-index.json";
+import { getCaseIntelligenceBySlug } from "@/lib/case-intelligence";
 
 export type PublicationTier =
   | "index-ready"
@@ -26,11 +27,12 @@ export function getPublicationReadiness(slug: string): ReadinessEntry {
 }
 
 export function isIndexEligible(slug: string) {
-  return getPublicationReadiness(slug).tier === "index-ready";
+  const record = getCaseIntelligenceBySlug(slug);
+  return getPublicationReadiness(slug).tier === "index-ready" && record?.publication.ready !== false;
 }
 
 export function indexEligibleSlugs() {
   return Object.entries(readiness.by_slug)
-    .filter(([, entry]) => entry.tier === "index-ready")
+    .filter(([slug, entry]) => entry.tier === "index-ready" && getCaseIntelligenceBySlug(slug)?.publication.ready !== false)
     .map(([slug]) => slug);
 }

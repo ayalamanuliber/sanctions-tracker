@@ -54,6 +54,9 @@ type CorpusMeta = {
 };
 
 const meta = metaRaw as CorpusMeta;
+const SLUG_OVERRIDES: Record<string, string> = {
+  "-2026-07-16": "badash-v-ohana-2026-07-16",
+};
 
 function slugify(value: string) {
   return value
@@ -80,7 +83,7 @@ const rawCases = sanctionsRaw as unknown as Omit<LegalRiskCase, "slug">[];
 const slugCounts = new Map<string, number>();
 
 export const LEGAL_RISK_CASES: readonly LegalRiskCase[] = rawCases.map((item) => {
-  const base = slugify(item.id || `${item.case_name}-${item.date}`);
+  const base = SLUG_OVERRIDES[item.id] || slugify(item.id || `${item.case_name}-${item.date}`);
   const occurrence = (slugCounts.get(base) || 0) + 1;
   slugCounts.set(base, occurrence);
   return {
@@ -108,7 +111,7 @@ export function getCaseBySlug(slug: string) {
 }
 
 export function getCaseSlugById(id: string) {
-  return FIRST_SLUG_BY_ID.get(id) || slugify(id);
+  return FIRST_SLUG_BY_ID.get(id) || SLUG_OVERRIDES[id] || slugify(id);
 }
 
 export function formatCaseDate(value: string) {

@@ -4,6 +4,8 @@ import fs from "node:fs";
 const base = process.env.PRODUCT_BASE_URL || "http://localhost:3017/legal-ai-risk";
 const corpus = JSON.parse(fs.readFileSync(new URL("../data/sanctions.json", import.meta.url), "utf8"));
 const readiness = JSON.parse(fs.readFileSync(new URL("../data/publication-readiness-index.json", import.meta.url), "utf8"));
+const intelligence = JSON.parse(fs.readFileSync(new URL("../data/case-intelligence.json", import.meta.url), "utf8"));
+const intelligenceBySlug = new Map(intelligence.map((record) => [record.slug, record]));
 
 async function page(path) {
   const response = await fetch(`${base}${path}`);
@@ -56,6 +58,9 @@ assert.ok(curatedCase.includes("What the record establishes about AI use"), "Cur
 
 const sitemap = await page("/sitemap.xml");
 const caseUrls = sitemap.match(/\/cases\//g) || [];
-assert.equal(caseUrls.length, readiness.tiers["index-ready"], "Sitemap must contain every case that passes the publication baseline");
+const expectedIndexable = Object.entries(readiness.by_slug).filter(
+  ([slug, publication]) => publication.tier === "index-ready" && intelligenceBySlug.get(slug)?.publication?.ready !== false,
+).length;
+assert.equal(caseUrls.length, expectedIndexable, "Sitemap must contain every case that passes both publication and evidence baselines");
 
 console.log(JSON.stringify({ status: "pass", base, checks: 20, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseUrls.length }, null, 2));

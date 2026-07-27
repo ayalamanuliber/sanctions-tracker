@@ -23,7 +23,7 @@ export const SITE_PUBLICATION_DATE =
   process.env.NEXT_PUBLIC_SITE_PUBLICATION_DATE || "2026-07-27";
 
 export function publicUrl(path = "") {
-  if (!path || path === "/") return `${PUBLIC_BASE_URL}/`;
+  if (!path || path === "/") return PUBLIC_BASE_URL;
   return `${PUBLIC_BASE_URL}/${path.replace(/^\/+/, "")}`;
 }
 

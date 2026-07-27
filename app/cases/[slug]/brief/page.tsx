@@ -25,7 +25,7 @@ import {
   sourceTier,
 } from "@/lib/cases";
 import { createReportId, readReportBrand, type ReportTier } from "@/lib/reporting";
-import { getCaseIntelligence } from "@/lib/case-intelligence";
+import { conciseCaseAnswer, getCaseIntelligence } from "@/lib/case-intelligence";
 import { assetUrl } from "@/lib/site";
 import styles from "./brief.module.css";
 
@@ -60,7 +60,8 @@ export default async function CaseBriefPage({ params, searchParams }: Props) {
   const brandKey = readReportBrand(first(query, "brand"));
   const editorial = getCaseEditorial(item);
   const intelligence = getCaseIntelligence(item.id);
-  const directAnswer = editorial.reviewedForPublication ? editorial.directAnswer : intelligence?.summary || editorial.directAnswer;
+  const directAnswer = editorial.reviewedForPublication ? editorial.directAnswer : conciseCaseAnswer(intelligence?.summary || editorial.directAnswer);
+  const whyCourtCared = editorial.reviewedForPublication ? editorial.whyCourtCared : intelligence?.judicial_reasoning || intelligence?.decision_context || "The linked source identifies an AI-related issue but does not support a more specific account of the decision-maker's reasoning.";
   const evidenceBoundary = intelligence?.evidence_boundary || editorial.limitations;
   const source = sourceTier(item);
   const related = getRelatedCases(item, 3).filter((candidate) =>
@@ -150,7 +151,7 @@ export default async function CaseBriefPage({ params, searchParams }: Props) {
           <h2>Why this matter warrants attention</h2>
           <p>{directAnswer}</p>
           <div className={styles.readoutGrid}>
-            <div><strong>Why the decision-maker cared</strong><p>{editorial.whyCourtCared}</p></div>
+            <div><strong>Why the decision-maker cared</strong><p>{whyCourtCared}</p></div>
             <div><strong>Why it matters now</strong><p>{editorial.reviewedForPublication ? editorial.whyItMatters : intelligence?.why_it_matters || editorial.whyItMatters}</p></div>
           </div>
         </section>

@@ -5,6 +5,13 @@ const basePath = process.env.NEXT_PUBLIC_SITE_BASE_PATH ?? "/legal-ai-risk";
 const nextConfig: NextConfig = {
   basePath,
   poweredByHeader: false,
+  async redirects() {
+    return [{
+      source: "/cases/2026-07-16",
+      destination: "/cases/badash-v-ohana-2026-07-16",
+      permanent: true,
+    }];
+  },
   async headers() {
     return [{
       source: "/(.*)",

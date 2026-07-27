@@ -6,11 +6,18 @@ const nextConfig: NextConfig = {
   basePath,
   poweredByHeader: false,
   async redirects() {
-    return [{
-      source: "/cases/2026-07-16",
-      destination: "/cases/badash-v-ohana-2026-07-16",
-      permanent: true,
-    }];
+    return [
+      {
+        source: "/cases/2026-07-16",
+        destination: "/cases/badash-v-ohana-2026-07-16",
+        permanent: true,
+      },
+      {
+        source: "/cases/joann-ledoux-v-outliers-inc-2026-02-04",
+        destination: "/cases/joann-ledoux-v-outliers-inc-2026-07-24",
+        permanent: true,
+      },
+    ];
   },
   async headers() {
     return [{

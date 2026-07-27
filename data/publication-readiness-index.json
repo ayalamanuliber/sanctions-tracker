@@ -1,19 +1,59 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "2e72ef76c2127473586a395d4b56320ab2abe28469a4005736f4c40e7413046f",
-  "corpus_checked": "2026-07-23",
-  "total_cases": 1796,
+  "dataset_checksum": "169ef3573adf24237380d9ef0fa85acea74c17a53729c95d8d8355d5aaeed533",
+  "corpus_checked": "2026-07-27",
+  "total_cases": 1809,
   "tiers": {
-    "index-ready": 1784,
+    "index-ready": 1797,
     "enrichment-ready": 11,
     "research-only": 1
   },
   "by_slug": {
+    "joann-ledoux-v-outliers-inc-2026-07-24": {
+      "tier": "index-ready",
+      "score": 90
+    },
+    "kimberly-a-graves-v-pacific-gas-and-electric-company-2026-07-24": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "morgan-cole-v-hobby-town-unlimited-inc-2026-07-24": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "catarina-almeida-porfirio-v-homeland-security-et-al-2026-07-23": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "hagan-v-black-diamond-experts-llc-2026-07-23": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "mary-c-graves-v-brian-k-graves-2026-07-23": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "gideon-j-sipin-v-the-bank-of-new-york-mellon-trust-company-n-a-et-al-2026-07-22": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "pamon-v-united-states-postal-service-et-al-2026-07-22": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "rose-lannquist-gouldy-v-timothy-m-chiasson-et-al-2026-07-22": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "evans-v-robertson-4-2026-07-21": {
       "tier": "index-ready",
       "score": 85
     },
     "merritt-v-moore-2026-07-21": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "dc-yichang-city-hubei-ai-case-2026-07-21": {
       "tier": "index-ready",
       "score": 85
     },
@@ -26,6 +66,14 @@
       "score": 81
     },
     "erik-arthur-otteson-v-jpmorgan-chase-bank-na-2026-07-17": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "haddadi-et-al-v-soleimani-et-al-2026-onsc-3920-2026-07-17": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "ammann-v-markel-insurance-company-2026-07-16": {
       "tier": "index-ready",
       "score": 85
     },
@@ -60,6 +108,10 @@
     "arrieta-v-cervantes-2026-07-15": {
       "tier": "index-ready",
       "score": 81
+    },
+    "christine-thomas-v-united-states-department-of-justice-et-al-2026-07-15": {
+      "tier": "index-ready",
+      "score": 85
     },
     "dineen-shibata-v-kotchka-2026-07-15": {
       "tier": "index-ready",
@@ -160,6 +212,10 @@
     "in-the-interest-of-q-c-and-p-c-children-2026-07-09": {
       "tier": "index-ready",
       "score": 76
+    },
+    "sarl-galvalux-c-urssaf-2026-07-09": {
+      "tier": "index-ready",
+      "score": 85
     },
     "burlingame-v-argo-private-client-group-ltd-et-al-2026-07-08": {
       "tier": "index-ready",
@@ -2984,10 +3040,6 @@
     "in-re-the-matter-of-abius-rosas-carreon-2026-02-04": {
       "tier": "index-ready",
       "score": 86
-    },
-    "joann-ledoux-v-outliers-inc-2026-02-04": {
-      "tier": "index-ready",
-      "score": 95
     },
     "mitchell-taylor-button-dusty-button-v-sigrid-mccawley-2026-02-04": {
       "tier": "index-ready",

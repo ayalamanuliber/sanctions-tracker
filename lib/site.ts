@@ -1,5 +1,8 @@
+import metaRaw from "@/data/meta.json";
+
 const DEFAULT_PUBLIC_ORIGIN = "https://www.aivortex.io";
 const DEFAULT_PUBLIC_BASE_PATH = "/legal-ai-risk";
+const corpusMeta = metaRaw as { last_checked?: string; last_updated: string };
 
 function normalizeOrigin(value: string) {
   return value.replace(/\/+$/, "");
@@ -20,7 +23,9 @@ export const PUBLIC_BASE_PATH = normalizeBasePath(
 
 export const PUBLIC_BASE_URL = `${PUBLIC_ORIGIN}${PUBLIC_BASE_PATH}`;
 export const SITE_PUBLICATION_DATE =
-  process.env.NEXT_PUBLIC_SITE_PUBLICATION_DATE || "2026-07-27";
+  process.env.NEXT_PUBLIC_SITE_PUBLICATION_DATE ||
+  corpusMeta.last_checked ||
+  corpusMeta.last_updated;
 
 export function publicUrl(path = "") {
   if (!path || path === "/") return PUBLIC_BASE_URL;

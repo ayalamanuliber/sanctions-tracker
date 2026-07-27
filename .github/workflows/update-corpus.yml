@@ -15,7 +15,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -26,6 +26,7 @@ jobs:
 
       - run: npm ci
       - run: npm run update:data
+      - run: npm run sync:case-baselines
       - run: npm run validate:data
       - run: npm run validate:product
       - run: npm run build

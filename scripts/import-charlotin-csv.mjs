@@ -217,7 +217,8 @@ function normalizeCountry(value) {
   return cleaned || "UNKNOWN";
 }
 
-function inferCircuit(court) {
+function inferCircuit(court, country = "US") {
+  if (country !== "US") return null;
   const value = court.toLowerCase();
   const direct = value.match(/\b([1-9]|1[0-1])(st|nd|rd|th)?\s+cir/);
   if (direct) return `${direct[1]}${direct[1] === "1" ? "st" : direct[1] === "2" ? "nd" : direct[1] === "3" ? "rd" : "th"} Circuit`;
@@ -611,19 +612,31 @@ const cases = validRows
     const key = `${slugify(row["Case Name"])}|${row.Date}`;
     const previous = existingByKey.get(key);
     const country = normalizeCountry(row["State(s)"]);
-    const state = inferState(row.Court, country);
+    const court = row.Court || previous?.court || "";
+    const state = inferState(court, country);
     const { amount, display, raw } = parseAmount(row["Monetary Penalty"]);
-    const id = previous?.id || `${slugify(row["Case Name"])}-${row.Date}`;
+    const caseNameSlug = slugify(row["Case Name"]);
+    const fallbackSlug = `${slugify(court) || slugify(country) || "international"}-ai-case`;
+    const id = previous?.id || `${caseNameSlug || fallbackSlug}-${row.Date}`;
+    const importedSummary = buildSummary(row);
+    const summary = previous?.summary?.length > importedSummary.length
+      ? previous.summary
+      : importedSummary;
+    const importedSourceUrl = buildSourceUrl(row);
+    const sourceUrl = importedSourceUrl || previous?.source_url || "";
+    const sourceName = importedSourceUrl
+      ? row.Pointer || "Damien Charlotin AI Hallucination Cases Database"
+      : previous?.source_name || row.Pointer || "Damien Charlotin AI Hallucination Cases Database";
 
     return {
       id,
       case_name: row["Case Name"],
-      court: row.Court,
+      court,
       state,
       state_display: state || country,
       country,
-      circuit: inferCircuit(row.Court),
-      jurisdiction: inferJurisdiction(row, country),
+      circuit: inferCircuit(court, country),
+      jurisdiction: inferJurisdiction({ ...row, Court: court }, country),
       date: row.Date,
       party: row["Party(ies)"],
       ai_tool_used:
@@ -639,9 +652,9 @@ const cases = validRows
       professional_sanction: row["Professional Sanction"] || "No",
       sanction_types: inferSanctionTypes(row),
       alleged: row.Alleged.toLowerCase() === "yes",
-      summary: buildSummary(row),
-      source_url: buildSourceUrl(row),
-      source_name: row.Pointer || "Damien Charlotin AI Hallucination Cases Database",
+      summary,
+      source_url: sourceUrl,
+      source_name: sourceName,
       severity: inferSeverity(row, amount || 0),
       policy_gap_ids: previous?.policy_gap_ids?.length ? previous.policy_gap_ids : inferPolicyGaps(row),
       tags: inferTags(row),

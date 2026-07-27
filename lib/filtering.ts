@@ -51,14 +51,21 @@ export function courtAliases(query?: string | null): string[] {
   } else if (/\bnew jersey\b|\bnj\b/.test(normalized)) {
     aliases.add("new jersey");
   }
-  const isNewYorkDistrict = /\bsdny\b|\bedny\b|\bndny\b|\bwdny\b|\bs d n y\b|\be d n y\b|\bn d n y\b|\bw d n y\b|\bs d new york\b|\be d new york\b|\bn d new york\b|\bw d new york\b/.test(normalized);
-  if (isNewYorkDistrict) {
-    aliases.add("s d new york");
-    aliases.add("e d new york");
-    aliases.add("n d new york");
-    aliases.add("w d new york");
-    aliases.add("sdny");
-    aliases.add("edny");
+  const newYorkDistrict = normalized.match(/^(?:district of )?(southern|eastern|northern|western) district(?: of)? new york$/)?.[1]
+    || normalized.match(/^(s|e|n|w) d new york$/)?.[1]
+    || normalized.match(/^(s|e|n|w) d n y$/)?.[1]
+    || normalized.match(/^(s|e|n|w)dny$/)?.[1];
+  if (newYorkDistrict) {
+    const direction = newYorkDistrict.length === 1
+      ? { s: "southern", e: "eastern", n: "northern", w: "western" }[newYorkDistrict]
+      : newYorkDistrict;
+    const initial = direction?.slice(0, 1);
+    if (direction && initial) {
+      aliases.add(`${direction} district of new york`);
+      aliases.add(`${initial} d new york`);
+      aliases.add(`${initial} d n y`);
+      aliases.add(`${initial}dny`);
+    }
   } else if (/\bnew york\b|\bny\b/.test(normalized)) {
     aliases.add("new york");
   }

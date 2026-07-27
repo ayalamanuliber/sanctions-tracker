@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import { assetUrl } from "@/lib/site";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -24,7 +26,7 @@ export default function Header() {
         <div className="nav-inner">
           <a className="nav-brand" href="https://www.aivortex.io/legal">
             <span className="nav-monogram-wrap">
-              <img src="/av-logo-white.png" alt="AI Vortex" className="nav-monogram" />
+              <Image src={assetUrl("/av-logo-white.png")} alt="AI Vortex" className="nav-monogram" width={36} height={32} />
             </span>
             <span className="nav-brand-name">AI Vortex</span>
           </a>

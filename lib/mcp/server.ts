@@ -4,6 +4,7 @@ import { z } from "zod";
 import sanctionsRaw from "@/data/sanctions.json";
 import metaRaw from "@/data/meta.json";
 import { matchesCourt, matchesTool } from "@/lib/filtering";
+import { publicUrl } from "@/lib/site";
 import {
   formatCase,
   formatChecklist,
@@ -37,6 +38,9 @@ const sanctions = (sanctionsRaw as unknown as PublicSanctionCase[])
 
 const meta = metaRaw as {
   last_updated: string;
+  last_checked?: string;
+  last_checked_at?: string;
+  latest_record_date?: string;
   total_cases: number;
   us_cases: number;
   countries_tracked: number;
@@ -48,7 +52,7 @@ const meta = metaRaw as {
   severity_counts: Record<string, number>;
 };
 
-const publicBaseUrl = "https://sanctions-tracker.vercel.app/";
+const publicBaseUrl = publicUrl();
 
 function uniqueValues(values: string[]): string[] {
   return [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b));
@@ -539,7 +543,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Get Jurisdiction Risk Brief",
       description:
-        "Use this when a user asks what legal AI risk means for a state, court, or practice area. Return a concise professional advisor brief by default: evidence note, essential metrics, main risk signal, top source-backed examples, controls, and suggested next step. Do not write a long consultant report unless asked.",
+        "Use this when a user asks what legal AI risk means for a state, court, or practice area. Return a concise professional advisor brief by default: evidence note, essential metrics, main risk signal, top source-linked examples, controls, and suggested next step. A source link is not proof of independent verification. Do not write a long consultant report unless asked.",
       annotations: {
         readOnlyHint: true,
       },
@@ -658,7 +662,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Compare Tool Risk Profiles",
       description:
-        "Use this when a user asks to compare legal AI risk across multiple tools such as ChatGPT, Claude, CoCounsel, Lexis+ AI, Westlaw, or other AI/legal AI tools. Return a concise side-by-side profile with caveats, severe-case concentration, source-backed representative cases, controls, and suggested deliverables.",
+        "Use this when a user asks to compare legal AI risk across multiple tools such as ChatGPT, Claude, CoCounsel, Lexis+ AI, Westlaw, or other AI/legal AI tools. Return a concise side-by-side profile with usage-denominator caveats, source-linked representative cases, controls, and suggested deliverables. Do not infer comparative product safety from public record counts.",
       annotations: {
         readOnlyHint: true,
       },
@@ -1139,7 +1143,7 @@ export function createMcpServer(): McpServer {
     {
       title: "Generate Visual Summary Data",
       description:
-        "Use this when an assistant should render deterministic executive cards, bars, tables, dashboards, chart-ready summaries, maps, or managing-partner visual summaries for a jurisdiction, tool, practice area, or issue. Return source-backed top cases, chart-ready JSON, dashboard/map/print/source links, and a short readout. Do not rely on generated images unless the user explicitly asks for an image.",
+        "Use this when an assistant should render deterministic executive cards, bars, tables, dashboards, chart-ready summaries, maps, or managing-partner visual summaries for a jurisdiction, tool, practice area, or issue. Return source-linked top cases, chart-ready JSON, dashboard/map/print/source links, and a short readout. Label severity as editorial impact and counts as tracked records, not incidence rates. Do not rely on generated images unless the user explicitly asks for an image.",
       annotations: {
         readOnlyHint: true,
       },

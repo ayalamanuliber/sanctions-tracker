@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import meta from "@/data/meta.json";
 import sanctions from "@/data/sanctions.json";
 import { ESCALATION_DATA } from "@/lib/constants";
@@ -9,42 +9,15 @@ import { ESCALATION_DATA } from "@/lib/constants";
 const stats = {
   total_cases_tracked: (meta as { us_cases: number }).us_cases,
   q1_2026_sanctions_usd: (meta as { monetary_sanctions_total_usd: number }).monetary_sanctions_total_usd,
-  last_updated: (meta as { last_updated: string }).last_updated,
+  last_checked: (meta as { last_checked?: string; last_updated: string }).last_checked
+    || (meta as { last_updated: string }).last_updated,
+  latest_record_date: (meta as { latest_record_date?: string }).latest_record_date,
 };
 
 // Use top US cases for the live panel carousel
 const cases = (sanctions as Array<{ id: string; country: string; date: string; case_name: string; court: string; amount: number | null; amount_display: string; severity: string | null }>)
   .filter((c) => c.country === "US" && c.date)
   .sort((a, b) => b.date.localeCompare(a.date));
-
-function CountUp({ target, duration = 1800, formatter }: { target: number; duration?: number; formatter?: (n: number) => string }) {
-  const [count, setCount] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const ref = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-          const start = performance.now();
-          const animate = (now: number) => {
-            const progress = Math.min((now - start) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            setCount(Math.round(target * eased));
-            if (progress < 1) requestAnimationFrame(animate);
-          };
-          requestAnimationFrame(animate);
-        }
-      },
-      { threshold: 0.3 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [target, duration, hasAnimated]);
-
-  return <span ref={ref}>{formatter ? formatter(count) : count.toLocaleString()}</span>;
-}
 
 const sortedCases = [...cases].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
 
@@ -82,7 +55,7 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  const lastUpdated = stats.last_updated.split("T")[0];
+  const lastChecked = stats.last_checked.split("T")[0];
 
   return (
     <section className="hub-hero">
@@ -95,7 +68,10 @@ export default function Hero() {
                 Sanctions Tracker &middot; Live
               </span>
               <span className="eyebrow-divider"></span>
-              <span className="eyebrow-label">Updated {lastUpdated}</span>
+              <span className="eyebrow-label">
+                Checked {lastChecked}
+                {stats.latest_record_date ? ` · latest decision ${stats.latest_record_date}` : ""}
+              </span>
             </div>
 
             <h1 className="hub-title">

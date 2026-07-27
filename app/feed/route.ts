@@ -2,11 +2,12 @@ import sanctionsRaw from "@/data/sanctions.json";
 import metaRaw from "@/data/meta.json";
 import { matchesTool } from "@/lib/filtering";
 import type { PublicSanctionCase } from "@/lib/mcp/types";
+import { PUBLIC_BASE_URL, publicUrl } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
 const cases = (sanctionsRaw as unknown as PublicSanctionCase[]).slice().sort((a, b) => b.date.localeCompare(a.date));
-const meta = metaRaw as { last_updated: string };
+const meta = metaRaw as { last_updated: string; last_checked?: string; latest_record_date?: string };
 
 export async function GET(request: Request): Promise<Response> {
   const url = new URL(request.url);
@@ -26,11 +27,11 @@ export async function GET(request: Request): Promise<Response> {
 <rss version="2.0">
   <channel>
     <title>AI Vortex Legal AI Risk Watchlist</title>
-    <link>https://sanctions-tracker.vercel.app</link>
-    <description>Filtered public legal AI risk matters. Updated ${meta.last_updated}.</description>
+    <link>${PUBLIC_BASE_URL}</link>
+    <description>Filtered public legal AI risk matters. Corpus checked ${meta.last_checked || meta.last_updated}; latest tracked decision ${meta.latest_record_date || "not provided"}.</description>
     ${filtered.map((item) => `<item>
       <title>${escapeXml(item.case_name)}</title>
-      <link>${escapeXml(item.source_url || "https://sanctions-tracker.vercel.app")}</link>
+      <link>${escapeXml(publicUrl(`/cases/${item.id}`))}</link>
       <guid>${escapeXml(item.id)}</guid>
       <pubDate>${new Date(item.date).toUTCString()}</pubDate>
       <description>${escapeXml(`${item.court} · ${item.severity} · ${item.ai_tool_used}`)}</description>

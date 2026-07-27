@@ -1,7 +1,16 @@
+import Image from "next/image";
+import type { Metadata } from "next";
 import { buildArtifactMarkdown, markdownToBodyHtml, readArtifactParams } from "@/lib/artifacts";
+import { assetUrl, publicUrl } from "@/lib/site";
+import PrintButton from "./PrintButton";
 
 type PageProps = {
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
+};
+
+export const metadata: Metadata = {
+  title: "Printable legal AI risk artifact | AI Vortex",
+  robots: { index: false, follow: true },
 };
 
 function first(value: string | string[] | undefined): string {
@@ -19,7 +28,9 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
   const markdown = buildArtifactMarkdown(artifactParams);
   const html = markdownToBodyHtml(markdown);
   const generated = new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(new Date());
-  const shareUrl = `https://sanctions-tracker.vercel.app/artifact/print?${params.toString()}`;
+  const shareUrl = `${publicUrl("/artifact/print")}?${params.toString()}`;
+  const neutralAudience = /judge|chambers|court/i.test(artifactParams.audience || "");
+  const artifactId = `AV-${artifactParams.type.toUpperCase()}-${artifactParams.state || "GLOBAL"}-${artifactParams.court ? artifactParams.court.replace(/[^a-z0-9]/gi, "").toUpperCase().slice(0, 8) : "PUBLIC"}`;
   const emailHref = `mailto:?subject=${encodeURIComponent(`AI Vortex Legal AI Risk - ${artifactParams.title || "Packet"}`)}&body=${encodeURIComponent(`Here is the AI Vortex legal AI risk packet:\n\n${shareUrl}`)}`;
 
   return (
@@ -27,7 +38,7 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
       <article style={{ maxWidth: 900, margin: "0 auto", background: "#fff", border: "1px solid #e5e7eb", padding: "44px 52px", boxShadow: "0 20px 70px rgba(15, 23, 42, 0.10)" }}>
         <div className="screen-only report-shell" style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "center", borderBottom: "1px solid #e5e7eb", paddingBottom: 16, marginBottom: 24 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <img src="/av-logo-nav.png" alt="AI Vortex" className="screen-logo" />
+            <Image src={assetUrl("/av-logo-nav.png")} alt="AI Vortex" className="screen-logo" width={30} height={30} />
             <div>
               <div style={{ color: "#92400e", fontSize: 11, fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>AI Vortex Legal AI Risk</div>
               <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>Review-ready print view. Use your browser print dialog to save as PDF.</div>
@@ -35,25 +46,23 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
           </div>
           <div className="report-actions">
             <a className="email-button" href={emailHref}>Send for review</a>
-            <button className="print-button" style={{ border: "1px solid #111827", background: "#111827", color: "#fff", padding: "9px 12px", fontWeight: 800 }}>
-              Print / Save PDF
-            </button>
+            <PrintButton />
           </div>
         </div>
         <div className="print-brand">
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <img src="/av-logo-nav.png" alt="AI Vortex" className="brand-logo" />
+              <Image src={assetUrl("/av-logo-nav.png")} alt="AI Vortex" className="brand-logo" width={30} height={30} />
               <div>
                 <div className="brand-kicker">AI Vortex Legal AI Risk</div>
                 <div className="brand-subtitle">Source-backed legal AI risk workflow artifact</div>
               </div>
             </div>
           </div>
-          <div className="brand-date">{generated}</div>
+          <div className="brand-date">{generated}<br />{artifactId}</div>
         </div>
         <div className="artifact-body" dangerouslySetInnerHTML={{ __html: html }} />
-        <footer className="artifact-footer">
+        <footer className={`artifact-footer ${neutralAudience ? "neutral-footer" : ""}`}>
           <div className="footer-left">
             <div className="footer-brand-line">
               <strong>AI Vortex by Manu Ayala</strong>
@@ -64,17 +73,17 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
               Public tracker evidence is a risk signal, not legal advice or a usage-adjusted incident rate.
             </div>
           </div>
-          <div className="footer-right">
+          {!neutralAudience && <div className="footer-right">
             <div className="footer-label">Need firm-branded review packets?</div>
             <div className="footer-links">
               <a href="https://www.aivortex.io/legal#subscribe">Subscribe</a>
               <span>or</span>
               <a href="mailto:manuel@aivortex.io?subject=AI%20Vortex%20Free%20or%20Firm-Branded%20Export%20Access">email Manu</a>
             </div>
-          </div>
+          </div>}
+          {neutralAudience && <div className="footer-right"><div className="footer-label">Neutral court / chambers artifact</div><div className="footer-note">Verify all statements against the linked primary record. No inference of AI use or intent is made without evidence.</div></div>}
         </footer>
       </article>
-      <script dangerouslySetInnerHTML={{ __html: "document.querySelector('.print-button')?.addEventListener('click',()=>window.print())" }} />
       <style>{`
         .print-brand { display: none; justify-content: space-between; gap: 20px; border-bottom: 2px solid #111827; padding-bottom: 12px; margin-bottom: 22px; }
         .screen-logo, .brand-logo { width: 28px; height: 28px; filter: brightness(0) saturate(100%); opacity: 0.92; }
@@ -131,6 +140,17 @@ export default async function ArtifactPrintPage({ searchParams }: PageProps) {
           .artifact-footer { position: running(artifact-footer); }
         }
         @media (max-width: 720px) {
+          main { padding: 10px 6px !important; overflow-x: hidden; }
+          article { width: 100%; padding: 24px 16px !important; box-shadow: none !important; }
+          .report-shell { align-items: flex-start !important; }
+          .report-shell > div:first-child > div { display: none; }
+          .report-actions { margin-left: auto; }
+          .artifact-body { min-width: 0; overflow-wrap: anywhere; }
+          .artifact-body h1 { font-size: 23px; }
+          .artifact-body table { display: block; max-width: 100%; overflow-x: auto; font-size: 9px; }
+          .artifact-body th, .artifact-body td { min-width: 84px; padding: 6px; }
+          .artifact-body .gate-table td:first-child { min-width: 95px; }
+          .artifact-body .ledger-table { table-layout: auto; }
           .evidence-grid { grid-template-columns: 1fr; }
           .artifact-footer { grid-template-columns: 1fr; }
           .footer-right { text-align: left; }

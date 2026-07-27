@@ -1,0 +1,133 @@
+.toolbar {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin: 26px auto 14px;
+  max-width: 1120px;
+  padding: 0 18px;
+}
+
+.backLink,
+.secondaryAction,
+.primaryAction {
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  display: inline-flex;
+  font: 700 13px/1 system-ui, sans-serif;
+  gap: 8px;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+.backLink {
+  border-color: transparent;
+  color: #164ea6;
+  padding-left: 0;
+}
+
+.actions {
+  align-items: center;
+  display: flex;
+  gap: 9px;
+}
+
+.tierToggle {
+  align-items: center;
+  background: #e7edf5;
+  border: 1px solid #cbd5e1;
+  display: flex;
+  min-height: 42px;
+  padding: 3px;
+}
+
+.tierToggle > span,
+.brandToggle > span {
+  color: #64748b;
+  font: 700 11px/1 system-ui, sans-serif;
+  letter-spacing: .08em;
+  padding: 0 10px 0 8px;
+  text-transform: uppercase;
+}
+
+.tierToggle button,
+.brandToggle button {
+  background: transparent;
+  border: 0;
+  color: #334155;
+  cursor: pointer;
+  font: 700 12px/1 system-ui, sans-serif;
+  min-height: 34px;
+  padding: 0 13px;
+}
+
+.tierToggle .activeTier,
+.brandToggle .activeTier {
+  background: #fff;
+  box-shadow: 0 1px 4px rgb(15 23 42 / 14%);
+  color: #071a35;
+}
+
+.brandToggle {
+  align-items: center;
+  background: #f6f1e7;
+  border: 1px solid #d7c9aa;
+  display: flex;
+  min-height: 42px;
+  padding: 3px;
+}
+
+.secondaryAction {
+  background: #fff;
+  color: #071a35;
+  cursor: pointer;
+}
+
+.primaryAction {
+  background: #071a35;
+  border-color: #071a35;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .toolbar,
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .toolbar {
+    margin-top: 14px;
+  }
+
+  .backLink {
+    align-self: flex-start;
+  }
+
+  .tierToggle {
+    justify-content: space-between;
+  }
+
+  .tierToggle button,
+  .brandToggle button {
+    flex: 1;
+  }
+
+  .brandToggle {
+    flex-wrap: wrap;
+  }
+
+  .brandToggle > span {
+    flex: 0 0 100%;
+    padding: 8px 8px 5px;
+  }
+}
+
+@media print {
+  .toolbar {
+    display: none;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-07-23T15:39:07.276Z",
+  "checked_date": "2026-07-23",
+  "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
+  "raw_rows": 1797,
+  "imported_records": 1796,
+  "previous_records": 1645,
+  "record_delta": 151,
+  "skipped_missing_date": 1,
+  "invalid_dates": 0,
+  "future_dates": 0,
+  "duplicate_keys": 0,
+  "source_linked_count": 1796,
+  "source_link_coverage_pct": 100,
+  "latest_record_date": "2026-07-21",
+  "latest_record_name": "Evans v. Robertson (4)",
+  "dataset_checksum": "2e72ef76c2127473586a395d4b56320ab2abe28469a4005736f4c40e7413046f",
+  "status": "validated"
+}

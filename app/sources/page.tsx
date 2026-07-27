@@ -1,25 +1,37 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { ExternalLink } from "lucide-react";
+
+import ResearchShell from "@/components/ResearchShell";
+import shell from "@/components/ResearchShell.module.css";
+import { COUNTRIES_TRACKED, LAST_CHECKED, LATEST_RECORD_DATE, LEGAL_RISK_CASES, formatCaseDate, sourcePublisher, sourceTier } from "@/lib/cases";
+import { publicUrl } from "@/lib/site";
+import readiness from "@/data/publication-readiness-index.json";
+import styles from "../workspace.module.css";
+
+export const metadata: Metadata = { title:"Methodology and Sources | AI Vortex", description:"How AI Vortex identifies, classifies, sources, updates, and corrects legal AI risk matters.", alternates: { canonical: publicUrl("/sources") } };
 
 export default function SourcesPage() {
-  return (
-    <main style={{ minHeight: "100vh", background: "#0b0d12", color: "#f8fafc" }}>
-      <div style={{ maxWidth: 920, margin: "0 auto", padding: "44px 24px 72px" }}>
-        <p style={{ color: "#f59e0b", fontSize: 12, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase" }}>Sources</p>
-        <h1 style={{ fontSize: 40, lineHeight: 1.05, margin: "8px 0 14px" }}>Source Appendix Studio</h1>
-        <p style={{ color: "#94a3b8", maxWidth: 760 }}>Export source-backed appendices with coverage counts, missing-source warnings, filters used, and AI Vortex attribution.</p>
-        <section style={{ display: "grid", gap: 12, marginTop: 28 }}>
-          {[
-            ["All source appendix", "/api/artifact?type=source&format=md"],
-            ["New Jersey source appendix", "/api/artifact?type=source&format=md&state=NJ"],
-            ["New York source appendix", "/api/artifact?type=source&format=md&state=NY"],
-            ["Print-ready report", "/artifact/print?type=report"],
-          ].map(([label, href]) => (
-            <Link key={href} href={href} style={{ border: "1px solid #1f2937", background: "#111827", color: "#fbbf24", padding: 16, textDecoration: "none", fontWeight: 800 }}>
-              {label}
-            </Link>
-          ))}
-        </section>
-      </div>
-    </main>
-  );
+  const linked=LEGAL_RISK_CASES.filter(item=>item.source_url).length;
+  const nonAlleged=LEGAL_RISK_CASES.filter(item=>!item.alleged).length;
+  const tierCounts=new Map<string,{label:string,count:number}>();
+  for(const item of LEGAL_RISK_CASES){const tier=sourceTier(item);const current=tierCounts.get(tier.key)||{label:tier.label,count:0};current.count+=1;tierCounts.set(tier.key,current);}
+  const publishers=new Map<string,number>();
+  for(const item of LEGAL_RISK_CASES){const p=sourcePublisher(item);publishers.set(p,(publishers.get(p)||0)+1);}
+  const top=[...publishers.entries()].sort((a,b)=>b[1]-a[1]).slice(0,8);
+  return <ResearchShell><main className={shell.main}>
+    <div className={shell.breadcrumbs}><Link href="/">Home</Link><span>/</span><span>Methodology and sources</span></div>
+    <header className={shell.pageHead}><div><span className={shell.eyebrow}>Evidence transparency</span><h1>Methodology and source record</h1><p>How matters enter the corpus, how classifications are applied, what the tracker can and cannot establish, and how to inspect or correct the underlying record.</p></div><div className={shell.headActions}><Link className={shell.button} href="/cases">Search the corpus</Link><Link className={shell.buttonSecondary} href="/submit">Suggest a correction</Link></div></header>
+    <div className={styles.metrics}>{[["Corpus records",LEGAL_RISK_CASES.length.toLocaleString()],["Non-alleged",nonAlleged.toLocaleString()],["Source-linked",`${Math.round(linked/LEGAL_RISK_CASES.length*1000)/10}%`],["Countries covered",COUNTRIES_TRACKED.toLocaleString()]].map(([l,v])=><div key={l} className={`${shell.card} ${styles.metric}`}><small>{l}</small><strong>{v}</strong></div>)}</div>
+    <div className={styles.methodGrid}><div>
+      <section className={`${shell.card} ${styles.section}`}><h2>What the tracker covers</h2><p>AI Vortex tracks public court matters, orders, disciplinary records, and other documented legal proceedings in which generative AI, fabricated authority, inaccurate quotations, unsupported propositions, or related verification failures are part of the public record.</p><h3>Inclusion standard</h3><ol><li>A publicly identifiable legal matter or proceeding exists.</li><li>A source document or attributable public record supports inclusion.</li><li>The record contains a legal AI issue, verification failure, or closely related allegation.</li><li>The matter can be classified without inventing facts absent from the source.</li></ol><div className={styles.warning}>“Non-alleged” is a corpus flag, not proof of a final adjudicated misconduct finding. Warnings, show-cause orders, procedural rulings, and final outcomes require separate reading of the underlying record.</div></section>
+      <section className={`${shell.card} ${styles.section}`}><h2>Classification framework</h2><h3>Severity</h3><p>Severity summarizes the observed procedural, monetary, professional, or case-level consequence. It is an editorial research classification, not a prediction of future sanctions.</p><h3>Failure modes</h3><p>Failure tags can overlap. A single matter may contain fake citations, fabricated quotations, and misrepresented authority. Charts must therefore be read as observed signals, not mutually exclusive categories.</p><h3>AI tools</h3><p>Tool names are recorded only when identified in the public record. “Unidentified” does not imply that a specific vendor was involved. Incident counts are never usage-adjusted failure rates.</p></section>
+      <section className={`${shell.card} ${styles.section}`}><h2>Source and review hierarchy</h2><ol><li><strong>Official court or government source:</strong> a link hosted by a court or government domain.</li><li><strong>Docket or legal-document mirror:</strong> a repository preserving the filing, order, or opinion.</li><li><strong>Publisher archive:</strong> an upstream document archive that may preserve the relevant record but is not the issuing court.</li><li><strong>Secondary or other link:</strong> contextual material that requires additional source review.</li></ol><p style={{marginTop:12}}>Source tier describes where the link points. It does not certify that AI Vortex independently verified every field. Explicit review metadata is presently sparse, so users should treat the linked document as controlling and report discrepancies for review.</p><div className={styles.warning}><strong>Indexing gate:</strong> all {readiness.total_cases.toLocaleString()} records have stable public URLs. {readiness.tiers["index-ready"].toLocaleString()} currently meet the deterministic source, court, and summary baseline for search indexing; {readiness.tiers["enrichment-ready"].toLocaleString()} remain available to users but excluded from indexing pending enrichment, and {readiness.tiers["research-only"].toLocaleString()} remain held for deeper research.</div><div className={styles.warning}><strong>Current review program:</strong> source traceability and correction intake are live. A corpus-wide independent field-by-field review is not represented as complete.</div></section>
+      <section className={`${shell.card} ${styles.section}`}><h2>Updates, corrections, and reproducibility</h2><div className={styles.timeline}><article><time>{formatCaseDate(LAST_CHECKED)}</time><div><strong>Corpus checked</strong><p>The upstream public dataset was checked and validated on this date. The latest tracked decision is {formatCaseDate(LATEST_RECORD_DATE)}.</p></div></article><article><time>Ongoing</time><div><strong>Source and classification review</strong><p>New documents, changed outcomes, and corrections are incorporated into later snapshots.</p></div></article><article><time>On request</time><div><strong>Correction review</strong><p>Submit a case, source link, court order, or correction with supporting documentation.</p></div></article></div></section>
+    </div><aside>
+      <section className={`${shell.card} ${styles.section}`}><h2>Source coverage</h2><div className={styles.coverageMeter}><div><strong>{linked.toLocaleString()}</strong><span>linked records</span></div><b>{Math.round(linked/LEGAL_RISK_CASES.length*1000)/10}%</b><i><span style={{width:`${linked/LEGAL_RISK_CASES.length*100}%`}} /></i><small>{(LEGAL_RISK_CASES.length-linked).toLocaleString()} records currently lack a source URL and remain visibly identifiable.</small></div><h3>Source tiers</h3><div className={styles.sourceTypes}>{[...tierCounts.entries()].map(([key,value])=><div className={styles.sourceType} key={key}><strong>{value.label}</strong><span>{value.count.toLocaleString()} records</span></div>)}</div><h3>Leading linked publishers</h3><div className={styles.sourceTypes}>{top.map(([name,count])=><div className={styles.sourceType} key={name}><strong>{name}</strong><span>{count.toLocaleString()} records</span></div>)}</div></section>
+      <section className={`${shell.card} ${styles.section}`}><h2>Research exports</h2><div className={styles.download}><Link href="/api/artifact?type=source&format=md">Global source appendix <ExternalLink size={14}/></Link><Link href="/api/artifact?type=source&format=md&state=NJ">New Jersey appendix <ExternalLink size={14}/></Link><Link href="/api/artifact?type=source&format=md&state=NY">New York appendix <ExternalLink size={14}/></Link><Link href="/artifact/print?type=report&title=Legal%20AI%20Risk%20Evidence%20Report">Print-ready report <ExternalLink size={14}/></Link></div></section>
+      <section className={`${shell.card} ${styles.section}`}><h2>Important boundary</h2><p>The corpus covers {COUNTRIES_TRACKED} countries and supports observed-pattern research. It does not establish the prevalence of AI use, compare vendors by failure rate, replace legal research, or provide legal advice. Monetary amounts retain their recorded display and must not be aggregated across currencies without normalization.</p></section>
+    </aside></div>
+  </main></ResearchShell>;
 }

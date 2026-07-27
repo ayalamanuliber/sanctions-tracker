@@ -1,0 +1,81 @@
+.lockup {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  min-width: 0;
+}
+
+.lockup > div:last-child {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.lockup strong {
+  color: #11213a;
+  font-size: 18px;
+  letter-spacing: .07em;
+  overflow-wrap: anywhere;
+}
+
+.lockup span {
+  color: #53637a;
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.lockup em {
+  color: #8a6830;
+  font-size: 7px;
+  font-style: normal;
+  letter-spacing: .11em;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.vortexLogo {
+  filter: brightness(0) saturate(100%);
+  object-fit: contain;
+  opacity: 1;
+}
+
+.sampleMark {
+  align-items: center;
+  color: #111827;
+  display: inline-flex;
+  flex: 0 0 44px;
+  height: 44px;
+  justify-content: center;
+  width: 44px;
+}
+
+.firmMark {
+  border: 1px solid #111827;
+  box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 4px #111827;
+  font: 700 14px/1 Georgia, serif;
+  letter-spacing: .04em;
+}
+
+.chambersMark {
+  border: 1px solid #8c6b2e;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 4px #8c6b2e;
+}
+
+.clean {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.clean strong {
+  font: 700 17px/1.2 Georgia, serif;
+  letter-spacing: 0;
+}
+
+@media (max-width: 520px) {
+  .lockup strong {
+    font-size: 15px;
+  }
+}

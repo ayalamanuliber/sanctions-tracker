@@ -1,33 +1,32 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import ResearchShell from "@/components/ResearchShell";
+import styles from "@/components/workflows/WorkflowTools.module.css";
+
 export default function SubmitPage() {
-  return (
-    <main style={{ minHeight: "100vh", background: "#0b0d12", color: "#f8fafc" }}>
-      <div style={{ maxWidth: 920, margin: "0 auto", padding: "44px 24px 72px" }}>
-        <p style={{ color: "#f59e0b", fontSize: 12, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase" }}>Contribute</p>
-        <h1 style={{ fontSize: 40, lineHeight: 1.05, margin: "8px 0 14px" }}>Submit a case, correction, rule, or source</h1>
-        <p style={{ color: "#94a3b8", maxWidth: 760 }}>Submissions are manually reviewed before inclusion. Do not submit confidential client information.</p>
-        <form style={{ display: "grid", gap: 12, marginTop: 28 }}>
-          {[
-            ["Submission type", "New case / correction / court rule / judge order / source link"],
-            ["Case or rule name", "Matter name, court rule, standing order, or source title"],
-            ["Court / jurisdiction", "Court, state, country, or judge"],
-            ["Source URL", "Public URL only"],
-            ["Notes", "What should AI Vortex review?"],
-            ["Contact email", "Optional, for follow-up"],
-          ].map(([label, placeholder]) => (
-            <label key={label} style={{ display: "grid", gap: 6, color: "#cbd5e1", fontSize: 13, fontWeight: 700 }}>
-              {label}
-              {label === "Notes" ? (
-                <textarea placeholder={placeholder} rows={5} style={{ background: "#111827", border: "1px solid #1f2937", color: "#f8fafc", padding: 12 }} />
-              ) : (
-                <input placeholder={placeholder} style={{ background: "#111827", border: "1px solid #1f2937", color: "#f8fafc", padding: 12 }} />
-              )}
-            </label>
-          ))}
-          <button type="button" style={{ justifySelf: "start", background: "#f59e0b", color: "#111827", border: 0, padding: "12px 18px", fontWeight: 900 }}>
-            Manual submission queue coming next
-          </button>
-        </form>
-      </div>
-    </main>
-  );
+  const [type, setType] = useState("Correction");
+  const [name, setName] = useState("");
+  const [court, setCourt] = useState("");
+  const [url, setUrl] = useState("");
+  const [notes, setNotes] = useState("");
+  const [attested, setAttested] = useState(false);
+  const href = useMemo(() => {
+    if (!attested) return undefined;
+    const body = `Submission type: ${type}\nRecord: ${name}\nCourt / jurisdiction: ${court}\nPublic source: ${url}\n\nReview notes:\n${notes}\n\nSubmitter confirmed that this email contains no confidential client information.`;
+    return `mailto:manuel@aivortex.io?subject=${encodeURIComponent(`AI Vortex ${type}: ${name || "public record"}`)}&body=${encodeURIComponent(body)}`;
+  }, [attested, court, name, notes, type, url]);
+
+  return <ResearchShell><main className={styles.page}><div className={styles.wrap}>
+    <header className={styles.hero}><div><span className={styles.eyebrow}>Public correction channel</span><h1>Submit a record or correction</h1><p>Send a case, correction, court AI rule, judge order, or source link for manual review before publication.</p></div></header>
+    <div className={styles.grid}><section className={styles.panel}>
+      <div className={styles.notice}><strong>Public information only.</strong> Do not send privileged material, sealed records, personal data, or confidential client information.</div>
+      <div className={styles.fieldRow}><label className={styles.field}>Submission type<select value={type} onChange={(event) => setType(event.target.value)}><option>Correction</option><option>New case</option><option>Court AI rule</option><option>Judge order</option><option>Source link</option></select></label><label className={styles.field}>Record or rule name<input value={name} onChange={(event) => setName(event.target.value)} placeholder="Case name or rule title" /></label></div>
+      <label className={styles.field}>Court / jurisdiction<input value={court} onChange={(event) => setCourt(event.target.value)} placeholder="Court, state, country, or judge" /></label>
+      <label className={styles.field} style={{ marginTop: 14 }}>Public source URL<input type="url" value={url} onChange={(event) => setUrl(event.target.value)} placeholder="https://..." /></label>
+      <label className={styles.field} style={{ marginTop: 14 }}>What should be reviewed?<textarea value={notes} onChange={(event) => setNotes(event.target.value)} placeholder="Describe the correction or why this public record should be added." /></label>
+      <label style={{ display: "flex", gap: 10, alignItems: "flex-start", marginTop: 16, color: "#475569", fontSize: 13, lineHeight: 1.5 }}><input type="checkbox" checked={attested} onChange={(event) => setAttested(event.target.checked)} style={{ marginTop: 3 }} />I confirm that this submission contains only public, non-confidential information.</label>
+      <div className={styles.buttonRow}>{href ? <a className={styles.primary} href={href}>Open email submission</a> : <button className={styles.primary} disabled>Confirm public-information statement</button>}</div>
+    </section><aside><section className={styles.panel}><h2>Review standard</h2><div className={styles.actionsList}><div className={styles.action}><strong>1. Source check</strong><p>The linked public record must support the proposed addition or correction.</p></div><div className={styles.action}><strong>2. Status check</strong><p>Allegations, warnings, show-cause orders, and final outcomes stay distinct.</p></div><div className={styles.action}><strong>3. Classification</strong><p>Court, date, jurisdiction, outcome, attribution, and editorial-impact labels are checked.</p></div><div className={styles.action}><strong>4. Publication</strong><p>Accepted changes appear in a later corpus snapshot.</p></div></div></section></aside></div>
+  </div></main></ResearchShell>;
 }

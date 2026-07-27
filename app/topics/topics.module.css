@@ -1,0 +1,23 @@
+.topicGrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.topicGrid a { padding:24px; color:#102947; text-decoration:none; }
+.topicGrid svg { width:22px; color:#1f63d7; }
+.topicTop { display:flex;align-items:center;justify-content:space-between;gap:12px; }
+.topicTop span { color:#8b5a00; font-size:10px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+.topicGrid h2 { margin:6px 0 8px; font-family:var(--font-serif); font-size:25px; font-weight:500; }
+.topicGrid p { min-height:48px; color:#5b6a7f; font-size:13px; line-height:1.6; }
+.topicMetrics { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:18px;background:#e1e7ef;border:1px solid #e1e7ef; }
+.topicMetrics div { padding:10px;background:#f8fafc; }
+.topicMetrics small { display:block;color:#748299;font-size:9px;text-transform:uppercase;letter-spacing:.06em; }
+.topicMetrics b { display:block;margin-top:4px;color:#102947;font-size:16px; }
+.topicGrid strong { display:flex; align-items:center; gap:7px; margin-top:18px; color:#155bbf; font-size:12px; }
+.topicGrid strong svg { width:14px; }
+.controlBand { margin-top:18px; padding:28px; display:grid; grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr); gap:36px; color:white; background:#081a33; border-radius:6px; }
+.controlBand > div > svg { color:#f2a619; }
+.controlBand span { display:block; margin-top:16px; color:#9fb0c6; font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+.controlBand h2 { margin:6px 0; font-family:var(--font-serif); font-size:29px; font-weight:500; }
+.controlBand p { max-width:650px; color:#bdc9d8; font-size:13px; line-height:1.65; }
+.controlBand nav { display:grid; align-content:center; gap:8px; }
+.controlBand nav a { min-height:42px; padding:10px 12px; display:flex; align-items:center; gap:8px; color:white; border:1px solid rgba(255,255,255,.16); text-decoration:none; font-size:12px; font-weight:700; }
+.controlBand nav a svg:last-child { margin-left:auto; }
+.coverage { margin-top:17px; color:#69788d; font-size:11px; }
+@media(max-width:760px){.topicGrid,.controlBand{grid-template-columns:1fr}.topicGrid p{min-height:0}.controlBand{padding:22px}}

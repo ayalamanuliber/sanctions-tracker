@@ -36,6 +36,7 @@ Done means `Product-ready`, not merely built.
 | Timeline view | Prove | Dashboard | Idea | Matters over time shown with last-updated/source coverage. | "Show legal AI risk over time." |
 | Sanctions pathway visual | Prevent | Website/Artifact | Idea | Branded deterministic flow: AI use -> unverified authority -> filing -> court flag -> sanctions. | "Explain the sanctions pathway visually." |
 | Dashboard export buttons | Distribute | Dashboard | Testing | Dashboard/package links expose report, ledger, source appendix, and map URLs. | Dashboard QA |
+| Shared analytics and case briefs | Prove/Distribute/Monetize | Reports | Validated | Analytics and canonical case briefs share deterministic identity, evidence dates, source treatment, live-report links, Free/Pro preview, accessible case/source navigation, mobile layout, and print-safe packaging; Free carries a one-row AI Vortex/Manu footer with dual conversion actions, while Pro uses minimal provenance; legacy artifact links remain working. | Analytics and case report QA |
 | QR dashboard link on PDFs | Distribute | Artifact | Idea | PDF-ready artifacts include dashboard URL/QR equivalent. | Artifact QA |
 
 ## P1 Workflow Modules
@@ -65,7 +66,8 @@ Done means `Product-ready`, not merely built.
 
 | Feature | Pillar | Surface | Status | Acceptance criteria | Regression prompt |
 | --- | --- | --- | --- | --- | --- |
-| Remove watermark | Monetize | Artifact | Deferred | Paid/lead capture removes AI Vortex footer. | Artifact QA |
+| Pro branded report previews | Monetize | Reports | Validated | Internal `tier=premium` preview exposes clean, illustrative firm-logo, and illustrative chambers-seal packaging with only a small footer provenance line and the same evidence quality; entitlement and real organization profiles remain deferred. | Analytics and case report QA |
+| Remove watermark | Monetize | Artifact | Deferred | Paid entitlement removes promotional AI Vortex treatment after authentication and billing exist. | Artifact QA |
 | White-label exports | Monetize | Artifact | Deferred | Firm-branded reports. | Export QA |
 | Firm workspace | Monetize | Website | Deferred | Team workspace with saved dashboards/profiles. | Workspace QA |
 | Team seats | Monetize | Website | Deferred | Multi-user access model. | Account QA |
@@ -97,6 +99,6 @@ Done means `Product-ready`, not merely built.
 | Setup | no safety block | Testing |
 | Legal guardrail | no AI accusations without evidence | Built |
 | Tool caveat | usage-adjusted caveat shown | Built |
-| Mobile | usable | Needs QA |
-| Print | clean | Needs QA |
+| Mobile | analytics and case reports usable at 390px without horizontal overflow | Validated |
+| Print | report modules use print-safe layout and browser Print / Save PDF; native PDF remains deferred | Validated |
 | Branding | professional footer | Built |

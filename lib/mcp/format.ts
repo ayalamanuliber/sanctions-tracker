@@ -1,7 +1,11 @@
 import type { PublicSanctionCase } from "./types";
+import { PUBLIC_BASE_URL } from "@/lib/site";
 
 export type PublicMeta = {
   last_updated: string;
+  last_checked?: string;
+  last_checked_at?: string;
+  latest_record_date?: string;
   total_cases: number;
   us_cases: number;
   countries_tracked: number;
@@ -67,10 +71,12 @@ export function formatCase(caseItem: PublicSanctionCase): string {
 }
 
 export function formatMeta(meta: PublicMeta): string {
+  const checked = meta.last_checked || meta.last_updated;
   return [
     "Vortex legal AI risk corpus",
     "",
-    `Last updated: ${meta.last_updated}`,
+    `Corpus checked: ${checked}`,
+    `Latest tracked decision: ${meta.latest_record_date || "Not provided"}`,
     `Total cases: ${meta.total_cases}`,
     `US cases: ${meta.us_cases}`,
     `Countries tracked: ${meta.countries_tracked}`,
@@ -198,12 +204,14 @@ function provenanceBlock(caseItems: PublicSanctionCase[], meta?: PublicMeta, evi
   const coverage = sourceCoverage(caseItems);
   const exact = evidence?.exactMatchCount ?? caseItems.length;
   const fallback = evidence?.fallbackUsed ? "yes" : "no";
-  const updated = meta?.last_updated || "not provided";
+  const checked = meta?.last_checked || meta?.last_updated || "not provided";
+  const latestRecord = meta?.latest_record_date || "not provided";
   return [
     "Evidence note",
-    `- Summary: exact matches: ${exact}; fallback used: ${fallback}; source coverage: ${coverage.withSource}/${coverage.total} (${coverage.pct}%); tracker updated: ${updated}; public incidents are not usage-adjusted rates.`,
+    `- Summary: exact matches: ${exact}; fallback used: ${fallback}; source coverage: ${coverage.withSource}/${coverage.total} (${coverage.pct}%); corpus checked: ${checked}; latest tracked decision: ${latestRecord}; public incidents are not usage-adjusted rates.`,
     `- Corpus: AI Vortex legal AI risk tracker${meta ? `, ${meta.total_cases.toLocaleString("en-US")} tracked global matters` : ""}`,
-    `- Corpus last updated: ${updated}`,
+    `- Corpus checked: ${checked}`,
+    `- Latest tracked decision: ${latestRecord}`,
     `- Exact matches: ${exact}`,
     `- Fallback used: ${fallback}`,
     ...(evidence?.fallbackUsed
@@ -261,9 +269,10 @@ function naturalNextAction(items: string[]): string[] {
 }
 
 function vortexFooter(meta?: PublicMeta): string[] {
+  const checked = meta?.last_checked || meta?.last_updated || "not provided";
   return [
     "AI Vortex note",
-    `- Generated with AI Vortex Legal AI Risk | https://sanctions-tracker.vercel.app | Data: Damien Charlotin AI Hallucination Cases Database + AI Vortex enrichment | Updated: ${meta?.last_updated || "not provided"}`,
+    `- Generated with AI Vortex Legal AI Risk | ${PUBLIC_BASE_URL} | Data: Damien Charlotin AI Hallucination Cases Database + AI Vortex enrichment | Corpus checked: ${checked} | Latest tracked decision: ${meta?.latest_record_date || "not provided"}`,
   ];
 }
 
@@ -433,7 +442,6 @@ export function formatJurisdictionRiskBrief(params: {
   const severity = countBy(caseItems.map((item) => item.severity));
   const proSe = caseItems.filter((item) => item.party?.toLowerCase().includes("pro se")).length;
   const lawyer = caseItems.filter((item) => item.party?.toLowerCase().includes("lawyer")).length;
-  const monetaryTotal = caseItems.reduce((sum, item) => sum + (item.amount || 0), 0);
   const monetaryCount = caseItems.filter((item) => item.amount || item.sanction_types.includes("monetary")).length;
   const failureModes = rankedEntries(countBy(riskTags(caseItems)), 6);
   const policyGaps = rankedEntries(countBy(caseItems.flatMap((item) => item.policy_gap_ids)), 6);
@@ -448,8 +456,8 @@ export function formatJurisdictionRiskBrief(params: {
     `Cases tracked: ${caseItems.length}`,
     `Lawyer-related cases: ${lawyer}`,
     `Pro se cases: ${proSe}`,
-    `Known monetary cases: ${monetaryCount}`,
-    `Known monetary total: ${formatCurrency(monetaryTotal)}`,
+    `Records with a monetary amount or sanction tag: ${monetaryCount}`,
+    "Monetary boundary: amounts retain their recorded currencies and are not aggregated across jurisdictions.",
     "",
     "Severity mix",
     ...formatBars(severity, ["low", "medium", "high", "career-ending"]),
@@ -460,7 +468,7 @@ export function formatJurisdictionRiskBrief(params: {
     "Policy/control gaps",
     ...(policyGaps.length > 0 ? policyGaps.map(([label, count]) => `- ${label}: ${count}`) : ["- None tagged"]),
     "",
-    "Leading source-backed examples",
+    "Leading source-linked examples",
     ...importantCases(caseItems, 3).map(compactCaseLineWithSource),
     "",
     "Recommended controls",
@@ -601,7 +609,7 @@ export function formatToolRiskProfile(
     "Recurring failure modes",
     ...failures.map(([label, count]) => `- ${label}: ${count}`),
     "",
-    "Representative source-backed cases",
+    "Representative source-linked cases",
     ...importantCases(caseItems, 3).map(compactCaseLineWithSource),
     "",
     "Controls for firms using this tool",
@@ -690,7 +698,7 @@ export function formatToolRiskComparison(params: {
       ? `Readout: ${mostSevere.tool} has the highest severe-case concentration in this matched set, but do not treat that as a definitive tool-safety ranking without usage-volume data.`
       : "Readout: no matched public cases were found for the requested tools.",
     "",
-    "Representative source-backed cases",
+    "Representative source-linked cases",
     ...profiles.flatMap(({ tool, caseItems }) => [
       `${tool}:`,
       ...(importantCases(caseItems, 1).length > 0
@@ -773,7 +781,7 @@ export function formatPrefilingReviewPacket(params: {
     "- Items corrected / removed / escalated: ___ / ___ / ___",
     "- Recommendation: File / File after edits / Do not file yet",
     "",
-    "Local source-backed examples",
+    "Local source-linked examples",
     ...(importantCases(caseItems, 3).length > 0
       ? importantCases(caseItems, 3).map(compactCaseLineWithSource)
       : ["- No direct matches; use the generic controls above."]),
@@ -1023,7 +1031,7 @@ export function formatImplementationWorkflow(params: {
     "30-day path",
     "- Week 1: litigation filing gate pilot.",
     "- Week 2: partner review calibration and template cleanup.",
-    "- Week 3: office/practice-group training using local source-backed cases.",
+    "- Week 3: office/practice-group training using local source-linked cases.",
     "- Week 4: firm policy, audit retention standard, and exception process.",
     "",
     ...suggestedArtifacts([
@@ -1370,7 +1378,7 @@ export function formatVisualSummaryData(
     },
     cards: [
       { label: "Cases", value: caseItems.length },
-      { label: "Known monetary total", value: formatCurrency(caseItems.reduce((sum, item) => sum + (item.amount || 0), 0)) },
+      { label: "Positive amount recorded", value: caseItems.filter((item) => (item.amount || 0) > 0).length },
       { label: "Lawyer-related", value: caseItems.filter((item) => item.party?.toLowerCase().includes("lawyer")).length },
       { label: "Pro se", value: caseItems.filter((item) => item.party?.toLowerCase().includes("pro se")).length },
     ],
@@ -1410,7 +1418,7 @@ export function formatVisualSummaryData(
     "Failure modes",
     ...Object.entries(payload.failure_modes).map(([label, count]) => `- ${label}: ${count}`),
     "",
-    "Top source-backed cases",
+    "Top source-linked cases",
     ...(importantCases(caseItems, 4).length > 0
       ? importantCases(caseItems, 4).map(compactCaseLineWithSource)
       : ["- No matched cases."]),
@@ -1419,7 +1427,7 @@ export function formatVisualSummaryData(
     "- Cards: cases, source coverage, lawyer-related matters, known monetary total.",
     "- Bars: severity mix and failure modes.",
     "- Map: geographic distribution using the live map link.",
-    "- Memo: one-page print view with source-backed examples.",
+    "- Memo: one-page print view with source-linked examples.",
     "",
     ...formatArtifactLinks(baseUrl, {
       scenario: "dashboard",
@@ -1433,7 +1441,7 @@ export function formatVisualSummaryData(
     "",
     ...naturalNextAction([
       "Use the JSON for cards/charts if the host app supports visuals.",
-      "Generate a one-page managing partner memo with the same source-backed case appendix.",
+      "Generate a one-page managing partner memo with the same source-linked case appendix.",
     ]),
     "",
     ...vortexFooter(meta),
@@ -1568,7 +1576,7 @@ export function formatControlMaturityScore(params: {
     "",
     "30-day controls",
     "- Adopt a written court-facing AI filing policy.",
-    "- Train attorneys with source-backed local examples.",
+    "- Train attorneys with source-linked local examples.",
     "- Add incident response steps for discovered fake authority or unsupported quotes.",
     "",
     ...formatArtifactLinks(baseUrl, {

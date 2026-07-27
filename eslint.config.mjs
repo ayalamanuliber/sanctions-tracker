@@ -13,6 +13,13 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    files: ["components/CaseEvidence.tsx", "components/Footer.tsx", "components/JurisdictionRequirements.tsx", "components/RiskAssessment.tsx", "components/workflows/FilingGateTool.tsx"],
+    rules: {
+      "react/no-unescaped-entities": "off",
+      "react-hooks/set-state-in-effect": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;

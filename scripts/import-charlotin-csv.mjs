@@ -1,11 +1,31 @@
-import { readFileSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { readFileSync, renameSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { buildPublicationReadinessIndex, buildPublicationReadinessReport } from "../lib/publication-readiness.mjs";
 
 const repoRoot = path.resolve(import.meta.dirname, "..");
+const cliArgs = process.argv.slice(2);
+const sourceArgIndex = cliArgs.indexOf("--source");
+const dryRun = cliArgs.includes("--dry-run");
 const csvUrl =
   process.env.CHARLOTIN_CSV_URL ||
   "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv";
-const sourceFile = process.env.CHARLOTIN_CSV_FILE || "";
+const sourceFile =
+  (sourceArgIndex >= 0 ? cliArgs[sourceArgIndex + 1] : "") ||
+  process.env.CHARLOTIN_CSV_FILE ||
+  "";
+const checkedAt = new Date().toISOString();
+const checkedDate = checkedAt.slice(0, 10);
+const requiredHeaders = [
+  "Case Name",
+  "Court",
+  "State(s)",
+  "Date",
+  "AI Tool",
+  "Hallucination Items",
+  "Outcome",
+  "Source",
+];
 
 const stateByName = {
   Alabama: "AL",
@@ -169,6 +189,11 @@ function parseCsv(text) {
   }
 
   const [headers, ...body] = rows.filter((item) => item.some(Boolean));
+  if (!headers) throw new Error("CSV is empty.");
+  const missingHeaders = requiredHeaders.filter((header) => !headers.includes(header));
+  if (missingHeaders.length) {
+    throw new Error(`CSV is missing required headers: ${missingHeaders.join(", ")}`);
+  }
   return body.map((item) =>
     Object.fromEntries(headers.map((header, index) => [header, item[index] || ""])),
   );
@@ -460,7 +485,7 @@ function countBy(items, getKey) {
   }, {});
 }
 
-function buildMeta(cases) {
+function buildMeta(cases, refresh) {
   const usCases = cases.filter((item) => item.country === "US");
   const amounts = cases.map((item) => item.amount).filter((amount) => Number.isFinite(amount));
   const byState = Object.entries(countBy(usCases, (item) => item.state))
@@ -491,7 +516,19 @@ function buildMeta(cases) {
     .sort((a, b) => b.count - a.count);
 
   return {
-    last_updated: new Date().toISOString().slice(0, 10),
+    // Keep last_updated for backwards compatibility. New surfaces should use
+    // last_checked and latest_record_date so a successful check is not
+    // misrepresented as the date of a new court decision.
+    last_updated: refresh.checked_date,
+    last_checked: refresh.checked_date,
+    last_checked_at: refresh.checked_at,
+    latest_record_date: refresh.latest_record_date,
+    source_url: refresh.source_url,
+    source_record_count: refresh.raw_rows,
+    source_linked_count: refresh.source_linked_count,
+    source_link_coverage_pct: refresh.source_link_coverage_pct,
+    records_missing_date: refresh.skipped_missing_date,
+    dataset_checksum: refresh.dataset_checksum,
     total_cases: cases.length,
     us_cases: usCases.length,
     us_adjudicated: usCases.filter((item) => !item.alleged).length,
@@ -500,7 +537,9 @@ function buildMeta(cases) {
     enriched_count: cases.length,
     enrichment_coverage_pct: 100,
     reviewed_count: cases.filter((item) => item.reviewed).length,
-    reviewed_coverage_pct: 0,
+    reviewed_coverage_pct: cases.length
+      ? Math.round((cases.filter((item) => item.reviewed).length / cases.length) * 1000) / 10
+      : 0,
     monetary_sanctions_total_usd: amounts.reduce((sum, amount) => sum + amount, 0),
     largest_single_sanction: amounts.length ? Math.max(...amounts) : 0,
     avg_sanction: amounts.length
@@ -532,9 +571,42 @@ const existingPath = path.join(repoRoot, "data", "sanctions.json");
 const existing = JSON.parse(readFileSync(existingPath, "utf8"));
 const existingByKey = new Map(existing.map((item) => [`${slugify(item.case_name)}|${item.date}`, item]));
 
-const rows = parseCsv(await readSource());
-const cases = rows
-  .filter((row) => row["Case Name"] && row.Date)
+const sourceText = await readSource();
+const rows = parseCsv(sourceText);
+const datedRows = rows.filter((row) => row["Case Name"] && row.Date);
+const missingDateRows = rows.filter((row) => row["Case Name"] && !row.Date);
+const invalidDateRows = datedRows.filter(
+  (row) =>
+    !/^\d{4}-\d{2}-\d{2}$/.test(row.Date) ||
+    Number.isNaN(Date.parse(`${row.Date}T00:00:00Z`)),
+);
+const futureDateRows = datedRows.filter((row) => row.Date > checkedDate);
+const validRows = datedRows.filter(
+  (row) => !invalidDateRows.includes(row) && !futureDateRows.includes(row),
+);
+const duplicateKeys = new Map();
+for (const row of validRows) {
+  const key = `${slugify(row["Case Name"])}|${row.Date}`;
+  duplicateKeys.set(key, (duplicateKeys.get(key) || 0) + 1);
+}
+const duplicates = [...duplicateKeys.entries()].filter(([, count]) => count > 1);
+
+if (invalidDateRows.length) {
+  throw new Error(`Import rejected: ${invalidDateRows.length} rows have invalid dates.`);
+}
+if (futureDateRows.length) {
+  throw new Error(`Import rejected: ${futureDateRows.length} rows have future dates.`);
+}
+if (duplicates.length) {
+  throw new Error(`Import rejected: ${duplicates.length} duplicate case/date keys.`);
+}
+if (validRows.length < Math.floor(existing.length * 0.9)) {
+  throw new Error(
+    `Import rejected: ${validRows.length} records would shrink the corpus below 90% of ${existing.length}.`,
+  );
+}
+
+const cases = validRows
   .map((row) => {
     const key = `${slugify(row["Case Name"])}|${row.Date}`;
     const previous = existingByKey.get(key);
@@ -575,7 +647,7 @@ const cases = rows
       tags: inferTags(row),
       lesson: previous?.lesson || "",
       enriched: true,
-      enriched_at: new Date().toISOString().slice(0, 10),
+      enriched_at: checkedDate,
       confidence: row.Source ? "high" : "medium",
       reviewed: previous?.reviewed || false,
       reviewed_at: previous?.reviewed_at || null,
@@ -587,14 +659,67 @@ const cases = rows
   })
   .sort((a, b) => b.date.localeCompare(a.date) || a.case_name.localeCompare(b.case_name));
 
-const meta = buildMeta(cases);
+const sourceLinkedCount = cases.filter((item) => item.source_url).length;
+const sourceLinkCoveragePct = cases.length
+  ? Math.round((sourceLinkedCount / cases.length) * 1000) / 10
+  : 0;
+if (sourceLinkCoveragePct < 80) {
+  throw new Error(
+    `Import rejected: source-link coverage ${sourceLinkCoveragePct}% is below the 80% floor.`,
+  );
+}
 
-writeFileSync(path.join(repoRoot, "data", "sanctions.json"), `${JSON.stringify(cases, null, 2)}\n`);
-writeFileSync(path.join(repoRoot, "data", "cases.json"), `${JSON.stringify(cases, null, 2)}\n`);
-writeFileSync(path.join(repoRoot, "data", "sanctions-raw.json"), `${JSON.stringify(rows, null, 2)}\n`);
-writeFileSync(path.join(repoRoot, "data", "meta.json"), `${JSON.stringify(meta, null, 2)}\n`);
-writeFileSync(path.join(repoRoot, "data", "meta-raw.json"), `${JSON.stringify(meta, null, 2)}\n`);
+const datasetChecksum = createHash("sha256")
+  .update(JSON.stringify(cases))
+  .digest("hex");
+const refreshReport = {
+  checked_at: checkedAt,
+  checked_date: checkedDate,
+  source_url: sourceFile || csvUrl,
+  raw_rows: rows.filter((row) => row["Case Name"]).length,
+  imported_records: cases.length,
+  previous_records: existing.length,
+  record_delta: cases.length - existing.length,
+  skipped_missing_date: missingDateRows.length,
+  invalid_dates: invalidDateRows.length,
+  future_dates: futureDateRows.length,
+  duplicate_keys: duplicates.length,
+  source_linked_count: sourceLinkedCount,
+  source_link_coverage_pct: sourceLinkCoveragePct,
+  latest_record_date: cases[0]?.date || null,
+  latest_record_name: cases[0]?.case_name || null,
+  dataset_checksum: datasetChecksum,
+  status: "validated",
+};
+const meta = buildMeta(cases, refreshReport);
 
-console.log(`Imported ${cases.length} cases from ${sourceFile || csvUrl}`);
+function atomicWriteJson(filename, value) {
+  const target = path.join(repoRoot, "data", filename);
+  const temporary = `${target}.tmp-${process.pid}`;
+  try {
+    writeFileSync(temporary, `${JSON.stringify(value, null, 2)}\n`);
+    JSON.parse(readFileSync(temporary, "utf8"));
+    renameSync(temporary, target);
+  } finally {
+    rmSync(temporary, { force: true });
+  }
+}
+
+if (!dryRun) {
+  atomicWriteJson("sanctions.json", cases);
+  atomicWriteJson("cases.json", cases);
+  atomicWriteJson("sanctions-raw.json", rows);
+  atomicWriteJson("meta.json", meta);
+  atomicWriteJson("meta-raw.json", meta);
+  atomicWriteJson("update-report.json", refreshReport);
+  atomicWriteJson("publication-readiness.json", buildPublicationReadinessReport(cases, meta));
+  atomicWriteJson("publication-readiness-index.json", buildPublicationReadinessIndex(cases, meta));
+}
+
+console.log(`${dryRun ? "Validated" : "Imported"} ${cases.length} cases from ${sourceFile || csvUrl}`);
 console.log(`Latest case: ${cases[0]?.date} | ${cases[0]?.case_name}`);
 console.log(`US cases: ${meta.us_cases}; countries: ${meta.countries_tracked}`);
+console.log(
+  `Source coverage: ${sourceLinkedCount}/${cases.length} (${sourceLinkCoveragePct}%); ` +
+    `missing dates: ${missingDateRows.length}; delta: ${refreshReport.record_delta >= 0 ? "+" : ""}${refreshReport.record_delta}`,
+);

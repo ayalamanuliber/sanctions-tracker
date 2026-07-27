@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { assetUrl } from "@/lib/site";
+
 export default function Footer() {
   return (
     <>
@@ -36,7 +39,7 @@ export default function Footer() {
                   position: "relative",
                 }}
               >
-                <img src="/manuel.webp" alt="Manu Ayala" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <Image src={assetUrl("/manuel.webp")} alt="Manu Ayala" fill sizes="240px" style={{ objectFit: "cover" }} />
                 <div
                   style={{
                     position: "absolute",
@@ -138,7 +141,7 @@ export default function Footer() {
           <div className="footer-cols">
             <div className="footer-brand-col">
               <div className="footer-brand">
-                <img src="/av-logo-white.png" alt="AI Vortex" />
+                <Image src={assetUrl("/av-logo-white.png")} alt="AI Vortex" width={36} height={32} />
                 <span className="footer-brand-name">AI Vortex</span>
               </div>
               <p className="footer-tagline">

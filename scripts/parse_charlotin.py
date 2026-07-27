@@ -387,6 +387,14 @@ def sanction_types_from_row(monetary_amount, pro_sanction, outcome):
 
 # ------------- Main parse loop -------------
 def main():
+    if "--allow-legacy-static-snapshot" not in sys.argv:
+        raise SystemExit(
+            "This parser targets the archived 2026-04-24 CSV snapshot and is no longer "
+            "the production update path. Run `npm run update:data` for the live corpus. "
+            "Pass --allow-legacy-static-snapshot only when intentionally rebuilding "
+            "the archived raw snapshot."
+        )
+
     with open(SRC, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         rows = list(reader)

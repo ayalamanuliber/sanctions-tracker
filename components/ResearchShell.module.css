@@ -1,0 +1,55 @@
+.shell { min-height: 100vh; background: #f5f7fa; color: #0b1730; font-family: var(--font-main); }
+.header { background: #04152d; color: white; border-bottom: 1px solid rgba(255,255,255,.12); position: sticky; top: 0; z-index: 80; }
+.nav { min-height: 66px; max-width: 1360px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 34px; }
+.brand { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; margin-right: 12px; flex: 0 0 auto; }
+.brand img { width: 34px; height: 30px; object-fit: contain; }
+.brand strong { display: block; font-size: 15px; letter-spacing: .08em; line-height: 1.1; }
+.brand small { display: block; color: #d99b2b; font-size: 8px; letter-spacing: .15em; margin-top: 3px; }
+.links { display: flex; align-items: center; gap: 28px; flex: 1; }
+.links a, .actions a { color: #d9e2ef; text-decoration: none; font-size: 13px; font-weight: 600; }
+.links a:hover, .actions a:hover { color: white; }
+.actions { display: flex; align-items: center; gap: 16px; }
+.primary { background: #eba928; color: #081426 !important; padding: 9px 14px; border-radius: 4px; }
+.status { background: #081a33; color: #aebbd0; border-top: 1px solid rgba(255,255,255,.08); min-height: 34px; padding: 7px 24px; display: flex; align-items: center; justify-content: center; gap: 18px; font-size: 11px; }
+.live { color: #7ee2a8; display: inline-flex; align-items: center; gap: 6px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #30ca75; box-shadow: 0 0 0 3px rgba(48,202,117,.12); }
+.main { max-width: 1280px; margin: 0 auto; padding: 34px 24px 70px; }
+.breadcrumbs { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; margin-bottom: 24px; color: #607089; font-size: 12px; }
+.breadcrumbs a { color: #315f9e; text-decoration: none; }
+.breadcrumbs span[aria-hidden="true"] { color: #a5b0bf; padding-inline: 2px; }
+.pageHead { display: flex; align-items: flex-start; justify-content: space-between; gap: 28px; margin-bottom: 28px; }
+.eyebrow { color: #a86c00; text-transform: uppercase; letter-spacing: .14em; font-size: 11px; font-weight: 800; }
+.pageHead h1 { font-family: var(--font-serif); font-size: clamp(34px, 4.5vw, 54px); line-height: 1.04; letter-spacing: 0; margin: 7px 0 10px; font-weight: 500; color: #07172d; }
+.pageHead p { max-width: 760px; color: #53627a; line-height: 1.6; font-size: 15px; }
+.headActions { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; justify-content: flex-end; }
+.button, .buttonSecondary { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 9px 13px; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: 700; cursor: pointer; }
+.button { color: white; background: #08264d; border: 1px solid #08264d; }
+.buttonSecondary { color: #163f75; background: white; border: 1px solid #cbd5e1; }
+.card { background: white; border: 1px solid #dce3ec; border-radius: 6px; box-shadow: 0 8px 24px rgba(16,39,70,.05); }
+.footer { border-top: 1px solid #dce3ec; background: white; color: #64748b; }
+.footerInner { max-width: 1280px; margin: 0 auto; padding: 25px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: 12px; }
+.footer a { color: #315f9e; text-decoration: none; margin-left: 18px; }
+.menuButton { display: none; border: 0; background: transparent; color: white; padding: 7px; }
+.mobileNav { display: none; }
+
+@media (max-width: 840px) {
+  .links, .actions > a:not(.primary) { display: none; }
+  .nav { min-height: 60px; padding: 0 16px; }
+  .actions { margin-left: auto; }
+  .menuButton { display: inline-flex; }
+  .mobileNav { position: fixed; inset: 60px 0 0; z-index: 90; display: grid; align-content: start; overflow-y: auto; background: #07172d; padding: 18px 16px 32px; gap: 3px; }
+  .mobileNav a { color: white; text-decoration: none; padding: 10px 8px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .status { justify-content: flex-start; overflow: hidden; white-space: nowrap; padding-inline: 16px; }
+  .status > span:nth-child(2) { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .main { padding: 25px 16px 52px; }
+  .pageHead { display: block; }
+  .headActions { justify-content: flex-start; margin-top: 18px; }
+  .footerInner { display: block; }
+  .footer nav { margin-top: 12px; }
+  .footer a { margin: 0 16px 0 0; }
+}
+
+@media (max-width: 520px) {
+  .status { gap: 12px; font-size: 10px; }
+  .statusBoundary { display: none; }
+}

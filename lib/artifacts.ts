@@ -8,23 +8,27 @@ type ArtifactFormat = "md" | "markdown" | "html" | "doc" | "word" | "pdf" | "pdf
 const cases = (sanctionsRaw as unknown as PublicSanctionCase[]).slice().sort((a, b) => b.date.localeCompare(a.date));
 const meta = metaRaw as {
   last_updated: string;
+  last_checked?: string;
+  latest_record_date?: string;
   total_cases: number;
 };
 
 function normalize(value: string | null): string | undefined {
-  return value?.trim() || undefined;
+  return value?.replace(/[\u0000-\u001f\u007f]+/g, " ").replace(/\s+/g, " ").trim().slice(0, 180) || undefined;
 }
 
 export function getArtifactCases(params: {
+  caseId?: string;
   state?: string;
   court?: string;
   aiTool?: string;
   practiceArea?: string;
   limit?: number;
 }): PublicSanctionCase[] {
-  const { state, court, aiTool, practiceArea, limit = 100 } = params;
+  const { caseId, state, court, aiTool, practiceArea, limit = 100 } = params;
   return cases
     .filter((item) => {
+      if (caseId && item.id !== caseId) return false;
       if (state && item.state !== state.toUpperCase()) return false;
       if (court && !matchesCourt(item.court, court)) return false;
       if (aiTool && !matchesTool(item.ai_tool_used, aiTool, item.summary)) return false;
@@ -81,7 +85,8 @@ function evidenceTable(caseItems: PublicSanctionCase[]): string[] {
     "| Signal | Value |",
     "| --- | ---: |",
     `| Corpus | ${meta.total_cases.toLocaleString("en-US")} tracked global matters |`,
-    `| Tracker updated | ${meta.last_updated} |`,
+    `| Corpus checked | ${meta.last_checked || meta.last_updated} |`,
+    `| Latest tracked decision | ${meta.latest_record_date || "Not provided"} |`,
     `| Matched set | ${caseItems.length} cases |`,
     `| Date coverage | ${dateCoverage(caseItems)} |`,
     `| Source-link coverage | ${sourceCoverage(caseItems)} |`,
@@ -133,10 +138,33 @@ function controls(caseItems: PublicSanctionCase[]): string[] {
   return [...rows].slice(0, 5);
 }
 
+function audienceControls(audience: string | undefined, caseItems: PublicSanctionCase[]): string[] {
+  if (/judge|chambers|court/i.test(audience || "")) return [
+    "Preserve the filed language and the primary sources reviewed.",
+    "Document citation, quotation, pincite, and proposition discrepancies neutrally.",
+    "Separate verified defects from any inference about AI use, intent, or authorship.",
+    "Use proportionate correction, certification, or show-cause procedures based on the record.",
+  ];
+  if (/research/i.test(audience || "")) return [
+    "Preserve the exact query, date range, status filter, and source-link coverage.",
+    "Separate allegations, warnings, show-cause matters, and adjudicated outcomes.",
+    "Treat overlapping failure tags as classifications, not mutually exclusive counts.",
+    "Cite the underlying record rather than relying only on the tracker summary.",
+  ];
+  if (/vendor|product/i.test(audience || "")) return [
+    "Confirm that the public source identifies the product before attributing a matter to a tool.",
+    "Do not compare tool safety or failure rates without usage denominators.",
+    "Separate model behavior, user workflow, supervision, and filing-control failures.",
+    "Maintain a documented correction and response process for attributed matters.",
+  ];
+  return controls(caseItems);
+}
+
 export function buildArtifactMarkdown(params: {
   type?: string;
   title?: string;
   audience?: string;
+  caseId?: string;
   state?: string;
   court?: string;
   aiTool?: string;
@@ -145,6 +173,7 @@ export function buildArtifactMarkdown(params: {
 }): string {
   const type = params.type || "report";
   const caseItems = params.caseItems || getArtifactCases({
+    caseId: params.caseId,
     state: params.state,
     court: params.court,
     aiTool: params.aiTool,
@@ -224,7 +253,7 @@ export function buildArtifactMarkdown(params: {
       "- Nonexistent authority or repeated fabricated text: prepare a targeted motion/OSC request focused on verified discrepancies.",
       "- Bad-faith denial after notice: consider sanctions only with a clean evidentiary record.",
       "",
-      "## Source-Backed Examples",
+      "## Source-Linked Examples",
       ...importantCases(caseItems, 5).map(
         (item) =>
           `- ${item.case_name} (${item.date}, ${item.court}): ${item.severity}; ${item.sanction_types.join(", ") || "no sanction listed"}${item.amount_display ? ` / ${item.amount_display}` : ""}\n  Source: ${item.source_url || "Unavailable"}`,
@@ -259,7 +288,7 @@ export function buildArtifactMarkdown(params: {
       "",
       ...evidenceTable(caseItems),
       "",
-      "## Source-Backed Examples",
+      "## Source-Linked Examples",
       ...importantCases(caseItems, 3).map(
         (item) =>
           `- ${item.case_name} (${item.date}, ${item.court}): ${item.severity}; ${item.sanction_types.join(", ") || "no sanction listed"}${item.amount_display ? ` / ${item.amount_display}` : ""}\n  Source: ${item.source_url || "Unavailable"}`,
@@ -319,7 +348,7 @@ export function buildArtifactMarkdown(params: {
       "",
       ...evidenceTable(caseItems),
       "",
-      "## Source-Backed Examples",
+      "## Source-Linked Examples",
       ...importantCases(caseItems, 3).map(
         (item) =>
           `- ${item.case_name} (${item.date}, ${item.court}): ${item.severity}; ${item.sanction_types.join(", ") || "no sanction listed"}${item.amount_display ? ` / ${item.amount_display}` : ""}\n  Source: ${item.source_url || "Unavailable"}`,
@@ -333,7 +362,7 @@ export function buildArtifactMarkdown(params: {
     const sourceCount = caseItems.filter((item) => item.source_url).length;
     const lawyer = caseItems.filter((item) => item.party?.toLowerCase().includes("lawyer")).length;
     const proSe = caseItems.filter((item) => item.party?.toLowerCase().includes("pro se")).length;
-    const monetary = caseItems.reduce((sum, item) => sum + (item.amount || 0), 0);
+    const monetaryRecords = caseItems.filter((item) => (item.amount || 0) > 0).length;
     return [
       `# ${title}`,
       "",
@@ -350,7 +379,7 @@ export function buildArtifactMarkdown(params: {
       `| Source-linked coverage | ${caseItems.length ? `${Math.round((sourceCount / caseItems.length) * 100)}%` : "0%"} |`,
       `| Lawyer-related matters | ${lawyer} |`,
       `| Pro se matters | ${proSe} |`,
-      `| Known monetary sanctions | ${new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(monetary)} |`,
+      `| Records with a positive monetary amount | ${monetaryRecords} |`,
       "",
       "## Severity Breakdown",
       "| Severity | Count |",
@@ -365,7 +394,7 @@ export function buildArtifactMarkdown(params: {
       "| --- | ---: |",
       ...failureModes.map(([label, count]) => `| ${label.replace(/-/g, " ")} | ${count} |`),
       "",
-      "## Top Source-Backed Matters",
+      "## Top Source-Linked Matters",
       "| Date | Case | Court | Severity | Signal | Source |",
       "| --- | --- | --- | --- | --- | --- |",
       ...importantCases(caseItems, 5).map(
@@ -403,13 +432,13 @@ export function buildArtifactMarkdown(params: {
         ]
       : []),
     "## Priority Controls",
-    ...controls(caseItems).map((item) => `- ${item}`),
+    ...audienceControls(params.audience, caseItems).map((item) => `- ${item}`),
     "",
     "## Observed Signals",
     ...failures.map(([label, count]) => `- ${label}: ${count}`),
     ...gaps.map(([label, count]) => `- ${label}: ${count}`),
     "",
-    "## Source-Backed Examples",
+    "## Source-Linked Examples",
     ...examples.map(
       (item) =>
         `- ${item.case_name} (${item.date}, ${item.court}): ${item.severity}; ${item.sanction_types.join(", ") || "no sanction listed"}${item.amount_display ? ` / ${item.amount_display}` : ""}\n  Source: ${item.source_url || "Unavailable"}`,
@@ -466,7 +495,7 @@ export function markdownToBodyHtml(markdown: string): string {
         const tableClasses = [
           lastHeading === "Verification Ledger" ? "ledger-table" : "",
           lastHeading === "Emergency Filing Gate" ? "gate-table" : "",
-          lastHeading === "Top Source-Backed Matters" ? "source-table" : "",
+          lastHeading === "Top Source-Linked Matters" ? "source-table" : "",
         ].filter(Boolean);
         const tableClass = tableClasses.length ? ` class="${tableClasses.join(" ")}"` : "";
         html.push(`<table${tableClass}>`);
@@ -504,6 +533,7 @@ export function markdownToHtml(markdown: string): string {
 
 export function buildArtifactCsv(params: {
   type?: string;
+  caseId?: string;
   state?: string;
   court?: string;
   aiTool?: string;
@@ -511,6 +541,7 @@ export function buildArtifactCsv(params: {
   caseItems?: PublicSanctionCase[];
 }): string {
   const caseItems = params.caseItems || getArtifactCases({
+    caseId: params.caseId,
     state: params.state,
     court: params.court,
     aiTool: params.aiTool,
@@ -559,25 +590,23 @@ export function markdownToBasicPdf(markdown: string): Uint8Array {
       const chunks: string[] = [];
       for (let index = 0; index < clean.length; index += 95) chunks.push(clean.slice(index, index + 95));
       return chunks;
-    })
-    .slice(0, 58);
-  const content = [
-    "BT",
-    "/F1 10 Tf",
-    "50 760 Td",
-    ...text.flatMap((line, index) => [
-      index === 0 ? "" : "0 -12 Td",
-      `(${pdfEscape(line)}) Tj`,
-    ]),
-    "ET",
-  ].join("\n");
+    });
+  const pages: string[][] = [];
+  for (let index = 0; index < text.length; index += 58) pages.push(text.slice(index, index + 58));
+  if (!pages.length) pages.push(["AI Vortex artifact"]);
+  const fontId = 3 + pages.length * 2;
+  const pageIds = pages.map((_, index) => 3 + index * 2);
   const objects = [
     "<< /Type /Catalog /Pages 2 0 R >>",
-    "<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
-    "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>",
-    "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>",
-    `<< /Length ${content.length} >>\nstream\n${content}\nendstream`,
+    `<< /Type /Pages /Kids [${pageIds.map((id) => `${id} 0 R`).join(" ")}] /Count ${pages.length} >>`,
   ];
+  pages.forEach((page, index) => {
+    const content = ["BT", "/F1 10 Tf", "50 760 Td", ...page.flatMap((line, lineIndex) => [lineIndex === 0 ? "" : "0 -12 Td", `(${pdfEscape(line)}) Tj`]), "ET"].join("\n");
+    const contentId = 4 + index * 2;
+    objects.push(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 ${fontId} 0 R >> >> /Contents ${contentId} 0 R >>`);
+    objects.push(`<< /Length ${content.length} >>\nstream\n${content}\nendstream`);
+  });
+  objects.push("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>");
   let pdf = "%PDF-1.4\n";
   const offsets = [0];
   objects.forEach((object, index) => {
@@ -600,18 +629,25 @@ export function artifactFilename(type: string, format: ArtifactFormat, state?: s
     format === "html" ? "html" :
     format === "csv" ? "csv" :
     "md";
-  return `ai-vortex-${type || "artifact"}${state ? `-${state.toLowerCase()}` : ""}.${extension}`;
+  const safeType = (type || "artifact").toLowerCase().replace(/[^a-z0-9_-]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40) || "artifact";
+  const safeState = (state || "").toLowerCase().replace(/[^a-z0-9_-]+/g, "").slice(0, 12);
+  return `ai-vortex-${safeType}${safeState ? `-${safeState}` : ""}.${extension}`;
 }
 
 export function readArtifactParams(searchParams: URLSearchParams) {
+  const allowedTypes = new Set(["report", "ledger", "source", "package", "policy", "prefiling", "visual", "opposing"]);
+  const allowedFormats = new Set<ArtifactFormat>(["md", "markdown", "html", "doc", "word", "pdf", "pdf-ready", "word-ready", "csv", "xlsx", "docx"]);
+  const requestedType = normalize(searchParams.get("type")) || "report";
+  const requestedFormat = (normalize(searchParams.get("format")) || "md") as ArtifactFormat;
   return {
-    type: normalize(searchParams.get("type")) || "report",
+    type: allowedTypes.has(requestedType) ? requestedType : "report",
     title: normalize(searchParams.get("title")),
     audience: normalize(searchParams.get("audience")),
     state: normalize(searchParams.get("state"))?.toUpperCase(),
     court: normalize(searchParams.get("court")),
     aiTool: normalize(searchParams.get("ai_tool")),
     practiceArea: normalize(searchParams.get("practice_area")),
-    format: (normalize(searchParams.get("format")) || "md") as ArtifactFormat,
+    caseId: normalize(searchParams.get("case_id")),
+    format: allowedFormats.has(requestedFormat) ? requestedFormat : "md",
   };
 }

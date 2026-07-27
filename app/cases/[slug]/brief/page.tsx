@@ -60,9 +60,12 @@ export default async function CaseBriefPage({ params, searchParams }: Props) {
   const brandKey = readReportBrand(first(query, "brand"));
   const editorial = getCaseEditorial(item);
   const intelligence = getCaseIntelligence(item.id);
-  const directAnswer = editorial.reviewedForPublication ? editorial.directAnswer : conciseCaseAnswer(intelligence?.summary || editorial.directAnswer);
+  const directAnswer = editorial.reviewedForPublication ? editorial.directAnswer : intelligence?.direct_answer || conciseCaseAnswer(intelligence?.summary || editorial.directAnswer);
   const whyCourtCared = editorial.reviewedForPublication ? editorial.whyCourtCared : intelligence?.judicial_reasoning || intelligence?.decision_context || "The linked source identifies an AI-related issue but does not support a more specific account of the decision-maker's reasoning.";
   const evidenceBoundary = intelligence?.evidence_boundary || editorial.limitations;
+  const attributionStatus = intelligence?.ai_attribution_status?.replaceAll("_", "-") || editorial.attributionStatus;
+  const attributionBasis = intelligence?.evidence_notes?.find((note) => note.field === "recorded_tool")?.basis || editorial.attributionBasis;
+  const proceduralPosture = intelligence?.procedural_posture || editorial.proceduralPosture;
   const source = sourceTier(item);
   const related = getRelatedCases(item, 3).filter((candidate) =>
     getRelatedCaseReason(item, candidate),
@@ -74,6 +77,7 @@ export default async function CaseBriefPage({ params, searchParams }: Props) {
     year: "numeric",
   }).format(new Date());
   const outcome =
+    intelligence?.outcome_summary ||
     item.outcome ||
     (item.amount
       ? new Intl.NumberFormat("en-US", {
@@ -84,14 +88,27 @@ export default async function CaseBriefPage({ params, searchParams }: Props) {
       : "") ||
     item.sanction_types.map(humanize).join(", ") ||
     "No outcome recorded";
-  const knownAmount = item.amount
+  const intelligenceAmount = intelligence?.monetary_consequence?.known
+    ? intelligence.monetary_consequence.amount
+    : null;
+  const knownAmountValue = intelligenceAmount ?? item.amount;
+  const knownAmountCurrency = intelligence?.monetary_consequence?.known
+    ? intelligence.monetary_consequence.currency
+    : "USD";
+  const knownAmount = knownAmountValue !== null && knownAmountCurrency
     ? new Intl.NumberFormat("en-US", {
         style: "currency",
-        currency: "USD",
+        currency: knownAmountCurrency,
         maximumFractionDigits: 0,
-      }).format(item.amount)
+      }).format(knownAmountValue)
+    : intelligence?.monetary_consequence?.known && knownAmountValue !== null
+      ? "Recorded in local statutory unit"
     : "Not recorded";
-  const issueLabels = [...new Set([...item.tags, ...item.sanction_types])].slice(0, 6);
+  const issueLabels = [...new Set([
+    ...(intelligence?.failure_modes || []),
+    ...item.tags,
+    ...item.sanction_types,
+  ])].slice(0, 6);
 
   return (
     <main className={styles.page}>
@@ -168,10 +185,10 @@ export default async function CaseBriefPage({ params, searchParams }: Props) {
               <p>No classified issue labels are recorded.</p>
             )}
             <dl className={styles.facts}>
-              <div><dt>AI attribution</dt><dd>{humanize(editorial.attributionStatus)}</dd></div>
-              <div><dt>Recorded tool</dt><dd>{item.ai_tool_used || "Unidentified"}</dd></div>
+              <div><dt>AI attribution</dt><dd>{humanize(attributionStatus)}</dd></div>
+              <div><dt>Recorded tool</dt><dd>{intelligence?.recorded_tool || item.ai_tool_used || "Unidentified"}</dd></div>
               <div><dt>Known monetary consequence</dt><dd>{knownAmount}</dd></div>
-              <div><dt>Procedural posture</dt><dd>{editorial.proceduralPosture}</dd></div>
+              <div><dt>Procedural posture</dt><dd>{proceduralPosture}</dd></div>
             </dl>
           </section>
 
@@ -199,8 +216,11 @@ export default async function CaseBriefPage({ params, searchParams }: Props) {
             <h2>What this record does—and does not—establish</h2>
           </div>
           <div>
-            <p>{editorial.attributionBasis}</p>
+            <p>{attributionBasis}</p>
             <p>{evidenceBoundary}</p>
+            {intelligence?.evidence_review && (
+              <p><strong>Latest evidence review:</strong> {humanize(intelligence.evidence_review.status)} ({intelligence.evidence_review.confidence} confidence).</p>
+            )}
             {item.alleged && (
               <p><strong>Allegation status:</strong> no adjudicated finding is represented by this brief.</p>
             )}

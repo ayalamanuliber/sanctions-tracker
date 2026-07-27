@@ -4,14 +4,37 @@ export type CaseIntelligence = {
   id: string;
   slug: string;
   summary: string;
+  direct_answer?: string;
   why_it_matters: string;
+  procedural_posture?: string;
+  ai_attribution_status?: "admitted" | "explicitly_recorded" | "implied" | "alleged" | "unspecified";
+  recorded_tool?: string | null;
+  failure_modes?: string[];
   judicial_reasoning: string | null;
   decision_context: string;
+  outcome_summary?: string;
+  monetary_consequence?: { known: boolean; amount: number | null; currency: string | null };
+  professional_consequence?: string;
   practical_implications: string[];
   evidence_boundary: string;
+  uncertainties?: string[];
+  evidence_notes?: { field: string; basis: string; locator: string }[];
   verified_fields: string[] | Record<string, string>;
   source: { url: string; name: string; tier: string };
   publication: { ready: boolean; agent_status: string; blocked_reason: string | null };
+  evidence_review?: {
+    status:
+      | "primary-document-verified"
+      | "primary-document-limited"
+      | "primary-source-excerpt"
+      | "secondary-source-only"
+      | "metadata-only"
+      | "source-unavailable";
+    confidence: "low" | "medium" | "high";
+    reviewed_at: string;
+    prompt_version: string;
+    limitations: string[];
+  };
 };
 
 const CASE_INTELLIGENCE = rawCaseIntelligence as unknown as CaseIntelligence[];

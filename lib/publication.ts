@@ -28,11 +28,21 @@ export function getPublicationReadiness(slug: string): ReadinessEntry {
 
 export function isIndexEligible(slug: string) {
   const record = getCaseIntelligenceBySlug(slug);
-  return getPublicationReadiness(slug).tier === "index-ready" && record?.publication.ready !== false;
+  const evidenceHold = [
+    "primary-document-limited",
+    "secondary-source-only",
+    "metadata-only",
+    "source-unavailable",
+  ].includes(
+    record?.evidence_review?.status || "",
+  );
+  return getPublicationReadiness(slug).tier === "index-ready" &&
+    record?.publication.ready !== false &&
+    !evidenceHold;
 }
 
 export function indexEligibleSlugs() {
   return Object.entries(readiness.by_slug)
-    .filter(([slug, entry]) => entry.tier === "index-ready" && getCaseIntelligenceBySlug(slug)?.publication.ready !== false)
+    .filter(([slug]) => isIndexEligible(slug))
     .map(([slug]) => slug);
 }

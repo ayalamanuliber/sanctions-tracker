@@ -91,27 +91,48 @@ export default async function CasePage({ params }: Props) {
   const tier = sourceTier(item);
   const editorial = getCaseEditorial(item);
   const intelligence = getCaseIntelligence(item.id);
-  const directAnswer = editorial.reviewedForPublication ? editorial.directAnswer : conciseCaseAnswer(intelligence?.summary || editorial.directAnswer);
+  const evidenceReview = intelligence?.evidence_review;
+  const evidenceReviewCopy = evidenceReview ? {
+    "primary-document-verified": "The linked primary document was extracted and checked with page-level evidence locators.",
+    "primary-document-limited": "The primary document was retrieved, but one or more case-level facts could not be tied to a page-located passage. The structured corpus baseline is preserved without upgrading those claims.",
+    "primary-source-excerpt": "A case-specific primary-source excerpt was checked; review the complete source before relying.",
+    "secondary-source-only": "Only case-specific secondary coverage was accessible. It provides context, not independent proof of the underlying ruling.",
+    "metadata-only": "The linked page is generic, shared, or insufficiently case-specific. This page therefore preserves only the structured corpus baseline.",
+    "source-unavailable": "The linked source could not be retrieved during the latest evidence pass. This page preserves the structured corpus baseline and states the gap explicitly.",
+  }[evidenceReview.status] : null;
+  const directAnswer = editorial.reviewedForPublication ? editorial.directAnswer : intelligence?.direct_answer || conciseCaseAnswer(intelligence?.summary || editorial.directAnswer);
   const whyItMatters = editorial.reviewedForPublication ? editorial.whyItMatters : intelligence?.why_it_matters || editorial.whyItMatters;
   const whyCourtCared = editorial.reviewedForPublication ? editorial.whyCourtCared : intelligence?.judicial_reasoning || intelligence?.decision_context || "The linked source identifies an AI-related issue but does not support a more specific account of the decision-maker's reasoning.";
   const evidenceBoundary = intelligence?.evidence_boundary || editorial.limitations;
+  const proceduralPosture = intelligence?.procedural_posture || editorial.proceduralPosture;
+  const attributionStatus = intelligence?.ai_attribution_status?.replaceAll("_", " ") || editorial.attributionStatus.replaceAll("-", " ");
+  const attributionBasis = intelligence?.evidence_notes?.find((note) => note.field === "recorded_tool")?.basis || editorial.attributionBasis;
   const publication = getPublicationReadiness(item.slug);
   const narrative = narrativeSections(intelligence?.summary || item.summary);
   const discrepancies = item.hallucination_items?.split(" || ").filter(Boolean) || [];
-  const knownAmount = item.amount
-    ? new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(item.amount)
+  const intelligenceAmount = intelligence?.monetary_consequence?.known
+    ? intelligence.monetary_consequence.amount
+    : null;
+  const knownAmountValue = intelligenceAmount ?? item.amount;
+  const knownAmountCurrency = intelligence?.monetary_consequence?.known
+    ? intelligence.monetary_consequence.currency
+    : "USD";
+  const knownAmount = knownAmountValue !== null && knownAmountCurrency
+    ? new Intl.NumberFormat("en-US", { style: "currency", currency: knownAmountCurrency, maximumFractionDigits: 0 }).format(knownAmountValue)
+    : intelligence?.monetary_consequence?.known && knownAmountValue !== null
+      ? "Recorded in local statutory unit"
     : "Not recorded";
-  const outcome = item.outcome || (item.amount ? knownAmount : "") || item.sanction_types.map((v) => v.replaceAll("-", " ")).join(", ") || "Tracked public outcome";
+  const outcome = intelligence?.outcome_summary || item.outcome || (knownAmountValue ? knownAmount : "") || item.sanction_types.map((v) => v.replaceAll("-", " ")).join(", ") || "Tracked public outcome";
   const facts = [
     { label: "Court", value: item.court, icon: Landmark },
     { label: "Jurisdiction", value: item.jurisdiction, icon: MapPin },
     { label: "Circuit", value: item.circuit || "Not recorded", icon: GitBranch },
     { label: "Date", value: formatCaseDate(item.date), icon: CalendarDays },
-    { label: "AI tool", value: item.ai_tool_used || "Unidentified", icon: Bot, tool: true },
+    { label: "AI tool", value: intelligence?.recorded_tool || item.ai_tool_used || "Unidentified", icon: Bot, tool: true },
     { label: "Party type", value: item.party || "Not classified", icon: UserRound },
-    { label: "Outcome", value: item.outcome || "See source", icon: Gavel },
+    { label: "Outcome", value: intelligence?.outcome_summary || item.outcome || "See source", icon: Gavel },
     { label: "Known amount", value: knownAmount, icon: Banknote },
-    { label: "Professional sanction", value: item.professional_sanction || "Not recorded", icon: ShieldAlert },
+    { label: "Professional sanction", value: intelligence?.professional_consequence || item.professional_sanction || "Not recorded", icon: ShieldAlert },
   ];
   const canonicalUrl = publicUrl(`/cases/${item.slug}`);
   const socialImage = publicUrl(`/cases/${item.slug}/opengraph-image`);
@@ -208,6 +229,7 @@ export default async function CasePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
       <div className={shell.breadcrumbs}><Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/cases">Cases</Link><span aria-hidden="true">/</span><span>{item.case_name}</span></div>
       {item.alleged && <div className={styles.notice}><strong>Allegation status:</strong> this record tracks a public allegation or unresolved matter. It must not be described as an adjudicated finding.</div>}
+      {evidenceReview && evidenceReviewCopy && <div className={styles.draftNotice}><ShieldCheck size={17} /><span><strong>Evidence review: {evidenceReview.status.replaceAll("-", " ")}.</strong> {evidenceReviewCopy}</span></div>}
       {!editorial.reviewedForPublication && <div className={styles.draftNotice}><AlertTriangle size={17} /><span><strong>Evidence-linked corpus record:</strong> this page is generated from the structured public record and has a publication-readiness score of {publication.score}/100. {isIndexEligible(item.slug) ? "It passed the source, context, and standalone-summary checks used for public indexing; individual legal editorial review is not represented." : "It remains available for research but is excluded from search indexing until its documented evidence gaps are resolved."}</span></div>}
       <div className={styles.hero}>
         <section className={`${shell.card} ${styles.titleCard}`}>
@@ -241,7 +263,7 @@ export default async function CasePage({ params }: Props) {
             <div className={styles.facts}>
             {facts.map(({ label, value, icon: Icon, tool }) => <div className={styles.fact} key={label}><div className={styles.factIcon}><Icon aria-hidden="true" size={16} />{tool && <span>{String(value).slice(0, 2).toUpperCase()}</span>}</div><div><small>{label}</small><strong>{value}</strong></div></div>)}
           </div></section>
-          <section className={`${shell.card} ${styles.section}`}><div className={styles.sectionTitle}><div><span>Attribution boundary</span><h2>What the record establishes about AI use</h2></div><ShieldCheck /></div><div className={styles.attribution}><strong>{editorial.attributionStatus.replaceAll("-", " ")}</strong><p>{editorial.attributionBasis}</p></div><div className={styles.procedureGrid}><div><small>Procedural posture</small><p>{editorial.proceduralPosture}</p></div><div><small>Correction behavior</small><p>{editorial.correctionBehavior}</p></div></div></section>
+          <section className={`${shell.card} ${styles.section}`}><div className={styles.sectionTitle}><div><span>Attribution boundary</span><h2>What the record establishes about AI use</h2></div><ShieldCheck /></div><div className={styles.attribution}><strong>{attributionStatus}</strong><p>{attributionBasis}</p></div><div className={styles.procedureGrid}><div><small>Procedural posture</small><p>{proceduralPosture}</p></div><div><small>Correction behavior</small><p>{editorial.correctionBehavior}</p></div></div></section>
           {discrepancies.length > 0 && <section className={`${shell.card} ${styles.section}`}><h2>Tracked discrepancy record</h2><p className={styles.sectionIntro}>{discrepancies.length} citation, quotation, or authority issues are recorded in the source dataset.</p><ol className={styles.discrepancies}>{discrepancies.slice(0,8).map((entry, index) => <li key={index}><AlertTriangle aria-hidden="true" /><span>{cleanImportedText(entry)}</span></li>)}</ol>{discrepancies.length > 8 && <details className={styles.moreDiscrepancies}><summary>Show {discrepancies.length - 8} additional discrepancies</summary><ol className={styles.discrepancies} start={9}>{discrepancies.slice(8).map((entry,index) => <li key={index}><AlertTriangle aria-hidden="true" /><span>{cleanImportedText(entry)}</span></li>)}</ol></details>}</section>}
           <section className={`${shell.card} ${styles.section}`} aria-labelledby="case-questions"><h2 id="case-questions">Questions this record answers</h2><dl className={styles.faqGrid}>{caseFaqs.map((entry) => <div key={entry.question}><dt>{entry.question}</dt><dd>{entry.answer}</dd></div>)}</dl></section>
           <section className={`${shell.card} ${styles.section}`}><h2>Related matters</h2><p className={styles.sectionIntro}>Related by court, jurisdiction, tool, or classified failure pattern. Similarity does not imply the same facts or outcome.</p><div className={styles.related}>{related.map((relatedItem) => <Link key={relatedItem.slug} href={`/cases/${relatedItem.slug}`}><strong>{relatedItem.case_name}</strong><small>{relatedItem.court} · {formatCaseDate(relatedItem.date)}</small><em>{getRelatedCaseReason(item, relatedItem)}</em></Link>)}</div></section>
@@ -252,6 +274,7 @@ export default async function CasePage({ params }: Props) {
             <h3>{source}</h3><p><strong>{tier.label}</strong><br />{tier.description}</p>
             {item.source_url ? <a href={item.source_url} target="_blank" rel="noreferrer">Open recorded source <ExternalLink size={14} /></a> : <p>No public source link is currently available.</p>}
             <div className={styles.confidence}><span>Publication status</span><b>{editorial.reviewedForPublication ? "curated exemplar" : isIndexEligible(item.slug) ? "evidence baseline passed" : "research hold"}</b></div>
+            {evidenceReview && <div className={styles.confidence}><span>Latest source review</span><b>{evidenceReview.status.replaceAll("-", " ")}</b></div>}
             <p className={styles.byline}>Published by <a href="https://www.aivortex.io/legal/">AI Vortex · Manu Ayala</a><br />Page updated {formatCaseDate(SITE_PUBLICATION_DATE)}</p>
             <div className={styles.sourceChecks}><span><CheckCircle2 /> Source host classified</span><span><CheckCircle2 /> Attribution boundary stated</span><span><CheckCircle2 /> Limitations disclosed</span></div>
             <p className={styles.boundary}>Corpus checked {formatCaseDate(LAST_CHECKED)}; latest tracked decision {formatCaseDate(LATEST_RECORD_DATE)}. AI Vortex summarizes public records and does not replace the court document or legal research service.</p>

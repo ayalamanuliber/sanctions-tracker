@@ -59,7 +59,19 @@ assert.ok(curatedCase.includes("What the record establishes about AI use"), "Cur
 const sitemap = await page("/sitemap.xml");
 const caseUrls = sitemap.match(/\/cases\//g) || [];
 const expectedIndexable = Object.entries(readiness.by_slug).filter(
-  ([slug, publication]) => publication.tier === "index-ready" && intelligenceBySlug.get(slug)?.publication?.ready !== false,
+  ([slug, publication]) => {
+    const record = intelligenceBySlug.get(slug);
+    const evidenceHold = [
+      "primary-document-limited",
+      "secondary-source-only",
+      "metadata-only",
+      "source-unavailable",
+    ]
+      .includes(record?.evidence_review?.status || "");
+    return publication.tier === "index-ready" &&
+      record?.publication?.ready !== false &&
+      !evidenceHold;
+  },
 ).length;
 assert.equal(caseUrls.length, expectedIndexable, "Sitemap must contain every case that passes both publication and evidence baselines");
 

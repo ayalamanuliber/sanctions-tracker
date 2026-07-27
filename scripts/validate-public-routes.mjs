@@ -38,7 +38,17 @@ async function worker() {
       const response = await fetch(url, { redirect: "follow" });
       const html = await response.text();
       const expectedCanonical = `https://www.aivortex.io/legal-ai-risk/cases/${slug}`;
-      const canIndex = publication.tier === "index-ready" && intelligenceBySlug.get(slug)?.publication?.ready !== false;
+      const intelligenceRecord = intelligenceBySlug.get(slug);
+      const evidenceHold = [
+        "primary-document-limited",
+        "secondary-source-only",
+        "metadata-only",
+        "source-unavailable",
+      ]
+        .includes(intelligenceRecord?.evidence_review?.status || "");
+      const canIndex = publication.tier === "index-ready" &&
+        intelligenceRecord?.publication?.ready !== false &&
+        !evidenceHold;
       const expectedRobots = canIndex ? "index, follow" : "noindex, follow";
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       if (!html.includes(`<h1`)) throw new Error("missing h1");

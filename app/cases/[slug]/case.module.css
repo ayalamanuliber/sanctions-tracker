@@ -65,11 +65,19 @@
 .sourceHead span { color: #607089; font-size: 11px; }
 .sourceCard h3 { color: #102947; margin: 11px 0 5px; font-size: 16px; }
 .sourceCard p { color: #66758b; font-size: 12px; }
-.sourceCard a { display: inline-flex; align-items: center; gap: 7px; color: white; background: #08264d; padding: 9px 11px; border-radius: 4px; text-decoration: none; font-size: 12px; font-weight: 700; margin-top: 15px; }
+.sourceCard .sourceCta { display: inline-flex; align-items: center; gap: 7px; color: white; background: #08264d; padding: 9px 11px; border-radius: 4px; text-decoration: none; font-size: 12px; font-weight: 700; margin-top: 15px; }
 .confidence { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #e5eaf0; margin-top: 15px; padding-top: 13px; color: #5d6d84; font-size: 11px; }
 .confidence b { color: #167447; text-transform: capitalize; }
-.byline { color: #64748b; font-size: 12px; line-height: 1.55; }
-.byline a { color: #174f93; font-weight: 700; text-decoration: none; }
+.authorCard { display:flex; align-items:center; gap:10px; margin-top:15px; padding-top:14px; border-top:1px solid #e5eaf0; }
+.authorMark { width:34px; height:34px; flex:0 0 34px; display:grid; place-items:center; color:#174f93; background:#edf5ff; border:1px solid #d9e7f7; border-radius:50%; }
+.authorCard div:last-child { min-width:0; display:grid; gap:2px; }
+.authorCard span { color:#7a8799; font-size:9px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+.authorCard strong { color:#173252; font-size:12px; line-height:1.25; }
+.authorCard small { color:#758399; font-size:10px; line-height:1.35; }
+.authorLinks { display:flex; align-items:center; flex-wrap:wrap; gap:6px 12px; margin-top:10px; }
+.authorLinks a { display:inline-flex; align-items:center; gap:4px; color:#174f93; background:transparent; padding:0; margin:0; border:0; border-radius:0; font-size:10px; font-weight:750; text-decoration:none; }
+.authorLinks a:hover { color:#08264d; text-decoration:underline; text-underline-offset:3px; }
+.pageDate { display:flex; align-items:center; gap:5px; margin:10px 0 0; color:#7a8799 !important; font-size:10px !important; }
 .actions { display: grid; gap: 8px; }
 .actions a { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 42px; border-radius: 4px; background: #08264d; color: white; text-decoration: none; font-size: 12px; font-weight: 800; }
 .actions a:nth-child(n+2) { background: white; color: #17497f; border: 1px solid #cbd5e1; }

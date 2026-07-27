@@ -11,7 +11,9 @@ import {
   FolderPlus,
   Gavel,
   GitBranch,
+  Globe2,
   Landmark,
+  Mail,
   MapPin,
   Scale,
   ShieldAlert,
@@ -272,10 +274,23 @@ export default async function CasePage({ params }: Props) {
           <section className={`${shell.card} ${styles.sourceCard}`}>
             <div className={styles.sourceHead}><span>Linked evidence record</span><Scale size={17} /></div>
             <h3>{source}</h3><p><strong>{tier.label}</strong><br />{tier.description}</p>
-            {item.source_url ? <a href={item.source_url} target="_blank" rel="noreferrer">Open recorded source <ExternalLink size={14} /></a> : <p>No public source link is currently available.</p>}
+            {item.source_url ? <a className={styles.sourceCta} href={item.source_url} target="_blank" rel="noreferrer">Open recorded source <ExternalLink size={14} /></a> : <p>No public source link is currently available.</p>}
             <div className={styles.confidence}><span>Publication status</span><b>{editorial.reviewedForPublication ? "curated exemplar" : isIndexEligible(item.slug) ? "evidence baseline passed" : "research hold"}</b></div>
             {evidenceReview && <div className={styles.confidence}><span>Latest source review</span><b>{evidenceReview.status.replaceAll("-", " ")}</b></div>}
-            <p className={styles.byline}>Published by <a href="https://www.aivortex.io/legal/">AI Vortex · Manu Ayala</a><br />Page updated {formatCaseDate(SITE_PUBLICATION_DATE)}</p>
+            <div className={styles.authorCard}>
+              <div className={styles.authorMark}><UserRound aria-hidden="true" size={17} /></div>
+              <div>
+                <span>Published and maintained by</span>
+                <strong>Manu Ayala · AI Vortex</strong>
+                <small>Independent legal AI risk intelligence</small>
+              </div>
+            </div>
+            <nav className={styles.authorLinks} aria-label="Publisher links">
+              <a href="https://www.aivortex.io/legal/"><Globe2 aria-hidden="true" size={13} />Profile</a>
+              <a href="https://www.linkedin.com/in/aivortex/" target="_blank" rel="noreferrer">LinkedIn<ExternalLink aria-hidden="true" size={12} /></a>
+              <a href={`mailto:manuel@aivortex.io?subject=${encodeURIComponent(`AI Vortex case record: ${item.case_name}`)}`}><Mail aria-hidden="true" size={13} />Email</a>
+            </nav>
+            <p className={styles.pageDate}><CalendarDays aria-hidden="true" size={13} />Page updated {formatCaseDate(SITE_PUBLICATION_DATE)}</p>
             <div className={styles.sourceChecks}><span><CheckCircle2 /> Source host classified</span><span><CheckCircle2 /> Attribution boundary stated</span><span><CheckCircle2 /> Limitations disclosed</span></div>
             <p className={styles.boundary}>Corpus checked {formatCaseDate(LAST_CHECKED)}; latest tracked decision {formatCaseDate(LATEST_RECORD_DATE)}. AI Vortex summarizes public records and does not replace the court document or legal research service.</p>
           </section>

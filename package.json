@@ -15,6 +15,8 @@
     "test:product": "node scripts/test-product-behavior.mjs",
     "test:public-routes": "node scripts/validate-public-routes.mjs",
     "test:publication-readiness": "node scripts/test-publication-readiness.mjs",
+    "indexnow:submit": "node scripts/submit-indexnow.mjs",
+    "indexnow:dry-run": "node scripts/submit-indexnow.mjs --dry-run",
     "enrich:cases:kie": "node scripts/enrich-case-intelligence-kie.mjs",
     "enrich:cases:kie:dry-run": "node scripts/enrich-case-intelligence-kie.mjs --dry-run",
     "audit:cases:kie": "node scripts/audit-kie-case-intelligence.mjs",

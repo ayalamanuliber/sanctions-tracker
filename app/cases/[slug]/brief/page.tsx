@@ -26,7 +26,8 @@ import {
 } from "@/lib/cases";
 import { createReportId, readReportBrand, type ReportTier } from "@/lib/reporting";
 import { conciseCaseAnswer, getCaseIntelligence } from "@/lib/case-intelligence";
-import { assetUrl } from "@/lib/site";
+import { excerptAtWordBoundary } from "@/lib/case-seo";
+import { assetUrl, publicUrl, SITE_PUBLICATION_DATE } from "@/lib/site";
 import styles from "./brief.module.css";
 
 type Params = Record<string, string | string[] | undefined>;
@@ -35,15 +36,51 @@ type Props = {
   searchParams?: Promise<Params>;
 };
 
-export const metadata: Metadata = {
-  title: "Case Brief | AI Vortex",
-  description: "A source-backed case brief from AI Vortex Legal AI Risk Intelligence.",
-  robots: { index: false, follow: true },
-};
-
 function first(params: Params, key: string) {
   const value = params[key];
   return Array.isArray(value) ? value[0] || "" : value || "";
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const item = getCaseBySlug((await params).slug);
+  if (!item) return { title: "Case brief not found | AI Vortex" };
+  const intelligence = getCaseIntelligence(item.id);
+  const title = `${item.case_name} Evidence Brief | AI Vortex`;
+  const description = excerptAtWordBoundary(
+    `${item.court || "Public legal record"}, ${formatCaseDate(item.date)}. ${
+      intelligence?.direct_answer || intelligence?.summary || item.summary
+    }`,
+    158,
+  );
+  const reportUrl = publicUrl(`/cases/${item.slug}/brief`);
+  const image = publicUrl(`/cases/${item.slug}/opengraph-image`);
+
+  return {
+    title,
+    description,
+    alternates: { canonical: publicUrl(`/cases/${item.slug}`) },
+    openGraph: {
+      title,
+      description,
+      url: reportUrl,
+      type: "article",
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: `${item.case_name} source-backed case brief`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+    robots: { index: false, follow: true },
+  };
 }
 
 function humanize(value: string) {
@@ -109,9 +146,47 @@ export default async function CaseBriefPage({ params, searchParams }: Props) {
     ...item.tags,
     ...item.sanction_types,
   ])].slice(0, 6);
+  const reportUrl = publicUrl(`/cases/${item.slug}/brief`);
+  const canonicalCase = publicUrl(`/cases/${item.slug}`);
+  const reportSchema = {
+    "@context": "https://schema.org",
+    "@type": "Report",
+    "@id": `${reportUrl}#report`,
+    name: `${item.case_name} Evidence Brief`,
+    identifier: reportId,
+    description: directAnswer,
+    url: reportUrl,
+    datePublished: SITE_PUBLICATION_DATE,
+    dateModified: LAST_CHECKED,
+    isAccessibleForFree: true,
+    isBasedOn: canonicalCase,
+    about: {
+      "@type": "CreativeWork",
+      name: item.case_name,
+      url: canonicalCase,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "AI Vortex",
+      url: "https://www.aivortex.io",
+    },
+    citation: item.source_url
+      ? {
+          "@type": "CreativeWork",
+          name: sourcePublisher(item),
+          url: item.source_url,
+        }
+      : undefined,
+  };
 
   return (
     <main className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(reportSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <ReportPreviewToolbar
         backHref={`/cases/${item.slug}`}
         backLabel="Back to case record"

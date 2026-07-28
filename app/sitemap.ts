@@ -5,6 +5,8 @@ import {
   ENTITY_KINDS,
   entityDirectoryHref,
   entityHref,
+  entityOgImageHref,
+  entityReportHref,
   getEntities,
 } from "@/lib/entity-pages";
 import { indexEligibleSlugs } from "@/lib/publication";
@@ -48,6 +50,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .map((entity) => ({
         url: publicUrl(entityHref(kind, entity.slug)),
         lastModified: new Date(`${entity.latest}T00:00:00Z`),
+        images: [publicUrl(entityOgImageHref(kind, entity.slug))],
+      })),
+  );
+
+  const entityReports = ENTITY_KINDS.flatMap((kind) =>
+    getEntities(kind)
+      .filter((entity) => entity.indexEligible)
+      .map((entity) => ({
+        url: publicUrl(entityReportHref(kind, entity.slug)),
+        lastModified: new Date(`${entity.latest}T00:00:00Z`),
+        images: [
+          publicUrl(entityOgImageHref(kind, entity.slug, "report")),
+        ],
       })),
   );
 
@@ -57,7 +72,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const unique = new Map(
-    [...fixed, ...directoryPages, ...publishableCases, ...entityPages].map(
+    [
+      ...fixed,
+      ...directoryPages,
+      ...publishableCases,
+      ...entityPages,
+      ...entityReports,
+    ].map(
       (entry) => [entry.url, entry],
     ),
   );

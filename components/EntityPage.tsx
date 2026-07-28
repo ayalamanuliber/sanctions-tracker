@@ -7,6 +7,7 @@ import {
   Bot,
   CalendarDays,
   ExternalLink,
+  FileText,
   Scale,
   ShieldAlert,
   ShieldCheck,
@@ -25,7 +26,9 @@ import {
   entityHref,
   entityIndexThreshold,
   entityLabel,
+  entityOgImageHref,
   entityRelated,
+  entityReportHref,
   entitySummary,
   getEntities,
   type CorpusEntity,
@@ -53,7 +56,9 @@ function entityTitle(entity: CorpusEntity) {
 export function entityMetadata(entity: CorpusEntity): Metadata {
   const description = entityIntelligenceDescription(entity).slice(0, 158);
   const canonical = publicUrl(entityHref(entity.kind, entity.slug));
-  const socialImage = publicUrl("/legal-ai-risk-social.png");
+  const socialImage = publicUrl(
+    entityOgImageHref(entity.kind, entity.slug),
+  );
   return {
     title: entityTitle(entity),
     description,
@@ -63,7 +68,7 @@ export function entityMetadata(entity: CorpusEntity): Metadata {
       description,
       url: canonical,
       type: "website",
-      images: [{ url: socialImage, width: 1200, height: 630, alt: "AI Vortex Legal AI Risk evidence network" }],
+      images: [{ url: socialImage, width: 1200, height: 630, alt: `${entity.label} source-linked legal AI risk profile` }],
     },
     twitter: { card: "summary_large_image", title: entityTitle(entity), description, images: [socialImage] },
     robots: entity.indexEligible
@@ -76,6 +81,9 @@ function entitySchema(entity: CorpusEntity) {
   const intelligence = buildEntityIntelligence(entity);
   const canonical = publicUrl(entityHref(entity.kind, entity.slug));
   const directory = publicUrl(entityDirectoryHref(entity.kind));
+  const socialImage = publicUrl(
+    entityOgImageHref(entity.kind, entity.slug),
+  );
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -88,7 +96,17 @@ function entitySchema(entity: CorpusEntity) {
         isAccessibleForFree: true,
         dateModified: LAST_CHECKED,
         mainEntity: { "@id": `${canonical}#items` },
+        primaryImageOfPage: { "@id": `${canonical}#image` },
         breadcrumb: { "@id": `${canonical}#breadcrumb` },
+      },
+      {
+        "@type": "ImageObject",
+        "@id": `${canonical}#image`,
+        url: socialImage,
+        contentUrl: socialImage,
+        width: 1200,
+        height: 630,
+        caption: `${entity.label} source-linked intelligence profile`,
       },
       {
         "@type": "ItemList",
@@ -178,7 +196,7 @@ export function EntityDetailPage({ entity }: { entity: CorpusEntity }) {
     <div className={shell.breadcrumbs}><Link href="/">Home</Link><span>/</span><Link href={directoryHref}>{entityLabel(entity.kind)}</Link><span>/</span><span>{entity.label}</span></div>
     <header className={shell.pageHead}>
       <div><span className={shell.eyebrow}>Source-linked corpus view</span><h1>{entity.label}</h1><p>{entitySummary(entity, LEGAL_RISK_CASES.length)}</p></div>
-      <div className={shell.headActions}><Link className={shell.button} href={entityCaseDirectoryHref(entity)}>{isConsequence ? "Inspect in analytics" : "Search matching records"}<ArrowRight size={15} /></Link><Link className={shell.buttonSecondary} href="/sources">Methodology</Link></div>
+      <div className={shell.headActions}><Link className={shell.button} href={entityReportHref(entity.kind, entity.slug)}><FileText size={15} />Open evidence report</Link><Link className={shell.buttonSecondary} href={entityCaseDirectoryHref(entity)}>{isConsequence ? "Inspect in analytics" : "Search matching records"}<ArrowRight size={15} /></Link><Link className={shell.buttonSecondary} href="/sources">Methodology</Link></div>
     </header>
 
     <div className={styles.metrics}>

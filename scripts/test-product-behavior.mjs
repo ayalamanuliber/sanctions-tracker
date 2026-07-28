@@ -184,6 +184,26 @@ assert.ok(
   "A classified case tag must link to its failure-mode profile",
 );
 
+const judgeProfile = await page("/judges/vernon-d-oliver");
+assert.ok(
+  judgeProfile.includes("/legal-ai-risk/judges/vernon-d-oliver/report"),
+  "An entity profile must expose its source-linked evidence report",
+);
+
+const judgeReport = await page("/judges/vernon-d-oliver/report");
+assert.ok(
+  judgeReport.includes("JUDICIAL EVIDENCE REPORT"),
+  "A judge report must identify its report type",
+);
+assert.ok(
+  judgeReport.includes("View live intelligence profile"),
+  "An entity report must link back to the canonical profile",
+);
+assert.ok(
+  judgeReport.includes('"@type":"Report"'),
+  "An entity report must expose Report JSON-LD",
+);
+
 const sitemap = await page("/sitemap.xml");
 const caseUrls = sitemap.match(/\/cases\//g) || [];
 const expectedIndexable = Object.entries(readiness.by_slug).filter(
@@ -202,5 +222,13 @@ const expectedIndexable = Object.entries(readiness.by_slug).filter(
   },
 ).length;
 assert.equal(caseUrls.length, expectedIndexable, "Sitemap must contain every case that passes both publication and evidence baselines");
+assert.ok(
+  sitemap.includes("/judges/vernon-d-oliver/report"),
+  "Sitemap must include index-eligible entity reports",
+);
+assert.ok(
+  sitemap.includes("/og/entity/judge/vernon-d-oliver?variant=report"),
+  "Sitemap must associate entity reports with their OG image",
+);
 
-console.log(JSON.stringify({ status: "pass", base, checks: 49, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseUrls.length }, null, 2));
+console.log(JSON.stringify({ status: "pass", base, checks: 55, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseUrls.length }, null, 2));

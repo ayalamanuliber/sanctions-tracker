@@ -273,6 +273,19 @@ export function entityHref(kind: EntityKind, slug: string) {
   return `/${entityPathSegment(kind)}/${slug}`;
 }
 
+export function entityReportHref(kind: EntityKind, slug: string) {
+  return `${entityHref(kind, slug)}/report`;
+}
+
+export function entityOgImageHref(
+  kind: EntityKind,
+  slug: string,
+  variant: "profile" | "report" = "profile",
+) {
+  const query = variant === "report" ? "?variant=report" : "";
+  return `/og/entity/${kind}/${slug}${query}`;
+}
+
 export function entityDirectoryHref(kind: EntityKind) {
   return `/${entityPathSegment(kind)}`;
 }

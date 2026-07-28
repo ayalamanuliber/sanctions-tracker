@@ -21,6 +21,10 @@ const requiredRoutes=[
  "app/countries/page.tsx","app/countries/[slug]/page.tsx","app/states/page.tsx","app/states/[slug]/page.tsx",
  "app/tools/page.tsx","app/tools/[slug]/page.tsx","app/failure-modes/page.tsx",
  "app/failure-modes/[slug]/page.tsx","app/consequences/page.tsx","app/consequences/[slug]/page.tsx",
+ "app/judges/[slug]/report/page.tsx","app/courts/[slug]/report/page.tsx",
+ "app/countries/[slug]/report/page.tsx","app/states/[slug]/report/page.tsx",
+ "app/tools/[slug]/report/page.tsx","app/failure-modes/[slug]/report/page.tsx",
+ "app/consequences/[slug]/report/page.tsx","app/og/entity/[kind]/[slug]/route.tsx",
  "app/sitemap.ts","app/robots.ts"
 ];
 for(const file of requiredRoutes) if(!fs.existsSync(path.join(root,file))) failures.push(`missing route: ${file}`);

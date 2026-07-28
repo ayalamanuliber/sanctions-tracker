@@ -22,7 +22,7 @@ import {
   type CountedOption,
 } from "@/lib/corpus-analytics";
 import { createReportId, readReportBrand, type ReportTier } from "@/lib/reporting";
-import { assetUrl } from "@/lib/site";
+import { assetUrl, publicUrl, SITE_PUBLICATION_DATE } from "@/lib/site";
 import styles from "./print.module.css";
 
 export const metadata: Metadata = {
@@ -156,9 +156,47 @@ export default async function AnalyticsPrintPage({
   const topCourt = analytics.courtsRanked[0];
   const topFailure = analytics.failures[0];
   const topConsequence = analytics.consequenceBuckets[0];
+  const reportPath = `/analytics/print${
+    scopeParams.size ? `?${scopeParams.toString()}` : ""
+  }`;
+  const reportUrl = publicUrl(reportPath);
+  const reportSchema = {
+    "@context": "https://schema.org",
+    "@type": "Report",
+    "@id": `${reportUrl}#report`,
+    name: "AI Vortex Analytics Evidence Brief",
+    identifier: reportId,
+    description:
+      "A print-ready, source-aware summary of the selected AI Vortex analytics view.",
+    url: reportUrl,
+    datePublished: SITE_PUBLICATION_DATE,
+    dateModified: LAST_CHECKED,
+    isAccessibleForFree: true,
+    about: {
+      "@type": "Dataset",
+      name: "AI Vortex Legal AI Risk public corpus",
+      url: publicUrl("/analytics"),
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "AI Vortex",
+      url: "https://www.aivortex.io",
+    },
+    citation: cases.slice(0, 24).map((item) => ({
+      "@type": "CreativeWork",
+      name: item.case_name,
+      url: publicUrl(`/cases/${item.slug}`),
+    })),
+  };
 
   return (
     <main className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(reportSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <ReportPreviewToolbar
         backHref={backHref}
         backLabel="Back to analytics"

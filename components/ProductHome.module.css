@@ -43,7 +43,7 @@
 .brand span, .footer > div span { display: flex; flex-direction: column; line-height: 1; }
 .brand strong, .footer strong { font-size: 16px; letter-spacing: .02em; }
 .brand small, .footer small { margin-top: 5px; font-size: 8px; font-weight: 700; letter-spacing: .16em; color: #cbd5e1; }
-.desktopNav { flex: 1; display: flex; align-items: center; justify-content: center; gap: 30px; }
+.desktopNav { flex: 1; display: flex; align-items: center; justify-content: center; gap: 24px; }
 .desktopNav a, .navActions > a:first-child { color: #d8e1ec; font-size: 13px; font-weight: 600; }
 .desktopNav a:hover, .navActions > a:first-child:hover { color: white; }
 .navActions { display: flex; align-items: center; gap: 22px; }

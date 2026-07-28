@@ -263,6 +263,12 @@ export function getEntity(kind: EntityKind, slug: string) {
   return ENTITIES[kind].find((entity) => entity.slug === slug) || null;
 }
 
+export function getRecordEntities(kind: EntityKind, recordId: string) {
+  return ENTITIES[kind].filter((entity) =>
+    entity.records.some((record) => record.id === recordId),
+  );
+}
+
 export function entityHref(kind: EntityKind, slug: string) {
   return `/${entityPathSegment(kind)}/${slug}`;
 }

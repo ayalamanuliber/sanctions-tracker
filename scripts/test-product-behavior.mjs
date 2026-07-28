@@ -81,6 +81,10 @@ for (const route of [
 const judgePage = await page("/judges/vernon-d-oliver");
 assert.ok(judgePage.includes("Public records in this view"), "Judge pages must expose their linked public matters");
 assert.ok(judgePage.includes("Corpus denominator"), "Judge pages must state their corpus denominator");
+const judgesDirectory = await page("/judges");
+assert.ok(judgesDirectory.includes("Browse the evidence network"), "Entity directories must expose cross-corpus navigation");
+assert.ok(judgesDirectory.includes("/legal-ai-risk/courts"), "Judge directory must link directly to court profiles");
+assert.ok(judgesDirectory.includes("/legal-ai-risk/tools"), "Judge directory must link directly to recorded AI tools");
 
 const toolPage = await page("/tools/chatgpt");
 assert.ok(toolPage.includes("Public records in this view"), "Tool pages must expose their linked public matters");
@@ -102,6 +106,27 @@ assert.ok(noMatch.includes("did not silently substitute"), "Fallback must be exp
 const curatedCase = await page(`/cases/${mata.id}`);
 assert.ok(curatedCase.includes("What happened in this matter?"), "Curated case page must include a direct answer block");
 assert.ok(curatedCase.includes("What the record establishes about AI use"), "Curated case page must state the attribution boundary");
+assert.ok(curatedCase.includes("/legal-ai-risk/judges"), "Global case navigation must expose the judge directory");
+
+const judgeLinkedCase = await page(
+  "/cases/braica-v-frankowski-anthony-braica-v-tom-frankowski-2025-12-15",
+);
+assert.ok(
+  judgeLinkedCase.includes("/legal-ai-risk/judges/vernon-d-oliver"),
+  "A case with a recorded judge must link to the judge profile",
+);
+assert.ok(
+  judgeLinkedCase.includes("/legal-ai-risk/courts/d-connecticut"),
+  "A case must link its recorded court to the court profile",
+);
+assert.ok(
+  judgeLinkedCase.includes("/legal-ai-risk/states/ct"),
+  "A case must link its jurisdiction context to the state profile",
+);
+assert.ok(
+  judgeLinkedCase.includes("/legal-ai-risk/failure-modes/fake-citations"),
+  "A classified case tag must link to its failure-mode profile",
+);
 
 const sitemap = await page("/sitemap.xml");
 const caseUrls = sitemap.match(/\/cases\//g) || [];
@@ -122,4 +147,4 @@ const expectedIndexable = Object.entries(readiness.by_slug).filter(
 ).length;
 assert.equal(caseUrls.length, expectedIndexable, "Sitemap must contain every case that passes both publication and evidence baselines");
 
-console.log(JSON.stringify({ status: "pass", base, checks: 31, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseUrls.length }, null, 2));
+console.log(JSON.stringify({ status: "pass", base, checks: 40, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseUrls.length }, null, 2));

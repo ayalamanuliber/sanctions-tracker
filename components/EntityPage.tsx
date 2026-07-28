@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ExternalLink, ShieldCheck } from "lucide-react";
 
+import CorpusDirectoryNav from "@/components/CorpusDirectoryNav";
 import ResearchShell from "@/components/ResearchShell";
 import shell from "@/components/ResearchShell.module.css";
 import { LAST_CHECKED, LEGAL_RISK_CASES, formatCaseDate } from "@/lib/cases";
@@ -145,6 +146,7 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
     <div className={shell.breadcrumbs}><Link href="/">Home</Link><span>/</span><span>{title}</span></div>
     <header className={shell.pageHead}><div><span className={shell.eyebrow}>Corpus navigation</span><h1>Browse {title}</h1><p>These pages group recorded public matters by one structured field. They are navigational corpus views, not comparative risk rankings.</p></div><div className={shell.headActions}><Link className={shell.button} href="/cases">Search all records</Link><Link className={shell.buttonSecondary} href="/sources">Methodology</Link></div></header>
+    <CorpusDirectoryNav activeKind={kind} compact />
     <div className={styles.metrics}><article className={`${shell.card} ${styles.metric}`}><small>Entities</small><strong>{entities.length.toLocaleString()}</strong></article><article className={`${shell.card} ${styles.metric}`}><small>Index eligible</small><strong>{indexable.toLocaleString()}</strong></article><article className={`${shell.card} ${styles.metric}`}><small>Corpus records</small><strong>{LEGAL_RISK_CASES.length.toLocaleString()}</strong></article><article className={`${shell.card} ${styles.metric}`}><small>Corpus checked</small><strong>{formatCaseDate(LAST_CHECKED)}</strong></article></div>
     <section className={`${shell.card} ${styles.section}`}><h2>{title[0]?.toUpperCase() + title.slice(1)} in the public record</h2><p className={styles.directoryIntro}>Open an entity to inspect its exact denominator, source-linked case records, limitations, and related corpus views.</p><div className={styles.directoryList}>{entities.map((entity) => <Link className={styles.directoryItem} data-indexable={entity.indexEligible} href={entityHref(kind, entity.slug)} key={entity.slug}><div><strong>{entity.label}</strong><small>{entity.sourceLinked.toLocaleString()}/{entity.records.length.toLocaleString()} source linked · latest {formatCaseDate(entity.latest)}</small></div><b>{entity.records.length.toLocaleString()} records</b></Link>)}</div><p className={styles.indexNote}>Entity pages with fewer than {entityIndexThreshold()} source-linked records remain available for transparent research but are excluded from search indexing.</p></section>
   </main></ResearchShell>;

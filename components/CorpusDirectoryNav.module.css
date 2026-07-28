@@ -1,0 +1,145 @@
+.wrap {
+  margin: 0 0 22px;
+  padding: 18px;
+  border: 1px solid #dce3ec;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(16, 39, 70, .045);
+}
+
+.heading {
+  display: flex;
+  align-items: baseline;
+  gap: 13px;
+  margin-bottom: 13px;
+}
+
+.heading strong {
+  color: #102947;
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.heading span {
+  color: #6b7a90;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #dce5f0;
+  border-radius: 5px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color .16s ease, background .16s ease, transform .16s ease;
+}
+
+.item:hover,
+.item:focus-visible {
+  border-color: #8cb5eb;
+  background: #f4f8ff;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.item[data-active="true"] {
+  border-color: #8cb5eb;
+  background: #edf5ff;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background: #edf5ff;
+  color: #2475db;
+}
+
+.copy {
+  min-width: 0;
+}
+
+.copy strong,
+.copy small {
+  display: block;
+}
+
+.copy strong {
+  overflow: hidden;
+  color: #173a67;
+  font-size: 11px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.copy small {
+  margin-top: 3px;
+  overflow: hidden;
+  color: #718096;
+  font-size: 9px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item b {
+  color: #8a99ad;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.compact .heading span {
+  display: none;
+}
+
+@media (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .heading {
+    display: block;
+  }
+
+  .heading span {
+    display: block;
+    margin-top: 4px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .wrap {
+    padding: 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .copy strong {
+    font-size: 12px;
+  }
+}

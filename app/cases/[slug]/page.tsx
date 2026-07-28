@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
+  ArrowRight,
   AlertTriangle,
   Banknote,
   Bot,
@@ -19,6 +20,7 @@ import {
   ShieldAlert,
   ShieldCheck,
   UserRound,
+  type LucideIcon,
 } from "lucide-react";
 import { notFound } from "next/navigation";
 
@@ -47,10 +49,22 @@ import {
   cleanImportedText,
   excerptAtWordBoundary,
 } from "@/lib/case-seo";
+import {
+  entityHref,
+  getEntity,
+  getRecordEntities,
+} from "@/lib/entity-pages";
 import { PUBLIC_BASE_URL, PUBLIC_ORIGIN, publicUrl } from "@/lib/site";
 import styles from "./case.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
+type CaseFact = {
+  label: string;
+  value: string;
+  icon: LucideIcon;
+  href?: string;
+  tool?: boolean;
+};
 
 const NARRATIVE_HEADINGS = [
   "AI Use",
@@ -210,8 +224,22 @@ export default async function CasePage({ params }: Props) {
     (knownAmountValue ? knownAmount : "") ||
     item.sanction_types.map((v) => v.replaceAll("-", " ")).join(", ") ||
     "Tracked public outcome";
-  const facts = [
-    { label: "Court", value: item.court, icon: Landmark },
+  const courtEntity = getRecordEntities("court", item.id)[0] || null;
+  const judgeEntity = getRecordEntities("judge", item.id)[0] || null;
+  const stateEntity = getRecordEntities("state", item.id)[0] || null;
+  const countryEntity = getRecordEntities("country", item.id)[0] || null;
+  const toolEntities = getRecordEntities("tool", item.id);
+  const consequenceEntities = getRecordEntities("consequence", item.id);
+  const jurisdictionEntity = stateEntity || countryEntity;
+  const facts: CaseFact[] = [
+    {
+      label: "Court",
+      value: item.court,
+      icon: Landmark,
+      href: courtEntity
+        ? entityHref("court", courtEntity.slug)
+        : `/cases?court=${encodeURIComponent(item.court)}`,
+    },
     ...(item.judge
       ? [
           {
@@ -220,10 +248,20 @@ export default async function CasePage({ params }: Props) {
               ? `${item.judge} · ${item.judge_role}`
               : item.judge,
             icon: Gavel,
+            href: judgeEntity
+              ? entityHref("judge", judgeEntity.slug)
+              : `/cases?q=${encodeURIComponent(item.judge)}`,
           },
         ]
       : []),
-    { label: "Jurisdiction", value: item.jurisdiction, icon: MapPin },
+    {
+      label: "Jurisdiction",
+      value: item.jurisdiction,
+      icon: MapPin,
+      href: jurisdictionEntity
+        ? entityHref(jurisdictionEntity.kind, jurisdictionEntity.slug)
+        : undefined,
+    },
     {
       label: "Circuit",
       value: item.circuit || "Not recorded",
@@ -235,6 +273,9 @@ export default async function CasePage({ params }: Props) {
       value: intelligence?.recorded_tool || item.ai_tool_used || "Unidentified",
       icon: Bot,
       tool: true,
+      href: toolEntities[0]
+        ? entityHref("tool", toolEntities[0].slug)
+        : undefined,
     },
     {
       label: "Party type",
@@ -256,6 +297,20 @@ export default async function CasePage({ params }: Props) {
       icon: ShieldAlert,
     },
   ];
+  const scopeHref = jurisdictionEntity
+    ? entityHref(jurisdictionEntity.kind, jurisdictionEntity.slug)
+    : item.country === "US" && item.state
+      ? `/cases?state=${encodeURIComponent(item.state)}`
+      : `/cases?country=${encodeURIComponent(item.country)}`;
+  const tagLinks = item.tags.slice(0, 4).map((tag) => {
+    const failureEntity = getEntity("failure", tag);
+    return {
+      label: tag.replaceAll("-", " "),
+      href: failureEntity
+        ? entityHref("failure", failureEntity.slug)
+        : `/cases?failure=${encodeURIComponent(tag)}&sort=date`,
+    };
+  });
   const canonicalUrl = publicUrl(`/cases/${item.slug}`);
   const correctionHref = `/submit?${new URLSearchParams({
     case_id: item.id,
@@ -441,24 +496,52 @@ export default async function CasePage({ params }: Props) {
             </span>
             <h1>{item.case_name}</h1>
             <p className={styles.courtLine}>
-              {item.court} · {formatCaseDate(item.date)}
-              {item.judge ? ` · ${item.judge}` : ""}
+              {courtEntity ? (
+                <Link href={entityHref("court", courtEntity.slug)}>
+                  {item.court}
+                </Link>
+              ) : (
+                item.court
+              )}{" "}
+              · {formatCaseDate(item.date)}
+              {item.judge && (
+                <>
+                  {" "}·{" "}
+                  {judgeEntity ? (
+                    <Link href={entityHref("judge", judgeEntity.slug)}>
+                      {item.judge}
+                    </Link>
+                  ) : (
+                    item.judge
+                  )}
+                </>
+              )}
             </p>
             <div className={styles.chips}>
-              <span className={styles.chip}>
+              <Link className={styles.chip} href={scopeHref}>
                 {item.country === "US"
                   ? `${item.state} / ${item.jurisdiction}`
                   : item.country}
-              </span>
-              <span
+              </Link>
+              <Link
                 className={`${styles.chip} ${item.severity === "high" || item.severity === "career-ending" ? styles.chipDanger : ""}`}
+                href={`/cases?severity=${encodeURIComponent(item.severity)}&sort=severity`}
               >
                 Editorial impact: {item.severity.replace("-", " ")}
-              </span>
-              {item.tags.slice(0, 4).map((tag) => (
-                <span className={styles.chip} key={tag}>
-                  {tag.replaceAll("-", " ")}
-                </span>
+              </Link>
+              {tagLinks.map((tag) => (
+                <Link className={styles.chip} href={tag.href} key={tag.href}>
+                  {tag.label}
+                </Link>
+              ))}
+              {consequenceEntities.slice(0, 2).map((entity) => (
+                <Link
+                  className={`${styles.chip} ${styles.chipConsequence}`}
+                  href={entityHref("consequence", entity.slug)}
+                  key={entity.slug}
+                >
+                  {entity.label}
+                </Link>
               ))}
             </div>
           </section>
@@ -521,17 +604,18 @@ export default async function CasePage({ params }: Props) {
             <section className={`${shell.card} ${styles.section}`}>
               <h2>Record details</h2>
               {item.country === "US" && item.state && (
-                <div className={styles.stateContext}>
+                <Link className={styles.stateContext} href={scopeHref}>
                   <StateScopeMark state={item.state} />
                   <span>
-                    <b>Jurisdiction context</b>The state marker is derived from
-                    the structured case record.
+                    <b>Explore {item.state_display || item.state}</b>Open its
+                    source-linked jurisdiction page and related matters.
                   </span>
-                </div>
+                  <ArrowRight aria-hidden="true" size={16} />
+                </Link>
               )}
               <div className={styles.facts}>
-                {facts.map(({ label, value, icon: Icon, tool }) => (
-                  <div className={styles.fact} key={label}>
+                {facts.map(({ label, value, icon: Icon, tool, href }) => {
+                  const content = <>
                     <div className={styles.factIcon}>
                       <Icon aria-hidden="true" size={16} />
                       {tool && (
@@ -542,8 +626,16 @@ export default async function CasePage({ params }: Props) {
                       <small>{label}</small>
                       <strong>{value}</strong>
                     </div>
-                  </div>
-                ))}
+                    {href && <ArrowRight className={styles.factArrow} aria-hidden="true" size={14} />}
+                  </>;
+                  return href ? (
+                    <Link className={`${styles.fact} ${styles.factLink}`} href={href} key={label}>
+                      {content}
+                    </Link>
+                  ) : (
+                    <div className={styles.fact} key={label}>{content}</div>
+                  );
+                })}
               </div>
             </section>
             <section className={`${shell.card} ${styles.section}`}>
@@ -755,14 +847,19 @@ export default async function CasePage({ params }: Props) {
                 <Link href={`/cases/${item.slug}/brief`}>
                   Open case brief <FileDown size={15} />
                 </Link>
-                <Link href={`/cases?court=${encodeURIComponent(item.court)}`}>
-                  Cases from this court
-                </Link>
-                {item.state && (
-                  <Link href={`/map?states=${item.state}`}>
-                    Open jurisdiction map <MapPin size={15} />
+                {courtEntity && (
+                  <Link href={entityHref("court", courtEntity.slug)}>
+                    Open {item.court} profile <Landmark size={15} />
                   </Link>
                 )}
+                {judgeEntity && (
+                  <Link href={entityHref("judge", judgeEntity.slug)}>
+                    Open {item.judge} profile <Gavel size={15} />
+                  </Link>
+                )}
+                <Link href={scopeHref}>
+                  Explore jurisdiction <MapPin size={15} />
+                </Link>
               </div>
             </section>
             <section className={`${shell.card} ${styles.sourceCard}`}>

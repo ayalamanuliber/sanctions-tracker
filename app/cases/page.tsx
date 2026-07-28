@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpDown, Banknote, Bot, CalendarDays, ChevronFirst, ChevronLast, ChevronLeft, ChevronRight, Landmark, Search } from "lucide-react";
+import { ArrowUpDown, Banknote, Bot, CalendarDays, ChevronFirst, ChevronLast, ChevronLeft, ChevronRight, Gavel, Landmark, Search } from "lucide-react";
 
+import CorpusDirectoryNav from "@/components/CorpusDirectoryNav";
 import ResearchShell from "@/components/ResearchShell";
 import shell from "@/components/ResearchShell.module.css";
 import { COUNTRIES_TRACKED, LEGAL_RISK_CASES, formatCaseDate, getCaseFallbacks, getCaseMatchReason, queryCases } from "@/lib/cases";
@@ -79,8 +80,10 @@ export default async function CasesPage({ searchParams }: { searchParams?: Promi
       <div className={shell.breadcrumbs}><Link href="/">Home</Link><span>/</span><span>Cases</span></div>
       <header className={shell.pageHead}>
         <div><span className={shell.eyebrow}>Complete corpus</span><h1>Search legal AI risk records</h1><p>Find cases, orders, courts, tools, and failure patterns. Results cover the complete global corpus; use status filters to separate allegation-only records. Judge search is available only where a judge is recorded.</p></div>
-        <div className={shell.headActions}><Link className={shell.buttonSecondary} href="/map">Open map</Link><Link className={shell.buttonSecondary} href="/sources">Methodology</Link></div>
+        <div className={shell.headActions}><Link className={shell.buttonSecondary} href="/courts"><Landmark size={15} />Browse courts</Link><Link className={shell.buttonSecondary} href="/judges"><Gavel size={15} />Browse judges</Link><Link className={shell.buttonSecondary} href="/map">Open map</Link></div>
       </header>
+
+      <CorpusDirectoryNav />
 
       <form className={`${shell.card} ${styles.searchPanel}`} method="get">
         <div className={styles.searchRow}>

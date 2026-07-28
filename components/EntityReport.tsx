@@ -372,7 +372,7 @@ export function EntityReportPage({
       <article
         className={`${styles.sheet} ${
           tier === "premium" ? styles.proSheet : ""
-        }`}
+        } ${entity.records.length <= 2 ? styles.compactSheet : ""}`}
       >
         <header className={styles.header}>
           <ReportBrandLockup brand={brandKey} tier={tier} />

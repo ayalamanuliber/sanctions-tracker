@@ -2,11 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
+  BookOpenCheck,
+  Database,
   FileCheck2,
   FileSearch,
   Gauge,
   Gavel,
+  Landmark,
   ScrollText,
+  Search,
   ShieldCheck,
 } from "lucide-react";
 
@@ -61,10 +65,10 @@ const workflows = [
   },
   {
     icon: Gavel,
-    title: "Jurisdiction brief",
-    href: "/dashboard",
+    title: "Analytics evidence brief",
+    href: "/analytics",
     user: "Partner, judge, researcher, vendor",
-    does: "Summarizes observed public records with role-specific controls and reproducible filters.",
+    does: "Filters observed public records and opens the current source-linked analytics brief.",
     boundary: "Corpus patterns are not usage-adjusted incident rates.",
   },
   {
@@ -77,6 +81,8 @@ const workflows = [
       "A link in the tracker is not the same as independent verification.",
   },
 ];
+
+const WITHERS_SLUG = "withers-v-city-of-aberdeen-2026-06-08";
 
 export default function WorkflowsPage() {
   return (
@@ -101,11 +107,33 @@ export default function WorkflowsPage() {
             <Link className={shell.button} href="/cases">
               Search first
             </Link>
-            <Link className={shell.buttonSecondary} href="/use-with-ai">
-              Use in your AI app
+            <Link className={shell.buttonSecondary} href={`/cases/${WITHERS_SLUG}/brief?tier=free`}>
+              Open a current brief
             </Link>
           </div>
         </header>
+        <section className={styles.workflowBand} aria-labelledby="workflow-loop-title">
+          <div className={styles.workflowBandIntro}>
+            <BookOpenCheck aria-hidden="true" />
+            <span>Live evidence workflow</span>
+            <h2 id="workflow-loop-title">One record. Three accountable moves.</h2>
+            <p>
+              Follow a real matter from discovery through source inspection to
+              the current review-ready brief.
+            </p>
+          </div>
+          <div className={styles.workflowSteps}>
+            <Link href={`/cases/${WITHERS_SLUG}`}>
+              <b>01</b><Search aria-hidden="true" /><span><strong>Inspect the record</strong><small>Withers v. City of Aberdeen</small></span><ArrowRight />
+            </Link>
+            <Link href={`/cases/${WITHERS_SLUG}#source-record`}>
+              <b>02</b><Landmark aria-hidden="true" /><span><strong>Check the source</strong><small>Read the recorded evidence and limits</small></span><ArrowRight />
+            </Link>
+            <Link href={`/cases/${WITHERS_SLUG}/brief?tier=free`}>
+              <b>03</b><FileCheck2 aria-hidden="true" /><span><strong>Open the current brief</strong><small>Live, source-linked, and print-ready</small></span><ArrowRight />
+            </Link>
+          </div>
+        </section>
         <div className={styles.layout}>
           <section className={styles.grid}>
             {workflows.map(
@@ -129,17 +157,17 @@ export default function WorkflowsPage() {
           </section>
           <aside className={styles.rail}>
             <section className={shell.card}>
-              <h2>Start with the decision</h2>
-              <ol>
-                <li>Search the public record.</li>
-                <li>Inspect the linked source and status.</li>
-                <li>Select the workflow that matches the deadline.</li>
-                <li>Record human verification and unresolved exceptions.</li>
-                <li>Export only what the evidence supports.</li>
+              <div className={styles.railTitle}><Database aria-hidden="true" /><div><span>Review sequence</span><h2>Start with the decision</h2></div></div>
+              <ol className={styles.decisionList}>
+                <li><Search aria-hidden="true" /><span>Search the public record.</span></li>
+                <li><Landmark aria-hidden="true" /><span>Inspect the linked source and status.</span></li>
+                <li><Gauge aria-hidden="true" /><span>Select the workflow that matches the deadline.</span></li>
+                <li><ShieldCheck aria-hidden="true" /><span>Record human verification and unresolved exceptions.</span></li>
+                <li><FileCheck2 aria-hidden="true" /><span>Export only what the evidence supports.</span></li>
               </ol>
             </section>
             <section className={shell.card}>
-              <h2>Need a neutral default?</h2>
+              <div className={styles.railTitle}><FileSearch aria-hidden="true" /><div><span>Neutral default</span><h2>Need a starting point?</h2></div></div>
               <p>
                 Use the filing integrity review when the immediate question is
                 whether citations, quotations, pincites, or propositions match

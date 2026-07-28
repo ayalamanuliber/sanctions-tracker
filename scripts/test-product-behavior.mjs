@@ -44,6 +44,22 @@ const packet = await page(`/artifact/print?type=report&case_id=${encodeURICompon
 assert.ok(packet.includes("Matched set</span><strong>1 cases"), "Case packet must contain exactly one matched matter");
 assert.ok(packet.includes("Mata v. Avianca"), "Case packet must contain the selected matter");
 
+const withersSlug = "withers-v-city-of-aberdeen-2026-06-08";
+const home = await page("/");
+const workflows = await page("/workflows");
+assert.ok(
+  home.includes(`${withersSlug}/brief?tier=free`),
+  "Homepage featured packet must use the current canonical Withers brief",
+);
+assert.ok(
+  workflows.includes(`${withersSlug}/brief?tier=free`),
+  "Workflow example must use the current canonical Withers brief",
+);
+assert.ok(
+  !home.includes(`artifact/print?type=report&amp;case_id=${withersSlug}`),
+  "Homepage must not regress to the legacy Withers artifact route",
+);
+
 for (const route of [
   "/privacy",
   "/terms",

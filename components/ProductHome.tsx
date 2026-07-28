@@ -12,6 +12,7 @@ import {
   ChevronLeft,
   ChevronRight,
   CircleAlert,
+  Database,
   ExternalLink,
   FileCheck2,
   FileSearch,
@@ -19,11 +20,13 @@ import {
   Gavel,
   Globe2,
   Landmark,
+  Link2,
   Map,
   Menu,
   Scale,
   Search,
   ShieldCheck,
+  Tags,
   X,
 } from "lucide-react";
 
@@ -50,7 +53,7 @@ const workflows = [
   { icon: Landmark, label: "Browse courts and jurisdictions", href: "/courts" },
   { icon: FileSearch, label: "Analyze the public corpus", href: "/analytics" },
   { icon: BookOpenCheck, label: "Inspect sources and methodology", href: "/sources" },
-  { icon: FolderPlus, label: "Build a review packet", href: "/artifact/print?type=report&title=Legal+AI+Risk+Review+Packet&audience=legal_professional" },
+  { icon: FolderPlus, label: "Open the current analytics brief", href: "/analytics/print?tier=free" },
 ];
 
 const roles = [
@@ -138,6 +141,14 @@ export default function ProductHome() {
     [searchMode, submittedQuery],
   );
   const featured = recentSignificantCases[0];
+  const featuredSlug = featured ? getCaseSlugById(featured.id) : "";
+  const evidenceMetrics = [
+    { icon: Database, label: "Corpus records", value: homepageSummary.totalCases.toLocaleString() },
+    { icon: Tags, label: "Normalized case names", value: homepageEvidenceSummary.uniqueMatterNames.toLocaleString() },
+    { icon: ShieldCheck, label: "Non-alleged records", value: homepageEvidenceSummary.nonAllegedRecords.toLocaleString() },
+    { icon: Link2, label: "Any source link", value: `${homepageSummary.sourceCoveragePct}%` },
+    { icon: FileCheck2, label: "Source-linked records", value: homepageSummary.sourceCoverageCount.toLocaleString() },
+  ];
   const searchSuggestions = useMemo(() => query.trim().length > 1
     ? (searchMode === "sources" ? searchHomepageSources(query, 5) : searchHomepageCases(query, 5))
     : [], [query, searchMode]);
@@ -284,20 +295,22 @@ export default function ProductHome() {
         </section>
 
         <aside className={styles.packetPanel}>
-          <div className={styles.panelTitle}><h3>Review packet preview</h3></div>
+          <div className={styles.panelTitle}><h3>Current case brief</h3><span className={styles.currentBadge}>LIVE</span></div>
           <div className={styles.paperStack}><span /><span /><div><small>AI VORTEX · REVIEW PACKET</small><strong>{featured?.case_name || "Legal AI Risk Review"}</strong><p>Source-linked evidence, analysis, review controls, and citations.</p></div></div>
-          <strong>{featured?.case_name || "Review-ready packet"}</strong><p>{featured?.court} · PDF-ready</p>
-          <Link href={`/artifact/print?type=report${featured ? `&case_id=${encodeURIComponent(featured.id)}` : ""}&title=${encodeURIComponent(featured?.case_name || "Legal AI Risk Review Packet")}&audience=legal_professional`}>Open preview <ExternalLink /></Link>
+          <strong>{featured?.case_name || "Review-ready packet"}</strong><p>{featured?.court} · Live and print-ready</p>
+          <Link href={featuredSlug ? `/cases/${featuredSlug}/brief?tier=free` : "/analytics/print?tier=free"}>Open current brief <ExternalLink /></Link>
+          {featuredSlug && <Link className={styles.packetRecordLink} href={`/cases/${featuredSlug}`}>Inspect case record <ArrowRight /></Link>}
         </aside>
 
         <aside className={styles.evidencePanel}>
           <div className={styles.panelTitle}><h3>Evidence at a glance</h3></div>
           <dl>
-            <div><dt>Corpus records</dt><dd>{homepageSummary.totalCases.toLocaleString()}</dd></div>
-            <div><dt>Normalized case names</dt><dd>{homepageEvidenceSummary.uniqueMatterNames.toLocaleString()}</dd></div>
-            <div><dt>Non-alleged records</dt><dd>{homepageEvidenceSummary.nonAllegedRecords.toLocaleString()}</dd></div>
-            <div><dt>Any source link</dt><dd>{homepageSummary.sourceCoveragePct}%</dd></div>
-            <div><dt>Source-linked records</dt><dd>{homepageSummary.sourceCoverageCount.toLocaleString()}</dd></div>
+            {evidenceMetrics.map(({ icon: Icon, label, value }) => (
+              <div key={label}>
+                <dt><Icon aria-hidden="true" />{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
           </dl>
           <Link href="/sources">Inspect the evidence <ArrowRight /></Link>
         </aside>

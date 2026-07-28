@@ -638,7 +638,7 @@ export default async function CasePage({ params }: Props) {
             </section>
           </div>
           <aside>
-            <section className={`${shell.card} ${styles.sourceCard}`}>
+            <section id="source-record" className={`${shell.card} ${styles.sourceCard}`}>
               <div className={styles.sourceHead}>
                 <span>Linked evidence record</span>
                 <Scale size={17} />

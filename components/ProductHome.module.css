@@ -197,9 +197,13 @@
 .packetPanel > p { margin-top: 4px; color: #69778b; font-size: 9px; }
 .packetPanel > a { height: 34px; margin: 12px 16px 0; display: flex; align-items: center; justify-content: center; gap: 7px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 9px; font-weight: 700; }
 .packetPanel > a svg { width: 13px; }
+.currentBadge { margin-left: auto; display: inline-flex; align-items: center; gap: 5px; color: #0d7b4e; font-size: 7px; font-weight: 900; letter-spacing: .1em; }
+.currentBadge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #24c777; box-shadow: 0 0 0 3px rgba(36,199,119,.12); }
+.packetPanel > .packetRecordLink { height: auto; margin-top: 8px; justify-content: flex-start; border: 0; color: #1761c6; background: transparent; }
 .evidencePanel dl { padding: 8px 14px; }
 .evidencePanel dl > div { min-height: 38px; display: flex; align-items: center; justify-content: space-between; gap: 9px; border-bottom: 1px solid #edf0f4; }
-.evidencePanel dt { color: #637186; font-size: 9px; }
+.evidencePanel dt { display: inline-flex; align-items: center; gap: 7px; color: #637186; font-size: 9px; }
+.evidencePanel dt svg { width: 13px; height: 13px; padding: 2px; color: #2265bf; border-radius: 3px; background: #edf4ff; }
 .evidencePanel dd { color: #17243a; font-size: 11px; font-weight: 700; text-align: right; }
 .evidencePanel > a { margin: 3px 14px 14px; display: flex; align-items: center; gap: 6px; color: #1761c6; font-size: 9px; font-weight: 700; }
 

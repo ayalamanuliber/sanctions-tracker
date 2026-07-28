@@ -109,7 +109,7 @@ export default function SanctionsMapV2({
     <div className="smv2-card">
       <div className="smv2-head">
         <div className="smv2-head-left"><strong>{focusState ? `${STATE_NAMES[focusState]} evidence` : "United States evidence map"}</strong><small>{cases.length.toLocaleString()} matched records · {stateGroups.size} jurisdictions · state clusters prevent overlapping case pins</small></div>
-        {showControls && <div className="smv2-chips" aria-label="Severity filters">{["all","career-ending","high","medium","low"].map((value) => <button key={value} className={`smv2-chip ${severity === value ? "active" : ""}`} aria-pressed={severity === value} onClick={() => {setSeverity(value);setLimit(18);}}><span>{value === "career-ending" ? "Career" : value[0].toUpperCase()+value.slice(1)}</span><b>{value === "all" ? baseCases.length : severityCounts[value] || 0}</b></button>)}</div>}
+        {showControls && <div className="smv2-chips" aria-label="Editorial impact filters">{["all","career-ending","high","medium","low"].map((value) => <button key={value} className={`smv2-chip ${severity === value ? "active" : ""}`} aria-pressed={severity === value} onClick={() => {setSeverity(value);setLimit(18);}}><span>{value === "career-ending" ? "Career" : value[0].toUpperCase()+value.slice(1)}</span><b>{value === "all" ? baseCases.length : severityCounts[value] || 0}</b></button>)}</div>}
       </div>
       {showExportLinks && <div className="smv2-export-links"><Link href={focusState ? `/dashboard?state=${focusState}&audience=${encodeURIComponent(initialAudience)}` : `/dashboard?audience=${encodeURIComponent(initialAudience)}`}>Dashboard</Link><Link href={focusState ? `/sources?state=${focusState}` : "/sources"}>Sources</Link><Link href={focusState ? `/cases?country=US&state=${focusState}` : "/cases?country=US"}>All matching cases</Link></div>}
       <div className={`smv2-body ${showSideRail ? "" : "no-rail"}`}>
@@ -147,7 +147,7 @@ export default function SanctionsMapV2({
               </g>;
             })}</g>
           </svg>
-          {!embedded && <div className="smv2-map-note">{focusState ? <button onClick={() => selectState(null)}>← Return to national view</button> : <span>Select a state cluster to inspect its matters</span>}<span>Mode: {dataMode === "severity" ? "highest observed severity" : "matter count"}</span></div>}
+          {!embedded && <div className="smv2-map-note">{focusState ? <button onClick={() => selectState(null)}>← Return to national view</button> : <span>Select a state cluster to inspect its matters</span>}<span>Mode: {dataMode === "severity" ? "highest editorial impact" : "matter count"}</span></div>}
         </div>
         {showSideRail && <aside className="smv2-rail" aria-label="Map results">
           <div className="smv2-rail-heading"><div><strong>{focusState ? STATE_NAMES[focusState] : "All matching records"}</strong><small>{rows.length.toLocaleString()} results</small></div>{focusState && <button onClick={() => selectState(null)} aria-label="Clear state selection">×</button>}</div>

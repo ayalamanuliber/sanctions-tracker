@@ -18,6 +18,14 @@ export default function HomePage() {
         name: "AI Vortex Legal AI Risk",
         publisher: { "@id": "https://www.aivortex.io/#organization" },
         inLanguage: "en-US",
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: publicUrl("/cases?q={search_term_string}"),
+          },
+          "query-input": "required name=search_term_string",
+        },
       },
       {
         "@type": "CollectionPage",
@@ -36,11 +44,41 @@ export default function HomePage() {
         },
       },
       {
+        "@type": "Dataset",
+        "@id": `${PUBLIC_BASE_URL}#dataset`,
+        name: "AI Vortex Legal AI Risk Corpus",
+        description:
+          "Structured public-record research on legal AI citation failures, court responses, sanctions, and related consequences.",
+        url: publicUrl("/cases"),
+        creator: { "@id": "https://www.aivortex.io/#organization" },
+        dateModified: SITE_PUBLICATION_DATE,
+        isAccessibleForFree: true,
+        distribution: [
+          {
+            "@type": "DataDownload",
+            encodingFormat: "application/json",
+            contentUrl: publicUrl("/api/dataset?format=json"),
+          },
+          {
+            "@type": "DataDownload",
+            encodingFormat: "text/csv",
+            contentUrl: publicUrl("/api/dataset?format=csv"),
+          },
+        ],
+      },
+      {
         "@type": "Organization",
         "@id": "https://www.aivortex.io/#organization",
         name: "AI Vortex",
         url: "https://www.aivortex.io/",
-        founder: { "@type": "Person", name: "Manu Ayala" },
+        founder: { "@id": `${PUBLIC_BASE_URL}#manu-ayala` },
+      },
+      {
+        "@type": "Person",
+        "@id": `${PUBLIC_BASE_URL}#manu-ayala`,
+        name: "Manu Ayala",
+        url: publicUrl("/about"),
+        sameAs: ["https://www.linkedin.com/in/aivortex/"],
       },
     ],
   };

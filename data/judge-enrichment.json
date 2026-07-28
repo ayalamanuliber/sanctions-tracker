@@ -1,0 +1,710 @@
+{
+  "version": 1,
+  "source": "data/local-judge-candidates/primary-documents-v1.jsonl",
+  "source_sha256": "0ecfc30f080e3d68e34111650e00499084bf817b87e327213b333db4c4a56abb",
+  "record_count": 54,
+  "records": {
+    "shaddai-harris-v-iliac-llc-2026-07-16": {
+      "judge": "Brian Walker",
+      "judge_role": "Justice",
+      "evidence": {
+        "locator": "p. 24",
+        "quote": "ative-error challenge and her Rule 44.1 complaint fail. See Mincer, 2022 WL 1573715, at *17; Tex. R. App. P. 44.1(a)(1). We overrule Harris’s seventh and eighth issues. IV. CONCLUSION Having overruled Harris’s eight issues, we affirm the trial court’s judgment. /s/ Brian Walker Brian Walker Justice Delivered: July 16, 2026 24",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Shaddai_Harris_v._Iliac_USA_17_July_2026.pdf",
+        "source_sha256": "f5d32b3d91383e67d2a72394e9f4703a818f8a47d6bf6d749612b1b468a79c2a",
+        "extraction_sha256": "22c10cc4019434e4a47c4810373446943ac86c08fd2485828530d75ae5571f4a"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "paige-warthen-v-barclays-bank-delaware-warthen-i-ii-iii-2026-07-13": {
+      "judge": "Matthew J. Maddox",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 15",
+        "quote": "her sole federal cause of action from Warthen I and Warthen II. Plaintiff’s request for remand and Barclays’s motion to compel arbitration shall be held in abeyance until the jurisdictional issue is resolved. Separate Orders will issue in the three cases. July 13, 2026 /S/ Date Matthew J. Maddox United States District Judge 15",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Warthen_v._Barclays_Delaware.pdf",
+        "source_sha256": "5c1b2de93531e2ecf461a66a788232a9562075ced41350c9de1fe6e74fa4de51",
+        "extraction_sha256": "5dd14b3804da00ec4b39d30830313715f78bb71551a3aa7ca8e7dec9beb35a19"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "in-the-interest-of-q-c-and-p-c-children-2026-07-09": {
+      "judge": "Wade Birdwell",
+      "judge_role": "Justice",
+      "evidence": {
+        "locator": "p. 28",
+        "quote": "ond those in her original opening brief, and even if she had obtained leave to do so, the eight issues raised in her amended opening brief lack merit. Mother’s pending motions are denied, and the trial court’s judgment is affirmed. See Tex. R. App. P. 43.2(a). /s/ Wade Birdwell Wade Birdwell Justice Delivered: July 9, 2026 28",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/In_the_Interest_of_Q.C._and_P.C._USA_9_July_2026.pdf",
+        "source_sha256": "9d73f104d842a651c25b35012015b9d33a73bfd048f75d739222f1c616fce56f",
+        "extraction_sha256": "4edb4efef5d26863639e81001a625feaa4227777f49844c038a576b3cb1b6260"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "burlingame-v-argo-private-client-group-ltd-et-al-2026-07-08": {
+      "judge": "Amanda M. Knapp",
+      "judge_role": "United States Magistrate Judge",
+      "evidence": {
+        "locator": "p. 25",
+        "quote": "hy the claims against Mr. Scarborough should not be dismissed for failure to prosecute. The undersigned also STRIKES Plaintiff’s “Objections and Opposition” (ECF Doc. 69) and the Aurora Hill Defendants’ reply to that filing (ECF Doc. 75). Dated: July 8, 2026 /s/ Amanda M. Knapp AMANDA M. KNAPP United States Magistrate Judge OBJECTIONS Any objections to this Report and Recommendation must be filed with the Clerk of Courts within fourteen (14) days after being served with a copy of this document. Failu",
+        "source_url": "https://www.damiencharlotin.com/documents/2585/Burlingame_v._ARGO_Private_Client_Group_Ltd._USA_8_July_2026.pdf",
+        "source_sha256": "4422e3686ecf4fe3ee228036ef058255e8b45d7949069a81a00f008aa47df084",
+        "extraction_sha256": "fa10b60250cda18a7822b01c660416ac8efce90aacdeb082039830efbd247ec3"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "paris-v-paris-2026-06-25": {
+      "judge": "Wade Birdwell",
+      "judge_role": "Justice",
+      "evidence": {
+        "locator": "p. 17",
+        "quote": "cannot conclude that it constitutes an abuse of discretion. See Tran, 480 S.W.3d at 131; Williams, 2007 WL 79698, at *1. We overrule Husband’s third issue.11 III. CONCLUSION Having overruled all of Husband’s issues, we affirm the trial court’s divorce decree. /s/ Wade Birdwell Wade Birdwell Justice Delivered: June 25, 2026 11 In Husband’s original brief, he complained that the trial court had improperly divested him of his separate property because certain parts that he had",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Paris_v._Paris_USA_June_2026.pdf",
+        "source_sha256": "c6189d37cdf52522d19c82c52b82d53ef8aa8bf0222dec6d6bc9fa9521c5ffd0",
+        "extraction_sha256": "916c947fabd84e6e9a718f7157c08aea72ade78d82df4a00db8731c3e5225497"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "xinyue-hippe-v-retention-brands-llc-2026-06-23": {
+      "judge": "Lynn Adelman",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 7",
+        "quote": "nction for false representations made to the Court. That response should also explain the source of the false and inaccurate citations. The response is due twenty-one days from the entry of this order. Dated at Milwaukee, Wisconsin, this 23rd day of June, 2026. /s/ Lynn Adelman LYNN ADELMAN United States District Judge 7 Case 2:25-cv-00596-LA Filed 06/23/26 Page 7 of 7 Document 14",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Hippe_v._Retention_Brand_USA_23_June_2026.pdf",
+        "source_sha256": "6e9b2227c74c17d1ad4d62235f160441146dc0658e9411923ae8ef65875a0787",
+        "extraction_sha256": "cfd283232eac92878706a15c24324eb614e9aba4dfe65e4480cdcdbf019f28ab"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "jonathan-david-deak-v-mike-schuitema-et-al-2026-06-18": {
+      "judge": "Paul L. Maloney",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 4",
+        "quote": "as discussed above. The amendment would thus be futile, so Date: June 18, 2026 /s/ Paul L. Maloney leave to amend, even if properly requested, would have been denied, and dismissal with prejudice is appropriate. None of Plaintiff's objections have merit, so they are overruled. Paul L. Maloney United States District Judge III. All Citations Slip Copy, 2026 WL 1753635 Footnotes 1 The full sentence in Plaintiff's objection is: “And ‘where a more carefully drafted complaint might state a claim, a plai",
+        "source_url": "https://www.damiencharlotin.com/documents/2455/Deak_v._Schuitema_USA_18_June_2026.pdf",
+        "source_sha256": "3184f262efe1165590ae422ed753236a6601ed0ec7770f998c112a5fe9fd0493",
+        "extraction_sha256": "b5eadcc9c5ee18293f32cc9517915aa7b5dfe21b59d228cc9dcb0665b0e93b35"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "polanco-v-brooklyn-rose-llc-2026-06-16": {
+      "judge": "Devin P. Cohen",
+      "judge_role": "Justice",
+      "evidence": {
+        "locator": "p. 3",
+        "quote": "Polanco v. Brooklyn Rose LLC, 2026 WL 1847680 (2026) DATE <<signature>> DEVIN P. COHEN Justice of the Supreme Court Footnotes 1 The purported by apparently fabricated citations are as follows: O'Grady v City of New York, 179 AD3d 1052 (2d Dept 2020); Marquez v 1710 Realty,",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Polanco_v_Brooklyn_Rose_LLC_USA_16_June_2026.pdf",
+        "source_sha256": "7f36a83b8e352744c491ec181060a06f2525903e65735f93a4f63861431c3be0",
+        "extraction_sha256": "d2f00e16c5e90776f22ce7ef9496349473d82b5e6dd13c35b5f88604811d26ff"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "jason-wimberly-v-verizon-new-york-inc-2026-06-12": {
+      "judge": "Laura Taylor Swain",
+      "judge_role": "Chief United States District Judge",
+      "evidence": {
+        "locator": "p. 10",
+        "quote": "status is denied for the purpose of an appeal. Cf. Coppedge v. United States, 369 U.S. 438, 444-45 (1962) (holding that an appellant demonstrates good faith when he seeks review of a nonfrivolous issue). SO ORDERED. Dated: June 12, 2026 New York, New York /s/ Laura Taylor Swain LAURA TAYLOR SWAIN Chief United States District Judge 10",
+        "source_url": "https://www.damiencharlotin.com/documents/2449/Wimberly_v_Verizon_New_York_Inc_USA_12_June_2026.pdf",
+        "source_sha256": "025b2e82259164560c79a284e94e41c5d72f97ce49c586e9972f1e5dc704c5b8",
+        "extraction_sha256": "8ec4ca098dcff47ad668faaf3c587bb3208c2b9cddc72c0e63e9d6d8c35975d3"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "christian-lavell-jennings-v-vandergriff-honda-2026-05-28": {
+      "judge": "Wade Birdwell",
+      "judge_role": "Justice",
+      "evidence": {
+        "locator": "p. 12",
+        "quote": "Having concluded that Jennings has forfeited her complaints due to inadequate briefing and that the trial court did not err when it confirmed the arbitration award, we affirm the trial court’s judgment. /s/ Wade Birdwell Wade Birdwell Justice Delivered: May 28, 2026 12",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Christian_Lavell_Jennings_v._Vandergriff_Honda_USA_28_May_2026.pdf",
+        "source_sha256": "31c7a845d3c48fbd96b06efe844e5fb002cd4f95ed8309824a28f6f61f73b887",
+        "extraction_sha256": "04eb39236101a40b0a0a2c84389ef283cb3ef0a327115079c579d432b80500d4"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "polanco-v-himalayan-real-estate-llc-et-al-2026-05-27": {
+      "judge": "Hector Gonzalez",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 14",
+        "quote": "ed States, 369 U.S. 438, 444–45 (1962). The Clerk of Court is respectfully directed to mail a copy of this order to Plaintiff at the address provided, note the mailing on the docket, enter judgment consistent with this Order, and close this case. SO ORDERED. /s/ Hector Gonzalez HECTOR GONZALEZ United States District Judge Dated: Brooklyn, New York May 27, 2026 14",
+        "source_url": "https://www.damiencharlotin.com/documents/2217/Polanco_v._Driscoll_USA_27_May_2026.pdf",
+        "source_sha256": "f5662fe17fede7dadd46e48706b32e77b535f9a7c65da1e1d498eca6440c4d18",
+        "extraction_sha256": "b2988afecb5f855da898286816820400012fd888d6cc6c81ceeab6a13b47b42f"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "curtin-v-watts-et-al-2026-05-20": {
+      "judge": "Thomas D. Schroeder",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 18",
+        "quote": "/s/ Thomas D. Schroeder United States District Judge May 20, 2026 18 Case 1:25-cv-00782-TDS-JGM Document 66 Filed 05/20/26 Page 18 of 18",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Curtin_v._Watts_USA_19_May_2026.pdf",
+        "source_sha256": "bec0505b999fc4d987fe2bc2ce2c9ef52c22f75f4615d9046429e719deef78e8",
+        "extraction_sha256": "2c732526f8ccb1bf2a5ca4bbe146f063aa04a93939a06100b7c8ff226ff46ad0"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "bank-of-america-v-mapp-2026-05-15": {
+      "judge": "Thomas D. Schroeder",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 9",
+        "quote": "st costs and actual expenses, including attorney fees, incurred as a result of the removal, with supporting documentation, if it desires to receive reimbursement of such costs and expenses from Mapp. If the Bank files such motion, Mapp shall have 14 days to file a response. /s/ Thomas D. Schroeder United States District Judge May 15, 2026 9",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/BoA_v._Mapp_USA_15_May_2026.pdf",
+        "source_sha256": "6c5ea9da65c883edda364d921119238d6aa1a0cc51f22a652af0c2e5107edc79",
+        "extraction_sha256": "3fa0d9f654de7e036ebe9a0f8c4380da3e6ed62116b8ad6b6e9f43f6d082312d"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "terrance-anthony-norris-v-jpmorgan-chase-bank-n-a-2026-05-06": {
+      "judge": "Hector Gonzalez",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 15",
+        "quote": "444–45 (1962). The Clerk of Court is respectfully directed to enter judgment consistent with this Order and close this case. The Clerk of Court is also directed to mail a copy of this Order to pro se Plaintiff and note the mailing on the docket. SO ORDERED. /s/ Hector Gonzalez HECTOR GONZALEZ United States District Judge Dated: Brooklyn, New York May 6, 2026 15",
+        "source_url": "https://www.damiencharlotin.com/documents/2099/Norris_v._JP_Morgan_USA_May_2026.pdf",
+        "source_sha256": "e3d071f8bb853ae419398fbe093bad75bc243cb31edd5c6c6213b0bfcd24260a",
+        "extraction_sha256": "839f8cf9b3bc8a2016fccf690179ee536df1f1aa324008024e1efa3567b60d30"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "moore-v-mc-architects-inc-et-al-2026-05-05": {
+      "judge": "J. Michael Seabright",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 40",
+        "quote": "is GRANTED on Moore’s misrepresentation and breach-of-contract claims, and (3) summary judgment is GRANTED IN PART AND DENIED IN PART AS MOOT as to damages. The Clerk of Court shall close the case. IT IS SO ORDERED. DATED: Honolulu, Hawaii, May 5, 2026. /s/ J. Michael Seabright J. Michael Seabright United States District Judge 40",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Moore_v._MC_Architect_USA_5_May_2026.pdf",
+        "source_sha256": "67ec89ac970698dc29c6ca65a30d43755fb1405b676c3af665f6e86f46b654ca",
+        "extraction_sha256": "9c39c9718889c1d063825ffdfc78d893e96bd87abe0bd358c6c78ac4d832fda7"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "devin-a-robinson-v-velosio-llc-2026-05-04": {
+      "judge": "Adam B. Abelson",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 10",
+        "quote": "hown that the Agreement is void because the compensation he received for signing the Agreement was illegal. Therefore, Defendants’ motion to dismiss will be granted and the third amended complaint will be dismissed with prejudice. A separate order follows. Date: May 4, 2026 /s/ Adam B. Abelson United States District Judge 10",
+        "source_url": "https://www.damiencharlotin.com/documents/2125/Robinson_v_Velosio_LLC_et_al_USA_5_May_2026Y.pdf",
+        "source_sha256": "809a68295e96d34e781b8cc317932eeccc3419870cd8973e8259a78465905233",
+        "extraction_sha256": "d9a627114716e99864171dedefb007e27d3d93e2f3787e065849cee75c08c0ae"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "yasmani-gurri-rubio-v-markwayne-mullin-et-al-2026-05-01": {
+      "judge": "Adam B. Abelson",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 14",
+        "quote": "Case 1:25-cv-02756-ABA Document 56 Filed 05/01/26 Page 14 of 14 motion for remand (ECF No. 21). All other pending motions in this case (ECF Nos. 7, 14, 16, 23, 25, 30, 50, 52, 53) will be denied as moot. A separate order follows. Date: May 1, 2026 /s/ ___________________ Adam B. Abelson United States District Judge 14",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Rubio_v._Mullin_USA_1_May_2026.pdf",
+        "source_sha256": "ea1ab38cf0ea1c0f4ffee195353b91f3c06008dd75edc55fa04fe7ca4984cc81",
+        "extraction_sha256": "2bf2efe7f199a544485cc4deb37328a25ff886818f9afb8a09007ff7cd8db679"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "darrin-l-johnson-jr-v-nationstar-mortgage-llc-et-al-2026-04-30": {
+      "judge": "Julie R. Rubin",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 9",
+        "quote": "preliminary injunction pursuant to Rule 65. Accordingly, it is this 30th day of April 2026, ORDERED that Plaintiff’s Motion (ECF No. 64) shall be, is hereby, DENIED. Madam Clerk shall transmit a copy of this memorandum opinion and order to Plaintiff. /S/ ______________________ Julie R. Rubin United States District Judge 9",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Johnson_v._Nationstar_USA_30_APril_2026.pdf",
+        "source_sha256": "082d05ef44077176e04244963c2e124ae544f84e7baaf1129f2e5c16c66de889",
+        "extraction_sha256": "2bfc1a63cecc596623aacea7bb1536ed39f972a3abb1820e65246920b8dc73e2"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "jane-doe-v-baltimore-city-board-of-school-commissioners-2026-04-29": {
+      "judge": "Stephanie A. Gallagher",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 50",
+        "quote": "will be denied, and judgment will be entered in favor of Defendant on Plaintiff’s discrimination and retaliation claims. Plaintiff’s failure-to-accommodate claim will proceed to trial on both the delay and violation theories. A separate Order follows. Dated: April 29, 2026 /s/ Stephanie A. Gallagher United States District Judge 50",
+        "source_url": "https://www.damiencharlotin.com/documents/2117/Doe_v_Baltimore_City_Board_of_School_USA_6_May_2026.pdf",
+        "source_sha256": "42814bd6f19d5896a4d85ca21e9ca87a132a91009251d767793e9d7d13898ec3",
+        "extraction_sha256": "c175c1d4c178f23590a50ed061eaf4282fb1495848c7715cb4532b21f7ed1a2d"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "brandon-rulund-akins-v-tashi-latwon-ratliff-et-al-2026-04-28": {
+      "judge": "L. Patrick Auld",
+      "judge_role": "United States Magistrate Judge",
+      "evidence": {
+        "locator": "p. 23",
+        "quote": "re to state a claim, as well as that the Court decline to exercise supplemental jurisdiction over Plaintiff’s state claim(s) under 28 U.S.C. § 1367(c)(3), and (B) that the Dismissal Motion (Docket Entry 7) be TERMINATED AS MOOT. This 28th day of April, 2026. /s/ L. Patrick Auld L. Patrick Auld United States Magistrate Judge 23 Case 1:25-cv-00712-DAB-LPA Document 32 Filed 04/28/26 Page 23 of 23",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Akins_v._Ratliff_USA_28_April_2026.pdf",
+        "source_sha256": "e2e7da851155c83c8157baf4bd3269f3f51fea7dadfd397b5e6739f521ca80ac",
+        "extraction_sha256": "f27e2933c448fb2c2738d5fa06a6b1bb61149f254313f9ae82da124b1714ec50"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "ali-behroz-aziz-et-al-v-united-states-of-america-et-al-2026-04-27": {
+      "judge": "Adam B. Abelson",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 7",
+        "quote": "ntinue to file frivolous motions or include fabricated citations, and/or violate the page limitation set forth in the accompanying order, the Court may enjoin them from submitting further filings or consider imposing other sanctions. Date: April 27, 2026 /s/ ___________________ Adam B. Abelson United States District Judge 7",
+        "source_url": "https://www.damiencharlotin.com/documents/2044/Aziz_v._USA_USA_27_April_2026.pdf",
+        "source_sha256": "b4944dda60f0a2f8ee3909728c7e45ed661879430af48411720e3b63c37e2e96",
+        "extraction_sha256": "6e1910bf1e633feeb5a0bdd3938a2e9235a60fd24a81c0403090e118713082a5"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "alishia-monique-jones-v-ahmed-taylor-et-al-2026-04-22": {
+      "judge": "Susan K. Declercq",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 17",
+        "quote": "Case 2:25-cv-10681-SKD-DRG ECF No. 18, PageID.165 Filed 04/22/26 Page 17 of 17 This is not a final order and does not close the above-captioned case. /s/Susan K. DeClercq SUSAN K. DeCLERCQ United States District Judge Dated: April 22, 2026 - 17 -",
+        "source_url": "https://www.damiencharlotin.com/documents/2019/Jones_v._Taylor_USA_22_April_2026.pdf",
+        "source_sha256": "bd95bc5397a802787ad823d80868cfde104b5d0351720e970b5ff2ab81127679",
+        "extraction_sha256": "b0eb80427260a8ccfe580b6345cb70b2603150337df53bdebe834e84ff992530"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "steven-nemec-v-kelsey-kanoelani-alao-and-alyssa-jade-alao-2026-04-10": {
+      "judge": "Michael H. Simon",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 12",
+        "quote": "rt DENIES AS MOOT Plaintiff’s motion for extension to conduct a Rule 26 conference, ECF 22. The Court will enter a supplemental case management order as necessary if Plaintiff files an amended complaint. IT IS SO ORDERED. DATED this 10th day of April, 2026. /s/ Michael H. Simon Michael H. Simon United States District Judge PAGE 12 – ORDER",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Nemec_v._Alao_USA_10_April_2026.pdf",
+        "source_sha256": "c4250b0d869bdbf9d5eb7ee16f65b42b99d3c6f3cbfbd28f65164196a0eeb5b2",
+        "extraction_sha256": "5bc33945378745aed3442acd95c2cab22e5be09faac2c3e7339e99f1256b622f"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "stanford-v-leinart-2026-04-02": {
+      "judge": "Brian Walker",
+      "judge_role": "Justice",
+      "evidence": {
+        "locator": "p. 25",
+        "quote": "that Leinart’s motion was fraudulent and based on “a known void federal order” lacks merit.22 We overrule Stanford’s seventh issue. IV. CONCLUSION Having overruled Stanford’s seven issues, we affirm the trial court’s order declaring him a vexatious litigant.23 /s/ Brian Walker Brian Walker Justice Delivered: April 2, 2026 Stanford also asserts that Leinart engaged in a “pattern of litigation fraud.” 21 But he cites nothing in the record that would support his assertion, and",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Stanford_v._Leinart_USA_2_APril_2026.pdf",
+        "source_sha256": "211e07006d089c17bbde0abbf8c2e00855a5f30a7e45803fee9c99a75076a707",
+        "extraction_sha256": "cc78d8129bef10a33041bdbc54a4569c5f0464283a1c351374358d35a318ed15"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "nguedi-v-general-dynamics-information-technology-2026-03-31": {
+      "judge": "Randolph D. Moss",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 57",
+        "quote": "DENY GDIT’s request to preclude Plaintiff from filing further motions to amend his complaint or to reinstate the AO as a defendant, Dkt. 76 at 5; and will DENY the AO’s Motion for Relief from Further Vexatious Filings, Dkt. 80. A separate order will issue. /s/ Randolph D. Moss RANDOLPH D. MOSS United States District Judge Date: March 31, 2026 57",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Nguedi_v._AO_USA_31_March_2026.pdf",
+        "source_sha256": "f0293f8729b1f0c96a161a1d2cfe485128e312ff0d985487983d4ff5efa6fb05",
+        "extraction_sha256": "6a181fd85f979dc00e41c4d0c1167e59fb25063c00b8f1ea0bad44b084a88542"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "souza-v-city-of-fitchburg-2026-03-30": {
+      "judge": "Margaret R. Guzman",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 26",
+        "quote": "cause of action, Plaintiff’s claim for “Administrative Dishonor” (Count VI) is DISMISSED. IV. CONCLUSION For the foregoing reasons, Defendants’ motion to dismiss, ECF No. 6, is GRANTED in full and this case is DISMISSED. SO ORDERED. Dated: March 30, 2026 /s/ Margaret R. Guzman Margaret R. Guzman United States District Judge 14 It is apparent to the Court that Plaintiff relied on generative AI in multiple instances to create his filings. [See e.g. ECF No. 8 at 4 (multiple instances where it appears th",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Souza_v._Fichtburg_USA_30_March_2026.pdf",
+        "source_sha256": "0fd7667f864dec7cec69ccaa0df2612d864d5feb7f4b16673b260372afc982bf",
+        "extraction_sha256": "ba7fc1e9b328755a95b6c974e82776ead2045cb206caf40ff46f7d352e1e045a"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "hong-chris-lu-v-capital-one-na-et-al-2026-03-25": {
+      "judge": "James E. Grimes Jr",
+      "judge_role": "U.S. Magistrate Judge",
+      "evidence": {
+        "locator": "p. 10",
+        "quote": "176 F.3d at 363, dismissal with prejudice of Lu’s Amended Complaint is warranted. Conclusion For all of the reasons stated above, Lu’s Amended Complaint against Defendants HP and Capital One is dismissed, with prejudice. So ordered. Dated: March 25, 2026 /s/ James E. Grimes Jr. James E. Grimes Jr. U.S. Magistrate Judge 10",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/LU_v._Capital_One_USA_25_March_2025.pdf",
+        "source_sha256": "00ec462d15c357736ccd26cbc7299ef6f25f6033b20d57e83ed608fb4e55daa7",
+        "extraction_sha256": "a04d0940adebc978bc1f6646abd34cbbd26bd68bf2b1bcd1915a259cbf72aabd"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "espinoza-v-m-r-const-group-inc-2026-03-19": {
+      "judge": "Devin P. Cohen",
+      "judge_role": "Justice",
+      "evidence": {
+        "locator": "p. 4",
+        "quote": "ff's motion for summary judgment (Seq. 006) is granted. *4 Defendants' cross-motion for summary judgment (Seq. 007) is denied. A sanctions hearing is scheduled for April 10, 2026 at 10:00am. This constitutes the decision and order of the court. March 19, 2026 DATE <<signature>> DEVIN P. COHEN Justice of the Supreme Court Footnotes 1 Although the Second Department is the only Department to find 23-4.2 (k) sufficiently specific, it has consistently done so (Zaino v Rogers, 153 A",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/04_-_Espinoza_v_MAndR_Const_Group_Inc.pdf",
+        "source_sha256": "c193cf1b6aebc50ed9c09ce17c45e168a766c2e4eb9d88f1be726ad8807c9a85",
+        "extraction_sha256": "ba196c4cc388530d03d12a833b0273682812cf3930ed33bcc2a12a44100ec63e"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "domingo-beato-estrella-v-m-arviza-2026-03-16": {
+      "judge": "Keli M. Neary",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 4",
+        "quote": "nted to any aspect of his original judgment being ignored by the BOP. Nor is he presently eligible for any program to which an ICE detainer is depriving access. Therefore, this matter will be dismissed without prejudice for lack of subject matter jurisdiction. /S/ KELI M. NEARY Keli M. Neary United States District Judge Middle District of Pennsylvania March 16th, 2026 4",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Beato_Estrella_v._Swaney_USA_16_March_2026.pdf",
+        "source_sha256": "f02870aab3968c3b1c7304d670829d577d7121a731a33880c83b7aaf77b8e870",
+        "extraction_sha256": "644485c56d3bb27c759b9d00cbafa881d6b13b945e421e955c2a72f14bda450e"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "checks-aciek-ateny-nai-v-national-asset-mortgage-llc-et-al-2026-03-11": {
+      "judge": "Jane M. Beckering",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 4",
+        "quote": "isfied and decline to impose sanctions under Rule 11. Accordingly: IT IS HEREBY ORDERED that the Order to Show Cause (ECF No. 144) has been satisfied and the Court declines to impose sanctions under Federal Rule of Civil Procedure 11. Dated: March 11, 2026 /s/ Jane M. Beckering JANE M. BECKERING United States District Judge",
+        "source_url": "https://www.damiencharlotin.com/documents/1649/Nai_v._National_Asset_Mortgage_USA_11_March_2025.pdf",
+        "source_sha256": "af45b4e3fd81b8b481932abcd91a74c870d31d805238983719b9fbd8685e12ef",
+        "extraction_sha256": "f3e837e68752f32e491ce30fd7e956dd53e295383fce424ba1e3cc785667284f"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "traver-v-general-motors-financial-company-inc-et-al-2026-03-11": {
+      "judge": "Angel Kelley",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 11",
+        "quote": "s a separate defendant within fourteen (14) days of this Order. Lastly, Plaintiffs are ORDERED to certify in any future filings that they have reviewed the filings to confirm that citations are not hallucinated or falsely represented. SO ORDERED. Dated: March 11, 2026 /s/ Angel Kelley Hon. Angel Kelley United States District Judge 11",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Traver_v._General_Motors_USA_11_March_2026.pdf",
+        "source_sha256": "f7ef93e81fb3c6ae4db0f8f0e1a5a52cd004da42e94f364e6aef525b4c974195",
+        "extraction_sha256": "ee7319d7c85db137221ff1449ccb43240fad2e72a62344893eb8288b5cf16d05"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "gregory-j-van-etten-v-stephanie-k-fattman-et-al-2026-03-06": {
+      "judge": "Margaret R. Guzman",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 19",
+        "quote": "6/26 Page 19 of 19 Finally, as the motion to dismiss, [ECF No. 91], is GRANTED IN FULL, judgment shall enter for the Defendants, all other pending motions shall be DENIED AS MOOT, and this civil action shall be TERMINATED. SO ORDERED. Dated: March 6, 2026 /s/ Margaret R. Guzman Margaret R. Guzman United States District Judge 19",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Van_Etten_v._Fattman_USA_6_March_2026.pdf",
+        "source_sha256": "e69e94ed7550d8891df7318150be027aa0a3519f43f255f5df9a2c331aec29e7",
+        "extraction_sha256": "01f7174069db407d8a4901b7b6bc44025a503e4277e89f100b1b6a5e0a7b0f12"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "1s-reo-opportunity-1-llc-v-223-howard-llc-2026-02-03": {
+      "judge": "Pamela K. Chen",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 19",
+        "quote": "Order. The proposed judgment of foreclosure should provide for the appointment of a proposed referee to effectuate the sale and to disperse funds from such a sale. The Clerk of Court is respectfully directed to enter judgment and close this case. SO ORDERED. /s/ Pamela K. Chen Pamela K. Chen United States District Judge Dated: February 3, 2026 Brooklyn, New York 19",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/1_Reo_opportunity_v._Howard_USA_3_February_2026.pdf",
+        "source_sha256": "deb5fe2e22c78616e2265e5357f660d2ea7134a6ec43b4cbdfb4890cfb96a237",
+        "extraction_sha256": "12ff683d675ba2e69c5a12ef3e15000d8d7cdc45561d05585a54dab6c01f5a38"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "kamps-v-british-crown-corporation-et-al-2026-01-07": {
+      "judge": "Paul L. Maloney",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 3",
+        "quote": "r in the R&R. His arguments in the objection confirm, rather than deny, the R&R’s central conclusion that Plaintiff’s claims are rooted in sovereign- citizen ideology and frivolous. The R&R (ECF No. 6) is thus ADOPTED. IT IS SO ORDERED. Date: January 7, 2026 /s/ Paul L. Maloney Paul L. Maloney United States District Judge 3",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Kamps_v._BCC_USA_7_January_2026.pdf",
+        "source_sha256": "cdfd1d6dd639da04389e6780a9c142112cfedcc4a6db30f4d4be3218c86b05de",
+        "extraction_sha256": "18f4f17dfe0ae50e4391c06d0a2fedf9a72ce8737eaf662f9d083b392ffaf216"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "cesareo-v-port-authority-of-new-york-and-new-jersey-2025-12-31": {
+      "judge": "Jamel K. Semper",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 14",
+        "quote": "cordingly, the Motion to Stay Arbitration is hereby DENIED. IV. CONCLUSION For the reasons stated herein, Plaintiff’s Motion for Declaratory Judgment, Motion for Protective Order, and Motion to Stay Arbitration are all DENIED. An appropriate order follows. /s/ Jamel K. Semper . HON. JAMEL K. SEMPER United States District Judge Orig: Clerk cc: Cari Fais, U.S.M.J. Parties 14",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Cesareo_v._Port_Authority_of_NY_and_NJ_USA_31_December_2025.pdf",
+        "source_sha256": "66302fae7c7278260adf326f38810de81e922200f122d2aa58c99ae8dc8b82d5",
+        "extraction_sha256": "ec13b6e025dd5de1e20d86b62027e303fda01d361ec1dd3812a6174bc52c63e8"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "eric-hildebrandt-v-siparadigm-llc-et-al-2025-12-31": {
+      "judge": "Jamel K. Semper",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 14",
+        "quote": "’ Consolidated Complaint without prejudice. Plaintiffs have thirty (30) days to file an amended pleading. If Plaintiffs do not file an amended pleading within that time, this action will be dismissed with prejudice. An appropriate order follows. __/s/ Jamel K. Semper___________ HON. JAMEL K. SEMPER United States District Judge Orig: Clerk cc: Leda D. Wettre, U.S.M.J. Parties 14",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Hildebrant_v_8j95Os6._Paradigm_USA_31_December_2025.pdf",
+        "source_sha256": "bc7c4ce8d34c0886db2f3b617da9a4b9ecc26ffbacc06c888b30985de3cca7b4",
+        "extraction_sha256": "f2db1ee30b190cbf69ec4726ca96d42ea55a40c31c9acad021f6fdeb6cfbee18"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "prm-group-inc-v-paralegal-bootcamp-llc-2025-12-16": {
+      "judge": "Timothy J. Sullivan",
+      "judge_role": "Chief United States Magistrate Judge",
+      "evidence": {
+        "locator": "p. 3",
+        "quote": "endants’ answer to this Order shall be filed on CM/ECF. Plaintiff may file a memorandum regarding Defendants’ response within 14 days after it is filed. Absent further order of Court, no other filings regarding this Show Cause Order will be accepted. Date: December 16, 2025 /s/ Timothy J. Sullivan Chief United States Magistrate Judge 3",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/PRM_Group_v._Paralegal_Bootcamp_USA_16_December_2025.pdf",
+        "source_sha256": "3a67e01ad16e7295b0f5d731a79a47ba0dae3d41e479665c760ad64788a8d301",
+        "extraction_sha256": "d72bb4e7655cb947a855ebaf1bd84e8535c24163d5c17f8a851c343895419ea5"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "braica-v-frankowski-anthony-braica-v-tom-frankowski-2025-12-15": {
+      "judge": "Vernon D. Oliver",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 12",
+        "quote": "CONCLUSION For the foregoing reasons, the Court ADMONISHES Plaintiff and STRIKES Plaintiffs Response to the Motion to Dismiss (ECF No. 30) and Sur-Reply (ECF No. 32) from the record, without leave to amend. SO ORDERED. Hartford, Connecticut December 15, 2025 /s/Vernon D. Oliver VERNON D. OLIVER United States District Judge 12",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Braica_v._Frankowski_USA_15_December_2025.pdf",
+        "source_sha256": "afcd231b595ab5f50e6f4f29773cb2c8c786987473bcae0a99ac4efa597e47bf",
+        "extraction_sha256": "5cc8f338c8c98d3d4d06de4c8db49eef4e08717781c08d223795a35e5045d8ea"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "jesse-andre-v-warden-fci-danbury-2025-11-25": {
+      "judge": "Vernon D. Oliver",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 22",
+        "quote": "cated arguments generated by artificial intelligence and affixed an image of his signature, and for his subsequent misrepresentations about the filing to the Court and (2) STRIKES the Motion with prejudice. SO ORDERED. Hartford, Connecticut November 25, 2025 /s/Vernon D. Oliver VERNON D. OLIVER United States District Judge 22",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Andre_v._Warden_USA_25_November_2025.pdf",
+        "source_sha256": "def1f0cf5675237c259344885f3d195d5ce01a765b1ffc35ff31beca01ed59bf",
+        "extraction_sha256": "aca9af72a79374e6ca4fd67d318faf7aa3912e55c32e986b1593ca93a49459fb"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "michael-izquierdo-v-wipro-limited-2025-11-21": {
+      "judge": "Benita Y. Pearson",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 3",
+        "quote": "osts, attorneys’ fees, and a permanent injunction from filing new documents in this dispute or the dismissal of the dispute. See N.D. Ohio Civ. R. 7.1(i). A separate Case Management Conference Plan/Order will issue. IT IS SO ORDERED. November 21, 2025 /s/ Benita Y. Pearson Date Benita Y. Pearson United States District Judge Inc., 2010 WL 3610460 (E.D.N.Y.).” See ECF No. 11 at PageID #: 280. As addressed, that case does not exist. See ECF No. 12 at PageID #: 311. 3",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Izquierdo_v._Wipro_Limited_USA_21_November_2025.pdf",
+        "source_sha256": "4233a33ebae94cb59a09a913ef162b02cd524164c297e251229d0c41248a1406",
+        "extraction_sha256": "a44e5380dfe521851023a7ef4aefcdc04b915644d8b62341824393d053a86ce9"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "cojom-v-roblen-2025-11-17": {
+      "judge": "Janet C. Hall",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 7",
+        "quote": "d, the court determines that the most appropriate sanction is $500. V. CONCLUSION For the reasons discussed above, the court orders a monetary sanction in the amount of $500. SO ORDERED. Dated at New Haven, Connecticut, this 17th day of November 2025. /s/ Janet C. Hall_________ Janet C. Hall United States District Judge 7",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Cojom_v._Roblen_USA_17_November_2025.pdf",
+        "source_sha256": "5d644bda2e36fa1068507dd6d62d43205b93f4629dac6d83be110471e2da7a1b",
+        "extraction_sha256": "85ceb79ac331b0d13be23ba62d6ab06044d34564ac30abdf2f0ac9630bb2395f"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "neal-v-frayer-2025-11-17": {
+      "judge": "Brendan A. Hurson",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 33",
+        "quote": "erroneous citations of the type exemplified here may ultimately lead to the issuance of sanctions under Rule 11. V. CONCLUSION For the foregoing reasons, Defendants’ motions for summary judgment are granted. A separate implementing order will issue. Dated: November 17, 2025 /s/ Brendan A. Hurson United States District Judge here adequately address the errors and is confident that the steps implemented, as summarized in Lafferty, represent appropriate corrective measures such that no additional action",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Neal_v._Frayer_USA_17_November_2025.pdf",
+        "source_sha256": "31baeaa4c2019962a26393c469f55378be8f1b0eb9d892cb8ccebad6aca33e20",
+        "extraction_sha256": "f5ba9651d4a0579d0694a16d82a67a25221d94e269d618199ff5bc7f50171c65"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "todd-e-glass-v-foley-lardner-llp-2025-11-04": {
+      "judge": "Anita Marie Boor",
+      "judge_role": "Magistrate Judge",
+      "evidence": {
+        "locator": "p. 7",
+        "quote": "s’ stipulated motion for a protective order, Dkt. 30, is GRANTED. 3. Plaintiff’s response to defendant’s motion to dismiss, Dkt. 13, is due December 9, 2025. Any reply is due December 19, 2025. Entered November 4, 2025. BY THE COURT: /s/ ________________________________________ ANITA MARIE BOOR Magistrate Judge 7",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Glass_v._Foley__Lardner_USA_4_November_2025.pdf",
+        "source_sha256": "3f883fc50fc379aa6cedc72e62b8888f8d526ff730fbae0e132b09da33924609",
+        "extraction_sha256": "18b9d7cfaf1b717db2e8c6d7a5ed82e2b91e8f1674925d01d925770e2f51dcd0"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "basko-v-civic-sherman-llc-2025-09-18": {
+      "judge": "Devin P. Cohen",
+      "judge_role": "Justice",
+      "evidence": {
+        "locator": "p. 4",
+        "quote": "Basko v. Civic Sherman LLC, 2025 WL 2829356 (2025) <<signature>> DEVIN P. COHEN Justice of the Supreme Court Footnotes 1 Although AF Defendants' papers only cite CPLR 3211 (a) (7), their argument is entirely based on CPLR 3211 (a) (1). Therefore, AF Defendants' motio",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/27_-_Basko_v_Civic_Sherman_LLC.pdf",
+        "source_sha256": "e7ea625d19b88eb50d186da939aec33de30752bb957beaac55d337ca41fbace2",
+        "extraction_sha256": "c03091c7665534841d81b86b413df57e276f1ddf7f37345cf5d0896d034ff7d4"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "francesco-santora-v-copyright-claims-board-2025-07-08": {
+      "judge": "Timothy J. Kelly",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 14",
+        "quote": "miss a claimant’s claims for failure to prosecute.”). Moreover, for obvious reasons, such an obligation would make no sense. IV. Conclusion For all the above reasons, the Court will grant the Board’s motion and dismiss the case. A separate order will issue. /s/ Timothy J. Kelly TIMOTHY J. KELLY United States District Judge Date: March 26, 2026 14",
+        "source_url": "https://www.damiencharlotin.com/documents/1925/Santora_v._CCB_USA_26_March_2026.pdf",
+        "source_sha256": "7a4428f1baa56bbeb3891718dbd7f419bd9fc05cf1dcf2472488b5f5b456d1a5",
+        "extraction_sha256": "87f34dd615e885f12260e87f2945dc2aeef6829e9d1cec60784b79eebce2e9b9"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "romero-v-goldman-sachs-bank-usa-2025-06-25": {
+      "judge": "Gregory H. Woods",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 2",
+        "quote": "the date of this order to be evidence of subjective bad faith of the party or lawyer submitting the document to the Court for purposes of imposing sanctions under Rule 11 or the Court's inherent authority. SO ORDERED. Dated: June 25, 2025 New York, New York /s/ Gregory H. Woods GREGORY H. WOODS United States District Judge End of Document",
+        "source_url": "https://www.damiencharlotin.com/documents/587/Romero_v._Goldman_Sachs_Bank_USA_USA_25_June_2025.pdf",
+        "source_sha256": "468e805acf334a669c9fe4473b9d0049588ea8a88fd185a2d700e84f410ac2d0",
+        "extraction_sha256": "a9713309a6bbce1ab4cbcc05a5cfbe017847447a1eb3357043bc1d7b09363f49"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "schoene-v-oregon-department-of-human-services-2025-06-25": {
+      "judge": "Michael H. Simon",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 16",
+        "quote": "ry judgment, ECF 66, with respect to Schoene’s federal-law claims and DECLINES to exercise supplemental jurisdiction over her state-law claims. The Court DENIES Schoene’s motion to amend her FAC, ECF 115. IT IS SO ORDERED. DATED this 25th day of June, 2025. /s/ Michael H. Simon Michael H. Simon United States District Judge PAGE 16 – OPINION AND ORDER",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Schoene_v._Oregon_DHS_USA_25_June_2025.pdf",
+        "source_sha256": "78605d2b5bbbb2bcefc81bab86d451fccb6abe2e818252e0fffb386549a2cec3",
+        "extraction_sha256": "c15442b738ee4e80d22b8d278dd97c665df9a198c27c7485f0d002aee5733b1e"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "reilly-v-conn-interlocal-risk-mgmt-agency-2025-06-20": {
+      "judge": "Vernon D. Oliver",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 5",
+        "quote": "the issues with Reilly’s filings are the result of artificial intelligence or some other mistake, the Court cautions Reilly to ensure that future submissions to any court contain only accurate representations. SO ORDERED. Hartford, Connecticut June 20, 2025 /s/Vernon D. Oliver VERNON D. OLIVER United States District Judge 5",
+        "source_url": "https://www.govinfo.gov/content/pkg/USCOURTS-ctd-3_25-cv-00640/pdf/USCOURTS-ctd-3_25-cv-00640-0.pdf",
+        "source_sha256": "e92f9b7991d95962eeabd04187280aa91672b63df76632d86ebb7f3c7a79f725",
+        "extraction_sha256": "5f275fc56fca6e644733f5ec4c27d318780b8236e11fba7a42c9a3ad0b1a4f99"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "powhatan-county-school-board-v-skinger-et-al-2025-06-02": {
+      "judge": "Robert E. Payne",
+      "judge_role": "Senior United States District Judge",
+      "evidence": {
+        "locator": "p. 29",
+        "quote": "Case 3:24-cv-00874-REP Document 170 Filed 06/02/25 Page 29 of 29 PageID# 3865 III. CONCLUSION For the foregoing reasons, ECF Nos. 7, 9, 11, 22, 88, and 115 were STRICKEN from the record. It is so ORDERED. /s/ Robert E. Payne Senior United States District Judge Richmond, Virginia Date: June , 2025 29",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Powhatan_County_School_Board_v._Skinger_et_al_E.D._Virginia_USA_2_June_2025.pdf",
+        "source_sha256": "7c537c7915959d9343c8b2df79cd2ad15e50952589ee909c385a1fa5d4f13d06",
+        "extraction_sha256": "aa0c53770f88613ed4679030c09717bb4fc2cdfb875df6070e68a2f3546b88fd"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "dupont-v-town-of-wales-2025-05-27": {
+      "judge": "Deepika B. Shukla",
+      "judge_role": "Justice",
+      "evidence": {
+        "locator": "p. 2",
+        "quote": "d that a certificate of occupancy was not issued until February 2019. Because there exists an issue of material fact, summary judgment cannot issue for any party. ORDER For the foregoing reasons, Plaintiff's and Defendant's Motions for Summary Judgment are DENIED. <<signature>> Deepika B. Shukla Justice of the Superior Court DATE: May 23, 2025 Footnotes 1 While Plaintiff cites to Capone v. Zoning Board of Appeals of Marlborough, 33 Mass. App. Ct. 563 (1992), to support its assert",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/33_-_Dupont_v_Town_of_Wales.pdf",
+        "source_sha256": "fd73253f803458122315ca6197bfa5ae1291b3b3a61b0f65240e0cdefa6cee3d",
+        "extraction_sha256": "a7c9a6315597aad723f315c9fc91a7d77074f706ac53c0361960bdfb73479602"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "moales-v-land-rover-cherry-hill-2025-04-30": {
+      "judge": "Vernon D. Oliver",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 8",
+        "quote": "ful. Whether the issues with Moales’s filings are the result of artificial intelligence or some other mistake, the Court cautions Moales to ensure that future submissions contain only accurate representations. SO ORDERED. Hartford, Connecticut April 30, 2025 /s/Vernon D. Oliver VERNON D. OLIVER United States District Judge 8",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Moales_v._Land_Rover_Cherry_Hill_D._Connecticut_April_30_2025.pdf",
+        "source_sha256": "898933fcda12d24a61e1be8f38db132ffc1f48b3b34099b3a6a2e30de91b9c60",
+        "extraction_sha256": "7508f0de7a86a85861680e228c3880effced9ae7fe042ff481fadf87390ae5f1"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "rubio-v-district-of-columbia-dhs-2024-12-03": {
+      "judge": "Randolph D. Moss",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 12",
+        "quote": "/s/ Randolph D. Moss RANDOLPH D. MOSS United States District Judge Date: December 3, 2024 12",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Rubio_v._DC_DHS_US_DC_District_Court_December_3_2024.pdf",
+        "source_sha256": "c40a60bc5e808b4cc7dc1b716f1cf0bfdd77001f5bda2d6832de328e6a7fcb04",
+        "extraction_sha256": "60bed25a798d98af00ea239fb4fa1b091a35d183dbc1e93738066392b9624d12"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "usa-v-michel-2024-08-30": {
+      "judge": "Colleen Kollar-Kotelly",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 77",
+        "quote": "ing the cumulative effect of the errors and the strength of the evidence presented at trial). IV. CONCLUSION For the foregoing reasons, the Court shall DENY Michel’s [310] Motion for New Trial. An appropriate Order accompanies this Memorandum Opinion. Dated: August 30, 2024 /s/ COLLEEN KOLLAR-KOTELLY United States District Judge 77",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/USA_v._Michel_DDC_USA_30_August_2024.pdf",
+        "source_sha256": "4d45b08566461ac05bfd08e089adcbd16fcdbaff32513768d45e4f98d63de790",
+        "extraction_sha256": "a6899ca9f2a179b40cbb0df6275bb3dadcd4bc6ed34c5c7fb31ed4c98364141b"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    },
+    "martin-v-hawai-i-2024-08-20": {
+      "judge": "Micah W.J. Smith",
+      "judge_role": "United States District Judge",
+      "evidence": {
+        "locator": "p. 7",
+        "quote": "nctions. See id.; Fed. R. Civ. P. 11. CONCLUSION Because Martin has identified no grounds for reconsideration of the Court’s remand order, his motion for reconsideration, ECF No. 13, is DENIED. IT IS SO ORDERED. DATED: August 20, 2024, at Honolulu, Hawai‘i. /s/ Micah W.J. Smith Micah W.J. Smith United States District Judge Civil No. 22-00294 MWJS-WRP; Austin D. Martin v. State of Hawai‘i, et al.; ORDER DENYING MOTION FOR RECONSIDERATION 7",
+        "source_url": "https://websitedc.s3.amazonaws.com/documents/Martin_v._Hawai_D._Hawai_USA_August_20_2024.pdf",
+        "source_sha256": "32e48bfb8009e6ed063b9e2a2d16c11f54a40092d9db35c1dbca51cb5030db11",
+        "extraction_sha256": "e21d172687f09aa666e7f37490d082475ce62c6ed6deabd714d6b6bdad5abd01"
+      },
+      "verification_status": "primary-document-signature",
+      "verification_method": "Exact signature marker and explicit judicial role in a hash-verified primary document; not represented as a human editorial review."
+    }
+  }
+}

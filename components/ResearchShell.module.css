@@ -45,8 +45,8 @@
   .pageHead { display: block; }
   .headActions { justify-content: flex-start; margin-top: 18px; }
   .footerInner { display: block; }
-  .footer nav { margin-top: 12px; }
-  .footer a { margin: 0 16px 0 0; }
+  .footer nav { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px 16px; }
+  .footer a { margin: 0; }
 }
 
 @media (max-width: 520px) {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PUBLIC_BASE_URL, PUBLIC_ORIGIN, assetUrl } from "@/lib/site";
+import { PUBLIC_BASE_URL, PUBLIC_ORIGIN, assetUrl, publicUrl } from "@/lib/site";
 import "./globals.css";
 import "./research-map.css";
 
@@ -20,11 +20,20 @@ export const metadata: Metadata = {
     url: PUBLIC_BASE_URL,
     siteName: "AI Vortex",
     type: "website",
+    images: [
+      {
+        url: publicUrl("/legal-ai-risk-social.png"),
+        width: 1200,
+        height: 630,
+        alt: "AI Vortex Legal AI Risk evidence network",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Vortex Legal AI Risk | Search the Precedent",
     description: "Search the precedent, run the review, and share the record.",
+    images: [publicUrl("/legal-ai-risk-social.png")],
   },
 };
 

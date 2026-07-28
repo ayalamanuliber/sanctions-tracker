@@ -2,6 +2,7 @@ import sanctionsRaw from "@/data/sanctions.json";
 import metaRaw from "@/data/meta.json";
 import { matchesTool } from "@/lib/filtering";
 import type { PublicSanctionCase } from "@/lib/mcp/types";
+import { getCaseSlugById } from "@/lib/cases";
 import { PUBLIC_BASE_URL, publicUrl } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
@@ -31,7 +32,7 @@ export async function GET(request: Request): Promise<Response> {
     <description>Filtered public legal AI risk matters. Corpus checked ${meta.last_checked || meta.last_updated}; latest tracked decision ${meta.latest_record_date || "not provided"}.</description>
     ${filtered.map((item) => `<item>
       <title>${escapeXml(item.case_name)}</title>
-      <link>${escapeXml(publicUrl(`/cases/${item.id}`))}</link>
+      <link>${escapeXml(publicUrl(`/cases/${getCaseSlugById(item.id)}`))}</link>
       <guid>${escapeXml(item.id)}</guid>
       <pubDate>${new Date(item.date).toUTCString()}</pubDate>
       <description>${escapeXml(`${item.court} · ${item.severity} · ${item.ai_tool_used}`)}</description>

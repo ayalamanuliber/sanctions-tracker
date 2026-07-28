@@ -1,4 +1,5 @@
 import sanctionsRaw from "@/data/sanctions.json";
+import judgeEnrichmentRaw from "@/data/judge-enrichment.json";
 import { matchesCourt } from "@/lib/filtering";
 import metaRaw from "@/data/meta.json";
 
@@ -16,6 +17,13 @@ export interface LegalRiskCase {
   circuit: string | null;
   jurisdiction: string;
   judge: string | null;
+  judge_role?: string | null;
+  judge_evidence?: {
+    locator: string;
+    quote: string;
+    source_url: string;
+    verification_status: string;
+  } | null;
   date: string;
   party?: string;
   ai_tool_used: string;
@@ -80,15 +88,36 @@ function normalize(value: string | null | undefined) {
 }
 
 const rawCases = sanctionsRaw as unknown as Omit<LegalRiskCase, "slug">[];
+const judgeEnrichment = judgeEnrichmentRaw as {
+  records: Record<
+    string,
+    {
+      judge: string;
+      judge_role: string;
+      evidence: { locator: string; quote: string; source_url: string };
+      verification_status: string;
+    }
+  >;
+};
 const slugCounts = new Map<string, number>();
 
 export const LEGAL_RISK_CASES: readonly LegalRiskCase[] = rawCases.map((item) => {
   const base = SLUG_OVERRIDES[item.id] || slugify(item.id || `${item.case_name}-${item.date}`);
   const occurrence = (slugCounts.get(base) || 0) + 1;
   slugCounts.set(base, occurrence);
+  const judgeRecord = judgeEnrichment.records[item.id];
   return {
     ...item,
-    judge: item.judge || null,
+    judge: judgeRecord?.judge || item.judge || null,
+    judge_role: judgeRecord?.judge_role || item.judge_role || null,
+    judge_evidence: judgeRecord
+      ? {
+          locator: judgeRecord.evidence.locator,
+          quote: judgeRecord.evidence.quote,
+          source_url: judgeRecord.evidence.source_url,
+          verification_status: judgeRecord.verification_status,
+        }
+      : item.judge_evidence || null,
     slug: occurrence === 1 ? base : `${base}--${occurrence}`,
   };
 });

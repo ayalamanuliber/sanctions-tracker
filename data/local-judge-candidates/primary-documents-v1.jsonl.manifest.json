@@ -1,0 +1,14 @@
+{
+  "extractor_version": "local-judge-candidates-v1",
+  "eligible_cached_primary_documents": 1650,
+  "rows_with_candidates": 84,
+  "high_confidence_candidates": 54,
+  "medium_confidence_candidates": 31,
+  "rejected_ambiguous_rows": 29,
+  "rejected_candidate_count": 37,
+  "output": "data/local-judge-candidates/primary-documents-v1.jsonl",
+  "no_auto_publish": true,
+  "source_corpus": "data/kie-enrichment/corpus-v7-final.jsonl",
+  "source_corpus_sha256": "4ed5ba801f7616f23bd03798c1d7e677b6709f1ecf0dea26bec0ed3bfca9f989",
+  "output_sha256": "0ecfc30f080e3d68e34111650e00499084bf817b87e327213b333db4c4a56abb"
+}

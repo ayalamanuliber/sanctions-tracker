@@ -15,8 +15,7 @@ const navItems = [
   ["Analytics", "/analytics"],
   ["Courts", "/courts"],
   ["Topics", "/topics"],
-  ["Workflows", "/workflows"],
-  ["Use with AI", "/use-with-ai"],
+  ["Sources", "/sources"],
   ["Resources", "/resources"],
 ];
 
@@ -57,7 +56,7 @@ export default function ResearchShell({ children }: { children: React.ReactNode 
         <div className={styles.status}>
           <span className={styles.live}>Public tracker</span>
           <span>
-            Evidence checked {formatCorpusDate(LAST_CHECKED)} · Latest decision{" "}
+            Corpus refreshed {formatCorpusDate(LAST_CHECKED)} · Latest decision{" "}
             {formatCorpusDate(LATEST_RECORD_DATE)}
           </span>
           <span className={styles.statusBoundary}>Public incidents are risk signals, not usage-adjusted rates</span>
@@ -67,7 +66,7 @@ export default function ResearchShell({ children }: { children: React.ReactNode 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
           <span>AI Vortex is an independent publisher of legal AI risk intelligence. Not legal advice.</span>
-          <nav><Link href="/sources">Methodology</Link><Link href="/resources">Resources</Link><Link href="/submit">Corrections</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></nav>
+          <nav><Link href="/about">About</Link><Link href="/sources">Methodology</Link><Link href="/resources">Resources</Link><Link href="/submit">Corrections</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></nav>
         </div>
       </footer>
     </div>

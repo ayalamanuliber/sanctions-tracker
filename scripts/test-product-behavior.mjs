@@ -44,9 +44,40 @@ const packet = await page(`/artifact/print?type=report&case_id=${encodeURICompon
 assert.ok(packet.includes("Matched set</span><strong>1 cases"), "Case packet must contain exactly one matched matter");
 assert.ok(packet.includes("Mata v. Avianca"), "Case packet must contain the selected matter");
 
-for (const route of ["/privacy", "/terms", "/resources", "/topics", "/courts?q=D.N.J.", "/dashboard?state=NJ&audience=researcher"]) {
+for (const route of [
+  "/privacy",
+  "/terms",
+  "/resources",
+  "/topics",
+  "/courts?q=D.N.J.",
+  "/judges",
+  "/judges/vernon-d-oliver",
+  "/countries",
+  "/states",
+  "/tools/chatgpt",
+  "/failure-modes/fake-citations",
+  "/consequences",
+  "/about",
+]) {
   await page(route);
 }
+
+const judgePage = await page("/judges/vernon-d-oliver");
+assert.ok(judgePage.includes("Public records in this view"), "Judge pages must expose their linked public matters");
+assert.ok(judgePage.includes("Corpus denominator"), "Judge pages must state their corpus denominator");
+
+const toolPage = await page("/tools/chatgpt");
+assert.ok(toolPage.includes("Public records in this view"), "Tool pages must expose their linked public matters");
+assert.ok(toolPage.includes("BreadcrumbList"), "Entity pages must include breadcrumb schema");
+
+const correction = await page(
+  `/submit?case_id=${encodeURIComponent(mata.id)}&case_name=${encodeURIComponent(mata.case_name)}&court=${encodeURIComponent(mata.court || "")}`,
+);
+assert.ok(correction.includes(mata.case_name), "Correction intake must retain case context");
+
+const llms = await page("/llms.txt");
+assert.ok(llms.includes("# AI Vortex Legal AI Risk"), "llms.txt must identify the public corpus");
+assert.ok(llms.includes("Machine-readable access"), "llms.txt must expose machine-readable routes");
 
 const noMatch = await page("/cases?q=definitely-not-a-real-vortex-case&state=NJ&tool=CoCounsel");
 assert.ok(noMatch.includes("Transparent fallback"), "Zero-result search must disclose fallback behavior");
@@ -75,4 +106,4 @@ const expectedIndexable = Object.entries(readiness.by_slug).filter(
 ).length;
 assert.equal(caseUrls.length, expectedIndexable, "Sitemap must contain every case that passes both publication and evidence baselines");
 
-console.log(JSON.stringify({ status: "pass", base, checks: 20, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseUrls.length }, null, 2));
+console.log(JSON.stringify({ status: "pass", base, checks: 31, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseUrls.length }, null, 2));

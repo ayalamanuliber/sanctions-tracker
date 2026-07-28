@@ -1,19 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { assetUrl, publicUrl } from "@/lib/site";
+import { assetUrl } from "@/lib/site";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowRight,
-  Bot,
   BookOpenCheck,
   BriefcaseBusiness,
   Check,
   ChevronLeft,
   ChevronRight,
   CircleAlert,
-  Copy,
   ExternalLink,
   FileCheck2,
   FileSearch,
@@ -26,7 +24,6 @@ import {
   Scale,
   Search,
   ShieldCheck,
-  Sparkles,
   X,
 } from "lucide-react";
 
@@ -48,19 +45,19 @@ const caseSuggestions = ["Mata v. Avianca", "D.N.J.", "fabricated quotations", "
 const sourceSuggestions = ["CourtListener", "Damien Charlotin", "uscourts.gov", "Memorandum and Order"];
 
 const workflows = [
-  { icon: FileSearch, label: "Pre-filing review", href: "/filing-gate" },
-  { icon: FileCheck2, label: "Filing integrity review", href: "/filing-integrity-scanner" },
-  { icon: ShieldCheck, label: "Sanctions risk assessment", query: "monetary bar referral" },
-  { icon: Map, label: "Jurisdiction check", href: "/map" },
-  { icon: Landmark, label: "Court-ready source review", href: "/sources" },
-  { icon: FolderPlus, label: "Build review packet", href: "/artifact/print?type=report&title=Legal+AI+Risk+Review+Packet&audience=legal_professional" },
+  { icon: Search, label: "Search every public record", href: "/cases" },
+  { icon: Map, label: "Explore the evidence map", href: "/map" },
+  { icon: Landmark, label: "Browse courts and jurisdictions", href: "/courts" },
+  { icon: FileSearch, label: "Analyze the public corpus", href: "/analytics" },
+  { icon: BookOpenCheck, label: "Inspect sources and methodology", href: "/sources" },
+  { icon: FolderPlus, label: "Build a review packet", href: "/artifact/print?type=report&title=Legal+AI+Risk+Review+Packet&audience=legal_professional" },
 ];
 
 const roles = [
   { icon: BriefcaseBusiness, label: "Litigation team", title: "Check a filing before it leaves the firm", body: "Run a citation, quotation, proposition-support, and disclosure review with a reusable verification record.", href: "/filing-gate", action: "Open the filing gate" },
   { icon: Scale, label: "Court or chambers", title: "Inspect the record without inferring AI use", body: "Separate demonstrated discrepancies from attribution, preserve source links, and compare similar public matters.", href: "/filing-integrity-scanner", action: "Open neutral review" },
   { icon: BookOpenCheck, label: "Research and knowledge", title: "Trace a pattern across courts and sources", body: "Search the global corpus, inspect the denominator, and open the underlying public evidence before relying.", href: "/topics", action: "Explore risk topics" },
-  { icon: Bot, label: "Legal tech and risk", title: "Bring the evidence into an existing workflow", body: "Use the read-only MCP, dashboards, and structured artifacts as a shared intelligence layer.", href: "/use-with-ai", action: "Review integration paths" },
+  { icon: ShieldCheck, label: "Legal tech and risk", title: "Measure the record without overstating it", body: "Inspect denominators, missing values, evidence coverage, and the records behind every displayed pattern.", href: "/analytics", action: "Open public analytics" },
 ];
 
 function formatDate(value: string) {
@@ -120,28 +117,11 @@ export default function ProductHome() {
   const [submittedQuery, setSubmittedQuery] = useState("");
   const [searchMode, setSearchMode] = useState<"cases" | "sources">("cases");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [installOpen, setInstallOpen] = useState(false);
-  const [copied, setCopied] = useState(false);
   const [suggestionsOpen, setSuggestionsOpen] = useState(false);
   const [activeSuggestion, setActiveSuggestion] = useState(-1);
   const [mapSelection, setMapSelection] = useState<{ state: string; cases: LegalRiskCase[] } | null>(null);
   const [mapIndex, setMapIndex] = useState(0);
-  const modalCloseRef = useRef<HTMLButtonElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    if (!installOpen) return;
-    const previous = document.activeElement as HTMLElement | null;
-    modalCloseRef.current?.focus();
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setInstallOpen(false);
-    };
-    document.addEventListener("keydown", closeOnEscape);
-    return () => {
-      document.removeEventListener("keydown", closeOnEscape);
-      previous?.focus();
-    };
-  }, [installOpen]);
 
   useEffect(() => {
     if (!mobileMenuOpen) return;
@@ -172,12 +152,6 @@ export default function ProductHome() {
     if (next) requestAnimationFrame(() => document.getElementById("search-results")?.scrollIntoView({ behavior: "smooth", block: "nearest" }));
   };
 
-  const copyMcp = async () => {
-    await navigator.clipboard.writeText(publicUrl("/mcp"));
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1800);
-  };
-
   return (
     <main className={styles.page}>
       <header className={styles.header}>
@@ -187,7 +161,7 @@ export default function ProductHome() {
             <span><strong>AI VORTEX</strong><small>LEGAL AI RISK</small></span>
           </a>
           <nav className={styles.desktopNav} aria-label="Primary navigation">
-            <Link href="/cases">Search</Link><Link href="/map">Map</Link><Link href="/analytics">Analytics</Link><Link href="/courts">Courts</Link><Link href="/topics">Topics</Link><Link href="/workflows">Workflows</Link><a href="#use-with-ai">Use with AI</a><a href="#pricing">Pricing</a>
+            <Link href="/cases">Search</Link><Link href="/map">Map</Link><Link href="/analytics">Analytics</Link><Link href="/courts">Courts</Link><Link href="/topics">Topics</Link><Link href="/sources">Sources</Link><Link href="/resources">Resources</Link>
           </nav>
           <div className={styles.navActions}>
             <a href="mailto:manuel@aivortex.io?subject=AI%20Vortex%20access">Get access</a>
@@ -198,12 +172,12 @@ export default function ProductHome() {
           </div>
         </div>
         {mobileMenuOpen && <nav className={styles.mobileMenu} id="home-mobile-menu" aria-label="Mobile navigation">
-          <Link href="/cases" onClick={() => setMobileMenuOpen(false)}>Search</Link><Link href="/map" onClick={() => setMobileMenuOpen(false)}>Map</Link><Link href="/analytics" onClick={() => setMobileMenuOpen(false)}>Analytics</Link><Link href="/courts" onClick={() => setMobileMenuOpen(false)}>Courts</Link><Link href="/topics" onClick={() => setMobileMenuOpen(false)}>Topics</Link><Link href="/resources" onClick={() => setMobileMenuOpen(false)}>Resources</Link><Link href="/workflows" onClick={() => setMobileMenuOpen(false)}>Workflows</Link><a href="#use-with-ai" onClick={() => setMobileMenuOpen(false)}>Use with AI</a><a href="#pricing" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
+          <Link href="/cases" onClick={() => setMobileMenuOpen(false)}>Search</Link><Link href="/map" onClick={() => setMobileMenuOpen(false)}>Map</Link><Link href="/analytics" onClick={() => setMobileMenuOpen(false)}>Analytics</Link><Link href="/courts" onClick={() => setMobileMenuOpen(false)}>Courts</Link><Link href="/topics" onClick={() => setMobileMenuOpen(false)}>Topics</Link><Link href="/sources" onClick={() => setMobileMenuOpen(false)}>Sources</Link><Link href="/resources" onClick={() => setMobileMenuOpen(false)}>Resources</Link>
         </nav>}
         <div className={styles.statusBar}>
           <span className={styles.live}><i /> LIVE</span>
           <span>
-            Evidence checked {formatDate(homepageSummary.lastChecked)} · Latest decision{" "}
+            Corpus refreshed {formatDate(homepageSummary.lastChecked)} · Latest decision{" "}
             {formatDate(homepageSummary.latestRecordDate)}
           </span>
           <span className={styles.statusCounts}>{homepageSummary.totalCases.toLocaleString()} records <b>·</b> {homepageSummary.courts.toLocaleString()} US courts <b>·</b> {homepageSummary.jurisdictions} US jurisdictions</span>
@@ -254,7 +228,6 @@ export default function ProductHome() {
                 <span><strong>{searchMode === "sources" ? sourcePublisher(item.source_url, item.source_name) : item.case_name}</strong><small>{searchMode === "sources" ? item.case_name : `${item.court} · ${formatDate(item.date)}`}</small></span><ChevronRight size={14} />
               </button>)}
             </div>}
-            <button className={styles.chatGptButton} onClick={() => setInstallOpen(true)}><Bot size={17} /> Use in ChatGPT</button>
             <div className={styles.suggestions}><span>Try a search:</span>{(searchMode === "cases" ? caseSuggestions : sourceSuggestions).map((item) => <button key={item} onClick={() => runSearch(item)}>{item}</button>)}</div>
           </div>
         </div>
@@ -284,12 +257,12 @@ export default function ProductHome() {
         {results.length ? <><div className={styles.resultList}>{results.map((item) => searchMode === "sources" ? <SourceResult key={getCaseSlugById(item.id)} item={item} /> : <CaseResult key={getCaseSlugById(item.id)} item={item} />)}</div><Link className={styles.viewAll} href={`/cases?q=${encodeURIComponent(submittedQuery)}`}>Open and share the full result set <ArrowRight /></Link></> : <div className={styles.emptyResult}><CircleAlert /><div><strong>No exact tracked result.</strong><p>AI Vortex will not invent a case or silently substitute a different query. Open the directory to use transparent broader searches.</p><Link href={`/cases?q=${encodeURIComponent(submittedQuery)}`}>Review fallback options</Link></div></div>}
       </section>}
 
-      <section className={styles.channelSection} id="use-with-ai">
-        <h2>One intelligence layer. Three ways to use it.</h2>
+      <section className={styles.channelSection}>
+        <h2>One evidence layer. Three source-backed actions.</h2>
         <div className={styles.channelGrid}>
-          <article><Globe2 /><div><strong>Web</strong><p>Discover, search, and inspect source-linked records in the public tracker.</p><a href="#search">Start searching <ArrowRight /></a></div></article>
-          <article><Bot /><div><strong>AI app / MCP</strong><p>Ask questions and turn evidence into citations, summaries, controls, and review-ready packets.</p><button onClick={() => setInstallOpen(true)}>Connect your AI <ArrowRight /></button></div></article>
-          <article id="extension"><Sparkles /><div><strong>Chrome Extension</strong><p>Use the same intelligence beside the case, opinion, filing, or court page you are reading.</p><a href="mailto:manuel@aivortex.io?subject=AI%20Vortex%20Chrome%20extension%20early%20access">Join early access <ArrowRight /></a></div></article>
+          <article><Globe2 /><div><strong>Search the record</strong><p>Discover cases, courts, tools, consequences, and failure patterns across the public corpus.</p><a href="#search">Start searching <ArrowRight /></a></div></article>
+          <article><Landmark /><div><strong>Inspect the source</strong><p>Open the recorded document, understand its source tier, and see what the available evidence cannot establish.</p><Link href="/sources">Review methodology <ArrowRight /></Link></div></article>
+          <article><FileCheck2 /><div><strong>Build the review</strong><p>Turn a case or filtered analytics view into a source-complete, print-ready evidence brief.</p><Link href="/analytics">Open analytics <ArrowRight /></Link></div></article>
         </div>
       </section>
 
@@ -300,9 +273,9 @@ export default function ProductHome() {
 
       <section className={styles.workspace} id="matters">
         <aside className={styles.workflows}>
-          <h3>Common workflows</h3>
-          {workflows.map(({ icon: Icon, label, query: workflowQuery, href }) => href ? <Link key={label} href={href}><Icon />{label}<ChevronRight /></Link> : <button key={label} onClick={() => { runSearch(workflowQuery || ""); document.getElementById("search")?.scrollIntoView({ behavior: "smooth" }); }}><Icon />{label}<ChevronRight /></button>)}
-          <Link className={styles.viewAll} href="/workflows">View all workflows <ArrowRight /></Link>
+          <h3>Research paths</h3>
+          {workflows.map(({ icon: Icon, label, href }) => <Link key={label} href={href}><Icon />{label}<ChevronRight /></Link>)}
+          <Link className={styles.viewAll} href="/resources">View research resources <ArrowRight /></Link>
         </aside>
 
         <section className={styles.mattersPanel}>
@@ -336,35 +309,23 @@ export default function ProductHome() {
 
       <section className={styles.trustBand} aria-labelledby="trust-title"><div><ShieldCheck /><span>Trust boundary</span><h2 id="trust-title">Every answer should show where the evidence ends.</h2></div><div><p><strong>Source-linked, not source-equivalent.</strong> A link establishes traceability; it does not make a summary a substitute for the order or docket.</p><p><strong>Observed incidents, not failure rates.</strong> Counts are not adjusted for product usage, filing volume, or reporting bias.</p><p><strong>Neutral attribution.</strong> A discrepancy is not proof that AI was used. AI Vortex states the recorded basis and flags what remains unknown.</p><Link href="/sources">Inspect methodology, coverage, and limitations <ArrowRight /></Link></div></section>
 
-      <section className={styles.pricing} id="pricing">
-        <div className={styles.pricingIntro}><span>PUBLIC INTELLIGENCE STAYS FREE</span><h2>Pay for saved time, not access to precedent.</h2><p>Research the full public record, inspect sources, and use the MCP for free. The Pro pilot removes packaging friction when you need clean, branded work for a client, court, committee, or team.</p></div>
+      <section className={styles.pricing}>
+        <div className={styles.pricingIntro}><span>PUBLIC INTELLIGENCE STAYS FREE</span><h2>The record should remain open, inspectable, and useful.</h2><p>Search the complete public corpus, inspect recorded sources, open analytics, and generate AI Vortex-attributed evidence briefs without an account.</p></div>
         <div className={styles.pricingGrid}>
-          <article><small>Public research</small><h3>$0 <span>/ always</span></h3><ul><li><Check />Search every public matter and source link</li><li><Check />Use the case directory, map, workflows, and MCP</li><li><Check />Generate review artifacts with AI Vortex attribution</li><li><Check />No account required for public intelligence</li></ul><a href="#search">Search free</a></article>
-          <article className={styles.proCard}><div className={styles.popular}>CONCIERGE PILOT</div><small>Workflow Pro</small><h3>$19 <span>/ person / month during pilot</span></h3><ul><li><Check />Remove AI Vortex attribution from requested exports</li><li><Check />Add your firm or organization branding</li><li><Check />Get report formatting and packet setup help</li><li><Check />Direct onboarding and product feedback access</li></ul><a href="mailto:manuel@aivortex.io?subject=AI%20Vortex%20Workflow%20Pro%20pilot">Request Pro access</a><p>Need team seats, procurement support, or a firm-wide pilot? Email for organization pricing.</p></article>
+          <article><small>Public research</small><h3>Free <span>/ no account required</span></h3><ul><li><Check />Search every public matter and recorded source</li><li><Check />Explore courts, jurisdictions, topics, and analytics</li><li><Check />Generate source-complete briefs with AI Vortex attribution</li><li><Check />Submit corrections and inspect evidence limitations</li></ul><a href="#search">Search the public record</a></article>
+          <article className={styles.proCard}><div className={styles.popular}>HELP SHAPE THE PUBLIC LAYER</div><small>Founding review group</small><h3>Review <span>/ test real records</span></h3><ul><li><Check />Test search quality and record clarity</li><li><Check />Flag missing sources or classification issues</li><li><Check />Review print briefs and evidence boundaries</li><li><Check />Influence what the public product supports next</li></ul><a href="mailto:manuel@aivortex.io?subject=AI%20Vortex%20founding%20review%20group">Join the review group</a><p>No endorsement implied. Reviewers help improve accuracy and usability.</p></article>
         </div>
       </section>
 
       <footer className={styles.footer}>
         <div><Image src={assetUrl("/av-logo-white.png")} width={28} height={24} alt="" /><span><strong>AI VORTEX</strong><small>LEGAL AI RISK</small></span></div>
         <p>AI Vortex is an independent publisher of public legal AI risk intelligence. Verify primary sources before relying. Not legal advice.</p>
-        <nav><a href="mailto:manuel@aivortex.io">About</a><Link href="/sources">Methodology</Link><Link href="/resources">Resources</Link><Link href="/feed">Data updates</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></nav>
+        <nav><Link href="/about">About</Link><Link href="/sources">Methodology</Link><Link href="/resources">Resources</Link><Link href="/feed">Data updates</Link><Link href="/submit">Corrections</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></nav>
       </footer>
 
       <nav className={styles.mobileDock} aria-label="Mobile navigation">
-        <a href="#search"><Search /><span>Search</span></a><Link href="/map"><Map /><span>Map</span></Link><Link href="/courts"><Gavel /><span>Courts</span></Link><button onClick={() => setInstallOpen(true)}><Bot /><span>Use with AI</span></button><button onClick={() => setMobileMenuOpen(true)}><Menu /><span>Menu</span></button>
+        <a href="#search"><Search /><span>Search</span></a><Link href="/map"><Map /><span>Map</span></Link><Link href="/courts"><Gavel /><span>Courts</span></Link><Link href="/sources"><BookOpenCheck /><span>Sources</span></Link><button onClick={() => setMobileMenuOpen(true)}><Menu /><span>Menu</span></button>
       </nav>
-
-      {installOpen && <div className={styles.modalBackdrop} role="presentation" onMouseDown={() => setInstallOpen(false)}>
-        <section className={styles.installModal} role="dialog" aria-modal="true" aria-labelledby="connect-title" onMouseDown={(event) => event.stopPropagation()}>
-          <button ref={modalCloseRef} className={styles.modalClose} onClick={() => setInstallOpen(false)} aria-label="Close"><X /></button>
-          <div className={styles.modalIcon}><Bot /></div>
-          <span>AI VORTEX CONNECTOR</span><h2 id="connect-title">Bring the tracker into your AI workspace.</h2>
-          <p>Connect the read-only MCP endpoint in ChatGPT developer mode, Claude, Codex, or another MCP-compatible client.</p>
-          <div className={styles.endpoint}><code>{publicUrl("/mcp")}</code><button onClick={copyMcp}>{copied ? <Check /> : <Copy />}<span>{copied ? "Copied" : "Copy"}</span></button></div>
-          <ol><li><b>1</b> Open your AI app’s connector or MCP settings.</li><li><b>2</b> Add a custom server using the URL above.</li><li><b>3</b> Ask for a jurisdiction brief, case search, or pre-filing packet.</li></ol>
-          <a href="mailto:manuel@aivortex.io?subject=Help%20connecting%20AI%20Vortex">Get connection help <ArrowRight /></a>
-        </section>
-      </div>}
     </main>
   );
 }

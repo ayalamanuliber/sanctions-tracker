@@ -202,9 +202,17 @@ export interface CaseQuery {
   country?: string;
   state?: string;
   court?: string;
+  courtMatch?: "exact";
+  judge?: string;
   severity?: string;
   tool?: string;
   failure?: string;
+  sanction?: string;
+  party?: string;
+  practice?: string;
+  attribution?: string;
+  year?: string;
+  monetary?: "known" | "signaled";
   status?: "all" | "non-alleged" | "adjudicated" | "alleged";
   sort?: "relevance" | "date" | "severity" | "amount";
   order?: "asc" | "desc";
@@ -238,18 +246,49 @@ export function queryCases(query: CaseQuery = {}) {
   const country = normalize(query.country);
   const state = normalize(query.state);
   const court = normalize(query.court);
+  const judge = normalize(query.judge);
   const tool = normalize(query.tool);
   const failure = normalize(query.failure);
+  const sanction = normalize(query.sanction);
+  const party = normalize(query.party);
+  const practice = normalize(query.practice);
 
   const results = LEGAL_RISK_CASES.filter((item) => {
     if ((query.status === "non-alleged" || query.status === "adjudicated") && item.alleged) return false;
     if (query.status === "alleged" && !item.alleged) return false;
     if (country && normalize(item.country) !== country) return false;
     if (state && normalize(item.state) !== state) return false;
-    if (court && !matchesCourt(item.court, query.court)) return false;
+    if (
+      court &&
+      (query.courtMatch === "exact"
+        ? normalize(item.court) !== court
+        : !matchesCourt(item.court, query.court))
+    )
+      return false;
+    if (judge && normalize(item.judge) !== judge) return false;
     if (query.severity && item.severity !== query.severity) return false;
     if (tool && !normalize(`${item.ai_tool_used} ${item.summary}`).includes(tool)) return false;
     if (failure && !normalize(item.tags.join(" ")).includes(failure)) return false;
+    if (sanction && !item.sanction_types.some((value) => normalize(value) === sanction))
+      return false;
+    if (party && normalize(item.party) !== party) return false;
+    if (
+      practice &&
+      normalize(item.legal_field_primary) !== practice &&
+      normalize(item.legal_field_secondary) !== practice
+    )
+      return false;
+    if (query.attribution && attributionStatusForSearch(item) !== query.attribution)
+      return false;
+    if (query.year && item.date.slice(0, 4) !== query.year) return false;
+    if (query.monetary === "known" && !(item.amount && item.amount > 0))
+      return false;
+    if (
+      query.monetary === "signaled" &&
+      !(item.amount && item.amount > 0) &&
+      !item.sanction_types.includes("monetary")
+    )
+      return false;
     if (q) {
       const textMatch = terms.length > 0 && terms.every((term) => caseSearchText(item).includes(term));
       const courtMatch = matchesCourt(item.court, rawQuery);
@@ -310,10 +349,26 @@ export function getCaseMatchReason(item: LegalRiskCase, query: CaseQuery) {
     return "Full-record text match";
   }
   if (query.court) return `Court filter: ${query.court}`;
+  if (query.judge) return `Recorded decision-maker: ${query.judge}`;
   if (query.state) return `State filter: ${query.state}`;
   if (query.failure) return `Failure mode: ${query.failure.replaceAll("-", " ")}`;
+  if (query.sanction) return `Recorded response: ${query.sanction.replaceAll("-", " ")}`;
+  if (query.party) return `Party type: ${query.party}`;
+  if (query.practice) return `Practice area: ${query.practice}`;
+  if (query.year) return `Decision year: ${query.year}`;
+  if (query.monetary === "known") return "Known numeric amount recorded";
+  if (query.monetary === "signaled") return "Monetary consequence recorded";
   if (query.tool) return `Recorded tool: ${query.tool}`;
   return "Included in the selected corpus view";
+}
+
+function attributionStatusForSearch(item: LegalRiskCase) {
+  if (item.alleged) return "allegation-only";
+  const tool = normalize(item.ai_tool_used);
+  if (!tool || tool === "unidentified") return "tool-unidentified";
+  if (tool.includes("implied") || tool.includes("unspecified"))
+    return "ai-implied-unspecified";
+  return "named-tool-recorded";
 }
 
 export interface CaseFallback {

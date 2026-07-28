@@ -63,8 +63,12 @@ export default async function CasesPage({ searchParams }: { searchParams?: Promi
   const params = (await searchParams) || {};
   const query = {
     q: value(params, "q"), country: value(params, "country"), state: value(params, "state"),
-    court: value(params, "court"), severity: value(params, "severity"), tool: value(params, "tool"),
-    failure: value(params, "failure"), status: (value(params, "status") || "all") as "all" | "non-alleged" | "adjudicated" | "alleged",
+    court: value(params, "court"), courtMatch: (value(params, "court_match") || undefined) as "exact" | undefined,
+    judge: value(params, "judge"), severity: value(params, "severity"), tool: value(params, "tool"),
+    failure: value(params, "failure"), sanction: value(params, "sanction"), party: value(params, "party"),
+    practice: value(params, "practice"), attribution: value(params, "attribution"), year: value(params, "year"),
+    monetary: (value(params, "monetary") || undefined) as "known" | "signaled" | undefined,
+    status: (value(params, "status") || "all") as "all" | "non-alleged" | "adjudicated" | "alleged",
     sort: (value(params, "sort") || undefined) as "relevance" | "date" | "severity" | "amount" | undefined,
     order: (value(params, "order") || "desc") as "asc" | "desc",
   };

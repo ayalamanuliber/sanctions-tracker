@@ -5,6 +5,7 @@ const base = process.env.PRODUCT_BASE_URL || "http://localhost:3017/legal-ai-ris
 const corpus = JSON.parse(fs.readFileSync(new URL("../data/sanctions.json", import.meta.url), "utf8"));
 const readiness = JSON.parse(fs.readFileSync(new URL("../data/publication-readiness-index.json", import.meta.url), "utf8"));
 const intelligence = JSON.parse(fs.readFileSync(new URL("../data/case-intelligence.json", import.meta.url), "utf8"));
+const judgeEnrichment = JSON.parse(fs.readFileSync(new URL("../data/judge-enrichment.json", import.meta.url), "utf8"));
 const intelligenceBySlug = new Map(intelligence.map((record) => [record.slug, record]));
 
 async function page(path) {
@@ -81,6 +82,61 @@ for (const route of [
 const judgePage = await page("/judges/vernon-d-oliver");
 assert.ok(judgePage.includes("Public records in this view"), "Judge pages must expose their linked public matters");
 assert.ok(judgePage.includes("Corpus denominator"), "Judge pages must state their corpus denominator");
+assert.ok(
+  judgePage.includes("record Vernon D. Oliver as a decision-maker"),
+  "Judge intelligence must describe recorded matters rather than infer general behavior",
+);
+assert.ok(judgePage.includes("FAQPage"), "Judge intelligence pages must expose answer schema");
+const vernonIds = new Set(
+  Object.entries(judgeEnrichment.records)
+    .filter(([, record]) => record.judge === "Vernon D. Oliver")
+    .map(([id]) => id),
+);
+const vernonRecords = corpus.filter(
+  (item) => item.judge === "Vernon D. Oliver" || vernonIds.has(item.id),
+);
+const vernonIssues = vernonRecords.filter((item) =>
+  item.tags.includes("misrepresented-authority"),
+);
+const vernonIssueResults = await page(
+  "/cases?judge=Vernon%20D.%20Oliver&failure=misrepresented-authority",
+);
+assert.equal(
+  resultCount(vernonIssueResults),
+  vernonIssues.length,
+  "Judge issue drill-down must match the exact structured subset",
+);
+
+const sdnyEntity = await page("/courts/s-d-new-york");
+assert.ok(
+  sdnyEntity.includes("What kinds of legal AI issues and responses appear in S.D. New York?"),
+  "Court pages must provide an evidence-based direct answer",
+);
+assert.ok(sdnyEntity.includes("court_match=exact"), "Court intelligence links must preserve exact entity scope");
+assert.ok(sdnyEntity.includes("FAQPage"), "Court intelligence pages must expose answer schema");
+const exactSdny = corpus.filter((item) => item.court === "S.D. New York");
+const exactSdnyCitationIssues = exactSdny.filter((item) =>
+  item.tags.includes("fake-citations"),
+);
+const exactSdnyIssueResults = await page(
+  "/cases?court=S.D.%20New%20York&court_match=exact&failure=fake-citations",
+);
+assert.equal(
+  resultCount(exactSdnyIssueResults),
+  exactSdnyCitationIssues.length,
+  "Court issue drill-down must match the exact structured subset",
+);
+const exactSdnyKnownAmounts = exactSdny.filter(
+  (item) => Number(item.amount || 0) > 0,
+);
+const exactSdnyMoneyResults = await page(
+  "/cases?court=S.D.%20New%20York&court_match=exact&monetary=known&sort=amount&order=desc",
+);
+assert.equal(
+  resultCount(exactSdnyMoneyResults),
+  exactSdnyKnownAmounts.length,
+  "Court monetary drill-down must contain only records with known numeric amounts",
+);
 const judgesDirectory = await page("/judges");
 assert.ok(judgesDirectory.includes("Browse the evidence network"), "Entity directories must expose cross-corpus navigation");
 assert.ok(judgesDirectory.includes("/legal-ai-risk/courts"), "Judge directory must link directly to court profiles");
@@ -147,4 +203,4 @@ const expectedIndexable = Object.entries(readiness.by_slug).filter(
 ).length;
 assert.equal(caseUrls.length, expectedIndexable, "Sitemap must contain every case that passes both publication and evidence baselines");
 
-console.log(JSON.stringify({ status: "pass", base, checks: 40, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseUrls.length }, null, 2));
+console.log(JSON.stringify({ status: "pass", base, checks: 49, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseUrls.length }, null, 2));

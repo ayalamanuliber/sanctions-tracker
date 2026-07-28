@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ExternalLink, ShieldCheck } from "lucide-react";
+import {
+  ArrowRight,
+  Banknote,
+  BarChart3,
+  Bot,
+  CalendarDays,
+  ExternalLink,
+  Scale,
+  ShieldAlert,
+  ShieldCheck,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
 
 import CorpusDirectoryNav from "@/components/CorpusDirectoryNav";
 import ResearchShell from "@/components/ResearchShell";
@@ -19,17 +31,27 @@ import {
   type CorpusEntity,
   type EntityKind,
 } from "@/lib/entity-pages";
+import {
+  buildEntityIntelligence,
+  entityIntelligenceDescription,
+  formatCurrency,
+  type IntelligenceRow,
+} from "@/lib/entity-intelligence";
 import { publicUrl } from "@/lib/site";
 import styles from "./EntityPages.module.css";
 
 const DISPLAY_LIMIT = 24;
 
 function entityTitle(entity: CorpusEntity) {
-  return `${entity.label} legal AI risk records | AI Vortex`;
+  if (entity.kind === "judge")
+    return `${entity.label}: Legal AI Cases and Recorded Responses | AI Vortex`;
+  if (entity.kind === "court")
+    return `${entity.label} Legal AI Cases, Sanctions and Patterns | AI Vortex`;
+  return `${entity.label}: Legal AI Cases and Recorded Patterns | AI Vortex`;
 }
 
 export function entityMetadata(entity: CorpusEntity): Metadata {
-  const description = entitySummary(entity, LEGAL_RISK_CASES.length).slice(0, 158);
+  const description = entityIntelligenceDescription(entity).slice(0, 158);
   const canonical = publicUrl(entityHref(entity.kind, entity.slug));
   const socialImage = publicUrl("/legal-ai-risk-social.png");
   return {
@@ -51,6 +73,7 @@ export function entityMetadata(entity: CorpusEntity): Metadata {
 }
 
 function entitySchema(entity: CorpusEntity) {
+  const intelligence = buildEntityIntelligence(entity);
   const canonical = publicUrl(entityHref(entity.kind, entity.slug));
   const directory = publicUrl(entityDirectoryHref(entity.kind));
   return {
@@ -61,7 +84,7 @@ function entitySchema(entity: CorpusEntity) {
         "@id": `${canonical}#webpage`,
         url: canonical,
         name: entityTitle(entity),
-        description: entitySummary(entity, LEGAL_RISK_CASES.length),
+        description: intelligence.summary,
         isAccessibleForFree: true,
         dateModified: LAST_CHECKED,
         mainEntity: { "@id": `${canonical}#items` },
@@ -89,12 +112,59 @@ function entitySchema(entity: CorpusEntity) {
           { "@type": "ListItem", position: 3, name: entity.label, item: canonical },
         ],
       },
+      {
+        "@type": "FAQPage",
+        "@id": `${canonical}#faq`,
+        mainEntity: intelligence.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      },
     ],
   };
 }
 
+function PatternPanel({
+  eyebrow,
+  title,
+  icon: Icon,
+  rows,
+  note,
+}: {
+  eyebrow: string;
+  title: string;
+  icon: LucideIcon;
+  rows: IntelligenceRow[];
+  note?: string;
+}) {
+  return (
+    <section className={`${shell.card} ${styles.patternPanel}`}>
+      <header className={styles.patternHead}>
+        <span className={styles.patternIcon}><Icon aria-hidden="true" size={17} /></span>
+        <div><small>{eyebrow}</small><h2>{title}</h2></div>
+      </header>
+      {rows.length ? (
+        <div className={styles.patternRows}>
+          {rows.map((row) => (
+            <Link className={styles.patternRow} href={row.href} key={row.value}>
+              <span className={styles.patternLabel}><strong>{row.label}</strong><b>{row.count.toLocaleString()} · {row.percentage}%</b></span>
+              <span className={styles.patternTrack} aria-hidden="true"><i style={{ width: `${Math.max(row.percentage, 1.5)}%` }} /></span>
+              <ArrowRight aria-hidden="true" size={14} />
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <p className={styles.emptyPattern}>No classified values are currently recorded for this dimension.</p>
+      )}
+      {note && <p className={styles.patternNote}>{note}</p>}
+    </section>
+  );
+}
+
 export function EntityDetailPage({ entity }: { entity: CorpusEntity }) {
   const related = entityRelated(entity);
+  const intelligence = buildEntityIntelligence(entity);
   const shown = entity.records.slice(0, DISPLAY_LIMIT);
   const sourceRate = entity.records.length ? Math.round((entity.sourceLinked / entity.records.length) * 1000) / 10 : 0;
   const singular = entity.records.length === 1 ? "record" : "records";
@@ -118,11 +188,47 @@ export function EntityDetailPage({ entity }: { entity: CorpusEntity }) {
       <article className={`${shell.card} ${styles.metric}`}><small>Latest tracked</small><strong>{formatCaseDate(entity.latest)}</strong></article>
     </div>
 
-    <section className={`${shell.card} ${styles.answer}`}><span className={shell.eyebrow}>Direct answer</span><h2>What does this corpus view establish?</h2>{definition && <p><strong>Taxonomy definition:</strong> {definition}</p>}<p>{entitySummary(entity, LEGAL_RISK_CASES.length)}</p><p className={styles.answerNote}>A record can appear in more than one failure-mode or consequence view. The linked source, subsequent docket history, and local procedural context remain controlling.</p></section>
+    <section className={`${shell.card} ${styles.answer}`}>
+      <span className={shell.eyebrow}>Evidence-based answer</span>
+      <h2>{intelligence.question}</h2>
+      {definition && <p><strong>Taxonomy definition:</strong> {definition}</p>}
+      <p>{intelligence.summary}</p>
+      {intelligence.sampleNote && <p className={styles.sampleNote}><ShieldAlert aria-hidden="true" size={15} />{intelligence.sampleNote}</p>}
+      <p className={styles.answerNote}>Every count below links to the exact matching records. The linked source, subsequent docket history, and local procedural context remain controlling.</p>
+    </section>
+
+    <section className={styles.intelligenceAtGlance} aria-label="Evidence profile at a glance">
+      <article className={`${shell.card} ${styles.intelligenceMetric}`}>
+        <BarChart3 aria-hidden="true" />
+        <span><small>Leading issue signal</small><strong>{intelligence.failures[0]?.label || "Not classified"}</strong><b>{intelligence.failures[0] ? `${intelligence.failures[0].count.toLocaleString()} records` : "No classified records"}</b></span>
+      </article>
+      <article className={`${shell.card} ${styles.intelligenceMetric}`}>
+        <Scale aria-hidden="true" />
+        <span><small>Leading recorded response</small><strong>{intelligence.consequences[0]?.label || "Not classified"}</strong><b>{intelligence.consequences[0] ? `${intelligence.consequences[0].count.toLocaleString()} records` : "No classified records"}</b></span>
+      </article>
+      <Link className={`${shell.card} ${styles.intelligenceMetric} ${styles.intelligenceMetricLink}`} href={intelligence.monetary.href}>
+        <Banknote aria-hidden="true" />
+        <span><small>Known numeric amounts</small><strong>{intelligence.monetary.known ? formatCurrency(intelligence.monetary.total) : "None recorded"}</strong><b>{intelligence.monetary.known.toLocaleString()} known · {intelligence.monetary.unquantified.toLocaleString()} unquantified</b></span>
+        <ArrowRight aria-hidden="true" size={14} />
+      </Link>
+      <article className={`${shell.card} ${styles.intelligenceMetric}`}>
+        <CalendarDays aria-hidden="true" />
+        <span><small>Recorded date range</small><strong>{formatCaseDate(intelligence.earliest)}</strong><b>through {formatCaseDate(intelligence.latest)}</b></span>
+      </article>
+    </section>
+
+    <div className={styles.patternGrid}>
+      <PatternPanel eyebrow="Observed issue mix" title="What problems appear in these records?" icon={BarChart3} rows={intelligence.failures} note="Issue categories can overlap within a single matter." />
+      <PatternPanel eyebrow="Recorded consequences" title="How did courts or authorities respond?" icon={Scale} rows={intelligence.consequences} note="Response categories can overlap and do not imply that every matter ended in a sanction." />
+      <PatternPanel eyebrow="Participant context" title="Who appears in these matters?" icon={Users} rows={intelligence.parties} />
+      <PatternPanel eyebrow="Matter context" title="Which practice areas are represented?" icon={ShieldCheck} rows={intelligence.practiceAreas} />
+      <PatternPanel eyebrow="Attribution status" title="How is AI involvement recorded?" icon={Bot} rows={intelligence.attribution} note="Unspecified attribution is not evidence that a particular vendor was used." />
+      <PatternPanel eyebrow="Corpus evolution" title="When were these matters recorded?" icon={CalendarDays} rows={intelligence.years} />
+    </div>
 
     <div className={styles.layout}><div>
       <section className={`${shell.card} ${styles.section}`}><h2>Public records in this view</h2><p>Showing the most recent {Math.min(shown.length, DISPLAY_LIMIT).toLocaleString()} of {entity.records.length.toLocaleString()} matching {singular}.</p><div className={styles.records}>{shown.map((record) => <Link className={styles.record} href={`/cases/${record.slug}`} key={record.id}><div><strong>{record.case_name}</strong><span>{record.court || "Court not recorded"} · {record.state || record.country} · {record.ai_tool_used || "Tool not recorded"}</span></div><small>{formatCaseDate(record.date)}</small></Link>)}</div><Link className={styles.recordLink} href={entityCaseDirectoryHref(entity)}>{isConsequence ? "Open the full analytics view" : "Open all matching records"}<ArrowRight size={14} /></Link></section>
-      <section className={`${shell.card} ${styles.section}`}><h2>Scope and limitation</h2><p className={styles.limit}>This page groups existing structured public-record fields. It does not establish that a court, jurisdiction, country, vendor, or category has a higher rate of AI use, error, misconduct, or sanctions than another.</p><h3>Indexing status</h3><p>{entity.indexEligible ? `This entity meets the public indexing baseline of at least ${entityIndexThreshold()} source-linked records.` : `This entity remains public for research but is excluded from search indexing because it has fewer than ${entityIndexThreshold()} source-linked records.`}</p></section>
+      <section className={`${shell.card} ${styles.section}`}><h2>Scope and limitation</h2><p className={styles.limit}>This page groups existing structured public-record fields. For judges, the counts describe matters in which that person is recorded as a decision-maker; they do not establish a judge’s general practices or sanction rate. For every entity type, the view is not a comparison against unobserved proceedings.</p><h3>Indexing status</h3><p>{entity.indexEligible ? `This entity meets the public indexing baseline of at least ${entityIndexThreshold()} source-linked records.` : `This entity remains public for research but is excluded from search indexing because it has fewer than ${entityIndexThreshold()} source-linked records.`}</p></section>
     </div><aside>
       <section className={`${shell.card} ${styles.section}`}><h2>Related research</h2><div className={styles.relatedList}>{related.map(({ candidate, overlap }) => <Link className={styles.related} href={entityHref(candidate.kind, candidate.slug)} key={`${candidate.kind}-${candidate.slug}`}><strong>{candidate.label}</strong><span>{overlap} shared<br />records</span></Link>)}</div></section>
       <section className={`${shell.card} ${styles.section}`}><ShieldCheck size={18} aria-hidden="true" /><h2>Evidence boundary</h2><p>AI Vortex publishes a source-aware public corpus. The page does not replace the complete docket, later history, a court’s own rules, or legal research.</p><Link className={styles.recordLink} href="/submit">Suggest a correction <ExternalLink size={14} /></Link></section>

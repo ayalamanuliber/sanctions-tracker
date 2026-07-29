@@ -141,6 +141,10 @@ const judgesDirectory = await page("/judges");
 assert.ok(judgesDirectory.includes("Browse the evidence network"), "Entity directories must expose cross-corpus navigation");
 assert.ok(judgesDirectory.includes("/legal-ai-risk/courts"), "Judge directory must link directly to court profiles");
 assert.ok(judgesDirectory.includes("/legal-ai-risk/tools"), "Judge directory must link directly to recorded AI tools");
+assert.ok(judgesDirectory.includes("D. Connecticut"), "Judge directory must expose primary recorded court context");
+assert.ok(judgesDirectory.includes("Federal"), "Judge directory must expose recorded jurisdiction context");
+assert.ok(judgesDirectory.includes("2nd Circuit"), "Judge directory must expose recorded circuit context");
+assert.ok(judgesDirectory.includes('"@type":"Person"'), "Judge directory must describe decision-makers as Person entities");
 
 const toolPage = await page("/tools/chatgpt");
 assert.ok(toolPage.includes("Public records in this view"), "Tool pages must expose their linked public matters");
@@ -188,6 +192,21 @@ const judgeProfile = await page("/judges/vernon-d-oliver");
 assert.ok(
   judgeProfile.includes("/legal-ai-risk/judges/vernon-d-oliver/report"),
   "An entity profile must expose its source-linked evidence report",
+);
+assert.ok(
+  judgeProfile.includes("Primary recorded court") &&
+    judgeProfile.includes("/legal-ai-risk/courts/d-connecticut"),
+  "A judge profile must expose navigable court context",
+);
+assert.ok(
+  judgeProfile.includes("Geographic context") &&
+    judgeProfile.includes("/legal-ai-risk/states/ct"),
+  "A judge profile must expose navigable geographic context",
+);
+assert.ok(
+  judgeProfile.includes('"@type":"Person"') &&
+    judgeProfile.includes('"jobTitle":"United States District Judge"'),
+  "A judge profile must expose evidence-bound Person schema",
 );
 
 const judgeReport = await page("/judges/vernon-d-oliver/report");

@@ -8,6 +8,9 @@ import {
   CalendarDays,
   ExternalLink,
   FileText,
+  Gavel,
+  Landmark,
+  MapPin,
   Scale,
   ShieldAlert,
   ShieldCheck,
@@ -31,6 +34,7 @@ import {
   entityReportHref,
   entitySummary,
   getEntities,
+  judgeEntityContext,
   type CorpusEntity,
   type EntityKind,
 } from "@/lib/entity-pages";
@@ -79,6 +83,7 @@ export function entityMetadata(entity: CorpusEntity): Metadata {
 
 function entitySchema(entity: CorpusEntity) {
   const intelligence = buildEntityIntelligence(entity);
+  const judgeContext = judgeEntityContext(entity);
   const canonical = publicUrl(entityHref(entity.kind, entity.slug));
   const directory = publicUrl(entityDirectoryHref(entity.kind));
   const socialImage = publicUrl(
@@ -96,9 +101,41 @@ function entitySchema(entity: CorpusEntity) {
         isAccessibleForFree: true,
         dateModified: LAST_CHECKED,
         mainEntity: { "@id": `${canonical}#items` },
+        ...(judgeContext ? { about: { "@id": `${canonical}#decision-maker` } } : {}),
         primaryImageOfPage: { "@id": `${canonical}#image` },
         breadcrumb: { "@id": `${canonical}#breadcrumb` },
       },
+      ...(judgeContext
+        ? [{
+            "@type": "Person",
+            "@id": `${canonical}#decision-maker`,
+            name: entity.label,
+            url: canonical,
+            ...(judgeContext.role ? { jobTitle: judgeContext.role } : {}),
+            description: [
+              judgeContext.primaryCourt,
+              judgeContext.jurisdiction,
+              judgeContext.state || judgeContext.country,
+              judgeContext.circuit,
+            ].filter(Boolean).join(" · "),
+            ...(judgeContext.primaryCourt
+              ? {
+                  affiliation: {
+                    "@type": "Organization",
+                    name: judgeContext.primaryCourt,
+                  },
+                }
+              : {}),
+            ...((judgeContext.state || judgeContext.country)
+              ? {
+                  areaServed: {
+                    "@type": "AdministrativeArea",
+                    name: judgeContext.state || judgeContext.country,
+                  },
+                }
+              : {}),
+          }]
+        : []),
       {
         "@type": "ImageObject",
         "@id": `${canonical}#image`,
@@ -190,6 +227,7 @@ export function EntityDetailPage({ entity }: { entity: CorpusEntity }) {
   const directoryHref = entityDirectoryHref(entity.kind);
   const isConsequence = entity.kind === "consequence";
   const definition = entityDefinition(entity);
+  const judgeContext = judgeEntityContext(entity);
 
   return <ResearchShell><main className={shell.main}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
@@ -198,6 +236,47 @@ export function EntityDetailPage({ entity }: { entity: CorpusEntity }) {
       <div><span className={shell.eyebrow}>Source-linked corpus view</span><h1>{entity.label}</h1><p>{entitySummary(entity, LEGAL_RISK_CASES.length)}</p></div>
       <div className={shell.headActions}><Link className={shell.button} href={entityReportHref(entity.kind, entity.slug)}><FileText size={15} />Open evidence report</Link><Link className={shell.buttonSecondary} href={entityCaseDirectoryHref(entity)}>{isConsequence ? "Inspect in analytics" : "Search matching records"}<ArrowRight size={15} /></Link><Link className={shell.buttonSecondary} href="/sources">Methodology</Link></div>
     </header>
+
+    {judgeContext && (
+      <section className={`${shell.card} ${styles.judgeContextStrip}`} aria-label="Recorded judicial context">
+        <div className={styles.judgeContextItem}>
+          <Gavel aria-hidden="true" />
+          <span><small>Recorded role</small><strong>{judgeContext.role || "Judicial decision-maker"}</strong></span>
+        </div>
+        {judgeContext.primaryCourt && (
+          judgeContext.courtHref ? (
+            <Link className={`${styles.judgeContextItem} ${styles.judgeContextLink}`} href={judgeContext.courtHref}>
+              <Landmark aria-hidden="true" />
+              <span><small>Primary recorded court</small><strong>{judgeContext.primaryCourt}</strong></span>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+          ) : (
+            <div className={styles.judgeContextItem}>
+              <Landmark aria-hidden="true" />
+              <span><small>Primary recorded court</small><strong>{judgeContext.primaryCourt}</strong></span>
+            </div>
+          )
+        )}
+        <div className={styles.judgeContextItem}>
+          <Scale aria-hidden="true" />
+          <span><small>Jurisdiction</small><strong>{judgeContext.jurisdiction || "Not classified"}</strong></span>
+        </div>
+        {(judgeContext.state || judgeContext.country || judgeContext.circuit) && (
+          judgeContext.stateHref ? (
+            <Link className={`${styles.judgeContextItem} ${styles.judgeContextLink}`} href={judgeContext.stateHref}>
+              <MapPin aria-hidden="true" />
+              <span><small>Geographic context</small><strong>{[judgeContext.state, judgeContext.circuit].filter(Boolean).join(" · ")}</strong></span>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+          ) : (
+            <div className={styles.judgeContextItem}>
+              <MapPin aria-hidden="true" />
+              <span><small>Geographic context</small><strong>{[judgeContext.state || judgeContext.country, judgeContext.circuit].filter(Boolean).join(" · ")}</strong></span>
+            </div>
+          )
+        )}
+      </section>
+    )}
 
     <div className={styles.metrics}>
       <article className={`${shell.card} ${styles.metric}`}><small>Matched records</small><strong>{entity.records.length.toLocaleString()}</strong></article>
@@ -264,7 +343,33 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
     url: publicUrl(entityDirectoryHref(kind)),
     name: `AI Vortex ${title}`,
     description: `Browse ${title} represented in the AI Vortex public legal AI risk corpus.`,
-    mainEntity: { "@type": "ItemList", numberOfItems: entities.length },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: entities.length,
+      ...(kind === "judge"
+        ? {
+            itemListElement: entities.map((entity, index) => {
+              const context = judgeEntityContext(entity);
+              return {
+                "@type": "ListItem",
+                position: index + 1,
+                item: {
+                  "@type": "Person",
+                  name: entity.label,
+                  url: publicUrl(entityHref(entity.kind, entity.slug)),
+                  ...(context?.role ? { jobTitle: context.role } : {}),
+                  description: [
+                    context?.primaryCourt,
+                    context?.jurisdiction,
+                    context?.state || context?.country,
+                    context?.circuit,
+                  ].filter(Boolean).join(" · "),
+                },
+              };
+            }),
+          }
+        : {}),
+    },
   };
   return <ResearchShell><main className={shell.main}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
@@ -272,6 +377,36 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
     <header className={shell.pageHead}><div><span className={shell.eyebrow}>Corpus navigation</span><h1>Browse {title}</h1><p>These pages group recorded public matters by one structured field. They are navigational corpus views, not comparative risk rankings.</p></div><div className={shell.headActions}><Link className={shell.button} href="/cases">Search all records</Link><Link className={shell.buttonSecondary} href="/sources">Methodology</Link></div></header>
     <CorpusDirectoryNav activeKind={kind} compact />
     <div className={styles.metrics}><article className={`${shell.card} ${styles.metric}`}><small>Entities</small><strong>{entities.length.toLocaleString()}</strong></article><article className={`${shell.card} ${styles.metric}`}><small>Index eligible</small><strong>{indexable.toLocaleString()}</strong></article><article className={`${shell.card} ${styles.metric}`}><small>Corpus records</small><strong>{LEGAL_RISK_CASES.length.toLocaleString()}</strong></article><article className={`${shell.card} ${styles.metric}`}><small>Corpus checked</small><strong>{formatCaseDate(LAST_CHECKED)}</strong></article></div>
-    <section className={`${shell.card} ${styles.section}`}><h2>{title[0]?.toUpperCase() + title.slice(1)} in the public record</h2><p className={styles.directoryIntro}>Open an entity to inspect its exact denominator, source-linked case records, limitations, and related corpus views.</p><div className={styles.directoryList}>{entities.map((entity) => <Link className={styles.directoryItem} data-indexable={entity.indexEligible} href={entityHref(kind, entity.slug)} key={entity.slug}><div><strong>{entity.label}</strong><small>{entity.sourceLinked.toLocaleString()}/{entity.records.length.toLocaleString()} source linked · latest {formatCaseDate(entity.latest)}</small></div><b>{entity.records.length.toLocaleString()} records</b></Link>)}</div><p className={styles.indexNote}>Entity pages with fewer than {entityIndexThreshold()} source-linked records remain available for transparent research but are excluded from search indexing.</p></section>
+    <section className={`${shell.card} ${styles.section}`}>
+      <h2>{title[0]?.toUpperCase() + title.slice(1)} in the public record</h2>
+      <p className={styles.directoryIntro}>
+        {kind === "judge"
+          ? "Scan each decision-maker’s primary recorded court, jurisdiction, and geographic context before opening the source-linked profile."
+          : "Open an entity to inspect its exact denominator, source-linked case records, limitations, and related corpus views."}
+      </p>
+      <div className={styles.directoryList}>
+        {entities.map((entity) => {
+          const context = judgeEntityContext(entity);
+          return (
+            <Link className={styles.directoryItem} data-indexable={entity.indexEligible} href={entityHref(kind, entity.slug)} key={entity.slug}>
+              <div>
+                <strong>{entity.label}</strong>
+                {context && (
+                  <span className={styles.judgeQuickContext}>
+                    {context.primaryCourt && <span><Landmark aria-hidden="true" />{context.primaryCourt}</span>}
+                    {context.jurisdiction && <em>{context.jurisdiction}</em>}
+                    {(context.state || context.country) && <em>{context.state || context.country}</em>}
+                    {context.circuit && <span>{context.circuit}</span>}
+                  </span>
+                )}
+                <small>{entity.sourceLinked.toLocaleString()}/{entity.records.length.toLocaleString()} source linked · latest {formatCaseDate(entity.latest)}</small>
+              </div>
+              <b>{entity.records.length.toLocaleString()} {entity.records.length === 1 ? "record" : "records"}</b>
+            </Link>
+          );
+        })}
+      </div>
+      <p className={styles.indexNote}>Entity pages with fewer than {entityIndexThreshold()} source-linked records remain available for transparent research but are excluded from search indexing.</p>
+    </section>
   </main></ResearchShell>;
 }

@@ -22,6 +22,17 @@ export type CorpusEntity = {
   indexEligible: boolean;
 };
 
+export type JudgeEntityContext = {
+  primaryCourt: string | null;
+  courtHref: string | null;
+  jurisdiction: string | null;
+  state: string | null;
+  stateHref: string | null;
+  country: string | null;
+  circuit: string | null;
+  role: string | null;
+};
+
 const INDEX_MIN_RECORDS = 3;
 
 export const FAILURE_MODE_DEFINITIONS = {
@@ -267,6 +278,63 @@ export function getRecordEntities(kind: EntityKind, recordId: string) {
   return ENTITIES[kind].filter((entity) =>
     entity.records.some((record) => record.id === recordId),
   );
+}
+
+function mostFrequentValue(
+  records: readonly LegalRiskCase[],
+  getValue: (record: LegalRiskCase) => string | null | undefined,
+) {
+  const counts = new Map<string, { value: string; count: number; first: number }>();
+  records.forEach((record, index) => {
+    const value = getValue(record)?.trim();
+    if (!value) return;
+    const key = comparisonKey(value);
+    const current = counts.get(key);
+    counts.set(key, {
+      value: current?.value || value,
+      count: (current?.count || 0) + 1,
+      first: current?.first ?? index,
+    });
+  });
+  return [...counts.values()].sort(
+    (a, b) => b.count - a.count || a.first - b.first || a.value.localeCompare(b.value),
+  )[0]?.value || null;
+}
+
+export function judgeEntityContext(
+  entity: CorpusEntity,
+): JudgeEntityContext | null {
+  if (entity.kind !== "judge") return null;
+  const primaryCourt = mostFrequentValue(entity.records, (record) => record.court);
+  const jurisdictionValue = mostFrequentValue(
+    entity.records,
+    (record) => record.jurisdiction,
+  );
+  const state = mostFrequentValue(entity.records, (record) => record.state);
+  const country = mostFrequentValue(entity.records, (record) => record.country);
+  const circuit = mostFrequentValue(entity.records, (record) => record.circuit);
+  const role = mostFrequentValue(entity.records, (record) => record.judge_role);
+  const courtEntity = primaryCourt
+    ? ENTITIES.court.find(
+        (candidate) => comparisonKey(candidate.label) === comparisonKey(primaryCourt),
+      )
+    : null;
+  const stateEntity = state
+    ? ENTITIES.state.find((candidate) =>
+        candidate.records.some((record) => record.state === state),
+      )
+    : null;
+
+  return {
+    primaryCourt,
+    courtHref: courtEntity ? entityHref("court", courtEntity.slug) : null,
+    jurisdiction: jurisdictionValue ? titleLabel(jurisdictionValue) : null,
+    state,
+    stateHref: stateEntity ? entityHref("state", stateEntity.slug) : null,
+    country,
+    circuit,
+    role,
+  };
 }
 
 export function entityHref(kind: EntityKind, slug: string) {

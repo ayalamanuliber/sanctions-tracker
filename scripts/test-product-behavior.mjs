@@ -147,6 +147,66 @@ assert.ok(judgesDirectory.includes('"@type":"Person"'), "Judge directory must de
 const toolPage = await page("/tools/chatgpt");
 assert.ok(toolPage.includes("Public records in this view"), "Tool pages must expose their linked public matters");
 assert.ok(toolPage.includes("BreadcrumbList"), "Entity pages must include breadcrumb schema");
+assert.ok(
+  toolPage.includes("OpenAI") &&
+    toolPage.includes("General-purpose AI assistant") &&
+    toolPage.includes("Official product site"),
+  "Tool profiles must identify the recorded product provider, category, and official reference",
+);
+assert.ok(
+  toolPage.includes('"@type":"SoftwareApplication"') &&
+    toolPage.includes('"provider":{"@type":"Organization","name":"OpenAI"}'),
+  "Tool profiles must expose SoftwareApplication and provider schema",
+);
+assert.ok(
+  toolPage.includes('data-tool-brand="monogram"') &&
+    toolPage.includes("Product names and marks identify recorded tools only"),
+  "Tool profiles must render a recognizable mark with a vendor-affiliation boundary",
+);
+const toolsDirectory = await page("/tools");
+assert.ok(
+  toolsDirectory.includes("Anthropic") &&
+    toolsDirectory.includes("Thomson Reuters") &&
+    toolsDirectory.includes("AI answer engine"),
+  "The tool directory must expose provider and category context before the click",
+);
+assert.ok(
+  toolsDirectory.includes('data-tool-brand="logo"') &&
+    toolsDirectory.includes('data-tool-brand="monogram"'),
+  "The tool directory must support verified logos and restrained monogram fallbacks",
+);
+const claudePage = await page("/tools/claude");
+assert.ok(
+  claudePage.includes('data-tool-brand="logo"') &&
+    claudePage.includes("Anthropic"),
+  "A tool with an available reusable mark must render its logo and provider",
+);
+const toolReport = await page("/tools/chatgpt/report");
+assert.ok(
+  toolReport.includes("OpenAI · General-purpose AI assistant") &&
+    toolReport.includes('data-tool-brand="monogram"'),
+  "Printable tool reports must retain product identity and provider context",
+);
+
+const countriesDirectory = await page("/countries");
+assert.ok(
+  countriesDirectory.includes("🇺🇸") &&
+    countriesDirectory.includes("United States") &&
+    countriesDirectory.includes("🇬🇧") &&
+    countriesDirectory.includes("United Kingdom"),
+  "The country directory must expose recognizable flags and full country names",
+);
+assert.ok(
+  countriesDirectory.includes('"@type":"Country"'),
+  "The country directory must expose Country entities in its ItemList schema",
+);
+const unitedStatesProfile = await page("/countries/us");
+assert.ok(
+  unitedStatesProfile.includes("🇺🇸") &&
+    unitedStatesProfile.includes("country=US") &&
+    unitedStatesProfile.includes('"@type":"Country"'),
+  "Country profiles must keep their flag, raw filter value, and Country schema synchronized",
+);
 
 const correction = await page(
   `/submit?case_id=${encodeURIComponent(mata.id)}&case_name=${encodeURIComponent(mata.case_name)}&court=${encodeURIComponent(mata.court || "")}`,
@@ -196,6 +256,13 @@ assert.ok(
   canadaMap.includes('content="noindex, follow"') &&
     canadaMap.includes('href="https://www.aivortex.io/legal-ai-risk/map"'),
   "Shareable map filters must canonicalize to the indexable map without creating duplicate search pages",
+);
+const unitedStatesMap = await page("/map?country=US");
+assert.ok(
+  unitedStatesMap.includes("Global map") &&
+    unitedStatesMap.includes("United States selected") &&
+    !unitedStatesMap.includes("Return to global view"),
+  "Selected-country map navigation must use the compact header control",
 );
 
 const judgeMap = await page("/map?country=US&judge=Vernon%20D.%20Oliver");
@@ -370,4 +437,4 @@ assert.ok(
   "Sitemap image URLs must not contain unescaped query separators",
 );
 
-console.log(JSON.stringify({ status: "pass", base, checks: 80, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseProfileUrls.length, indexEligibleCaseBriefs: caseBriefUrls.length }, null, 2));
+console.log(JSON.stringify({ status: "pass", base, checks: 91, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseProfileUrls.length, indexEligibleCaseBriefs: caseBriefUrls.length }, null, 2));

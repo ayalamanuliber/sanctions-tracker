@@ -3,6 +3,10 @@
 .smv2-head { min-height: 66px; padding: 14px 18px; border-bottom: 1px solid #203755; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
 .smv2-head-left strong { display: block; font-family: var(--font-serif); font-size: 18px; font-weight: 500; }
 .smv2-head-left small { display: block; color: #93a8c3; font-size: 10px; margin-top: 4px; }
+.smv2-head-actions { display:flex; align-items:center; justify-content:flex-end; gap:9px; flex-wrap:wrap; }
+.smv2-back { display:inline-flex; align-items:center; gap:6px; min-height:31px; border:1px solid #3b5a7d; border-radius:3px; background:#102844; padding:5px 9px; color:#dbe8f6; font:inherit; font-size:9px; font-weight:800; cursor:pointer; white-space:nowrap; transition:border-color .15s,background .15s; }
+.smv2-back:hover,.smv2-back:focus-visible { border-color:#8ec0ff; background:#16375e; outline:none; }
+.smv2-back svg { width:12px; height:12px; color:#8ec0ff; }
 .smv2-chips { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
 .smv2-chip { border: 1px solid #355276; color: #aebed1; background: #0a2242; min-height: 31px; padding: 5px 9px; border-radius: 3px; cursor: pointer; display:flex;align-items:center;gap:6px;font-size: 10px; font-weight: 700; }
 .smv2-chip b{min-width:20px;padding:2px 4px;border-radius:9px;background:rgba(255,255,255,.08);color:#dce7f3;font-size:8px;text-align:center}.smv2-chip.active b{background:#dce7f3;color:#0a2449}
@@ -36,7 +40,6 @@
 .smv2-cluster text { fill: white; font-family: var(--font-main); font-size: 10px; font-weight: 800; pointer-events: none; }
 .smv2-cluster:focus > circle:nth-child(2), .smv2-cluster:hover > circle:nth-child(2) { stroke: white; stroke-width: 3; }
 .smv2-map-note { position: absolute; left: 18px; right: 18px; bottom: 14px; display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #93a8c3; font-size: 10px; pointer-events: none; }
-.smv2-map-note button { pointer-events: auto; border: 1px solid #48698e; background: #092343; color: white; padding: 7px 9px; border-radius: 3px; cursor: pointer; display:inline-flex;align-items:center;gap:6px; }
 .smv2-map-note svg { width:12px;height:12px; }
 .smv2-world-stage svg { min-height:520px; }
 .smv2-rail { min-width: 0; background: #0a1930; border-left: 1px solid #203755; padding: 16px; display: flex; flex-direction: column; max-height: 600px; }
@@ -67,6 +70,7 @@
 
 @media (max-width: 840px) {
   .smv2-head { align-items: flex-start; flex-direction: column; }
+  .smv2-head-actions { width:100%; justify-content:flex-start; }
   .smv2-body { grid-template-columns: 1fr; }
   .smv2-stage svg { min-height: 390px; }
   .smv2-rail { border-left: 0; border-top: 1px solid #203755; max-height: 560px; }

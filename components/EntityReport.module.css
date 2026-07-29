@@ -143,6 +143,7 @@
 .identityMark svg {
   opacity: .16;
 }
+.identityMark [data-tool-brand="logo"] { width:34px; height:34px; opacity:1; }
 
 .identityMark strong {
   position: absolute;
@@ -150,6 +151,7 @@
   font: 700 23px/1 Georgia, serif;
   letter-spacing: -.04em;
 }
+.identityMark .identityFlag { position:static; color:inherit; font:400 34px/1 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; letter-spacing:0; }
 
 .identity > div:last-child {
   min-width: 0;
@@ -164,6 +166,7 @@
   letter-spacing: .08em;
   text-transform: uppercase;
 }
+.identity .identityMark [data-tool-brand="monogram"] { color:inherit; font:900 19px/1 var(--font-main); letter-spacing:-.04em; text-transform:none; }
 
 .identity > div:last-child > strong {
   display: block;

@@ -21,7 +21,9 @@ import {
 import { ReportBrandLockup } from "@/components/reports/ReportBrandLockup";
 import { ReportPreviewToolbar } from "@/components/reports/ReportPreviewToolbar";
 import { CourtScopeVisual } from "@/components/CourtScopeVisual";
+import { ToolBrandMark } from "@/components/ToolBrandMark";
 import { LAST_CHECKED, formatCaseDate } from "@/lib/cases";
+import { countryFlag } from "@/lib/countries";
 import {
   entityCaseDirectoryHref,
   entityDefinition,
@@ -53,6 +55,7 @@ import {
   type ReportTier,
 } from "@/lib/reporting";
 import { assetUrl, publicUrl, SITE_PUBLICATION_DATE } from "@/lib/site";
+import { getToolCatalogEntry } from "@/lib/tool-catalog";
 import styles from "./EntityReport.module.css";
 
 type Params = Record<string, string | string[] | undefined>;
@@ -332,6 +335,12 @@ function ReportIdentity({ entity }: { entity: CorpusEntity }) {
   const media = getEntityMedia(entity.kind, entity.slug);
   const stateCode =
     entity.kind === "state" ? entity.records[0]?.state || entity.label : null;
+  const countryValue =
+    entity.kind === "country" ? entity.records[0]?.country || entity.label : null;
+  const toolProfile =
+    entity.kind === "tool"
+      ? getToolCatalogEntry(entity.slug, entity.label)
+      : null;
 
   return (
     <aside className={styles.identity}>
@@ -347,6 +356,10 @@ function ReportIdentity({ entity }: { entity: CorpusEntity }) {
           <>
             {entity.kind === "court" ? (
               <CourtScopeVisual entity={entity} variant="report" />
+            ) : entity.kind === "tool" ? (
+              <ToolBrandMark slug={entity.slug} label={entity.label} decorative />
+            ) : entity.kind === "country" ? (
+              <strong className={styles.identityFlag} aria-label={`${entity.label} flag`}>{countryFlag(countryValue)}</strong>
             ) : (
               <>
                 <Icon aria-hidden="true" size={28} />
@@ -359,7 +372,7 @@ function ReportIdentity({ entity }: { entity: CorpusEntity }) {
       <div>
         <span>{singular}</span>
         <strong>{entity.label}</strong>
-        <small>Source-linked public-record scope</small>
+        <small>{toolProfile ? `${toolProfile.provider} · ${toolProfile.category}` : "Source-linked public-record scope"}</small>
         {!media && entity.kind === "court" && (
           <small className={styles.imageCredit}>Illustrated scope marker · not a courthouse photograph or official seal</small>
         )}

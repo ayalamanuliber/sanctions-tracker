@@ -1,4 +1,5 @@
 import { LEGAL_RISK_CASES, type LegalRiskCase } from "@/lib/cases";
+import { countryDisplayName } from "@/lib/countries";
 import { ENTITY_MEDIA_REVISION } from "@/lib/entity-media";
 
 export const ENTITY_KINDS = [
@@ -221,7 +222,7 @@ const ENTITIES: Record<EntityKind, readonly CorpusEntity[]> = {
   country: createEntities("country", LEGAL_RISK_CASES, (record) => {
     const country = record.country?.trim();
     return country && country !== "UNKNOWN" ? country : null;
-  }, (value) => value),
+  }, (value) => countryDisplayName(value)),
   state: createEntities("state", LEGAL_RISK_CASES.filter((record) => record.country === "US" && Boolean(record.state)), (record) => record.state?.trim() || null, (value, record) => record.state_display?.trim() || value),
   tool: toolEntities(),
   failure: createMultiValueEntities("failure", "tags"),
@@ -384,7 +385,10 @@ export function entityCaseDirectoryHref(entity: CorpusEntity) {
   const params = new URLSearchParams();
   if (entity.kind === "court") params.set("court", entity.label);
   if (entity.kind === "judge") params.set("judge", entity.label);
-  if (entity.kind === "country") params.set("country", entity.label);
+  if (entity.kind === "country") {
+    const country = entity.records[0]?.country;
+    if (country) params.set("country", country);
+  }
   if (entity.kind === "state") {
     const state = entity.records[0]?.state;
     if (state) params.set("state", state);

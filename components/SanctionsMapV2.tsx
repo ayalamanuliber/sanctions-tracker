@@ -202,7 +202,14 @@ export default function SanctionsMapV2({
           <strong>{viewTitle}</strong>
           <small>{cases.length.toLocaleString()} matched records · {coverageLabel} · geographic clusters synchronize the case list</small>
         </div>
-        {showControls && <div className="smv2-chips" aria-label="Editorial impact filters">{["all","career-ending","high","medium","low"].map((value) => <button key={value} className={`smv2-chip ${severity === value ? "active" : ""}`} aria-pressed={severity === value} onClick={() => {setSeverity(value);setLimit(18);}}><span>{value === "career-ending" ? "Career" : value[0].toUpperCase()+value.slice(1)}</span><b>{value === "all" ? baseCases.length : severityCounts[value] || 0}</b></button>)}</div>}
+        <div className="smv2-head-actions">
+          {!embedded && (focusState ? (
+            <button className="smv2-back" onClick={() => selectState(null)}>← United States</button>
+          ) : selectedCountry ? (
+            <button className="smv2-back" onClick={() => selectCountry(null)}><Globe2 aria-hidden="true" />Global map</button>
+          ) : null)}
+          {showControls && <div className="smv2-chips" aria-label="Editorial impact filters">{["all","career-ending","high","medium","low"].map((value) => <button key={value} className={`smv2-chip ${severity === value ? "active" : ""}`} aria-pressed={severity === value} onClick={() => {setSeverity(value);setLimit(18);}}><span>{value === "career-ending" ? "Career" : value[0].toUpperCase()+value.slice(1)}</span><b>{value === "all" ? baseCases.length : severityCounts[value] || 0}</b></button>)}</div>}
+        </div>
       </div>
       {showExportLinks && <div className="smv2-export-links"><Link href={focusState ? `/dashboard?state=${focusState}&audience=${encodeURIComponent(initialAudience)}` : `/dashboard?audience=${encodeURIComponent(initialAudience)}`}>Dashboard</Link><Link href={focusState ? `/sources?state=${focusState}` : "/sources"}>Sources</Link><Link href={filteredDirectoryHref}>All matching cases</Link></div>}
       <div className={`smv2-body ${showSideRail ? "" : "no-rail"}`}>
@@ -254,9 +261,9 @@ export default function SanctionsMapV2({
           </svg>}
           {!embedded && <div className="smv2-map-note">
             {isUnitedStates
-              ? (focusState ? <button onClick={() => selectState(null)}>← Return to national view</button> : <button onClick={() => selectCountry(null)}><Globe2 aria-hidden="true"/> Return to global view</button>)
+              ? <span>{focusState ? `${STATE_NAMES[focusState]} selected` : `${countryFlag("US")} United States selected`}</span>
               : selectedCountry
-                ? <button onClick={() => selectCountry(null)}><Globe2 aria-hidden="true"/> Return to global view</button>
+                ? <span>{countryFlag(selectedCountry)} {countryDisplayName(selectedCountry)} selected</span>
                 : <span><Globe2 aria-hidden="true"/> Select a country cluster to inspect its matters</span>}
             <span>Mode: {dataMode === "severity" ? "highest editorial impact" : "matter count"}</span>
           </div>}

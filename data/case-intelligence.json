@@ -1,5 +1,61 @@
 [
   {
+    "id": "lichfield-v-kubler-netflix-inc-2026-07-27",
+    "slug": "lichfield-v-kubler-netflix-inc-2026-07-27",
+    "case_name": "Lichfield v. Kubler; Netflix, Inc.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Opening Brief included a citation to a legal authority that does not exist (nonexistent authority cited in Op. Br. at 39); court assumed AI use produced the fabricated citation. Outcome: Admonishment.",
+    "direct_answer": "Fabricated: Case Law | Opening Brief included a citation to a legal authority that does not exist (nonexistent authority cited in Op. Br. at 39); court assumed AI use produced the fabricated citation. Outcome: Admonishment.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Admonishment in CA 10th Cir.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Admonishment. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2708/Lichfield_v._Netflix_USA_27_July_2026.pdf",
+      "name": "Robert Freund",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "CA 10th Cir.",
+      "jurisdiction": "federal",
+      "state": "",
+      "country": "US",
+      "circuit": "10th Circuit",
+      "judge": null,
+      "date": "2026-07-27",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Admonishment",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "other",
+        "appellate"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "joann-ledoux-v-outliers-inc-2026-07-24",
     "slug": "joann-ledoux-v-outliers-inc-2026-07-24",
     "case_name": "Joann LeDoux v. Outliers, Inc.",
@@ -5602,6 +5658,62 @@
         "The specific AI tool used by the defendant's counsel remains unspecified in the judgment.",
         "The full extent of the tribunal's final ruling on the merits of the injunction is not fully detailed in the provided excerpt."
       ]
+    }
+  },
+  {
+    "id": "swinney-v-jhoc-inc-2026-07-06",
+    "slug": "swinney-v-jhoc-inc-2026-07-06",
+    "case_name": "Swinney v. JHOC, Inc.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "False Quotes: Case Law | Counsel attributed the quoted language \"whether a worker is a 'borrowed servant' is generally a question of fact to be decided by the jury\" to Gorton v. Rance; the court found no such quotation or discussion in the opinion.",
+    "direct_answer": "False Quotes: Case Law | Counsel attributed the quoted language \"whether a worker is a 'borrowed servant' is generally a question of fact to be decided by the jury\" to Gorton v. Rance; the court found no such quotation or discussion in the opinion.",
+    "why_it_matters": "This matter connects fabricated quotes and misrepresented authority with a recorded judicial or procedural response in CC Copiah County Mississippi. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fabricated quotes and misrepresented authority and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2707/Swinney_v._Jhoc_USA_6_jUly_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "CC Copiah County Mississippi",
+      "jurisdiction": "state",
+      "state": "MS",
+      "country": "US",
+      "circuit": "5th Circuit",
+      "judge": null,
+      "date": "2026-07-06",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "tort",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

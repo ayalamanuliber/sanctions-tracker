@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-07-27",
-  "last_checked": "2026-07-27",
-  "last_checked_at": "2026-07-27T20:20:12.680Z",
-  "latest_record_date": "2026-07-24",
+  "last_updated": "2026-07-29",
+  "last_checked": "2026-07-29",
+  "last_checked_at": "2026-07-29T10:58:07.688Z",
+  "latest_record_date": "2026-07-27",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 1810,
-  "source_linked_count": 1809,
+  "source_record_count": 1813,
+  "source_linked_count": 1811,
   "source_link_coverage_pct": 100,
-  "records_missing_date": 1,
-  "dataset_checksum": "169ef3573adf24237380d9ef0fa85acea74c17a53729c95d8d8355d5aaeed533",
-  "total_cases": 1809,
-  "us_cases": 1250,
-  "us_adjudicated": 1248,
+  "records_missing_date": 2,
+  "dataset_checksum": "41a58a9069ee5b748b4213fbddc2d1d362f413d0718d7a84384822e627fee59c",
+  "total_cases": 1811,
+  "us_cases": 1252,
+  "us_adjudicated": 1250,
   "us_alleged_only": 2,
   "countries_tracked": 42,
-  "enriched_count": 1809,
+  "enriched_count": 1811,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
@@ -22,13 +22,13 @@
   "largest_single_sanction": 282508,
   "avg_sanction": 7934,
   "severity_counts": {
+    "low": 1306,
     "medium": 301,
-    "low": 1304,
     "high": 165,
     "career-ending": 39
   },
   "by_country": {
-    "US": 1250,
+    "US": 1252,
     "China": 1,
     "Canada": 199,
     "Israel": 55,
@@ -11566,10 +11566,10 @@
     },
     {
       "state": "MS",
-      "count": 31,
+      "count": 32,
       "total": 34884,
       "severities": {
-        "low": 20,
+        "low": 21,
         "medium": 4,
         "career-ending": 4,
         "high": 3
@@ -11596,6 +11596,28 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/2605/Holmes_v._Meadows_USA_10_July_2026.pdf"
+        },
+        {
+          "id": "swinney-v-jhoc-inc-2026-07-06",
+          "name": "Swinney v. JHOC, Inc.",
+          "court": "CC Copiah County Mississippi",
+          "judge": "",
+          "date": "2026-07-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Counsel attributed the quoted language \"whether a worker is a 'borrowed servant' is generally a question of fact to be decided by the jury\" to Gorton v. Rance; the court found no such quotation or discussion in the opinion.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2707/Swinney_v._Jhoc_USA_6_jUly_2026.pdf"
         },
         {
           "id": "yuri-petrini-v-city-of-biloxi-mississippi-et-al-2026-06-30",
@@ -22861,9 +22883,10 @@
     }
   ],
   "by_week": {
+    "2026-W31": 1,
     "2026-W30": 13,
     "2026-W29": 26,
-    "2026-W28": 23,
+    "2026-W28": 24,
     "2026-W27": 27,
     "2026-W26": 26,
     "2026-W25": 20,
@@ -22992,7 +23015,7 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-07": 76,
+    "2026-07": 78,
     "2026-06": 122,
     "2026-05": 148,
     "2026-04": 125,
@@ -23036,11 +23059,11 @@
     "2023": 16,
     "2024": 59,
     "2025": 828,
-    "2026": 906
+    "2026": 908
   },
   "by_tool": {
+    "AI (implied, unspecified)": 1218,
     "ChatGPT, Claude": 1,
-    "AI (implied, unspecified)": 1216,
     "Unidentified": 384,
     "GPT-3.5": 1,
     "Claude": 4,
@@ -23134,12 +23157,12 @@
     "Google Bard": 1
   },
   "by_circuit": {
+    "10th Circuit": 110,
     "9th Circuit": 287,
     "7th Circuit": 107,
     "D.C. Circuit": 18,
-    "10th Circuit": 109,
     "11th Circuit": 109,
-    "5th Circuit": 126,
+    "5th Circuit": 127,
     "6th Circuit": 99,
     "4th Circuit": 66,
     "2nd Circuit": 133,
@@ -23149,10 +23172,6 @@
     "Federal Circuit": 1
   },
   "pace_weeks": [
-    {
-      "week": "2026-W19",
-      "count": 37
-    },
     {
       "week": "2026-W20",
       "count": 26
@@ -23187,7 +23206,7 @@
     },
     {
       "week": "2026-W28",
-      "count": 23
+      "count": 24
     },
     {
       "week": "2026-W29",
@@ -23196,6 +23215,10 @@
     {
       "week": "2026-W30",
       "count": 13
+    },
+    {
+      "week": "2026-W31",
+      "count": 1
     }
   ]
 }

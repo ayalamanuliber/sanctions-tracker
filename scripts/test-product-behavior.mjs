@@ -180,6 +180,10 @@ assert.ok(
     globalMap.includes("Type a court"),
   "The map must expose discoverable judge and court filters",
 );
+assert.ok(
+  globalMap.includes('content="index, follow"'),
+  "The canonical global map must remain indexable",
+);
 
 const canadaMap = await page("/map?country=Canada");
 assert.ok(
@@ -187,6 +191,11 @@ assert.ok(
     canadaMap.includes("199<!-- --> matched records") &&
     canadaMap.includes("country=Canada"),
   "A selected country map must preserve its exact result scope in navigation links",
+);
+assert.ok(
+  canadaMap.includes('content="noindex, follow"') &&
+    canadaMap.includes('href="https://www.aivortex.io/legal-ai-risk/map"'),
+  "Shareable map filters must canonicalize to the indexable map without creating duplicate search pages",
 );
 
 const judgeMap = await page("/map?country=US&judge=Vernon%20D.%20Oliver");
@@ -361,4 +370,4 @@ assert.ok(
   "Sitemap image URLs must not contain unescaped query separators",
 );
 
-console.log(JSON.stringify({ status: "pass", base, checks: 78, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseProfileUrls.length, indexEligibleCaseBriefs: caseBriefUrls.length }, null, 2));
+console.log(JSON.stringify({ status: "pass", base, checks: 80, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseProfileUrls.length, indexEligibleCaseBriefs: caseBriefUrls.length }, null, 2));

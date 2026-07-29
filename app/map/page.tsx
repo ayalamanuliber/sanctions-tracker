@@ -11,9 +11,19 @@ import { FILTER_COUNTS, optionLabel } from "@/lib/corpus-analytics";
 import { publicUrl } from "@/lib/site";
 import styles from "../workspace.module.css";
 
-export const metadata: Metadata = { title: "Global Legal AI Risk Map | AI Vortex", description: "Explore source-linked legal AI risk records across countries and US states by judge, court, editorial impact, AI tool, and failure mode.", alternates: { canonical: publicUrl("/map") } };
 type Params = Record<string,string|string[]|undefined>;
 function val(p:Params,k:string){const v=p[k];return Array.isArray(v)?v[0]||"":v||"";}
+
+export async function generateMetadata({searchParams}:{searchParams?:Promise<Params>}):Promise<Metadata>{
+  const params=(await searchParams)||{};
+  const hasFilters=Object.values(params).some(entry=>Array.isArray(entry)?entry.some(Boolean):Boolean(entry));
+  return {
+    title:"Global Legal AI Risk Map | AI Vortex",
+    description:"Explore source-linked legal AI risk records across countries and US states by judge, court, editorial impact, AI tool, and failure mode.",
+    alternates:{canonical:publicUrl("/map")},
+    robots:hasFilters?{index:false,follow:true}:{index:true,follow:true,googleBot:{index:true,follow:true,"max-image-preview":"large"}},
+  };
+}
 
 export default async function MapPage({searchParams}:{searchParams?:Promise<Params>}) {
   const params=(await searchParams)||{};

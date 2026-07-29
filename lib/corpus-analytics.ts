@@ -5,6 +5,7 @@ import {
   type CaseQuery,
   type LegalRiskCase,
 } from "@/lib/cases";
+import { countryDisplayName } from "@/lib/countries";
 
 export type CountedOption = { value: string; label: string; count: number };
 export type AnalyticsFilter = {
@@ -160,7 +161,15 @@ export function countValues(
 }
 
 export const FILTER_COUNTS = {
-  countries: countValues(LEGAL_RISK_CASES.map((item) => item.country)),
+  countries: countValues(
+    LEGAL_RISK_CASES.map((item) => item.country),
+    Object.fromEntries(
+      LEGAL_RISK_CASES.map((item) => [
+        item.country,
+        countryDisplayName(item.country),
+      ]),
+    ),
+  ),
   states: countValues(US_CASES.map((item) => item.state)),
   severities: countValues(LEGAL_RISK_CASES.map((item) => item.severity)),
   failures: countValues(LEGAL_RISK_CASES.flatMap((item) => item.tags)),

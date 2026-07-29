@@ -16,7 +16,10 @@ const routes = (
   [
     "/",
     "/cases",
+    "/cases?country=Canada",
     "/cases/mata-v-avianca-inc-2023-06-22",
+    "/map",
+    "/map?country=Canada",
     "/judges",
     "/judges/vernon-d-oliver",
     "/judges/vernon-d-oliver/report",

@@ -1,9 +1,11 @@
 .searchPanel { padding: 18px; margin-bottom: 18px; }
 .searchRow { display: grid; grid-template-columns: minmax(300px, 1fr) 190px 170px 190px auto; gap: 10px; }
 .field { display: grid; gap: 6px; }
-.field label { color: #66758b; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.field label { display:flex; align-items:center; gap:5px; color: #66758b; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.field label svg { width:13px; height:13px; color:#2b72c4; stroke-width:1.8; }
 .field input, .field select { min-height: 42px; width: 100%; border: 1px solid #cbd5e1; border-radius: 4px; background: #fff; color: #14243b; padding: 9px 34px 9px 11px; font: inherit; font-size: 13px; outline:none;transition:border-color .15s,box-shadow .15s; }
 .field input { padding-right:11px; }
+.field select:disabled { background:#f4f6f9;color:#8995a5;cursor:not-allowed; }
 .field input:focus, .field select:focus { border-color:#2763a8;box-shadow:0 0 0 3px rgba(39,99,168,.12); }
 .inputWithIcon { position:relative; }
 .inputWithIcon>svg { position:absolute;left:12px;top:50%;z-index:1;transform:translateY(-50%);color:#6f8097;pointer-events:none; }
@@ -11,7 +13,7 @@
 .submit { align-self: end; height: 42px; border: 0; border-radius: 4px; padding: 0 15px; display:inline-flex;align-items:center;justify-content:center;gap:7px;background: #08264d; color: white; font-weight: 800; cursor: pointer;white-space:nowrap;transition:background .15s,transform .15s; }
 .submit:hover { background:#0c376d; }
 .submit:active { transform:translateY(1px); }
-.advanced { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-top: 10px; }
+.advanced { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 10px; margin-top: 10px; }
 .scope { margin-top: 13px; padding-top: 12px; border-top: 1px solid #e6ebf1; display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #5d6d84; font-size: 12px; }
 .scope strong { color: #102947; }
 .toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 22px 0 10px; }
@@ -27,6 +29,8 @@
 .identity small, .meta small { display: block; color: #738198; font-size: 11px; margin-top: 5px; }
 .matchReason { display:inline-flex; margin-top:7px; padding:3px 6px; border-radius:3px; color:#315f9e; background:#edf4ff; font-size:9px; font-weight:800; }
 .meta { color: #253850; font-size: 12px; }
+.meta small { display:flex; align-items:center; gap:4px; }
+.flag { flex:0 0 auto; font-size:13px; line-height:1; }
 .meta > svg,.amount > svg { width:14px; height:14px; margin-right:6px; vertical-align:-2px; color:#3978c7; }
 .amount { color:#172f4e;font-size:12px;font-weight:750;font-variant-numeric:tabular-nums; }
 .severity { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 800; text-transform: capitalize; }

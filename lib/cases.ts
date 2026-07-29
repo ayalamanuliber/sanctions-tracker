@@ -265,7 +265,7 @@ export function queryCases(query: CaseQuery = {}) {
         : !matchesCourt(item.court, query.court))
     )
       return false;
-    if (judge && normalize(item.judge) !== judge) return false;
+    if (judge && !normalize(item.judge).includes(judge)) return false;
     if (query.severity && item.severity !== query.severity) return false;
     if (tool && !normalize(`${item.ai_tool_used} ${item.summary}`).includes(tool)) return false;
     if (failure && !normalize(item.tags.join(" ")).includes(failure)) return false;
@@ -350,6 +350,7 @@ export function getCaseMatchReason(item: LegalRiskCase, query: CaseQuery) {
   }
   if (query.court) return `Court filter: ${query.court}`;
   if (query.judge) return `Recorded decision-maker: ${query.judge}`;
+  if (query.country) return `Country filter: ${query.country}`;
   if (query.state) return `State filter: ${query.state}`;
   if (query.failure) return `Failure mode: ${query.failure.replaceAll("-", " ")}`;
   if (query.sanction) return `Recorded response: ${query.sanction.replaceAll("-", " ")}`;

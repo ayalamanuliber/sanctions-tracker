@@ -21,6 +21,14 @@
 .smv2-state.has-cases.sev-career-ending { fill:#763449; }
 .smv2-state.has-cases:hover,.smv2-state.has-cases:focus { filter:brightness(1.24); outline:none; stroke:#a8d3ff; stroke-width:1.4; }
 .smv2-state.selected { fill: #1d528c; stroke: #8ac1ff; stroke-width: 1.7; }
+.smv2-country { fill:#102d50; stroke:#426990; stroke-width:.55; transition:fill .15s,opacity .15s,filter .15s; }
+.smv2-country.has-cases { fill:#184778; cursor:pointer; }
+.smv2-country.has-cases.sev-low { fill:#174b79; }
+.smv2-country.has-cases.sev-medium { fill:#63522f; }
+.smv2-country.has-cases.sev-high { fill:#6e3d42; }
+.smv2-country.has-cases.sev-career-ending { fill:#763449; }
+.smv2-country.has-cases:hover,.smv2-country.has-cases:focus { filter:brightness(1.3);outline:none;stroke:#a8d3ff;stroke-width:1.15; }
+.smv2-country.selected { fill:#1d528c;stroke:#8ac1ff;stroke-width:1.35; }
 .smv2-cluster { outline: none; cursor: pointer; transition: opacity .15s; }
 .smv2-cluster.dim { opacity: .2; }
 .smv2-cluster > circle:first-child { opacity: .3; stroke: currentColor; stroke-width: 2; }
@@ -28,7 +36,9 @@
 .smv2-cluster text { fill: white; font-family: var(--font-main); font-size: 10px; font-weight: 800; pointer-events: none; }
 .smv2-cluster:focus > circle:nth-child(2), .smv2-cluster:hover > circle:nth-child(2) { stroke: white; stroke-width: 3; }
 .smv2-map-note { position: absolute; left: 18px; right: 18px; bottom: 14px; display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #93a8c3; font-size: 10px; pointer-events: none; }
-.smv2-map-note button { pointer-events: auto; border: 1px solid #48698e; background: #092343; color: white; padding: 7px 9px; border-radius: 3px; cursor: pointer; }
+.smv2-map-note button { pointer-events: auto; border: 1px solid #48698e; background: #092343; color: white; padding: 7px 9px; border-radius: 3px; cursor: pointer; display:inline-flex;align-items:center;gap:6px; }
+.smv2-map-note svg { width:12px;height:12px; }
+.smv2-world-stage svg { min-height:520px; }
 .smv2-rail { min-width: 0; background: #0a1930; border-left: 1px solid #203755; padding: 16px; display: flex; flex-direction: column; max-height: 600px; }
 .smv2-rail-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .smv2-rail-heading strong { display: block; font-family: var(--font-serif); font-size: 17px; }

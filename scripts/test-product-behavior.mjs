@@ -161,6 +161,42 @@ const noMatch = await page("/cases?q=definitely-not-a-real-vortex-case&state=NJ&
 assert.ok(noMatch.includes("Transparent fallback"), "Zero-result search must disclose fallback behavior");
 assert.ok(noMatch.includes("did not silently substitute"), "Fallback must be explicit rather than silent");
 
+const canadaCases = await page("/cases?country=Canada");
+assert.equal(resultCount(canadaCases), 199, "Canada country filtering must return its exact corpus subset");
+assert.ok(
+  canadaCases.includes("🇨🇦 Canada") && canadaCases.includes("Judge / decision-maker"),
+  "Case search must expose recognizable country flags and a recorded-judge filter",
+);
+
+const globalMap = await page("/map");
+assert.ok(
+  globalMap.includes("Global evidence map") &&
+    globalMap.includes("smv2-country") &&
+    globalMap.includes("🇨🇦 Canada"),
+  "The map must expose a global country layer with recognizable country context",
+);
+assert.ok(
+  globalMap.includes("Judge / decision-maker") &&
+    globalMap.includes("Type a court"),
+  "The map must expose discoverable judge and court filters",
+);
+
+const canadaMap = await page("/map?country=Canada");
+assert.ok(
+  canadaMap.includes("🇨🇦 Canada evidence") &&
+    canadaMap.includes("199<!-- --> matched records") &&
+    canadaMap.includes("country=Canada"),
+  "A selected country map must preserve its exact result scope in navigation links",
+);
+
+const judgeMap = await page("/map?country=US&judge=Vernon%20D.%20Oliver");
+assert.ok(
+  judgeMap.includes('value="Vernon D. Oliver"') &&
+    judgeMap.includes("4<!-- --> matched records") &&
+    judgeMap.includes("judge=Vernon"),
+  "Judge-filtered map views must remain synchronized and shareable",
+);
+
 const curatedCase = await page(`/cases/${mata.id}`);
 assert.ok(curatedCase.includes("What happened in this matter?"), "Curated case page must include a direct answer block");
 assert.ok(curatedCase.includes("What the record establishes about AI use"), "Curated case page must state the attribution boundary");
@@ -325,4 +361,4 @@ assert.ok(
   "Sitemap image URLs must not contain unescaped query separators",
 );
 
-console.log(JSON.stringify({ status: "pass", base, checks: 70, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseProfileUrls.length, indexEligibleCaseBriefs: caseBriefUrls.length }, null, 2));
+console.log(JSON.stringify({ status: "pass", base, checks: 78, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseProfileUrls.length, indexEligibleCaseBriefs: caseBriefUrls.length }, null, 2));

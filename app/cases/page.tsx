@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpDown, Banknote, Bot, CalendarDays, ChevronFirst, ChevronLast, ChevronLeft, ChevronRight, Gavel, Landmark, Search } from "lucide-react";
+import { ArrowUpDown, Banknote, Bot, CalendarDays, ChevronFirst, ChevronLast, ChevronLeft, ChevronRight, Gavel, Globe2, Landmark, MapPin, Search, ShieldAlert, ShieldCheck, Tags, UserRound } from "lucide-react";
 
 import CorpusDirectoryNav from "@/components/CorpusDirectoryNav";
 import ResearchShell from "@/components/ResearchShell";
 import shell from "@/components/ResearchShell.module.css";
 import { COUNTRIES_TRACKED, LEGAL_RISK_CASES, formatCaseDate, getCaseFallbacks, getCaseMatchReason, queryCases } from "@/lib/cases";
+import { countryDisplayName, countryFlag, countryOptionLabel } from "@/lib/countries";
 import { FILTER_COUNTS, optionLabel } from "@/lib/corpus-analytics";
 import { publicUrl } from "@/lib/site";
 import styles from "./cases.module.css";
@@ -78,6 +79,12 @@ export default async function CasesPage({ searchParams }: { searchParams?: Promi
   const totalPages = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
   const page = Math.min(requestedPage, totalPages);
   const visible = results.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+  const geographicScopeCount = LEGAL_RISK_CASES.filter((item) => {
+    if (query.country && item.country !== query.country) return false;
+    if (query.state && item.state !== query.state) return false;
+    return true;
+  }).length;
+  const stateFilterUnavailable = Boolean(query.country && query.country !== "US");
 
   return <ResearchShell>
     <main className={shell.main}>
@@ -92,18 +99,19 @@ export default async function CasesPage({ searchParams }: { searchParams?: Promi
       <form className={`${shell.card} ${styles.searchPanel}`} method="get">
         <div className={styles.searchRow}>
           <div className={`${styles.field} ${styles.queryField}`}><label htmlFor="q">Search</label><div className={styles.inputWithIcon}><Search size={16} aria-hidden="true"/><input id="q" name="q" defaultValue={query.q} placeholder="Case, citation, court, judge, tool, or issue" /></div></div>
-          <div className={styles.field}><label htmlFor="country">Country</label><select id="country" name="country" defaultValue={query.country}><option value="">All {COUNTRIES_TRACKED} countries ({LEGAL_RISK_CASES.length.toLocaleString()})</option>{FILTER_COUNTS.countries.map((item) => <option key={item.value} value={item.value}>{optionLabel(item)}</option>)}</select></div>
-          <div className={styles.field}><label htmlFor="state">US state</label><select id="state" name="state" defaultValue={query.state}><option value="">All US states</option>{FILTER_COUNTS.states.map((item) => <option key={item.value} value={item.value}>{optionLabel(item)}</option>)}</select></div>
-          <div className={styles.field}><label htmlFor="severity">Editorial impact</label><select id="severity" name="severity" defaultValue={query.severity}><option value="">All impact levels ({LEGAL_RISK_CASES.length.toLocaleString()})</option>{FILTER_COUNTS.severities.map((item) => <option key={item.value} value={item.value}>{optionLabel(item)}</option>)}</select></div>
+          <div className={styles.field}><label htmlFor="country"><Globe2 aria-hidden="true" />Country</label><select id="country" name="country" defaultValue={query.country}><option value="">🌐 All {COUNTRIES_TRACKED} countries ({LEGAL_RISK_CASES.length.toLocaleString()})</option>{FILTER_COUNTS.countries.map((item) => <option key={item.value} value={item.value}>{countryOptionLabel(item.value, item.count)}</option>)}</select></div>
+          <div className={styles.field}><label htmlFor="state"><MapPin aria-hidden="true" />US state</label><select id="state" name="state" defaultValue={query.state} disabled={stateFilterUnavailable}><option value="">{stateFilterUnavailable ? "Available for United States records" : "All US states"}</option>{FILTER_COUNTS.states.map((item) => <option key={item.value} value={item.value}>{optionLabel(item)}</option>)}</select></div>
+          <div className={styles.field}><label htmlFor="severity"><ShieldAlert aria-hidden="true" />Editorial impact</label><select id="severity" name="severity" defaultValue={query.severity}><option value="">All impact levels ({geographicScopeCount.toLocaleString()})</option>{FILTER_COUNTS.severities.map((item) => <option key={item.value} value={item.value}>{optionLabel(item)}</option>)}</select></div>
           <button className={styles.submit} type="submit"><Search size={16} /> Search</button>
         </div>
         <div className={styles.advanced}>
-          <div className={styles.field}><label htmlFor="court">Court</label><input id="court" name="court" defaultValue={query.court} placeholder="e.g. D.N.J." list="court-options"/><datalist id="court-options">{FILTER_COUNTS.courts.slice(0,40).map((item)=><option key={item.value} value={item.value}>{item.count} records</option>)}</datalist></div>
-          <div className={styles.field}><label htmlFor="tool">AI tool</label><select id="tool" name="tool" defaultValue={query.tool}><option value="">All recorded tools</option>{FILTER_COUNTS.tools.slice(0,40).map((item)=><option key={item.value} value={item.value}>{optionLabel(item)}</option>)}</select></div>
-          <div className={styles.field}><label htmlFor="failure">Failure mode</label><select id="failure" name="failure" defaultValue={query.failure}><option value="">All failure modes</option>{FILTER_COUNTS.failures.map((item) => <option key={item.value} value={item.value}>{optionLabel(item)}</option>)}</select></div>
-          <div className={styles.field}><label htmlFor="status">Record status</label><select id="status" name="status" defaultValue={query.status}><option value="all">All tracked records</option><option value="non-alleged">Exclude allegation-only</option><option value="alleged">Allegation-only records</option></select></div>
+          <div className={styles.field}><label htmlFor="court"><Landmark aria-hidden="true" />Court</label><input id="court" name="court" defaultValue={query.court} placeholder="Type a court, e.g. D.N.J." list="court-options" autoComplete="off"/><datalist id="court-options">{FILTER_COUNTS.courts.map((item)=><option key={item.value} value={item.value}>{item.count} records</option>)}</datalist></div>
+          <div className={styles.field}><label htmlFor="judge"><UserRound aria-hidden="true" />Judge / decision-maker</label><input id="judge" name="judge" defaultValue={query.judge} placeholder="Type a recorded name" list="judge-options" autoComplete="off"/><datalist id="judge-options">{FILTER_COUNTS.judges.filter((item) => item.value !== "Judge not recorded").map((item)=><option key={item.value} value={item.value}>{item.count} records</option>)}</datalist></div>
+          <div className={styles.field}><label htmlFor="tool"><Bot aria-hidden="true" />AI tool</label><select id="tool" name="tool" defaultValue={query.tool}><option value="">All recorded tools</option>{FILTER_COUNTS.tools.slice(0,40).map((item)=><option key={item.value} value={item.value}>{optionLabel(item)}</option>)}</select></div>
+          <div className={styles.field}><label htmlFor="failure"><Tags aria-hidden="true" />Failure mode</label><select id="failure" name="failure" defaultValue={query.failure}><option value="">All failure modes</option>{FILTER_COUNTS.failures.map((item) => <option key={item.value} value={item.value}>{optionLabel(item)}</option>)}</select></div>
+          <div className={styles.field}><label htmlFor="status"><ShieldCheck aria-hidden="true" />Record status</label><select id="status" name="status" defaultValue={query.status}><option value="all">All tracked records</option><option value="non-alleged">Exclude allegation-only</option><option value="alleged">Allegation-only records</option></select></div>
         </div>
-        <div className={styles.scope}><span><strong>Search scope:</strong> {LEGAL_RISK_CASES.length.toLocaleString()} public matters across the global corpus.</span><Link href="/cases">Clear all filters</Link></div>
+        <div className={styles.scope}><span><strong>Geographic scope:</strong> {geographicScopeCount.toLocaleString()} public matters{query.country ? ` in ${countryDisplayName(query.country)}` : " across the global corpus"}.</span><Link href="/cases">Clear all filters</Link></div>
       </form>
 
       <div className={styles.toolbar}><div><h2>{results.length.toLocaleString()} matching matters</h2><p>Showing {results.length ? (page - 1) * PAGE_SIZE + 1 : 0}-{Math.min(page * PAGE_SIZE, results.length)} · Page {page} of {totalPages}</p></div><form method="get">{Object.entries(params).filter(([k,v]) => k !== "sort" && k !== "order" && k !== "page" && v).map(([k,v]) => <input key={k} type="hidden" name={k} value={Array.isArray(v) ? v[0] : v} />)}<div className={styles.field}><label htmlFor="sort">Sort by</label><select id="sort" name="sort" defaultValue={query.sort || (query.q ? "relevance" : "date")}><option value="relevance">Best match</option><option value="date">Decision date</option><option value="severity">Editorial impact</option><option value="amount">Known amount</option></select></div><div className={styles.field}><label htmlFor="order">Direction</label><select id="order" name="order" defaultValue={query.order}><option value="desc">High to low / newest</option><option value="asc">Low to high / oldest</option></select></div><button className={styles.submit} type="submit"><ArrowUpDown size={15}/> Apply</button></form></div>
@@ -112,7 +120,7 @@ export default async function CasesPage({ searchParams }: { searchParams?: Promi
         {visible.length > 0 && <div className={styles.tableHead}><span>Public matter</span><span>Court / jurisdiction</span><Link href={sortHref(params,"date")}>Date</Link><span>Recorded AI tool</span><Link href={sortHref(params,"amount")}>Amount</Link><Link href={sortHref(params,"severity")}>Impact</Link><span /></div>}
         {visible.length ? visible.map((item) => <Link className={styles.caseRow} key={item.slug} href={`/cases/${item.slug}`}>
           <span className={styles.identity}><strong>{item.case_name}</strong><small>{item.tags.slice(0,3).map((tag) => tag.replaceAll("-", " ")).join(" · ") || "Tracked legal AI matter"}</small><b className={styles.matchReason}>{getCaseMatchReason(item, query)}</b>{item.alleged && <em className={styles.alleged}>Allegation</em>}</span>
-          <span className={styles.meta}><Landmark aria-hidden="true" />{item.court}<small>{item.state || item.country} · {item.jurisdiction}</small></span>
+          <span className={styles.meta}><Landmark aria-hidden="true" />{item.court}<small><span className={styles.flag} aria-hidden="true">{countryFlag(item.country)}</span>{item.state || countryDisplayName(item.country)} · {item.jurisdiction}</small></span>
           <span className={styles.meta}><CalendarDays aria-hidden="true" />{formatCaseDate(item.date)}</span>
           <span className={styles.meta}><Bot aria-hidden="true" />{item.ai_tool_used || "Unidentified"}</span>
           <span className={styles.amount}><Banknote aria-hidden="true" />{item.amount ? item.amount_display : "—"}</span>

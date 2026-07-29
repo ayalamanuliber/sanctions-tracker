@@ -26,7 +26,7 @@ export function getPublicationReadiness(slug: string): ReadinessEntry {
   return readiness.by_slug[slug] || { tier: "research-only", score: 0 };
 }
 
-export function isIndexEligible(slug: string) {
+export function passesPublicationBaseline(slug: string) {
   const record = getCaseIntelligenceBySlug(slug);
   const evidenceHold = [
     "primary-document-limited",
@@ -41,8 +41,6 @@ export function isIndexEligible(slug: string) {
     !evidenceHold;
 }
 
-export function indexEligibleSlugs() {
-  return Object.entries(readiness.by_slug)
-    .filter(([slug]) => isIndexEligible(slug))
-    .map(([slug]) => slug);
+export function publicCaseSlugs() {
+  return Object.keys(readiness.by_slug);
 }

@@ -3,7 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const baseUrl = (process.env.PUBLIC_ROUTE_BASE_URL || "http://localhost:3017/legal-ai-risk").replace(/\/$/, "");
-const concurrency = Math.max(1, Number(process.env.PUBLIC_ROUTE_CONCURRENCY || 12));
+const concurrency = Math.max(1, Number(process.env.PUBLIC_ROUTE_CONCURRENCY || 6));
 const readiness = JSON.parse(
   fs.readFileSync(path.join(root, "data", "publication-readiness-index.json"), "utf8"),
 );
@@ -29,13 +29,28 @@ function content(html, pattern) {
     .replace(/&gt;/g, ">") || "";
 }
 
+async function fetchWithRetry(url, attempts = 3) {
+  let lastError;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      return await fetch(url, { redirect: "follow" });
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts) {
+        await new Promise((resolve) => setTimeout(resolve, attempt * 150));
+      }
+    }
+  }
+  throw lastError;
+}
+
 async function worker() {
   while (cursor < entries.length) {
     const index = cursor++;
     const [slug, publication] = entries[index];
     const url = `${baseUrl}/cases/${encodeURIComponent(slug)}`;
     try {
-      const response = await fetch(url, { redirect: "follow" });
+      const response = await fetchWithRetry(url);
       const html = await response.text();
       const expectedCanonical = `https://www.aivortex.io/legal-ai-risk/cases/${slug}`;
       const intelligenceRecord = intelligenceBySlug.get(slug);
@@ -46,10 +61,10 @@ async function worker() {
         "source-unavailable",
       ]
         .includes(intelligenceRecord?.evidence_review?.status || "");
-      const canIndex = publication.tier === "index-ready" &&
+      const passesEvidenceBaseline = publication.tier === "index-ready" &&
         intelligenceRecord?.publication?.ready !== false &&
         !evidenceHold;
-      const expectedRobots = canIndex ? "index, follow" : "noindex, follow";
+      const expectedRobots = "index, follow";
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       if (!html.includes(`<h1`)) throw new Error("missing h1");
       if (!html.includes(expectedCanonical)) throw new Error("canonical mismatch");
@@ -72,8 +87,8 @@ async function worker() {
       for (const required of ["WebPage", "Article", "BreadcrumbList", "Dataset", "FAQPage"]) {
         if (!types.has(required)) throw new Error(`missing schema type ${required}`);
       }
-      if (canIndex) indexable += 1;
-      else held += 1;
+      indexable += 1;
+      if (!passesEvidenceBaseline) held += 1;
       checked += 1;
     } catch (error) {
       failures.push({ slug, error: error instanceof Error ? error.message : String(error) });
@@ -100,5 +115,5 @@ console.log(JSON.stringify({
   base_url: baseUrl,
   checked,
   indexable,
-  held,
+  indexable_with_disclosed_limitations: held,
 }, null, 2));

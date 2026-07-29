@@ -150,17 +150,15 @@ export function entityReportMetadata(entity: CorpusEntity): Metadata {
       description,
       images: [image],
     },
-    robots: entity.indexEligible
-      ? {
-          index: true,
-          follow: true,
-          googleBot: {
-            index: true,
-            follow: true,
-            "max-image-preview": "large",
-          },
-        }
-      : { index: false, follow: true },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
+    },
   };
 }
 

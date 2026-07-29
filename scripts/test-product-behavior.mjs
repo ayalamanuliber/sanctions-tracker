@@ -4,9 +4,7 @@ import fs from "node:fs";
 const base = process.env.PRODUCT_BASE_URL || "http://localhost:3017/legal-ai-risk";
 const corpus = JSON.parse(fs.readFileSync(new URL("../data/sanctions.json", import.meta.url), "utf8"));
 const readiness = JSON.parse(fs.readFileSync(new URL("../data/publication-readiness-index.json", import.meta.url), "utf8"));
-const intelligence = JSON.parse(fs.readFileSync(new URL("../data/case-intelligence.json", import.meta.url), "utf8"));
 const judgeEnrichment = JSON.parse(fs.readFileSync(new URL("../data/judge-enrichment.json", import.meta.url), "utf8"));
-const intelligenceBySlug = new Map(intelligence.map((record) => [record.slug, record]));
 
 async function page(path) {
   const response = await fetch(`${base}${path}`);
@@ -265,25 +263,50 @@ assert.match(
   /^image\//,
   "Entity OG route must return an image",
 );
+const limitedEvidenceCase = await page(
+  "/cases/moosehead-breweries-limited-v-14095863-canada-inc-2026-06-29",
+);
+assert.ok(
+  limitedEvidenceCase.includes('content="index, follow"') &&
+    limitedEvidenceCase.includes(
+      "publicly indexable with evidence status disclosed",
+    ) &&
+    !limitedEvidenceCase.includes("excluded from search indexing"),
+  "Evidence-limited public case pages must remain indexable with limitations disclosed",
+);
+const limitedEvidenceBrief = await page(
+  "/cases/moosehead-breweries-limited-v-14095863-canada-inc-2026-06-29/brief",
+);
+assert.ok(
+  limitedEvidenceBrief.includes('content="index, follow"') &&
+    limitedEvidenceBrief.includes(
+      "https://www.aivortex.io/legal-ai-risk/cases/moosehead-breweries-limited-v-14095863-canada-inc-2026-06-29/brief",
+    ),
+  "Canonical case evidence briefs must be indexable",
+);
 
 const sitemap = await page("/sitemap.xml");
-const caseUrls = sitemap.match(/\/cases\//g) || [];
-const expectedIndexable = Object.entries(readiness.by_slug).filter(
-  ([slug, publication]) => {
-    const record = intelligenceBySlug.get(slug);
-    const evidenceHold = [
-      "primary-document-limited",
-      "secondary-source-only",
-      "metadata-only",
-      "source-unavailable",
-    ]
-      .includes(record?.evidence_review?.status || "");
-    return publication.tier === "index-ready" &&
-      record?.publication?.ready !== false &&
-      !evidenceHold;
-  },
-).length;
-assert.equal(caseUrls.length, expectedIndexable, "Sitemap must contain every case that passes both publication and evidence baselines");
+const caseProfileUrls = [
+  ...sitemap.matchAll(
+    /<loc>https:\/\/www\.aivortex\.io\/legal-ai-risk\/cases\/([^/<]+)<\/loc>/g,
+  ),
+];
+const caseBriefUrls = [
+  ...sitemap.matchAll(
+    /<loc>https:\/\/www\.aivortex\.io\/legal-ai-risk\/cases\/([^/<]+)\/brief<\/loc>/g,
+  ),
+];
+const expectedIndexable = Object.keys(readiness.by_slug).length;
+assert.equal(
+  caseProfileUrls.length,
+  expectedIndexable,
+  "Sitemap must contain every public case profile regardless of evidence depth",
+);
+assert.equal(
+  caseBriefUrls.length,
+  expectedIndexable,
+  "Sitemap must contain every canonical case evidence brief",
+);
 assert.ok(
   sitemap.includes("/judges/vernon-d-oliver/report"),
   "Sitemap must include index-eligible entity reports",
@@ -302,4 +325,4 @@ assert.ok(
   "Sitemap image URLs must not contain unescaped query separators",
 );
 
-console.log(JSON.stringify({ status: "pass", base, checks: 66, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseUrls.length }, null, 2));
+console.log(JSON.stringify({ status: "pass", base, checks: 70, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseProfileUrls.length, indexEligibleCaseBriefs: caseBriefUrls.length }, null, 2));

@@ -23,7 +23,6 @@ import {
 
 import ResearchShell from "@/components/ResearchShell";
 import shell from "@/components/ResearchShell.module.css";
-import readiness from "@/data/publication-readiness-index.json";
 import {
   COUNTRIES_TRACKED,
   LAST_CHECKED,
@@ -33,7 +32,10 @@ import {
   sourcePublisher,
   sourceTier,
 } from "@/lib/cases";
-import { indexEligibleSlugs } from "@/lib/publication";
+import {
+  passesPublicationBaseline,
+  PUBLICATION_CASE_COUNT,
+} from "@/lib/publication";
 import { ENTITY_MEDIA_COUNTS, ENTITY_MEDIA_REVISION } from "@/lib/entity-media";
 import { getEntities } from "@/lib/entity-pages";
 import { publicUrl } from "@/lib/site";
@@ -114,8 +116,11 @@ const sourceHierarchy = [
 export default function SourcesPage() {
   const linked = LEGAL_RISK_CASES.filter((item) => item.source_url).length;
   const nonAlleged = LEGAL_RISK_CASES.filter((item) => !item.alleged).length;
-  const indexable = indexEligibleSlugs().length;
-  const held = LEGAL_RISK_CASES.length - indexable;
+  const indexable = PUBLICATION_CASE_COUNT;
+  const evidenceBaseline = LEGAL_RISK_CASES.filter((item) =>
+    passesPublicationBaseline(item.slug),
+  ).length;
+  const limited = LEGAL_RISK_CASES.length - evidenceBaseline;
   const linkedPct = Math.round((linked / LEGAL_RISK_CASES.length) * 1000) / 10;
   const tierCounts = new Map<string, { label: string; count: number }>();
 
@@ -330,12 +335,12 @@ export default function SourcesPage() {
                 <div>
                   <FileCheck2 aria-hidden="true" />
                   <p>
-                    <strong>Indexing gate</strong>
-                    All {readiness.total_cases.toLocaleString()} records have
-                    stable public URLs. {indexable.toLocaleString()} currently
-                    pass the publication and evidence gates; {held.toLocaleString()} remain
-                    accessible but excluded from indexing until documented gaps
-                    are resolved.
+                    <strong>Public indexing and evidence depth</strong>
+                    All {indexable.toLocaleString()} corpus records have stable,
+                    indexable public URLs. {evidenceBaseline.toLocaleString()} currently
+                    meet the stronger publication and evidence baseline; the
+                    remaining {limited.toLocaleString()} stay indexable with their
+                    documented limitations disclosed on-page.
                   </p>
                 </div>
                 <div>

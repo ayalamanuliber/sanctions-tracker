@@ -14,7 +14,7 @@ import {
   entityMediaPublicUrl,
   getEntityMedia,
 } from "@/lib/entity-media";
-import { indexEligibleSlugs } from "@/lib/publication";
+import { publicCaseSlugs } from "@/lib/publication";
 import { publicUrl, SITE_PUBLICATION_DATE } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: updated,
   }));
 
-  const publishableCases = indexEligibleSlugs()
+  const publishableCases = publicCaseSlugs()
     .map((slug) => getCaseBySlug(slug))
     .filter((item) => item !== null)
     .map((item) => ({
@@ -49,9 +49,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(`${item.date}T00:00:00Z`),
     }));
 
+  const caseBriefs = publicCaseSlugs()
+    .map((slug) => getCaseBySlug(slug))
+    .filter((item) => item !== null)
+    .map((item) => ({
+      url: publicUrl(`/cases/${item.slug}/brief`),
+      lastModified: new Date(`${item.date}T00:00:00Z`),
+      images: [publicUrl(`/cases/${item.slug}/opengraph-image`)],
+    }));
+
   const entityPages = ENTITY_KINDS.flatMap((kind) =>
     getEntities(kind)
-      .filter((entity) => entity.indexEligible)
       .map((entity) => ({
         ...(() => {
           const media = getEntityMedia(kind, entity.slug);
@@ -69,7 +77,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const entityReports = ENTITY_KINDS.flatMap((kind) =>
     getEntities(kind)
-      .filter((entity) => entity.indexEligible)
       .map((entity) => ({
         ...(() => {
           const media = getEntityMedia(kind, entity.slug);
@@ -95,6 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...fixed,
       ...directoryPages,
       ...publishableCases,
+      ...caseBriefs,
       ...entityPages,
       ...entityReports,
     ].map(

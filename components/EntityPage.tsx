@@ -84,9 +84,15 @@ export function entityMetadata(entity: CorpusEntity): Metadata {
       images: [{ url: socialImage, width: 1200, height: 630, alt: `${entity.label} source-linked legal AI risk profile` }],
     },
     twitter: { card: "summary_large_image", title: entityTitle(entity), description, images: [socialImage] },
-    robots: entity.indexEligible
-      ? { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } }
-      : { index: false, follow: true },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
+    },
   };
 }
 
@@ -383,7 +389,7 @@ export function EntityDetailPage({ entity }: { entity: CorpusEntity }) {
 
     <div className={styles.layout}><div>
       <section className={`${shell.card} ${styles.section}`}><h2>Public records in this view</h2><p>Showing the most recent {Math.min(shown.length, DISPLAY_LIMIT).toLocaleString()} of {entity.records.length.toLocaleString()} matching {singular}.</p><div className={styles.records}>{shown.map((record) => <Link className={styles.record} href={`/cases/${record.slug}`} key={record.id}><div><strong>{record.case_name}</strong><span>{record.court || "Court not recorded"} · {record.state || record.country} · {record.ai_tool_used || "Tool not recorded"}</span></div><small>{formatCaseDate(record.date)}</small></Link>)}</div><Link className={styles.recordLink} href={entityCaseDirectoryHref(entity)}>{isConsequence ? "Open the full analytics view" : "Open all matching records"}<ArrowRight size={14} /></Link></section>
-      <section className={`${shell.card} ${styles.section}`}><h2>Scope and limitation</h2><p className={styles.limit}>This page groups existing structured public-record fields. For judges, the counts describe matters in which that person is recorded as a decision-maker; they do not establish a judge’s general practices or sanction rate. For every entity type, the view is not a comparison against unobserved proceedings.</p><h3>Indexing status</h3><p>{entity.indexEligible ? `This entity meets the public indexing baseline of at least ${entityIndexThreshold()} source-linked records.` : `This entity remains public for research but is excluded from search indexing because it has fewer than ${entityIndexThreshold()} source-linked records.`}</p></section>
+      <section className={`${shell.card} ${styles.section}`}><h2>Scope and limitation</h2><p className={styles.limit}>This page groups existing structured public-record fields. For judges, the counts describe matters in which that person is recorded as a decision-maker; they do not establish a judge’s general practices or sanction rate. For every entity type, the view is not a comparison against unobserved proceedings.</p><h3>Indexing and evidence status</h3><p>{entity.indexEligible ? `This public entity profile is indexable and meets the evidence-depth baseline of at least ${entityIndexThreshold()} source-linked records.` : `This public entity profile is indexable with transparent source depth. It currently contains fewer than ${entityIndexThreshold()} source-linked records and should be read as a narrow corpus view, not a generalized pattern.`}</p></section>
     </div><aside>
       <section className={`${shell.card} ${styles.section}`}><h2>Related research</h2><div className={styles.relatedList}>{related.map(({ candidate, overlap }) => <Link className={styles.related} href={entityHref(candidate.kind, candidate.slug)} key={`${candidate.kind}-${candidate.slug}`}><strong>{candidate.label}</strong><span>{overlap} shared<br />records</span></Link>)}</div></section>
       <section className={`${shell.card} ${styles.section}`}><ShieldCheck size={18} aria-hidden="true" /><h2>Evidence boundary</h2><p>AI Vortex publishes a source-aware public corpus. The page does not replace the complete docket, later history, a court’s own rules, or legal research.</p><Link className={styles.recordLink} href="/submit">Suggest a correction <ExternalLink size={14} /></Link></section>
@@ -394,7 +400,7 @@ export function EntityDetailPage({ entity }: { entity: CorpusEntity }) {
 export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
   const entities = getEntities(kind);
   const title = entityLabel(kind);
-  const indexable = entities.filter((entity) => entity.indexEligible).length;
+  const indexable = entities.length;
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -449,7 +455,7 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
           const context = judgeEntityContext(entity);
           const media = getEntityMedia(entity.kind, entity.slug);
           return (
-            <Link className={styles.directoryItem} data-indexable={entity.indexEligible} href={entityHref(kind, entity.slug)} key={entity.slug}>
+            <Link className={styles.directoryItem} data-evidence-baseline={entity.indexEligible} href={entityHref(kind, entity.slug)} key={entity.slug}>
               {(kind === "judge" || kind === "court") && (
                 <span className={`${styles.directoryVisual} ${kind === "court" ? styles.directoryCourtVisual : ""}`} data-real-image={Boolean(media)} aria-hidden={!media}>
                   {media ? (
@@ -479,7 +485,7 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
           );
         })}
       </div>
-      <p className={styles.indexNote}>Entity pages with fewer than {entityIndexThreshold()} source-linked records remain available for transparent research but are excluded from search indexing.</p>
+      <p className={styles.indexNote}>All public entity profiles are indexable. Profiles with fewer than {entityIndexThreshold()} source-linked records remain visibly labeled as narrow corpus views.</p>
     </section>
   </main></ResearchShell>;
 }

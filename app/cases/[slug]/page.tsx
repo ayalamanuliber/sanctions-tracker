@@ -39,7 +39,10 @@ import {
   sourcePublisher,
   sourceTier,
 } from "@/lib/cases";
-import { getPublicationReadiness, isIndexEligible } from "@/lib/publication";
+import {
+  getPublicationReadiness,
+  passesPublicationBaseline,
+} from "@/lib/publication";
 import {
   conciseCaseAnswer,
   getCaseIntelligence,
@@ -132,17 +135,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: excerptAtWordBoundary(answerContext, 200),
       images: [socialImage],
     },
-    robots: isIndexEligible(item.slug)
-      ? {
-          index: true,
-          follow: true,
-          googleBot: {
-            index: true,
-            follow: true,
-            "max-image-preview": "large",
-          },
-        }
-      : { index: false, follow: true },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+      },
+    },
   };
 }
 
@@ -481,9 +482,9 @@ export default async function CasePage({ params }: Props) {
               <strong>Evidence-linked corpus record:</strong> this page is
               generated from the structured public record and has a
               publication-readiness score of {publication.score}/100.{" "}
-              {isIndexEligible(item.slug)
+              {passesPublicationBaseline(item.slug)
                 ? "It passes the current publication gate; that is not a legal-editorial review or a guarantee that every field has been independently verified."
-                : "It remains available for research but is excluded from search indexing until its documented evidence gaps are resolved."}
+                : "It is publicly indexable with its documented evidence gaps stated on-page; the linked source and evidence boundary remain controlling."}
             </span>
           </div>
         )}
@@ -765,9 +766,7 @@ export default async function CasePage({ params }: Props) {
                 <b>
                   {editorial.reviewedForPublication
                     ? "curated exemplar"
-                    : isIndexEligible(item.slug)
-                      ? "eligible under the evidence gate"
-                      : "research hold"}
+                    : "publicly indexable with evidence status disclosed"}
                 </b>
               </div>
               {evidenceReview && (

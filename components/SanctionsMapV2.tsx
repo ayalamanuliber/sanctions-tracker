@@ -1,8 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
-import { ArrowDownUp, Banknote, Globe2, Landmark } from "lucide-react";
+import {
+  useMemo,
+  useRef,
+  useState,
+  type PointerEvent as ReactPointerEvent,
+  type WheelEvent as ReactWheelEvent,
+} from "react";
+import {
+  ArrowDownUp,
+  Banknote,
+  Globe2,
+  Landmark,
+  LocateFixed,
+  Minus,
+  Plus,
+} from "lucide-react";
 import * as d3 from "d3-geo";
 import * as topojson from "topojson-client";
 import type { GeometryCollection, Topology } from "topojson-specification";
@@ -23,6 +37,7 @@ const FIPS_TO_STATE: Record<string,string> = {"01":"AL","02":"AK","04":"AZ","05"
 
 type Feature = GeoJSON.Feature<GeoJSON.Geometry, { name?: string }> & { id?: string | number };
 type MapGroup = { cases: LegalRiskCase[]; severity: string; amount: number };
+type WorldView = { scale: number; x: number; y: number };
 
 const statesTopology = statesTopologyRaw as unknown as Topology;
 const statesCollection = topojson.feature(statesTopology, statesTopology.objects.states as GeometryCollection) as unknown as GeoJSON.FeatureCollection<GeoJSON.Geometry, { name?: string }>;
@@ -38,6 +53,10 @@ const worldPath = d3.geoPath(worldProjection);
 
 const severityRank: Record<string,number> = {"career-ending":4,high:3,medium:2,low:1};
 const severityColor: Record<string,string> = {"career-ending":"#dc3a31",high:"#dc3a31",medium:"#eea324",low:"#3479ce"};
+const WORLD_WIDTH = 960;
+const WORLD_HEIGHT = 540;
+const WORLD_MIN_SCALE = 1;
+const WORLD_MAX_SCALE = 6;
 
 interface Props {
   onStateClick?: (stateCode: string) => void;
@@ -70,6 +89,19 @@ function addGroup(groups: Map<string,MapGroup>, key: string, item: LegalRiskCase
   groups.set(key,current);
 }
 
+function clamp(value: number, minimum: number, maximum: number) {
+  return Math.min(maximum, Math.max(minimum, value));
+}
+
+function constrainWorldView(view: WorldView): WorldView {
+  const scale = clamp(view.scale, WORLD_MIN_SCALE, WORLD_MAX_SCALE);
+  return {
+    scale,
+    x: clamp(view.x, WORLD_WIDTH * (1 - scale), 0),
+    y: clamp(view.y, WORLD_HEIGHT * (1 - scale), 0),
+  };
+}
+
 export default function SanctionsMapV2({
   onStateClick,
   onStateChange,
@@ -94,6 +126,17 @@ export default function SanctionsMapV2({
   const [severity,setSeverity] = useState(initialSeverity || "all");
   const [sort,setSort] = useState<"date-desc"|"date-asc"|"severity-desc"|"severity-asc"|"amount-desc"|"amount-asc">("date-desc");
   const [limit,setLimit] = useState(18);
+  const [worldView,setWorldView] = useState<WorldView>({scale:1,x:0,y:0});
+  const [worldDragging,setWorldDragging] = useState(false);
+  const worldDrag = useRef<{
+    pointerId: number;
+    clientX: number;
+    clientY: number;
+    x: number;
+    y: number;
+    moved: boolean;
+  } | null>(null);
+  const suppressWorldClick = useRef(false);
 
   const baseCases = useMemo(() => LEGAL_RISK_CASES.filter((item) => {
     if (selectedCountry && item.country !== selectedCountry) return false;
@@ -186,6 +229,85 @@ export default function SanctionsMapV2({
     window.location.assign(url.toString());
   };
 
+  const activateCountry = (country: string) => {
+    if (suppressWorldClick.current) return;
+    selectCountry(country);
+  };
+
+  const zoomWorldAt = (nextScale: number, anchorX = WORLD_WIDTH / 2, anchorY = WORLD_HEIGHT / 2) => {
+    setWorldView((current) => {
+      const scale = clamp(nextScale, WORLD_MIN_SCALE, WORLD_MAX_SCALE);
+      if (scale === current.scale) return current;
+      const ratio = scale / current.scale;
+      return constrainWorldView({
+        scale,
+        x: anchorX - (anchorX - current.x) * ratio,
+        y: anchorY - (anchorY - current.y) * ratio,
+      });
+    });
+  };
+
+  const handleWorldWheel = (event: ReactWheelEvent<SVGSVGElement>) => {
+    event.preventDefault();
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const anchorX = ((event.clientX - bounds.left) / bounds.width) * WORLD_WIDTH;
+    const anchorY = ((event.clientY - bounds.top) / bounds.height) * WORLD_HEIGHT;
+    const factor = event.deltaY < 0 ? 1.22 : 1 / 1.22;
+    zoomWorldAt(worldView.scale * factor, anchorX, anchorY);
+  };
+
+  const handleWorldPointerDown = (event: ReactPointerEvent<SVGSVGElement>) => {
+    if (event.button !== 0) return;
+    event.currentTarget.setPointerCapture(event.pointerId);
+    worldDrag.current = {
+      pointerId: event.pointerId,
+      clientX: event.clientX,
+      clientY: event.clientY,
+      x: worldView.x,
+      y: worldView.y,
+      moved: false,
+    };
+    setWorldDragging(true);
+  };
+
+  const handleWorldPointerMove = (event: ReactPointerEvent<SVGSVGElement>) => {
+    const drag = worldDrag.current;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    const deltaClientX = event.clientX - drag.clientX;
+    const deltaClientY = event.clientY - drag.clientY;
+    if (!drag.moved && Math.hypot(deltaClientX,deltaClientY) > 4) {
+      drag.moved = true;
+      suppressWorldClick.current = true;
+    }
+    if (!drag.moved) return;
+    const bounds = event.currentTarget.getBoundingClientRect();
+    setWorldView((current) => constrainWorldView({
+      ...current,
+      x: drag.x + (deltaClientX / bounds.width) * WORLD_WIDTH,
+      y: drag.y + (deltaClientY / bounds.height) * WORLD_HEIGHT,
+    }));
+  };
+
+  const finishWorldPointer = (event: ReactPointerEvent<SVGSVGElement>) => {
+    const drag = worldDrag.current;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+    worldDrag.current = null;
+    setWorldDragging(false);
+    if (drag.moved && typeof window !== "undefined") {
+      window.setTimeout(() => {
+        suppressWorldClick.current = false;
+      },0);
+    }
+  };
+
+  const resetWorldView = () => {
+    setWorldView({scale:1,x:0,y:0});
+    suppressWorldClick.current = false;
+  };
+
   const viewTitle = isUnitedStates
     ? (focusState ? `${STATE_NAMES[focusState]} evidence` : "United States evidence map")
     : selectedCountry
@@ -236,13 +358,28 @@ export default function SanctionsMapV2({
                 <circle r={radius} fill={severityColor[group.severity]} /><circle r={Math.max(4,radius-4)} /><text textAnchor="middle" dominantBaseline="central">{group.cases.length}</text><title>{label}</title>
               </g>;
             })}</g>
-          </svg> : <svg viewBox="0 0 960 540" role="group" aria-labelledby="world-map-title world-map-desc">
+          </svg> : <svg
+            viewBox="0 0 960 540"
+            role="group"
+            aria-labelledby="world-map-title world-map-desc"
+            className={worldDragging ? "is-dragging" : undefined}
+            onWheel={handleWorldWheel}
+            onPointerDown={handleWorldPointerDown}
+            onPointerMove={handleWorldPointerMove}
+            onPointerUp={finishWorldPointer}
+            onPointerCancel={finishWorldPointer}
+          >
             <title id="world-map-title">Global legal AI risk matters by country</title>
-            <desc id="world-map-desc">Select a country cluster to open its synchronized case list and geographic view. Cluster size represents tracked record count and color represents the highest editorial impact classification.</desc>
-            <g>{countryFeatures.map((feature) => {
+            <desc id="world-map-desc">Zoom with the controls, mouse wheel, or trackpad; drag to pan; then select a country cluster to open its synchronized case list and geographic view. Cluster size represents tracked record count and color represents the highest editorial impact classification.</desc>
+            <g
+              data-world-map-viewport
+              transform={`translate(${worldView.x} ${worldView.y}) scale(${worldView.scale})`}
+            >
+            <g>{countryFeatures.map((feature,index) => {
               const numericCode = String(feature.id).padStart(3,"0");
               const group = countryGroups.get(numericCode);
-              return <path key={numericCode} d={worldPath(feature) || ""} className={`smv2-country ${group ? `has-cases sev-${group.severity}` : ""} ${selectedCountry && group?.country === selectedCountry ? "selected" : ""}`} role={group ? "button" : undefined} tabIndex={group ? 0 : undefined} aria-label={group ? `${countryDisplayName(group.country)}, ${group.cases.length} tracked records` : feature.properties?.name} onClick={group ? () => selectCountry(group.country) : undefined} onKeyDown={group ? (event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); selectCountry(group.country); } } : undefined}/>;
+              const featureKey = feature.id == null ? `country-${index}-${feature.properties?.name || "unknown"}` : numericCode;
+              return <path key={featureKey} d={worldPath(feature) || ""} className={`smv2-country ${group ? `has-cases sev-${group.severity}` : ""} ${selectedCountry && group?.country === selectedCountry ? "selected" : ""}`} role={group ? "button" : undefined} tabIndex={group ? 0 : undefined} aria-label={group ? `${countryDisplayName(group.country)}, ${group.cases.length} tracked records` : feature.properties?.name} onClick={group ? () => activateCountry(group.country) : undefined} onKeyDown={group ? (event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); selectCountry(group.country); } } : undefined}/>;
             })}</g>
             <g>{countryFeatures.map((feature) => {
               const numericCode = String(feature.id).padStart(3,"0");
@@ -254,18 +391,25 @@ export default function SanctionsMapV2({
               const y = Math.round(rawY * 1000) / 1000;
               const radius = Math.min(28,7 + Math.sqrt(group.cases.length) * 1.45);
               const label = `${countryDisplayName(group.country)}, ${group.cases.length} tracked records, highest editorial impact classification ${group.severity}`;
-              return <g key={`cluster-${numericCode}`} transform={`translate(${x},${y})`} className="smv2-cluster smv2-country-cluster" role="button" tabIndex={0} aria-label={label} onClick={() => selectCountry(group.country)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); selectCountry(group.country); } }}>
+              return <g key={`cluster-${numericCode}`} transform={`translate(${x},${y})`} className="smv2-cluster smv2-country-cluster" role="button" tabIndex={0} aria-label={label} onClick={() => activateCountry(group.country)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); selectCountry(group.country); } }}>
                 <circle r={radius} fill={severityColor[group.severity]} /><circle r={Math.max(4,radius-4)} /><text textAnchor="middle" dominantBaseline="central">{group.cases.length}</text><title>{label}</title>
               </g>;
             })}</g>
+            </g>
           </svg>}
+          {!isUnitedStates && showControls && <div className="smv2-zoom-ctrl" role="group" aria-label="Global map zoom controls">
+            <button type="button" aria-label="Zoom in global map" disabled={worldView.scale >= WORLD_MAX_SCALE} onClick={() => zoomWorldAt(worldView.scale * 1.45)}><Plus aria-hidden="true"/></button>
+            <output aria-live="polite" aria-label="Current global map zoom">{Math.round(worldView.scale * 100)}%</output>
+            <button type="button" aria-label="Zoom out global map" disabled={worldView.scale <= WORLD_MIN_SCALE} onClick={() => zoomWorldAt(worldView.scale / 1.45)}><Minus aria-hidden="true"/></button>
+            <button type="button" aria-label="Reset global map view" disabled={worldView.scale === 1 && worldView.x === 0 && worldView.y === 0} onClick={resetWorldView}><LocateFixed aria-hidden="true"/></button>
+          </div>}
           {!embedded && <div className="smv2-map-note">
             {isUnitedStates
               ? <span>{focusState ? `${STATE_NAMES[focusState]} selected` : `${countryFlag("US")} United States selected`}</span>
               : selectedCountry
                 ? <span>{countryFlag(selectedCountry)} {countryDisplayName(selectedCountry)} selected</span>
-                : <span><Globe2 aria-hidden="true"/> Select a country cluster to inspect its matters</span>}
-            <span>Mode: {dataMode === "severity" ? "highest editorial impact" : "matter count"}</span>
+                : <span><Globe2 aria-hidden="true"/> Zoom, drag, then select a country</span>}
+            <span>{!isUnitedStates ? `Zoom ${Math.round(worldView.scale * 100)}% · ` : ""}Mode: {dataMode === "severity" ? "highest editorial impact" : "matter count"}</span>
           </div>}
         </div>
         {showSideRail && <aside className="smv2-rail" aria-label="Map results">

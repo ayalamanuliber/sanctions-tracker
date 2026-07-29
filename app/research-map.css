@@ -42,6 +42,16 @@
 .smv2-map-note { position: absolute; left: 18px; right: 18px; bottom: 14px; display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #93a8c3; font-size: 10px; pointer-events: none; }
 .smv2-map-note svg { width:12px;height:12px; }
 .smv2-world-stage svg { min-height:520px; }
+.smv2-world-stage > svg { cursor:grab; touch-action:none; user-select:none; }
+.smv2-world-stage > svg.is-dragging { cursor:grabbing; }
+.smv2-zoom-ctrl { position:absolute; z-index:3; top:14px; right:14px; display:grid; grid-template-columns:34px 48px 34px 34px; align-items:center; overflow:hidden; border:1px solid #466789; border-radius:4px; background:rgba(7,26,53,.94); box-shadow:0 8px 24px rgba(0,0,0,.24); }
+.smv2-zoom-ctrl button { width:34px; height:34px; display:grid; place-items:center; border:0; border-right:1px solid #345274; background:transparent; color:#dce9f7; cursor:pointer; }
+.smv2-zoom-ctrl button:last-child { border-right:0; border-left:1px solid #345274; }
+.smv2-zoom-ctrl button:hover,.smv2-zoom-ctrl button:focus-visible { background:#173b65; color:#fff; outline:none; }
+.smv2-zoom-ctrl button:focus-visible { box-shadow:inset 0 0 0 2px #8ec0ff; }
+.smv2-zoom-ctrl button:disabled { color:#657b94; cursor:not-allowed; }
+.smv2-zoom-ctrl svg { width:15px; height:15px; min-height:0; pointer-events:none; }
+.smv2-zoom-ctrl output { color:#9fb3ca; font-size:9px; font-weight:800; text-align:center; }
 .smv2-rail { min-width: 0; background: #0a1930; border-left: 1px solid #203755; padding: 16px; display: flex; flex-direction: column; max-height: 600px; }
 .smv2-rail-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .smv2-rail-heading strong { display: block; font-family: var(--font-serif); font-size: 17px; }
@@ -78,5 +88,7 @@
 @media (max-width: 520px) {
   .smv2-stage svg { min-height: 300px; }
   .smv2-map-note span:last-child { display: none; }
+  .smv2-zoom-ctrl { top:9px; right:9px; grid-template-columns:32px 42px 32px 32px; }
+  .smv2-zoom-ctrl button { width:32px; height:32px; }
   .smv2-legend { gap: 10px; }
 }

@@ -293,6 +293,14 @@ assert.ok(
   "The map must expose discoverable judge and court filters",
 );
 assert.ok(
+  globalMap.includes("Global map zoom controls") &&
+    globalMap.includes("Zoom in global map") &&
+    globalMap.includes("Zoom out global map") &&
+    globalMap.includes("Reset global map view") &&
+    globalMap.includes("Zoom, drag, then select a country"),
+  "The global map must expose accessible zoom, pan guidance, and reset controls",
+);
+assert.ok(
   globalMap.includes('content="index, follow"'),
   "The canonical global map must remain indexable",
 );

@@ -1,6 +1,7 @@
 import { LEGAL_RISK_CASES, type LegalRiskCase } from "@/lib/cases";
 import { countryDisplayName } from "@/lib/countries";
 import { ENTITY_MEDIA_REVISION } from "@/lib/entity-media";
+import { stateDisplayName } from "@/lib/us-states";
 
 export const ENTITY_KINDS = [
   "court",
@@ -44,6 +45,31 @@ export const FAILURE_MODE_DEFINITIONS = {
 } as const;
 
 type FailureModeKey = keyof typeof FAILURE_MODE_DEFINITIONS;
+
+export const CONSEQUENCE_DEFINITIONS = {
+  warning:
+    "A warning, admonishment, or comparable caution is recorded in the source without treating it as a monetary or professional sanction.",
+  "none-adjudicated":
+    "The source records an allegation, dispute, or procedural reference, but the structured record does not identify an adjudicated consequence.",
+  monetary:
+    "A fine, fee award, cost assessment, or other monetary consequence is recorded in the public source.",
+  "bar-referral":
+    "A referral, notification, or reporting requirement involving a bar or disciplinary authority is recorded.",
+  professional:
+    "A practice-related response such as discipline, required education, suspension, referral, or another professional measure is recorded.",
+  "case-dismissed":
+    "Dismissal of a claim, appeal, filing, or matter is recorded as a case-level consequence.",
+  "ordered-to-show-cause":
+    "A court or authority ordered a participant to show cause why sanctions or another response should not issue.",
+  "struck-filing":
+    "A filing, pleading, brief, citation, or submission was struck or ordered removed from the record.",
+  "ordered-to-explain":
+    "A participant was directed to explain, supplement, correct, or account for challenged conduct or a filing.",
+  disqualification:
+    "Disqualification, removal, withdrawal, or loss of participation as counsel or representative is recorded.",
+} as const;
+
+type ConsequenceKey = keyof typeof CONSEQUENCE_DEFINITIONS;
 
 const GENERIC_TOOL_LABELS = new Set([
   "ai (implied, unspecified)",
@@ -223,7 +249,14 @@ const ENTITIES: Record<EntityKind, readonly CorpusEntity[]> = {
     const country = record.country?.trim();
     return country && country !== "UNKNOWN" ? country : null;
   }, (value) => countryDisplayName(value)),
-  state: createEntities("state", LEGAL_RISK_CASES.filter((record) => record.country === "US" && Boolean(record.state)), (record) => record.state?.trim() || null, (value, record) => record.state_display?.trim() || value),
+  state: createEntities(
+    "state",
+    LEGAL_RISK_CASES.filter(
+      (record) => record.country === "US" && Boolean(record.state),
+    ),
+    (record) => record.state?.trim() || null,
+    (value) => stateDisplayName(value),
+  ),
   tool: toolEntities(),
   failure: createMultiValueEntities("failure", "tags"),
   consequence: createMultiValueEntities("consequence", "sanction_types"),
@@ -407,8 +440,11 @@ export function entitySummary(entity: CorpusEntity, corpusTotal: number) {
 }
 
 export function entityDefinition(entity: CorpusEntity) {
-  if (entity.kind !== "failure") return null;
-  return FAILURE_MODE_DEFINITIONS[entity.slug as FailureModeKey] || null;
+  if (entity.kind === "failure")
+    return FAILURE_MODE_DEFINITIONS[entity.slug as FailureModeKey] || null;
+  if (entity.kind === "consequence")
+    return CONSEQUENCE_DEFINITIONS[entity.slug as ConsequenceKey] || null;
+  return null;
 }
 
 export function entityRelated(entity: CorpusEntity, limit = 8) {

@@ -21,6 +21,7 @@ import {
 import { ReportBrandLockup } from "@/components/reports/ReportBrandLockup";
 import { ReportPreviewToolbar } from "@/components/reports/ReportPreviewToolbar";
 import { CourtScopeVisual } from "@/components/CourtScopeVisual";
+import { EntityVisualMark } from "@/components/EntityVisualMark";
 import { ToolBrandMark } from "@/components/ToolBrandMark";
 import { LAST_CHECKED, formatCaseDate } from "@/lib/cases";
 import { countryFlag } from "@/lib/countries";
@@ -186,7 +187,16 @@ function reportSchema(entity: CorpusEntity) {
         ? "GovernmentOrganization"
         : entity.kind === "state" || entity.kind === "country"
           ? "AdministrativeArea"
+          : entity.kind === "tool"
+            ? "SoftwareApplication"
+            : entity.kind === "failure" || entity.kind === "consequence"
+              ? "DefinedTerm"
           : "Thing";
+  const definition = entityDefinition(entity);
+  const toolProfile =
+    entity.kind === "tool"
+      ? getToolCatalogEntry(entity.slug, entity.label)
+      : null;
 
   return {
     "@context": "https://schema.org",
@@ -224,6 +234,23 @@ function reportSchema(entity: CorpusEntity) {
           "@type": aboutType,
           name: entity.label,
           subjectOf: profile,
+          ...(definition
+            ? {
+                termCode: entity.slug,
+                description: definition,
+                inDefinedTermSet: publicUrl(entityDirectoryHref(entity.kind)),
+              }
+            : {}),
+          ...(toolProfile
+            ? {
+                applicationCategory: toolProfile.category,
+                provider: {
+                  "@type": "Organization",
+                  name: toolProfile.provider,
+                },
+                ...(toolProfile.officialUrl ? { sameAs: toolProfile.officialUrl } : {}),
+              }
+            : {}),
           ...(media ? { image: { "@id": `${canonical}#image` } } : {}),
         },
         citation: entity.records.slice(0, 24).map((record) => ({
@@ -360,6 +387,8 @@ function ReportIdentity({ entity }: { entity: CorpusEntity }) {
               <ToolBrandMark slug={entity.slug} label={entity.label} decorative />
             ) : entity.kind === "country" ? (
               <strong className={styles.identityFlag} aria-label={`${entity.label} flag`}>{countryFlag(countryValue)}</strong>
+            ) : entity.kind === "state" || entity.kind === "failure" || entity.kind === "consequence" ? (
+              <EntityVisualMark entity={entity} decorative />
             ) : (
               <>
                 <Icon aria-hidden="true" size={28} />
@@ -372,7 +401,7 @@ function ReportIdentity({ entity }: { entity: CorpusEntity }) {
       <div>
         <span>{singular}</span>
         <strong>{entity.label}</strong>
-        <small>{toolProfile ? `${toolProfile.provider} · ${toolProfile.category}` : "Source-linked public-record scope"}</small>
+        <small>{toolProfile ? `${toolProfile.provider} · ${toolProfile.category}` : entityDefinition(entity) || "Source-linked public-record scope"}</small>
         {!media && entity.kind === "court" && (
           <small className={styles.imageCredit}>Illustrated scope marker · not a courthouse photograph or official seal</small>
         )}

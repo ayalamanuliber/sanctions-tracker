@@ -22,6 +22,7 @@ import {
 
 import CorpusDirectoryNav from "@/components/CorpusDirectoryNav";
 import { CourtScopeVisual } from "@/components/CourtScopeVisual";
+import { EntityVisualMark } from "@/components/EntityVisualMark";
 import ResearchShell from "@/components/ResearchShell";
 import shell from "@/components/ResearchShell.module.css";
 import { ToolBrandMark } from "@/components/ToolBrandMark";
@@ -58,6 +59,7 @@ import {
 import { getCourtVisual } from "@/lib/court-visual";
 import { publicUrl } from "@/lib/site";
 import { getToolCatalogEntry } from "@/lib/tool-catalog";
+import { stateDisplayName } from "@/lib/us-states";
 import styles from "./EntityPages.module.css";
 
 const DISPLAY_LIMIT = 24;
@@ -77,9 +79,12 @@ export function entityMetadata(entity: CorpusEntity): Metadata {
     entity.kind === "tool"
       ? getToolCatalogEntry(entity.slug, entity.label)
       : null;
+  const definition = entityDefinition(entity);
   const description = (
     toolProfile
       ? `${toolProfile.description} Review ${entity.records.length.toLocaleString()} source-linked public legal AI ${entity.records.length === 1 ? "record" : "records"} involving ${entity.label}.`
+      : definition
+        ? `${definition} Review ${entity.records.length.toLocaleString()} source-linked public legal AI ${entity.records.length === 1 ? "record" : "records"} in this corpus view.`
       : entityIntelligenceDescription(entity)
   ).slice(0, 158);
   const canonical = publicUrl(entityHref(entity.kind, entity.slug));
@@ -119,6 +124,9 @@ function entitySchema(entity: CorpusEntity) {
       : null;
   const countryValue =
     entity.kind === "country" ? entity.records[0]?.country || entity.label : null;
+  const stateCode =
+    entity.kind === "state" ? entity.records[0]?.state || entity.slug.toUpperCase() : null;
+  const definition = entityDefinition(entity);
   const canonical = publicUrl(entityHref(entity.kind, entity.slug));
   const directory = publicUrl(entityDirectoryHref(entity.kind));
   const socialImage = publicUrl(
@@ -147,6 +155,10 @@ function entitySchema(entity: CorpusEntity) {
             ? { about: { "@id": `${canonical}#software` } }
             : countryValue
               ? { about: { "@id": `${canonical}#country` } }
+              : stateCode
+                ? { about: { "@id": `${canonical}#area` } }
+                : definition
+                  ? { about: { "@id": `${canonical}#term` } }
               : {}),
         primaryImageOfPage: { "@id": `${canonical}#image` },
         breadcrumb: { "@id": `${canonical}#breadcrumb` },
@@ -204,6 +216,30 @@ function entitySchema(entity: CorpusEntity) {
             "@id": `${canonical}#country`,
             name: countryDisplayName(countryValue),
             url: canonical,
+          }]
+        : []),
+      ...(stateCode
+        ? [{
+            "@type": "AdministrativeArea",
+            "@id": `${canonical}#area`,
+            name: stateDisplayName(stateCode),
+            alternateName: stateCode,
+            url: canonical,
+            containedInPlace: {
+              "@type": "Country",
+              name: "United States",
+            },
+          }]
+        : []),
+      ...(definition
+        ? [{
+            "@type": "DefinedTerm",
+            "@id": `${canonical}#term`,
+            name: entity.label,
+            termCode: entity.slug,
+            description: definition,
+            url: canonical,
+            inDefinedTermSet: publicUrl(entityDirectoryHref(entity.kind)),
           }]
         : []),
       {
@@ -325,7 +361,7 @@ export function EntityDetailPage({ entity }: { entity: CorpusEntity }) {
     <div className={shell.breadcrumbs}><Link href="/">Home</Link><span>/</span><Link href={directoryHref}>{entityLabel(entity.kind)}</Link><span>/</span><span>{entity.label}</span></div>
     <header className={shell.pageHead}>
       <div className={styles.profileLead}>
-        <figure className={`${styles.profileVisual} ${entity.kind === "court" ? styles.courtVisual : ""} ${entity.kind === "country" ? styles.countryVisual : ""} ${entity.kind === "tool" ? styles.toolVisual : ""}`} data-real-image={Boolean(media)}>
+        <figure className={`${styles.profileVisual} ${entity.kind === "court" ? styles.courtVisual : ""} ${entity.kind === "country" ? styles.countryVisual : ""} ${entity.kind === "tool" ? styles.toolVisual : ""} ${entity.kind === "state" ? styles.stateVisual : ""} ${(entity.kind === "failure" || entity.kind === "consequence") ? styles.taxonomyVisual : ""}`} data-real-image={Boolean(media)}>
           {media ? (
             <Image
               src={entityMediaAssetHref(media)}
@@ -341,6 +377,8 @@ export function EntityDetailPage({ entity }: { entity: CorpusEntity }) {
             <span className={styles.countryFlag} role="img" aria-label={`${entity.label} flag`}>{countryFlag(countryValue)}</span>
           ) : entity.kind === "tool" ? (
             <ToolBrandMark slug={entity.slug} label={entity.label} />
+          ) : entity.kind === "state" || entity.kind === "failure" || entity.kind === "consequence" ? (
+            <EntityVisualMark entity={entity} />
           ) : (
             <span aria-hidden="true">{entity.label.split(/\s+/).slice(0, 3).map((part) => part[0]).join("") || "AV"}</span>
           )}
@@ -477,7 +515,7 @@ export function EntityDetailPage({ entity }: { entity: CorpusEntity }) {
 
     <div className={styles.layout}><div>
       <section className={`${shell.card} ${styles.section}`}><h2>Public records in this view</h2><p>Showing the most recent {Math.min(shown.length, DISPLAY_LIMIT).toLocaleString()} of {entity.records.length.toLocaleString()} matching {singular}.</p><div className={styles.records}>{shown.map((record) => <Link className={styles.record} href={`/cases/${record.slug}`} key={record.id}><div><strong>{record.case_name}</strong><span>{record.court || "Court not recorded"} · {record.state || record.country} · {record.ai_tool_used || "Tool not recorded"}</span></div><small>{formatCaseDate(record.date)}</small></Link>)}</div><Link className={styles.recordLink} href={entityCaseDirectoryHref(entity)}>{isConsequence ? "Open the full analytics view" : "Open all matching records"}<ArrowRight size={14} /></Link></section>
-      <section className={`${shell.card} ${styles.section}`}><h2>Scope and limitation</h2><p className={styles.limit}>This page groups existing structured public-record fields. For judges, the counts describe matters in which that person is recorded as a decision-maker; they do not establish a judge’s general practices or sanction rate. For every entity type, the view is not a comparison against unobserved proceedings.</p>{toolProfile && <p className={styles.trademarkNote}>Product names and marks identify recorded tools only. AI Vortex does not imply vendor affiliation, endorsement, product-wide failure rates, or involvement beyond the linked public records.</p>}<h3>Indexing and evidence status</h3><p>{entity.indexEligible ? `This public entity profile is indexable and meets the evidence-depth baseline of at least ${entityIndexThreshold()} source-linked records.` : `This public entity profile is indexable with transparent source depth. It currently contains fewer than ${entityIndexThreshold()} source-linked records and should be read as a narrow corpus view, not a generalized pattern.`}</p></section>
+      <section className={`${shell.card} ${styles.section}`}><h2>Scope and limitation</h2><p className={styles.limit}>This page groups existing structured public-record fields. For judges, the counts describe matters in which that person is recorded as a decision-maker; they do not establish a judge’s general practices or sanction rate. For every entity type, the view is not a comparison against unobserved proceedings.</p>{toolProfile && <p className={styles.trademarkNote}>Product names and marks identify recorded tools only. AI Vortex does not imply vendor affiliation, endorsement, product-wide failure rates, or involvement beyond the linked public records. {toolProfile.trademarkNote}</p>}<h3>Indexing and evidence status</h3><p>{entity.indexEligible ? `This public entity profile is indexable and meets the evidence-depth baseline of at least ${entityIndexThreshold()} source-linked records.` : `This public entity profile is indexable with transparent source depth. It currently contains fewer than ${entityIndexThreshold()} source-linked records and should be read as a narrow corpus view, not a generalized pattern.`}</p></section>
     </div><aside>
       <section className={`${shell.card} ${styles.section}`}><h2>Related research</h2><div className={styles.relatedList}>{related.map(({ candidate, overlap }) => <Link className={styles.related} href={entityHref(candidate.kind, candidate.slug)} key={`${candidate.kind}-${candidate.slug}`}><strong>{candidate.label}</strong><span>{overlap} shared<br />records</span></Link>)}</div></section>
       <section className={`${shell.card} ${styles.section}`}><ShieldCheck size={18} aria-hidden="true" /><h2>Evidence boundary</h2><p>AI Vortex publishes a source-aware public corpus. The page does not replace the complete docket, later history, a court’s own rules, or legal research.</p><Link className={styles.recordLink} href="/submit">Suggest a correction <ExternalLink size={14} /></Link></section>
@@ -496,6 +534,9 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
       kind === "tool" ? getToolCatalogEntry(entity.slug, entity.label) : null;
     const countryValue =
       kind === "country" ? entity.records[0]?.country || entity.label : null;
+    const stateCode =
+      kind === "state" ? entity.records[0]?.state || entity.slug.toUpperCase() : null;
+    const definition = entityDefinition(entity);
     const item =
       kind === "judge"
         ? {
@@ -532,6 +573,26 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
                 name: countryDisplayName(countryValue),
                 url: publicUrl(entityHref(entity.kind, entity.slug)),
               }
+            : stateCode
+              ? {
+                  "@type": "AdministrativeArea",
+                  name: stateDisplayName(stateCode),
+                  alternateName: stateCode,
+                  url: publicUrl(entityHref(entity.kind, entity.slug)),
+                  containedInPlace: {
+                    "@type": "Country",
+                    name: "United States",
+                  },
+                }
+              : definition
+                ? {
+                    "@type": "DefinedTerm",
+                    name: entity.label,
+                    termCode: entity.slug,
+                    description: definition,
+                    url: publicUrl(entityHref(entity.kind, entity.slug)),
+                    inDefinedTermSet: publicUrl(entityDirectoryHref(kind)),
+                  }
             : {
                 "@type": "Thing",
                 name: entity.label,
@@ -568,8 +629,14 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
           ? "Scan each decision-maker’s primary recorded court, jurisdiction, and geographic context before opening the source-linked profile."
           : kind === "country"
             ? "Scan each jurisdiction by recognizable flag and country name, then open its source-linked matters and recorded patterns."
-            : kind === "tool"
+          : kind === "tool"
               ? "Identify each recorded product by mark, provider, and category before opening its source-linked legal record."
+            : kind === "state"
+              ? "Scan each US jurisdiction by its recognizable outline and full name, then inspect its exact source-linked matters and recorded patterns."
+            : kind === "failure"
+              ? "Understand each issue signal from its evidence-bound definition before opening the exact matters in which it is recorded."
+            : kind === "consequence"
+              ? "Distinguish recorded court and professional responses by meaning before opening their exact source-linked matters."
           : "Open an entity to inspect its exact denominator, source-linked case records, limitations, and related corpus views."}
       </p>
       <div className={styles.directoryList}>
@@ -584,10 +651,14 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
             kind === "country"
               ? entity.records[0]?.country || entity.label
               : null;
+          const stateCode =
+            kind === "state"
+              ? entity.records[0]?.state || entity.slug.toUpperCase()
+              : null;
+          const definition = entityDefinition(entity);
           return (
             <Link className={styles.directoryItem} data-evidence-baseline={entity.indexEligible} href={entityHref(kind, entity.slug)} key={entity.slug}>
-              {(kind === "judge" || kind === "court" || kind === "country" || kind === "tool") && (
-                <span className={`${styles.directoryVisual} ${kind === "court" ? styles.directoryCourtVisual : ""} ${kind === "country" ? styles.directoryCountryVisual : ""} ${kind === "tool" ? styles.directoryToolVisual : ""}`} data-real-image={Boolean(media)} aria-hidden={kind === "judge" && !media}>
+              <span className={`${styles.directoryVisual} ${kind === "court" ? styles.directoryCourtVisual : ""} ${kind === "country" ? styles.directoryCountryVisual : ""} ${kind === "tool" ? styles.directoryToolVisual : ""} ${kind === "state" ? styles.directoryStateVisual : ""} ${(kind === "failure" || kind === "consequence") ? styles.directoryTaxonomyVisual : ""}`} data-real-image={Boolean(media)} aria-hidden={kind === "judge" && !media}>
                   {media ? (
                     <Image src={entityMediaAssetHref(media)} alt={media.alt} width={kind === "judge" ? 512 : 960} height={kind === "judge" ? 512 : 600} sizes={kind === "judge" ? "52px" : "76px"} />
                   ) : kind === "court" ? (
@@ -596,11 +667,12 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
                     <span className={styles.countryFlag} role="img" aria-label={`${entity.label} flag`}>{countryFlag(countryValue)}</span>
                   ) : kind === "tool" ? (
                     <ToolBrandMark slug={entity.slug} label={entity.label} decorative />
+                  ) : kind === "state" || kind === "failure" || kind === "consequence" ? (
+                    <EntityVisualMark entity={entity} decorative />
                   ) : (
                     <span>{entity.label.split(/\s+/).slice(0, 3).map((part) => part[0]).join("") || "AV"}</span>
                   )}
                 </span>
-              )}
               <div className={styles.directoryCopy}>
                 <strong>{entity.label}</strong>
                 {context && (
@@ -619,6 +691,16 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
                     </span>
                     <small className={styles.toolDescription}>{toolProfile.description}</small>
                   </>
+                )}
+                {stateCode && (
+                  <span className={styles.entityQuickContext}>
+                    <span><MapPin aria-hidden="true" />United States</span>
+                    <em>{stateCode}</em>
+                    <span>State and territorial corpus view</span>
+                  </span>
+                )}
+                {definition && (
+                  <small className={styles.entityDefinition}>{definition}</small>
                 )}
                 <small>{entity.sourceLinked.toLocaleString()}/{entity.records.length.toLocaleString()} source linked · latest {formatCaseDate(entity.latest)}</small>
                 {media && <small className={styles.directoryCredit}>Image: {media.credit} · {media.license}</small>}

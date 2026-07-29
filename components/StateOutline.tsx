@@ -4,9 +4,11 @@ import type { GeometryCollection, Topology } from "topojson-specification";
 import statesTopologyRaw from "us-atlas/states-10m.json";
 
 import { FIPS_TO_US_STATE, stateDisplayName } from "@/lib/us-states";
-import styles from "./state-scope-mark.module.css";
 
-type Feature = GeoJSON.Feature<GeoJSON.Geometry, { name?: string }> & { id?: string | number };
+type Feature = GeoJSON.Feature<GeoJSON.Geometry, { name?: string }> & {
+  id?: string | number;
+};
+
 const topology = statesTopologyRaw as unknown as Topology;
 const collection = topojson.feature(
   topology,
@@ -15,10 +17,17 @@ const collection = topojson.feature(
 const projection = d3.geoAlbersUsa().scale(1220).translate([480, 300]);
 const path = d3.geoPath(projection);
 
-export function StateScopeMark({ state }: { state: string }) {
+export function StateOutline({
+  state,
+  decorative = false,
+}: {
+  state: string;
+  decorative?: boolean;
+}) {
   const code = state.toUpperCase();
   const feature = (collection.features as Feature[]).find(
-    (candidate) => FIPS_TO_US_STATE[String(candidate.id).padStart(2, "0")] === code,
+    (candidate) =>
+      FIPS_TO_US_STATE[String(candidate.id).padStart(2, "0")] === code,
   );
   if (!feature) return null;
 
@@ -26,15 +35,14 @@ export function StateScopeMark({ state }: { state: string }) {
   const padding = 12;
 
   return (
-    <div className={styles.mark}>
-      <svg
-        aria-label={`${stateDisplayName(code)} state outline`}
-        role="img"
-        viewBox={`${x0 - padding} ${y0 - padding} ${x1 - x0 + padding * 2} ${y1 - y0 + padding * 2}`}
-      >
-        <path d={path(feature) || ""} />
-      </svg>
-      <div><strong>{stateDisplayName(code)}</strong><span>Single-state evidence scope</span></div>
-    </div>
+    <svg
+      data-entity-state-outline={code}
+      aria-hidden={decorative || undefined}
+      aria-label={decorative ? undefined : `${stateDisplayName(code)} state outline`}
+      role={decorative ? undefined : "img"}
+      viewBox={`${x0 - padding} ${y0 - padding} ${x1 - x0 + padding * 2} ${y1 - y0 + padding * 2}`}
+    >
+      <path d={path(feature) || ""} fill="currentColor" />
+    </svg>
   );
 }

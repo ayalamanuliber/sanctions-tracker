@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   siAnthropic,
   siDeepseek,
@@ -9,8 +10,12 @@ import {
 } from "simple-icons/icons";
 
 import { getToolCatalogEntry, type ToolLogoKey } from "@/lib/tool-catalog";
+import { assetUrl } from "@/lib/site";
 
-const LOGOS = {
+const LOGOS: Record<
+  Exclude<ToolLogoKey, "openai">,
+  { path: string; title: string }
+> = {
   anthropic: siAnthropic,
   deepseek: siDeepseek,
   gemini: siGooglegemini,
@@ -18,7 +23,7 @@ const LOGOS = {
   grammarly: siGrammarly,
   notebooklm: siNotebooklm,
   perplexity: siPerplexity,
-} satisfies Record<ToolLogoKey, { path: string; title: string }>;
+};
 
 export function ToolBrandMark({
   slug,
@@ -30,6 +35,18 @@ export function ToolBrandMark({
   decorative?: boolean;
 }) {
   const profile = getToolCatalogEntry(slug, label);
+  if (profile.logoKey === "openai") {
+    return (
+      <Image
+        data-tool-brand="logo"
+        data-tool-logo-source="OpenAI official brand asset"
+        src={assetUrl("/assets/brands/openai-blossom-black.svg")}
+        alt={decorative ? "" : `${label} / OpenAI logo`}
+        width={72}
+        height={72}
+      />
+    );
+  }
   const logo = profile.logoKey ? LOGOS[profile.logoKey] : null;
   if (!logo) {
     return (

@@ -12,6 +12,8 @@ import {
   getEntityMedia,
 } from "@/lib/entity-media";
 import { getCourtVisual } from "@/lib/court-visual";
+import { assetUrl } from "@/lib/site";
+import { getToolCatalogEntry } from "@/lib/tool-catalog";
 
 const size = { width: 1200, height: 630 };
 
@@ -62,6 +64,10 @@ export async function GET(
     intelligence.consequences[0]?.label || "No classified response";
   const media = getEntityMedia(entity.kind, entity.slug);
   const courtVisual = entity.kind === "court" && !media ? getCourtVisual(entity) : null;
+  const toolProfile =
+    entity.kind === "tool"
+      ? getToolCatalogEntry(entity.slug, entity.label)
+      : null;
 
   return new ImageResponse(
     <div
@@ -121,6 +127,19 @@ export async function GET(
               height: "100%",
               objectFit: "cover",
             }}
+          />
+        ) : toolProfile?.logoKey === "openai" ? (
+          // Official OpenAI Blossom asset, used only to identify the named product.
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={new URL(
+              assetUrl("/assets/brands/openai-blossom-white.svg"),
+              request.url,
+            ).toString()}
+            alt=""
+            width={116}
+            height={116}
+            style={{ width: 116, height: 116, objectFit: "contain" }}
           />
         ) : courtVisual ? (
           <div style={{ display:"flex", width:"100%", height:"100%", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:8, background:"linear-gradient(145deg,#173f68,#0b2848)" }}>

@@ -2,12 +2,15 @@
 .profileLead { display:flex; align-items:flex-start; gap:20px; min-width:0; }
 .profileLead>div { min-width:0; }
 .profileVisual { position:relative; flex:0 0 118px; width:118px; margin:0; }
-.profileVisual>img,.profileVisual>svg,.profileVisual>span { display:grid; place-items:center; width:118px; height:118px; overflow:hidden; border:1px solid #cbd8e7; border-radius:50%; background:radial-gradient(circle at 30% 22%,#fff,#edf4fd 52%,#dce8f6); color:#173a67; object-fit:cover; box-shadow:0 12px 30px rgb(16 41 71 / 10%); }
+.profileVisual>img,.profileVisual>svg,.profileVisual>span,.profileVisual>strong { display:grid; place-items:center; width:118px; height:118px; overflow:hidden; border:1px solid #cbd8e7; border-radius:50%; background:radial-gradient(circle at 30% 22%,#fff,#edf4fd 52%,#dce8f6); color:#173a67; object-fit:cover; box-shadow:0 12px 30px rgb(16 41 71 / 10%); }
 .profileVisual>svg { padding:31px; }
-.profileVisual>span { font-family:var(--font-serif); font-size:32px; font-weight:700; letter-spacing:-.05em; }
+.profileVisual>span,.profileVisual>strong { font-family:var(--font-serif); font-size:32px; font-weight:700; letter-spacing:-.05em; }
 .profileVisual>.countryFlag { font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:42px; font-weight:400; letter-spacing:0; }
-.toolVisual>svg { padding:29px; }
+.toolVisual>svg,.toolVisual>img { padding:29px; object-fit:contain; }
 .toolVisual>[data-tool-brand="monogram"] { font-family:var(--font-main); font-size:25px; font-weight:900; letter-spacing:-.04em; }
+.stateVisual>svg { padding:20px; color:#11213a; }
+.stateVisual>svg path { stroke:#b48628; stroke-width:1.2; vector-effect:non-scaling-stroke; }
+.taxonomyVisual>svg { color:#1767d2; }
 .profileVisual figcaption { margin-top:6px; font-size:8px; line-height:1.35; text-align:center; }
 .profileVisual figcaption a { color:#718096; text-decoration:none; }
 .profileVisual figcaption a:hover { color:#155bbf; text-decoration:underline; }
@@ -86,12 +89,17 @@
 .directoryItem { align-items:center; }
 .directoryVisual { display:grid!important; place-items:center; flex:0 0 52px; width:52px; height:52px; overflow:hidden; border:1px solid #d3deea; border-radius:50%; background:radial-gradient(circle at 30% 22%,#fff,#edf4fd 54%,#dce8f6); color:#173a67; text-align:center!important; }
 .directoryVisual>img { width:100%; height:100%; object-fit:cover; }
-.directoryVisual>span { color:#173a67; font-family:var(--font-serif); font-size:15px; font-weight:700; text-align:center; }
+.directoryVisual>span,.directoryVisual>strong { color:#173a67; font-family:var(--font-serif); font-size:15px; font-weight:700; text-align:center; }
 .directoryVisual>svg { width:22px; height:22px; color:#2475db; }
 .directoryVisual>.countryFlag { color:inherit; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:27px; font-weight:400; letter-spacing:0; }
 .directoryCountryVisual { background:#f7f9fc; border-radius:8px; }
-.directoryToolVisual>svg { width:25px; height:25px; }
+.directoryToolVisual>svg,.directoryToolVisual>img { width:25px; height:25px; object-fit:contain; }
 .directoryToolVisual>[data-tool-brand="monogram"] { font-family:var(--font-main); font-size:13px; font-weight:900; letter-spacing:-.03em; }
+.directoryStateVisual { border-radius:8px; background:#f7f9fc; }
+.directoryStateVisual>svg { width:34px; height:34px; color:#11213a; }
+.directoryStateVisual>svg path { stroke:#b48628; stroke-width:1.1; vector-effect:non-scaling-stroke; }
+.directoryTaxonomyVisual { border-radius:8px; background:#f3f7fd; }
+.directoryTaxonomyVisual>svg { width:25px; height:25px; color:#1767d2; }
 .directoryCourtVisual { flex-basis:76px; width:76px; border-radius:6px; }
 .directoryCourtVisual>[data-court-scope-visual] { width:76px; height:52px; }
 .directoryCopy { flex:1 1 auto; }
@@ -108,6 +116,11 @@
 .toolQuickContext svg { flex:0 0 auto; width:13px; height:13px; color:#2475db; }
 .toolQuickContext em { display:inline-flex; align-items:center; min-height:19px; border:1px solid #d6e1ee; border-radius:999px; background:#f5f8fc; padding:2px 6px; color:#4e627c; font-size:9px; font-style:normal; font-weight:800; letter-spacing:.04em; line-height:1; text-transform:uppercase; }
 .toolDescription { max-width:760px; color:#53657d!important; font-size:10px!important; line-height:1.5; }
+.entityQuickContext { display:flex; flex-wrap:wrap; align-items:center; gap:5px 8px; margin-top:6px; text-align:left!important; }
+.entityQuickContext>span { display:inline-flex; align-items:center; gap:5px; color:#425873; font-size:11px; font-weight:700; text-align:left; }
+.entityQuickContext svg { flex:0 0 auto; width:13px; height:13px; color:#2475db; }
+.entityQuickContext em { display:inline-flex; align-items:center; min-height:19px; border:1px solid #d6e1ee; border-radius:999px; background:#f5f8fc; padding:2px 6px; color:#4e627c; font-size:9px; font-style:normal; font-weight:800; letter-spacing:.04em; line-height:1; text-transform:uppercase; }
+.entityDefinition { max-width:780px; color:#53657d!important; font-size:10px!important; line-height:1.5; }
 .trademarkNote { color:#718096!important; font-size:11px!important; }
 .directoryItem[data-indexable="false"] { opacity:.78; }
 .directoryItem[data-indexable="false"] b::after { content:"Research hold"; display:block; margin-top:3px; color:#9a6a11; font-size:9px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
@@ -115,4 +128,4 @@
 @media (max-width:1000px) { .intelligenceAtGlance { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (max-width:900px) { .layout { grid-template-columns:1fr; } .metrics,.judgeContextStrip,.toolContextStrip { grid-template-columns:repeat(2,minmax(0,1fr)); } .judgeContextItem:nth-child(2n) { border-right:0; } .judgeContextItem:nth-child(-n+2) { border-bottom:1px solid #e3e9f0; } }
 @media (max-width:680px) { .patternGrid { grid-template-columns:1fr; } }
-@media (max-width:540px) { .profileLead { gap:14px; } .profileVisual { flex-basis:82px; width:82px; } .profileVisual>img,.profileVisual>svg,.profileVisual>span { width:82px; height:82px; } .profileVisual>svg { padding:21px; } .profileVisual>span { font-size:23px; } .profileVisual>.countryFlag { font-size:31px; } .profileVisual figcaption { max-width:82px; font-size:6px; } .courtVisual { flex-basis:114px; width:114px; } .courtVisual>img,.courtVisual>svg,.courtVisual>span,.courtVisual>[data-court-scope-visual] { width:114px; height:82px; } .metrics,.intelligenceAtGlance,.judgeContextStrip,.toolContextStrip { grid-template-columns:1fr; } .judgeContextItem,.judgeContextItem:nth-child(2n) { border-right:0; } .judgeContextItem,.judgeContextItem:nth-child(-n+2) { border-bottom:1px solid #e3e9f0; } .judgeContextItem:last-child { border-bottom:0; } .directoryItem { align-items:flex-start; } .directoryVisual { flex-basis:44px; width:44px; height:44px; } .directoryCourtVisual { flex-basis:62px; width:62px; } .directoryCourtVisual>[data-court-scope-visual] { width:62px; height:44px; } .directoryItem b { padding-top:2px; } .record { grid-template-columns:1fr; gap:5px; } .record small { text-align:left; } .answer h2,.section h2 { font-size:23px; } .patternPanel { padding:18px; } }
+@media (max-width:540px) { .profileLead { gap:14px; } .profileVisual { flex-basis:82px; width:82px; } .profileVisual>img,.profileVisual>svg,.profileVisual>span,.profileVisual>strong { width:82px; height:82px; } .profileVisual>svg { padding:21px; } .profileVisual>span,.profileVisual>strong { font-size:23px; } .profileVisual>.countryFlag { font-size:31px; } .profileVisual figcaption { max-width:82px; font-size:6px; } .courtVisual { flex-basis:114px; width:114px; } .courtVisual>img,.courtVisual>svg,.courtVisual>span,.courtVisual>[data-court-scope-visual] { width:114px; height:82px; } .metrics,.intelligenceAtGlance,.judgeContextStrip,.toolContextStrip { grid-template-columns:1fr; } .judgeContextItem,.judgeContextItem:nth-child(2n) { border-right:0; } .judgeContextItem,.judgeContextItem:nth-child(-n+2) { border-bottom:1px solid #e3e9f0; } .judgeContextItem:last-child { border-bottom:0; } .directoryItem { align-items:flex-start; } .directoryVisual { flex-basis:44px; width:44px; height:44px; } .directoryCourtVisual { flex-basis:62px; width:62px; } .directoryCourtVisual>[data-court-scope-visual] { width:62px; height:44px; } .directoryItem b { padding-top:2px; } .record { grid-template-columns:1fr; gap:5px; } .record small { text-align:left; } .answer h2,.section h2 { font-size:23px; } .patternPanel { padding:18px; } }

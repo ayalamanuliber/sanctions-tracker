@@ -144,6 +144,19 @@
   opacity: .16;
 }
 .identityMark [data-tool-brand="logo"] { width:34px; height:34px; opacity:1; }
+.identityMark [data-entity-mark],
+.identityMark [data-entity-state-outline] {
+  width: 38px;
+  height: 38px;
+  color: #1767d2;
+  opacity: 1;
+}
+.identityMark [data-entity-state-outline] { color:#11213a; }
+.identityMark [data-entity-state-outline] path {
+  stroke:#b48628;
+  stroke-width:1.2;
+  vector-effect:non-scaling-stroke;
+}
 
 .identityMark strong {
   position: absolute;

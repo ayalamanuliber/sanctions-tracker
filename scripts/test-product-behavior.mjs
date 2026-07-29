@@ -159,9 +159,11 @@ assert.ok(
   "Tool profiles must expose SoftwareApplication and provider schema",
 );
 assert.ok(
-  toolPage.includes('data-tool-brand="monogram"') &&
+  toolPage.includes('data-tool-brand="logo"') &&
+    toolPage.includes("openai-blossom-black.svg") &&
+    toolPage.includes("OpenAI and ChatGPT marks are the property of OpenAI") &&
     toolPage.includes("Product names and marks identify recorded tools only"),
-  "Tool profiles must render a recognizable mark with a vendor-affiliation boundary",
+  "ChatGPT profiles must render the official OpenAI mark with a vendor-affiliation boundary",
 );
 const toolsDirectory = await page("/tools");
 assert.ok(
@@ -184,7 +186,8 @@ assert.ok(
 const toolReport = await page("/tools/chatgpt/report");
 assert.ok(
   toolReport.includes("OpenAI · General-purpose AI assistant") &&
-    toolReport.includes('data-tool-brand="monogram"'),
+    toolReport.includes('data-tool-brand="logo"') &&
+    toolReport.includes("openai-blossom-black.svg"),
   "Printable tool reports must retain product identity and provider context",
 );
 
@@ -206,6 +209,55 @@ assert.ok(
     unitedStatesProfile.includes("country=US") &&
     unitedStatesProfile.includes('"@type":"Country"'),
   "Country profiles must keep their flag, raw filter value, and Country schema synchronized",
+);
+
+const statesDirectory = await page("/states");
+assert.ok(
+  statesDirectory.includes("California") &&
+    statesDirectory.includes("New York") &&
+    statesDirectory.includes('data-entity-state-outline="CA"') &&
+    statesDirectory.includes("Puerto Rico") &&
+    statesDirectory.includes('data-entity-mark="state-code"') &&
+    statesDirectory.includes('"@type":"AdministrativeArea"'),
+  "State directories must expose full jurisdiction names, outlines or explicit territory fallbacks, and AdministrativeArea schema",
+);
+const newYorkProfile = await page("/states/ny");
+assert.ok(
+  newYorkProfile.includes("New York") &&
+    newYorkProfile.includes('data-entity-state-outline="NY"') &&
+    newYorkProfile.includes('"alternateName":"NY"') &&
+    newYorkProfile.includes('"@type":"AdministrativeArea"'),
+  "State profiles must keep their name, outline, code, and jurisdiction schema synchronized",
+);
+
+const failureDirectory = await page("/failure-modes");
+assert.ok(
+  failureDirectory.includes('data-entity-mark="failure"') &&
+    failureDirectory.includes("Authorities or citations recorded as nonexistent") &&
+    failureDirectory.includes('"@type":"DefinedTerm"'),
+  "Failure-mode directories must expose recognizable symbols, definitions, and DefinedTerm schema",
+);
+const fakeCitationsProfile = await page("/failure-modes/fake-citations");
+assert.ok(
+  fakeCitationsProfile.includes('data-entity-mark="failure"') &&
+    fakeCitationsProfile.includes("<strong>Taxonomy definition:</strong>") &&
+    fakeCitationsProfile.includes('"termCode":"fake-citations"'),
+  "Failure-mode profiles must retain their evidence-bound definition and term schema",
+);
+
+const consequencesDirectory = await page("/consequences");
+assert.ok(
+  consequencesDirectory.includes('data-entity-mark="consequence"') &&
+    consequencesDirectory.includes("A fine, fee award, cost assessment") &&
+    consequencesDirectory.includes('"@type":"DefinedTerm"'),
+  "Consequence directories must expose recognizable symbols, definitions, and DefinedTerm schema",
+);
+const monetaryProfile = await page("/consequences/monetary");
+assert.ok(
+  monetaryProfile.includes('data-entity-mark="consequence"') &&
+    monetaryProfile.includes("<strong>Taxonomy definition:</strong>") &&
+    monetaryProfile.includes('"termCode":"monetary"'),
+  "Consequence profiles must retain their evidence-bound definition and term schema",
 );
 
 const correction = await page(

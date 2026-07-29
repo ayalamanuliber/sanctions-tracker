@@ -1,4 +1,5 @@
 export type ToolLogoKey =
+  | "openai"
   | "anthropic"
   | "deepseek"
   | "gemini"
@@ -15,6 +16,7 @@ export type ToolCatalogEntry = {
   mark: string;
   accent: string;
   logoKey?: ToolLogoKey;
+  trademarkNote?: string;
 };
 
 const TOOL_CATALOG: Record<string, ToolCatalogEntry> = {
@@ -25,6 +27,9 @@ const TOOL_CATALOG: Record<string, ToolCatalogEntry> = {
     officialUrl: "https://openai.com/chatgpt/overview/",
     mark: "GPT",
     accent: "#111827",
+    logoKey: "openai",
+    trademarkNote:
+      "OpenAI and ChatGPT marks are the property of OpenAI and are used only to identify the product named in the public record.",
   },
   claude: {
     provider: "Anthropic",
@@ -390,4 +395,3 @@ export function getToolCatalogEntry(slug: string, label: string): ToolCatalogEnt
     accent: "#53657d",
   };
 }
-

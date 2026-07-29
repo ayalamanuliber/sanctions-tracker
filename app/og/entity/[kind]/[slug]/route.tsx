@@ -6,6 +6,12 @@ import {
   type EntityKind,
 } from "@/lib/entity-pages";
 import { buildEntityIntelligence } from "@/lib/entity-intelligence";
+import {
+  entityMediaCredit,
+  entityMediaAssetHref,
+  getEntityMedia,
+} from "@/lib/entity-media";
+import { getCourtVisual } from "@/lib/court-visual";
 
 const size = { width: 1200, height: 630 };
 
@@ -44,16 +50,18 @@ export async function GET(
   if (!entity) return new Response("Not found", { status: 404 });
 
   const intelligence = buildEntityIntelligence(entity);
-  const variant =
-    new URL(request.url).searchParams.get("variant") === "report"
-      ? "SOURCE-LINKED EVIDENCE REPORT"
-      : "SOURCE-LINKED INTELLIGENCE PROFILE";
+  const variantParam = new URL(request.url).searchParams.get("variant");
+  const variant = variantParam?.startsWith("report")
+    ? "SOURCE-LINKED EVIDENCE REPORT"
+    : "SOURCE-LINKED INTELLIGENCE PROFILE";
   const titleSize =
     entity.label.length > 72 ? 48 : entity.label.length > 48 ? 56 : 66;
   const leadingIssue =
     intelligence.failures[0]?.label || "No classified issue signal";
   const leadingResponse =
     intelligence.consequences[0]?.label || "No classified response";
+  const media = getEntityMedia(entity.kind, entity.slug);
+  const courtVisual = entity.kind === "court" && !media ? getCourtVisual(entity) : null;
 
   return new ImageResponse(
     <div
@@ -94,14 +102,55 @@ export async function GET(
           width: 220,
           height: 220,
           border: "1px solid rgba(255,255,255,.18)",
-          borderRadius: "50%",
+          borderRadius: entity.kind === "court" ? 24 : "50%",
           color: "rgba(255,255,255,.82)",
           fontFamily: "Georgia, serif",
           fontSize: 58,
         }}
       >
-        {initials(entity.label) || "AV"}
+        {media ? (
+          // ImageResponse renders plain image elements rather than next/image.
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={new URL(entityMediaAssetHref(media), request.url).toString()}
+            alt=""
+            width={220}
+            height={220}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
+        ) : courtVisual ? (
+          <div style={{ display:"flex", width:"100%", height:"100%", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:8, background:"linear-gradient(145deg,#173f68,#0b2848)" }}>
+            <span style={{ color:"#f0ad2c", fontSize:13, fontWeight:800, letterSpacing:".12em" }}>COURT SCOPE</span>
+            <span style={{ fontSize:46 }}>{courtVisual.code}</span>
+            <span style={{ color:"#c8d8e9", fontSize:14 }}>{courtVisual.scope}</span>
+            <span style={{ color:"#8db7e1", fontSize:10 }}>{courtVisual.classification}</span>
+          </div>
+        ) : (
+          initials(entity.label) || "AV"
+        )}
       </div>
+      {media && (
+        <div
+          style={{
+            position: "absolute",
+            top: 254,
+            right: 74,
+            display: "flex",
+            width: 225,
+            justifyContent: "flex-end",
+            color: "rgba(225,234,245,.8)",
+            fontSize: 9,
+            lineHeight: 1.25,
+            textAlign: "right",
+          }}
+        >
+          Photo: {entityMediaCredit(media)}
+        </div>
+      )}
 
       <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
         <div
@@ -200,7 +249,7 @@ export async function GET(
       ...size,
       headers: {
         "Cache-Control":
-          "public, max-age=0, s-maxage=31536000, stale-while-revalidate=86400",
+          "public, max-age=86400, s-maxage=31536000, stale-while-revalidate=86400, immutable",
       },
     },
   );

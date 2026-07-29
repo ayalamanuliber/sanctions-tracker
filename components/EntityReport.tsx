@@ -20,6 +20,7 @@ import {
 
 import { ReportBrandLockup } from "@/components/reports/ReportBrandLockup";
 import { ReportPreviewToolbar } from "@/components/reports/ReportPreviewToolbar";
+import { CourtScopeVisual } from "@/components/CourtScopeVisual";
 import { LAST_CHECKED, formatCaseDate } from "@/lib/cases";
 import {
   entityCaseDirectoryHref,
@@ -39,6 +40,13 @@ import {
   formatCurrency,
   type IntelligenceRow,
 } from "@/lib/entity-intelligence";
+import {
+  entityMediaAssetHref,
+  entityMediaCredit,
+  entityMediaPublicUrl,
+  getEntityMedia,
+} from "@/lib/entity-media";
+import { getCourtVisual } from "@/lib/court-visual";
 import {
   createReportId,
   readReportBrand,
@@ -163,6 +171,9 @@ function reportSchema(entity: CorpusEntity) {
   const image = publicUrl(
     entityOgImageHref(entity.kind, entity.slug, "report"),
   );
+  const media = getEntityMedia(entity.kind, entity.slug);
+  const primaryImage = media ? entityMediaPublicUrl(media) : image;
+  const courtVisual = entity.kind === "court" && !media ? getCourtVisual(entity) : null;
   const reportId = createReportId(
     "AV-ER",
     `${entity.kind}:${entity.slug}`,
@@ -212,6 +223,7 @@ function reportSchema(entity: CorpusEntity) {
           "@type": aboutType,
           name: entity.label,
           subjectOf: profile,
+          ...(media ? { image: { "@id": `${canonical}#image` } } : {}),
         },
         citation: entity.records.slice(0, 24).map((record) => ({
           "@type": "CreativeWork",
@@ -222,11 +234,25 @@ function reportSchema(entity: CorpusEntity) {
       {
         "@type": "ImageObject",
         "@id": `${canonical}#image`,
-        url: image,
-        contentUrl: image,
-        width: 1200,
-        height: 630,
-        caption: `${entity.label} evidence report`,
+        url: primaryImage,
+        contentUrl: primaryImage,
+        width: media ? (entity.kind === "judge" ? 512 : 960) : 1200,
+        height: media ? (entity.kind === "judge" ? 512 : 600) : 630,
+        caption: media?.caption || `${entity.label} evidence report`,
+        ...(courtVisual
+          ? {
+              description: courtVisual.caption,
+              creditText: "AI Vortex deterministic court-scope diagram derived from structured corpus metadata",
+            }
+          : {}),
+        ...(media
+          ? {
+              creditText: entityMediaCredit(media),
+              license: media.licenseUrl,
+              acquireLicensePage: media.sourceUrl,
+              representativeOfPage: true,
+            }
+          : {}),
       },
       {
         "@type": "BreadcrumbList",
@@ -305,19 +331,45 @@ function Distribution({
 
 function ReportIdentity({ entity }: { entity: CorpusEntity }) {
   const { icon: Icon, singular } = KIND_COPY[entity.kind];
+  const media = getEntityMedia(entity.kind, entity.slug);
   const stateCode =
     entity.kind === "state" ? entity.records[0]?.state || entity.label : null;
 
   return (
     <aside className={styles.identity}>
-      <div className={styles.identityMark}>
-        <Icon aria-hidden="true" size={28} />
-        <strong>{stateCode || initials(entity.label) || "AV"}</strong>
-      </div>
+      <figure className={`${styles.identityMark} ${entity.kind === "court" ? styles.identityCourtMark : ""}`} data-real-image={Boolean(media)}>
+        {media ? (
+          <Image
+            src={entityMediaAssetHref(media)}
+            alt={media.alt}
+            width={entity.kind === "judge" ? 512 : 960}
+            height={entity.kind === "judge" ? 512 : 600}
+          />
+        ) : (
+          <>
+            {entity.kind === "court" ? (
+              <CourtScopeVisual entity={entity} variant="report" />
+            ) : (
+              <>
+                <Icon aria-hidden="true" size={28} />
+                <strong>{stateCode || initials(entity.label) || "AV"}</strong>
+              </>
+            )}
+          </>
+        )}
+      </figure>
       <div>
         <span>{singular}</span>
         <strong>{entity.label}</strong>
         <small>Source-linked public-record scope</small>
+        {!media && entity.kind === "court" && (
+          <small className={styles.imageCredit}>Illustrated scope marker · not a courthouse photograph or official seal</small>
+        )}
+        {media && (
+          <small className={styles.imageCredit}>
+            Image: <a href={media.sourceUrl}>{media.credit}</a> · <a href={media.licenseUrl}>{media.license}</a>
+          </small>
+        )}
       </div>
     </aside>
   );

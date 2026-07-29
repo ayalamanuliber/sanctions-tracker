@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -19,6 +20,7 @@ import {
 } from "lucide-react";
 
 import CorpusDirectoryNav from "@/components/CorpusDirectoryNav";
+import { CourtScopeVisual } from "@/components/CourtScopeVisual";
 import ResearchShell from "@/components/ResearchShell";
 import shell from "@/components/ResearchShell.module.css";
 import { LAST_CHECKED, LEGAL_RISK_CASES, formatCaseDate } from "@/lib/cases";
@@ -44,6 +46,13 @@ import {
   formatCurrency,
   type IntelligenceRow,
 } from "@/lib/entity-intelligence";
+import {
+  entityMediaAssetHref,
+  entityMediaCredit,
+  entityMediaPublicUrl,
+  getEntityMedia,
+} from "@/lib/entity-media";
+import { getCourtVisual } from "@/lib/court-visual";
 import { publicUrl } from "@/lib/site";
 import styles from "./EntityPages.module.css";
 
@@ -89,6 +98,11 @@ function entitySchema(entity: CorpusEntity) {
   const socialImage = publicUrl(
     entityOgImageHref(entity.kind, entity.slug),
   );
+  const media = getEntityMedia(entity.kind, entity.slug);
+  const primaryImage = media ? entityMediaPublicUrl(media) : socialImage;
+  const courtVisual = entity.kind === "court" && !media ? getCourtVisual(entity) : null;
+  const imageWidth = media ? (entity.kind === "judge" ? 512 : 960) : 1200;
+  const imageHeight = media ? (entity.kind === "judge" ? 512 : 600) : 630;
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -111,6 +125,7 @@ function entitySchema(entity: CorpusEntity) {
             "@id": `${canonical}#decision-maker`,
             name: entity.label,
             url: canonical,
+            image: { "@id": `${canonical}#image` },
             ...(judgeContext.role ? { jobTitle: judgeContext.role } : {}),
             description: [
               judgeContext.primaryCourt,
@@ -139,11 +154,25 @@ function entitySchema(entity: CorpusEntity) {
       {
         "@type": "ImageObject",
         "@id": `${canonical}#image`,
-        url: socialImage,
-        contentUrl: socialImage,
-        width: 1200,
-        height: 630,
-        caption: `${entity.label} source-linked intelligence profile`,
+        url: primaryImage,
+        contentUrl: primaryImage,
+        width: imageWidth,
+        height: imageHeight,
+        caption: media?.caption || `${entity.label} source-linked intelligence profile`,
+        ...(courtVisual
+          ? {
+              description: courtVisual.caption,
+              creditText: "AI Vortex deterministic court-scope diagram derived from structured corpus metadata",
+            }
+          : {}),
+        ...(media
+          ? {
+              creditText: entityMediaCredit(media),
+              license: media.licenseUrl,
+              acquireLicensePage: media.sourceUrl,
+              representativeOfPage: true,
+            }
+          : {}),
       },
       {
         "@type": "ItemList",
@@ -228,12 +257,41 @@ export function EntityDetailPage({ entity }: { entity: CorpusEntity }) {
   const isConsequence = entity.kind === "consequence";
   const definition = entityDefinition(entity);
   const judgeContext = judgeEntityContext(entity);
+  const media = getEntityMedia(entity.kind, entity.slug);
 
   return <ResearchShell><main className={shell.main}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
     <div className={shell.breadcrumbs}><Link href="/">Home</Link><span>/</span><Link href={directoryHref}>{entityLabel(entity.kind)}</Link><span>/</span><span>{entity.label}</span></div>
     <header className={shell.pageHead}>
-      <div><span className={shell.eyebrow}>Source-linked corpus view</span><h1>{entity.label}</h1><p>{entitySummary(entity, LEGAL_RISK_CASES.length)}</p></div>
+      <div className={styles.profileLead}>
+        <figure className={`${styles.profileVisual} ${entity.kind === "court" ? styles.courtVisual : ""}`} data-real-image={Boolean(media)}>
+          {media ? (
+            <Image
+              src={entityMediaAssetHref(media)}
+              alt={media.alt}
+              width={entity.kind === "judge" ? 512 : 960}
+              height={entity.kind === "judge" ? 512 : 600}
+              priority
+              sizes={entity.kind === "judge" ? "(max-width: 640px) 92px, 118px" : "(max-width: 640px) 150px, 190px"}
+            />
+          ) : entity.kind === "court" ? (
+            <CourtScopeVisual entity={entity} variant="profile" />
+          ) : (
+            <span aria-hidden="true">{entity.label.split(/\s+/).slice(0, 3).map((part) => part[0]).join("") || "AV"}</span>
+          )}
+          {media && (
+            <figcaption>
+              <a href={media.sourceUrl} target="_blank" rel="noreferrer">
+                Image: {media.credit} · {media.license}
+              </a>
+            </figcaption>
+          )}
+          {!media && entity.kind === "court" && (
+            <figcaption>Illustrated court-scope marker · not a courthouse photo</figcaption>
+          )}
+        </figure>
+        <div><span className={shell.eyebrow}>Source-linked corpus view</span><h1>{entity.label}</h1><p>{entitySummary(entity, LEGAL_RISK_CASES.length)}</p></div>
+      </div>
       <div className={shell.headActions}><Link className={shell.button} href={entityReportHref(entity.kind, entity.slug)}><FileText size={15} />Open evidence report</Link><Link className={shell.buttonSecondary} href={entityCaseDirectoryHref(entity)}>{isConsequence ? "Inspect in analytics" : "Search matching records"}<ArrowRight size={15} /></Link><Link className={shell.buttonSecondary} href="/sources">Methodology</Link></div>
     </header>
 
@@ -350,6 +408,7 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
         ? {
             itemListElement: entities.map((entity, index) => {
               const context = judgeEntityContext(entity);
+              const media = getEntityMedia(entity.kind, entity.slug);
               return {
                 "@type": "ListItem",
                 position: index + 1,
@@ -357,6 +416,7 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
                   "@type": "Person",
                   name: entity.label,
                   url: publicUrl(entityHref(entity.kind, entity.slug)),
+                  ...(media ? { image: entityMediaPublicUrl(media) } : {}),
                   ...(context?.role ? { jobTitle: context.role } : {}),
                   description: [
                     context?.primaryCourt,
@@ -387,9 +447,21 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
       <div className={styles.directoryList}>
         {entities.map((entity) => {
           const context = judgeEntityContext(entity);
+          const media = getEntityMedia(entity.kind, entity.slug);
           return (
             <Link className={styles.directoryItem} data-indexable={entity.indexEligible} href={entityHref(kind, entity.slug)} key={entity.slug}>
-              <div>
+              {(kind === "judge" || kind === "court") && (
+                <span className={`${styles.directoryVisual} ${kind === "court" ? styles.directoryCourtVisual : ""}`} data-real-image={Boolean(media)} aria-hidden={!media}>
+                  {media ? (
+                    <Image src={entityMediaAssetHref(media)} alt={media.alt} width={kind === "judge" ? 512 : 960} height={kind === "judge" ? 512 : 600} sizes={kind === "judge" ? "52px" : "76px"} />
+                  ) : kind === "court" ? (
+                    <CourtScopeVisual entity={entity} variant="directory" />
+                  ) : (
+                    <span>{entity.label.split(/\s+/).slice(0, 3).map((part) => part[0]).join("") || "AV"}</span>
+                  )}
+                </span>
+              )}
+              <div className={styles.directoryCopy}>
                 <strong>{entity.label}</strong>
                 {context && (
                   <span className={styles.judgeQuickContext}>
@@ -400,6 +472,7 @@ export function EntityDirectoryPage({ kind }: { kind: EntityKind }) {
                   </span>
                 )}
                 <small>{entity.sourceLinked.toLocaleString()}/{entity.records.length.toLocaleString()} source linked · latest {formatCaseDate(entity.latest)}</small>
+                {media && <small className={styles.directoryCredit}>Image: {media.credit} · {media.license}</small>}
               </div>
               <b>{entity.records.length.toLocaleString()} {entity.records.length === 1 ? "record" : "records"}</b>
             </Link>

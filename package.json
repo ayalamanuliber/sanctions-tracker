@@ -12,6 +12,8 @@
     "validate:data": "node scripts/validate-corpus.mjs && node scripts/validate-publication-readiness.mjs && node scripts/validate-case-page-coverage.mjs",
     "lint": "eslint",
     "validate:product": "node scripts/validate-product.mjs",
+    "sync:entity-media": "node scripts/sync-entity-media-assets.mjs",
+    "validate:entity-media": "node scripts/sync-entity-media-assets.mjs --validate",
     "validate:responsive": "node scripts/validate-responsive-routes.mjs",
     "test:product": "node scripts/test-product-behavior.mjs",
     "test:public-routes": "node scripts/validate-public-routes.mjs",
@@ -57,6 +59,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.3",
     "tailwindcss": "^4",
+    "sharp": "0.35.3",
     "typescript": "^5"
   },
   "overrides": {

@@ -9,6 +9,11 @@ import {
   entityReportHref,
   getEntities,
 } from "@/lib/entity-pages";
+import {
+  ENTITY_MEDIA_REVISION,
+  entityMediaPublicUrl,
+  getEntityMedia,
+} from "@/lib/entity-media";
 import { indexEligibleSlugs } from "@/lib/publication";
 import { publicUrl, SITE_PUBLICATION_DATE } from "@/lib/site";
 
@@ -48,9 +53,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     getEntities(kind)
       .filter((entity) => entity.indexEligible)
       .map((entity) => ({
+        ...(() => {
+          const media = getEntityMedia(kind, entity.slug);
+          return {
+            lastModified: new Date(`${media ? ENTITY_MEDIA_REVISION : entity.latest}T00:00:00Z`),
+            images: [
+              ...(media ? [entityMediaPublicUrl(media)] : []),
+              publicUrl(entityOgImageHref(kind, entity.slug)),
+            ],
+          };
+        })(),
         url: publicUrl(entityHref(kind, entity.slug)),
-        lastModified: new Date(`${entity.latest}T00:00:00Z`),
-        images: [publicUrl(entityOgImageHref(kind, entity.slug))],
       })),
   );
 
@@ -58,11 +71,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     getEntities(kind)
       .filter((entity) => entity.indexEligible)
       .map((entity) => ({
+        ...(() => {
+          const media = getEntityMedia(kind, entity.slug);
+          return {
+            lastModified: new Date(`${media ? ENTITY_MEDIA_REVISION : entity.latest}T00:00:00Z`),
+            images: [
+              ...(media ? [entityMediaPublicUrl(media)] : []),
+              publicUrl(entityOgImageHref(kind, entity.slug, "report")),
+            ],
+          };
+        })(),
         url: publicUrl(entityReportHref(kind, entity.slug)),
-        lastModified: new Date(`${entity.latest}T00:00:00Z`),
-        images: [
-          publicUrl(entityOgImageHref(kind, entity.slug, "report")),
-        ],
       })),
   );
 

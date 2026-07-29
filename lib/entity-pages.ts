@@ -1,4 +1,5 @@
 import { LEGAL_RISK_CASES, type LegalRiskCase } from "@/lib/cases";
+import { ENTITY_MEDIA_REVISION } from "@/lib/entity-media";
 
 export const ENTITY_KINDS = [
   "court",
@@ -350,7 +351,10 @@ export function entityOgImageHref(
   slug: string,
   variant: "profile" | "report" = "profile",
 ) {
-  const query = variant === "report" ? "?variant=report" : "";
+  const query =
+    variant === "report"
+      ? `?variant=report-${ENTITY_MEDIA_REVISION}`
+      : `?rev=${ENTITY_MEDIA_REVISION}`;
   return `/og/entity/${kind}/${slug}${query}`;
 }
 

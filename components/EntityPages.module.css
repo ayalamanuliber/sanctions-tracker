@@ -1,4 +1,16 @@
 .metrics { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-bottom:20px; }
+.profileLead { display:flex; align-items:flex-start; gap:20px; min-width:0; }
+.profileLead>div { min-width:0; }
+.profileVisual { position:relative; flex:0 0 118px; width:118px; margin:0; }
+.profileVisual>img,.profileVisual>svg,.profileVisual>span { display:grid; place-items:center; width:118px; height:118px; overflow:hidden; border:1px solid #cbd8e7; border-radius:50%; background:radial-gradient(circle at 30% 22%,#fff,#edf4fd 52%,#dce8f6); color:#173a67; object-fit:cover; box-shadow:0 12px 30px rgb(16 41 71 / 10%); }
+.profileVisual>svg { padding:31px; }
+.profileVisual>span { font-family:var(--font-serif); font-size:32px; font-weight:700; letter-spacing:-.05em; }
+.profileVisual figcaption { margin-top:6px; font-size:8px; line-height:1.35; text-align:center; }
+.profileVisual figcaption a { color:#718096; text-decoration:none; }
+.profileVisual figcaption a:hover { color:#155bbf; text-decoration:underline; }
+.courtVisual { flex-basis:190px; width:190px; }
+.courtVisual>img,.courtVisual>svg,.courtVisual>span { width:190px; height:118px; border-radius:8px; }
+.courtVisual>[data-court-scope-visual] { width:190px; height:118px; border-radius:8px; box-shadow:0 12px 30px rgb(16 41 71 / 10%); }
 .metric { padding:16px; }
 .metric small { color:#6b7a90; font-size:9px; font-weight:800; letter-spacing:.09em; text-transform:uppercase; }
 .metric strong { display:block; margin-top:7px; color:#102947; font-size:24px; }
@@ -69,6 +81,14 @@
 .related span,.directoryItem span { color:#718096; font-size:11px; text-align:right; }
 .directoryIntro { max-width:780px; color:#52627a; font-size:15px; line-height:1.65; margin:-8px 0 24px; }
 .directoryItem { align-items:center; }
+.directoryVisual { display:grid!important; place-items:center; flex:0 0 52px; width:52px; height:52px; overflow:hidden; border:1px solid #d3deea; border-radius:50%; background:radial-gradient(circle at 30% 22%,#fff,#edf4fd 54%,#dce8f6); color:#173a67; text-align:center!important; }
+.directoryVisual>img { width:100%; height:100%; object-fit:cover; }
+.directoryVisual>span { color:#173a67; font-family:var(--font-serif); font-size:15px; font-weight:700; text-align:center; }
+.directoryVisual>svg { width:22px; height:22px; color:#2475db; }
+.directoryCourtVisual { flex-basis:76px; width:76px; border-radius:6px; }
+.directoryCourtVisual>[data-court-scope-visual] { width:76px; height:52px; }
+.directoryCopy { flex:1 1 auto; }
+.directoryCredit { color:#8a96a7!important; font-size:8px!important; }
 .directoryItem div { min-width:0; }
 .directoryItem small { display:block; margin-top:4px; color:#718096; font-size:11px; }
 .directoryItem b { flex:0 0 auto; color:#16375f; font-size:13px; }
@@ -82,4 +102,4 @@
 @media (max-width:1000px) { .intelligenceAtGlance { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (max-width:900px) { .layout { grid-template-columns:1fr; } .metrics,.judgeContextStrip { grid-template-columns:repeat(2,minmax(0,1fr)); } .judgeContextItem:nth-child(2n) { border-right:0; } .judgeContextItem:nth-child(-n+2) { border-bottom:1px solid #e3e9f0; } }
 @media (max-width:680px) { .patternGrid { grid-template-columns:1fr; } }
-@media (max-width:540px) { .metrics,.intelligenceAtGlance,.judgeContextStrip { grid-template-columns:1fr; } .judgeContextItem,.judgeContextItem:nth-child(2n) { border-right:0; } .judgeContextItem,.judgeContextItem:nth-child(-n+2) { border-bottom:1px solid #e3e9f0; } .judgeContextItem:last-child { border-bottom:0; } .directoryItem { align-items:flex-start; } .directoryItem b { padding-top:2px; } .record { grid-template-columns:1fr; gap:5px; } .record small { text-align:left; } .answer h2,.section h2 { font-size:23px; } .patternPanel { padding:18px; } }
+@media (max-width:540px) { .profileLead { gap:14px; } .profileVisual { flex-basis:82px; width:82px; } .profileVisual>img,.profileVisual>svg,.profileVisual>span { width:82px; height:82px; } .profileVisual>svg { padding:21px; } .profileVisual>span { font-size:23px; } .profileVisual figcaption { max-width:82px; font-size:6px; } .courtVisual { flex-basis:114px; width:114px; } .courtVisual>img,.courtVisual>svg,.courtVisual>span,.courtVisual>[data-court-scope-visual] { width:114px; height:82px; } .metrics,.intelligenceAtGlance,.judgeContextStrip { grid-template-columns:1fr; } .judgeContextItem,.judgeContextItem:nth-child(2n) { border-right:0; } .judgeContextItem,.judgeContextItem:nth-child(-n+2) { border-bottom:1px solid #e3e9f0; } .judgeContextItem:last-child { border-bottom:0; } .directoryItem { align-items:flex-start; } .directoryVisual { flex-basis:44px; width:44px; height:44px; } .directoryCourtVisual { flex-basis:62px; width:62px; } .directoryCourtVisual>[data-court-scope-visual] { width:62px; height:44px; } .directoryItem b { padding-top:2px; } .record { grid-template-columns:1fr; gap:5px; } .record small { text-align:left; } .answer h2,.section h2 { font-size:23px; } .patternPanel { padding:18px; } }

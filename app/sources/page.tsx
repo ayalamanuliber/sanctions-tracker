@@ -4,6 +4,7 @@ import {
   Archive,
   ArrowRight,
   Bot,
+  Camera,
   CheckCircle2,
   CircleAlert,
   Database,
@@ -33,6 +34,8 @@ import {
   sourceTier,
 } from "@/lib/cases";
 import { indexEligibleSlugs } from "@/lib/publication";
+import { ENTITY_MEDIA_COUNTS, ENTITY_MEDIA_REVISION } from "@/lib/entity-media";
+import { getEntities } from "@/lib/entity-pages";
 import { publicUrl } from "@/lib/site";
 import styles from "./sources.module.css";
 
@@ -347,11 +350,58 @@ export default function SourcesPage() {
               </div>
             </section>
 
+            <section id="entity-media" className={`${shell.card} ${styles.section}`}>
+              <div className={styles.sectionHeading}>
+                <div className={styles.sectionIcon}><Camera aria-hidden="true" /></div>
+                <div>
+                  <span>04 · Entity media</span>
+                  <h2>Portraits, courthouse images, and visual fallbacks</h2>
+                </div>
+              </div>
+              <p className={styles.lead}>
+                Entity images are local, versioned research assets. The current
+                registry includes {ENTITY_MEDIA_COUNTS.judges} verified judicial
+                portraits and {ENTITY_MEDIA_COUNTS.courts} verified representative
+                courthouse images. Every real image retains its creator, source
+                page, reuse license, alternative text, and caption in the page,
+                report, and structured metadata.
+              </p>
+              <div className={styles.gateGrid}>
+                <div>
+                  <Camera aria-hidden="true" />
+                  <p>
+                    <strong>Real-image gate</strong>
+                    A photograph appears only after the pictured person or
+                    building and the reuse terms are verified. Wikimedia
+                    Commons, official court materials, the Federal Judicial
+                    Center, and GSA records may support that review; no Google
+                    Images result is treated as a license.
+                  </p>
+                </div>
+                <div>
+                  <Landmark aria-hidden="true" />
+                  <p>
+                    <strong>Complete court coverage</strong>
+                    All {getEntities("court").length.toLocaleString()} normalized
+                    court profiles receive either a licensed representative
+                    image or a first-party scope marker derived from recorded
+                    geography and court classification. Scope markers are not
+                    photographs, official seals, or location maps.
+                  </p>
+                </div>
+              </div>
+              <p className={styles.sourceNote}>
+                Media registry revision {ENTITY_MEDIA_REVISION}. A courthouse
+                image may show one representative building and does not imply
+                that a court sits only at that location.
+              </p>
+            </section>
+
             <section id="updates" className={`${shell.card} ${styles.section}`}>
               <div className={styles.sectionHeading}>
                 <div className={styles.sectionIcon}><RefreshCw aria-hidden="true" /></div>
                 <div>
-                  <span>04 · Maintenance</span>
+                  <span>05 · Maintenance</span>
                   <h2>Updates, corrections, and reproducibility</h2>
                 </div>
               </div>

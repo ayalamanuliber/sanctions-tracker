@@ -208,6 +208,12 @@ assert.ok(
     judgeProfile.includes('"jobTitle":"United States District Judge"'),
   "A judge profile must expose evidence-bound Person schema",
 );
+assert.ok(
+  judgeProfile.includes("/assets/entities/judges/vernon-d-oliver.webp") &&
+    judgeProfile.includes("Wikimedia Commons") &&
+    judgeProfile.includes('"creditText"'),
+  "A verified judge portrait must render with visible and structured attribution",
+);
 
 const judgeReport = await page("/judges/vernon-d-oliver/report");
 assert.ok(
@@ -221,6 +227,43 @@ assert.ok(
 assert.ok(
   judgeReport.includes('"@type":"Report"'),
   "An entity report must expose Report JSON-LD",
+);
+assert.ok(
+  judgeReport.includes("/assets/entities/judges/vernon-d-oliver.webp") &&
+    judgeReport.includes("Image:"),
+  "A judge report must retain its verified portrait and printable image credit",
+);
+const courtProfile = await page("/courts/s-d-new-york");
+assert.ok(
+  courtProfile.includes("/assets/entities/courts/s-d-new-york.webp") &&
+    courtProfile.includes("Daniel Patrick Moynihan"),
+  "A court profile must show its verified representative courthouse image",
+);
+const fallbackCourtProfile = await page("/courts/e-d-california");
+assert.ok(
+  fallbackCourtProfile.includes('data-court-scope-visual="structured-fallback"') &&
+    fallbackCourtProfile.includes("Not a courthouse photograph"),
+  "A court without licensed media must render a transparent structured court-scope visual",
+);
+const fallbackJudgeReport = await page("/judges/micah-w-j-smith/report");
+assert.ok(
+  fallbackJudgeReport.includes('data-real-image="false"') &&
+    !fallbackJudgeReport.includes("/assets/entities/judges/micah-w-j-smith.webp"),
+  "A judge without verified media must retain the initials fallback without a fabricated asset",
+);
+const judgeOg = await fetch(
+  `${base}/og/entity/judge/vernon-d-oliver?rev=2026-07-28`,
+);
+assert.equal(judgeOg.status, 200, "Judge OG image must render");
+assert.match(
+  judgeOg.headers.get("cache-control") || "",
+  /s-maxage=31536000/,
+  "Entity OG images must be cached aggressively at the CDN",
+);
+assert.match(
+  judgeOg.headers.get("content-type") || "",
+  /^image\//,
+  "Entity OG route must return an image",
 );
 
 const sitemap = await page("/sitemap.xml");
@@ -249,5 +292,14 @@ assert.ok(
   sitemap.includes("/og/entity/judge/vernon-d-oliver?variant=report"),
   "Sitemap must associate entity reports with their OG image",
 );
+assert.ok(
+  sitemap.includes("/assets/entities/judges/vernon-d-oliver.webp") &&
+    sitemap.includes("rev=2026-07-28"),
+  "Sitemap must expose verified entity media and versioned OG images",
+);
+assert.ok(
+  !sitemap.includes("?variant=report&rev="),
+  "Sitemap image URLs must not contain unescaped query separators",
+);
 
-console.log(JSON.stringify({ status: "pass", base, checks: 55, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseUrls.length }, null, 2));
+console.log(JSON.stringify({ status: "pass", base, checks: 66, dnj: resultCount(dnjCourt), sdny: resultCount(sdny), edny: resultCount(edny), packetCases: 1, indexEligibleCasePages: caseUrls.length }, null, 2));

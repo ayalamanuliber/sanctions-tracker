@@ -37,12 +37,16 @@ export default function PrivacyPage() {
         <div className={styles.methodGrid}>
           <div>
             <section className={`${shell.card} ${styles.section}`}>
-              <h2>Public research activity</h2>
+              <h2>Public research activity and analytics</h2>
               <p>
-                Searches, filter selections, and page requests may be processed
-                to operate, secure, and improve the service. Do not enter
-                privileged, confidential, sealed, or personally sensitive matter
-                information into public search fields.
+                AI Vortex uses first-party service analytics and Google
+                Analytics to understand page visits, navigation, searches,
+                filter use, source opens, report actions, and product
+                performance. Product events record the type of interaction, not
+                the search text as a custom event property. Page URLs can still
+                contain active public-search parameters, so do not enter
+                privileged, confidential, sealed, or personally sensitive
+                matter information into public search fields.
               </p>
             </section>
             <section className={`${shell.card} ${styles.section}`}>

@@ -13,7 +13,13 @@ export default function CopyViewButton() {
   }
 
   return (
-    <button type="button" onClick={copyView} aria-live="polite">
+    <button
+      type="button"
+      data-analytics-event="report_share"
+      data-analytics-target="copy_view"
+      onClick={copyView}
+      aria-live="polite"
+    >
       {copied ? <Check /> : <Link2 />}
       {copied ? "Link copied" : "Copy view link"}
     </button>

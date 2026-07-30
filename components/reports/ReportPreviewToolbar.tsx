@@ -98,11 +98,22 @@ export function ReportPreviewToolbar({
           </div>
         )}
 
-        <button className={styles.secondaryAction} onClick={shareReport} type="button">
+        <button
+          className={styles.secondaryAction}
+          data-analytics-event="report_share"
+          data-analytics-target="report_toolbar"
+          onClick={shareReport}
+          type="button"
+        >
           {copied ? <Check size={16} /> : <Share2 size={16} />}
           {copied ? "Link copied" : "Send for review"}
         </button>
-        <button className={styles.primaryAction} onClick={() => window.print()} type="button">
+        <button
+          className={styles.primaryAction}
+          data-analytics-target="report_toolbar"
+          onClick={() => window.print()}
+          type="button"
+        >
           <Printer size={16} />
           Print / Save PDF
         </button>

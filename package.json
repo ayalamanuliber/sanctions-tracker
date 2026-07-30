@@ -38,6 +38,8 @@
     "@modelcontextprotocol/sdk": "^1.29.0",
     "@types/d3-geo": "^3.1.0",
     "@types/topojson-client": "^3.1.5",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "body-parser": "^2.3.0",
     "d3-geo": "^3.1.1",
     "echarts": "^6.1.0",
@@ -60,8 +62,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.3",
-    "tailwindcss": "^4",
     "sharp": "0.35.3",
+    "tailwindcss": "^4",
     "typescript": "^5"
   },
   "overrides": {

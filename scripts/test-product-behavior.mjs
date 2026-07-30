@@ -5,6 +5,43 @@ const base = process.env.PRODUCT_BASE_URL || "http://localhost:3017/legal-ai-ris
 const corpus = JSON.parse(fs.readFileSync(new URL("../data/sanctions.json", import.meta.url), "utf8"));
 const readiness = JSON.parse(fs.readFileSync(new URL("../data/publication-readiness-index.json", import.meta.url), "utf8"));
 const judgeEnrichment = JSON.parse(fs.readFileSync(new URL("../data/judge-enrichment.json", import.meta.url), "utf8"));
+const rootLayoutSource = fs.readFileSync(new URL("../app/layout.tsx", import.meta.url), "utf8");
+const instrumentationSource = fs.readFileSync(new URL("../components/SiteInstrumentation.tsx", import.meta.url), "utf8");
+const nextConfigSource = fs.readFileSync(new URL("../next.config.ts", import.meta.url), "utf8");
+
+assert.ok(
+  rootLayoutSource.includes("<SiteInstrumentation />"),
+  "Every public route must include the shared analytics instrumentation",
+);
+for (const requiredSignal of [
+  "tracker_session_start",
+  "search_submit",
+  "filter_apply",
+  "case_open",
+  "judge_open",
+  "court_open",
+  "source_open",
+  "report_open",
+  "report_print",
+  "report_share",
+  "upgrade_click",
+]) {
+  assert.ok(
+    instrumentationSource.includes(`"${requiredSignal}"`),
+    `Shared instrumentation must expose ${requiredSignal}`,
+  );
+}
+assert.ok(
+  instrumentationSource.includes("@vercel/analytics") &&
+    instrumentationSource.includes("@vercel/speed-insights") &&
+    instrumentationSource.includes("www.googletagmanager.com/gtag/js"),
+  "The tracker must load GA4, Vercel Web Analytics, and Speed Insights",
+);
+assert.ok(
+  nextConfigSource.includes("https://www.googletagmanager.com") &&
+    nextConfigSource.includes("https://*.google-analytics.com"),
+  "The CSP must permit the configured analytics transports",
+);
 
 async function page(path) {
   const response = await fetch(`${base}${path}`);
@@ -273,8 +310,13 @@ const noMatch = await page("/cases?q=definitely-not-a-real-vortex-case&state=NJ&
 assert.ok(noMatch.includes("Transparent fallback"), "Zero-result search must disclose fallback behavior");
 assert.ok(noMatch.includes("did not silently substitute"), "Fallback must be explicit rather than silent");
 
+const canadaCount = corpus.filter((record) => record.country === "Canada").length;
 const canadaCases = await page("/cases?country=Canada");
-assert.equal(resultCount(canadaCases), 199, "Canada country filtering must return its exact corpus subset");
+assert.equal(
+  resultCount(canadaCases),
+  canadaCount,
+  "Canada country filtering must return its exact corpus subset",
+);
 assert.ok(
   canadaCases.includes("🇨🇦 Canada") && canadaCases.includes("Judge / decision-maker"),
   "Case search must expose recognizable country flags and a recorded-judge filter",
@@ -308,7 +350,7 @@ assert.ok(
 const canadaMap = await page("/map?country=Canada");
 assert.ok(
   canadaMap.includes("🇨🇦 Canada evidence") &&
-    canadaMap.includes("199<!-- --> matched records") &&
+    canadaMap.includes(`${canadaCount}<!-- --> matched records`) &&
     canadaMap.includes("country=Canada"),
   "A selected country map must preserve its exact result scope in navigation links",
 );

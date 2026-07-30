@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SiteInstrumentation from "@/components/SiteInstrumentation";
 import { PUBLIC_BASE_URL, PUBLIC_ORIGIN, assetUrl, publicUrl } from "@/lib/site";
 import "./globals.css";
 import "./research-map.css";
@@ -53,6 +54,7 @@ export default function RootLayout({
       <body>
         <div className="noise" />
         {children}
+        <SiteInstrumentation />
       </body>
     </html>
   );

@@ -283,6 +283,65 @@
     }
   },
   {
+    "id": "ccdp-v-canada-ag-frantz-saint-jean-2026-07-23",
+    "slug": "ccdp-v-canada-ag-frantz-saint-jean-2026-07-23",
+    "case_name": "CCDP v. Canada AG & Frantz Saint-Jean",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Case Law | Several citations in the memorandum quoted or summarized case law inaccurately; the Court found the summaries and quotations did not correspond to the actual authorities cited. Outcome: Adverse Costs Order.",
+    "direct_answer": "Misrepresented: Case Law | Several citations in the memorandum quoted or summarized case law inaccurately; the Court found the summaries and quotations did not correspond to the actual authorities cited. Outcome: Adverse Costs Order.",
+    "why_it_matters": "This matter connects pro se and fake citations with Adverse Costs Order in Federal Court (Canada). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Adverse Costs Order. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2710/2026cf993.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Federal Court (Canada)",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-23",
+      "ai_tool": "Unidentified",
+      "outcome": "Adverse Costs Order",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "administrative",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "hagan-v-black-diamond-experts-llc-2026-07-23",
     "slug": "hagan-v-black-diamond-experts-llc-2026-07-23",
     "case_name": "Hagan v. Black Diamond Experts, LLC",
@@ -2647,6 +2706,59 @@
       "limitations": [
         "The specific AI tool used by the litigant remains unidentified."
       ]
+    }
+  },
+  {
+    "id": "immigration-case-2026-07-14",
+    "slug": "immigration-case-2026-07-14",
+    "case_name": "Immigration Case",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Exhibits & Submissions. The matter is recorded in First-Tier Immigration Tribunal on 2026-07-14 and concerns fake citations and trial. The tracked outcome is the procedural response described in the linked source; consult the linked source for the complete record.",
+    "direct_answer": "Fabricated: Exhibits & Submissions. The matter is recorded in First-Tier Immigration Tribunal on 2026-07-14 and concerns fake citations and trial. The tracked outcome is the procedural response described in the linked source; consult the linked source for the complete record.",
+    "why_it_matters": "This matter connects fake citations and trial with a recorded judicial or procedural response in First-Tier Immigration Tribunal. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and trial and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded link is a secondary public source and should be checked against the docket where available. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.theguardian.com/uk-news/2026/jul/28/home-office-used-ai-hallucinated-information-to-refuse-asylum-claim-judge-suggests",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "secondary-report"
+    },
+    "record": {
+      "court": "First-Tier Immigration Tribunal",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "GB",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-14",
+      "ai_tool": "Unidentified",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {
@@ -7835,6 +7947,58 @@
       "limitations": [
         "The specific AI tool used by the plaintiff remains unidentified in the court record."
       ]
+    }
+  },
+  {
+    "id": "bff-finance-iberia-v-junta-de-comunidades-de-castilla-la-mancha-2026-06-29",
+    "slug": "bff-finance-iberia-v-junta-de-comunidades-de-castilla-la-mancha-2026-06-29",
+    "case_name": "BFF Finance Iberia v. Junta de Comunidades de Castilla-La Mancha",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "False Quotes: Case Law | Passages reproduced in the party's written opposition, presented as quotations from Tribunal Supremo decisions, did not match the texts in the CENDOJ database upon judicial comparison. The respondent's written opposition included passages quoted as from Tribunal Supremo resolutions. The Court ordered the respondent to identify the cited sentences and their database references, then compared the quoted passages to the full texts in the CENDOJ database and found that the reproduced quotations did not coincide literally or substantially with the actual decisions. The Court therefore treated those citations as misrepresentations/false quotations and did not rely on them; no sanction or monetary penalty was imposed in relation to the misquoting.",
+    "direct_answer": "False Quotes: Case Law | Passages reproduced in the party's written opposition, presented as quotations from Tribunal Supremo decisions, did not match the texts in the CENDOJ database upon judicial comparison. The respondent's written opposition included passages quoted as from Tribunal Supremo resolutions. The Court ordered the respondent to identify the cited sentences and their database references, then compared the quoted passages to the full texts in the CENDOJ database and found that the reproduced quotations did not coincide literally or substantially with the actual decisions. The Court therefore treated those citations as misrepresentations/false quotations and did not rely on them; no sanction or monetary penalty was imposed in relation to the misquoting.",
+    "why_it_matters": "This matter connects fabricated quotes and trial with a recorded judicial or procedural response in Tribunal Supremo. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fabricated quotes and trial and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. No underlying public source link is currently recorded. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date"
+    ],
+    "source": {
+      "url": "",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "missing"
+    },
+    "record": {
+      "court": "Tribunal Supremo",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Spain",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-06-29",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fabricated-quotes",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

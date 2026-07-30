@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "41a58a9069ee5b748b4213fbddc2d1d362f413d0718d7a84384822e627fee59c",
-  "corpus_checked": "2026-07-29",
-  "total_cases": 1811,
+  "dataset_checksum": "4d3b0d27f18959d9b8788e7f078a2d6a6a267febdaaf863d75b5f76ce5387544",
+  "corpus_checked": "2026-07-30",
+  "total_cases": 1814,
   "tiers": {
-    "index-ready": 1799,
-    "enrichment-ready": 11,
-    "research-only": 1
+    "index-ready": 1800,
+    "enrichment-ready": 12,
+    "research-only": 2
   },
   "by_slug": {
     "lichfield-v-kubler-netflix-inc-2026-07-27": {
@@ -28,6 +28,10 @@
     "catarina-almeida-porfirio-v-homeland-security-et-al-2026-07-23": {
       "tier": "index-ready",
       "score": 76
+    },
+    "ccdp-v-canada-ag-frantz-saint-jean-2026-07-23": {
+      "tier": "index-ready",
+      "score": 81
     },
     "hagan-v-black-diamond-experts-llc-2026-07-23": {
       "tier": "index-ready",
@@ -140,6 +144,10 @@
     "valurie-kaye-mettler-v-michigan-state-police-et-al-2026-07-15": {
       "tier": "index-ready",
       "score": 81
+    },
+    "immigration-case-2026-07-14": {
+      "tier": "enrichment-ready",
+      "score": 70
     },
     "in-re-rosslyn2016-llc-et-al-2026-07-14": {
       "tier": "index-ready",
@@ -348,6 +356,10 @@
     "yuri-petrini-v-city-of-biloxi-mississippi-et-al-2026-06-30": {
       "tier": "index-ready",
       "score": 85
+    },
+    "bff-finance-iberia-v-junta-de-comunidades-de-castilla-la-mancha-2026-06-29": {
+      "tier": "research-only",
+      "score": 60
     },
     "chilly-moose-ltd-v-moosehead-breweries-limited-2026-06-29": {
       "tier": "index-ready",

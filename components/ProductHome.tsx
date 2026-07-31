@@ -175,7 +175,8 @@ export default function ProductHome() {
             <Link href="/cases">Search</Link><Link href="/map">Map</Link><Link href="/analytics">Analytics</Link><Link href="/courts">Courts</Link><Link href="/judges">Judges</Link><Link href="/topics">Topics</Link><Link href="/sources">Sources</Link><Link href="/resources">Resources</Link>
           </nav>
           <div className={styles.navActions}>
-            <a href="mailto:manuel@aivortex.io?subject=AI%20Vortex%20access">Get access</a>
+            <a href="https://www.aivortex.io/diagnostic/">AI visibility</a>
+            <a href="https://www.aivortex.io/legal/#advisory">Consulting</a>
             <a className={styles.amberButton} href="#search">Use free</a>
             <button ref={menuButtonRef} className={styles.menuButton} onClick={() => setMobileMenuOpen((value) => !value)} aria-label="Toggle navigation" aria-expanded={mobileMenuOpen} aria-controls="home-mobile-menu">
               {mobileMenuOpen ? <X /> : <Menu />}
@@ -183,7 +184,7 @@ export default function ProductHome() {
           </div>
         </div>
         {mobileMenuOpen && <nav className={styles.mobileMenu} id="home-mobile-menu" aria-label="Mobile navigation">
-          <Link href="/cases" onClick={() => setMobileMenuOpen(false)}>Search</Link><Link href="/map" onClick={() => setMobileMenuOpen(false)}>Map</Link><Link href="/analytics" onClick={() => setMobileMenuOpen(false)}>Analytics</Link><Link href="/courts" onClick={() => setMobileMenuOpen(false)}>Courts</Link><Link href="/judges" onClick={() => setMobileMenuOpen(false)}>Judges</Link><Link href="/topics" onClick={() => setMobileMenuOpen(false)}>Topics</Link><Link href="/sources" onClick={() => setMobileMenuOpen(false)}>Sources</Link><Link href="/resources" onClick={() => setMobileMenuOpen(false)}>Resources</Link>
+          <Link href="/cases" onClick={() => setMobileMenuOpen(false)}>Search</Link><Link href="/map" onClick={() => setMobileMenuOpen(false)}>Map</Link><Link href="/analytics" onClick={() => setMobileMenuOpen(false)}>Analytics</Link><Link href="/courts" onClick={() => setMobileMenuOpen(false)}>Courts</Link><Link href="/judges" onClick={() => setMobileMenuOpen(false)}>Judges</Link><Link href="/topics" onClick={() => setMobileMenuOpen(false)}>Topics</Link><Link href="/sources" onClick={() => setMobileMenuOpen(false)}>Sources</Link><Link href="/resources" onClick={() => setMobileMenuOpen(false)}>Resources</Link><a href="https://www.aivortex.io/diagnostic/" onClick={() => setMobileMenuOpen(false)}>AI visibility</a><a href="https://www.aivortex.io/legal/#advisory" onClick={() => setMobileMenuOpen(false)}>Consulting</a>
         </nav>}
         <div className={styles.statusBar}>
           <span className={styles.live}><i /> LIVE</span>

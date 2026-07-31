@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "4d3b0d27f18959d9b8788e7f078a2d6a6a267febdaaf863d75b5f76ce5387544",
-  "corpus_checked": "2026-07-30",
-  "total_cases": 1814,
+  "dataset_checksum": "ba8a509f36f438a7fd225b8a898b13702d42992231c886a9bc423c2706193ae3",
+  "corpus_checked": "2026-07-31",
+  "total_cases": 1815,
   "tiers": {
-    "index-ready": 1800,
+    "index-ready": 1801,
     "enrichment-ready": 12,
     "research-only": 2
   },
@@ -40,6 +40,10 @@
     "mary-c-graves-v-brian-k-graves-2026-07-23": {
       "tier": "index-ready",
       "score": 81
+    },
+    "asif-v-minister-for-immigration-and-citizenship-2026-fedcfamc2g-1402-2026-07-22": {
+      "tier": "index-ready",
+      "score": 90
     },
     "gideon-j-sipin-v-the-bank-of-new-york-mellon-trust-company-n-a-et-al-2026-07-22": {
       "tier": "index-ready",

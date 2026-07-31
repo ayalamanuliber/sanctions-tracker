@@ -451,6 +451,63 @@
     }
   },
   {
+    "id": "asif-v-minister-for-immigration-and-citizenship-2026-fedcfamc2g-1402-2026-07-22",
+    "slug": "asif-v-minister-for-immigration-and-citizenship-2026-fedcfamc2g-1402-2026-07-22",
+    "case_name": "Asif v Minister for Immigration and Citizenship [2026] FedCFamC2G 1402",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | ChatGPT produced fabricated details relating to a 'No 3' judgment and admitted fabricating those details when interrogated by the Judge. Outcome: Application dismissed; Applicant ordered to pay First Respondent's costs of 9,097.93; Court criticised AI-generated submissions and noted possibility of above-scale costs due to AI hallucinations.. The self-represented Applicant admitted using ChatGPT to draft written submissions which contained hallucinated and incorrect authorities, paragraph references, and propositions. The Court identified fabricated details (including a ChatGPT-created account concerning a 'No 3' judgment) and multiple mis-citations/misrepresentations (eg. incorrect paragraph citation in Garikimukku, improper use of Inderjit and Patel citations). The Court criticised the AI-generated material, treated it as imposing an additional burden on the respondent and the Court, and ordered costs (with consideration of above-scale costs because of the AI usage).",
+    "direct_answer": "Fabricated: Case Law | ChatGPT produced fabricated details relating to a 'No 3' judgment and admitted fabricating those details when interrogated by the Judge. Outcome: Application dismissed; Applicant ordered to pay First Respondent's costs of 9,097.93; Court criticised AI-generated submissions and noted possibility of above-scale costs due to AI hallucinations.. The self-represented Applicant admitted using ChatGPT to draft written submissions which contained hallucinated and incorrect authorities, paragraph references, and propositions. The Court identified fabricated details (including a ChatGPT-created account concerning a 'No 3' judgment) and multiple mis-citations/misrepresentations (eg. incorrect paragraph citation in Garikimukku, improper use of Inderjit and Patel citations). The Court criticised the AI-generated material, treated it as imposing an additional burden on the respondent and the Court, and ordered costs (with consideration of above-scale costs because of the AI usage).",
+    "why_it_matters": "This matter connects pro se and fake citations with Application dismissed; Applicant ordered to pay First Respondent's costs of 9,097.93; Court criticised AI-generated submissions and noted possibility of above-scale costs due to AI hallucinations. in FedCFamC2G (Division 2). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Application dismissed; Applicant ordered to pay First Respondent's costs of 9,097.93; Court criticised AI-generated submissions and noted possibility of above-scale costs due to AI hallucinations.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2711/Asif_v_Minister_for_Immigration_and_Citizenship_2026_FedCFamC2G_1402_22_July_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "FedCFamC2G (Division 2)",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-22",
+      "ai_tool": "ChatGPT",
+      "outcome": "Application dismissed; Applicant ordered to pay First Respondent's costs of 9,097.93; Court criticised AI-generated submissions and noted possibility of above-scale costs due to AI hallucinations.",
+      "amount": 1,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "case-dismissed"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "gideon-j-sipin-v-the-bank-of-new-york-mellon-trust-company-n-a-et-al-2026-07-22",
     "slug": "gideon-j-sipin-v-the-bank-of-new-york-mellon-trust-company-n-a-et-al-2026-07-22",
     "case_name": "Gideon J. Sipin v. The Bank of New York Mellon Trust Company, N.A., et al.",

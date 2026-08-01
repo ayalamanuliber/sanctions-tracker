@@ -1,5 +1,66 @@
 [
   {
+    "id": "scott-v-illinois-human-rights-comm-n-2026-07-28",
+    "slug": "scott-v-illinois-human-rights-comm-n-2026-07-28",
+    "case_name": "Scott v. Illinois Human Rights Comm’n",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Fabricated: Legal Norm | Opening brief quoted a fabricated statutory provision claiming the Department must “conduct a full investigation,” language not in 775 ILCS 5/7A-102(D)(2). Court found this language AI-generated and false. Outcome: Monetary Fine; Bar Referral.",
+    "direct_answer": "Fabricated: Legal Norm | Opening brief quoted a fabricated statutory provision claiming the Department must “conduct a full investigation,” language not in 775 ILCS 5/7A-102(D)(2). Court found this language AI-generated and false. Outcome: Monetary Fine; Bar Referral.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Monetary Fine; Bar Referral in CA Illinois. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Monetary Fine; Bar Referral. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded link is a secondary public source and should be checked against the docket where available. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://reason.com/volokh/2026/07/31/we-do-not-know-why-attorney-cole-feels-compelled-to-rush-out-obviously-flawed-filings-but-this-must-stop-15k-sanction/",
+      "name": "Volokh",
+      "tier": "secondary-report"
+    },
+    "record": {
+      "court": "CA Illinois",
+      "jurisdiction": "state",
+      "state": "IL",
+      "country": "US",
+      "circuit": "7th Circuit",
+      "judge": null,
+      "date": "2026-07-28",
+      "ai_tool": "ChatGPT",
+      "outcome": "Monetary Fine; Bar Referral",
+      "amount": 15000,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "bar-referral",
+        "administrative",
+        "appellate"
+      ],
+      "sanction_types": [
+        "monetary",
+        "bar-referral",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "lichfield-v-kubler-netflix-inc-2026-07-27",
     "slug": "lichfield-v-kubler-netflix-inc-2026-07-27",
     "case_name": "Lichfield v. Kubler; Netflix, Inc.",
@@ -451,16 +512,16 @@
     }
   },
   {
-    "id": "asif-v-minister-for-immigration-and-citizenship-2026-fedcfamc2g-1402-2026-07-22",
-    "slug": "asif-v-minister-for-immigration-and-citizenship-2026-fedcfamc2g-1402-2026-07-22",
-    "case_name": "Asif v Minister for Immigration and Citizenship [2026] FedCFamC2G 1402",
+    "id": "asif-v-minister-for-immigration-and-citizenship-2026-07-22",
+    "slug": "asif-v-minister-for-immigration-and-citizenship-2026-07-22",
+    "case_name": "Asif v Minister for Immigration and Citizenship",
     "classification": "adjudicated",
-    "severity": "medium",
-    "summary": "Fabricated: Case Law | ChatGPT produced fabricated details relating to a 'No 3' judgment and admitted fabricating those details when interrogated by the Judge. Outcome: Application dismissed; Applicant ordered to pay First Respondent's costs of 9,097.93; Court criticised AI-generated submissions and noted possibility of above-scale costs due to AI hallucinations.. The self-represented Applicant admitted using ChatGPT to draft written submissions which contained hallucinated and incorrect authorities, paragraph references, and propositions. The Court identified fabricated details (including a ChatGPT-created account concerning a 'No 3' judgment) and multiple mis-citations/misrepresentations (eg. incorrect paragraph citation in Garikimukku, improper use of Inderjit and Patel citations). The Court criticised the AI-generated material, treated it as imposing an additional burden on the respondent and the Court, and ordered costs (with consideration of above-scale costs because of the AI usage).",
-    "direct_answer": "Fabricated: Case Law | ChatGPT produced fabricated details relating to a 'No 3' judgment and admitted fabricating those details when interrogated by the Judge. Outcome: Application dismissed; Applicant ordered to pay First Respondent's costs of 9,097.93; Court criticised AI-generated submissions and noted possibility of above-scale costs due to AI hallucinations.. The self-represented Applicant admitted using ChatGPT to draft written submissions which contained hallucinated and incorrect authorities, paragraph references, and propositions. The Court identified fabricated details (including a ChatGPT-created account concerning a 'No 3' judgment) and multiple mis-citations/misrepresentations (eg. incorrect paragraph citation in Garikimukku, improper use of Inderjit and Patel citations). The Court criticised the AI-generated material, treated it as imposing an additional burden on the respondent and the Court, and ordered costs (with consideration of above-scale costs because of the AI usage).",
-    "why_it_matters": "This matter connects pro se and fake citations with Application dismissed; Applicant ordered to pay First Respondent's costs of 9,097.93; Court criticised AI-generated submissions and noted possibility of above-scale costs due to AI hallucinations. in FedCFamC2G (Division 2). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Submission cited a non-existent paragraph [39] in Garikimukku; the Court noted paragraph [39] does not exist. Outcome: Higher costs because of AI misuse.",
+    "direct_answer": "Fabricated: Case Law | Submission cited a non-existent paragraph [39] in Garikimukku; the Court noted paragraph [39] does not exist. Outcome: Higher costs because of AI misuse.",
+    "why_it_matters": "This matter connects pro se and fake citations with Higher costs because of AI misuse in FedCFam. It provides a source-linked baseline for verification, supervision, and response controls.",
     "judicial_reasoning": null,
-    "decision_context": "The structured public record identifies pro se and fake citations and records Application dismissed; Applicant ordered to pay First Respondent's costs of 9,097.93; Court criticised AI-generated submissions and noted possibility of above-scale costs due to AI hallucinations.. The linked source controls the precise reasoning and procedural context.",
+    "decision_context": "The structured public record identifies pro se and fake citations and records Higher costs because of AI misuse. The linked source controls the precise reasoning and procedural context.",
     "practical_implications": [
       "Verify the existence, citation, court, and precedential status of every authority before filing.",
       "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
@@ -479,7 +540,7 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "FedCFamC2G (Division 2)",
+      "court": "FedCFam",
       "jurisdiction": "international",
       "state": "",
       "country": "Australia",
@@ -487,18 +548,18 @@
       "judge": null,
       "date": "2026-07-22",
       "ai_tool": "ChatGPT",
-      "outcome": "Application dismissed; Applicant ordered to pay First Respondent's costs of 9,097.93; Court criticised AI-generated submissions and noted possibility of above-scale costs due to AI hallucinations.",
-      "amount": 1,
+      "outcome": "Higher costs because of AI misuse",
+      "amount": null,
       "professional_sanction": "No",
       "tags": [
         "pro-se",
         "fake-citations",
         "misrepresented-authority",
+        "immigration",
         "trial"
       ],
       "sanction_types": [
-        "monetary",
-        "case-dismissed"
+        "monetary"
       ]
     },
     "publication": {

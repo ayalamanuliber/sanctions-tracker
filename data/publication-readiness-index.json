@@ -1,14 +1,18 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "ba8a509f36f438a7fd225b8a898b13702d42992231c886a9bc423c2706193ae3",
-  "corpus_checked": "2026-07-31",
-  "total_cases": 1815,
+  "dataset_checksum": "b43d68c3d78758b2e0105dbc3e7f34e0d3d78a9fc4264bf8524ba4cf97171042",
+  "corpus_checked": "2026-08-01",
+  "total_cases": 1816,
   "tiers": {
-    "index-ready": 1801,
+    "index-ready": 1802,
     "enrichment-ready": 12,
     "research-only": 2
   },
   "by_slug": {
+    "scott-v-illinois-human-rights-comm-n-2026-07-28": {
+      "tier": "index-ready",
+      "score": 90
+    },
     "lichfield-v-kubler-netflix-inc-2026-07-27": {
       "tier": "index-ready",
       "score": 81
@@ -41,9 +45,9 @@
       "tier": "index-ready",
       "score": 81
     },
-    "asif-v-minister-for-immigration-and-citizenship-2026-fedcfamc2g-1402-2026-07-22": {
+    "asif-v-minister-for-immigration-and-citizenship-2026-07-22": {
       "tier": "index-ready",
-      "score": 90
+      "score": 86
     },
     "gideon-j-sipin-v-the-bank-of-new-york-mellon-trust-company-n-a-et-al-2026-07-22": {
       "tier": "index-ready",

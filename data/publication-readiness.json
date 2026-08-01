@@ -1,26 +1,117 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "ba8a509f36f438a7fd225b8a898b13702d42992231c886a9bc423c2706193ae3",
-  "corpus_checked": "2026-07-31",
-  "total_cases": 1815,
-  "total_assessments": 1815,
+  "dataset_checksum": "b43d68c3d78758b2e0105dbc3e7f34e0d3d78a9fc4264bf8524ba4cf97171042",
+  "corpus_checked": "2026-08-01",
+  "total_cases": 1816,
+  "total_assessments": 1816,
   "tiers": {
-    "index-ready": 1801,
+    "index-ready": 1802,
     "enrichment-ready": 12,
     "research-only": 2
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 99,
-    "operational-lesson-not-recorded": 1078,
+    "operational-lesson-not-recorded": 1079,
     "outcome-not-recorded": 357,
-    "publication-review-pending": 1815,
+    "publication-review-pending": 1816,
     "source-link-missing": 1,
     "specific-ai-tool-not-established": 1606,
-    "summary-needs-detail": 729,
+    "summary-needs-detail": 730,
     "summary-too-brief": 12
   },
   "records": [
+    {
+      "id": "scott-v-illinois-human-rights-comm-n-2026-07-28",
+      "slug": "scott-v-illinois-human-rights-comm-n-2026-07-28",
+      "score": 90,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 268,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
     {
       "id": "lichfield-v-kubler-netflix-inc-2026-07-27",
       "slug": "lichfield-v-kubler-netflix-inc-2026-07-27",
@@ -822,14 +913,14 @@
       ]
     },
     {
-      "id": "asif-v-minister-for-immigration-and-citizenship-2026-fedcfamc2g-1402-2026-07-22",
-      "slug": "asif-v-minister-for-immigration-and-citizenship-2026-fedcfamc2g-1402-2026-07-22",
-      "score": 90,
+      "id": "asif-v-minister-for-immigration-and-citizenship-2026-07-22",
+      "slug": "asif-v-minister-for-immigration-and-citizenship-2026-07-22",
+      "score": 86,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
       "source_eligible": true,
-      "summary_length": 1005,
+      "summary_length": 176,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -863,7 +954,7 @@
         },
         {
           "criterion": "summary",
-          "points": 10,
+          "points": 6,
           "maximum": 10
         },
         {
@@ -898,6 +989,12 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
         {
           "field": "lesson",
           "code": "operational-lesson-not-recorded",

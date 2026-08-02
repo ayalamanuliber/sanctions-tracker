@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   useMemo,
   useRef,
@@ -76,6 +77,7 @@ interface Props {
   showControls?: boolean;
   showSideRail?: boolean;
   showExportLinks?: boolean;
+  wheelZoom?: boolean;
   dataMode?: "cases" | "severity";
 }
 
@@ -121,8 +123,10 @@ export default function SanctionsMapV2({
   showControls = true,
   showSideRail = true,
   showExportLinks = false,
+  wheelZoom = true,
   dataMode = "cases",
 }: Props) {
+  const router = useRouter();
   const selectedCountry = initialCountry || (initialStates.length ? "US" : "");
   const isUnitedStates = selectedCountry === "US";
   const initialFocus = isUnitedStates && initialStates.length === 1 ? initialStates[0].toUpperCase() : null;
@@ -237,7 +241,7 @@ export default function SanctionsMapV2({
     else url.searchParams.delete("country");
     url.searchParams.delete("states");
     url.searchParams.delete("state");
-    window.location.assign(url.toString());
+    router.replace(`${url.pathname}${url.search}${url.hash}`, { scroll: false });
   };
 
   const activateCountry = (country: string) => {
@@ -376,14 +380,14 @@ export default function SanctionsMapV2({
             role="group"
             aria-labelledby="world-map-title world-map-desc"
             className={worldDragging ? "is-dragging" : undefined}
-            onWheel={handleWorldWheel}
+            onWheel={wheelZoom ? handleWorldWheel : undefined}
             onPointerDown={handleWorldPointerDown}
             onPointerMove={handleWorldPointerMove}
             onPointerUp={finishWorldPointer}
             onPointerCancel={finishWorldPointer}
           >
             <title id="world-map-title">Global legal AI risk matters by country</title>
-            <desc id="world-map-desc">Zoom with the controls, mouse wheel, or trackpad; drag to pan; then select a country cluster to open its synchronized case list and geographic view. Cluster size represents tracked record count and color represents the highest editorial impact classification.</desc>
+            <desc id="world-map-desc">{wheelZoom ? "Zoom with the controls, mouse wheel, or trackpad; drag to pan; then select a country cluster to open its synchronized case list and geographic view." : "Select a country cluster to inspect its evidence snapshot. Page scrolling remains available over this embedded map."} Cluster size represents tracked record count and color represents the highest editorial impact classification.</desc>
             <g
               data-world-map-viewport
               transform={`translate(${worldView.x} ${worldView.y}) scale(${worldView.scale})`}

@@ -7,6 +7,7 @@
 .field input { padding-right:10px; }
 .field input:focus,.field select:focus { border-color:#2763a8;box-shadow:0 0 0 3px rgba(39,99,168,.12); }
 .apply { height: 39px; border: 0; display:inline-flex;align-items:center;justify-content:center;gap:7px;background: #08264d; color: white; border-radius: 4px; padding: 0 15px; font-weight: 800; cursor: pointer;white-space:nowrap; }
+.filterBar[data-pending="true"] .apply { opacity:.72; cursor:progress; }
 .filterActions { display:flex; align-items:center; gap:9px; }
 .filterActions > a { color:#315f9e; font-size:10px; font-weight:800; text-decoration:none; }
 .mapFrame { overflow: hidden; border-radius: 6px; box-shadow: 0 12px 34px rgba(7,29,55,.12); }

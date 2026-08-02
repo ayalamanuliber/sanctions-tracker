@@ -261,6 +261,7 @@ export default function ProductHome() {
             showIntro={false}
             showControls={false}
             showSideRail={false}
+            wheelZoom={false}
             onCountryChange={(country, cases) => {
               setCountrySelection(country ? { country, cases } : null);
               setMapSelection(null);

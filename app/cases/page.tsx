@@ -4,6 +4,7 @@ import { ArrowUpDown, Banknote, Bot, CalendarDays, ChevronFirst, ChevronLast, Ch
 
 import CorpusDirectoryNav from "@/components/CorpusDirectoryNav";
 import ResearchShell from "@/components/ResearchShell";
+import ScrollRestoringForm from "@/components/ScrollRestoringForm";
 import shell from "@/components/ResearchShell.module.css";
 import { COUNTRIES_TRACKED, LEGAL_RISK_CASES, formatCaseDate, getCaseFallbacks, getCaseMatchReason, queryCases } from "@/lib/cases";
 import { countryDisplayName, countryFlag, countryOptionLabel } from "@/lib/countries";
@@ -96,7 +97,7 @@ export default async function CasesPage({ searchParams }: { searchParams?: Promi
 
       <CorpusDirectoryNav />
 
-      <form className={`${shell.card} ${styles.searchPanel}`} method="get">
+      <ScrollRestoringForm className={`${shell.card} ${styles.searchPanel}`} method="get" action="/cases" navigationKey={JSON.stringify(params)} restoreKey="case-directory-filter-scroll">
         <div className={styles.searchRow}>
           <div className={`${styles.field} ${styles.queryField}`}><label htmlFor="q">Search</label><div className={styles.inputWithIcon}><Search size={16} aria-hidden="true"/><input id="q" name="q" defaultValue={query.q} placeholder="Case, citation, court, judge, tool, or issue" /></div></div>
           <div className={styles.field}><label htmlFor="country"><Globe2 aria-hidden="true" />Country</label><select id="country" name="country" defaultValue={query.country}><option value="">🌐 All {COUNTRIES_TRACKED} countries ({LEGAL_RISK_CASES.length.toLocaleString()})</option>{FILTER_COUNTS.countries.map((item) => <option key={item.value} value={item.value}>{countryOptionLabel(item.value, item.count)}</option>)}</select></div>
@@ -112,9 +113,9 @@ export default async function CasesPage({ searchParams }: { searchParams?: Promi
           <div className={styles.field}><label htmlFor="status"><ShieldCheck aria-hidden="true" />Record status</label><select id="status" name="status" defaultValue={query.status}><option value="all">All tracked records</option><option value="non-alleged">Exclude allegation-only</option><option value="alleged">Allegation-only records</option></select></div>
         </div>
         <div className={styles.scope}><span><strong>Geographic scope:</strong> {geographicScopeCount.toLocaleString()} public matters{query.country ? ` in ${countryDisplayName(query.country)}` : " across the global corpus"}.</span><Link href="/cases">Clear all filters</Link></div>
-      </form>
+      </ScrollRestoringForm>
 
-      <div className={styles.toolbar}><div><h2>{results.length.toLocaleString()} matching matters</h2><p>Showing {results.length ? (page - 1) * PAGE_SIZE + 1 : 0}-{Math.min(page * PAGE_SIZE, results.length)} · Page {page} of {totalPages}</p></div><form method="get">{Object.entries(params).filter(([k,v]) => k !== "sort" && k !== "order" && k !== "page" && v).map(([k,v]) => <input key={k} type="hidden" name={k} value={Array.isArray(v) ? v[0] : v} />)}<div className={styles.field}><label htmlFor="sort">Sort by</label><select id="sort" name="sort" defaultValue={query.sort || (query.q ? "relevance" : "date")}><option value="relevance">Best match</option><option value="date">Decision date</option><option value="severity">Editorial impact</option><option value="amount">Known amount</option></select></div><div className={styles.field}><label htmlFor="order">Direction</label><select id="order" name="order" defaultValue={query.order}><option value="desc">High to low / newest</option><option value="asc">Low to high / oldest</option></select></div><button className={styles.submit} type="submit"><ArrowUpDown size={15}/> Apply</button></form></div>
+      <div className={styles.toolbar}><div><h2>{results.length.toLocaleString()} matching matters</h2><p>Showing {results.length ? (page - 1) * PAGE_SIZE + 1 : 0}-{Math.min(page * PAGE_SIZE, results.length)} · Page {page} of {totalPages}</p></div><ScrollRestoringForm method="get" action="/cases" navigationKey={JSON.stringify({params,sort:query.sort,order:query.order})} restoreKey="case-directory-sort-scroll">{Object.entries(params).filter(([k,v]) => k !== "sort" && k !== "order" && k !== "page" && v).map(([k,v]) => <input key={k} type="hidden" name={k} value={Array.isArray(v) ? v[0] : v} />)}<div className={styles.field}><label htmlFor="sort">Sort by</label><select id="sort" name="sort" defaultValue={query.sort || (query.q ? "relevance" : "date")}><option value="relevance">Best match</option><option value="date">Decision date</option><option value="severity">Editorial impact</option><option value="amount">Known amount</option></select></div><div className={styles.field}><label htmlFor="order">Direction</label><select id="order" name="order" defaultValue={query.order}><option value="desc">High to low / newest</option><option value="asc">Low to high / oldest</option></select></div><button className={styles.submit} type="submit"><ArrowUpDown size={15}/> Apply</button></ScrollRestoringForm></div>
 
       <section className={`${shell.card} ${styles.tableCard}`} aria-label="Case results">
         {visible.length > 0 && <div className={styles.tableHead}><span>Public matter</span><span>Court / jurisdiction</span><Link href={sortHref(params,"date")}>Date</Link><span>Recorded AI tool</span><Link href={sortHref(params,"amount")}>Amount</Link><Link href={sortHref(params,"severity")}>Impact</Link><span /></div>}

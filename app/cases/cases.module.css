@@ -13,6 +13,7 @@
 .submit { align-self: end; height: 42px; border: 0; border-radius: 4px; padding: 0 15px; display:inline-flex;align-items:center;justify-content:center;gap:7px;background: #08264d; color: white; font-weight: 800; cursor: pointer;white-space:nowrap;transition:background .15s,transform .15s; }
 .submit:hover { background:#0c376d; }
 .submit:active { transform:translateY(1px); }
+.searchPanel[data-pending="true"] .submit,.toolbar form[data-pending="true"] .submit { opacity:.72; cursor:progress; }
 .advanced { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 10px; margin-top: 10px; }
 .scope { margin-top: 13px; padding-top: 12px; border-top: 1px solid #e6ebf1; display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #5d6d84; font-size: 12px; }
 .scope strong { color: #102947; }

@@ -33,7 +33,7 @@ export default function HomePage() {
         url: PUBLIC_BASE_URL,
         name: "AI Vortex Legal AI Risk public record",
         description:
-          "Source-linked public intelligence about legal AI citation failures, court responses, sanctions, and review controls.",
+          "Source-linked legal AI intelligence for reviewing work, comparing judicial responses, investigating patterns, and preparing the next decision.",
         dateModified: SITE_PUBLICATION_DATE,
         isAccessibleForFree: true,
         mainEntity: {

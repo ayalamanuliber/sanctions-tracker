@@ -21,7 +21,7 @@ import {
   Globe2,
   Landmark,
   Link2,
-  Map,
+  Map as MapIcon,
   Menu,
   Scale,
   Search,
@@ -42,6 +42,7 @@ import {
   type HomepageCase,
 } from "@/lib/homepage";
 import type { LegalRiskCase } from "@/lib/cases";
+import { countryDisplayName, countryFlag } from "@/lib/countries";
 import styles from "./ProductHome.module.css";
 
 const caseSuggestions = ["Mata v. Avianca", "D.N.J.", "fabricated quotations", "CoCounsel", "Rule 11"];
@@ -49,7 +50,7 @@ const sourceSuggestions = ["CourtListener", "Damien Charlotin", "uscourts.gov", 
 
 const workflows = [
   { icon: Search, label: "Search every public record", href: "/cases" },
-  { icon: Map, label: "Explore the evidence map", href: "/map" },
+  { icon: MapIcon, label: "Explore the evidence map", href: "/map" },
   { icon: Landmark, label: "Browse courts and jurisdictions", href: "/courts" },
   { icon: FileSearch, label: "Analyze the public corpus", href: "/analytics" },
   { icon: BookOpenCheck, label: "Inspect sources and methodology", href: "/sources" },
@@ -69,6 +70,38 @@ function formatDate(value: string) {
 
 function severityLabel(value: string) {
   return value === "career-ending" ? "Career impact" : value.charAt(0).toUpperCase() + value.slice(1);
+}
+
+function entitySlug(value: string) {
+  return value
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 120);
+}
+
+function displayLabel(value: string) {
+  return value
+    .replaceAll("-", " ")
+    .replace(/\b\w/g, (character) => character.toUpperCase());
+}
+
+function mostFrequent(values: string[]) {
+  const counts = new Map<string, number>();
+  for (const value of values.filter(Boolean)) counts.set(value, (counts.get(value) || 0) + 1);
+  return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0]?.[0] || null;
+}
+
+function formatKnownAmount(value: number) {
+  if (!value) return "None recorded";
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    notation: value >= 1_000_000 ? "compact" : "standard",
+    maximumFractionDigits: value >= 1_000_000 ? 1 : 0,
+  }).format(value);
 }
 
 function sourcePublisher(url: string, fallback: string) {
@@ -123,6 +156,7 @@ export default function ProductHome() {
   const [suggestionsOpen, setSuggestionsOpen] = useState(false);
   const [activeSuggestion, setActiveSuggestion] = useState(-1);
   const [mapSelection, setMapSelection] = useState<{ state: string; cases: LegalRiskCase[] } | null>(null);
+  const [countrySelection, setCountrySelection] = useState<{ country: string; cases: LegalRiskCase[] } | null>(null);
   const [mapIndex, setMapIndex] = useState(0);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -153,6 +187,28 @@ export default function ProductHome() {
     ? (searchMode === "sources" ? searchHomepageSources(query, 5) : searchHomepageCases(query, 5))
     : [], [query, searchMode]);
   const mapCase = mapSelection?.cases[mapIndex] || featured;
+  const countrySnapshot = useMemo(() => {
+    if (!countrySelection) return null;
+    const records = [...countrySelection.cases].sort((a, b) => b.date.localeCompare(a.date));
+    const failureSignals = new Set(["fake-citations", "fabricated-quotes", "misrepresented-authority"]);
+    const leadingIssue = mostFrequent(records.flatMap((record) => record.tags.filter((tag) => failureSignals.has(tag))));
+    const leadingResponse = mostFrequent(records.flatMap((record) => record.sanction_types));
+    const sourceLinked = records.filter((record) => Boolean(record.source_url)).length;
+    const knownAmount = records.reduce((total, record) => total + (record.amount || 0), 0);
+    return {
+      code: countrySelection.country,
+      name: countryDisplayName(countrySelection.country),
+      flag: countryFlag(countrySelection.country),
+      records,
+      latest: records[0] || null,
+      leadingIssue: leadingIssue ? displayLabel(leadingIssue) : "No classified issue",
+      leadingResponse: leadingResponse ? displayLabel(leadingResponse) : "No recorded response",
+      sourceCoverage: records.length ? Math.round((sourceLinked / records.length) * 100) : 0,
+      knownAmount: formatKnownAmount(knownAmount),
+      profileHref: `/countries/${entitySlug(countrySelection.country)}`,
+      recordsHref: `/cases?country=${encodeURIComponent(countrySelection.country)}`,
+    };
+  }, [countrySelection]);
 
   const runSearch = (value = query) => {
     const next = value.trim();
@@ -198,13 +254,29 @@ export default function ProductHome() {
       </header>
 
       <section className={styles.hero} id="top">
-        <div className={styles.heroMap} aria-label="Interactive map of tracked United States legal AI matters">
-          <SanctionsMapV2 embedded showIntro={false} showControls={false} showSideRail={false} onStateChange={(state, cases) => { setMapSelection(state ? { state, cases } : null); setMapIndex(0); }} />
+        <div className={styles.heroMap} aria-label="Interactive global map of source-linked legal AI matters">
+          <SanctionsMapV2
+            embedded
+            embeddedCountry={countrySelection?.country || ""}
+            showIntro={false}
+            showControls={false}
+            showSideRail={false}
+            onCountryChange={(country, cases) => {
+              setCountrySelection(country ? { country, cases } : null);
+              setMapSelection(null);
+              setMapIndex(0);
+            }}
+            onStateChange={(state, cases) => {
+              setMapSelection(state ? { state, cases } : null);
+              setCountrySelection(null);
+              setMapIndex(0);
+            }}
+          />
         </div>
         <div className={styles.heroShade} />
         <div className={styles.heroContent}>
-          <h1>Search legal AI risk<br />precedent. Run the review.<br /><em>Share the record.</em></h1>
-          <p>Source-linked legal AI risk records across cases, courts, and jurisdictions. Built for responsible review and defensible preparation.</p>
+          <h1>Prepare your next move<br /><em>with evidence you can trace.</em></h1>
+          <p>Review your work, challenge a weak claim, compare judicial responses, or investigate a pattern across source-linked legal AI records.</p>
 
           <div className={styles.searchCard} id="search">
             <div className={styles.searchTabs} role="tablist" aria-label="Search mode">
@@ -243,7 +315,20 @@ export default function ProductHome() {
             <div className={styles.suggestions}><span>Try a search:</span>{(searchMode === "cases" ? caseSuggestions : sourceSuggestions).map((item) => <button key={item} onClick={() => runSearch(item)}>{item}</button>)}</div>
           </div>
         </div>
-        {mapCase && <article className={styles.featuredCase} aria-live="polite">
+        {countrySnapshot ? <article className={styles.featuredCase} aria-live="polite">
+          <div className={styles.mapCardHeader}><span>Country intelligence snapshot</span><button aria-label="Clear country selection" onClick={() => setCountrySelection(null)}><X size={15} /></button></div>
+          <div className={styles.countrySnapshot}>
+            <div className={styles.countryIdentity}><span aria-hidden="true">{countrySnapshot.flag}</span><div><strong>{countrySnapshot.name}</strong><small>{countrySnapshot.records.length.toLocaleString()} records · {countrySnapshot.sourceCoverage}% source linked</small></div></div>
+            <dl className={styles.countryMetrics}>
+              <div><dt>Leading issue</dt><dd>{countrySnapshot.leadingIssue}</dd></div>
+              <div><dt>Recorded response</dt><dd>{countrySnapshot.leadingResponse}</dd></div>
+              <div><dt>Latest tracked</dt><dd>{countrySnapshot.latest ? formatDate(countrySnapshot.latest.date) : "Not recorded"}</dd></div>
+              <div><dt>Known recorded total</dt><dd>{countrySnapshot.knownAmount}</dd></div>
+            </dl>
+            {countrySnapshot.latest && <Link className={styles.countryLatest} href={`/cases/${getCaseSlugById(countrySnapshot.latest.id)}`}><span>Latest recorded matter</span><strong>{countrySnapshot.latest.case_name}</strong><small>{countrySnapshot.latest.court}</small></Link>}
+          </div>
+          <div className={styles.countryActions}><Link href={countrySnapshot.profileHref}>Open country profile <ArrowRight size={13} /></Link><Link href={countrySnapshot.recordsHref}>All records</Link></div>
+        </article> : mapCase && <article className={styles.featuredCase} aria-live="polite">
           <div className={styles.mapCardHeader}><span>{mapSelection ? `${mapSelection.state} · ${mapSelection.cases.length} tracked records` : "Recent significant record"}</span>{mapSelection && <button aria-label="Clear map selection" onClick={() => setMapSelection(null)}><X size={15} /></button>}</div>
           <Link className={styles.featuredRecord} href={`/cases/${getCaseSlugById(mapCase.id)}`}>
             <strong>{mapCase.case_name}</strong><small>{mapCase.court} · {formatDate(mapCase.date)}</small>
@@ -254,8 +339,11 @@ export default function ProductHome() {
           </Link>
           {mapSelection && <div className={styles.mapCardControls}><button disabled={mapIndex === 0} onClick={() => setMapIndex((value) => Math.max(0, value - 1))}><ChevronLeft size={15} /> Previous</button><span>{mapIndex + 1} of {mapSelection.cases.length}</span><button disabled={mapIndex >= mapSelection.cases.length - 1} onClick={() => setMapIndex((value) => Math.min(mapSelection.cases.length - 1, value + 1))}>Next <ChevronRight size={15} /></button><Link href={`/cases?country=US&state=${mapSelection.state}`}>Search all {mapSelection.state}</Link></div>}
         </article>}
-        <div className={styles.mapPurpose}>{mapSelection ? `${mapSelection.state} selected · the card and record set now reflect that state` : "United States view · select a state cluster, or search the global directory"}<Link href="/cases">Global directory <ArrowRight /></Link></div>
-        {mapSelection && mapCase && <div className={styles.mobileMapSelection} aria-live="polite">
+        <div className={styles.mapPurpose}>{countrySnapshot ? `${countrySnapshot.flag} ${countrySnapshot.name} selected · open its evidence profile or exact record set` : mapSelection ? `${mapSelection.state} selected · the card and record set now reflect that state` : "Select a country to inspect its evidence snapshot"}<Link href="/countries">Country directory <ArrowRight /></Link></div>
+        {countrySnapshot ? <div className={styles.mobileMapSelection} aria-live="polite">
+          <Link href={countrySnapshot.profileHref}><span>{countrySnapshot.flag} {countrySnapshot.name} · {countrySnapshot.records.length.toLocaleString()} records</span><strong>{countrySnapshot.leadingIssue} · {countrySnapshot.leadingResponse}</strong></Link>
+          <div><button aria-label="Clear country selection" onClick={() => setCountrySelection(null)}><X /></button></div>
+        </div> : mapSelection && mapCase && <div className={styles.mobileMapSelection} aria-live="polite">
           <Link href={`/cases/${getCaseSlugById(mapCase.id)}`}><span>{mapSelection.state} · {mapIndex + 1} of {mapSelection.cases.length}</span><strong>{mapCase.case_name}</strong></Link>
           <div><button aria-label="Previous selected case" disabled={mapIndex === 0} onClick={() => setMapIndex((value) => Math.max(0, value - 1))}><ChevronLeft /></button><button aria-label="Next selected case" disabled={mapIndex >= mapSelection.cases.length - 1} onClick={() => setMapIndex((value) => Math.min(mapSelection.cases.length - 1, value + 1))}><ChevronRight /></button><button aria-label="Clear map selection" onClick={() => setMapSelection(null)}><X /></button></div>
         </div>}
@@ -338,7 +426,7 @@ export default function ProductHome() {
       </footer>
 
       <nav className={styles.mobileDock} aria-label="Mobile navigation">
-        <a href="#search"><Search /><span>Search</span></a><Link href="/map"><Map /><span>Map</span></Link><Link href="/courts"><Gavel /><span>Courts</span></Link><Link href="/sources"><BookOpenCheck /><span>Sources</span></Link><button onClick={() => setMobileMenuOpen(true)}><Menu /><span>Menu</span></button>
+        <a href="#search"><Search /><span>Search</span></a><Link href="/map"><MapIcon /><span>Map</span></Link><Link href="/courts"><Gavel /><span>Courts</span></Link><Link href="/sources"><BookOpenCheck /><span>Sources</span></Link><button onClick={() => setMobileMenuOpen(true)}><Menu /><span>Menu</span></button>
       </nav>
     </main>
   );

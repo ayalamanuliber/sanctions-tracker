@@ -61,6 +61,8 @@ const WORLD_MAX_SCALE = 6;
 interface Props {
   onStateClick?: (stateCode: string) => void;
   onStateChange?: (stateCode: string, cases: LegalRiskCase[]) => void;
+  onCountryChange?: (countryCode: string, cases: LegalRiskCase[]) => void;
+  embeddedCountry?: string;
   initialCountry?: string;
   initialStates?: string[];
   initialSeverity?: string;
@@ -105,6 +107,8 @@ function constrainWorldView(view: WorldView): WorldView {
 export default function SanctionsMapV2({
   onStateClick,
   onStateChange,
+  onCountryChange,
+  embeddedCountry = "",
   initialCountry = "",
   initialStates = [],
   initialSeverity = "all",
@@ -220,6 +224,13 @@ export default function SanctionsMapV2({
   };
 
   const selectCountry = (country: string|null) => {
+    if (embedded) {
+      onCountryChange?.(
+        country || "",
+        country ? cases.filter((item) => item.country === country) : [],
+      );
+      return;
+    }
     if (typeof window === "undefined") return;
     const url = new URL(window.location.href);
     if (country) url.searchParams.set("country",country);
@@ -233,6 +244,8 @@ export default function SanctionsMapV2({
     if (suppressWorldClick.current) return;
     selectCountry(country);
   };
+
+  const activeCountry = embedded ? embeddedCountry : selectedCountry;
 
   const zoomWorldAt = (nextScale: number, anchorX = WORLD_WIDTH / 2, anchorY = WORLD_HEIGHT / 2) => {
     setWorldView((current) => {
@@ -258,7 +271,6 @@ export default function SanctionsMapV2({
 
   const handleWorldPointerDown = (event: ReactPointerEvent<SVGSVGElement>) => {
     if (event.button !== 0) return;
-    event.currentTarget.setPointerCapture(event.pointerId);
     worldDrag.current = {
       pointerId: event.pointerId,
       clientX: event.clientX,
@@ -267,7 +279,6 @@ export default function SanctionsMapV2({
       y: worldView.y,
       moved: false,
     };
-    setWorldDragging(true);
   };
 
   const handleWorldPointerMove = (event: ReactPointerEvent<SVGSVGElement>) => {
@@ -278,6 +289,8 @@ export default function SanctionsMapV2({
     if (!drag.moved && Math.hypot(deltaClientX,deltaClientY) > 4) {
       drag.moved = true;
       suppressWorldClick.current = true;
+      event.currentTarget.setPointerCapture(event.pointerId);
+      setWorldDragging(true);
     }
     if (!drag.moved) return;
     const bounds = event.currentTarget.getBoundingClientRect();
@@ -295,7 +308,7 @@ export default function SanctionsMapV2({
       event.currentTarget.releasePointerCapture(event.pointerId);
     }
     worldDrag.current = null;
-    setWorldDragging(false);
+    if (drag.moved) setWorldDragging(false);
     if (drag.moved && typeof window !== "undefined") {
       window.setTimeout(() => {
         suppressWorldClick.current = false;
@@ -379,7 +392,7 @@ export default function SanctionsMapV2({
               const numericCode = String(feature.id).padStart(3,"0");
               const group = countryGroups.get(numericCode);
               const featureKey = feature.id == null ? `country-${index}-${feature.properties?.name || "unknown"}` : numericCode;
-              return <path key={featureKey} d={worldPath(feature) || ""} className={`smv2-country ${group ? `has-cases sev-${group.severity}` : ""} ${selectedCountry && group?.country === selectedCountry ? "selected" : ""}`} role={group ? "button" : undefined} tabIndex={group ? 0 : undefined} aria-label={group ? `${countryDisplayName(group.country)}, ${group.cases.length} tracked records` : feature.properties?.name} onClick={group ? () => activateCountry(group.country) : undefined} onKeyDown={group ? (event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); selectCountry(group.country); } } : undefined}/>;
+              return <path key={featureKey} d={worldPath(feature) || ""} className={`smv2-country ${group ? `has-cases sev-${group.severity}` : ""} ${activeCountry && group?.country === activeCountry ? "selected" : ""}`} role={group ? "button" : undefined} tabIndex={group ? 0 : undefined} aria-pressed={group ? activeCountry === group.country : undefined} aria-label={group ? `${countryDisplayName(group.country)}, ${group.cases.length} tracked records` : feature.properties?.name} onPointerUp={group ? () => activateCountry(group.country) : undefined} onKeyDown={group ? (event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); selectCountry(group.country); } } : undefined}/>;
             })}</g>
             <g>{countryFeatures.map((feature) => {
               const numericCode = String(feature.id).padStart(3,"0");
@@ -391,7 +404,7 @@ export default function SanctionsMapV2({
               const y = Math.round(rawY * 1000) / 1000;
               const radius = Math.min(28,7 + Math.sqrt(group.cases.length) * 1.45);
               const label = `${countryDisplayName(group.country)}, ${group.cases.length} tracked records, highest editorial impact classification ${group.severity}`;
-              return <g key={`cluster-${numericCode}`} transform={`translate(${x},${y})`} className="smv2-cluster smv2-country-cluster" role="button" tabIndex={0} aria-label={label} onClick={() => activateCountry(group.country)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); selectCountry(group.country); } }}>
+              return <g key={`cluster-${numericCode}`} transform={`translate(${x},${y})`} className={`smv2-cluster smv2-country-cluster ${activeCountry && activeCountry !== group.country ? "dim" : ""}`} role="button" tabIndex={0} aria-pressed={activeCountry === group.country} aria-label={label} onPointerUp={() => activateCountry(group.country)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); selectCountry(group.country); } }}>
                 <circle r={radius} fill={severityColor[group.severity]} /><circle r={Math.max(4,radius-4)} /><text textAnchor="middle" dominantBaseline="central">{group.cases.length}</text><title>{label}</title>
               </g>;
             })}</g>

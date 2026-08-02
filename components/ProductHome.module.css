@@ -327,7 +327,7 @@
   .evidencePanel dd { margin-top: 4px; text-align: left; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1040px) {
   .navbar { padding: 0 20px; }
   .desktopNav, .navActions > a { display: none; }
   .navActions { margin-left: auto; }
@@ -336,12 +336,15 @@
   .mobileMenu a { padding: 10px; color: #dbe5f1; background: rgba(255,255,255,.04); font-size: 12px; }
   .statusBar { padding: 7px 20px; grid-template-columns: auto 1fr; }
   .statusCounts, .statusBar > a { display: none; }
-  .hero { min-height: 780px; }
+}
+
+@media (max-width: 900px) {
+  .hero { min-height: 840px; }
   .heroContent { width: min(620px, 90vw); padding-left: 24px; }
   .heroMap { inset: 330px -20vw 0 15%; }
   .heroMap :global(.smv2-root), .heroMap :global(.smv2-card), .heroMap :global(.smv2-body), .heroMap :global(.smv2-stage) { min-height: 450px; }
   .heroShade { background: linear-gradient(180deg, #071528 0%, #071528 40%, rgba(7,21,40,.75) 58%, rgba(7,21,40,.04) 100%); }
-  .featuredCase { top: 440px; right: 24px; }
+  .featuredCase { top: 450px; right: 24px; }
   .mapPurpose { display: none; }
   .searchCard { width: min(520px, 88vw); }
   .workspace { grid-template-columns: 1fr 1fr; }

@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-08-01",
-  "last_checked": "2026-08-01",
-  "last_checked_at": "2026-08-01T10:12:14.703Z",
-  "latest_record_date": "2026-07-28",
+  "last_updated": "2026-08-02",
+  "last_checked": "2026-08-02",
+  "last_checked_at": "2026-08-02T10:10:58.372Z",
+  "latest_record_date": "2026-07-31",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 1817,
-  "source_linked_count": 1815,
+  "source_record_count": 1823,
+  "source_linked_count": 1821,
   "source_link_coverage_pct": 99.9,
   "records_missing_date": 1,
-  "dataset_checksum": "b43d68c3d78758b2e0105dbc3e7f34e0d3d78a9fc4264bf8524ba4cf97171042",
-  "total_cases": 1816,
-  "us_cases": 1253,
-  "us_adjudicated": 1251,
+  "dataset_checksum": "9d3a4b75bdf15a48675d9b2403c35d1aef4d0773589a12d671b2dabe1a1bca17",
+  "total_cases": 1822,
+  "us_cases": 1254,
+  "us_adjudicated": 1252,
   "us_alleged_only": 2,
   "countries_tracked": 42,
-  "enriched_count": 1816,
+  "enriched_count": 1822,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
@@ -22,14 +22,15 @@
   "largest_single_sanction": 282508,
   "avg_sanction": 7968,
   "severity_counts": {
-    "high": 166,
-    "low": 1310,
+    "low": 1315,
+    "high": 167,
     "medium": 301,
     "career-ending": 39
   },
   "by_country": {
-    "US": 1253,
-    "Canada": 200,
+    "US": 1254,
+    "Canada": 204,
+    "Netherlands": 7,
     "Australia": 97,
     "China": 1,
     "Israel": 55,
@@ -47,7 +48,6 @@
     "Russian Federation": 1,
     "Singapore": 7,
     "New Zealand": 7,
-    "Netherlands": 6,
     "Brazil": 10,
     "Ireland": 6,
     "Colombia": 3,
@@ -2340,15 +2340,36 @@
     },
     {
       "state": "TX",
-      "count": 72,
+      "count": 73,
       "total": 45150,
       "severities": {
+        "low": 60,
         "medium": 7,
-        "low": 59,
         "high": 4,
         "career-ending": 2
       },
       "cases": [
+        {
+          "id": "kevin-dale-higgins-v-the-state-of-texas-2026-07-31",
+          "name": "Kevin Dale Higgins v. The State of Texas",
+          "court": "CA Texas",
+          "judge": "",
+          "date": "2026-07-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Misrepresented: Case Law | Defense counsel submitted a written memorandum that the trial judge said misstated holdings of several cases; counsel admitted the memorandum was produced by AI and he had not read the cited cases.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "misrepresented-authority",
+            "criminal",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2721/Higgins_v._Texas_USA_July_2026.pdf"
+        },
         {
           "id": "pamon-v-united-states-postal-service-et-al-2026-07-22",
           "name": "Pamon v. United States Postal Service et al",
@@ -3444,28 +3465,6 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/958/Wilson_v._Kipp_Texas_USA_29_October_2025.pdf"
-        },
-        {
-          "id": "jayroe-v-progressive-casualty-insurance-company-2025-10-27",
-          "name": "Jayroe v. Progressive Casualty Insurance Company",
-          "court": "N.D. Texas",
-          "judge": "",
-          "date": "2025-10-27",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited 'Villatoro v. GWL Cmt. Mgmt., LLC, 2013 WL 12101130 (S.D. Tex. Jan. 22, 2013)', which the court found does not exist; Westlaw link led to an unrelated Hopwood opinion. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1027/Jayroe_v._Progressive_Casualty_USA_7_November_2025.pdf"
         }
       ]
     },
@@ -22885,8 +22884,8 @@
     }
   ],
   "by_week": {
-    "2026-W31": 2,
-    "2026-W30": 15,
+    "2026-W31": 5,
+    "2026-W30": 17,
     "2026-W29": 27,
     "2026-W28": 24,
     "2026-W27": 28,
@@ -22905,7 +22904,7 @@
     "2026-W14": 52,
     "2026-W13": 34,
     "2026-W12": 40,
-    "2026-W11": 32,
+    "2026-W11": 33,
     "2026-W10": 31,
     "2026-W09": 30,
     "2026-W08": 27,
@@ -23017,11 +23016,11 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-07": 82,
+    "2026-07": 87,
     "2026-06": 123,
     "2026-05": 148,
     "2026-04": 125,
-    "2026-03": 174,
+    "2026-03": 175,
     "2026-02": 127,
     "2026-01": 134,
     "2025-12": 152,
@@ -23061,13 +23060,14 @@
     "2023": 16,
     "2024": 59,
     "2025": 828,
-    "2026": 913
+    "2026": 919
   },
   "by_tool": {
+    "Unidentified": 387,
     "ChatGPT": 100,
-    "AI (implied, unspecified)": 1219,
+    "AI (implied, unspecified)": 1223,
+    "LegalPA": 1,
     "ChatGPT, Claude": 1,
-    "Unidentified": 386,
     "GPT-3.5": 1,
     "Claude": 4,
     "Westlaw Precision": 1,
@@ -23159,12 +23159,12 @@
     "Google Bard": 1
   },
   "by_circuit": {
+    "5th Circuit": 128,
     "7th Circuit": 108,
     "10th Circuit": 110,
     "9th Circuit": 287,
     "D.C. Circuit": 18,
     "11th Circuit": 109,
-    "5th Circuit": 127,
     "6th Circuit": 99,
     "4th Circuit": 66,
     "2nd Circuit": 133,
@@ -23216,11 +23216,11 @@
     },
     {
       "week": "2026-W30",
-      "count": 15
+      "count": 17
     },
     {
       "week": "2026-W31",
-      "count": 2
+      "count": 5
     }
   ]
 }

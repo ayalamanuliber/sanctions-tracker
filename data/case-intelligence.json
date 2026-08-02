@@ -1,5 +1,59 @@
 [
   {
+    "id": "kevin-dale-higgins-v-the-state-of-texas-2026-07-31",
+    "slug": "kevin-dale-higgins-v-the-state-of-texas-2026-07-31",
+    "case_name": "Kevin Dale Higgins v. The State of Texas",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Case Law | Defense counsel submitted a written memorandum that the trial judge said misstated holdings of several cases; counsel admitted the memorandum was produced by AI and he had not read the cited cases.",
+    "direct_answer": "Misrepresented: Case Law | Defense counsel submitted a written memorandum that the trial judge said misstated holdings of several cases; counsel admitted the memorandum was produced by AI and he had not read the cited cases.",
+    "why_it_matters": "This matter connects misrepresented authority and criminal with a recorded judicial or procedural response in CA Texas. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies misrepresented authority and criminal and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2721/Higgins_v._Texas_USA_July_2026.pdf",
+      "name": "Robert Freund",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "CA Texas",
+      "jurisdiction": "state",
+      "state": "TX",
+      "country": "US",
+      "circuit": "5th Circuit",
+      "judge": null,
+      "date": "2026-07-31",
+      "ai_tool": "Unidentified",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "misrepresented-authority",
+        "criminal",
+        "appellate"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "scott-v-illinois-human-rights-comm-n-2026-07-28",
     "slug": "scott-v-illinois-human-rights-comm-n-2026-07-28",
     "case_name": "Scott v. Illinois Human Rights Comm’n",
@@ -51,6 +105,117 @@
       "sanction_types": [
         "monetary",
         "bar-referral",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "toronto-standard-condominium-corporation-no-2143-v-robibaro-2026-07-28",
+    "slug": "toronto-standard-condominium-corporation-no-2143-v-robibaro-2026-07-28",
+    "case_name": "Toronto Standard Condominium Corporation No. 2143 v. Robibaro",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Respondent's AI-generated submissions cited a non-existent case 'Waterloo Standard Condominium Corporation No. 697 v. Bugeja'; the Tribunal found the citation fabricated and did not rely on it.",
+    "direct_answer": "Fabricated: Case Law | Respondent's AI-generated submissions cited a non-existent case 'Waterloo Standard Condominium Corporation No. 697 v. Bugeja'; the Tribunal found the citation fabricated and did not rely on it.",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in Ontario Condominium Authority Tribunal. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2716/Toronto-Standard-Condominium-Corporation-No.-2143-v.-Robibaro-2026-ONCAT-138.pdf",
+      "name": "Courtready",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Ontario Condominium Authority Tribunal",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-28",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "administrative",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "beslissing-in-de-zaak-26-379-db-li-d-2026-07-27",
+    "slug": "beslissing-in-de-zaak-26-379-db-li-d-2026-07-27",
+    "case_name": "Beslissing in de zaak 26-379/DB/LI/D",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Fabricated: Case Law | Multiple cited ECLI references in the conclusions of answer could not be traced and at least one ECLI number did not exist; the lawyer withdrew these references in an 'akte rectificatie'. Outcome: Reprimand; Monetary Fine. The lawyer used one or more AI tools to generate case law citations in two tenant-law matters; several cited ECLI references were non-existent and others pointed to unrelated decisions. The lawyer later filed rectification statements withdrawing the incorrect references and admitted use of AI without adequate verification. The Raad found this conduct breached the core values of expertise and integrity, imposed a reprimand, and ordered payment of €1,250 costs. (Summary by GPT 5.1.)",
+    "direct_answer": "Fabricated: Case Law | Multiple cited ECLI references in the conclusions of answer could not be traced and at least one ECLI number did not exist; the lawyer withdrew these references in an 'akte rectificatie'. Outcome: Reprimand; Monetary Fine. The lawyer used one or more AI tools to generate case law citations in two tenant-law matters; several cited ECLI references were non-existent and others pointed to unrelated decisions. The lawyer later filed rectification statements withdrawing the incorrect references and admitted use of AI without adequate verification. The Raad found this conduct breached the core values of expertise and integrity, imposed a reprimand, and ordered payment of €1,250 costs. (Summary by GPT 5.1.)",
+    "why_it_matters": "This matter connects fake citations and misrepresented authority with Reprimand; Monetary Fine in Raad van Discipline. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and misrepresented authority and records Reprimand; Monetary Fine. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2713/ECLI_NL_TADRSHE_2026_93.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Raad van Discipline",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Netherlands",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-27",
+      "ai_tool": "LegalPA",
+      "outcome": "Reprimand; Monetary Fine",
+      "amount": null,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fake-citations",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
         "professional"
       ]
     },
@@ -277,6 +442,60 @@
       ],
       "sanction_types": [
         "ordered-to-show-cause"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "yoon-v-the-owners-strata-plan-nw86-2026-07-24",
+    "slug": "yoon-v-the-owners-strata-plan-nw86-2026-07-24",
+    "case_name": "Yoon v. The Owners, Strata Plan NW86",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Respondent cited non-existent court decisions (outside the CRT) in its submissions; tribunal found these to be fabricated and disregarded them.",
+    "direct_answer": "Fabricated: Case Law | Respondent cited non-existent court decisions (outside the CRT) in its submissions; tribunal found these to be fabricated and disregarded them.",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in Civil Resolution Tribunal. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2717/Yoon-v.-The-Owners-Strata-Plan-NW86-2026-BCCRT-1107.pdf",
+      "name": "Courtready",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Civil Resolution Tribunal",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-24",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
       ]
     },
     "publication": {
@@ -617,6 +836,59 @@
       ],
       "sanction_types": [
         "ordered-to-show-cause"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "in-the-matter-of-a-hearing-by-a-panel-of-the-discipline-committee-into-the-conduct-of-deni-2026-07-22",
+    "slug": "in-the-matter-of-a-hearing-by-a-panel-of-the-discipline-committee-into-the-conduct-of-deni-2026-07-22",
+    "case_name": "In the Matter of a Hearing by a Panel of the Discipline Committee into the conduct of Denis Sawyer",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Filed a brief with the New Brunswick Provincial Court containing ten fictitious citations (10 of 12 citations in the brief were fabricated); later removed most but left two. Outcome: Notice of Complaint filed. The Law Society alleges Mr. Denis Sawyer submitted a brief to the New Brunswick Provincial Court containing fictitious citations (ten of twelve citations were fabricated). After being informed, he filed a revised brief removing most but leaving two fictitious citations, one of which he attributed a quote. The complaint also alleges he used generative AI in preparing briefs and failed to properly review the outputs. The Law Society has charged breaches of multiple professional conduct rules and referred the matter to a Discipline Committee hearing; Mr. Sawyer disavowed the briefs at the hearing.",
+    "direct_answer": "Fabricated: Case Law | Filed a brief with the New Brunswick Provincial Court containing ten fictitious citations (10 of 12 citations in the brief were fabricated); later removed most but left two. Outcome: Notice of Complaint filed. The Law Society alleges Mr. Denis Sawyer submitted a brief to the New Brunswick Provincial Court containing fictitious citations (ten of twelve citations were fabricated). After being informed, he filed a revised brief removing most but leaving two fictitious citations, one of which he attributed a quote. The complaint also alleges he used generative AI in preparing briefs and failed to properly review the outputs. The Law Society has charged breaches of multiple professional conduct rules and referred the matter to a Discipline Committee hearing; Mr. Sawyer disavowed the briefs at the hearing.",
+    "why_it_matters": "This matter connects fake citations and trial with Notice of Complaint filed in Law Society of New Brunswick Discipline Committee. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and trial and records Notice of Complaint filed. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2718/Notice-of-Complaint-by-the-Law-Society-of-New-Brunswick.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Law Society of New Brunswick Discipline Committee",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-22",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Notice of Complaint filed",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
       ]
     },
     "publication": {
@@ -60991,6 +61263,61 @@
         "The specific role of AI in the generation of the fabricated quotes is implied by the Court's reference to 'hallucinations' but not explicitly detailed in the order.",
         "The final outcome regarding potential sanctions remains pending."
       ]
+    }
+  },
+  {
+    "id": "miao-v-bouchard-2026-03-09",
+    "slug": "miao-v-bouchard-2026-03-09",
+    "case_name": "Miao v. Bouchard",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Legal Norm | Applicant cited a specific (but non-existent) rule number in the Real Estate Services Rules; Tribunal called it likely AI-generated and declined to address the regulatory breach.",
+    "direct_answer": "Fabricated: Legal Norm | Applicant cited a specific (but non-existent) rule number in the Real Estate Services Rules; Tribunal called it likely AI-generated and declined to address the regulatory breach.",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in Civil Resolution Tribunal. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2719/Miao-v.-Bouchard-2026-BCCRT-384.pdf",
+      "name": "Courtready",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Civil Resolution Tribunal",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-03-09",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "contract",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

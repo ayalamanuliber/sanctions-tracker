@@ -1,15 +1,27 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "b43d68c3d78758b2e0105dbc3e7f34e0d3d78a9fc4264bf8524ba4cf97171042",
-  "corpus_checked": "2026-08-01",
-  "total_cases": 1816,
+  "dataset_checksum": "9d3a4b75bdf15a48675d9b2403c35d1aef4d0773589a12d671b2dabe1a1bca17",
+  "corpus_checked": "2026-08-02",
+  "total_cases": 1822,
   "tiers": {
-    "index-ready": 1802,
+    "index-ready": 1808,
     "enrichment-ready": 12,
     "research-only": 2
   },
   "by_slug": {
+    "kevin-dale-higgins-v-the-state-of-texas-2026-07-31": {
+      "tier": "index-ready",
+      "score": 76
+    },
     "scott-v-illinois-human-rights-comm-n-2026-07-28": {
+      "tier": "index-ready",
+      "score": 90
+    },
+    "toronto-standard-condominium-corporation-no-2143-v-robibaro-2026-07-28": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "beslissing-in-de-zaak-26-379-db-li-d-2026-07-27": {
       "tier": "index-ready",
       "score": 90
     },
@@ -28,6 +40,10 @@
     "morgan-cole-v-hobby-town-unlimited-inc-2026-07-24": {
       "tier": "index-ready",
       "score": 85
+    },
+    "yoon-v-the-owners-strata-plan-nw86-2026-07-24": {
+      "tier": "index-ready",
+      "score": 76
     },
     "catarina-almeida-porfirio-v-homeland-security-et-al-2026-07-23": {
       "tier": "index-ready",
@@ -52,6 +68,10 @@
     "gideon-j-sipin-v-the-bank-of-new-york-mellon-trust-company-n-a-et-al-2026-07-22": {
       "tier": "index-ready",
       "score": 81
+    },
+    "in-the-matter-of-a-hearing-by-a-panel-of-the-discipline-committee-into-the-conduct-of-deni-2026-07-22": {
+      "tier": "index-ready",
+      "score": 85
     },
     "pamon-v-united-states-postal-service-et-al-2026-07-22": {
       "tier": "index-ready",
@@ -2488,6 +2508,10 @@
     "m7-industria-e-comercio-de-compensados-e-laminados-v-us-structural-plywood-integ": {
       "tier": "index-ready",
       "score": 90
+    },
+    "miao-v-bouchard-2026-03-09": {
+      "tier": "index-ready",
+      "score": 76
     },
     "slay-v-ross-2026-03-09": {
       "tier": "index-ready",

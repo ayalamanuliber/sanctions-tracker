@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-08-02T10:10:58.372Z",
-  "checked_date": "2026-08-02",
+  "checked_at": "2026-08-03T11:47:34.285Z",
+  "checked_date": "2026-08-03",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
   "raw_rows": 1823,
   "imported_records": 1822,
-  "previous_records": 1816,
-  "record_delta": 6,
+  "previous_records": 1822,
+  "record_delta": 0,
   "skipped_missing_date": 1,
   "invalid_dates": 0,
   "future_dates": 0,
@@ -14,6 +14,6 @@
   "source_link_coverage_pct": 99.9,
   "latest_record_date": "2026-07-31",
   "latest_record_name": "Kevin Dale Higgins v. The State of Texas",
-  "dataset_checksum": "9d3a4b75bdf15a48675d9b2403c35d1aef4d0773589a12d671b2dabe1a1bca17",
+  "dataset_checksum": "fd52149d629de15f0b098e46d6798a6d09bc10971605944eea2ce32a6b1874d3",
   "status": "validated"
 }

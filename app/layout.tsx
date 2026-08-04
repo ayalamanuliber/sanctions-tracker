@@ -23,10 +23,11 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: publicUrl("/legal-ai-risk-social.png"),
+        url: publicUrl("/legal-ai-risk-social-v2.png"),
         width: 1200,
         height: 630,
-        alt: "AI Vortex Legal AI Risk evidence network",
+        alt: "AI Vortex Legal AI Risk Intelligence — prepare your next move with evidence you can trace",
+        type: "image/png",
       },
     ],
   },
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Vortex Legal AI Intelligence | Evidence You Can Trace",
     description: "Prepare your next move with source-linked legal AI evidence you can inspect and share.",
-    images: [publicUrl("/legal-ai-risk-social.png")],
+    images: [publicUrl("/legal-ai-risk-social-v2.png")],
   },
 };
 

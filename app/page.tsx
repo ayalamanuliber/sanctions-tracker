@@ -36,6 +36,12 @@ export default function HomePage() {
           "Source-linked legal AI intelligence for reviewing work, comparing judicial responses, investigating patterns, and preparing the next decision.",
         dateModified: SITE_PUBLICATION_DATE,
         isAccessibleForFree: true,
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: publicUrl("/legal-ai-risk-social-v2.png"),
+          width: 1200,
+          height: 630,
+        },
         mainEntity: {
           "@type": "ItemList",
           numberOfItems: meta.total_cases,

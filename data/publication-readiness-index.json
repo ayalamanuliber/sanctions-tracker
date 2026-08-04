@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "fd52149d629de15f0b098e46d6798a6d09bc10971605944eea2ce32a6b1874d3",
-  "corpus_checked": "2026-08-03",
-  "total_cases": 1822,
+  "dataset_checksum": "15afbcb2c731cce22e7c9a1a4ac6822ce6cf4c23e0843aadd5fb77c026e679e5",
+  "corpus_checked": "2026-08-04",
+  "total_cases": 1824,
   "tiers": {
-    "index-ready": 1808,
+    "index-ready": 1810,
     "enrichment-ready": 12,
     "research-only": 2
   },
@@ -12,6 +12,14 @@
     "kevin-dale-higgins-v-the-state-of-texas-2026-07-31": {
       "tier": "index-ready",
       "score": 76
+    },
+    "the-jaaw-group-llc-2026-07-31": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "tov-realty-llc-v-suarez-kosel-equity-llc-v-macgregor-2026-07-31": {
+      "tier": "index-ready",
+      "score": 90
     },
     "scott-v-illinois-human-rights-comm-n-2026-07-28": {
       "tier": "index-ready",

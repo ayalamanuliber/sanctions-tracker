@@ -54,6 +54,118 @@
     }
   },
   {
+    "id": "the-jaaw-group-llc-2026-07-31",
+    "slug": "the-jaaw-group-llc-2026-07-31",
+    "case_name": "The JAAW Group, LLC",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Case Law | Protester cited 'Impresa Construzioni Geom. Domenico Garufi v. United States, 238 F.3d 1324 (Fed. Cir. 2001)' for solicitation ambiguity, but that case addresses contractor responsibility and was irrelevant to the argument; protester withdrew the citation. Outcome: Warning.",
+    "direct_answer": "Misrepresented: Case Law | Protester cited 'Impresa Construzioni Geom. Domenico Garufi v. United States, 238 F.3d 1324 (Fed. Cir. 2001)' for solicitation ambiguity, but that case addresses contractor responsibility and was irrelevant to the argument; protester withdrew the citation. Outcome: Warning.",
+    "why_it_matters": "This matter connects fake citations and misrepresented authority with Warning in GAO. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and misrepresented authority and records Warning. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2722/JAAW_Group_B-424433.22_July_31_2026.pdf",
+      "name": "David Timm",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "GAO",
+      "jurisdiction": "federal",
+      "state": "",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-31",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Warning",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "misrepresented-authority",
+        "published-opinion",
+        "administrative",
+        "trial"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "tov-realty-llc-v-suarez-kosel-equity-llc-v-macgregor-2026-07-31",
+    "slug": "tov-realty-llc-v-suarez-kosel-equity-llc-v-macgregor-2026-07-31",
+    "case_name": "TOV Realty, LLC v. Suarez; Kosel Equity, LLC v. MacGregor",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Fabricated: Case Law | ChatGPT added new case citations or altered existing citations in draft applications and briefs, resulting in approximately seven erroneous and unverified case citations in filings. Outcome: 6 hours CLE; Monetary Fine.",
+    "direct_answer": "Fabricated: Case Law | ChatGPT added new case citations or altered existing citations in draft applications and briefs, resulting in approximately seven erroneous and unverified case citations in filings. Outcome: 6 hours CLE; Monetary Fine.",
+    "why_it_matters": "This matter connects fake citations and other with 6 hours CLE; Monetary Fine in SC Connecticut. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and other and records 6 hours CLE; Monetary Fine. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2723/Conn_Supreme_Court_AI_sanction_20260731.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "SC Connecticut",
+      "jurisdiction": "state",
+      "state": "CT",
+      "country": "US",
+      "circuit": "2nd Circuit",
+      "judge": null,
+      "date": "2026-07-31",
+      "ai_tool": "ChatGPT",
+      "outcome": "6 hours CLE; Monetary Fine",
+      "amount": 1000,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fake-citations",
+        "other",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "scott-v-illinois-human-rights-comm-n-2026-07-28",
     "slug": "scott-v-illinois-human-rights-comm-n-2026-07-28",
     "case_name": "Scott v. Illinois Human Rights Comm’n",

@@ -1,34 +1,34 @@
 {
-  "last_updated": "2026-08-03",
-  "last_checked": "2026-08-03",
-  "last_checked_at": "2026-08-03T11:47:34.285Z",
+  "last_updated": "2026-08-04",
+  "last_checked": "2026-08-04",
+  "last_checked_at": "2026-08-04T10:58:37.079Z",
   "latest_record_date": "2026-07-31",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 1823,
-  "source_linked_count": 1821,
+  "source_record_count": 1825,
+  "source_linked_count": 1823,
   "source_link_coverage_pct": 99.9,
   "records_missing_date": 1,
-  "dataset_checksum": "fd52149d629de15f0b098e46d6798a6d09bc10971605944eea2ce32a6b1874d3",
-  "total_cases": 1822,
-  "us_cases": 1254,
-  "us_adjudicated": 1252,
+  "dataset_checksum": "15afbcb2c731cce22e7c9a1a4ac6822ce6cf4c23e0843aadd5fb77c026e679e5",
+  "total_cases": 1824,
+  "us_cases": 1256,
+  "us_adjudicated": 1254,
   "us_alleged_only": 2,
   "countries_tracked": 42,
-  "enriched_count": 1822,
+  "enriched_count": 1824,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
-  "monetary_sanctions_total_usd": 1665315,
+  "monetary_sanctions_total_usd": 1666315,
   "largest_single_sanction": 282508,
-  "avg_sanction": 7968,
+  "avg_sanction": 7935,
   "severity_counts": {
-    "low": 1315,
-    "high": 167,
+    "low": 1316,
+    "high": 168,
     "medium": 301,
     "career-ending": 39
   },
   "by_country": {
-    "US": 1254,
+    "US": 1256,
     "Canada": 204,
     "Netherlands": 7,
     "Australia": 97,
@@ -17859,6 +17859,349 @@
       ]
     },
     {
+      "state": "CT",
+      "count": 15,
+      "total": 1500,
+      "severities": {
+        "high": 1,
+        "low": 12,
+        "medium": 2
+      },
+      "cases": [
+        {
+          "id": "tov-realty-llc-v-suarez-kosel-equity-llc-v-macgregor-2026-07-31",
+          "name": "TOV Realty, LLC v. Suarez; Kosel Equity, LLC v. MacGregor",
+          "court": "SC Connecticut",
+          "judge": "",
+          "date": "2026-07-31",
+          "amount": 1000,
+          "amount_display": "$1.0K",
+          "severity": "high",
+          "tool": "ChatGPT",
+          "summary": "Fabricated: Case Law | ChatGPT added new case citations or altered existing citations in draft applications and briefs, resulting in approximately seven erroneous and unverified case citations in filings. Outcome: 6 hours CLE; Monetary Fine.",
+          "sanction_types": [
+            "monetary",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2723/Conn_Supreme_Court_AI_sanction_20260731.pdf"
+        },
+        {
+          "id": "kyne-v-ehima-2026-05-08",
+          "name": "Kyne v. Ehima",
+          "court": "SC Connecticut",
+          "judge": "",
+          "date": "2026-05-08",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "The decision states that several authorities cited in a family-law filing did not exist and described them as likely artificial-intelligence hallucinations, while making clear that the cited authorities were not attributable to the court itself.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "family",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2329/02_-_Kyne_v_Ehima.pdf"
+        },
+        {
+          "id": "in-re-kathleen-a-rabon-2026-04-03",
+          "name": "In re: Kathleen A Rabon",
+          "court": "D. Connecticut (Bankruptcy)",
+          "judge": "",
+          "date": "2026-04-03",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Debtor's counsel presented quoted language purportedly from a cited case that the Court found does not appear in the opinion; a second cited case likewise did not contain the quoted language or support the proposition. Outcome: Show Cause Order.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fabricated-quotes",
+            "bankruptcy",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1955/R_Rabon_USA_3_April_2026.pdf"
+        },
+        {
+          "id": "christopher-a-ambrose-v-bandy-x-lee-2026-03-31",
+          "name": "Christopher A. Ambrose v. Bandy X. Lee",
+          "court": "D. Connecticut",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Case Law | Cited Tyler v. Tyler to argue personal (in-hand) service is required in defamation actions; court found the citation inapposite and noted the misstatement. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "misrepresented-authority",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1914/Ambrose_v._Lee_USA_31_March_2026.pdf"
+        },
+        {
+          "id": "mohamed-hussain-et-al-v-mansoor-quraishi-et-al-2026-03-31",
+          "name": "Mohamed Hussain et al. v. Mansoor Quraishi et al.",
+          "court": "SC Connecticut",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | The court identified multiple case citations in the brief that did not exist and labeled them as AI-generated/fabricated; court listed eight problematic citations in its order to show cause (Docket Entry 123). Outcome: Orde to Explain.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1958/Hussain_v._Mansoor_USA_31_March_2026.pdf"
+        },
+        {
+          "id": "jacobs-v-payward-inc-2026-03-30",
+          "name": "Jacobs v. Payward, Inc.",
+          "court": "D. Connecticut",
+          "judge": "",
+          "date": "2026-03-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited \"DOE V. SMITH, No. 3:22-cv-01987 (D. Conn. 2023)\", which the Court determined to be a hallucinated (nonexistent) case citation and flagged as undermining the credibility of the filings. Outcome: Admonishment.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1878/Jacobs_v._Payward_USA_30_March_2026.pdf"
+        },
+        {
+          "id": "plaintiff-v-defendant-2026-03-27",
+          "name": "Plaintiff v. Defendant",
+          "court": "SC Connecticut",
+          "judge": "",
+          "date": "2026-03-27",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Defendant cited 'Douchette v. Doucette, 50 Conn. App. 541, 544-45 (1998)' for the proposition that property distributions may be modified; court found the reporter citation corresponds to a different opinion (Glass v. Peter Mitchell Construction Leasing and Development Corporation, 50 Conn. App. 539 (1998)) and concluded the citation is an AI-generated hallucination. Outcome: Warning. DOCKET NO. FST-FA21-6050273-S",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "trial"
+          ],
+          "source_url": "https://websitedc.s3.amazonaws.com/documents/Morgan_v_Whitticom_USA_27_March_2026.pdf"
+        },
+        {
+          "id": "kosel-equity-v-mcgregor-2026-02-19",
+          "name": "Kosel Equity v. McGregor",
+          "court": "SC Connecticut",
+          "judge": "",
+          "date": "2026-02-19",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "ChatGPT",
+          "summary": "Fabricated: Case Law Outcome: Allowed to refile brief. Hallucinations introduced during formatting of legal brief; counsel explained what happened here.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/hallucinations/?page=22&period_idx=7&q=&sort_by=date"
+        },
+        {
+          "id": "raul-gonzales-davila-v-roblen-2026-02-06",
+          "name": "Raul Gonzales Davila v. Roblen",
+          "court": "D. Connecticut",
+          "judge": "",
+          "date": "2026-02-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "False Quotes: Case Law | Brief attributed a quotation to Pineda v. Frisolino that does not appear in that opinion; Court found the quoted language absent and that counsel relied on the false quote to support FLSA individual coverage. Outcome: CLE.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1511/RAUL_GONZALES_DAVILA_Plaintiff_v_ROBLEN_LLC_fdba_VICOLO_PIZZA_RESTAURANT_a.pdf"
+        },
+        {
+          "id": "braica-v-frankowski-anthony-braica-v-tom-frankowski-2025-12-15",
+          "name": "Braica v. Frankowski (Anthony Braica v. Tom Frankowski)",
+          "court": "D. Connecticut",
+          "judge": "",
+          "date": "2025-12-15",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Plaintiff attributed a wholly fabricated quotation to this real case. Outcome: Briefs struck; warning.",
+          "sanction_types": [
+            "warning",
+            "struck-filing"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1198/Braica_v._Frankowski_USA_15_December_2025.pdf"
+        },
+        {
+          "id": "jesse-andre-v-warden-fci-danbury-2025-11-25",
+          "name": "Jesse Andre v. Warden, FCI Danbury",
+          "court": "D. Connecticut",
+          "judge": "",
+          "date": "2025-11-25",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Court found 'Harriot v. Jamison' (cited to support BOP-policy arguments) does not exist. Outcome: Admonishment; Motion stricken with prejudice.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "habeas",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1095/Andre_v._Warden_USA_25_November_2025.pdf"
+        },
+        {
+          "id": "cojom-v-roblen-2025-11-17",
+          "name": "Cojom v. Roblen",
+          "court": "D. Connecticut",
+          "judge": "",
+          "date": "2025-11-17",
+          "amount": 500,
+          "amount_display": "$500",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Court could not locate case Outcome: Monetary sanction. \"The danger of Attorney Stich’s AI use is especially felt here because his opponent’s pro se status meant that there was not an adversary capable of calling the attention of the court to the phony citations. Furthermore, this court expended time and resources in investigating the hallucinated citations, resources that could have been better spent adjudicating the merits of this underlying litigation and that of other cases pending before this court. The oversight in submitting fake citations is more than just sloppy lawyering: it imperils the integrity of our judicial process.However, the court also acknowledges that our society sits on the precipice of rapid technological development and that the continued development of AI will fundamentally alter life as we know it. Just as the advent of the Internet in the late 20th century transformed the legal profession, and particularly legal research, so too will artificial intelligence. Indeed, the two biggest legal research databases, Westlaw and LexisNexis, have developed and continue to expand their own proprietary AI tools to assist legal practitioners in finding case law.2 This Order should not be construed as a Luddite attack on technology and the efficiency it brings to the legal profession. Rather, this Order is an acknowledgement that AI remains a nascent technology with questionable reliability at this juncture. Given the ethical obligations lawyers must honor, it is imperative that lawyers use AI with diligence and care. This technology is too unsophisticated and must necessarily yield to a lawyer’s obligation of candor to the court.\"",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "fake-citations",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1045/Cojom_v._Roblen_USA_17_November_2025.pdf"
+        },
+        {
+          "id": "myers-v-state-2025-07-18",
+          "name": "Myers v. State",
+          "court": "SC Connecticut",
+          "judge": "",
+          "date": "2025-07-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Petition cited \"R.G. v. State, 180 Conn. App. 387, 393 (2018)\", which the court could not locate and described as likely an AI-generated hallucination.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "criminal",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2359/32_-_Myers_v_State.pdf"
+        },
+        {
+          "id": "reilly-v-conn-interlocal-risk-mgmt-agency-2025-06-20",
+          "name": "Reilly v. Conn. Interlocal Risk Mgmt. Agency",
+          "court": "D. Connecticut",
+          "judge": "",
+          "date": "2025-06-20",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Plaintiff quoted Gideon v. Wainwright as stating, \"[c]onstitutional rights would be of little value if they could be indirectly denied,\" but the court found this quote does not appear in Gideon on the cited page or anywhere; a similar statement appears in Smith v. Allwright. Outcome: Warning. \"Artificial intelligence may ultimately prove a helpful tool to assist pro se litigants in bringing meritorious cases to the courts. In that way, artificial intelligence has the potential to contribute to the cause of justice. However, accessing any beneficial use of artificial intelligence requires carefully understanding its limitations. For example, if merely asked to write an opposition to an opposing party’s motion or brief, or to respond to a court order, an artificial intelligence program is likely to generate such a response, regardless of whether the response actually has an arguable basis in the law. Where the court or opposing party was correct on the law, the program will very likely generate a response or brief that includes a false statement of the law. And because artificial intelligence synthesizes many sources with varying degrees of trustworthiness, reliance on artificial intelligence without independent verification renders litigants unable to represent to the Court that the information in their filings is truthful.\"",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.govinfo.gov/content/pkg/USCOURTS-ctd-3_25-cv-00640/pdf/USCOURTS-ctd-3_25-cv-00640-0.pdf"
+        },
+        {
+          "id": "moales-v-land-rover-cherry-hill-2025-04-30",
+          "name": "Moales v. Land Rover Cherry Hill",
+          "court": "D. Connecticut",
+          "judge": "",
+          "date": "2025-04-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Misrepresented: Case Law | Plaintiff cited Ernst & Ernst v. Hochfelder, 425 U.S. 185 (1976), and SEC v. W.J. Howey Co., 328 U.S. 293 (1946), to claim a federal common-law fiduciary duty supports a common-law private right of action; the Court held neither case supports that proposition and each addresses statutory securities laws. Outcome: Plaintiff warned to ensure accuracy of future submissions. AI UseThe court stated that “Moales may have used artificial intelligence in drafting his submissions,” citing widespread concerns over AI hallucination. It noted that several citations in his complaint and show-cause response were plainly incorrect or irrelevant. While Moales did not admit AI use, the court cited Strong v. Rushmore Loan Mgmt. Servs., 2025 WL 100904 (D. Neb.) and Mata v. Avianca to contextualize its concern.Hallucination DetailsCited Ernst &amp; Ernst v. Hochfelder, 425 U.S. 185 (1976), and S.E.C. v. W.J. Howey Co., 328 U.S. 293 (1946) as supporting the existence of a federal common law fiduciary duty—an inaccurate legal proposition. The court characterized such misuses as “the norm rather than the exception” in Moales’s submissions. It stopped short of identifying all misused authorities but made clear that the inaccuracies were pervasive.Ruling/SanctionThe complaint was dismissed for lack of subject matter jurisdiction under Rule 12(h)(3). Moales was permitted to file an amended complaint by May 28, 2025, but was warned that future filings must be factually and legally accurate. The court declined to reach the venue issue or impose immediate sanctions but warned Moales that misrepresentation of law may violate Rule 11.Key Judicial ReasoningThe court found no basis for federal question jurisdiction and rejected Moales’s reliance on the Declaratory Judgment Act, constructive trust theories, and a nonexistent “federal common law of securities.” It also held that Moales failed to plausibly allege the amount in controversy necessary for diversity jurisdiction.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/346/Moales_v._Land_Rover_Cherry_Hill_D._Connecticut_April_30_2025.pdf"
+        }
+      ]
+    },
+    {
       "state": "WI",
       "count": 15,
       "total": 5000,
@@ -19565,326 +19908,6 @@
             "trial"
           ],
           "source_url": "https://reason.com/volokh/2023/11/13/self-represented-litigants-use-ai-to-write-briefs-produce-hallucinated-citations/"
-        }
-      ]
-    },
-    {
-      "state": "CT",
-      "count": 14,
-      "total": 500,
-      "severities": {
-        "low": 12,
-        "medium": 2
-      },
-      "cases": [
-        {
-          "id": "kyne-v-ehima-2026-05-08",
-          "name": "Kyne v. Ehima",
-          "court": "SC Connecticut",
-          "judge": "",
-          "date": "2026-05-08",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "The decision states that several authorities cited in a family-law filing did not exist and described them as likely artificial-intelligence hallucinations, while making clear that the cited authorities were not attributable to the court itself.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "family",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2329/02_-_Kyne_v_Ehima.pdf"
-        },
-        {
-          "id": "in-re-kathleen-a-rabon-2026-04-03",
-          "name": "In re: Kathleen A Rabon",
-          "court": "D. Connecticut (Bankruptcy)",
-          "judge": "",
-          "date": "2026-04-03",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Debtor's counsel presented quoted language purportedly from a cited case that the Court found does not appear in the opinion; a second cited case likewise did not contain the quoted language or support the proposition. Outcome: Show Cause Order.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fabricated-quotes",
-            "bankruptcy",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1955/R_Rabon_USA_3_April_2026.pdf"
-        },
-        {
-          "id": "christopher-a-ambrose-v-bandy-x-lee-2026-03-31",
-          "name": "Christopher A. Ambrose v. Bandy X. Lee",
-          "court": "D. Connecticut",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | Cited Tyler v. Tyler to argue personal (in-hand) service is required in defamation actions; court found the citation inapposite and noted the misstatement. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "misrepresented-authority",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1914/Ambrose_v._Lee_USA_31_March_2026.pdf"
-        },
-        {
-          "id": "mohamed-hussain-et-al-v-mansoor-quraishi-et-al-2026-03-31",
-          "name": "Mohamed Hussain et al. v. Mansoor Quraishi et al.",
-          "court": "SC Connecticut",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | The court identified multiple case citations in the brief that did not exist and labeled them as AI-generated/fabricated; court listed eight problematic citations in its order to show cause (Docket Entry 123). Outcome: Orde to Explain.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1958/Hussain_v._Mansoor_USA_31_March_2026.pdf"
-        },
-        {
-          "id": "jacobs-v-payward-inc-2026-03-30",
-          "name": "Jacobs v. Payward, Inc.",
-          "court": "D. Connecticut",
-          "judge": "",
-          "date": "2026-03-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited \"DOE V. SMITH, No. 3:22-cv-01987 (D. Conn. 2023)\", which the Court determined to be a hallucinated (nonexistent) case citation and flagged as undermining the credibility of the filings. Outcome: Admonishment.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1878/Jacobs_v._Payward_USA_30_March_2026.pdf"
-        },
-        {
-          "id": "plaintiff-v-defendant-2026-03-27",
-          "name": "Plaintiff v. Defendant",
-          "court": "SC Connecticut",
-          "judge": "",
-          "date": "2026-03-27",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Defendant cited 'Douchette v. Doucette, 50 Conn. App. 541, 544-45 (1998)' for the proposition that property distributions may be modified; court found the reporter citation corresponds to a different opinion (Glass v. Peter Mitchell Construction Leasing and Development Corporation, 50 Conn. App. 539 (1998)) and concluded the citation is an AI-generated hallucination. Outcome: Warning. DOCKET NO. FST-FA21-6050273-S",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "trial"
-          ],
-          "source_url": "https://websitedc.s3.amazonaws.com/documents/Morgan_v_Whitticom_USA_27_March_2026.pdf"
-        },
-        {
-          "id": "kosel-equity-v-mcgregor-2026-02-19",
-          "name": "Kosel Equity v. McGregor",
-          "court": "SC Connecticut",
-          "judge": "",
-          "date": "2026-02-19",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "ChatGPT",
-          "summary": "Fabricated: Case Law Outcome: Allowed to refile brief. Hallucinations introduced during formatting of legal brief; counsel explained what happened here.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/hallucinations/?page=22&period_idx=7&q=&sort_by=date"
-        },
-        {
-          "id": "raul-gonzales-davila-v-roblen-2026-02-06",
-          "name": "Raul Gonzales Davila v. Roblen",
-          "court": "D. Connecticut",
-          "judge": "",
-          "date": "2026-02-06",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "False Quotes: Case Law | Brief attributed a quotation to Pineda v. Frisolino that does not appear in that opinion; Court found the quoted language absent and that counsel relied on the false quote to support FLSA individual coverage. Outcome: CLE.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1511/RAUL_GONZALES_DAVILA_Plaintiff_v_ROBLEN_LLC_fdba_VICOLO_PIZZA_RESTAURANT_a.pdf"
-        },
-        {
-          "id": "braica-v-frankowski-anthony-braica-v-tom-frankowski-2025-12-15",
-          "name": "Braica v. Frankowski (Anthony Braica v. Tom Frankowski)",
-          "court": "D. Connecticut",
-          "judge": "",
-          "date": "2025-12-15",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Plaintiff attributed a wholly fabricated quotation to this real case. Outcome: Briefs struck; warning.",
-          "sanction_types": [
-            "warning",
-            "struck-filing"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1198/Braica_v._Frankowski_USA_15_December_2025.pdf"
-        },
-        {
-          "id": "jesse-andre-v-warden-fci-danbury-2025-11-25",
-          "name": "Jesse Andre v. Warden, FCI Danbury",
-          "court": "D. Connecticut",
-          "judge": "",
-          "date": "2025-11-25",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Court found 'Harriot v. Jamison' (cited to support BOP-policy arguments) does not exist. Outcome: Admonishment; Motion stricken with prejudice.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "habeas",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1095/Andre_v._Warden_USA_25_November_2025.pdf"
-        },
-        {
-          "id": "cojom-v-roblen-2025-11-17",
-          "name": "Cojom v. Roblen",
-          "court": "D. Connecticut",
-          "judge": "",
-          "date": "2025-11-17",
-          "amount": 500,
-          "amount_display": "$500",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Court could not locate case Outcome: Monetary sanction. \"The danger of Attorney Stich’s AI use is especially felt here because his opponent’s pro se status meant that there was not an adversary capable of calling the attention of the court to the phony citations. Furthermore, this court expended time and resources in investigating the hallucinated citations, resources that could have been better spent adjudicating the merits of this underlying litigation and that of other cases pending before this court. The oversight in submitting fake citations is more than just sloppy lawyering: it imperils the integrity of our judicial process.However, the court also acknowledges that our society sits on the precipice of rapid technological development and that the continued development of AI will fundamentally alter life as we know it. Just as the advent of the Internet in the late 20th century transformed the legal profession, and particularly legal research, so too will artificial intelligence. Indeed, the two biggest legal research databases, Westlaw and LexisNexis, have developed and continue to expand their own proprietary AI tools to assist legal practitioners in finding case law.2 This Order should not be construed as a Luddite attack on technology and the efficiency it brings to the legal profession. Rather, this Order is an acknowledgement that AI remains a nascent technology with questionable reliability at this juncture. Given the ethical obligations lawyers must honor, it is imperative that lawyers use AI with diligence and care. This technology is too unsophisticated and must necessarily yield to a lawyer’s obligation of candor to the court.\"",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "fake-citations",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1045/Cojom_v._Roblen_USA_17_November_2025.pdf"
-        },
-        {
-          "id": "myers-v-state-2025-07-18",
-          "name": "Myers v. State",
-          "court": "SC Connecticut",
-          "judge": "",
-          "date": "2025-07-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Petition cited \"R.G. v. State, 180 Conn. App. 387, 393 (2018)\", which the court could not locate and described as likely an AI-generated hallucination.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "criminal",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2359/32_-_Myers_v_State.pdf"
-        },
-        {
-          "id": "reilly-v-conn-interlocal-risk-mgmt-agency-2025-06-20",
-          "name": "Reilly v. Conn. Interlocal Risk Mgmt. Agency",
-          "court": "D. Connecticut",
-          "judge": "",
-          "date": "2025-06-20",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Plaintiff quoted Gideon v. Wainwright as stating, \"[c]onstitutional rights would be of little value if they could be indirectly denied,\" but the court found this quote does not appear in Gideon on the cited page or anywhere; a similar statement appears in Smith v. Allwright. Outcome: Warning. \"Artificial intelligence may ultimately prove a helpful tool to assist pro se litigants in bringing meritorious cases to the courts. In that way, artificial intelligence has the potential to contribute to the cause of justice. However, accessing any beneficial use of artificial intelligence requires carefully understanding its limitations. For example, if merely asked to write an opposition to an opposing party’s motion or brief, or to respond to a court order, an artificial intelligence program is likely to generate such a response, regardless of whether the response actually has an arguable basis in the law. Where the court or opposing party was correct on the law, the program will very likely generate a response or brief that includes a false statement of the law. And because artificial intelligence synthesizes many sources with varying degrees of trustworthiness, reliance on artificial intelligence without independent verification renders litigants unable to represent to the Court that the information in their filings is truthful.\"",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.govinfo.gov/content/pkg/USCOURTS-ctd-3_25-cv-00640/pdf/USCOURTS-ctd-3_25-cv-00640-0.pdf"
-        },
-        {
-          "id": "moales-v-land-rover-cherry-hill-2025-04-30",
-          "name": "Moales v. Land Rover Cherry Hill",
-          "court": "D. Connecticut",
-          "judge": "",
-          "date": "2025-04-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Misrepresented: Case Law | Plaintiff cited Ernst & Ernst v. Hochfelder, 425 U.S. 185 (1976), and SEC v. W.J. Howey Co., 328 U.S. 293 (1946), to claim a federal common-law fiduciary duty supports a common-law private right of action; the Court held neither case supports that proposition and each addresses statutory securities laws. Outcome: Plaintiff warned to ensure accuracy of future submissions. AI UseThe court stated that “Moales may have used artificial intelligence in drafting his submissions,” citing widespread concerns over AI hallucination. It noted that several citations in his complaint and show-cause response were plainly incorrect or irrelevant. While Moales did not admit AI use, the court cited Strong v. Rushmore Loan Mgmt. Servs., 2025 WL 100904 (D. Neb.) and Mata v. Avianca to contextualize its concern.Hallucination DetailsCited Ernst &amp; Ernst v. Hochfelder, 425 U.S. 185 (1976), and S.E.C. v. W.J. Howey Co., 328 U.S. 293 (1946) as supporting the existence of a federal common law fiduciary duty—an inaccurate legal proposition. The court characterized such misuses as “the norm rather than the exception” in Moales’s submissions. It stopped short of identifying all misused authorities but made clear that the inaccuracies were pervasive.Ruling/SanctionThe complaint was dismissed for lack of subject matter jurisdiction under Rule 12(h)(3). Moales was permitted to file an amended complaint by May 28, 2025, but was warned that future filings must be factually and legally accurate. The court declined to reach the venue issue or impose immediate sanctions but warned Moales that misrepresentation of law may violate Rule 11.Key Judicial ReasoningThe court found no basis for federal question jurisdiction and rejected Moales’s reliance on the Declaratory Judgment Act, constructive trust theories, and a nonexistent “federal common law of securities.” It also held that Moales failed to plausibly allege the amount in controversy necessary for diversity jurisdiction.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/346/Moales_v._Land_Rover_Cherry_Hill_D._Connecticut_April_30_2025.pdf"
         }
       ]
     },
@@ -22884,7 +22907,7 @@
     }
   ],
   "by_week": {
-    "2026-W31": 5,
+    "2026-W31": 7,
     "2026-W30": 17,
     "2026-W29": 27,
     "2026-W28": 24,
@@ -23016,7 +23039,7 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-07": 87,
+    "2026-07": 89,
     "2026-06": 123,
     "2026-05": 148,
     "2026-04": 125,
@@ -23060,12 +23083,12 @@
     "2023": 16,
     "2024": 59,
     "2025": 828,
-    "2026": 919
+    "2026": 921
   },
   "by_tool": {
     "Unidentified": 387,
-    "ChatGPT": 100,
-    "AI (implied, unspecified)": 1223,
+    "AI (implied, unspecified)": 1224,
+    "ChatGPT": 101,
     "LegalPA": 1,
     "ChatGPT, Claude": 1,
     "GPT-3.5": 1,
@@ -23160,6 +23183,7 @@
   },
   "by_circuit": {
     "5th Circuit": 128,
+    "2nd Circuit": 134,
     "7th Circuit": 108,
     "10th Circuit": 110,
     "9th Circuit": 287,
@@ -23167,7 +23191,6 @@
     "11th Circuit": 109,
     "6th Circuit": 99,
     "4th Circuit": 66,
-    "2nd Circuit": 133,
     "3rd Circuit": 69,
     "8th Circuit": 54,
     "1st Circuit": 1,
@@ -23220,7 +23243,7 @@
     },
     {
       "week": "2026-W31",
-      "count": 5
+      "count": 7
     }
   ]
 }

@@ -45,7 +45,7 @@ export default function ResearchShell({ children }: { children: React.ReactNode 
           </nav>
           <div className={styles.actions}>
             <a href="https://www.aivortex.io/diagnostic/">AI visibility</a>
-            <a href="https://www.aivortex.io/legal/#advisory">Consulting</a>
+            <a href="https://www.aivortex.io/consulting/">Consulting</a>
             <Link className={styles.primary} href="/cases">Search free</Link>
             <button ref={menuButtonRef} className={styles.menuButton} onClick={() => setOpen((value) => !value)} aria-label="Toggle navigation" aria-expanded={open} aria-controls="research-mobile-nav">
               {open ? <X size={22} /> : <Menu size={22} />}
@@ -55,7 +55,7 @@ export default function ResearchShell({ children }: { children: React.ReactNode 
         {open && <nav className={styles.mobileNav} id="research-mobile-nav" aria-label="Mobile navigation">
           {navItems.map(([label, href]) => <Link key={label} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
           <a href="https://www.aivortex.io/diagnostic/" onClick={() => setOpen(false)}>AI visibility</a>
-          <a href="https://www.aivortex.io/legal/#advisory" onClick={() => setOpen(false)}>Consulting</a>
+          <a href="https://www.aivortex.io/consulting/" onClick={() => setOpen(false)}>Consulting</a>
         </nav>}
         <div className={styles.status}>
           <span className={styles.live}>Public tracker</span>

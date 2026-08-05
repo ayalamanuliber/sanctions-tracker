@@ -1,17 +1,29 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "15afbcb2c731cce22e7c9a1a4ac6822ce6cf4c23e0843aadd5fb77c026e679e5",
-  "corpus_checked": "2026-08-04",
-  "total_cases": 1824,
+  "dataset_checksum": "6de5dc1402127a5fc6038b93f6a77c15d5995e4a63e8afcdaefbfc55a859e6dc",
+  "corpus_checked": "2026-08-05",
+  "total_cases": 1845,
   "tiers": {
-    "index-ready": 1810,
-    "enrichment-ready": 12,
+    "index-ready": 1830,
+    "enrichment-ready": 13,
     "research-only": 2
   },
   "by_slug": {
+    "fernando-justino-santana-v-shook-hardy-bacon-et-al-2026-07-31": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "fjl-v-tgo-2026-07-31": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "kevin-dale-higgins-v-the-state-of-texas-2026-07-31": {
       "tier": "index-ready",
       "score": 76
+    },
+    "natashah-al-ali-v-cvs-pharmacy-inc-2026-07-31": {
+      "tier": "index-ready",
+      "score": 85
     },
     "the-jaaw-group-llc-2026-07-31": {
       "tier": "index-ready",
@@ -21,11 +33,79 @@
       "tier": "index-ready",
       "score": 90
     },
+    "united-states-of-america-v-eric-karnezis-et-al-2026-07-31": {
+      "tier": "enrichment-ready",
+      "score": 75
+    },
+    "carey-v-breakell-et-al-2026-07-30": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "cole-v-lee-2026-07-30": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "first-community-credit-union-v-ashley-smith-2026-07-30": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "harris-v-bank-of-america-2026-07-30": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "in-the-interest-of-q-c-and-p-c-children-2026-07-30": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "in-the-interest-of-s-m-t-and-s-j-t-children-2026-07-30": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "nirav-modi-v-richard-levin-trustee-for-the-liquidating-trust-of-firestar-diamond-inc-2026-07-30": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "danielle-maloit-v-frank-daniel-maloit-2026-07-29": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "harding-place-multifamily-partners-v-samuel-robinson-2026-07-29": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "shantell-robinson-v-oglala-sioux-tribe-et-al-2026-07-29": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "alexander-m-v-frank-bisignano-2026-07-28": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "campbell-v-tidalhealth-inc-2026-07-28": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "michael-l-ruiz-v-magellan-financial-insurance-services-2-2026-07-28": {
+      "tier": "index-ready",
+      "score": 90
+    },
+    "owen-v-askew-et-al-2026-07-28": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "scott-v-illinois-human-rights-comm-n-2026-07-28": {
       "tier": "index-ready",
       "score": 90
     },
     "toronto-standard-condominium-corporation-no-2143-v-robibaro-2026-07-28": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "transcontinental-realty-investors-inc-et-al-v-daniel-j-moos-2026-07-28": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "ally-bank-v-serge-n-ngouambe-2026-07-27": {
       "tier": "index-ready",
       "score": 76
     },
@@ -36,6 +116,10 @@
     "lichfield-v-kubler-netflix-inc-2026-07-27": {
       "tier": "index-ready",
       "score": 81
+    },
+    "ponder-v-bcg-equities-llc-2026-07-27": {
+      "tier": "index-ready",
+      "score": 85
     },
     "joann-ledoux-v-outliers-inc-2026-07-24": {
       "tier": "index-ready",
@@ -68,6 +152,10 @@
     "mary-c-graves-v-brian-k-graves-2026-07-23": {
       "tier": "index-ready",
       "score": 81
+    },
+    "nationwide-mutual-insurance-company-v-kardosh-2026-07-23": {
+      "tier": "index-ready",
+      "score": 85
     },
     "asif-v-minister-for-immigration-and-citizenship-2026-07-22": {
       "tier": "index-ready",
@@ -114,6 +202,10 @@
       "score": 85
     },
     "haddadi-et-al-v-soleimani-et-al-2026-onsc-3920-2026-07-17": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "w-p-c-6049-2026-w-p-c-6051-2026-2026-07-17": {
       "tier": "index-ready",
       "score": 81
     },
@@ -278,10 +370,6 @@
       "score": 85
     },
     "john-hurt-v-ampcus-inc-2026-07-08": {
-      "tier": "index-ready",
-      "score": 81
-    },
-    "michael-l-ruiz-v-magellan-financial-insurance-services-2026-07-08": {
       "tier": "index-ready",
       "score": 81
     },
@@ -2180,10 +2268,6 @@
     "michael-a-devita-v-midtown-motors-et-al-2026-03-25": {
       "tier": "index-ready",
       "score": 81
-    },
-    "f-j-l-v-t-g-o-2026-03-24": {
-      "tier": "index-ready",
-      "score": 76
     },
     "jorge-a-zea-v-national-association-of-realtors-2026-03-24": {
       "tier": "index-ready",

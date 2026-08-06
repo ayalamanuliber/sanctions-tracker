@@ -1,14 +1,18 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "6de5dc1402127a5fc6038b93f6a77c15d5995e4a63e8afcdaefbfc55a859e6dc",
-  "corpus_checked": "2026-08-05",
-  "total_cases": 1845,
+  "dataset_checksum": "4ffce9093ea6efe35b555453203d3d4e3cf02ee83a4cf8ca177ff93c5466e75d",
+  "corpus_checked": "2026-08-06",
+  "total_cases": 1846,
   "tiers": {
-    "index-ready": 1830,
+    "index-ready": 1831,
     "enrichment-ready": 13,
     "research-only": 2
   },
   "by_slug": {
+    "barteca-holdings-v-tacobarn-2026-08-04": {
+      "tier": "index-ready",
+      "score": 86
+    },
     "fernando-justino-santana-v-shook-hardy-bacon-et-al-2026-07-31": {
       "tier": "index-ready",
       "score": 81

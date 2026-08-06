@@ -1,5 +1,64 @@
 [
   {
+    "id": "barteca-holdings-v-tacobarn-2026-08-04",
+    "slug": "barteca-holdings-v-tacobarn-2026-08-04",
+    "case_name": "Barteca Holdings v. Tacobarn",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "False Quotes: Case Law | Misquoted language attributed to Ashcroft v. Iqbal; quoted terms and pin cites incorrect and did not match the cited pages. Outcome: Monetary Sanction; Bar Referral.",
+    "direct_answer": "False Quotes: Case Law | Misquoted language attributed to Ashcroft v. Iqbal; quoted terms and pin cites incorrect and did not match the cited pages. Outcome: Monetary Sanction; Bar Referral.",
+    "why_it_matters": "This matter connects fabricated quotes and misrepresented authority with Monetary Sanction; Bar Referral in D. Connecticut. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fabricated quotes and misrepresented authority and records Monetary Sanction; Bar Referral. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2763/Barteca_v._Tacobarn_USA_4_August_2026.pdf",
+      "name": "Robert Freund",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "D. Connecticut",
+      "jurisdiction": "federal",
+      "state": "CT",
+      "country": "US",
+      "circuit": "2nd Circuit",
+      "judge": null,
+      "date": "2026-08-04",
+      "ai_tool": "Open Law; Claude; ChatGPT",
+      "outcome": "Monetary Sanction; Bar Referral",
+      "amount": 3500,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "bar-referral",
+        "ip",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "bar-referral",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "fernando-justino-santana-v-shook-hardy-bacon-et-al-2026-07-31",
     "slug": "fernando-justino-santana-v-shook-hardy-bacon-et-al-2026-07-31",
     "case_name": "Fernando Justino Santana v. Shook Hardy & Bacon, et al.",
@@ -491,6 +550,7 @@
       "tags": [
         "pro-se",
         "misrepresented-authority",
+        "landlord-tenant",
         "appellate"
       ],
       "sanction_types": [
@@ -948,6 +1008,7 @@
         "fake-citations",
         "fabricated-quotes",
         "misrepresented-authority",
+        "other",
         "appellate"
       ],
       "sanction_types": [
@@ -1057,6 +1118,7 @@
       "tags": [
         "pro-se",
         "misrepresented-authority",
+        "employment",
         "trial"
       ],
       "sanction_types": [

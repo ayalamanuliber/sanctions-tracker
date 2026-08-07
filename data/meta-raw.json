@@ -1,34 +1,34 @@
 {
-  "last_updated": "2026-08-06",
-  "last_checked": "2026-08-06",
-  "last_checked_at": "2026-08-06T10:56:20.423Z",
+  "last_updated": "2026-08-07",
+  "last_checked": "2026-08-07",
+  "last_checked_at": "2026-08-07T09:17:22.447Z",
   "latest_record_date": "2026-08-04",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 1847,
+  "source_record_count": 1848,
   "source_linked_count": 1845,
   "source_link_coverage_pct": 99.9,
   "records_missing_date": 1,
-  "dataset_checksum": "4ffce9093ea6efe35b555453203d3d4e3cf02ee83a4cf8ca177ff93c5466e75d",
-  "total_cases": 1846,
-  "us_cases": 1277,
-  "us_adjudicated": 1275,
+  "dataset_checksum": "9ea370d67823ac236b0935189639c327d2beb89d1487b6551607be413ac0d147",
+  "total_cases": 1847,
+  "us_cases": 1278,
+  "us_adjudicated": 1276,
   "us_alleged_only": 2,
   "countries_tracked": 42,
-  "enriched_count": 1846,
+  "enriched_count": 1847,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
-  "monetary_sanctions_total_usd": 1669815,
+  "monetary_sanctions_total_usd": 1671015,
   "largest_single_sanction": 282508,
-  "avg_sanction": 7914,
+  "avg_sanction": 7882,
   "severity_counts": {
-    "high": 170,
+    "high": 171,
     "low": 1334,
     "medium": 303,
     "career-ending": 39
   },
   "by_country": {
-    "US": 1277,
+    "US": 1278,
     "South Africa": 6,
     "Canada": 204,
     "Netherlands": 7,
@@ -6759,12 +6759,12 @@
     },
     {
       "state": "AZ",
-      "count": 43,
-      "total": 4,
+      "count": 44,
+      "total": 1204,
       "severities": {
         "medium": 7,
         "low": 29,
-        "high": 7
+        "high": 8
       },
       "cases": [
         {
@@ -7170,6 +7170,30 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/1839/Segui_v._Moniz_USA_24_march_2026.pdf"
+        },
+        {
+          "id": "john-a-griffiths-2026-03-13",
+          "name": "John A. Griffiths",
+          "court": "Arizona State Bar",
+          "judge": "",
+          "date": "2026-03-13",
+          "amount": 1200,
+          "amount_display": "$1.2K",
+          "severity": "high",
+          "tool": "Eve.legal",
+          "summary": "Fabricated: Case Law | Eve.legal supplied a citation for a case that does not exist; defense counsel flagged it as an AI-generated fabricated case. Outcome: Reprimand and order to pay State Bar costs and expenses of $1,200..",
+          "sanction_types": [
+            "monetary",
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "trial"
+          ],
+          "source_url": ""
         },
         {
           "id": "hunter-v-tforce-freight-incorporated-2026-03-10",
@@ -23247,7 +23271,7 @@
     "2026-W14": 52,
     "2026-W13": 33,
     "2026-W12": 40,
-    "2026-W11": 33,
+    "2026-W11": 34,
     "2026-W10": 31,
     "2026-W09": 30,
     "2026-W08": 27,
@@ -23364,7 +23388,7 @@
     "2026-06": 123,
     "2026-05": 148,
     "2026-04": 125,
-    "2026-03": 174,
+    "2026-03": 175,
     "2026-02": 127,
     "2026-01": 134,
     "2025-12": 152,
@@ -23404,7 +23428,7 @@
     "2023": 16,
     "2024": 59,
     "2025": 828,
-    "2026": 943
+    "2026": 944
   },
   "by_tool": {
     "Open Law; Claude; ChatGPT": 1,
@@ -23442,6 +23466,7 @@
     "ChatGPT; OpenCase": 1,
     "Perplexity.AI": 1,
     "Grammarly, ChatGPT, and Gemini": 1,
+    "Eve.legal": 1,
     "Protégé (LexisNexis)": 1,
     "ChatGPT; OpenAI": 1,
     "Copilot": 5,
@@ -23508,7 +23533,7 @@
     "2nd Circuit": 137,
     "5th Circuit": 132,
     "6th Circuit": 102,
-    "9th Circuit": 289,
+    "9th Circuit": 290,
     "10th Circuit": 113,
     "7th Circuit": 110,
     "4th Circuit": 67,

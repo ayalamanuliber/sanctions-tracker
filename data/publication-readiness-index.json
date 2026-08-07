@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "4ffce9093ea6efe35b555453203d3d4e3cf02ee83a4cf8ca177ff93c5466e75d",
-  "corpus_checked": "2026-08-06",
-  "total_cases": 1846,
+  "dataset_checksum": "9ea370d67823ac236b0935189639c327d2beb89d1487b6551607be413ac0d147",
+  "corpus_checked": "2026-08-07",
+  "total_cases": 1847,
   "tiers": {
     "index-ready": 1831,
     "enrichment-ready": 13,
-    "research-only": 2
+    "research-only": 3
   },
   "by_slug": {
     "barteca-holdings-v-tacobarn-2026-08-04": {
@@ -2492,6 +2492,10 @@
     "dsme-construction-co-ltd-2026-03-13": {
       "tier": "index-ready",
       "score": 86
+    },
+    "john-a-griffiths-2026-03-13": {
+      "tier": "research-only",
+      "score": 66
     },
     "whiting-v-city-of-athens-tenn-2026-03-13": {
       "tier": "index-ready",

@@ -59841,6 +59841,64 @@
     }
   },
   {
+    "id": "john-a-griffiths-2026-03-13",
+    "slug": "john-a-griffiths-2026-03-13",
+    "case_name": "John A. Griffiths",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Fabricated: Case Law | Eve.legal supplied a citation for a case that does not exist; defense counsel flagged it as an AI-generated fabricated case. Outcome: Reprimand and order to pay State Bar costs and expenses of $1,200..",
+    "direct_answer": "Fabricated: Case Law | Eve.legal supplied a citation for a case that does not exist; defense counsel flagged it as an AI-generated fabricated case. Outcome: Reprimand and order to pay State Bar costs and expenses of $1,200..",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Reprimand and order to pay State Bar costs and expenses of $1,200. in Arizona State Bar. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Reprimand and order to pay State Bar costs and expenses of $1,200.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. No underlying public source link is currently recorded. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date"
+    ],
+    "source": {
+      "url": "",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "missing"
+    },
+    "record": {
+      "court": "Arizona State Bar",
+      "jurisdiction": "state",
+      "state": "AZ",
+      "country": "US",
+      "circuit": "9th Circuit",
+      "judge": null,
+      "date": "2026-03-13",
+      "ai_tool": "Eve.legal",
+      "outcome": "Reprimand and order to pay State Bar costs and expenses of $1,200.",
+      "amount": 1200,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "bar-referral",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "whiting-v-city-of-athens-tenn-2026-03-13",
     "slug": "whiting-v-city-of-athens-tenn-2026-03-13",
     "case_name": "Whiting v. City of Athens, Tenn.",

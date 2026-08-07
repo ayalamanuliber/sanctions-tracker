@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "4ffce9093ea6efe35b555453203d3d4e3cf02ee83a4cf8ca177ff93c5466e75d",
-  "corpus_checked": "2026-08-06",
-  "total_cases": 1846,
-  "total_assessments": 1846,
+  "dataset_checksum": "9ea370d67823ac236b0935189639c327d2beb89d1487b6551607be413ac0d147",
+  "corpus_checked": "2026-08-07",
+  "total_cases": 1847,
+  "total_assessments": 1847,
   "tiers": {
     "index-ready": 1831,
     "enrichment-ready": 13,
-    "research-only": 2
+    "research-only": 3
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 99,
-    "operational-lesson-not-recorded": 1109,
+    "operational-lesson-not-recorded": 1110,
     "outcome-not-recorded": 367,
-    "publication-review-pending": 1846,
-    "source-link-missing": 1,
+    "publication-review-pending": 1847,
+    "source-link-missing": 2,
     "specific-ai-tool-not-established": 1632,
-    "summary-needs-detail": 746,
+    "summary-needs-detail": 747,
     "summary-too-brief": 13
   },
   "records": [
@@ -62229,6 +62229,109 @@
           "code": "specific-ai-tool-not-established",
           "impact": "context",
           "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "john-a-griffiths-2026-03-13",
+      "slug": "john-a-griffiths-2026-03-13",
+      "score": 66,
+      "maximum_score": 100,
+      "tier": "research-only",
+      "index_eligible": false,
+      "source_eligible": false,
+      "summary_length": 224,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 0,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 6,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "source_url",
+          "code": "source-link-missing",
+          "impact": "blocking",
+          "remediation": "Add a stable primary, docket, or clearly labeled secondary source URL."
+        },
+        {
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
         },
         {
           "field": "reviewed",

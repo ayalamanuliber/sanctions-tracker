@@ -1,34 +1,34 @@
 {
-  "last_updated": "2026-08-07",
-  "last_checked": "2026-08-07",
-  "last_checked_at": "2026-08-07T09:17:22.447Z",
-  "latest_record_date": "2026-08-04",
+  "last_updated": "2026-08-08",
+  "last_checked": "2026-08-08",
+  "last_checked_at": "2026-08-08T09:03:20.871Z",
+  "latest_record_date": "2026-08-06",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 1848,
-  "source_linked_count": 1845,
+  "source_record_count": 1849,
+  "source_linked_count": 1846,
   "source_link_coverage_pct": 99.9,
   "records_missing_date": 1,
-  "dataset_checksum": "9ea370d67823ac236b0935189639c327d2beb89d1487b6551607be413ac0d147",
-  "total_cases": 1847,
-  "us_cases": 1278,
-  "us_adjudicated": 1276,
+  "dataset_checksum": "e9c3927a914a466d2eb9f5010f853b3a09a0946b1a0761cfa5e5d5ad92674c23",
+  "total_cases": 1848,
+  "us_cases": 1279,
+  "us_adjudicated": 1277,
   "us_alleged_only": 2,
   "countries_tracked": 42,
-  "enriched_count": 1847,
+  "enriched_count": 1848,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
-  "monetary_sanctions_total_usd": 1671015,
+  "monetary_sanctions_total_usd": 1671016,
   "largest_single_sanction": 282508,
-  "avg_sanction": 7882,
+  "avg_sanction": 7845,
   "severity_counts": {
-    "high": 171,
+    "high": 172,
     "low": 1334,
     "medium": 303,
     "career-ending": 39
   },
   "by_country": {
-    "US": 1278,
+    "US": 1279,
     "South Africa": 6,
     "Canada": 204,
     "Netherlands": 7,
@@ -17718,6 +17718,378 @@
       ]
     },
     {
+      "state": "TN",
+      "count": 16,
+      "total": 2,
+      "severities": {
+        "high": 2,
+        "low": 13,
+        "medium": 1
+      },
+      "cases": [
+        {
+          "id": "in-re-bfi-waste-sys-of-tenn-2026-08-06",
+          "name": "In re BFI Waste Sys. of Tenn.",
+          "court": "M.D. Tenn.",
+          "judge": "",
+          "date": "2026-08-06",
+          "amount": 1,
+          "amount_display": "$1",
+          "severity": "high",
+          "tool": "Unidentified",
+          "summary": "False Quotes: Case Law | Filed brief contained quotations that did not exist—court determined quoted material attributed to cases was fabricated and unsupported. Outcome: Public reprimand and $1,500 monetary sanction payable to the Clerk for a Rule 11 violation related to hallucinated authorities.. The Court found that a filed brief (Doc. No. 293), drafted solely by attorney Louis W. Ringger III, contained hallucinated quotations and misleading or nonexistent legal citations produced via artificial-intelligence tools that Ringger failed to verify. The Court ordered a show-cause, Ringger admitted the deficiency, apologized, and proposed corrective measures. Applying Rule 11 principles, the Court publicly reprimanded Ringger and imposed a $1,500 sanction (mitigated due to apology, lack of prior history, and remedial steps), explaining that attorneys remain ultimately responsible for verifying authorities even when using AI.",
+          "sanction_types": [
+            "monetary",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2765/In_re_BFI_Waste_Sys._of_Tenn._2026_U.S._Dist._LEXIS_175482.Pdf"
+        },
+        {
+          "id": "harding-place-multifamily-partners-v-samuel-robinson-2026-07-29",
+          "name": "Harding Place Multifamily Partners v. Samuel Robinson",
+          "court": "CA Tennessee",
+          "judge": "",
+          "date": "2026-07-29",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Appellant cited 'First Tenn. Bank Nat’l Ass’n v. McClure, 199 S.W.3d 429, 432 (Tenn. Ct. App. 2005),' but the citation points to an unrelated Texas opinion and the real McClure decision is from 1990 (No. 169, 1990 WL 6378); court treated this as an invented/misleading citation.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "landlord-tenant",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2728/Harding_Place_Multifamily_Partners_LLC_Emers_DJju7pu._Samuel_Robinson_USA_30_July_2026.pdf"
+        },
+        {
+          "id": "merritt-v-moore-2026-07-21",
+          "name": "Merritt v. Moore",
+          "court": "CA Tennessee",
+          "judge": "",
+          "date": "2026-07-21",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Appellant's table of authorities lists at least one case authority that the court could not locate and appears to be nonexistent. Outcome: Appeal dismissed and issues deemed waived in part because the brief contained inaccurate authorities.",
+          "sanction_types": [
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "civil-rights",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2685/KENNETH_MERRITT_v_BETTY_THOMAS_MOORE_USA_21_July_2026.pdf"
+        },
+        {
+          "id": "bailey-v-sedgwick-claims-management-services-inc-2026-06-08",
+          "name": "Bailey v. Sedgwick Claims Management Services, Inc.",
+          "court": "W.D. Tennessee",
+          "judge": "",
+          "date": "2026-06-08",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Plaintiff's initial motion included citations to cases that did not exist; the Court found these likely resulted from AI hallucination and required corrected citations. Outcome: Order to correct motion.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2370/Bailey_v._Sedgwick_USA_June_2026.pdf"
+        },
+        {
+          "id": "reaves-law-firm-pllc-v-baker-donelson-bearman-caldwell-berkowitz-pc-et-al-2026-06-02",
+          "name": "Reaves Law Firm, PLLC v. Baker, Donelson, Bearman, Caldwell & Berkowitz, PC, et al.",
+          "court": "W.D. Tennessee",
+          "judge": "",
+          "date": "2026-06-02",
+          "amount": 1,
+          "amount_display": "$1",
+          "severity": "high",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited 'Press v. Vanderbilt University' for actual malice; court could find no such case and the citation led to an SEC No-Action letter instead. Outcome: Adverse Costs Order; Bar Referral.",
+          "sanction_types": [
+            "monetary",
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "bar-referral",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2257/Reaves_Law_Firm_v._Baker_USA_2_June_2026.pdf"
+        },
+        {
+          "id": "simmons-v-shahidul-islam-2026-05-21",
+          "name": "Simmons v. Shahidul Islam",
+          "court": "CA Tennessee",
+          "judge": "",
+          "date": "2026-05-21",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Appellant's brief included case citations that do not appear to exist; the court labeled these as AI 'hallucinations' and found they did not support appellant's propositions.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "tort",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2177/TRAY_SIMMONS_v_DR_SHAHIDUL_ISLAM_ET_AL_USA_21_May_2026.pdf"
+        },
+        {
+          "id": "pate-v-cmg-mortgage-inc-et-al-2026-04-28",
+          "name": "Pate v. CMG Mortgage, Inc., et al.",
+          "court": "E.D. Tennessee",
+          "judge": "",
+          "date": "2026-04-28",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiffs cited a non-existent case in their filings; the Court identified the citation as erroneous and noted Plaintiffs' errata. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2043/Pete_v._CMG_Mortgage_USA_28_April_2026.pdf"
+        },
+        {
+          "id": "edward-reynolds-v-progressive-technologies-inc-2026-03-30",
+          "name": "Edward Reynolds v. Progressive Technologies, Inc.",
+          "court": "W.D. Tennessee",
+          "judge": "",
+          "date": "2026-03-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited multiple district-court decisions to argue that courts routinely strike overlength briefs; the Court found those cited cases either do not exist or are misattributed. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1880/Reynolds_v_Progressive_Technologies_USA_30_March_2026.pdf"
+        },
+        {
+          "id": "randel-edward-page-jr-v-apperson-crump-2026-03-30",
+          "name": "Randel Edward Page, Jr. v. Apperson Crump",
+          "court": "W.D. Tennessee",
+          "judge": "",
+          "date": "2026-03-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Appellant relied on a second nonexistent case citation in his motion for summary reversal; the Court's research confirmed the citation does not exist. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "administrative",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1915/Page_v._Apperson_USA_30_March_2026.pdf"
+        },
+        {
+          "id": "moses-v-state-2026-02-25",
+          "name": "Moses v. State",
+          "court": "CA Tennessee",
+          "judge": "",
+          "date": "2026-02-25",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Appellant's brief contained at least one fictitious case citation; the court stated it would disregard any authorities it could not verify as authentic. The court observed that Moses' brief contained several citation errors and at least one fictitious case. The court stated it would disregard any legal authorities it could not verify as authentic and proceeded to decide the appeal on the merits, ultimately affirming the Claims Commission's dismissal.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "tort",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1625/Moses_V_State_USA_25_February_2026.pdf"
+        },
+        {
+          "id": "femhealth-usa-carafem-v-rickey-nelson-williams-2026-01-23",
+          "name": "Femhealth USA Carafem v. Rickey Nelson Williams",
+          "court": "M.D. Tennessee",
+          "judge": "",
+          "date": "2026-01-23",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Legal Norm | Defendants included fabricated statutory language in their response; the Court identified it as fabricated, struck those portions, and refused to consider them. Outcome: Arguments Struck; Warning.",
+          "sanction_types": [
+            "warning",
+            "struck-filing"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1378/Femhealth_v._Williams_USA_23_January_2026.pdf"
+        },
+        {
+          "id": "shields-v-first-financial-2025-11-21",
+          "name": "Shields v. First Financial",
+          "court": "Tennessee",
+          "judge": "",
+          "date": "2025-11-21",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Doe v. Roe, No. M2018-01746-COA-R3-CV (Tenn. Ct. App. 2019) in Plaintiffs Motion for Limited Discovery Pg. 5. There is no Doe v. Roe case in the Tennessee Court of Appeals in 2019 and No. M2018-01746-COA-R3-CV returns Jones v.\r\nJones, No. M201801746COAR3CV, 2019 WL 1036077 (Tenn. Ct. App. Mar. 5, \r\n2019). Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1435/Raymond_Alan_Shields_v._First_Financial_USA_21_November_2025.pdf"
+        },
+        {
+          "id": "jeremie-montgomery-v-afl-cio-2025-11-14",
+          "name": "Jeremie Montgomery v. AFL-CIO",
+          "court": "M.D. Tennessee",
+          "judge": "",
+          "date": "2025-11-14",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited 'EEOC v. Ironworkers Local 28, 2012 WL 4339035 (S.D.N.Y. 2012)' as supporting authority; court stated the citation was incorrect and not located. See beginning of judgment: \"Editor's Note: This decision contains discussion of citation references that are incorrect or do not actually exist. These invalid citations appeared in the original court opinion and have been preserved as written since they are part of the official record. Any links to these invalid citations have been removed.\"",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1037/Montgomery_v._AFL-CIO_USA_14_November_2025.pdf"
+        },
+        {
+          "id": "jamison-warfield-v-wn-morehouse-truck-line-inc-2025-11-06",
+          "name": "Jamison Warfield v. W.N. Morehouse Truck Line, Inc.",
+          "court": "E.D. Tennessee",
+          "judge": "",
+          "date": "2025-11-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Morehouse pointed out that Warfield's briefs relied on incorrect and nonexistent case citations; the Court acknowledged the allegation but did not analyze specific fabricated citations. Morehouse replied that Warfield's filings relied on incorrect and nonexistent case citations; the Court noted that allegation but did not impose sanctions and dismissed the case for lack of personal jurisdiction.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/980/Warfield_v._Morehouse_Truck_Line_USA_6_November_2025.pdf"
+        },
+        {
+          "id": "mid-america-apartment-communities-inc-v-dennis-michael-philipson-2025-09-11",
+          "name": "Mid-America Apartment Communities, Inc. v. Dennis Michael Philipson",
+          "court": "W.D. Tennessee",
+          "judge": "",
+          "date": "2025-09-11",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Pro se defendant cited 'First Nat'l Bank of Polk Cnty. v. Goss, No. E2008-01530-COA-R3-CV, 2009 WL 2046052 (Tenn. Ct. App. July 15, 2009)' and provided a quoted passage; the court found that citation does not exist as cited and the quoted language is not in the real 1995 Goss opinion, concluding the citation and quote were likely fabricated by AI. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/781/MID-AMERICA_APARTMENT_COMMUNITIES_INC_Plaintiff_v_DENNIS_MICHAEL_PHILIPSON_Defendant.pdf"
+        },
+        {
+          "id": "axis-dynamics-inc-v-knox-county-tennessee-2025-07-29",
+          "name": "Axis Dynamics, Inc. v. Knox County, Tennessee",
+          "court": "E.D. Tennessee",
+          "judge": "",
+          "date": "2025-07-29",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Legal Norm | Plaintiffs cited Ala. Code § 7-5-116(4); the court found no such subsection exists and that §7-5-116 does not address third-party rights. Outcome: Admonishment and Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2102/Axis_Dynamics_Inc_v_Knox_County_Tennessee_USA_29_July_2025.pdf"
+        }
+      ]
+    },
+    {
       "state": "CT",
       "count": 16,
       "total": 5000,
@@ -18816,356 +19188,6 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/465/Berry_v._Stewart_D._Kansas_14_November_2024.pdf"
-        }
-      ]
-    },
-    {
-      "state": "TN",
-      "count": 15,
-      "total": 1,
-      "severities": {
-        "low": 13,
-        "high": 1,
-        "medium": 1
-      },
-      "cases": [
-        {
-          "id": "harding-place-multifamily-partners-v-samuel-robinson-2026-07-29",
-          "name": "Harding Place Multifamily Partners v. Samuel Robinson",
-          "court": "CA Tennessee",
-          "judge": "",
-          "date": "2026-07-29",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant cited 'First Tenn. Bank Nat’l Ass’n v. McClure, 199 S.W.3d 429, 432 (Tenn. Ct. App. 2005),' but the citation points to an unrelated Texas opinion and the real McClure decision is from 1990 (No. 169, 1990 WL 6378); court treated this as an invented/misleading citation.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "landlord-tenant",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2728/Harding_Place_Multifamily_Partners_LLC_Emers_DJju7pu._Samuel_Robinson_USA_30_July_2026.pdf"
-        },
-        {
-          "id": "merritt-v-moore-2026-07-21",
-          "name": "Merritt v. Moore",
-          "court": "CA Tennessee",
-          "judge": "",
-          "date": "2026-07-21",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant's table of authorities lists at least one case authority that the court could not locate and appears to be nonexistent. Outcome: Appeal dismissed and issues deemed waived in part because the brief contained inaccurate authorities.",
-          "sanction_types": [
-            "case-dismissed"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "civil-rights",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2685/KENNETH_MERRITT_v_BETTY_THOMAS_MOORE_USA_21_July_2026.pdf"
-        },
-        {
-          "id": "bailey-v-sedgwick-claims-management-services-inc-2026-06-08",
-          "name": "Bailey v. Sedgwick Claims Management Services, Inc.",
-          "court": "W.D. Tennessee",
-          "judge": "",
-          "date": "2026-06-08",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Plaintiff's initial motion included citations to cases that did not exist; the Court found these likely resulted from AI hallucination and required corrected citations. Outcome: Order to correct motion.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2370/Bailey_v._Sedgwick_USA_June_2026.pdf"
-        },
-        {
-          "id": "reaves-law-firm-pllc-v-baker-donelson-bearman-caldwell-berkowitz-pc-et-al-2026-06-02",
-          "name": "Reaves Law Firm, PLLC v. Baker, Donelson, Bearman, Caldwell & Berkowitz, PC, et al.",
-          "court": "W.D. Tennessee",
-          "judge": "",
-          "date": "2026-06-02",
-          "amount": 1,
-          "amount_display": "$1",
-          "severity": "high",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited 'Press v. Vanderbilt University' for actual malice; court could find no such case and the citation led to an SEC No-Action letter instead. Outcome: Adverse Costs Order; Bar Referral.",
-          "sanction_types": [
-            "monetary",
-            "bar-referral",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "bar-referral",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2257/Reaves_Law_Firm_v._Baker_USA_2_June_2026.pdf"
-        },
-        {
-          "id": "simmons-v-shahidul-islam-2026-05-21",
-          "name": "Simmons v. Shahidul Islam",
-          "court": "CA Tennessee",
-          "judge": "",
-          "date": "2026-05-21",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant's brief included case citations that do not appear to exist; the court labeled these as AI 'hallucinations' and found they did not support appellant's propositions.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "tort",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2177/TRAY_SIMMONS_v_DR_SHAHIDUL_ISLAM_ET_AL_USA_21_May_2026.pdf"
-        },
-        {
-          "id": "pate-v-cmg-mortgage-inc-et-al-2026-04-28",
-          "name": "Pate v. CMG Mortgage, Inc., et al.",
-          "court": "E.D. Tennessee",
-          "judge": "",
-          "date": "2026-04-28",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiffs cited a non-existent case in their filings; the Court identified the citation as erroneous and noted Plaintiffs' errata. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2043/Pete_v._CMG_Mortgage_USA_28_April_2026.pdf"
-        },
-        {
-          "id": "edward-reynolds-v-progressive-technologies-inc-2026-03-30",
-          "name": "Edward Reynolds v. Progressive Technologies, Inc.",
-          "court": "W.D. Tennessee",
-          "judge": "",
-          "date": "2026-03-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited multiple district-court decisions to argue that courts routinely strike overlength briefs; the Court found those cited cases either do not exist or are misattributed. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1880/Reynolds_v_Progressive_Technologies_USA_30_March_2026.pdf"
-        },
-        {
-          "id": "randel-edward-page-jr-v-apperson-crump-2026-03-30",
-          "name": "Randel Edward Page, Jr. v. Apperson Crump",
-          "court": "W.D. Tennessee",
-          "judge": "",
-          "date": "2026-03-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Appellant relied on a second nonexistent case citation in his motion for summary reversal; the Court's research confirmed the citation does not exist. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "administrative",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1915/Page_v._Apperson_USA_30_March_2026.pdf"
-        },
-        {
-          "id": "moses-v-state-2026-02-25",
-          "name": "Moses v. State",
-          "court": "CA Tennessee",
-          "judge": "",
-          "date": "2026-02-25",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant's brief contained at least one fictitious case citation; the court stated it would disregard any authorities it could not verify as authentic. The court observed that Moses' brief contained several citation errors and at least one fictitious case. The court stated it would disregard any legal authorities it could not verify as authentic and proceeded to decide the appeal on the merits, ultimately affirming the Claims Commission's dismissal.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "tort",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1625/Moses_V_State_USA_25_February_2026.pdf"
-        },
-        {
-          "id": "femhealth-usa-carafem-v-rickey-nelson-williams-2026-01-23",
-          "name": "Femhealth USA Carafem v. Rickey Nelson Williams",
-          "court": "M.D. Tennessee",
-          "judge": "",
-          "date": "2026-01-23",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Legal Norm | Defendants included fabricated statutory language in their response; the Court identified it as fabricated, struck those portions, and refused to consider them. Outcome: Arguments Struck; Warning.",
-          "sanction_types": [
-            "warning",
-            "struck-filing"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1378/Femhealth_v._Williams_USA_23_January_2026.pdf"
-        },
-        {
-          "id": "shields-v-first-financial-2025-11-21",
-          "name": "Shields v. First Financial",
-          "court": "Tennessee",
-          "judge": "",
-          "date": "2025-11-21",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Doe v. Roe, No. M2018-01746-COA-R3-CV (Tenn. Ct. App. 2019) in Plaintiffs Motion for Limited Discovery Pg. 5. There is no Doe v. Roe case in the Tennessee Court of Appeals in 2019 and No. M2018-01746-COA-R3-CV returns Jones v.\r\nJones, No. M201801746COAR3CV, 2019 WL 1036077 (Tenn. Ct. App. Mar. 5, \r\n2019). Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1435/Raymond_Alan_Shields_v._First_Financial_USA_21_November_2025.pdf"
-        },
-        {
-          "id": "jeremie-montgomery-v-afl-cio-2025-11-14",
-          "name": "Jeremie Montgomery v. AFL-CIO",
-          "court": "M.D. Tennessee",
-          "judge": "",
-          "date": "2025-11-14",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited 'EEOC v. Ironworkers Local 28, 2012 WL 4339035 (S.D.N.Y. 2012)' as supporting authority; court stated the citation was incorrect and not located. See beginning of judgment: \"Editor's Note: This decision contains discussion of citation references that are incorrect or do not actually exist. These invalid citations appeared in the original court opinion and have been preserved as written since they are part of the official record. Any links to these invalid citations have been removed.\"",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1037/Montgomery_v._AFL-CIO_USA_14_November_2025.pdf"
-        },
-        {
-          "id": "jamison-warfield-v-wn-morehouse-truck-line-inc-2025-11-06",
-          "name": "Jamison Warfield v. W.N. Morehouse Truck Line, Inc.",
-          "court": "E.D. Tennessee",
-          "judge": "",
-          "date": "2025-11-06",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Morehouse pointed out that Warfield's briefs relied on incorrect and nonexistent case citations; the Court acknowledged the allegation but did not analyze specific fabricated citations. Morehouse replied that Warfield's filings relied on incorrect and nonexistent case citations; the Court noted that allegation but did not impose sanctions and dismissed the case for lack of personal jurisdiction.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/980/Warfield_v._Morehouse_Truck_Line_USA_6_November_2025.pdf"
-        },
-        {
-          "id": "mid-america-apartment-communities-inc-v-dennis-michael-philipson-2025-09-11",
-          "name": "Mid-America Apartment Communities, Inc. v. Dennis Michael Philipson",
-          "court": "W.D. Tennessee",
-          "judge": "",
-          "date": "2025-09-11",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Pro se defendant cited 'First Nat'l Bank of Polk Cnty. v. Goss, No. E2008-01530-COA-R3-CV, 2009 WL 2046052 (Tenn. Ct. App. July 15, 2009)' and provided a quoted passage; the court found that citation does not exist as cited and the quoted language is not in the real 1995 Goss opinion, concluding the citation and quote were likely fabricated by AI. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/781/MID-AMERICA_APARTMENT_COMMUNITIES_INC_Plaintiff_v_DENNIS_MICHAEL_PHILIPSON_Defendant.pdf"
-        },
-        {
-          "id": "axis-dynamics-inc-v-knox-county-tennessee-2025-07-29",
-          "name": "Axis Dynamics, Inc. v. Knox County, Tennessee",
-          "court": "E.D. Tennessee",
-          "judge": "",
-          "date": "2025-07-29",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Legal Norm | Plaintiffs cited Ala. Code § 7-5-116(4); the court found no such subsection exists and that §7-5-116 does not address third-party rights. Outcome: Admonishment and Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2102/Axis_Dynamics_Inc_v_Knox_County_Tennessee_USA_29_July_2025.pdf"
         }
       ]
     },
@@ -23250,7 +23272,7 @@
     }
   ],
   "by_week": {
-    "2026-W32": 1,
+    "2026-W32": 2,
     "2026-W31": 28,
     "2026-W30": 18,
     "2026-W29": 28,
@@ -23383,7 +23405,7 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-08": 1,
+    "2026-08": 2,
     "2026-07": 111,
     "2026-06": 123,
     "2026-05": 148,
@@ -23428,12 +23450,12 @@
     "2023": 16,
     "2024": 59,
     "2025": 828,
-    "2026": 944
+    "2026": 945
   },
   "by_tool": {
+    "Unidentified": 389,
     "Open Law; Claude; ChatGPT": 1,
     "AI (implied, unspecified)": 1243,
-    "Unidentified": 388,
     "ChatGPT": 101,
     "Claude AI": 1,
     "LegalPA": 1,
@@ -23530,9 +23552,9 @@
     "Google Bard": 1
   },
   "by_circuit": {
+    "6th Circuit": 103,
     "2nd Circuit": 137,
     "5th Circuit": 132,
-    "6th Circuit": 102,
     "9th Circuit": 290,
     "10th Circuit": 113,
     "7th Circuit": 110,
@@ -23591,7 +23613,7 @@
     },
     {
       "week": "2026-W32",
-      "count": 1
+      "count": 2
     }
   ]
 }

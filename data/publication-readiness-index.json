@@ -1,14 +1,18 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "9ea370d67823ac236b0935189639c327d2beb89d1487b6551607be413ac0d147",
-  "corpus_checked": "2026-08-07",
-  "total_cases": 1847,
+  "dataset_checksum": "e9c3927a914a466d2eb9f5010f853b3a09a0946b1a0761cfa5e5d5ad92674c23",
+  "corpus_checked": "2026-08-08",
+  "total_cases": 1848,
   "tiers": {
-    "index-ready": 1831,
+    "index-ready": 1832,
     "enrichment-ready": 13,
     "research-only": 3
   },
   "by_slug": {
+    "in-re-bfi-waste-sys-of-tenn-2026-08-06": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "barteca-holdings-v-tacobarn-2026-08-04": {
       "tier": "index-ready",
       "score": 86

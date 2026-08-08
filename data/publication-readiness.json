@@ -1,26 +1,123 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "9ea370d67823ac236b0935189639c327d2beb89d1487b6551607be413ac0d147",
-  "corpus_checked": "2026-08-07",
-  "total_cases": 1847,
-  "total_assessments": 1847,
+  "dataset_checksum": "e9c3927a914a466d2eb9f5010f853b3a09a0946b1a0761cfa5e5d5ad92674c23",
+  "corpus_checked": "2026-08-08",
+  "total_cases": 1848,
+  "total_assessments": 1848,
   "tiers": {
-    "index-ready": 1831,
+    "index-ready": 1832,
     "enrichment-ready": 13,
     "research-only": 3
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 99,
-    "operational-lesson-not-recorded": 1110,
+    "operational-lesson-not-recorded": 1111,
     "outcome-not-recorded": 367,
-    "publication-review-pending": 1847,
+    "publication-review-pending": 1848,
     "source-link-missing": 2,
-    "specific-ai-tool-not-established": 1632,
+    "specific-ai-tool-not-established": 1633,
     "summary-needs-detail": 747,
     "summary-too-brief": 13
   },
   "records": [
+    {
+      "id": "in-re-bfi-waste-sys-of-tenn-2026-08-06",
+      "slug": "in-re-bfi-waste-sys-of-tenn-2026-08-06",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 935,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
     {
       "id": "barteca-holdings-v-tacobarn-2026-08-04",
       "slug": "barteca-holdings-v-tacobarn-2026-08-04",

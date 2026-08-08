@@ -1,5 +1,61 @@
 [
   {
+    "id": "in-re-bfi-waste-sys-of-tenn-2026-08-06",
+    "slug": "in-re-bfi-waste-sys-of-tenn-2026-08-06",
+    "case_name": "In re BFI Waste Sys. of Tenn.",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "False Quotes: Case Law | Filed brief contained quotations that did not exist—court determined quoted material attributed to cases was fabricated and unsupported. Outcome: Public reprimand and $1,500 monetary sanction payable to the Clerk for a Rule 11 violation related to hallucinated authorities.. The Court found that a filed brief (Doc. No. 293), drafted solely by attorney Louis W. Ringger III, contained hallucinated quotations and misleading or nonexistent legal citations produced via artificial-intelligence tools that Ringger failed to verify. The Court ordered a show-cause, Ringger admitted the deficiency, apologized, and proposed corrective measures. Applying Rule 11 principles, the Court publicly reprimanded Ringger and imposed a $1,500 sanction (mitigated due to apology, lack of prior history, and remedial steps), explaining that attorneys remain ultimately responsible for verifying authorities even when using AI.",
+    "direct_answer": "False Quotes: Case Law | Filed brief contained quotations that did not exist—court determined quoted material attributed to cases was fabricated and unsupported. Outcome: Public reprimand and $1,500 monetary sanction payable to the Clerk for a Rule 11 violation related to hallucinated authorities.. The Court found that a filed brief (Doc. No. 293), drafted solely by attorney Louis W. Ringger III, contained hallucinated quotations and misleading or nonexistent legal citations produced via artificial-intelligence tools that Ringger failed to verify. The Court ordered a show-cause, Ringger admitted the deficiency, apologized, and proposed corrective measures. Applying Rule 11 principles, the Court publicly reprimanded Ringger and imposed a $1,500 sanction (mitigated due to apology, lack of prior history, and remedial steps), explaining that attorneys remain ultimately responsible for verifying authorities even when using AI.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Public reprimand and $1,500 monetary sanction payable to the Clerk for a Rule 11 violation related to hallucinated authorities. in M.D. Tenn.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Public reprimand and $1,500 monetary sanction payable to the Clerk for a Rule 11 violation related to hallucinated authorities.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2765/In_re_BFI_Waste_Sys._of_Tenn._2026_U.S._Dist._LEXIS_175482.Pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "M.D. Tenn.",
+      "jurisdiction": "federal",
+      "state": "TN",
+      "country": "US",
+      "circuit": "6th Circuit",
+      "judge": null,
+      "date": "2026-08-06",
+      "ai_tool": "Unidentified",
+      "outcome": "Public reprimand and $1,500 monetary sanction payable to the Clerk for a Rule 11 violation related to hallucinated authorities.",
+      "amount": 1,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "barteca-holdings-v-tacobarn-2026-08-04",
     "slug": "barteca-holdings-v-tacobarn-2026-08-04",
     "case_name": "Barteca Holdings v. Tacobarn",

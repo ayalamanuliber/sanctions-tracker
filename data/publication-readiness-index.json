@@ -1,21 +1,77 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "e9c3927a914a466d2eb9f5010f853b3a09a0946b1a0761cfa5e5d5ad92674c23",
-  "corpus_checked": "2026-08-08",
-  "total_cases": 1848,
+  "dataset_checksum": "b7f39f2e04ac773ce1cc0c806ecdd7b8ad104da447fcdaf29e78d5e6e5f1c832",
+  "corpus_checked": "2026-08-09",
+  "total_cases": 1868,
   "tiers": {
-    "index-ready": 1832,
-    "enrichment-ready": 13,
-    "research-only": 3
+    "index-ready": 1849,
+    "enrichment-ready": 15,
+    "research-only": 4
   },
   "by_slug": {
+    "girija-kadlaskar-v-united-states-citizenship-and-immigration-services-2026-08-06": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "in-re-bfi-waste-sys-of-tenn-2026-08-06": {
       "tier": "index-ready",
       "score": 85
     },
+    "isles-v-family-dollar-2026-08-06": {
+      "tier": "enrichment-ready",
+      "score": 70
+    },
+    "mohamed-ali-v-saeed-osman-2026-08-06": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "mary-rose-f-calenzo-v-waste-management-inc-2026-08-05": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "san-antonio-independent-school-district-v-laura-becerra-as-next-friend-of-j-c-2026-08-05": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "ulish-kerry-terrace-booker-iii-v-u-s-bank-national-association-2026-08-05": {
+      "tier": "index-ready",
+      "score": 86
+    },
     "barteca-holdings-v-tacobarn-2026-08-04": {
       "tier": "index-ready",
       "score": 86
+    },
+    "cristancho-et-al-v-swbc-mortgage-corporation-et-al-2026-08-04": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "sorrentino-v-fay-servicing-llc-et-al-2026-08-04": {
+      "tier": "enrichment-ready",
+      "score": 65
+    },
+    "whitehead-v-moore-2026-08-04": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "ali-jabbari-v-parviz-omidvar-et-al-2026-08-03": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "bisher-v-civic-et-al-2026-08-03": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "moore-v-aldridge-pite-llp-2026-08-03": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "perry-v-social-security-administration-commissioner-2026-08-03": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "state-v-davis-2026-08-03": {
+      "tier": "index-ready",
+      "score": 76
     },
     "fernando-justino-santana-v-shook-hardy-bacon-et-al-2026-07-31": {
       "tier": "index-ready",
@@ -24,6 +80,10 @@
     "fjl-v-tgo-2026-07-31": {
       "tier": "index-ready",
       "score": 85
+    },
+    "in-re-mahar-2026-07-31": {
+      "tier": "index-ready",
+      "score": 76
     },
     "kevin-dale-higgins-v-the-state-of-texas-2026-07-31": {
       "tier": "index-ready",
@@ -85,6 +145,10 @@
       "tier": "index-ready",
       "score": 76
     },
+    "terence-a-gragston-v-amazon-llc-2026-07-29": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "alexander-m-v-frank-bisignano-2026-07-28": {
       "tier": "index-ready",
       "score": 76
@@ -128,6 +192,10 @@
     "ponder-v-bcg-equities-llc-2026-07-27": {
       "tier": "index-ready",
       "score": 85
+    },
+    "brantford-city-v-doolittle-2026-oncj-440-2026-07-24": {
+      "tier": "index-ready",
+      "score": 76
     },
     "joann-ledoux-v-outliers-inc-2026-07-24": {
       "tier": "index-ready",
@@ -3197,6 +3265,10 @@
       "tier": "index-ready",
       "score": 86
     },
+    "kenneth-merritt-v-american-home-shield-2026-02-04": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "mitchell-taylor-button-dusty-button-v-sigrid-mccawley-2026-02-04": {
       "tier": "index-ready",
       "score": 81
@@ -5705,6 +5777,10 @@
       "tier": "index-ready",
       "score": 90
     },
+    "karen-tyler-v-attorney-general-of-canada-2025-09-03": {
+      "tier": "index-ready",
+      "score": 86
+    },
     "lockwood-v-icbc-2025-09-03": {
       "tier": "index-ready",
       "score": 85
@@ -6568,6 +6644,10 @@
     "ivins-v-kma-consulting-engineers-ors-2025-06-02": {
       "tier": "index-ready",
       "score": 90
+    },
+    "mandy-pecher-v-josef-gregor-habscheid-2025-06-02": {
+      "tier": "research-only",
+      "score": 70
     },
     "powhatan-county-school-board-v-skinger-et-al-2025-06-02": {
       "tier": "index-ready",

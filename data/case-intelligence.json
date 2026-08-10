@@ -457,7 +457,7 @@
     "slug": "cristancho-et-al-v-swbc-mortgage-corporation-et-al-2026-08-04",
     "case_name": "Cristancho et al. v. SWBC Mortgage Corporation et al.",
     "classification": "adjudicated",
-    "severity": "medium",
+    "severity": "low",
     "summary": "Fabricated: Case Law | Plaintiffs cited Pointe West Center, LLC v. It's Alive, Inc., purportedly supporting a wrongful-initiation-of-foreclosure cause of action; the court found this cite to be fabricated. Outcome: Court identified and rejected fabricated citations (Pointe West and Tractebel), admonished counsel and reminded them of Rule 11 obligations; no professional sanction or monetary penalty imposed.. The court found that Plaintiffs' counsel cited fabricated authorities in their briefing (specifically Pointe West Center, LLC v. It's Alive, Inc. and Tractebel Energy Marketing, Inc. v. E.I. Du Pont De Nemours & Co.), describing the submissions as containing fabricated quotations and assertions. The magistrate judge rejected those citations as fabricated, reminded counsel of their Rule 11 obligations, and relied on the absence of valid authority in granting summary judgment. No professional sanctions or monetary penalties were imposed in this decision.",
     "direct_answer": "Fabricated: Case Law | Plaintiffs cited Pointe West Center, LLC v. It's Alive, Inc., purportedly supporting a wrongful-initiation-of-foreclosure cause of action; the court found this cite to be fabricated. Outcome: Court identified and rejected fabricated citations (Pointe West and Tractebel), admonished counsel and reminded them of Rule 11 obligations; no professional sanction or monetary penalty imposed.. The court found that Plaintiffs' counsel cited fabricated authorities in their briefing (specifically Pointe West Center, LLC v. It's Alive, Inc. and Tractebel Energy Marketing, Inc. v. E.I. Du Pont De Nemours & Co.), describing the submissions as containing fabricated quotations and assertions. The magistrate judge rejected those citations as fabricated, reminded counsel of their Rule 11 obligations, and relied on the absence of valid authority in granting summary judgment. No professional sanctions or monetary penalties were imposed in this decision.",
     "why_it_matters": "This matter connects fake citations and trial with Court identified and rejected fabricated citations (Pointe West and Tractebel), admonished counsel and reminded them of Rule 11 obligations; no professional sanction or monetary penalty imposed. in S.D. Tex. (Galveston Div.). It provides a source-linked baseline for verification, supervision, and response controls.",
@@ -480,7 +480,7 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "S.D. Tex. (Galveston Div.)",
+      "court": "S.D. Texas",
       "jurisdiction": "federal",
       "state": "TX",
       "country": "US",
@@ -488,15 +488,15 @@
       "judge": null,
       "date": "2026-08-04",
       "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Court identified and rejected fabricated citations (Pointe West and Tractebel), admonished counsel and reminded them of Rule 11 obligations; no professional sanction or monetary penalty imposed.",
+      "outcome": "Admonishment",
       "amount": null,
       "professional_sanction": "No",
       "tags": [
         "fake-citations",
+        "contract",
         "trial"
       ],
       "sanction_types": [
-        "monetary",
         "warning"
       ]
     },
@@ -1922,7 +1922,7 @@
     "slug": "terence-a-gragston-v-amazon-llc-2026-07-29",
     "case_name": "Terence A. Gragston v. Amazon LLC",
     "classification": "adjudicated",
-    "severity": "medium",
+    "severity": "low",
     "summary": "Fabricated: Case Law | Pro se plaintiff cited a purported Sixth Circuit opinion to support his argument; the Court found no such case or Westlaw citation and determined the citation was AI‑hallucinated. Outcome: Court issued a formal warning that future reliance on AI‑hallucinated caselaw will result in sanctions, including monetary penalties and possible dismissal with prejudice; no sanction was imposed at this time.. The pro se plaintiff relied on purported Sixth Circuit authority that the Court determined was AI‑hallucinated (a fabricated opinion/citation). The Court's independent review found no case matching the cited docket number or Westlaw citation and formally warned that further reliance on AI‑generated or unverified authorities will result in sanctions (including monetary penalties and dismissal with prejudice). The Court preserved the unverified citations in the record but noted links were unavailable.",
     "direct_answer": "Fabricated: Case Law | Pro se plaintiff cited a purported Sixth Circuit opinion to support his argument; the Court found no such case or Westlaw citation and determined the citation was AI‑hallucinated. Outcome: Court issued a formal warning that future reliance on AI‑hallucinated caselaw will result in sanctions, including monetary penalties and possible dismissal with prejudice; no sanction was imposed at this time.. The pro se plaintiff relied on purported Sixth Circuit authority that the Court determined was AI‑hallucinated (a fabricated opinion/citation). The Court's independent review found no case matching the cited docket number or Westlaw citation and formally warned that further reliance on AI‑generated or unverified authorities will result in sanctions (including monetary penalties and dismissal with prejudice). The Court preserved the unverified citations in the record but noted links were unavailable.",
     "why_it_matters": "This matter connects pro se and fake citations with Court issued a formal warning that future reliance on AI‑hallucinated caselaw will result in sanctions, including monetary penalties and possible dismissal with prejudice; no sanction was imposed at this time. in S.D. Ohio. It provides a source-linked baseline for verification, supervision, and response controls.",
@@ -1953,19 +1953,17 @@
       "judge": null,
       "date": "2026-07-29",
       "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Court issued a formal warning that future reliance on AI‑hallucinated caselaw will result in sanctions, including monetary penalties and possible dismissal with prejudice; no sanction was imposed at this time.",
+      "outcome": "Warning",
       "amount": null,
       "professional_sanction": "No",
       "tags": [
         "pro-se",
         "fake-citations",
+        "employment",
         "trial"
       ],
       "sanction_types": [
-        "monetary",
-        "warning",
-        "case-dismissed",
-        "none-adjudicated"
+        "warning"
       ]
     },
     "publication": {

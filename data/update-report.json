@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-08-10T09:51:06.510Z",
-  "checked_date": "2026-08-10",
+  "checked_at": "2026-08-11T09:16:10.472Z",
+  "checked_date": "2026-08-11",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
   "raw_rows": 1869,
   "imported_records": 1868,
@@ -14,6 +14,6 @@
   "source_link_coverage_pct": 99.8,
   "latest_record_date": "2026-08-06",
   "latest_record_name": "Girija Kadlaskar v. United States Citizenship and Immigration Services",
-  "dataset_checksum": "c7f7df272a9c63b7abefbb00b34523820e8192d2db6e555a7cd7f1be437e588d",
+  "dataset_checksum": "eaabe40eb69553dc30f9a6bbfbec88ba8566174c61bd5da4a3b5994b26f3c945",
   "status": "validated"
 }

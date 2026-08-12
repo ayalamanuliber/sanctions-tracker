@@ -1,5 +1,61 @@
 [
   {
+    "id": "egan-v-commonwealth-of-australia-2026-fca-1104-2026-08-11",
+    "slug": "egan-v-commonwealth-of-australia-2026-fca-1104-2026-08-11",
+    "case_name": "Egan v Commonwealth of Australia [2026] FCA 1104",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "False Quotes: Case Law | Applicant relied on a purported quoted passage attributed to Taylor v Johnson that does not exist; Court checked reports and found the passage absent. Outcome: Court noted and rejected AI-generated erroneous quotations and citations, ignored the applicant's unsolicited post-hearing email, allowed summary judgment for the Respondent; no professional sanction or monetary penalty imposed.. The applicant (self-represented) admitted using generative AI in preparing supplementary submissions and filed a notice of corrections; the Commonwealth identified non-existent authorities and erroneous quotations. The Court found a prominent quoted passage attributed to Taylor v Johnson did not exist, identified other incorrect citations (including Alati v Kruger) and disregarded AI-generated material that was not relied upon. The judge emphasised the duty to verify authorities, struck certain AI-generated passages from consideration (and ignored a gratuitous post-hearing email), but imposed no professional or financial sanction.",
+    "direct_answer": "False Quotes: Case Law | Applicant relied on a purported quoted passage attributed to Taylor v Johnson that does not exist; Court checked reports and found the passage absent. Outcome: Court noted and rejected AI-generated erroneous quotations and citations, ignored the applicant's unsolicited post-hearing email, allowed summary judgment for the Respondent; no professional sanction or monetary penalty imposed.. The applicant (self-represented) admitted using generative AI in preparing supplementary submissions and filed a notice of corrections; the Commonwealth identified non-existent authorities and erroneous quotations. The Court found a prominent quoted passage attributed to Taylor v Johnson did not exist, identified other incorrect citations (including Alati v Kruger) and disregarded AI-generated material that was not relied upon. The judge emphasised the duty to verify authorities, struck certain AI-generated passages from consideration (and ignored a gratuitous post-hearing email), but imposed no professional or financial sanction.",
+    "why_it_matters": "This matter connects pro se and fake citations with Court noted and rejected AI-generated erroneous quotations and citations, ignored the applicant's unsolicited post-hearing email, allowed summary judgment for the Respondent; no professional sanction or monetary penalty imposed. in Federal Court of Australia. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Court noted and rejected AI-generated erroneous quotations and citations, ignored the applicant's unsolicited post-hearing email, allowed summary judgment for the Respondent; no professional sanction or monetary penalty imposed.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2806/Egan_v_Commonwealth_of_Australia_2026_FCA_1104.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Federal Court of Australia",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-11",
+      "ai_tool": "Unidentified",
+      "outcome": "Court noted and rejected AI-generated erroneous quotations and citations, ignored the applicant's unsolicited post-hearing email, allowed summary judgment for the Respondent; no professional sanction or monetary penalty imposed.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "fabricated-quotes",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "girija-kadlaskar-v-united-states-citizenship-and-immigration-services-2026-08-06",
     "slug": "girija-kadlaskar-v-united-states-citizenship-and-immigration-services-2026-08-06",
     "case_name": "Girija Kadlaskar v. United States Citizenship and Immigration Services",
@@ -18849,6 +18905,64 @@
       "limitations": [
         "The specific AI tool used by counsel remains unidentified in the court record."
       ]
+    }
+  },
+  {
+    "id": "erica-whitesock-v-bird-rides-inc-third-lane-mobility-inc-d-b-a-bird-global-inc-and-the-cit-2026-06-08",
+    "slug": "erica-whitesock-v-bird-rides-inc-third-lane-mobility-inc-d-b-a-bird-global-inc-and-the-cit-2026-06-08",
+    "case_name": "Erica Whitesock v. Bird Rides, Inc., Third Lane Mobility, Inc. d/b/a Bird Global, Inc., and The City of Austin",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Fabricated: Legal Norm | Plaintiffs' brief contained a completely fabricated quotation attributed to the Texas Tort Claims Act; counsel admitted it was generated by an AI chatbot and copied without verification; court noted the fabrication. Outcome: Court ordered Mr. Bradford Klager and his law firm Hilliard Law jointly and severally liable for $10,000 in attorney's fees to the City of Austin (and to provide a copy of the Order to his client).. Plaintiffs' response to the City's plea contained a fabricated quotation falsely attributed to the Texas Tort Claims Act; Plaintiffs' counsel Bradford Klager admitted the quote was created by a generative AI chatbot and was copied without verification. The response also mischaracterized CPRC §75.002(d) as waiving governmental immunity when that provision addresses private landowner liability. The City identified these problems; the Court found counsel's conduct improper and awarded $10,000 in attorney's fees against Mr. Klager and his firm as an appropriate sanction.",
+    "direct_answer": "Fabricated: Legal Norm | Plaintiffs' brief contained a completely fabricated quotation attributed to the Texas Tort Claims Act; counsel admitted it was generated by an AI chatbot and copied without verification; court noted the fabrication. Outcome: Court ordered Mr. Bradford Klager and his law firm Hilliard Law jointly and severally liable for $10,000 in attorney's fees to the City of Austin (and to provide a copy of the Order to his client).. Plaintiffs' response to the City's plea contained a fabricated quotation falsely attributed to the Texas Tort Claims Act; Plaintiffs' counsel Bradford Klager admitted the quote was created by a generative AI chatbot and was copied without verification. The response also mischaracterized CPRC §75.002(d) as waiving governmental immunity when that provision addresses private landowner liability. The City identified these problems; the Court found counsel's conduct improper and awarded $10,000 in attorney's fees against Mr. Klager and his firm as an appropriate sanction.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Court ordered Mr. Bradford Klager and his law firm Hilliard Law jointly and severally liable for $10,000 in attorney's fees to the City of Austin (and to provide a copy of the Order to his client). in 250th Judicial District Court (Travis County, TX). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Court ordered Mr. Bradford Klager and his law firm Hilliard Law jointly and severally liable for $10,000 in attorney's fees to the City of Austin (and to provide a copy of the Order to his client).. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2807/Whitesock_v._City_of_Austin_USA_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "250th Judicial District Court (Travis County, TX)",
+      "jurisdiction": "state",
+      "state": "TX",
+      "country": "US",
+      "circuit": "5th Circuit",
+      "judge": null,
+      "date": "2026-06-08",
+      "ai_tool": "Unidentified",
+      "outcome": "Court ordered Mr. Bradford Klager and his law firm Hilliard Law jointly and severally liable for $10,000 in attorney's fees to the City of Austin (and to provide a copy of the Order to his client).",
+      "amount": 1,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

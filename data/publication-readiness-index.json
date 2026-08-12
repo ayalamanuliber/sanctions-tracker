@@ -1,14 +1,18 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "eaabe40eb69553dc30f9a6bbfbec88ba8566174c61bd5da4a3b5994b26f3c945",
-  "corpus_checked": "2026-08-11",
-  "total_cases": 1868,
+  "dataset_checksum": "856e7231d6e9527ea060f5f4784ae3825655bde77052383a5d6284de25198a9f",
+  "corpus_checked": "2026-08-12",
+  "total_cases": 1870,
   "tiers": {
-    "index-ready": 1849,
+    "index-ready": 1851,
     "enrichment-ready": 15,
     "research-only": 4
   },
   "by_slug": {
+    "egan-v-commonwealth-of-australia-2026-fca-1104-2026-08-11": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "girija-kadlaskar-v-united-states-citizenship-and-immigration-services-2026-08-06": {
       "tier": "index-ready",
       "score": 85
@@ -880,6 +884,10 @@
     "bailey-v-sedgwick-claims-management-services-inc-2026-06-08": {
       "tier": "index-ready",
       "score": 81
+    },
+    "erica-whitesock-v-bird-rides-inc-third-lane-mobility-inc-d-b-a-bird-global-inc-and-the-cit-2026-06-08": {
+      "tier": "index-ready",
+      "score": 85
     },
     "sinclair-v-capital-one-financial-corp-2026-06-08": {
       "tier": "index-ready",

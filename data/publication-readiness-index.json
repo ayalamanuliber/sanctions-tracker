@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "856e7231d6e9527ea060f5f4784ae3825655bde77052383a5d6284de25198a9f",
-  "corpus_checked": "2026-08-12",
+  "dataset_checksum": "d4a338adb81d98b479cb78a610e49c7868c50e02d2a5fd1d670e7fbb371ab7f7",
+  "corpus_checked": "2026-08-13",
   "total_cases": 1870,
   "tiers": {
     "index-ready": 1851,
@@ -11,7 +11,7 @@
   "by_slug": {
     "egan-v-commonwealth-of-australia-2026-fca-1104-2026-08-11": {
       "tier": "index-ready",
-      "score": 85
+      "score": 80
     },
     "girija-kadlaskar-v-united-states-citizenship-and-immigration-services-2026-08-06": {
       "tier": "index-ready",
@@ -531,7 +531,7 @@
     },
     "kevin-leiske-et-al-v-robert-gregory-kidd-et-al-2026-07-01": {
       "tier": "index-ready",
-      "score": 85
+      "score": 90
     },
     "bfg-corporation-v-pierce-re-holdings-et-al-2026-06-30": {
       "tier": "index-ready",
@@ -885,7 +885,7 @@
       "tier": "index-ready",
       "score": 81
     },
-    "erica-whitesock-v-bird-rides-inc-third-lane-mobility-inc-d-b-a-bird-global-inc-and-the-cit-2026-06-08": {
+    "erica-whitesock-v-bird-global-inc-and-the-city-of-austin-2026-06-08": {
       "tier": "index-ready",
       "score": 85
     },

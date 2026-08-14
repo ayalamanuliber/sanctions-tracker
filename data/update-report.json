@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-08-13T09:35:18.470Z",
-  "checked_date": "2026-08-13",
+  "checked_at": "2026-08-14T09:29:19.407Z",
+  "checked_date": "2026-08-14",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
   "raw_rows": 1871,
   "imported_records": 1870,
@@ -14,6 +14,6 @@
   "source_link_coverage_pct": 99.8,
   "latest_record_date": "2026-08-11",
   "latest_record_name": "Egan v Commonwealth of Australia [2026] FCA 1104",
-  "dataset_checksum": "d4a338adb81d98b479cb78a610e49c7868c50e02d2a5fd1d670e7fbb371ab7f7",
+  "dataset_checksum": "4e9a0bbbcc637baaf81f619eb121fb2e96957e372cea5202f0070a5560331d5f",
   "status": "validated"
 }

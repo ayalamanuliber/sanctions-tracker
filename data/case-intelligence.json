@@ -164590,7 +164590,7 @@
       "judge": null,
       "date": "2025-05-12",
       "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Case dismissed, in part as a sanction for fabrication of legal authorities",
+      "outcome": "Case stayed, in part as a sanction for fabrication of legal authorities",
       "amount": null,
       "professional_sanction": "No",
       "tags": [
@@ -164601,7 +164601,7 @@
         "trial"
       ],
       "sanction_types": [
-        "case-dismissed"
+        "none-adjudicated"
       ]
     },
     "publication": {

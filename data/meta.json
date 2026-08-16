@@ -1,37 +1,38 @@
 {
-  "last_updated": "2026-08-15",
-  "last_checked": "2026-08-15",
-  "last_checked_at": "2026-08-15T08:47:25.718Z",
-  "latest_record_date": "2026-08-11",
+  "last_updated": "2026-08-16",
+  "last_checked": "2026-08-16",
+  "last_checked_at": "2026-08-16T08:48:46.586Z",
+  "latest_record_date": "2026-08-13",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 1871,
-  "source_linked_count": 1867,
+  "source_record_count": 1913,
+  "source_linked_count": 1909,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 1,
-  "dataset_checksum": "82d8cb8a6750895a9e5f1c5d08661c7aaf13e572637d50ef3205e2865bc7d8eb",
-  "total_cases": 1870,
-  "us_cases": 1298,
-  "us_adjudicated": 1296,
-  "us_alleged_only": 2,
-  "countries_tracked": 42,
-  "enriched_count": 1870,
+  "dataset_checksum": "4c84d5581e3a3a405212b93ab3ca0fd2083e93b4be21883e16e70a19f3dffa67",
+  "total_cases": 1912,
+  "us_cases": 1313,
+  "us_adjudicated": 1310,
+  "us_alleged_only": 3,
+  "countries_tracked": 43,
+  "enriched_count": 1912,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
-  "monetary_sanctions_total_usd": 1684316,
+  "monetary_sanctions_total_usd": 1684318,
   "largest_single_sanction": 282508,
-  "avg_sanction": 7762,
+  "avg_sanction": 7691,
   "severity_counts": {
-    "low": 1351,
-    "high": 174,
-    "medium": 306,
+    "high": 188,
+    "low": 1371,
+    "medium": 314,
     "career-ending": 39
   },
   "by_country": {
+    "Brazil": 31,
+    "Canada": 211,
+    "US": 1313,
     "Australia": 98,
-    "US": 1298,
     "South Africa": 6,
-    "Canada": 206,
     "Netherlands": 7,
     "China": 1,
     "India": 13,
@@ -48,7 +49,6 @@
     "Russian Federation": 1,
     "Singapore": 7,
     "New Zealand": 7,
-    "Brazil": 10,
     "Ireland": 6,
     "Colombia": 3,
     "Portugal": 1,
@@ -61,6 +61,7 @@
     "Czech Republic": 2,
     "Germany": 8,
     "Qatar": 1,
+    "BRAZIL": 1,
     "Austria": 2,
     "International Arbitration": 1,
     "Hong Kong": 2,
@@ -74,15 +75,38 @@
   "by_state": [
     {
       "state": "CA",
-      "count": 131,
+      "count": 132,
       "total": 226554,
       "severities": {
+        "low": 78,
         "medium": 30,
-        "low": 77,
         "high": 21,
         "career-ending": 3
       },
       "cases": [
+        {
+          "id": "fa-alagilagi-meni-siliga-v-a-s-contractor-inc-et-al-2026-08-11",
+          "name": "Fa’alagilagi Meni-Siliga v. A’s Contractor, Inc., et al.",
+          "court": "Los Angeles SC, California",
+          "judge": "",
+          "date": "2026-08-11",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Irys",
+          "summary": "Fabricated: Case Law | Cited in State Farm's MIL No. 1; later admitted by counsel to be a non-existent, AI-generated case citation. Defense counsel (State Farm) admitted that use of the AI tool Irys produced multiple non-existent case citations across its motions in limine and that some quotations were not attributable to the cited authorities. Opposing counsel discovered the issues, informed the court, and defense counsel investigated, identified seven fabricated case citations and several misattributed/false quotes, apologized, and filed redlined corrections. No sanctions or penalties are recorded in the declaration.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2847/Jacqueline_Robinson_decl_re_Irys.pdf"
+        },
         {
           "id": "ali-jabbari-v-parviz-omidvar-et-al-2026-08-03",
           "name": "Ali Jabbari v. Parviz Omidvar, et al.",
@@ -1185,42 +1209,42 @@
             "appellate"
           ],
           "source_url": "https://www.leagle.com/decision/incaco20260519013"
-        },
-        {
-          "id": "efd-usa-inc-et-al-v-band-pro-film-and-digital-inc-et-al-2026-02-18",
-          "name": "EFD USA, INC., et al. v. Band Pro Film and Digital, Inc., et al.",
-          "court": "CA California",
-          "judge": "",
-          "date": "2026-02-18",
-          "amount": 900,
-          "amount_display": "$900",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Appellant quoted Lilienthal as stating tests for distinct claims ('(1) times of services performed; (2) specific obligations involved; and (3) resulting damages'), but the quotation does not appear in Lilienthal and the case does not address settlement offsets. Outcome: Monetary Sanction.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1552/EFD_USA_v_BAND_PRO_FILM_AND_DIGITAL_IN_USA_18_February_2026.pdf"
         }
       ]
     },
     {
       "state": "NY",
-      "count": 116,
+      "count": 117,
       "total": 157013,
       "severities": {
-        "low": 80,
+        "low": 81,
         "high": 13,
         "medium": 22,
         "career-ending": 1
       },
       "cases": [
+        {
+          "id": "brown-v-real-estate-capital-of-america-et-al-2026-08-07",
+          "name": "Brown v. Real Estate Capital of America et al.",
+          "court": "SC New York",
+          "judge": "",
+          "date": "2026-08-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Plaintiffs' opposition contains a quotation attributed to a cited case that does not appear in that case; movants allege the passage was fabricated (likely by generative AI) and used to support an argument. Outcome: No sanctions.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2841/Brown_v_Real_Estate_Capital_of_Am._LLC_USA_7_August_2026.pdf"
+        },
         {
           "id": "mary-rose-f-calenzo-v-waste-management-inc-2026-08-05",
           "name": "Mary-Rose F. Calenzo v. Waste Management, Inc.",
@@ -2314,28 +2338,6 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/2334/07_-_HF_v_State.pdf"
-        },
-        {
-          "id": "matter-of-zareh-2026-02-10",
-          "name": "Matter of Zareh",
-          "court": "SC New York",
-          "judge": "",
-          "date": "2026-02-10",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "ChatGPT",
-          "summary": "Fabricated: Case Law | Brief contained numerous citation errors, including internally inconsistent and unverifiable citations; District Court concluded some citations were AI-generated and could not be verified. Outcome: Respondent publicly censured. Respondent filed an opposition brief in federal litigation containing numerous citation errors and misstatements of law. The District Court found the brief AI-generated, noting ChatGPT described at least one cited case in the same erroneous manner, and admonished counsel; this Court imposed reciprocal discipline in the form of a public censure for failure to supervise and for filing an unreviewed AI-drafted brief.",
-          "sanction_types": [
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1816/Matter_of_Zareh.pdf"
         }
       ]
     },
@@ -3470,15 +3472,61 @@
     },
     {
       "state": "FL",
-      "count": 62,
+      "count": 63,
       "total": 99019,
       "severities": {
-        "medium": 14,
+        "high": 8,
         "low": 39,
-        "high": 7,
+        "medium": 14,
         "career-ending": 2
       },
       "cases": [
+        {
+          "id": "jmor-properties-v-artist-alley-townhomes-et-al-2026-08-12",
+          "name": "JMOR Properties v. Artist Alley Townhomes et al.",
+          "court": "CA Florida (4d)",
+          "judge": "",
+          "date": "2026-08-12",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Petition cited a non-existent opinion allegedly from this Court; court identified it as fabricated authority and noted it does not exist. Outcome: Bar Referral.",
+          "sanction_types": [
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "bar-referral",
+            "other",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2839/JMOR_Properties_LLC_v._Artist_Alley_Townhomes_LLC_et_al._USA_12_August_2026.pdf"
+        },
+        {
+          "id": "rose-v-arts-bonita-inc-2026-08-12",
+          "name": "Rose v. Arts Bonita, Inc.",
+          "court": "M.D. Florida",
+          "judge": "",
+          "date": "2026-08-12",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited a nonexistent case; defendant flagged it and plaintiff withdrew the citation as \"incorrect or unverifiable.\" The Court characterized this as a fabricated citation and issued an admonishment. Outcome: Admonishment. Earlier Warning is here.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2831/Rose_v_Arts_Bonita_Inc_USA_12_August_2026.pdf"
+        },
         {
           "id": "rose-lannquist-gouldy-v-timothy-m-chiasson-et-al-2026-07-22",
           "name": "Rose Lannquist Gouldy v. Timothy M. Chiasson, et al.",
@@ -3546,28 +3594,6 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/2634/Whyte_et_al_v._MK_United_USA_13_July_2026.pdf"
-        },
-        {
-          "id": "julia-rose-v-arts-bonita-inc-et-al-2026-07-12",
-          "name": "Julia Rose v. Arts Bonita, Inc., et al.",
-          "court": "M.D. Florida",
-          "judge": "",
-          "date": "2026-07-12",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent decision 'Prousalis v. Bert's Bikes & Fitness, No. 8:18-cv-1234, 2019 WL 13202785 (M.D. Fla. 2019)', which the Court identified as fabricated. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2613/Rose_v._Ars_Bonita_USA_12_July_2026.pdf"
         },
         {
           "id": "cynthia-hulse-gibson-v-charlie-hulse-2026-07-08",
@@ -4593,41 +4619,66 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/711/Monster_v._Owoc.pdf"
-        },
+        }
+      ]
+    },
+    {
+      "state": "IL",
+      "count": 59,
+      "total": 101603,
+      "severities": {
+        "low": 37,
+        "medium": 15,
+        "high": 6,
+        "career-ending": 1
+      },
+      "cases": [
         {
-          "id": "goya-v-hayashida-2025-08-13",
-          "name": "Goya v. Hayashida",
-          "court": "CA Florida (4d)",
+          "id": "in-re-marriage-of-katelyn-jill-tate-2026-08-11",
+          "name": "In re Marriage of Katelyn Jill Tate",
+          "court": "CA Illinois (5d)",
           "judge": "",
-          "date": "2025-08-13",
+          "date": "2026-08-11",
           "amount": null,
           "amount_display": "",
           "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law Outcome: Warning. \" We have the authority to sanction Wife under Florida Rule of Appellate Procedure 9.410(a) for failure to comply with Florida Rule of Appellate Procedure 9.210(c). See Gutierrez v. Gutierrez, 399 So. 3d 1185, 1188 (Fla. 3d DCA 2024). However, we decline to do so. Our decision is tempered by the fact that Wife is defending a judgment on appeal in an unrepresented capacity, Husband has not sought the imposition of sanctions, and Wife has not brought any other meritless or frivolous filings in this Court. See id. at 1187–88; Al-Hamim, 564 P.3d at 1125–26. Instead, we admonish Wife for her counterfeit brief and warn her that the Court will not regard similar infractions as mildly in the future. \"",
+          "tool": "Unidentified",
+          "summary": "Misrepresented: Case Law | Father's pro se appellate brief, allegedly drafted with AI, contained general citations to existing cases that did not support his propositions; Mother characterized this as fabricated precedent. Outcome: Admonishment.",
           "sanction_types": [
             "warning"
           ],
           "tags": [
             "pro-se",
             "fake-citations",
+            "misrepresented-authority",
+            "family",
             "appellate"
           ],
-          "source_url": "https://www.casemine.com/judgement/us/689d8ff69a88cbd93082a8fb"
-        }
-      ]
-    },
-    {
-      "state": "IL",
-      "count": 57,
-      "total": 101603,
-      "severities": {
-        "medium": 14,
-        "high": 6,
-        "low": 36,
-        "career-ending": 1
-      },
-      "cases": [
+          "source_url": "https://www.damiencharlotin.com/documents/2837/Tate_Marriage_USA_11_August_2026.pdf"
+        },
+        {
+          "id": "united-states-of-america-v-smith-2026-08-07",
+          "name": "United States of America v. Smith",
+          "court": "N.D. Illinois",
+          "judge": "",
+          "date": "2026-08-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Court could not locate or verify the cited case; petitioner relied on this citation to support his §2C1.1 argument. Outcome: Order to Show Cause.",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "criminal",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2833/United_States_of_America_v._Smith_USA_7_August_2026.pdf"
+        },
         {
           "id": "cole-v-lee-2026-07-30",
           "name": "Cole v. Lee",
@@ -5712,63 +5763,65 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/753/Hobbs_v._Goncharko_USA_3_Septmber_2025.pdf"
-        },
-        {
-          "id": "in-re-rl-2025-08-20",
-          "name": "In re R.L.",
-          "court": "CA Illinois",
-          "judge": "",
-          "date": "2025-08-20",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant cited In re C.P., 2018 IL App (4th) 180378, which the court found does not exist; court flagged this as an example of counsel citing nonexistent authority. Outcome: No additional sanctions (given sanctions for Counsel in other cases).",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "family",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/754/In_re_RL.pdf"
-        },
-        {
-          "id": "in-re-sm-a-minor-2025-08-07",
-          "name": "In re S.M., a Minor",
-          "court": "CA Illinois",
-          "judge": "",
-          "date": "2025-08-07",
-          "amount": 1000,
-          "amount_display": "$1.0K",
-          "severity": "high",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Brief cited a non-existent case; court's research found no such opinion. Outcome: Monetary sanction; report to ARDC. The court imposed a monetary sanction of $1,000 on the appellate counsel and ordered a report to be sent to the Illinois Attorney Registration and Disciplinary Commission (ARDC).",
-          "sanction_types": [
-            "monetary",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "family",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/708/In_re_S.M..pdf"
         }
       ]
     },
     {
       "state": "AZ",
-      "count": 45,
-      "total": 1205,
+      "count": 47,
+      "total": 1206,
       "severities": {
-        "medium": 8,
-        "low": 29,
+        "low": 30,
+        "medium": 9,
         "high": 8
       },
       "cases": [
+        {
+          "id": "in-re-bard-implanted-port-catheter-products-liability-litigation-2026-08-12",
+          "name": "IN RE: Bard Implanted Port Catheter Products Liability Litigation",
+          "court": "D. Arizona",
+          "judge": "",
+          "date": "2026-08-12",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "ChatGPT",
+          "summary": "Fabricated: Case Law | Defendants alleged numerous hallucinated (fabricated) citations appeared in El‑Ghannam's case‑specific report in this MDL; the court noted Bard had not identified any fully hallucinated citations in El‑Ghannam's General Report and found the AI challenge raised in reply untimely and insufficient to exclude the expert. Outcome: No exclusion of Expert Report. Defendants raised in reply that Dr. El‑Ghannam used ChatGPT and that his case‑specific report contained hallucinated (fabricated) citations, citing a different MDL filing where hallucinated sources were confirmed. The Court found the AI argument untimely, noted Bard had not identified any fully hallucinated citations in the General Report, and observed El‑Ghannam admitted limited ChatGPT use but testified he wrote and verified the report. The Court refused to exclude opinions on that basis and imposed no sanction.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2846/IN_RE_Bard_Implanted_Port_Catheter_Products_Liability_Litigation_USA_12_August_2026.pdf"
+        },
+        {
+          "id": "wri-summit-reit-lp-v-kuerschner-2026-08-10",
+          "name": "WRI Summit REIT LP v. Kuerschner",
+          "court": "CA Arizona (1d)",
+          "judge": "",
+          "date": "2026-08-10",
+          "amount": 1,
+          "amount_display": "$1",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Appellant quoted Burton as containing language about 'manifestly unreasonable, or exercised on untenable grounds, or for untenable reasons,' which the court found does not appear in Burton. Outcome: Adverse Costs Order.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "published-opinion",
+            "contract",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2835/Summit_Reit_USA_10_August_2026.pdf"
+        },
         {
           "id": "isles-v-family-dollar-2026-08-06",
           "name": "Isles v. Family Dollar",
@@ -6797,15 +6850,37 @@
     },
     {
       "state": "MI",
-      "count": 45,
+      "count": 46,
       "total": 3485,
       "severities": {
-        "low": 33,
+        "low": 34,
         "medium": 8,
         "high": 3,
         "career-ending": 1
       },
       "cases": [
+        {
+          "id": "anish-sam-mathew-v-parv-verma-2026-08-10",
+          "name": "Anish Sam Mathew v. Parv Verma",
+          "court": "E.D. Michigan",
+          "judge": "",
+          "date": "2026-08-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Court noted risk of AI-generated 'phantom' or fabricated citations in filings and referenced a prior E.D. Mich. decision (Ali v. IT People Corp.) where a pro se litigant was sanctioned for such misrepresentations; court warned such fabricated citations will be sanctionable. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2843/Mathew_v._Verma_USA_10_August_2026.pdf"
+        },
         {
           "id": "natashah-al-ali-v-cvs-pharmacy-inc-2026-07-31",
           "name": "Natashah Al-Ali v. CVS Pharmacy, Inc.",
@@ -8668,15 +8743,38 @@
     },
     {
       "state": "PA",
-      "count": 35,
+      "count": 36,
       "total": 17500,
       "severities": {
-        "low": 24,
+        "low": 25,
         "career-ending": 1,
         "medium": 9,
         "high": 1
       },
       "cases": [
+        {
+          "id": "courtney-voyton-v-joseph-voyton-et-al-2026-08-11",
+          "name": "Courtney Voyton v. Joseph Voyton, et al.",
+          "court": "M.D. Pa.",
+          "judge": "",
+          "date": "2026-08-11",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Misrepresented: Legal Norm | Plaintiff cited 42 Pa. Cons. Stat. § 5522 and described it as governing a government lawyer's professional responsibility, but the court found the statute actually concerns notice of intent to sue and that the plaintiff misrepresented the law. Outcome: Court admonished plaintiff for AI misuse, required future affidavit disclosing AI use and citations checked, warned of sanctions (including striking pleadings/dismissal) for future unchecked AI-generated errors; complaint dismissed with leave to amend.. The district court found that the pro se plaintiff's filings were aided by generative AI and contained at least one clear hallucination: she misrepresented the substance of 42 Pa. Cons. Stat. § 5522 and advanced irrelevant 'ghost' doctrines (Younger abstention, Rooker-Feldman, quasi-judicial immunity) that the R&R never discussed. The court admonished the plaintiff, ordered future affidavits disclosing AI use and identification of sections drafted by AI, required certification that citations were checked, and warned that further unchecked AI misuse could result in sanctions up to striking pleadings and dismissing claims with prejudice.",
+          "sanction_types": [
+            "warning",
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2844/Voyton_v._Voyton_USA_11_AUgust_2026.pdf"
+        },
         {
           "id": "bisher-v-civic-et-al-2026-08-03",
           "name": "Bisher v. Civic, et al.",
@@ -15022,6 +15120,558 @@
       ]
     },
     {
+      "state": "AL",
+      "count": 23,
+      "total": 113401,
+      "severities": {
+        "high": 7,
+        "low": 10,
+        "medium": 3,
+        "career-ending": 3
+      },
+      "cases": [
+        {
+          "id": "garry-chapman-v-city-of-priceville-et-al-2026-08-12",
+          "name": "Garry Chapman v. City of Priceville, et al.",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2026-08-12",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Attributed a quoted formulation not found in the opinion. Outcome: Public reprimand; Order to Notice.",
+          "sanction_types": [
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2836/Chapman_v._City_of_Priceville_USA_12_August_2026.pdf"
+        },
+        {
+          "id": "perry-v-social-security-administration-commissioner-2026-08-03",
+          "name": "Perry v. Social Security Administration, Commissioner",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2026-08-03",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff's TRO motion included fabricated case citations and authorities; the court recorded the Commissioner's objection and warned the plaintiff against future fabricated citations. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "administrative",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2778/Perry_v._Social_Security_Administration_Commissioner_USA_5_August_2026.pdf"
+        },
+        {
+          "id": "gideon-j-sipin-v-the-bank-of-new-york-mellon-trust-company-n-a-et-al-2026-07-22",
+          "name": "Gideon J. Sipin v. The Bank of New York Mellon Trust Company, N.A., et al.",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2026-07-22",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited \"In re Salamon, 509 B.R. 360, 368 (Bankr. E.D.N.Y. 2014)\" for a rule; the court was unable to locate the case and concluded the citation appears fictitious. Outcome: Order to Show Cause.",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2705/Sipin_v_7rSXEx9._Bank_of_New_York_Mellon_Trust_Company_USA_22_July_2026.pdf"
+        },
+        {
+          "id": "cornelia-o-barnes-v-frank-williams-et-al-2026-06-30",
+          "name": "Cornelia O. Barnes v. Frank Williams, et al.",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2026-06-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Court unable to locate Rogers v. Wells Fargo as cited; citation appears fabricated. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2534/Barnes_v._Williams_USA_30_June_2026.pdf"
+        },
+        {
+          "id": "ex-parte-a-i-f-h-f-k-a-a-i-f-2026-06-26",
+          "name": "Ex parte A.I.F.-H. f/k/a A.I.F.",
+          "court": "CA Alabama",
+          "judge": "",
+          "date": "2026-06-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Petition cited a non-existent case as 'Ex parte Holloway, 992 So. 2d 521, 524 (Ala. 2008)'; the reporter citation corresponds to an unrelated Louisiana case and the Alabama case does not exist. Judge Bowden's dissent identifies that the mother's mandamus petition relied on multiple AI-generated hallucinations and misrepresentations of precedent: a fabricated case citation, a quoted passage attributed to a real Alabama case that cannot be found, and other misstatements of holdings. Bowden argued the petition should have been dismissed for failing to comply with Rule 21 and warned against the waste and unreliability caused by AI hallucinations; the majority did not impose sanctions and resolved the jurisdictional issues on the merits, granting mandamus in part.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "family",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2501/Ex_parte_A.I.F.-H._fka_A.I.F_USA_26_June_2026.pdf"
+        },
+        {
+          "id": "chapel-v-americredit-financial-services-experian-2026-05-21",
+          "name": "Chapel v. Americredit Financial Services & Experian",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2026-05-21",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Plaintiff's filing included a quotation attributed to Brown v. Genesis Healthcare Corp. that the Court could not find in that opinion; Court concluded likely AI-generated. Outcome: Admonishment.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2178/Chapel_v._Americredit_USA_21_May_2026.pdf"
+        },
+        {
+          "id": "jackie-l-miller-v-regions-bank-2026-05-21",
+          "name": "Jackie L. Miller v. Regions Bank",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2026-05-21",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "ChatGPT",
+          "summary": "False Quotes: Case Law | Purported quotation attributed to Batson v. Salvation Army regarding FMLA adverse action, but the court could not find the quoted language in the cited Eleventh Circuit opinion and concluded it was fabricated. Outcome: DQ from case and court (6 months); Bar Referral.",
+          "sanction_types": [
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "bar-referral",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2169/Miller_v._Regions_Bank_USA_21_May_2026.pdf"
+        },
+        {
+          "id": "tunstall-v-alabama-department-of-corrections-2026-04-28",
+          "name": "Tunstall v. Alabama Department of Corrections",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2026-04-28",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Counsel attributed the phrase \"'Resign or be fired' scenarios are classic jury questions\" to Thomas v. Dillard; the court reviewed Thomas and found no such language, calling the quotation a misattribution/fabrication and warning about Rule 11 implications. Outcome: Admonishment.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fabricated-quotes",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2067/Tuntstall_v._Alabama_DOC_USA_28_April_2026.pdf"
+        },
+        {
+          "id": "laurie-ibach-and-mark-stewart-v-bruce-stewart-2026-04-24",
+          "name": "Laurie Ibach and Mark Stewart v. Bruce Stewart",
+          "court": "SC Alabama",
+          "judge": "",
+          "date": "2026-04-24",
+          "amount": 17200,
+          "amount_display": "$17.2K",
+          "severity": "high",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Cited a non-existent Nebraska Court of Appeals decision presented as on‑point; Court found the citation actually pointed to unrelated Iowa criminal cases. Outcome: Adverse Costs Order; Doubled Costs; Filing Prohibition; Bar Referral.",
+          "sanction_types": [
+            "monetary",
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "bar-referral",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2035/Ibach__Stewart_v._Steward_USA_24_April_2026.pdf"
+        },
+        {
+          "id": "bridgett-watson-adams-et-al-v-3m-company-2026-04-20",
+          "name": "Bridgett Watson Adams, et al. v. 3M Company",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2026-04-20",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiffs cited “Jarrod Johnson v. Water Light & Sinking Fund Comm’n…, 74 F.4th 1308, 1313–17 (11th Cir. 2023)” for PFAS-standing language; court found the citation led to unrelated authority and the claimed PFAS discussion does not exist. Outcome: Order to Show Cause.",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2577/Adams_-_43.pdf"
+        },
+        {
+          "id": "pleasant-v-burns-2026-04-08",
+          "name": "Pleasant v. Burns",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2026-04-08",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited at least one case that does not exist; the court identified the citation as fabricated and required explanation but Plaintiff did not address it. Outcome: Order to Show Cause.",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1946/Pleasant_v._Burns_USA_8_April_2026.pdf"
+        },
+        {
+          "id": "heimkes-v-fairhope-motorcoach-resort-condominium-owners-association-inc-2026-03-",
+          "name": "Heimkes v. Fairhope Motorcoach Resort Condominium Owners Association, Inc.",
+          "court": "S.D. Alabama",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": 55597,
+          "amount_display": "$55.6K",
+          "severity": "high",
+          "tool": "Cocounsel (Westlaw)",
+          "summary": "Outdated Advice: Overturned Case Law | Relied on Chevron deference as authoritative despite Loper Bright having overruled its application; Court found Eaton misrepresented the status of the law. Outcome: Reprimand; Order to file order in subsequent cases; Bar Referral; Adverse Costs Order.",
+          "sanction_types": [
+            "monetary",
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "bar-referral",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1890/Heimkes_v._Fairhope_USA_31_March_2026.pdf"
+        },
+        {
+          "id": "joel-a-rivera-v-triad-properties-corporation-et-al-2026-03-31",
+          "name": "Joel A. Rivera v. Triad Properties Corporation, et al.",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": 35603,
+          "amount_display": "$35.6K",
+          "severity": "career-ending",
+          "tool": "ChatGPT",
+          "summary": "Misrepresented: Case Law | As-filed brief cited 'S.E.C. v. Digital Lightwave' as a D. Utah decision; court found no D. Utah opinion and that the actual M.D. Fla. case did not support the asserted proposition. Outcome: Public Reprimand; Disqualification; Bar Referral; Publication and Notice of Order; Adverse Costs Order.",
+          "sanction_types": [
+            "monetary",
+            "bar-referral",
+            "professional",
+            "disqualification"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "bar-referral",
+            "disqualification",
+            "trial"
+          ],
+          "source_url": "https://reason.com/volokh/2026/04/07/ai-hallucinated-cases-lead-to-47k-sanctions/"
+        },
+        {
+          "id": "rivera-v-triad-props-corp-2026-03-31",
+          "name": "Rivera v. Triad Props. Corp.",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": 1,
+          "amount_display": "$1",
+          "severity": "career-ending",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Pleading prepared with AI contained hallucinated (fabricated) case citations; court treated as fabricated case-law citations generated by AI and sanctioned the attorney. Outcome: Bar Referral; DQ; Adverse Costs Order; 3-month suspension.",
+          "sanction_types": [
+            "monetary",
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "bar-referral",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2500/Drummond_v._Terrence_USA_18_June_2026.pdf"
+        },
+        {
+          "id": "staley-v-city-of-elba-et-al-2026-03-31",
+          "name": "Staley v. City of Elba, et al.",
+          "court": "M.D. Alabama",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff's response (doc. 43 at 23) purports to quote and cite 'Kidd v. Mando Am. Corp., 731 F.3d 1196, 1200 (11th Cir. 2013)', which Defendants and the court identify as a non-existent citation. The court (adopting the Magistrate Judge's Recommendation) observed that Plaintiff's filings included citations to cases and purported quotations that do not exist; Defendants pointed this out in their filing. The observation was noted but did not result in sanctions; the case was dismissed for failure to state a claim.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1911/Staley_USA_31_March_2026.pdf"
+        },
+        {
+          "id": "state-national-insurance-company-inc-v-damon-treadwell-et-al-2026-03-26",
+          "name": "State National Insurance Company, Inc. v. Damon Treadwell, et al.",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2026-03-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "ChatGPT; OpenCase",
+          "summary": "Fabricated: Case Law | Filing attributed a quoted passage to Nishimatsu Construction Co. v. Houston National Bank; the court searched the opinion and other sources and found the quotation does not exist; attorney admitted AI use and lack of diligence. Outcome: Public reprimand; Order Notification.",
+          "sanction_types": [
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1916/State_National_v._Dimon_Treadwell_USA_27_March_2026.pdf"
+        },
+        {
+          "id": "michael-a-devita-v-midtown-motors-et-al-2026-03-25",
+          "name": "Michael A. DeVita v. Midtown Motors, et al.",
+          "court": "M.D. Alabama",
+          "judge": "",
+          "date": "2026-03-25",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited this authority in his Amended Complaint; the court found it does not appear to exist and treated it as a hallucinated citation. Outcome: Case dismissed without prejudice.",
+          "sanction_types": [
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1835/Devita_v._Midtown_USA_25_March_2026.pdf"
+        },
+        {
+          "id": "horton-v-colvin-2026-02-27",
+          "name": "Horton v. Colvin",
+          "court": "CA Alabama",
+          "judge": "",
+          "date": "2026-02-27",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Doctrinal Work Outcome: Affirmed in part; reversed in part; remanded (libel claim as to “meth house” reversed for further proceedings)..",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "tort",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1609/Horton_v_Colvin_USA_27_February_2026.pdf"
+        },
+        {
+          "id": "in-re-jackson-hospital-clinic-inc-et-al-2025-11-20",
+          "name": "In re Jackson Hospital & Clinic, Inc., et al.",
+          "court": "M.D. Alabama (Bankruptcy)",
+          "judge": "",
+          "date": "2025-11-20",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Court found pervasive fabricated citations in Progressive's Motion to Reconsider after comparing cited authorities to the arguments. Outcome: Public Reprimand; Revocation of pro hac vice privileges; Order to Serve Order on Clients; Diffusion of Order to Counsel's Bars. Show Cause Order here. Law firm explained what happened here.In the ultimate order, the court noted that \"In terms of competence, the threat to attorneys using generative artificial intelligence platforms powered by large language models is two-fold. First, danger exists that the attorney does not understand how the technology functions, believing that the output is real instead of “realistic-looking.\".\"In finding that the law firm acted with integrity, the Court noted with approval that it had repaid the other side's fees, to the tune of 55,721.2 USD.",
+          "sanction_types": [
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "bankruptcy",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1065/Jackson_Hospital__Clinic_USA_21_November_2025.pdf"
+        },
+        {
+          "id": "ronald-h-foster-v-author-success-publishing-et-al-2025-10-29",
+          "name": "Ronald H. Foster v. Author Success Publishing, et al.",
+          "court": "M.D. Alabama",
+          "judge": "",
+          "date": "2025-10-29",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Plaintiff attributed a quotation to S.E.C. v. Smyth that does not appear in Smyth and could not be located in any case; court concluded the quote was an outright fabrication. Outcome: Show Cause Order.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/965/Foster_v._Author_Success_Publishing_et_al._USA_29_October_2025.pdf"
+        },
+        {
+          "id": "united-states-v-glennie-antonio-mcgee-2025-10-10",
+          "name": "United States v. Glennie Antonio McGee",
+          "court": "S.D. Alabama",
+          "judge": "",
+          "date": "2025-10-10",
+          "amount": 5000,
+          "amount_display": "$5.0K",
+          "severity": "high",
+          "tool": "Ghostwriter Legal",
+          "summary": "False Quotes: Case Law | The filing attributed quotations to cases that, upon review, were false or misquoted from the cited authorities. Outcome: Public reprimand, referral and order to notify jurisdictions; monetary sanction. Folllowing a show cause order, Counsel admitted to having used the tool together with Google Search, and explained that, although he was aware of the issues with AI models like ChatGPT, he said he did not expect this tool to fall into the same issues. The Court found Attorney James A. Johnson used Ghostwriter Legal to draft a motion that contained multiple fabricated case citations, misstated/false quotations attributed to authorities, and cited precedent that had been reversed by the Supreme Court. The Court found the conduct tantamount to bad faith and imposed sanctions under its inherent authority. Sanctions include an order to file, not under seal, this order \"in any case in any court wherein he appears as counsel fortwelve (12) months after the date of this order.\"",
+          "sanction_types": [
+            "monetary",
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "criminal",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/862/USA_v._McGee_10_OCtober_2025.pdf"
+        },
+        {
+          "id": "martin-v-redstone-federal-credit-union-2025-09-19",
+          "name": "Martin v. Redstone Federal Credit Union",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2025-09-19",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "The Northern District of Alabama found that eight of twelve cited authorities in Martin’s complaint were fake and that all five cases cited in the amended complaint did not exist. One cited reporter reference led instead to an unrelated vehicular-manslaughter decision. The court granted dismissal, declined additional Rule 11 action at that time, and strongly cautioned that future filings must comply with Rule 11.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/809/Martin_v._Redstone_Federal_Credit_Union.pdf"
+        },
+        {
+          "id": "johnson-v-dunn-2025-07-23",
+          "name": "Johnson v. Dunn",
+          "court": "N.D. Alabama",
+          "judge": "",
+          "date": "2025-07-23",
+          "amount": null,
+          "amount_display": "",
+          "severity": "career-ending",
+          "tool": "ChatGPT",
+          "summary": "Fabricated: Case Law | Citation to United States v. Baker, 539 F. App’x 937, 943 (11th Cir. 2013) as confirming broad discovery rights; court found the citation as styled does not exist and the volume/page cited corresponds to Williams v. Morahan, not Baker, and does not discuss discovery. Outcome: Public reprimand, disqualification from the case, and referral to the Bar. In their Response, Counsel confessed to the use of AI tools in their Response to the OSC.(As recounted by Above the Law, the law firm involved quickly deleted a recent post they made about using AI.)In the Order, the judge prefaced her findings by noting that \"Even in cases like this one, where lawyers who cite AI hallucinations accept responsibility and apologize profusely, much damage is done. The opposing party expends resources identifying and exposing the fabrication; the court spends time reviewing materials, holding hearings, deliberating about sanctions, and explaining its ruling; the substance of the case is delayed; and public confidence about the trustworthiness of legal proceedings may be diminished.\"The court further reasoned that \"At the threshold, the court rejects the invitation to consider that actual authorities stand for the proposition that the bogus authorities were offered to support. That is a stroke of pure luck for these lawyers, and one that did not remediate the waste and harm their misconduct wrought. Further, any sanctions discount on this basis would amplify the siren call of unverified AI for lawyers who are already confident in their legal conclusion. This court will have no part of that.\"It added that: \"Likewise, the court rejects the invitation to consider that the involved lawyers and firm have been deeply embarrassed in media reports. For many very good reasons, courts traditionally have not relied on the media to do the difficult work of professional discipline, and this court is not about to start.\"",
+          "sanction_types": [
+            "bar-referral",
+            "professional",
+            "disqualification"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "disqualification",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/608/Butler-Snow-Order.pdf"
+        }
+      ]
+    },
+    {
       "state": "OK",
       "count": 23,
       "total": 31650,
@@ -15562,535 +16212,6 @@
       ]
     },
     {
-      "state": "AL",
-      "count": 22,
-      "total": 113401,
-      "severities": {
-        "low": 10,
-        "medium": 3,
-        "high": 6,
-        "career-ending": 3
-      },
-      "cases": [
-        {
-          "id": "perry-v-social-security-administration-commissioner-2026-08-03",
-          "name": "Perry v. Social Security Administration, Commissioner",
-          "court": "N.D. Alabama",
-          "judge": "",
-          "date": "2026-08-03",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff's TRO motion included fabricated case citations and authorities; the court recorded the Commissioner's objection and warned the plaintiff against future fabricated citations. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "administrative",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2778/Perry_v._Social_Security_Administration_Commissioner_USA_5_August_2026.pdf"
-        },
-        {
-          "id": "gideon-j-sipin-v-the-bank-of-new-york-mellon-trust-company-n-a-et-al-2026-07-22",
-          "name": "Gideon J. Sipin v. The Bank of New York Mellon Trust Company, N.A., et al.",
-          "court": "N.D. Alabama",
-          "judge": "",
-          "date": "2026-07-22",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited \"In re Salamon, 509 B.R. 360, 368 (Bankr. E.D.N.Y. 2014)\" for a rule; the court was unable to locate the case and concluded the citation appears fictitious. Outcome: Order to Show Cause.",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2705/Sipin_v_7rSXEx9._Bank_of_New_York_Mellon_Trust_Company_USA_22_July_2026.pdf"
-        },
-        {
-          "id": "cornelia-o-barnes-v-frank-williams-et-al-2026-06-30",
-          "name": "Cornelia O. Barnes v. Frank Williams, et al.",
-          "court": "N.D. Alabama",
-          "judge": "",
-          "date": "2026-06-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Court unable to locate Rogers v. Wells Fargo as cited; citation appears fabricated. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2534/Barnes_v._Williams_USA_30_June_2026.pdf"
-        },
-        {
-          "id": "ex-parte-a-i-f-h-f-k-a-a-i-f-2026-06-26",
-          "name": "Ex parte A.I.F.-H. f/k/a A.I.F.",
-          "court": "CA Alabama",
-          "judge": "",
-          "date": "2026-06-26",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Petition cited a non-existent case as 'Ex parte Holloway, 992 So. 2d 521, 524 (Ala. 2008)'; the reporter citation corresponds to an unrelated Louisiana case and the Alabama case does not exist. Judge Bowden's dissent identifies that the mother's mandamus petition relied on multiple AI-generated hallucinations and misrepresentations of precedent: a fabricated case citation, a quoted passage attributed to a real Alabama case that cannot be found, and other misstatements of holdings. Bowden argued the petition should have been dismissed for failing to comply with Rule 21 and warned against the waste and unreliability caused by AI hallucinations; the majority did not impose sanctions and resolved the jurisdictional issues on the merits, granting mandamus in part.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "family",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2501/Ex_parte_A.I.F.-H._fka_A.I.F_USA_26_June_2026.pdf"
-        },
-        {
-          "id": "chapel-v-americredit-financial-services-experian-2026-05-21",
-          "name": "Chapel v. Americredit Financial Services & Experian",
-          "court": "N.D. Alabama",
-          "judge": "",
-          "date": "2026-05-21",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Plaintiff's filing included a quotation attributed to Brown v. Genesis Healthcare Corp. that the Court could not find in that opinion; Court concluded likely AI-generated. Outcome: Admonishment.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2178/Chapel_v._Americredit_USA_21_May_2026.pdf"
-        },
-        {
-          "id": "jackie-l-miller-v-regions-bank-2026-05-21",
-          "name": "Jackie L. Miller v. Regions Bank",
-          "court": "N.D. Alabama",
-          "judge": "",
-          "date": "2026-05-21",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "ChatGPT",
-          "summary": "False Quotes: Case Law | Purported quotation attributed to Batson v. Salvation Army regarding FMLA adverse action, but the court could not find the quoted language in the cited Eleventh Circuit opinion and concluded it was fabricated. Outcome: DQ from case and court (6 months); Bar Referral.",
-          "sanction_types": [
-            "bar-referral",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "bar-referral",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2169/Miller_v._Regions_Bank_USA_21_May_2026.pdf"
-        },
-        {
-          "id": "tunstall-v-alabama-department-of-corrections-2026-04-28",
-          "name": "Tunstall v. Alabama Department of Corrections",
-          "court": "N.D. Alabama",
-          "judge": "",
-          "date": "2026-04-28",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Counsel attributed the phrase \"'Resign or be fired' scenarios are classic jury questions\" to Thomas v. Dillard; the court reviewed Thomas and found no such language, calling the quotation a misattribution/fabrication and warning about Rule 11 implications. Outcome: Admonishment.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fabricated-quotes",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2067/Tuntstall_v._Alabama_DOC_USA_28_April_2026.pdf"
-        },
-        {
-          "id": "laurie-ibach-and-mark-stewart-v-bruce-stewart-2026-04-24",
-          "name": "Laurie Ibach and Mark Stewart v. Bruce Stewart",
-          "court": "SC Alabama",
-          "judge": "",
-          "date": "2026-04-24",
-          "amount": 17200,
-          "amount_display": "$17.2K",
-          "severity": "high",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Cited a non-existent Nebraska Court of Appeals decision presented as on‑point; Court found the citation actually pointed to unrelated Iowa criminal cases. Outcome: Adverse Costs Order; Doubled Costs; Filing Prohibition; Bar Referral.",
-          "sanction_types": [
-            "monetary",
-            "bar-referral",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "bar-referral",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2035/Ibach__Stewart_v._Steward_USA_24_April_2026.pdf"
-        },
-        {
-          "id": "bridgett-watson-adams-et-al-v-3m-company-2026-04-20",
-          "name": "Bridgett Watson Adams, et al. v. 3M Company",
-          "court": "N.D. Alabama",
-          "judge": "",
-          "date": "2026-04-20",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiffs cited “Jarrod Johnson v. Water Light & Sinking Fund Comm’n…, 74 F.4th 1308, 1313–17 (11th Cir. 2023)” for PFAS-standing language; court found the citation led to unrelated authority and the claimed PFAS discussion does not exist. Outcome: Order to Show Cause.",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2577/Adams_-_43.pdf"
-        },
-        {
-          "id": "pleasant-v-burns-2026-04-08",
-          "name": "Pleasant v. Burns",
-          "court": "N.D. Alabama",
-          "judge": "",
-          "date": "2026-04-08",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited at least one case that does not exist; the court identified the citation as fabricated and required explanation but Plaintiff did not address it. Outcome: Order to Show Cause.",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1946/Pleasant_v._Burns_USA_8_April_2026.pdf"
-        },
-        {
-          "id": "heimkes-v-fairhope-motorcoach-resort-condominium-owners-association-inc-2026-03-",
-          "name": "Heimkes v. Fairhope Motorcoach Resort Condominium Owners Association, Inc.",
-          "court": "S.D. Alabama",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": 55597,
-          "amount_display": "$55.6K",
-          "severity": "high",
-          "tool": "Cocounsel (Westlaw)",
-          "summary": "Outdated Advice: Overturned Case Law | Relied on Chevron deference as authoritative despite Loper Bright having overruled its application; Court found Eaton misrepresented the status of the law. Outcome: Reprimand; Order to file order in subsequent cases; Bar Referral; Adverse Costs Order.",
-          "sanction_types": [
-            "monetary",
-            "bar-referral",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "bar-referral",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1890/Heimkes_v._Fairhope_USA_31_March_2026.pdf"
-        },
-        {
-          "id": "joel-a-rivera-v-triad-properties-corporation-et-al-2026-03-31",
-          "name": "Joel A. Rivera v. Triad Properties Corporation, et al.",
-          "court": "N.D. Alabama",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": 35603,
-          "amount_display": "$35.6K",
-          "severity": "career-ending",
-          "tool": "ChatGPT",
-          "summary": "Misrepresented: Case Law | As-filed brief cited 'S.E.C. v. Digital Lightwave' as a D. Utah decision; court found no D. Utah opinion and that the actual M.D. Fla. case did not support the asserted proposition. Outcome: Public Reprimand; Disqualification; Bar Referral; Publication and Notice of Order; Adverse Costs Order.",
-          "sanction_types": [
-            "monetary",
-            "bar-referral",
-            "professional",
-            "disqualification"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "bar-referral",
-            "disqualification",
-            "trial"
-          ],
-          "source_url": "https://reason.com/volokh/2026/04/07/ai-hallucinated-cases-lead-to-47k-sanctions/"
-        },
-        {
-          "id": "rivera-v-triad-props-corp-2026-03-31",
-          "name": "Rivera v. Triad Props. Corp.",
-          "court": "N.D. Alabama",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": 1,
-          "amount_display": "$1",
-          "severity": "career-ending",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Pleading prepared with AI contained hallucinated (fabricated) case citations; court treated as fabricated case-law citations generated by AI and sanctioned the attorney. Outcome: Bar Referral; DQ; Adverse Costs Order; 3-month suspension.",
-          "sanction_types": [
-            "monetary",
-            "bar-referral",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "bar-referral",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2500/Drummond_v._Terrence_USA_18_June_2026.pdf"
-        },
-        {
-          "id": "staley-v-city-of-elba-et-al-2026-03-31",
-          "name": "Staley v. City of Elba, et al.",
-          "court": "M.D. Alabama",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff's response (doc. 43 at 23) purports to quote and cite 'Kidd v. Mando Am. Corp., 731 F.3d 1196, 1200 (11th Cir. 2013)', which Defendants and the court identify as a non-existent citation. The court (adopting the Magistrate Judge's Recommendation) observed that Plaintiff's filings included citations to cases and purported quotations that do not exist; Defendants pointed this out in their filing. The observation was noted but did not result in sanctions; the case was dismissed for failure to state a claim.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1911/Staley_USA_31_March_2026.pdf"
-        },
-        {
-          "id": "state-national-insurance-company-inc-v-damon-treadwell-et-al-2026-03-26",
-          "name": "State National Insurance Company, Inc. v. Damon Treadwell, et al.",
-          "court": "N.D. Alabama",
-          "judge": "",
-          "date": "2026-03-26",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "ChatGPT; OpenCase",
-          "summary": "Fabricated: Case Law | Filing attributed a quoted passage to Nishimatsu Construction Co. v. Houston National Bank; the court searched the opinion and other sources and found the quotation does not exist; attorney admitted AI use and lack of diligence. Outcome: Public reprimand; Order Notification.",
-          "sanction_types": [
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1916/State_National_v._Dimon_Treadwell_USA_27_March_2026.pdf"
-        },
-        {
-          "id": "michael-a-devita-v-midtown-motors-et-al-2026-03-25",
-          "name": "Michael A. DeVita v. Midtown Motors, et al.",
-          "court": "M.D. Alabama",
-          "judge": "",
-          "date": "2026-03-25",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited this authority in his Amended Complaint; the court found it does not appear to exist and treated it as a hallucinated citation. Outcome: Case dismissed without prejudice.",
-          "sanction_types": [
-            "case-dismissed"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1835/Devita_v._Midtown_USA_25_March_2026.pdf"
-        },
-        {
-          "id": "horton-v-colvin-2026-02-27",
-          "name": "Horton v. Colvin",
-          "court": "CA Alabama",
-          "judge": "",
-          "date": "2026-02-27",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Doctrinal Work Outcome: Affirmed in part; reversed in part; remanded (libel claim as to “meth house” reversed for further proceedings)..",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "tort",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1609/Horton_v_Colvin_USA_27_February_2026.pdf"
-        },
-        {
-          "id": "in-re-jackson-hospital-clinic-inc-et-al-2025-11-20",
-          "name": "In re Jackson Hospital & Clinic, Inc., et al.",
-          "court": "M.D. Alabama (Bankruptcy)",
-          "judge": "",
-          "date": "2025-11-20",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Court found pervasive fabricated citations in Progressive's Motion to Reconsider after comparing cited authorities to the arguments. Outcome: Public Reprimand; Revocation of pro hac vice privileges; Order to Serve Order on Clients; Diffusion of Order to Counsel's Bars. Show Cause Order here. Law firm explained what happened here.In the ultimate order, the court noted that \"In terms of competence, the threat to attorneys using generative artificial intelligence platforms powered by large language models is two-fold. First, danger exists that the attorney does not understand how the technology functions, believing that the output is real instead of “realistic-looking.\".\"In finding that the law firm acted with integrity, the Court noted with approval that it had repaid the other side's fees, to the tune of 55,721.2 USD.",
-          "sanction_types": [
-            "bar-referral",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "bankruptcy",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1065/Jackson_Hospital__Clinic_USA_21_November_2025.pdf"
-        },
-        {
-          "id": "ronald-h-foster-v-author-success-publishing-et-al-2025-10-29",
-          "name": "Ronald H. Foster v. Author Success Publishing, et al.",
-          "court": "M.D. Alabama",
-          "judge": "",
-          "date": "2025-10-29",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Plaintiff attributed a quotation to S.E.C. v. Smyth that does not appear in Smyth and could not be located in any case; court concluded the quote was an outright fabrication. Outcome: Show Cause Order.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/965/Foster_v._Author_Success_Publishing_et_al._USA_29_October_2025.pdf"
-        },
-        {
-          "id": "united-states-v-glennie-antonio-mcgee-2025-10-10",
-          "name": "United States v. Glennie Antonio McGee",
-          "court": "S.D. Alabama",
-          "judge": "",
-          "date": "2025-10-10",
-          "amount": 5000,
-          "amount_display": "$5.0K",
-          "severity": "high",
-          "tool": "Ghostwriter Legal",
-          "summary": "False Quotes: Case Law | The filing attributed quotations to cases that, upon review, were false or misquoted from the cited authorities. Outcome: Public reprimand, referral and order to notify jurisdictions; monetary sanction. Folllowing a show cause order, Counsel admitted to having used the tool together with Google Search, and explained that, although he was aware of the issues with AI models like ChatGPT, he said he did not expect this tool to fall into the same issues. The Court found Attorney James A. Johnson used Ghostwriter Legal to draft a motion that contained multiple fabricated case citations, misstated/false quotations attributed to authorities, and cited precedent that had been reversed by the Supreme Court. The Court found the conduct tantamount to bad faith and imposed sanctions under its inherent authority. Sanctions include an order to file, not under seal, this order \"in any case in any court wherein he appears as counsel fortwelve (12) months after the date of this order.\"",
-          "sanction_types": [
-            "monetary",
-            "bar-referral",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "criminal",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/862/USA_v._McGee_10_OCtober_2025.pdf"
-        },
-        {
-          "id": "martin-v-redstone-federal-credit-union-2025-09-19",
-          "name": "Martin v. Redstone Federal Credit Union",
-          "court": "N.D. Alabama",
-          "judge": "",
-          "date": "2025-09-19",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "The Northern District of Alabama found that eight of twelve cited authorities in Martin’s complaint were fake and that all five cases cited in the amended complaint did not exist. One cited reporter reference led instead to an unrelated vehicular-manslaughter decision. The court granted dismissal, declined additional Rule 11 action at that time, and strongly cautioned that future filings must comply with Rule 11.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/809/Martin_v._Redstone_Federal_Credit_Union.pdf"
-        },
-        {
-          "id": "johnson-v-dunn-2025-07-23",
-          "name": "Johnson v. Dunn",
-          "court": "N.D. Alabama",
-          "judge": "",
-          "date": "2025-07-23",
-          "amount": null,
-          "amount_display": "",
-          "severity": "career-ending",
-          "tool": "ChatGPT",
-          "summary": "Fabricated: Case Law | Citation to United States v. Baker, 539 F. App’x 937, 943 (11th Cir. 2013) as confirming broad discovery rights; court found the citation as styled does not exist and the volume/page cited corresponds to Williams v. Morahan, not Baker, and does not discuss discovery. Outcome: Public reprimand, disqualification from the case, and referral to the Bar. In their Response, Counsel confessed to the use of AI tools in their Response to the OSC.(As recounted by Above the Law, the law firm involved quickly deleted a recent post they made about using AI.)In the Order, the judge prefaced her findings by noting that \"Even in cases like this one, where lawyers who cite AI hallucinations accept responsibility and apologize profusely, much damage is done. The opposing party expends resources identifying and exposing the fabrication; the court spends time reviewing materials, holding hearings, deliberating about sanctions, and explaining its ruling; the substance of the case is delayed; and public confidence about the trustworthiness of legal proceedings may be diminished.\"The court further reasoned that \"At the threshold, the court rejects the invitation to consider that actual authorities stand for the proposition that the bogus authorities were offered to support. That is a stroke of pure luck for these lawyers, and one that did not remediate the waste and harm their misconduct wrought. Further, any sanctions discount on this basis would amplify the siren call of unverified AI for lawyers who are already confident in their legal conclusion. This court will have no part of that.\"It added that: \"Likewise, the court rejects the invitation to consider that the involved lawyers and firm have been deeply embarrassed in media reports. For many very good reasons, courts traditionally have not relied on the media to do the difficult work of professional discipline, and this court is not about to start.\"",
-          "sanction_types": [
-            "bar-referral",
-            "professional",
-            "disqualification"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "disqualification",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/608/Butler-Snow-Order.pdf"
-        }
-      ]
-    },
-    {
       "state": "GA",
       "count": 22,
       "total": 17632,
@@ -16599,14 +16720,36 @@
     },
     {
       "state": "NC",
-      "count": 19,
+      "count": 20,
       "total": 11320,
       "severities": {
-        "low": 13,
+        "low": 14,
         "medium": 5,
         "high": 1
       },
       "cases": [
+        {
+          "id": "wayne-k-smith-sr-v-polk-county-et-al-2026-08-07",
+          "name": "Wayne K. Smith, Sr. v. Polk County, et al.",
+          "court": "W.D. North Carolina",
+          "judge": "",
+          "date": "2026-08-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "False Quotes: Case Law | Plaintiff's opening brief attributes a quotation to Board of County Commissioners v. Brown that does not appear verbatim in that decision; Court labels it a fabricated quotation and counsel acknowledges the inaccuracy. Outcome: No Sanction. Order to Show Cause is here.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2834/Wayne_Smith_v._Polk_County_USA_7_August_2026.pdf"
+        },
         {
           "id": "christine-thomas-v-united-states-department-of-justice-et-al-2026-07-15",
           "name": "Christine Thomas v. United States Department of Justice, et al.",
@@ -20128,6 +20271,320 @@
       ]
     },
     {
+      "state": "MA",
+      "count": 14,
+      "total": 2000,
+      "severities": {
+        "low": 8,
+        "medium": 4,
+        "high": 2
+      },
+      "cases": [
+        {
+          "id": "in-the-matter-of-machinsky-2026-08-07",
+          "name": "In the matter of Machinsky",
+          "court": "Massachusetts Land Court",
+          "judge": "",
+          "date": "2026-08-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Legal Norm | Defendant attributed a non-existent quotation to G.L. c. 185, § 86; the court found the quoted language does not appear in that statute or elsewhere. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2838/Machinsky_USA_7_August_2026.pdf"
+        },
+        {
+          "id": "richard-a-cole-v-midland-states-bank-et-al-2026-06-01",
+          "name": "Richard A. Cole v. Midland States Bank, et al.",
+          "court": "D. Massachusetts",
+          "judge": "",
+          "date": "2026-06-01",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Misrepresented: Legal Norm | Pro se plaintiff submitted an AI-generated 'AI Overview' screenshot asserting that the intended recipient of a failed electronic transfer may file a claim under the EFTA; the court found this claim incorrect and a material misrepresentation. Outcome: Admonishment.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2273/Cole_v._Midland_State_Bank_USA_1_June_2026.pdf"
+        },
+        {
+          "id": "souza-v-city-of-fitchburg-2026-03-30",
+          "name": "Souza v. City of Fitchburg",
+          "court": "D. Massachusetts",
+          "judge": "",
+          "date": "2026-03-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Exhibits & Submissions | Court observed Plaintiff's opposition (ECF No. 8) contained language suggesting use of a generative AI program (text addressing the plaintiff directly and referring to defense counsel), leading the court to warn about AI unreliability in filings. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1920/Souza_v._Fichtburg_USA_30_March_2026.pdf"
+        },
+        {
+          "id": "traver-v-general-motors-financial-company-inc-et-al-2026-03-11",
+          "name": "Traver v. General Motors Financial Company Inc., et al.",
+          "court": "D. Massachusetts",
+          "judge": "",
+          "date": "2026-03-11",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiffs' Opposition cited this case; the Court's research concluded it does not exist. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1677/Traver_v._General_Motors_USA_11_March_2026.pdf"
+        },
+        {
+          "id": "gregory-j-van-etten-v-stephanie-k-fattman-et-al-2026-03-06",
+          "name": "Gregory J. Van Etten v. Stephanie K. Fattman, et al.",
+          "court": "D. Massachusetts",
+          "judge": "",
+          "date": "2026-03-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Legal Norm | Court flagged plaintiff's use of 28 U.S.C. § 636(b)(1)(B) to support the incorrect proposition that a magistrate 'may recommend but cannot strike pleadings absent district-judge adoption,' and corrected that §636(b)(1)(A) and Fed. R. Civ. P. 72 govern magistrate authority over non-dispositive matters. Outcome: Warning. Warning",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1659/Van_Etten_v._Fattman_USA_6_March_2026.pdf"
+        },
+        {
+          "id": "in-re-marrett-2026-02-19",
+          "name": "In re: Marrett",
+          "court": "D. Massachusetts",
+          "judge": "",
+          "date": "2026-02-19",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Debtors cited 'Goguen v. Nason, 419 A.2d 1032 (Me. 1980)', which Westlaw/Lexis searches showed does not exist; the court identified this citation as nonexistent and noted the apparent correct citation in the same reporter is Ridgway v. Prudential Ins. Co., 419 A.2d 1030 (Me. 1980).",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1564/In_re_Marrett_USA_19_February_2026_GFXYwRZ.pdf"
+        },
+        {
+          "id": "in-re-telexfree-securities-litigation-2026-02-13",
+          "name": "In re: Telexfree Securities Litigation",
+          "court": "D. Massachusetts",
+          "judge": "",
+          "date": "2026-02-13",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Case Law | Court found plaintiff misquoted Jensen v. Phillips Screw Co. and CQ Int'l Co. v. Rochem Int'l, Inc.; errors noted as part of broader pattern of erroneous citations. Outcome: Order to Show Cause.",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1530/In_re_Telexfree_Securities_Litigation.pdf"
+        },
+        {
+          "id": "kaufman-v-upton-2026-01-21",
+          "name": "Kaufman v. Upton",
+          "court": "D. Massachusetts",
+          "judge": "",
+          "date": "2026-01-21",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Court found plaintiff's filings contained AI-generated citations to nonexistent authority; counsel attributed them to a version-control/clerical error and did not explain AI use; court treated them as false authority warranting referral. Outcome: Bar Referral.",
+          "sanction_types": [
+            "bar-referral"
+          ],
+          "tags": [
+            "fake-citations",
+            "bar-referral",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1376/Kaufman_v._Upton_USA_21_January_2026.pdf"
+        },
+        {
+          "id": "massachusetts-housing-finance-agency-v-bradley-k-bass-et-al-2025-12-31",
+          "name": "Massachusetts Housing Finance Agency v. Bradley K. Bass, et al.",
+          "court": "Massachusetts Land Court",
+          "judge": "",
+          "date": "2025-12-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Pro se parties cited a non-existent case (court found the cited decision does not appear at the citation and is not in reported SJC decisions). Court warned parties and rejected reliance on that authority. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1273/MASSACHUSETTS_HOUSING_FINANCE_AGENCY_v._Bass_USA_31_December_2025.pdf"
+        },
+        {
+          "id": "tyrone-walker-v-juliane-pierre-2025-07-03",
+          "name": "Tyrone Walker v. Juliane Pierre",
+          "court": "CA Massachusetts",
+          "judge": "",
+          "date": "2025-07-03",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Outcome: Struck from the record. \"In a prior order, we struck portions of Walker's brief that included citations to nonexistent cases. We note that the arguments raised would not have changed the outcome of the appeal in any event. \"",
+          "sanction_types": [
+            "struck-filing"
+          ],
+          "tags": [
+            "appellate"
+          ],
+          "source_url": "https://caselaw.findlaw.com/court/ma-court-of-appeals/117451936.html"
+        },
+        {
+          "id": "dastou-v-holmes-2025-06-25",
+          "name": "Dastou v. Holmes",
+          "court": "Massachusetts",
+          "judge": "",
+          "date": "2025-06-25",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "ChatGPT",
+          "summary": "In Dastou v. Holmes, a Massachusetts Superior Court sanctioned defendant’s counsel after AI-assisted motions in limine and proposed jury instructions included fabricated authorities, a fictitious legal concept, and a quotation not found in the cited real case. The court barred counsel from billing the client for the affected work and required completion of a specified continuing-legal-education program with sworn proof of completion.",
+          "sanction_types": [
+            "professional"
+          ],
+          "tags": [
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/585/Dastou_v._Holmes.pdf"
+        },
+        {
+          "id": "dupont-v-town-of-wales-2025-05-27",
+          "name": "Dupont v. Town of Wales",
+          "court": "SC Massachusetts",
+          "judge": "",
+          "date": "2025-05-27",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited Capone v. Zoning Board of Appeals of Marlborough, 33 Mass. App. Ct. 563 (1992); the court was unable to locate the case and determined the citation was incorrect or the case may not exist; Editor's Note flagged unverified, likely AI-generated citations.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "administrative",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2360/33_-_Dupont_v_Town_of_Wales.pdf"
+        },
+        {
+          "id": "zherka-v-davey-et-al-2025-05-22",
+          "name": "Zherka v. Davey et al.",
+          "court": "D. Massachusetts",
+          "judge": "",
+          "date": "2025-05-22",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "Outcome: Motion struck, with leave to refile. After being ordered to show cause, plaintiff admitted having used AI for several filings.",
+          "sanction_types": [
+            "struck-filing"
+          ],
+          "tags": [
+            "pro-se",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/hallucinations/?page=25&period_idx=0&sort_by=case_name&states=USA"
+        },
+        {
+          "id": "smith-v-farwell-2024-02-12",
+          "name": "Smith v. Farwell",
+          "court": "Massachusetts",
+          "judge": "",
+          "date": "2024-02-12",
+          "amount": 2000,
+          "amount_display": "$2.0K",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "Outcome: Monetary Fine (Supervising Lawyer). AI UseIn a wrongful death case, plaintiff's counsel filed four memoranda opposing motions to dismiss. The drafting was done by junior staff (an associate and two recent law school graduates not yet admitted to the bar) who used an unidentified AI system to locate supporting authorities. The supervising attorney signed the filings after reviewing them for style and grammar, but admittedly did not check the accuracy of the citations and was unaware AI had been used.Hallucination DetailsJudge Brian A. Davis noticed citations \"seemed amiss\" and, after investigation, could not locate three cases cited in the memoranda. These were fictitious federal and state case citations.Ruling/SanctionAfter being questioned, the supervising attorney promptly investigated, admitted the citations were fake and AI-generated, expressed sincere contrition, and explained his lack of familiarity with AI risks. Despite accepting the attorney's candor and lack of intent to mislead, Judge Davis imposed a $2,000 monetary sanction on the supervising counsel, payable to the court.Key Judicial ReasoningThe court found that sanctions were warranted because counsel failed to take \"basic, necessary precautions\" (i.e., verifying citations) before filing. While the sanction was deemed \"mild\" due to the attorney's candor and unfamiliarity with AI (distinguishing it from Mata's bad faith finding), the court issued a strong warning that a defense based on ignorance \"will be less credible, and likely less successful, as the dangers associated with the use of Generative AI systems become more widely known\". The case underscores the supervisory responsibilities of senior attorneys.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "trial"
+          ],
+          "source_url": "https://masslawyersweekly.com/wp-content/blogs.dir/1/files/2024/02/12-007-24.pdf"
+        }
+      ]
+    },
+    {
       "state": "NM",
       "count": 14,
       "total": 13140,
@@ -20459,304 +20916,36 @@
       ]
     },
     {
-      "state": "MA",
-      "count": 13,
-      "total": 2000,
-      "severities": {
-        "low": 7,
-        "medium": 4,
-        "high": 2
-      },
-      "cases": [
-        {
-          "id": "richard-a-cole-v-midland-states-bank-et-al-2026-06-01",
-          "name": "Richard A. Cole v. Midland States Bank, et al.",
-          "court": "D. Massachusetts",
-          "judge": "",
-          "date": "2026-06-01",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Misrepresented: Legal Norm | Pro se plaintiff submitted an AI-generated 'AI Overview' screenshot asserting that the intended recipient of a failed electronic transfer may file a claim under the EFTA; the court found this claim incorrect and a material misrepresentation. Outcome: Admonishment.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2273/Cole_v._Midland_State_Bank_USA_1_June_2026.pdf"
-        },
-        {
-          "id": "souza-v-city-of-fitchburg-2026-03-30",
-          "name": "Souza v. City of Fitchburg",
-          "court": "D. Massachusetts",
-          "judge": "",
-          "date": "2026-03-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Exhibits & Submissions | Court observed Plaintiff's opposition (ECF No. 8) contained language suggesting use of a generative AI program (text addressing the plaintiff directly and referring to defense counsel), leading the court to warn about AI unreliability in filings. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1920/Souza_v._Fichtburg_USA_30_March_2026.pdf"
-        },
-        {
-          "id": "traver-v-general-motors-financial-company-inc-et-al-2026-03-11",
-          "name": "Traver v. General Motors Financial Company Inc., et al.",
-          "court": "D. Massachusetts",
-          "judge": "",
-          "date": "2026-03-11",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiffs' Opposition cited this case; the Court's research concluded it does not exist. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1677/Traver_v._General_Motors_USA_11_March_2026.pdf"
-        },
-        {
-          "id": "gregory-j-van-etten-v-stephanie-k-fattman-et-al-2026-03-06",
-          "name": "Gregory J. Van Etten v. Stephanie K. Fattman, et al.",
-          "court": "D. Massachusetts",
-          "judge": "",
-          "date": "2026-03-06",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Legal Norm | Court flagged plaintiff's use of 28 U.S.C. § 636(b)(1)(B) to support the incorrect proposition that a magistrate 'may recommend but cannot strike pleadings absent district-judge adoption,' and corrected that §636(b)(1)(A) and Fed. R. Civ. P. 72 govern magistrate authority over non-dispositive matters. Outcome: Warning. Warning",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1659/Van_Etten_v._Fattman_USA_6_March_2026.pdf"
-        },
-        {
-          "id": "in-re-marrett-2026-02-19",
-          "name": "In re: Marrett",
-          "court": "D. Massachusetts",
-          "judge": "",
-          "date": "2026-02-19",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Debtors cited 'Goguen v. Nason, 419 A.2d 1032 (Me. 1980)', which Westlaw/Lexis searches showed does not exist; the court identified this citation as nonexistent and noted the apparent correct citation in the same reporter is Ridgway v. Prudential Ins. Co., 419 A.2d 1030 (Me. 1980).",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1564/In_re_Marrett_USA_19_February_2026_GFXYwRZ.pdf"
-        },
-        {
-          "id": "in-re-telexfree-securities-litigation-2026-02-13",
-          "name": "In re: Telexfree Securities Litigation",
-          "court": "D. Massachusetts",
-          "judge": "",
-          "date": "2026-02-13",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | Court found plaintiff misquoted Jensen v. Phillips Screw Co. and CQ Int'l Co. v. Rochem Int'l, Inc.; errors noted as part of broader pattern of erroneous citations. Outcome: Order to Show Cause.",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1530/In_re_Telexfree_Securities_Litigation.pdf"
-        },
-        {
-          "id": "kaufman-v-upton-2026-01-21",
-          "name": "Kaufman v. Upton",
-          "court": "D. Massachusetts",
-          "judge": "",
-          "date": "2026-01-21",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Court found plaintiff's filings contained AI-generated citations to nonexistent authority; counsel attributed them to a version-control/clerical error and did not explain AI use; court treated them as false authority warranting referral. Outcome: Bar Referral.",
-          "sanction_types": [
-            "bar-referral"
-          ],
-          "tags": [
-            "fake-citations",
-            "bar-referral",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1376/Kaufman_v._Upton_USA_21_January_2026.pdf"
-        },
-        {
-          "id": "massachusetts-housing-finance-agency-v-bradley-k-bass-et-al-2025-12-31",
-          "name": "Massachusetts Housing Finance Agency v. Bradley K. Bass, et al.",
-          "court": "Massachusetts Land Court",
-          "judge": "",
-          "date": "2025-12-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Pro se parties cited a non-existent case (court found the cited decision does not appear at the citation and is not in reported SJC decisions). Court warned parties and rejected reliance on that authority. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1273/MASSACHUSETTS_HOUSING_FINANCE_AGENCY_v._Bass_USA_31_December_2025.pdf"
-        },
-        {
-          "id": "tyrone-walker-v-juliane-pierre-2025-07-03",
-          "name": "Tyrone Walker v. Juliane Pierre",
-          "court": "CA Massachusetts",
-          "judge": "",
-          "date": "2025-07-03",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Outcome: Struck from the record. \"In a prior order, we struck portions of Walker's brief that included citations to nonexistent cases. We note that the arguments raised would not have changed the outcome of the appeal in any event. \"",
-          "sanction_types": [
-            "struck-filing"
-          ],
-          "tags": [
-            "appellate"
-          ],
-          "source_url": "https://caselaw.findlaw.com/court/ma-court-of-appeals/117451936.html"
-        },
-        {
-          "id": "dastou-v-holmes-2025-06-25",
-          "name": "Dastou v. Holmes",
-          "court": "Massachusetts",
-          "judge": "",
-          "date": "2025-06-25",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "ChatGPT",
-          "summary": "In Dastou v. Holmes, a Massachusetts Superior Court sanctioned defendant’s counsel after AI-assisted motions in limine and proposed jury instructions included fabricated authorities, a fictitious legal concept, and a quotation not found in the cited real case. The court barred counsel from billing the client for the affected work and required completion of a specified continuing-legal-education program with sworn proof of completion.",
-          "sanction_types": [
-            "professional"
-          ],
-          "tags": [
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/585/Dastou_v._Holmes.pdf"
-        },
-        {
-          "id": "dupont-v-town-of-wales-2025-05-27",
-          "name": "Dupont v. Town of Wales",
-          "court": "SC Massachusetts",
-          "judge": "",
-          "date": "2025-05-27",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited Capone v. Zoning Board of Appeals of Marlborough, 33 Mass. App. Ct. 563 (1992); the court was unable to locate the case and determined the citation was incorrect or the case may not exist; Editor's Note flagged unverified, likely AI-generated citations.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "administrative",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2360/33_-_Dupont_v_Town_of_Wales.pdf"
-        },
-        {
-          "id": "zherka-v-davey-et-al-2025-05-22",
-          "name": "Zherka v. Davey et al.",
-          "court": "D. Massachusetts",
-          "judge": "",
-          "date": "2025-05-22",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "Outcome: Motion struck, with leave to refile. After being ordered to show cause, plaintiff admitted having used AI for several filings.",
-          "sanction_types": [
-            "struck-filing"
-          ],
-          "tags": [
-            "pro-se",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/hallucinations/?page=25&period_idx=0&sort_by=case_name&states=USA"
-        },
-        {
-          "id": "smith-v-farwell-2024-02-12",
-          "name": "Smith v. Farwell",
-          "court": "Massachusetts",
-          "judge": "",
-          "date": "2024-02-12",
-          "amount": 2000,
-          "amount_display": "$2.0K",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "Outcome: Monetary Fine (Supervising Lawyer). AI UseIn a wrongful death case, plaintiff's counsel filed four memoranda opposing motions to dismiss. The drafting was done by junior staff (an associate and two recent law school graduates not yet admitted to the bar) who used an unidentified AI system to locate supporting authorities. The supervising attorney signed the filings after reviewing them for style and grammar, but admittedly did not check the accuracy of the citations and was unaware AI had been used.Hallucination DetailsJudge Brian A. Davis noticed citations \"seemed amiss\" and, after investigation, could not locate three cases cited in the memoranda. These were fictitious federal and state case citations.Ruling/SanctionAfter being questioned, the supervising attorney promptly investigated, admitted the citations were fake and AI-generated, expressed sincere contrition, and explained his lack of familiarity with AI risks. Despite accepting the attorney's candor and lack of intent to mislead, Judge Davis imposed a $2,000 monetary sanction on the supervising counsel, payable to the court.Key Judicial ReasoningThe court found that sanctions were warranted because counsel failed to take \"basic, necessary precautions\" (i.e., verifying citations) before filing. While the sanction was deemed \"mild\" due to the attorney's candor and unfamiliarity with AI (distinguishing it from Mata's bad faith finding), the court issued a strong warning that a defense based on ignorance \"will be less credible, and likely less successful, as the dangers associated with the use of Generative AI systems become more widely known\". The case underscores the supervisory responsibilities of senior attorneys.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "trial"
-          ],
-          "source_url": "https://masslawyersweekly.com/wp-content/blogs.dir/1/files/2024/02/12-007-24.pdf"
-        }
-      ]
-    },
-    {
       "state": "UT",
-      "count": 12,
+      "count": 13,
       "total": 9525,
       "severities": {
-        "low": 9,
+        "low": 10,
         "medium": 3
       },
       "cases": [
+        {
+          "id": "hack-v-preston-et-al-2026-08-07",
+          "name": "Hack v. Preston et al",
+          "court": "D. Utah",
+          "judge": "",
+          "date": "2026-08-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "ChatGPT",
+          "summary": "Misrepresented: Case Law | Reply brief relied on Hukill but provided an incorrect citation and mischaracterized the Tenth Circuit's analysis; court flagged the misrepresentation and warned about AI hallucinations. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "misrepresented-authority",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2845/Hack_v._Preston_et_al_USA_7_August_2026.pdf"
+        },
         {
           "id": "carey-v-breakell-et-al-2026-07-30",
           "name": "Carey v. Breakell et al.",
@@ -21301,13 +21490,36 @@
     },
     {
       "state": "DE",
-      "count": 10,
-      "total": 0,
+      "count": 11,
+      "total": 1,
       "severities": {
-        "medium": 1,
+        "medium": 2,
         "low": 9
       },
       "cases": [
+        {
+          "id": "stephen-j-palumbo-and-lori-a-palumbo-v-gregory-m-palumbo-2026-08-10",
+          "name": "Stephen J. Palumbo and Lori A. Palumbo v. Gregory M. Palumbo",
+          "court": "Delaware Ch.",
+          "judge": "",
+          "date": "2026-08-10",
+          "amount": 1,
+          "amount_display": "$1",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Respondent quoted language he attributed to Kuroda v. SPJS Holdings that the court found does not appear in that decision; court described the fabricated quotation as a hallmark of AI usage and used it as evidence of bad faith. Outcome: Adverse Costs Order.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2832/Stephen_J._Palumbo_et_al._v._Gregory_M._Palumbo_USA_10_August_2026.pdf"
+        },
         {
           "id": "kevin-leiske-et-al-v-robert-gregory-kidd-et-al-2026-07-01",
           "name": "Kevin Leiske et al. v. Robert Gregory Kidd et al.",
@@ -21532,6 +21744,222 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/1529/Mark_Lillard_v._Offit_Kurman_USA_12_March_2025.pdf"
+        }
+      ]
+    },
+    {
+      "state": "AR",
+      "count": 9,
+      "total": 2000,
+      "severities": {
+        "low": 4,
+        "medium": 3,
+        "high": 2
+      },
+      "cases": [
+        {
+          "id": "nicholas-evan-nesbitt-v-trans-union-llc-et-al-2026-08-11",
+          "name": "Nicholas Evan Nesbitt v. Trans Union, LLC, et al.",
+          "court": "W.D. Arkansas",
+          "judge": "",
+          "date": "2026-08-11",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Court found at least two of Plaintiff's motions contained citations to nonexistent case law; Plaintiff admitted reliance on AI for legal research. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2840/Nesbitt_v._Transunion_USA_11_AUgust_2026.pdf"
+        },
+        {
+          "id": "patrick-hrdlichka-v-samantha-bengston-2026-04-01",
+          "name": "Patrick Hrdlichka v. Samantha Bengston",
+          "court": "CA Arkansas",
+          "judge": "",
+          "date": "2026-04-01",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Appellant's brief cited multiple non-existent cases; the court searched Arkansas Reports, S.W. Reporter, and databases and found the authorities were fictitious, relying on these fabricated citations in his arguments. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "tort",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1894/Hrdlishcka_v._Bengston_USA_1_April_2026.pdf"
+        },
+        {
+          "id": "christina-leas-dunn-v-nelnet-2026-02-25",
+          "name": "Christina Leas Dunn v. Nelnet",
+          "court": "W.D. Arkansas",
+          "judge": "",
+          "date": "2026-02-25",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Nelnet pointed out that several case citations in Ms. Dunn's motions do not exist and are likely fabricated; Ms. Dunn admitted the citations were incorrect but did not file corrected motions.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1579/Dunn_v._Nelnet_USA_26_February_2026.pdf"
+        },
+        {
+          "id": "arkansas-dhs-v-april-ward-and-minor-child-respondents-2026-02-05",
+          "name": "Arkansas DHS v. April Ward and Minor Child Respondents",
+          "court": "SC Arkansas",
+          "judge": "",
+          "date": "2026-02-05",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Copilot",
+          "summary": "Fabricated: Case Law | Brief cited cases that the court could not locate; court concluded citations may be fabricated and declined to cite them. Outcome: Report to Office of Professional Conduct and Counsel dismissal. Order to Show Cause is here.",
+          "sanction_types": [
+            "case-dismissed"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1458/Arkansas_DHS_v._April_Ward_USA_5_February_2026.pdf"
+        },
+        {
+          "id": "mary-stephens-v-helena-west-helena-school-district-2026-01-20",
+          "name": "Mary Stephens v. Helena-West Helena School District",
+          "court": "E.D. Arkansas",
+          "judge": "",
+          "date": "2026-01-20",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent case K.H. v. Northside Indep. Sch. Dist.; the Court identified it as a phantom citation and ordered an explanation. Outcome: Order to Show Cause.",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1371/Stephens_v._Helena_West_USA_20_January_2026.pdf"
+        },
+        {
+          "id": "jason-m-hatfield-pa-v-tony-pirani-and-pirani-law-pa-2025-12-03",
+          "name": "Jason M. Hatfield, P.A. v. Tony Pirani and Pirani Law PA",
+          "court": "W.D. Arkansas",
+          "judge": "",
+          "date": "2025-12-03",
+          "amount": 1000,
+          "amount_display": "$1.0K",
+          "severity": "high",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Filing of motions containing citations to nonexistent cases (court characterized as AI-generated fabricated citations); Court struck the offending filings and found a Rule 11(b)(2) violation. Outcome: Brief struck; Monetary Fine; Bar Referral; Requirement to always associate co-counsel in future appearances. Order to Show Cause is here.",
+          "sanction_types": [
+            "monetary",
+            "struck-filing",
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "bar-referral",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1951/Hatfield_v._Pirani_USA_3_December_2025.pdf"
+        },
+        {
+          "id": "magee-v-new-balance-athletics-inc-2025-12-02",
+          "name": "Magee v. New Balance Athletics, Inc.",
+          "court": "E.D. Arkansas",
+          "judge": "",
+          "date": "2025-12-02",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Plaintiff's AI-generated filing included two entirely fabricated case citations; New Balance identified and alleged fabrication in its motion to strike; the Court relied on the motion and stricken the filing. Outcome: Brief Stricken; Order to Show Cause.",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "ip",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1156/Magee_v._New_Balance_USA_2_December_2025.pdf"
+        },
+        {
+          "id": "in-re-whitehall-pharmacy-llc-2025-09-03",
+          "name": "In re Whitehall Pharmacy LLC",
+          "court": "E.D. Arkansas",
+          "judge": "",
+          "date": "2025-09-03",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Amended Motion cited 'In re Berry Good, LLC, No. 4:20-bk-12345 (Bankr. E.D. Ark. May 2020)'; court found no such case or supporting order and determined the citation was AI-generated. Outcome: OSC withdrawn and dismissed; no sanctions imposed; matter transmitted to Arkansas Office of Professional Conduct. Counsel's Amended Motion cited a non-existent case (In re Berry Good, LLC) generated by AI. Court found the citation fabricated, counsel admitted AI use and negligence, implemented safeguards, and court declined sanctions while transmitting matter to disciplinary office. The court's reflections are worth quoting in full.\"When examined, paragraph 15 is the result of a flawed AI search that suggested an incorrect generalization falsely supported by a specific but non-existent case. Under any scenario, a suspect argument buttressed with a case from whole cloth violates the expressed and tacit norms governing the practice of law as it intersects with the courts. Simply, you cannot make stuff up to convince a court to do something.In simpler times, that would end the inquiry with draconian consequences. The times, however, are no longer simple; thus, the inquiry does not end here.AI interposes additional considerations that defy easy categorization or scrutiny when examining the traditional norms of practice and advocacy. Threshold, two fields of inquiry present in any AI debate. The first is whether exposition artificially generated by a computer is acceptable in what has contextually been a forum for human critical analysis, thought, and advocacy. That is not the instance here. Rather, it is the second; that is, when AI sacrifices accuracy to satisfy the consumer and that inaccuracy is advocated before the court.[...]The only acceptable conclusion is that citing a made-up case is a false representation to the court that violates the expressed norms of practice, is actionable, and should bear consequences. The answer, however, to the second question —whether an artificial component alters the calculus—is more difficult.Here, our traditional norms are challenged. In context, the traditional advocacy process begins with black letter law in the form of statutes, codes, and regulations. Then, there are judicial opinions and orders interpreting black letter law in the context of justiciable issues based on discrete facts. Lawyers cite cases for their binding or persuasive authority and have done so ever since someone started committing judicial decisions to stone, parchment, or paper. The ability to find and cite cases has evolved over time from laborious research in courthouses, to compendiums, indices, digests, reporters, advance sheets, key numbers, and now the internet.The internet changed this dynamic in two ways. First, it streamlined, refined, and improved the research process. Users could select fields, topics, and key numbers to find and locate cases. Eventually, more specific tools, such as key words or phrases, enhanced the process. Second, and more pertinent to the present issue, AI is creating a process where instead of just finding authority, the computer also does the supplicant's thinking and analysis for them. The first innovation continues to evolve; the second is new, likewise continues to evolve, but constitutes an entirely new dimension, rather than a continuum, in legal practice. Finding has evolved into finding and thinking.Travel back to research, the first changed dynamic. From stone to the internet, how lawyers found and used case law took many forms. Some would carefully read every case they found; some would read every page of select cases they thought pertinent; others might read the digest entry and then read only that section of the case; others might read only the digest entry; others barely read anything at all and cited anything that looked like it might support their position. Each was a personal decision by the lawyer for which he or she is accountable under the traditional norms of practice both officially—through codes of conduct and Rule 9011—and unofficially per the norms and expectations of courts.AI compresses this historical dynamic. The research engine is now the search and thinking engine. AI finds case law and tells the subscriber that it supports their position. All the personalities described above—and known oh-so-well to us all—have become one.Except, however, AI is flawed. In its infancy—albeit one that may be in college soon—it is immature and does not always provide accurate information or correct analysis; it may even make things up. A tool that potentially supplants your advocacy by doing the finding and thinking for you is enticing. 3 But in the end, it is only a tool. Despite our near total and unfortunate faith in the internet, it does not relieve the attorney of his or her responsibility to make sure that the information and analysis are correct.Reliance on AI can, however, mitigate intent. Here, Counsel is responsible for their negligence and misplaced reliance on AI, but there is no indication—and this court does not believe —that they purposely misled the court. They did not decide to make up a case. Misplaced reliance or negligence does not always equal intentional misrepresentation.\"",
+          "sanction_types": [
+            "case-dismissed",
+            "professional",
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "bankruptcy",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/788/In_re_Whitehall_Pharmacy_LLC.pdf"
+        },
+        {
+          "id": "nguyen-v-savage-enterprises-2025-03-03",
+          "name": "Nguyen v. Savage Enterprises",
+          "court": "E.D. Arkansas",
+          "judge": "",
+          "date": "2025-03-03",
+          "amount": 1000,
+          "amount_display": "$1.0K",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited nonexistent authority in support of her response to the motion to dismiss, leading to Rule 11(b) sanctions. Outcome: Monetary sanction. AI UseNguyen did not confirm which AI tool was used but acknowledged that AI “may have contributed.” The court inferred the use of generative AI from the pattern of hallucinated citations and accepted Nguyen’s candid acknowledgment of error, though this did not excuse the Rule 11 violation.Hallucination DetailsFictitious citations included:Kraft v. Brown &amp; Williamson Tobacco Corp., 668 F. Supp. 2d 806 (E.D. Ark. 2009)Young v. Johnson &amp; Johnson, 983 F. Supp. 2d 747 (E.D. Ark. 2013)Carpenter v. Auto-West Inc., 553 S.W.3d 480 (Ark. 2018)Miller v. Hall, 360 S.W.2d 704 (Ark. 1962)None of these cases existed in Westlaw or Lexis, and the quotes attributed to them were fabricated.Outcome / SanctionThe court imposed a $1,000 monetary sanction on Counsel for citing non-existent case law in violation of Rule 11(b). It found her conduct unjustified, despite her apology and explanation that AI may have been involved. The court emphasized that citing fake legal authorities is an abuse of the adversary system and warrants sanctions.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/341/Nguyen_v._Wheeler_E.D._Arkansas_USA_March_3_2025.pdf"
         }
       ]
     },
@@ -21931,200 +22359,6 @@
             "appellate"
           ],
           "source_url": "https://caselaw.findlaw.com/court/mis-crt-app-eas-dis-div-two/115816278.html"
-        }
-      ]
-    },
-    {
-      "state": "AR",
-      "count": 8,
-      "total": 2000,
-      "severities": {
-        "low": 3,
-        "medium": 3,
-        "high": 2
-      },
-      "cases": [
-        {
-          "id": "patrick-hrdlichka-v-samantha-bengston-2026-04-01",
-          "name": "Patrick Hrdlichka v. Samantha Bengston",
-          "court": "CA Arkansas",
-          "judge": "",
-          "date": "2026-04-01",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant's brief cited multiple non-existent cases; the court searched Arkansas Reports, S.W. Reporter, and databases and found the authorities were fictitious, relying on these fabricated citations in his arguments. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "tort",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1894/Hrdlishcka_v._Bengston_USA_1_April_2026.pdf"
-        },
-        {
-          "id": "christina-leas-dunn-v-nelnet-2026-02-25",
-          "name": "Christina Leas Dunn v. Nelnet",
-          "court": "W.D. Arkansas",
-          "judge": "",
-          "date": "2026-02-25",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Nelnet pointed out that several case citations in Ms. Dunn's motions do not exist and are likely fabricated; Ms. Dunn admitted the citations were incorrect but did not file corrected motions.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1579/Dunn_v._Nelnet_USA_26_February_2026.pdf"
-        },
-        {
-          "id": "arkansas-dhs-v-april-ward-and-minor-child-respondents-2026-02-05",
-          "name": "Arkansas DHS v. April Ward and Minor Child Respondents",
-          "court": "SC Arkansas",
-          "judge": "",
-          "date": "2026-02-05",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Copilot",
-          "summary": "Fabricated: Case Law | Brief cited cases that the court could not locate; court concluded citations may be fabricated and declined to cite them. Outcome: Report to Office of Professional Conduct and Counsel dismissal. Order to Show Cause is here.",
-          "sanction_types": [
-            "case-dismissed"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1458/Arkansas_DHS_v._April_Ward_USA_5_February_2026.pdf"
-        },
-        {
-          "id": "mary-stephens-v-helena-west-helena-school-district-2026-01-20",
-          "name": "Mary Stephens v. Helena-West Helena School District",
-          "court": "E.D. Arkansas",
-          "judge": "",
-          "date": "2026-01-20",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent case K.H. v. Northside Indep. Sch. Dist.; the Court identified it as a phantom citation and ordered an explanation. Outcome: Order to Show Cause.",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1371/Stephens_v._Helena_West_USA_20_January_2026.pdf"
-        },
-        {
-          "id": "jason-m-hatfield-pa-v-tony-pirani-and-pirani-law-pa-2025-12-03",
-          "name": "Jason M. Hatfield, P.A. v. Tony Pirani and Pirani Law PA",
-          "court": "W.D. Arkansas",
-          "judge": "",
-          "date": "2025-12-03",
-          "amount": 1000,
-          "amount_display": "$1.0K",
-          "severity": "high",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Filing of motions containing citations to nonexistent cases (court characterized as AI-generated fabricated citations); Court struck the offending filings and found a Rule 11(b)(2) violation. Outcome: Brief struck; Monetary Fine; Bar Referral; Requirement to always associate co-counsel in future appearances. Order to Show Cause is here.",
-          "sanction_types": [
-            "monetary",
-            "struck-filing",
-            "bar-referral",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "bar-referral",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1951/Hatfield_v._Pirani_USA_3_December_2025.pdf"
-        },
-        {
-          "id": "magee-v-new-balance-athletics-inc-2025-12-02",
-          "name": "Magee v. New Balance Athletics, Inc.",
-          "court": "E.D. Arkansas",
-          "judge": "",
-          "date": "2025-12-02",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Plaintiff's AI-generated filing included two entirely fabricated case citations; New Balance identified and alleged fabrication in its motion to strike; the Court relied on the motion and stricken the filing. Outcome: Brief Stricken; Order to Show Cause.",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "ip",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1156/Magee_v._New_Balance_USA_2_December_2025.pdf"
-        },
-        {
-          "id": "in-re-whitehall-pharmacy-llc-2025-09-03",
-          "name": "In re Whitehall Pharmacy LLC",
-          "court": "E.D. Arkansas",
-          "judge": "",
-          "date": "2025-09-03",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Amended Motion cited 'In re Berry Good, LLC, No. 4:20-bk-12345 (Bankr. E.D. Ark. May 2020)'; court found no such case or supporting order and determined the citation was AI-generated. Outcome: OSC withdrawn and dismissed; no sanctions imposed; matter transmitted to Arkansas Office of Professional Conduct. Counsel's Amended Motion cited a non-existent case (In re Berry Good, LLC) generated by AI. Court found the citation fabricated, counsel admitted AI use and negligence, implemented safeguards, and court declined sanctions while transmitting matter to disciplinary office. The court's reflections are worth quoting in full.\"When examined, paragraph 15 is the result of a flawed AI search that suggested an incorrect generalization falsely supported by a specific but non-existent case. Under any scenario, a suspect argument buttressed with a case from whole cloth violates the expressed and tacit norms governing the practice of law as it intersects with the courts. Simply, you cannot make stuff up to convince a court to do something.In simpler times, that would end the inquiry with draconian consequences. The times, however, are no longer simple; thus, the inquiry does not end here.AI interposes additional considerations that defy easy categorization or scrutiny when examining the traditional norms of practice and advocacy. Threshold, two fields of inquiry present in any AI debate. The first is whether exposition artificially generated by a computer is acceptable in what has contextually been a forum for human critical analysis, thought, and advocacy. That is not the instance here. Rather, it is the second; that is, when AI sacrifices accuracy to satisfy the consumer and that inaccuracy is advocated before the court.[...]The only acceptable conclusion is that citing a made-up case is a false representation to the court that violates the expressed norms of practice, is actionable, and should bear consequences. The answer, however, to the second question —whether an artificial component alters the calculus—is more difficult.Here, our traditional norms are challenged. In context, the traditional advocacy process begins with black letter law in the form of statutes, codes, and regulations. Then, there are judicial opinions and orders interpreting black letter law in the context of justiciable issues based on discrete facts. Lawyers cite cases for their binding or persuasive authority and have done so ever since someone started committing judicial decisions to stone, parchment, or paper. The ability to find and cite cases has evolved over time from laborious research in courthouses, to compendiums, indices, digests, reporters, advance sheets, key numbers, and now the internet.The internet changed this dynamic in two ways. First, it streamlined, refined, and improved the research process. Users could select fields, topics, and key numbers to find and locate cases. Eventually, more specific tools, such as key words or phrases, enhanced the process. Second, and more pertinent to the present issue, AI is creating a process where instead of just finding authority, the computer also does the supplicant's thinking and analysis for them. The first innovation continues to evolve; the second is new, likewise continues to evolve, but constitutes an entirely new dimension, rather than a continuum, in legal practice. Finding has evolved into finding and thinking.Travel back to research, the first changed dynamic. From stone to the internet, how lawyers found and used case law took many forms. Some would carefully read every case they found; some would read every page of select cases they thought pertinent; others might read the digest entry and then read only that section of the case; others might read only the digest entry; others barely read anything at all and cited anything that looked like it might support their position. Each was a personal decision by the lawyer for which he or she is accountable under the traditional norms of practice both officially—through codes of conduct and Rule 9011—and unofficially per the norms and expectations of courts.AI compresses this historical dynamic. The research engine is now the search and thinking engine. AI finds case law and tells the subscriber that it supports their position. All the personalities described above—and known oh-so-well to us all—have become one.Except, however, AI is flawed. In its infancy—albeit one that may be in college soon—it is immature and does not always provide accurate information or correct analysis; it may even make things up. A tool that potentially supplants your advocacy by doing the finding and thinking for you is enticing. 3 But in the end, it is only a tool. Despite our near total and unfortunate faith in the internet, it does not relieve the attorney of his or her responsibility to make sure that the information and analysis are correct.Reliance on AI can, however, mitigate intent. Here, Counsel is responsible for their negligence and misplaced reliance on AI, but there is no indication—and this court does not believe —that they purposely misled the court. They did not decide to make up a case. Misplaced reliance or negligence does not always equal intentional misrepresentation.\"",
-          "sanction_types": [
-            "case-dismissed",
-            "professional",
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "bankruptcy",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/788/In_re_Whitehall_Pharmacy_LLC.pdf"
-        },
-        {
-          "id": "nguyen-v-savage-enterprises-2025-03-03",
-          "name": "Nguyen v. Savage Enterprises",
-          "court": "E.D. Arkansas",
-          "judge": "",
-          "date": "2025-03-03",
-          "amount": 1000,
-          "amount_display": "$1.0K",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited nonexistent authority in support of her response to the motion to dismiss, leading to Rule 11(b) sanctions. Outcome: Monetary sanction. AI UseNguyen did not confirm which AI tool was used but acknowledged that AI “may have contributed.” The court inferred the use of generative AI from the pattern of hallucinated citations and accepted Nguyen’s candid acknowledgment of error, though this did not excuse the Rule 11 violation.Hallucination DetailsFictitious citations included:Kraft v. Brown &amp; Williamson Tobacco Corp., 668 F. Supp. 2d 806 (E.D. Ark. 2009)Young v. Johnson &amp; Johnson, 983 F. Supp. 2d 747 (E.D. Ark. 2013)Carpenter v. Auto-West Inc., 553 S.W.3d 480 (Ark. 2018)Miller v. Hall, 360 S.W.2d 704 (Ark. 1962)None of these cases existed in Westlaw or Lexis, and the quotes attributed to them were fabricated.Outcome / SanctionThe court imposed a $1,000 monetary sanction on Counsel for citing non-existent case law in violation of Rule 11(b). It found her conduct unjustified, despite her apology and explanation that AI may have been involved. The court emphasized that citing fake legal authorities is an abuse of the adversary system and warrants sanctions.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/341/Nguyen_v._Wheeler_E.D._Arkansas_USA_March_3_2025.pdf"
         }
       ]
     },
@@ -23566,12 +23800,12 @@
     }
   ],
   "by_week": {
-    "2026-W33": 1,
-    "2026-W32": 16,
+    "2026-W33": 15,
+    "2026-W32": 22,
     "2026-W31": 30,
-    "2026-W30": 19,
+    "2026-W30": 20,
     "2026-W29": 28,
-    "2026-W28": 23,
+    "2026-W28": 22,
     "2026-W27": 28,
     "2026-W26": 26,
     "2026-W25": 20,
@@ -23579,7 +23813,7 @@
     "2026-W23": 31,
     "2026-W22": 30,
     "2026-W21": 44,
-    "2026-W20": 26,
+    "2026-W20": 27,
     "2026-W19": 37,
     "2026-W18": 47,
     "2026-W17": 30,
@@ -23587,13 +23821,13 @@
     "2026-W15": 24,
     "2026-W14": 52,
     "2026-W13": 33,
-    "2026-W12": 40,
-    "2026-W11": 34,
-    "2026-W10": 31,
+    "2026-W12": 41,
+    "2026-W11": 35,
+    "2026-W10": 32,
     "2026-W09": 30,
     "2026-W08": 27,
     "2026-W07": 42,
-    "2026-W06": 29,
+    "2026-W06": 31,
     "2026-W05": 28,
     "2026-W04": 36,
     "2026-W03": 37,
@@ -23601,31 +23835,31 @@
     "2026-W01": 22,
     "2025-W52": 21,
     "2025-W51": 43,
-    "2025-W50": 27,
-    "2025-W49": 43,
-    "2025-W48": 28,
-    "2025-W47": 39,
+    "2025-W50": 28,
+    "2025-W49": 44,
+    "2025-W48": 29,
+    "2025-W47": 40,
     "2025-W46": 26,
-    "2025-W45": 29,
+    "2025-W45": 30,
     "2025-W44": 35,
     "2025-W43": 24,
     "2025-W42": 27,
     "2025-W41": 20,
-    "2025-W40": 24,
-    "2025-W39": 24,
-    "2025-W38": 24,
-    "2025-W37": 15,
+    "2025-W40": 25,
+    "2025-W39": 26,
+    "2025-W38": 26,
+    "2025-W37": 16,
     "2025-W36": 20,
     "2025-W35": 28,
-    "2025-W34": 16,
-    "2025-W33": 20,
+    "2025-W34": 17,
+    "2025-W33": 21,
     "2025-W32": 16,
     "2025-W31": 20,
     "2025-W30": 21,
     "2025-W29": 13,
     "2025-W28": 19,
     "2025-W27": 20,
-    "2025-W26": 15,
+    "2025-W26": 16,
     "2025-W25": 8,
     "2025-W24": 8,
     "2025-W23": 7,
@@ -23635,8 +23869,8 @@
     "2025-W19": 9,
     "2025-W18": 7,
     "2025-W17": 5,
-    "2025-W16": 4,
-    "2025-W15": 6,
+    "2025-W16": 5,
+    "2025-W15": 7,
     "2025-W14": 11,
     "2025-W13": 5,
     "2025-W12": 7,
@@ -23700,23 +23934,23 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-08": 17,
+    "2026-08": 37,
     "2026-07": 114,
     "2026-06": 124,
-    "2026-05": 148,
+    "2026-05": 149,
     "2026-04": 125,
-    "2026-03": 175,
-    "2026-02": 128,
+    "2026-03": 178,
+    "2026-02": 130,
     "2026-01": 134,
-    "2025-12": 152,
-    "2025-11": 124,
+    "2025-12": 154,
+    "2025-11": 127,
     "2025-10": 120,
-    "2025-09": 91,
-    "2025-08": 85,
+    "2025-09": 97,
+    "2025-08": 87,
     "2025-07": 82,
-    "2025-06": 45,
+    "2025-06": 46,
     "2025-05": 48,
-    "2025-04": 28,
+    "2025-04": 30,
     "2025-03": 24,
     "2025-02": 15,
     "2025-01": 16,
@@ -23744,15 +23978,16 @@
   "by_year": {
     "2023": 16,
     "2024": 59,
-    "2025": 830,
-    "2026": 965
+    "2025": 846,
+    "2026": 991
   },
   "by_tool": {
-    "Unidentified": 392,
-    "AI (implied, unspecified)": 1258,
+    "Unidentified": 407,
+    "AI (implied, unspecified)": 1281,
+    "ChatGPT": 106,
+    "Irys": 1,
     "Gemini Pro; Perplexity; Cetient Legal AI; ChatGPT": 1,
     "Open Law; Claude; ChatGPT": 1,
-    "ChatGPT": 103,
     "Claude AI": 1,
     "LegalPA": 1,
     "ChatGPT, Claude": 1,
@@ -23848,16 +24083,16 @@
     "Google Bard": 1
   },
   "by_circuit": {
-    "8th Circuit": 58,
-    "6th Circuit": 107,
-    "9th Circuit": 292,
-    "2nd Circuit": 140,
+    "11th Circuit": 112,
+    "9th Circuit": 295,
+    "3rd Circuit": 73,
+    "7th Circuit": 112,
+    "8th Circuit": 59,
+    "6th Circuit": 108,
+    "2nd Circuit": 141,
+    "10th Circuit": 114,
+    "4th Circuit": 69,
     "5th Circuit": 136,
-    "3rd Circuit": 71,
-    "11th Circuit": 110,
-    "4th Circuit": 68,
-    "10th Circuit": 113,
-    "7th Circuit": 110,
     "D.C. Circuit": 18,
     "1st Circuit": 1,
     "Federal Circuit": 1
@@ -23889,7 +24124,7 @@
     },
     {
       "week": "2026-W28",
-      "count": 23
+      "count": 22
     },
     {
       "week": "2026-W29",
@@ -23897,7 +24132,7 @@
     },
     {
       "week": "2026-W30",
-      "count": 19
+      "count": 20
     },
     {
       "week": "2026-W31",
@@ -23905,11 +24140,11 @@
     },
     {
       "week": "2026-W32",
-      "count": 16
+      "count": 22
     },
     {
       "week": "2026-W33",
-      "count": 1
+      "count": 15
     }
   ]
 }

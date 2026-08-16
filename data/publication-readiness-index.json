@@ -1,21 +1,101 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "82d8cb8a6750895a9e5f1c5d08661c7aaf13e572637d50ef3205e2865bc7d8eb",
-  "corpus_checked": "2026-08-15",
-  "total_cases": 1870,
+  "dataset_checksum": "4c84d5581e3a3a405212b93ab3ca0fd2083e93b4be21883e16e70a19f3dffa67",
+  "corpus_checked": "2026-08-16",
+  "total_cases": 1912,
   "tiers": {
-    "index-ready": 1851,
+    "index-ready": 1893,
     "enrichment-ready": 15,
     "research-only": 4
   },
   "by_slug": {
+    "apelacao-civel-no-1032884-04-2025-8-26-0224-2026-08-13": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "arbuckle-v-tanner-2026-nsca-62-2026-08-12": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "garry-chapman-v-city-of-priceville-et-al-2026-08-12": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "in-re-bard-implanted-port-catheter-products-liability-litigation-2026-08-12": {
+      "tier": "index-ready",
+      "score": 90
+    },
+    "jmor-properties-v-artist-alley-townhomes-et-al-2026-08-12": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "rose-v-arts-bonita-inc-2026-08-12": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "a-p-v-s-k-2026-08-11": {
+      "tier": "index-ready",
+      "score": 86
+    },
+    "courtney-voyton-v-joseph-voyton-et-al-2026-08-11": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "egan-v-commonwealth-of-australia-2026-fca-1104-2026-08-11": {
       "tier": "index-ready",
       "score": 80
     },
+    "fa-alagilagi-meni-siliga-v-a-s-contractor-inc-et-al-2026-08-11": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "in-re-marriage-of-katelyn-jill-tate-2026-08-11": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "nicholas-evan-nesbitt-v-trans-union-llc-et-al-2026-08-11": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "anish-sam-mathew-v-parv-verma-2026-08-10": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "stephen-j-palumbo-and-lori-a-palumbo-v-gregory-m-palumbo-2026-08-10": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "wri-summit-reit-lp-v-kuerschner-2026-08-10": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "brown-v-real-estate-capital-of-america-et-al-2026-08-07": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "hack-v-preston-et-al-2026-08-07": {
+      "tier": "index-ready",
+      "score": 86
+    },
+    "in-the-matter-of-machinsky-2026-08-07": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "united-states-of-america-v-smith-2026-08-07": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "wayne-k-smith-sr-v-polk-county-et-al-2026-08-07": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "girija-kadlaskar-v-united-states-citizenship-and-immigration-services-2026-08-06": {
       "tier": "index-ready",
       "score": 85
+    },
+    "guertin-giroux-c-delrue-2026-08-06": {
+      "tier": "index-ready",
+      "score": 76
     },
     "in-re-bfi-waste-sys-of-tenn-2026-08-06": {
       "tier": "index-ready",
@@ -237,6 +317,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "apelacao-civel-npu-0035599-44-2017-8-16-0014-2026-07-22": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "asif-v-minister-for-immigration-and-citizenship-2026-07-22": {
       "tier": "index-ready",
       "score": 86
@@ -384,10 +468,6 @@
     "whyte-et-al-v-mk-united-inc-et-al-2026-07-13": {
       "tier": "index-ready",
       "score": 80
-    },
-    "julia-rose-v-arts-bonita-inc-et-al-2026-07-12": {
-      "tier": "index-ready",
-      "score": 81
     },
     "akerlund-v-atlas-air-inc-et-al-2026-07-10": {
       "tier": "index-ready",
@@ -1340,6 +1420,10 @@
     "leung-v-omnia-inclusive-employment-solutions-ltd-2026-05-15": {
       "tier": "index-ready",
       "score": 90
+    },
+    "mercado-e-acougue-sao-lucas-eireli-v-pluxee-beneficios-brasil-s-a-agravo-interno-no-000017-2026-05-15": {
+      "tier": "index-ready",
+      "score": 85
     },
     "nikko-d-ambrosio-v-meta-platforms-inc-2026-05-15": {
       "tier": "index-ready",
@@ -2521,6 +2605,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "pablo-alexandre-martins-dos-santos-v-viver-bem-empreendimentos-imobiliarios-e-participacoe-2026-03-17": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "pl-v-minister-of-employment-and-social-development-2026-03-17": {
       "tier": "index-ready",
       "score": 76
@@ -2677,6 +2765,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "no-1500026-62-2023-8-26-0633-50000-2026-03-10": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "siemens-v-the-owners-strata-plan-eps3699-2026-03-10": {
       "tier": "index-ready",
       "score": 76
@@ -2796,6 +2888,10 @@
     "makongo-c-montpetit-2026-03-03": {
       "tier": "index-ready",
       "score": 81
+    },
+    "chun-v-vancouver-whitecaps-fc-lp-2026-03-02": {
+      "tier": "index-ready",
+      "score": 76
     },
     "derence-v-fivehouse-v-united-states-department-of-defense-et-al-2026-03-02": {
       "tier": "index-ready",
@@ -3261,6 +3357,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "no-5734510-54-2025-8-09-0051-2026-02-05": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "zeng-v-zuo-2026-02-05": {
       "tier": "index-ready",
       "score": 80
@@ -3284,6 +3384,10 @@
     "offen-petroleum-v-lj-express-2026-02-04": {
       "tier": "index-ready",
       "score": 90
+    },
+    "patrick-idim-cyprian-v-minister-of-citizenship-and-immigration-2026-02-04": {
+      "tier": "index-ready",
+      "score": 81
     },
     "rsr-road-surface-recycling-v-bonnechere-excavating-et-al-2026-02-04": {
       "tier": "index-ready",
@@ -4277,6 +4381,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "n-o-5207056-82-2025-8-09-0011-2025-12-09": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "scott-m-boger-v-city-of-harrisonburg-virginia-et-al-2025-12-09": {
       "tier": "index-ready",
       "score": 85
@@ -4457,6 +4565,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "jose-carlos-pinto-de-faria-v-prevent-twb-do-brasil-et-al-2025-12-01": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "kingdom-of-sweden-v-samantha-ashhadi-soliman-2025-12-01": {
       "tier": "index-ready",
       "score": 85
@@ -4504,6 +4616,10 @@
     "pl-v-minister-of-employment-and-social-development-2025-11-28": {
       "tier": "index-ready",
       "score": 81
+    },
+    "apelacao-civel-no-1-0000-25-331707-7-001-silvio-xavier-dos-santos-v-estado-de-minas-gerais-2025-11-27": {
+      "tier": "index-ready",
+      "score": 85
     },
     "boyd-v-protestant-memorial-medical-center-2025-11-26": {
       "tier": "index-ready",
@@ -4666,6 +4782,10 @@
       "score": 86
     },
     "mareiorozyan-v-automobili-lamborghini-america-llc-2025-11-19": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "no-1-0000-25-200097-1-001-antonio-carlos-vieira-barbosa-2025-11-19": {
       "tier": "index-ready",
       "score": 81
     },
@@ -4872,6 +4992,10 @@
     "wade-v-traincareconsult-inc-2025-11-07": {
       "tier": "index-ready",
       "score": 81
+    },
+    "apelacao-civel-nu-0000268-31-2023-8-16-0033-costarte-eireli-me-v-churrascao-gaucho-restaur-2025-11-06": {
+      "tier": "index-ready",
+      "score": 80
     },
     "bc-taco-restaurant-group-ltd-2025-11-06": {
       "tier": "index-ready",
@@ -5477,6 +5601,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "no-5012855-37-2024-8-09-0137-2025-09-29": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "sonkin-v-roll-profile-ltd-2025-09-29": {
       "tier": "index-ready",
       "score": 90
@@ -5488,6 +5616,10 @@
     "ilan-harush-v-roee-alfasi-2025-09-28": {
       "tier": "index-ready",
       "score": 90
+    },
+    "autos-no-0006113-73-2025-8-16-0033-agravo-interno-civel-2025-09-26": {
+      "tier": "index-ready",
+      "score": 85
     },
     "jade-riley-burch-v-hca-healthcare-2025-09-26": {
       "tier": "index-ready",
@@ -5552,6 +5684,10 @@
     "messa-v-ministre-de-la-citoyennete-et-de-limmigration-2025-09-23": {
       "tier": "index-ready",
       "score": 90
+    },
+    "no-5005798-22-2025-8-24-0005-sc-2025-09-23": {
+      "tier": "index-ready",
+      "score": 85
     },
     "puerto-rico-soccer-league-nfp-corp-et-al-v-federacion-puertorriquena-de-futbol-e": {
       "tier": "index-ready",
@@ -5629,6 +5765,10 @@
       "tier": "index-ready",
       "score": 90
     },
+    "ana-cristina-mendes-sales-v-nemora-elizangela-leite-da-silva-de-castro-2025-09-17": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "howe-v-nsw-department-of-education-2025-09-17": {
       "tier": "index-ready",
       "score": 76
@@ -5648,6 +5788,10 @@
     "tsupko-v-kinetic-advantage-llc-2025-09-17": {
       "tier": "index-ready",
       "score": 81
+    },
+    "agravo-de-instrumento-no-5059805-76-2025-8-24-0000-2025-09-16": {
+      "tier": "index-ready",
+      "score": 85
     },
     "bka-holdings-v-sam-2025-09-16": {
       "tier": "index-ready",
@@ -5736,6 +5880,10 @@
     "brooks-and-brooks-inc-v-patel-et-al-2025-09-08": {
       "tier": "index-ready",
       "score": 90
+    },
+    "no-1001467-35-2024-5-02-0467-rot-2025-09-08": {
+      "tier": "index-ready",
+      "score": 81
     },
     "anthony-c-hill-v-workday-inc-1-2025-09-05": {
       "tier": "index-ready",
@@ -5977,6 +6125,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "n-5392928-50-2025-8-09-0051-2025-08-18": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "wang-v-moutidis-2025-08-18": {
       "tier": "index-ready",
       "score": 95
@@ -6056,6 +6208,10 @@
     "ms-bangladesh-2025-08-12": {
       "tier": "index-ready",
       "score": 95
+    },
+    "no-5043726-22-2025-8-24-0000-sc-2025-08-12": {
+      "tier": "index-ready",
+      "score": 85
     },
     "blinds-to-go-inc-c-blachley-2025-08-11": {
       "tier": "index-ready",
@@ -6553,6 +6709,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "agravo-de-instrumento-npu-0032636-27-2025-8-16-0000-petry-v-evanlux-esquadrias-ltda-2025-06-24": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "hussein-v-canada-2025-06-24": {
       "tier": "index-ready",
       "score": 95
@@ -6905,6 +7065,10 @@
       "tier": "index-ready",
       "score": 90
     },
+    "no-5025505-88-2025-8-24-0000-sc-2025-04-16": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "sims-v-souily-lefave-2-2025-04-15": {
       "tier": "index-ready",
       "score": 81
@@ -6916,6 +7080,10 @@
     "graciela-dela-torre-v-davies-life-health-inc-et-al-2025-04-11": {
       "tier": "index-ready",
       "score": 80
+    },
+    "recurso-em-sentido-estrito-no-0002062-61-2025-8-16-0019-vilmar-martins-dos-santos-2025-04-11": {
+      "tier": "index-ready",
+      "score": 85
     },
     "vilmar-martins-dos-santos-v-state-of-parana-2025-04-11": {
       "tier": "index-ready",

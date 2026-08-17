@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "4c84d5581e3a3a405212b93ab3ca0fd2083e93b4be21883e16e70a19f3dffa67",
-  "corpus_checked": "2026-08-16",
-  "total_cases": 1912,
-  "total_assessments": 1912,
+  "dataset_checksum": "2bba6c676788546df0fbaba2ae63fffc1d58dc589528606f4a2206c094ed26f6",
+  "corpus_checked": "2026-08-17",
+  "total_cases": 1922,
+  "total_assessments": 1922,
   "tiers": {
-    "index-ready": 1893,
+    "index-ready": 1903,
     "enrichment-ready": 15,
     "research-only": 4
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 102,
-    "operational-lesson-not-recorded": 1175,
-    "outcome-not-recorded": 375,
-    "publication-review-pending": 1912,
+    "operational-lesson-not-recorded": 1186,
+    "outcome-not-recorded": 376,
+    "publication-review-pending": 1922,
     "source-link-missing": 3,
-    "specific-ai-tool-not-established": 1689,
+    "specific-ai-tool-not-established": 1700,
     "summary-missing": 1,
-    "summary-needs-detail": 776,
+    "summary-needs-detail": 784,
     "summary-too-brief": 14
   },
   "records": [
@@ -7083,6 +7083,103 @@
       ]
     },
     {
+      "id": "lodhia-v-twelve-trees-2026-07-24",
+      "slug": "lodhia-v-twelve-trees-2026-07-24",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 1230,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
       "id": "morgan-cole-v-hobby-town-unlimited-inc-2026-07-24",
       "slug": "morgan-cole-v-hobby-town-unlimited-inc-2026-07-24",
       "score": 85,
@@ -7798,103 +7895,6 @@
       ]
     },
     {
-      "id": "apelacao-civel-npu-0035599-44-2017-8-16-0014-2026-07-22",
-      "slug": "apelacao-civel-npu-0035599-44-2017-8-16-0014-2026-07-22",
-      "score": 85,
-      "maximum_score": 100,
-      "tier": "index-ready",
-      "index_eligible": true,
-      "source_eligible": true,
-      "summary_length": 981,
-      "score_breakdown": [
-        {
-          "criterion": "case_name",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "date",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "court",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "jurisdiction",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "source_url",
-          "points": 20,
-          "maximum": 20
-        },
-        {
-          "criterion": "source_name",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "summary",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "outcome",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "hallucination_items",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "ai_tool_used",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "tags",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "lesson",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "reviewed",
-          "points": 0,
-          "maximum": 5
-        }
-      ],
-      "missing_fields": [
-        {
-          "field": "ai_tool_used",
-          "code": "specific-ai-tool-not-established",
-          "impact": "context",
-          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
-        },
-        {
-          "field": "lesson",
-          "code": "operational-lesson-not-recorded",
-          "impact": "improvement",
-          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
-        },
-        {
-          "field": "reviewed",
-          "code": "publication-review-pending",
-          "impact": "improvement",
-          "remediation": "Complete and date editorial publication review before calling this case curated."
-        }
-      ]
-    },
-    {
       "id": "asif-v-minister-for-immigration-and-citizenship-2026-07-22",
       "slug": "asif-v-minister-for-immigration-and-citizenship-2026-07-22",
       "score": 86,
@@ -8103,6 +8103,103 @@
       "index_eligible": true,
       "source_eligible": true,
       "summary_length": 834,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "n-0035599-44-2017-8-16-0014-2026-07-22",
+      "slug": "n-0035599-44-2017-8-16-0014-2026-07-22",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 295,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -18251,6 +18348,109 @@
       ]
     },
     {
+      "id": "ederaldo-cirino-da-luz-v-joaquim-cirino-da-luz-et-al-2026-06-23",
+      "slug": "ederaldo-cirino-da-luz-v-joaquim-cirino-da-luz-et-al-2026-06-23",
+      "score": 81,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 204,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 6,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
       "id": "i-fz-104-26-postanowienie-nsa-2026-06-23",
       "slug": "i-fz-104-26-postanowienie-nsa-2026-06-23",
       "score": 80,
@@ -21693,6 +21893,103 @@
       ]
     },
     {
+      "id": "no-0004948-60-2026-8-16-0031-2026-06-12",
+      "slug": "no-0004948-60-2026-8-16-0031-2026-06-12",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 251,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
       "id": "otar-bennett-v-trillium-health-partners-2026-06-12",
       "slug": "otar-bennett-v-trillium-health-partners-2026-06-12",
       "score": 81,
@@ -23531,6 +23828,109 @@
       "index_eligible": true,
       "source_eligible": true,
       "summary_length": 193,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 6,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "franciely-da-silva-luz-2026-06-09",
+      "slug": "franciely-da-silva-luz-2026-06-09",
+      "score": 81,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 209,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -28086,6 +28486,109 @@
       ]
     },
     {
+      "id": "n-0001439-38-2024-8-16-0049-2026-05-29",
+      "slug": "n-0001439-38-2024-8-16-0049-2026-05-29",
+      "score": 81,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 202,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 6,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
       "id": "trauger-v-columbia-county-district-attorney-s-office-et-al-2026-05-29",
       "slug": "trauger-v-columbia-county-district-attorney-s-office-et-al-2026-05-29",
       "score": 81,
@@ -30889,6 +31392,109 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "manoel-tomaz-budal-filho-v-antonio-carlos-alves-lopes-2026-05-25",
+      "slug": "manoel-tomaz-budal-filho-v-antonio-carlos-alves-lopes-2026-05-25",
+      "score": 81,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 211,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 6,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
@@ -35776,14 +36382,14 @@
       ]
     },
     {
-      "id": "mercado-e-acougue-sao-lucas-eireli-v-pluxee-beneficios-brasil-s-a-agravo-interno-no-000017-2026-05-15",
-      "slug": "mercado-e-acougue-sao-lucas-eireli-v-pluxee-beneficios-brasil-s-a-agravo-interno-no-000017-2026-05-15",
+      "id": "mercado-e-acougue-sao-lucas-eireli-v-pluxee-beneficios-brasil-2026-05-15",
+      "slug": "mercado-e-acougue-sao-lucas-eireli-v-pluxee-beneficios-brasil-2026-05-15",
       "score": 85,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
       "source_eligible": true,
-      "summary_length": 1043,
+      "summary_length": 256,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -38515,6 +39121,103 @@
       ]
     },
     {
+      "id": "no-0143435-40-2025-8-16-0000-2026-05-08",
+      "slug": "no-0143435-40-2025-8-16-0000-2026-05-08",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 255,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
       "id": "samson-v-chartrand-2026-05-08",
       "slug": "samson-v-chartrand-2026-05-08",
       "score": 80,
@@ -40088,6 +40791,103 @@
           "impact": "improvement",
           "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
         },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "thalita-aparecida-araujo-rosa-campos-v-marcio-abreu-rosa-2026-05-06",
+      "slug": "thalita-aparecida-araujo-rosa-campos-v-marcio-abreu-rosa-2026-05-06",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 794,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
@@ -52383,6 +53183,103 @@
       "index_eligible": true,
       "source_eligible": true,
       "summary_length": 244,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "no-0104033-49-2025-8-16-0000-2026-04-08",
+      "slug": "no-0104033-49-2025-8-16-0000-2026-04-08",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 294,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -74786,6 +75683,109 @@
       ]
     },
     {
+      "id": "amanda-jacintha-de-souza-v-atual-companhia-securitizadora-de-creditos-financeiros-2026-02-24",
+      "slug": "amanda-jacintha-de-souza-v-atual-companhia-securitizadora-de-creditos-financeiros-2026-02-24",
+      "score": 81,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 192,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 6,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
       "id": "chapter-kris-jackson-v-bok-financial-corporation-et-al-3-2026-02-24",
       "slug": "chapter-kris-jackson-v-bok-financial-corporation-et-al-3-2026-02-24",
       "score": 81,
@@ -75571,6 +76571,103 @@
           "impact": "improvement",
           "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
         },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "luiz-carlos-barboza-neves-v-banco-bradesco-s-a-2026-02-23",
+      "slug": "luiz-carlos-barboza-neves-v-banco-bradesco-s-a-2026-02-23",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 509,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
@@ -114485,14 +115582,14 @@
       ]
     },
     {
-      "id": "apelacao-civel-no-1-0000-25-331707-7-001-silvio-xavier-dos-santos-v-estado-de-minas-gerais-2025-11-27",
-      "slug": "apelacao-civel-no-1-0000-25-331707-7-001-silvio-xavier-dos-santos-v-estado-de-minas-gerais-2025-11-27",
-      "score": 85,
+      "id": "silvio-xavier-dos-santos-v-estado-de-minas-gerais-2025-11-27",
+      "slug": "silvio-xavier-dos-santos-v-estado-de-minas-gerais-2025-11-27",
+      "score": 81,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
       "source_eligible": true,
-      "summary_length": 976,
+      "summary_length": 161,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -114526,7 +115623,7 @@
         },
         {
           "criterion": "summary",
-          "points": 10,
+          "points": 6,
           "maximum": 10
         },
         {
@@ -114561,6 +115658,12 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
@@ -123681,109 +124784,6 @@
       ]
     },
     {
-      "id": "apelacao-civel-nu-0000268-31-2023-8-16-0033-costarte-eireli-me-v-churrascao-gaucho-restaur-2025-11-06",
-      "slug": "apelacao-civel-nu-0000268-31-2023-8-16-0033-costarte-eireli-me-v-churrascao-gaucho-restaur-2025-11-06",
-      "score": 80,
-      "maximum_score": 100,
-      "tier": "index-ready",
-      "index_eligible": true,
-      "source_eligible": true,
-      "summary_length": 739,
-      "score_breakdown": [
-        {
-          "criterion": "case_name",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "date",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "court",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "jurisdiction",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "source_url",
-          "points": 20,
-          "maximum": 20
-        },
-        {
-          "criterion": "source_name",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "summary",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "outcome",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "hallucination_items",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "ai_tool_used",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "tags",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "lesson",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "reviewed",
-          "points": 0,
-          "maximum": 5
-        }
-      ],
-      "missing_fields": [
-        {
-          "field": "hallucination_items",
-          "code": "discrepancy-detail-not-recorded",
-          "impact": "important",
-          "remediation": "Record the cited, quoted, or authority discrepancy supported by the source."
-        },
-        {
-          "field": "ai_tool_used",
-          "code": "specific-ai-tool-not-established",
-          "impact": "context",
-          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
-        },
-        {
-          "field": "lesson",
-          "code": "operational-lesson-not-recorded",
-          "impact": "improvement",
-          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
-        },
-        {
-          "field": "reviewed",
-          "code": "publication-review-pending",
-          "impact": "improvement",
-          "remediation": "Complete and date editorial publication review before calling this case curated."
-        }
-      ]
-    },
-    {
       "id": "bc-taco-restaurant-group-ltd-2025-11-06",
       "slug": "bc-taco-restaurant-group-ltd-2025-11-06",
       "score": 85,
@@ -123871,6 +124871,115 @@
           "code": "specific-ai-tool-not-established",
           "impact": "context",
           "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "costarte-eireli-me-v-churrascao-gaucho-restaurante-ltda-2025-11-06",
+      "slug": "costarte-eireli-me-v-churrascao-gaucho-restaurante-ltda-2025-11-06",
+      "score": 75,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 511,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
+        {
+          "field": "hallucination_items",
+          "code": "discrepancy-detail-not-recorded",
+          "impact": "important",
+          "remediation": "Record the cited, quoted, or authority discrepancy supported by the source."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
         },
         {
           "field": "reviewed",
@@ -138771,103 +139880,6 @@
       ]
     },
     {
-      "id": "autos-no-0006113-73-2025-8-16-0033-agravo-interno-civel-2025-09-26",
-      "slug": "autos-no-0006113-73-2025-8-16-0033-agravo-interno-civel-2025-09-26",
-      "score": 85,
-      "maximum_score": 100,
-      "tier": "index-ready",
-      "index_eligible": true,
-      "source_eligible": true,
-      "summary_length": 1157,
-      "score_breakdown": [
-        {
-          "criterion": "case_name",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "date",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "court",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "jurisdiction",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "source_url",
-          "points": 20,
-          "maximum": 20
-        },
-        {
-          "criterion": "source_name",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "summary",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "outcome",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "hallucination_items",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "ai_tool_used",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "tags",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "lesson",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "reviewed",
-          "points": 0,
-          "maximum": 5
-        }
-      ],
-      "missing_fields": [
-        {
-          "field": "ai_tool_used",
-          "code": "specific-ai-tool-not-established",
-          "impact": "context",
-          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
-        },
-        {
-          "field": "lesson",
-          "code": "operational-lesson-not-recorded",
-          "impact": "improvement",
-          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
-        },
-        {
-          "field": "reviewed",
-          "code": "publication-review-pending",
-          "impact": "improvement",
-          "remediation": "Complete and date editorial publication review before calling this case curated."
-        }
-      ]
-    },
-    {
       "id": "jade-riley-burch-v-hca-healthcare-2025-09-26",
       "slug": "jade-riley-burch-v-hca-healthcare-2025-09-26",
       "score": 85,
@@ -139041,6 +140053,103 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "no-0006113-73-2025-8-16-0033-2025-09-26",
+      "slug": "no-0006113-73-2025-8-16-0033-2025-09-26",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 310,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
         {
           "field": "reviewed",
           "code": "publication-review-pending",
@@ -164958,103 +166067,6 @@
       ]
     },
     {
-      "id": "agravo-de-instrumento-npu-0032636-27-2025-8-16-0000-petry-v-evanlux-esquadrias-ltda-2025-06-24",
-      "slug": "agravo-de-instrumento-npu-0032636-27-2025-8-16-0000-petry-v-evanlux-esquadrias-ltda-2025-06-24",
-      "score": 85,
-      "maximum_score": 100,
-      "tier": "index-ready",
-      "index_eligible": true,
-      "source_eligible": true,
-      "summary_length": 838,
-      "score_breakdown": [
-        {
-          "criterion": "case_name",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "date",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "court",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "jurisdiction",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "source_url",
-          "points": 20,
-          "maximum": 20
-        },
-        {
-          "criterion": "source_name",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "summary",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "outcome",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "hallucination_items",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "ai_tool_used",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "tags",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "lesson",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "reviewed",
-          "points": 0,
-          "maximum": 5
-        }
-      ],
-      "missing_fields": [
-        {
-          "field": "ai_tool_used",
-          "code": "specific-ai-tool-not-established",
-          "impact": "context",
-          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
-        },
-        {
-          "field": "lesson",
-          "code": "operational-lesson-not-recorded",
-          "impact": "improvement",
-          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
-        },
-        {
-          "field": "reviewed",
-          "code": "publication-review-pending",
-          "impact": "improvement",
-          "remediation": "Complete and date editorial publication review before calling this case curated."
-        }
-      ]
-    },
-    {
       "id": "hussein-v-canada-2025-06-24",
       "slug": "hussein-v-canada-2025-06-24",
       "score": 95,
@@ -165131,6 +166143,109 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "petry-v-evanlux-esquadrias-ltda-2025-06-24",
+      "slug": "petry-v-evanlux-esquadrias-ltda-2025-06-24",
+      "score": 81,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 218,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 6,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
         {
           "field": "reviewed",
           "code": "publication-review-pending",
@@ -167143,6 +168258,109 @@
           "code": "specific-ai-tool-not-established",
           "impact": "context",
           "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "rodnei-chagas-v-fabricio-petinelli-vieira-coutinho-2025-06-06",
+      "slug": "rodnei-chagas-v-fabricio-petinelli-vieira-coutinho-2025-06-06",
+      "score": 81,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 213,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 6,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
         },
         {
           "field": "reviewed",
@@ -171149,91 +172367,6 @@
       ]
     },
     {
-      "id": "reclamação-rcl-78890-ba-2025-05-12",
-      "slug": "reclamacao-rcl-78890-ba-2025-05-12",
-      "score": 95,
-      "maximum_score": 100,
-      "tier": "index-ready",
-      "index_eligible": true,
-      "source_eligible": true,
-      "summary_length": 736,
-      "score_breakdown": [
-        {
-          "criterion": "case_name",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "date",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "court",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "jurisdiction",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "source_url",
-          "points": 20,
-          "maximum": 20
-        },
-        {
-          "criterion": "source_name",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "summary",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "outcome",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "hallucination_items",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "ai_tool_used",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "tags",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "lesson",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "reviewed",
-          "points": 0,
-          "maximum": 5
-        }
-      ],
-      "missing_fields": [
-        {
-          "field": "reviewed",
-          "code": "publication-review-pending",
-          "impact": "improvement",
-          "remediation": "Complete and date editorial publication review before calling this case curated."
-        }
-      ]
-    },
-    {
       "id": "peter-gilmai-v-abel-tol-ors-2025-05-09",
       "slug": "peter-gilmai-v-abel-tol-ors-2025-05-09",
       "score": 95,
@@ -173760,103 +174893,6 @@
           "impact": "important",
           "remediation": "Record the documented disposition, consequence, or procedural posture."
         },
-        {
-          "field": "ai_tool_used",
-          "code": "specific-ai-tool-not-established",
-          "impact": "context",
-          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
-        },
-        {
-          "field": "lesson",
-          "code": "operational-lesson-not-recorded",
-          "impact": "improvement",
-          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
-        },
-        {
-          "field": "reviewed",
-          "code": "publication-review-pending",
-          "impact": "improvement",
-          "remediation": "Complete and date editorial publication review before calling this case curated."
-        }
-      ]
-    },
-    {
-      "id": "recurso-em-sentido-estrito-no-0002062-61-2025-8-16-0019-vilmar-martins-dos-santos-2025-04-11",
-      "slug": "recurso-em-sentido-estrito-no-0002062-61-2025-8-16-0019-vilmar-martins-dos-santos-2025-04-11",
-      "score": 85,
-      "maximum_score": 100,
-      "tier": "index-ready",
-      "index_eligible": true,
-      "source_eligible": true,
-      "summary_length": 807,
-      "score_breakdown": [
-        {
-          "criterion": "case_name",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "date",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "court",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "jurisdiction",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "source_url",
-          "points": 20,
-          "maximum": 20
-        },
-        {
-          "criterion": "source_name",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "summary",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "outcome",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "hallucination_items",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "ai_tool_used",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "tags",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "lesson",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "reviewed",
-          "points": 0,
-          "maximum": 5
-        }
-      ],
-      "missing_fields": [
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",

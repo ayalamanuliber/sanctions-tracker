@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "4c84d5581e3a3a405212b93ab3ca0fd2083e93b4be21883e16e70a19f3dffa67",
-  "corpus_checked": "2026-08-16",
-  "total_cases": 1912,
+  "dataset_checksum": "2bba6c676788546df0fbaba2ae63fffc1d58dc589528606f4a2206c094ed26f6",
+  "corpus_checked": "2026-08-17",
+  "total_cases": 1922,
   "tiers": {
-    "index-ready": 1893,
+    "index-ready": 1903,
     "enrichment-ready": 15,
     "research-only": 4
   },
@@ -289,6 +289,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "lodhia-v-twelve-trees-2026-07-24": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "morgan-cole-v-hobby-town-unlimited-inc-2026-07-24": {
       "tier": "index-ready",
       "score": 85
@@ -317,10 +321,6 @@
       "tier": "index-ready",
       "score": 85
     },
-    "apelacao-civel-npu-0035599-44-2017-8-16-0014-2026-07-22": {
-      "tier": "index-ready",
-      "score": 85
-    },
     "asif-v-minister-for-immigration-and-citizenship-2026-07-22": {
       "tier": "index-ready",
       "score": 86
@@ -330,6 +330,10 @@
       "score": 81
     },
     "in-the-matter-of-a-hearing-by-a-panel-of-the-discipline-committee-into-the-conduct-of-deni-2026-07-22": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "n-0035599-44-2017-8-16-0014-2026-07-22": {
       "tier": "index-ready",
       "score": 85
     },
@@ -729,6 +733,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "ederaldo-cirino-da-luz-v-joaquim-cirino-da-luz-et-al-2026-06-23": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "i-fz-104-26-postanowienie-nsa-2026-06-23": {
       "tier": "index-ready",
       "score": 80
@@ -865,6 +873,10 @@
       "tier": "index-ready",
       "score": 90
     },
+    "no-0004948-60-2026-8-16-0031-2026-06-12": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "otar-bennett-v-trillium-health-partners-2026-06-12": {
       "tier": "index-ready",
       "score": 81
@@ -938,6 +950,10 @@
       "score": 76
     },
     "casey-a-gaddy-v-wood-brothers-bar-inc-et-al-2026-06-09": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "franciely-da-silva-luz-2026-06-09": {
       "tier": "index-ready",
       "score": 81
     },
@@ -1117,6 +1133,10 @@
       "tier": "index-ready",
       "score": 80
     },
+    "n-0001439-38-2024-8-16-0049-2026-05-29": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "trauger-v-columbia-county-district-attorney-s-office-et-al-2026-05-29": {
       "tier": "index-ready",
       "score": 81
@@ -1228,6 +1248,10 @@
     "william-c-maxwell-v-dakota-michael-chelsey-smith-2026-05-26": {
       "tier": "index-ready",
       "score": 85
+    },
+    "manoel-tomaz-budal-filho-v-antonio-carlos-alves-lopes-2026-05-25": {
+      "tier": "index-ready",
+      "score": 81
     },
     "a-t-w-v-commonwealth-of-kentucky-2026-05-22": {
       "tier": "index-ready",
@@ -1421,7 +1445,7 @@
       "tier": "index-ready",
       "score": 90
     },
-    "mercado-e-acougue-sao-lucas-eireli-v-pluxee-beneficios-brasil-s-a-agravo-interno-no-000017-2026-05-15": {
+    "mercado-e-acougue-sao-lucas-eireli-v-pluxee-beneficios-brasil-2026-05-15": {
       "tier": "index-ready",
       "score": 85
     },
@@ -1529,6 +1553,10 @@
       "tier": "index-ready",
       "score": 80
     },
+    "no-0143435-40-2025-8-16-0000-2026-05-08": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "samson-v-chartrand-2026-05-08": {
       "tier": "index-ready",
       "score": 80
@@ -1592,6 +1620,10 @@
     "terrance-anthony-norris-v-jpmorgan-chase-bank-n-a-2026-05-06": {
       "tier": "index-ready",
       "score": 81
+    },
+    "thalita-aparecida-araujo-rosa-campos-v-marcio-abreu-rosa-2026-05-06": {
+      "tier": "index-ready",
+      "score": 85
     },
     "amanda-adams-v-allen-butler-construction-inc-2026-05-05": {
       "tier": "index-ready",
@@ -2082,6 +2114,10 @@
       "score": 80
     },
     "joseph-c-zoghaib-v-societe-generale-de-banque-au-liban-et-al-2026-04-08": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "no-0104033-49-2025-8-16-0000-2026-04-08": {
       "tier": "index-ready",
       "score": 85
     },
@@ -2997,6 +3033,10 @@
       "tier": "index-ready",
       "score": 80
     },
+    "amanda-jacintha-de-souza-v-atual-companhia-securitizadora-de-creditos-financeiros-2026-02-24": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "chapter-kris-jackson-v-bok-financial-corporation-et-al-3-2026-02-24": {
       "tier": "index-ready",
       "score": 81
@@ -3028,6 +3068,10 @@
     "kenneth-hawkins-v-ic-system-inc-2026-02-23": {
       "tier": "index-ready",
       "score": 81
+    },
+    "luiz-carlos-barboza-neves-v-banco-bradesco-s-a-2026-02-23": {
+      "tier": "index-ready",
+      "score": 85
     },
     "shawn-olali-v-ampex-brands-llc-2026-02-23": {
       "tier": "index-ready",
@@ -4617,9 +4661,9 @@
       "tier": "index-ready",
       "score": 81
     },
-    "apelacao-civel-no-1-0000-25-331707-7-001-silvio-xavier-dos-santos-v-estado-de-minas-gerais-2025-11-27": {
+    "silvio-xavier-dos-santos-v-estado-de-minas-gerais-2025-11-27": {
       "tier": "index-ready",
-      "score": 85
+      "score": 81
     },
     "boyd-v-protestant-memorial-medical-center-2025-11-26": {
       "tier": "index-ready",
@@ -4993,13 +5037,13 @@
       "tier": "index-ready",
       "score": 81
     },
-    "apelacao-civel-nu-0000268-31-2023-8-16-0033-costarte-eireli-me-v-churrascao-gaucho-restaur-2025-11-06": {
-      "tier": "index-ready",
-      "score": 80
-    },
     "bc-taco-restaurant-group-ltd-2025-11-06": {
       "tier": "index-ready",
       "score": 85
+    },
+    "costarte-eireli-me-v-churrascao-gaucho-restaurante-ltda-2025-11-06": {
+      "tier": "index-ready",
+      "score": 75
     },
     "david-angel-sifuentes-iii-v-christian-brothers-automotive-2025-11-06": {
       "tier": "index-ready",
@@ -5617,10 +5661,6 @@
       "tier": "index-ready",
       "score": 90
     },
-    "autos-no-0006113-73-2025-8-16-0033-agravo-interno-civel-2025-09-26": {
-      "tier": "index-ready",
-      "score": 85
-    },
     "jade-riley-burch-v-hca-healthcare-2025-09-26": {
       "tier": "index-ready",
       "score": 85
@@ -5628,6 +5668,10 @@
     "loftong-v-grove-farms-2025-09-26": {
       "tier": "index-ready",
       "score": 95
+    },
+    "no-0006113-73-2025-8-16-0033-2025-09-26": {
+      "tier": "index-ready",
+      "score": 85
     },
     "pennantia-v-rose-cay-maritime-2025-09-26": {
       "tier": "index-ready",
@@ -6709,13 +6753,13 @@
       "tier": "index-ready",
       "score": 85
     },
-    "agravo-de-instrumento-npu-0032636-27-2025-8-16-0000-petry-v-evanlux-esquadrias-ltda-2025-06-24": {
-      "tier": "index-ready",
-      "score": 85
-    },
     "hussein-v-canada-2025-06-24": {
       "tier": "index-ready",
       "score": 95
+    },
+    "petry-v-evanlux-esquadrias-ltda-2025-06-24": {
+      "tier": "index-ready",
+      "score": 81
     },
     "iskenderian-v-southeastern-2025-06-23": {
       "tier": "index-ready",
@@ -6800,6 +6844,10 @@
     "ayinde-v-haringey-al-haroun-v-qnb-2025-06-06": {
       "tier": "index-ready",
       "score": 90
+    },
+    "rodnei-chagas-v-fabricio-petinelli-vieira-coutinho-2025-06-06": {
+      "tier": "index-ready",
+      "score": 81
     },
     "goins-v-father-flanagans-boys-home-2025-06-05": {
       "tier": "index-ready",
@@ -6969,10 +7017,6 @@
       "tier": "index-ready",
       "score": 85
     },
-    "reclamacao-rcl-78890-ba-2025-05-12": {
-      "tier": "index-ready",
-      "score": 95
-    },
     "peter-gilmai-v-abel-tol-ors-2025-05-09": {
       "tier": "index-ready",
       "score": 95
@@ -7080,10 +7124,6 @@
     "graciela-dela-torre-v-davies-life-health-inc-et-al-2025-04-11": {
       "tier": "index-ready",
       "score": 80
-    },
-    "recurso-em-sentido-estrito-no-0002062-61-2025-8-16-0019-vilmar-martins-dos-santos-2025-04-11": {
-      "tier": "index-ready",
-      "score": 85
     },
     "vilmar-martins-dos-santos-v-state-of-parana-2025-04-11": {
       "tier": "index-ready",

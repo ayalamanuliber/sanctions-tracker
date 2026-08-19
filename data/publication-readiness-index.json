@@ -1,14 +1,34 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "4cf77fc403be681fc59c1e31d30f76bf6f1ce7eb2625196f5d6c4635ef19879b",
-  "corpus_checked": "2026-08-18",
-  "total_cases": 1922,
+  "dataset_checksum": "e059dabaf7bf632d52447ae09010c048d3d5451596120cdfa8069c7b9a7fd83d",
+  "corpus_checked": "2026-08-19",
+  "total_cases": 1933,
   "tiers": {
-    "index-ready": 1903,
-    "enrichment-ready": 15,
+    "index-ready": 1913,
+    "enrichment-ready": 16,
     "research-only": 4
   },
   "by_slug": {
+    "in-re-marriage-of-rebekah-muriel-and-johnathan-david-farris-2026-08-18": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "davos-francois-2026-08-17": {
+      "tier": "enrichment-ready",
+      "score": 70
+    },
+    "boettcher-v-boettcher-2026-08-14": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "daryl-harris-v-christopher-a-wray-2026-08-14": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "guerra-quezada-v-united-states-guerra-vasquez-v-united-states-consolidated-2026-08-14": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "apelacao-civel-no-1032884-04-2025-8-26-0224-2026-08-13": {
       "tier": "index-ready",
       "score": 85
@@ -16,6 +36,10 @@
     "arbuckle-v-tanner-2026-nsca-62-2026-08-12": {
       "tier": "index-ready",
       "score": 85
+    },
+    "davenport-v-churilla-et-al-2026-08-12": {
+      "tier": "index-ready",
+      "score": 81
     },
     "garry-chapman-v-city-of-priceville-et-al-2026-08-12": {
       "tier": "index-ready",
@@ -44,6 +68,10 @@
     "egan-v-commonwealth-of-australia-2026-fca-1104-2026-08-11": {
       "tier": "index-ready",
       "score": 80
+    },
+    "eyong-v-72-barrow-st-realty-corp-2026-08-11": {
+      "tier": "index-ready",
+      "score": 85
     },
     "fa-alagilagi-meni-siliga-v-a-s-contractor-inc-et-al-2026-08-11": {
       "tier": "index-ready",
@@ -89,6 +117,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "burgess-v-greater-cleveland-regional-transit-authority-2026-08-06": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "girija-kadlaskar-v-united-states-citizenship-and-immigration-services-2026-08-06": {
       "tier": "index-ready",
       "score": 85
@@ -128,6 +160,10 @@
     "cristancho-et-al-v-swbc-mortgage-corporation-et-al-2026-08-04": {
       "tier": "index-ready",
       "score": 85
+    },
+    "kleyman-law-group-p-c-v-kaloidis-2026-08-04": {
+      "tier": "index-ready",
+      "score": 86
     },
     "sorrentino-v-fay-servicing-llc-et-al-2026-08-04": {
       "tier": "enrichment-ready",
@@ -172,6 +208,10 @@
     "kevin-dale-higgins-v-the-state-of-texas-2026-07-31": {
       "tier": "index-ready",
       "score": 76
+    },
+    "mendel-s-v-faigy-s-2026-07-31": {
+      "tier": "index-ready",
+      "score": 85
     },
     "natashah-al-ali-v-cvs-pharmacy-inc-2026-07-31": {
       "tier": "index-ready",
@@ -340,6 +380,10 @@
     "pamon-v-united-states-postal-service-et-al-2026-07-22": {
       "tier": "index-ready",
       "score": 81
+    },
+    "rodriguez-v-time-warner-entertainment-2026-07-22": {
+      "tier": "index-ready",
+      "score": 80
     },
     "rose-lannquist-gouldy-v-timothy-m-chiasson-et-al-2026-07-22": {
       "tier": "index-ready",

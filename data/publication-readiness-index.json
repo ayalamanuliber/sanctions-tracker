@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "e059dabaf7bf632d52447ae09010c048d3d5451596120cdfa8069c7b9a7fd83d",
-  "corpus_checked": "2026-08-19",
-  "total_cases": 1933,
+  "dataset_checksum": "407439c6fcd68239ff7a254a53d3b567e087418f9c05fc984ae8f79fdef0e84b",
+  "corpus_checked": "2026-08-20",
+  "total_cases": 1934,
   "tiers": {
-    "index-ready": 1913,
+    "index-ready": 1914,
     "enrichment-ready": 16,
     "research-only": 4
   },
@@ -12,6 +12,10 @@
     "in-re-marriage-of-rebekah-muriel-and-johnathan-david-farris-2026-08-18": {
       "tier": "index-ready",
       "score": 81
+    },
+    "joann-ledoux-v-outliers-inc-2026-08-18": {
+      "tier": "index-ready",
+      "score": 90
     },
     "davos-francois-2026-08-17": {
       "tier": "enrichment-ready",

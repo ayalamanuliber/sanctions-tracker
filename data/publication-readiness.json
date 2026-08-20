@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "e059dabaf7bf632d52447ae09010c048d3d5451596120cdfa8069c7b9a7fd83d",
-  "corpus_checked": "2026-08-19",
-  "total_cases": 1933,
-  "total_assessments": 1933,
+  "dataset_checksum": "407439c6fcd68239ff7a254a53d3b567e087418f9c05fc984ae8f79fdef0e84b",
+  "corpus_checked": "2026-08-20",
+  "total_cases": 1934,
+  "total_assessments": 1934,
   "tiers": {
-    "index-ready": 1913,
+    "index-ready": 1914,
     "enrichment-ready": 16,
     "research-only": 4
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 102,
-    "operational-lesson-not-recorded": 1197,
+    "operational-lesson-not-recorded": 1198,
     "outcome-not-recorded": 378,
-    "publication-review-pending": 1933,
+    "publication-review-pending": 1934,
     "source-link-missing": 3,
     "specific-ai-tool-not-established": 1710,
     "summary-missing": 1,
@@ -111,6 +111,97 @@
           "impact": "context",
           "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
         },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "joann-ledoux-v-outliers-inc-2026-08-18",
+      "slug": "joann-ledoux-v-outliers-inc-2026-08-18",
+      "score": 90,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 1098,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
         {
           "field": "lesson",
           "code": "operational-lesson-not-recorded",

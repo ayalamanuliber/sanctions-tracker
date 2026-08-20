@@ -54,6 +54,60 @@
     }
   },
   {
+    "id": "joann-ledoux-v-outliers-inc-2026-08-18",
+    "slug": "joann-ledoux-v-outliers-inc-2026-08-18",
+    "case_name": "Joann LeDoux v. Outliers, Inc.",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Fabricated: Other | AI-generated formatted citation table appended to expert reports of James Kababick and Ronald Shippee contained numerous false/fabricated academic citations; plaintiff admitted providing the same AI-generated citation table to both experts. Outcome: Court issued sua sponte sanctions against Plaintiff's counsel for submitting AI-generated false citations; excluded expert Dr. Gabriel Holguin for unreliability and excluded/struck other expert evidence tied to the false citations.. Plaintiff's counsel used generative AI (Claude and ChatGPT) to produce a formatted citation table appended to expert reports, which contained numerous fabricated/false academic citations. The Court found these AI-generated citations undermined expert credibility, sanctioned counsel sua sponte, and excluded expert testimony (notably Dr. Holguin) as unreliable under Daubert because the hallucinated citations showed lack of verification and shattered credibility. The Court relied on counsel's admitted use of AI and the similarity of errors across expert reports in reaching these conclusions.",
+    "direct_answer": "Fabricated: Other | AI-generated formatted citation table appended to expert reports of James Kababick and Ronald Shippee contained numerous false/fabricated academic citations; plaintiff admitted providing the same AI-generated citation table to both experts. Outcome: Court issued sua sponte sanctions against Plaintiff's counsel for submitting AI-generated false citations; excluded expert Dr. Gabriel Holguin for unreliability and excluded/struck other expert evidence tied to the false citations.. Plaintiff's counsel used generative AI (Claude and ChatGPT) to produce a formatted citation table appended to expert reports, which contained numerous fabricated/false academic citations. The Court found these AI-generated citations undermined expert credibility, sanctioned counsel sua sponte, and excluded expert testimony (notably Dr. Holguin) as unreliable under Daubert because the hallucinated citations showed lack of verification and shattered credibility. The Court relied on counsel's admitted use of AI and the similarity of errors across expert reports in reaching these conclusions.",
+    "why_it_matters": "This matter connects fake citations and trial with Court issued sua sponte sanctions against Plaintiff's counsel for submitting AI-generated false citations; excluded expert Dr. Gabriel Holguin for unreliability and excluded/struck other expert evidence tied to the false citations. in W.D. Wash.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and trial and records Court issued sua sponte sanctions against Plaintiff's counsel for submitting AI-generated false citations; excluded expert Dr. Gabriel Holguin for unreliability and excluded/struck other expert evidence tied to the false citations.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2902/Ledoux_v._Outliers_USA_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "W.D. Wash.",
+      "jurisdiction": "federal",
+      "state": "WA",
+      "country": "US",
+      "circuit": "9th Circuit",
+      "judge": null,
+      "date": "2026-08-18",
+      "ai_tool": "Claude and ChatGPT",
+      "outcome": "Court issued sua sponte sanctions against Plaintiff's counsel for submitting AI-generated false citations; excluded expert Dr. Gabriel Holguin for unreliability and excluded/struck other expert evidence tied to the false citations.",
+      "amount": null,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "struck-filing",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "davos-francois-2026-08-17",
     "slug": "davos-francois-2026-08-17",
     "case_name": "Davos Francois",
@@ -749,7 +803,7 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "M.D. Pa.",
+      "court": "M.D. Pennsylvania",
       "jurisdiction": "federal",
       "state": "PA",
       "country": "US",
@@ -757,7 +811,7 @@
       "judge": null,
       "date": "2026-08-11",
       "ai_tool": "Unidentified",
-      "outcome": "Court admonished plaintiff for AI misuse, required future affidavit disclosing AI use and citations checked, warned of sanctions (including striking pleadings/dismissal) for future unchecked AI-generated errors; complaint dismissed with leave to amend.",
+      "outcome": "Admonishment & Warning",
       "amount": null,
       "professional_sanction": "No",
       "tags": [
@@ -767,8 +821,7 @@
         "trial"
       ],
       "sanction_types": [
-        "warning",
-        "case-dismissed"
+        "warning"
       ]
     },
     "publication": {

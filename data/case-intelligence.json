@@ -54,16 +54,16 @@
     }
   },
   {
-    "id": "joann-ledoux-v-outliers-inc-2026-08-18",
-    "slug": "joann-ledoux-v-outliers-inc-2026-08-18",
-    "case_name": "Joann LeDoux v. Outliers, Inc.",
+    "id": "joann-ledoux-v-outliers-inc-2-2026-08-18",
+    "slug": "joann-ledoux-v-outliers-inc-2-2026-08-18",
+    "case_name": "Joann LeDoux v. Outliers, Inc. (2)",
     "classification": "adjudicated",
-    "severity": "high",
-    "summary": "Fabricated: Other | AI-generated formatted citation table appended to expert reports of James Kababick and Ronald Shippee contained numerous false/fabricated academic citations; plaintiff admitted providing the same AI-generated citation table to both experts. Outcome: Court issued sua sponte sanctions against Plaintiff's counsel for submitting AI-generated false citations; excluded expert Dr. Gabriel Holguin for unreliability and excluded/struck other expert evidence tied to the false citations.. Plaintiff's counsel used generative AI (Claude and ChatGPT) to produce a formatted citation table appended to expert reports, which contained numerous fabricated/false academic citations. The Court found these AI-generated citations undermined expert credibility, sanctioned counsel sua sponte, and excluded expert testimony (notably Dr. Holguin) as unreliable under Daubert because the hallucinated citations showed lack of verification and shattered credibility. The Court relied on counsel's admitted use of AI and the similarity of errors across expert reports in reaching these conclusions.",
-    "direct_answer": "Fabricated: Other | AI-generated formatted citation table appended to expert reports of James Kababick and Ronald Shippee contained numerous false/fabricated academic citations; plaintiff admitted providing the same AI-generated citation table to both experts. Outcome: Court issued sua sponte sanctions against Plaintiff's counsel for submitting AI-generated false citations; excluded expert Dr. Gabriel Holguin for unreliability and excluded/struck other expert evidence tied to the false citations.. Plaintiff's counsel used generative AI (Claude and ChatGPT) to produce a formatted citation table appended to expert reports, which contained numerous fabricated/false academic citations. The Court found these AI-generated citations undermined expert credibility, sanctioned counsel sua sponte, and excluded expert testimony (notably Dr. Holguin) as unreliable under Daubert because the hallucinated citations showed lack of verification and shattered credibility. The Court relied on counsel's admitted use of AI and the similarity of errors across expert reports in reaching these conclusions.",
-    "why_it_matters": "This matter connects fake citations and trial with Court issued sua sponte sanctions against Plaintiff's counsel for submitting AI-generated false citations; excluded expert Dr. Gabriel Holguin for unreliability and excluded/struck other expert evidence tied to the false citations. in W.D. Wash.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "severity": "medium",
+    "summary": "Fabricated: Exhibits & Submissions | Plaintiff's counsel (Jocelyn Stewart) used Claude or ChatGPT to generate citation data provided as an appendix/submission to the court and experts, resulting in numerous false citations in filings and expert exhibits. Outcome: Expert Brief excluded/struck.",
+    "direct_answer": "Fabricated: Exhibits & Submissions | Plaintiff's counsel (Jocelyn Stewart) used Claude or ChatGPT to generate citation data provided as an appendix/submission to the court and experts, resulting in numerous false citations in filings and expert exhibits. Outcome: Expert Brief excluded/struck.",
+    "why_it_matters": "This matter connects fake citations and tort with Expert Brief excluded/struck in W.D. Washington. It provides a source-linked baseline for verification, supervision, and response controls.",
     "judicial_reasoning": null,
-    "decision_context": "The structured public record identifies fake citations and trial and records Court issued sua sponte sanctions against Plaintiff's counsel for submitting AI-generated false citations; excluded expert Dr. Gabriel Holguin for unreliability and excluded/struck other expert evidence tied to the false citations.. The linked source controls the precise reasoning and procedural context.",
+    "decision_context": "The structured public record identifies fake citations and tort and records Expert Brief excluded/struck. The linked source controls the precise reasoning and procedural context.",
     "practical_implications": [
       "Verify the existence, citation, court, and precedential status of every authority before filing.",
       "Read the linked source and subsequent docket history before relying on this record for legal work."
@@ -81,7 +81,7 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "W.D. Wash.",
+      "court": "W.D. Washington",
       "jurisdiction": "federal",
       "state": "WA",
       "country": "US",
@@ -89,16 +89,16 @@
       "judge": null,
       "date": "2026-08-18",
       "ai_tool": "Claude and ChatGPT",
-      "outcome": "Court issued sua sponte sanctions against Plaintiff's counsel for submitting AI-generated false citations; excluded expert Dr. Gabriel Holguin for unreliability and excluded/struck other expert evidence tied to the false citations.",
+      "outcome": "Expert Brief excluded/struck",
       "amount": null,
-      "professional_sanction": "Yes",
+      "professional_sanction": "No",
       "tags": [
         "fake-citations",
+        "tort",
         "trial"
       ],
       "sanction_types": [
-        "struck-filing",
-        "professional"
+        "struck-filing"
       ]
     },
     "publication": {
@@ -480,6 +480,7 @@
       "tags": [
         "pro-se",
         "fake-citations",
+        "civil-rights",
         "trial"
       ],
       "sanction_types": [
@@ -931,6 +932,7 @@
         "pro-se",
         "fake-citations",
         "misrepresented-authority",
+        "tort",
         "trial"
       ],
       "sanction_types": [
@@ -1051,6 +1053,59 @@
       ],
       "sanction_types": [
         "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "meni-silga-v-state-farm-2026-08-11",
+    "slug": "meni-silga-v-state-farm-2026-08-11",
+    "case_name": "Meni-Silga v. State Farm",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | Cited a purported California Supreme Court decision involving Pacific Gas & Electric allegedly from 1996; later acknowledged to be nonexistent and AI-generated. Outcome: Outside counsel admitted the errors and apologized to the court; no professional sanctions or monetary penalties reported.. Outside counsel for State Farm used the legal-AI tool Irys to prepare motions and submitted several nonexistent case citations in filings in an insurance dispute arising from a Carson house fire. Opposing counsel Michael Shaolian identified the fabricated authorities; Musick, Peeler & Garrett and attorney Jacquelene Robinson acknowledged the AI-generated errors in an Aug. 11 filing, apologized, and said they failed to fact-check the citations. The court was notified but no disciplinary sanctions or fines were reported; the firm stated it will implement safeguards to prevent recurrence.",
+    "direct_answer": "Fabricated: Case Law | Cited a purported California Supreme Court decision involving Pacific Gas & Electric allegedly from 1996; later acknowledged to be nonexistent and AI-generated. Outcome: Outside counsel admitted the errors and apologized to the court; no professional sanctions or monetary penalties reported.. Outside counsel for State Farm used the legal-AI tool Irys to prepare motions and submitted several nonexistent case citations in filings in an insurance dispute arising from a Carson house fire. Opposing counsel Michael Shaolian identified the fabricated authorities; Musick, Peeler & Garrett and attorney Jacquelene Robinson acknowledged the AI-generated errors in an Aug. 11 filing, apologized, and said they failed to fact-check the citations. The court was notified but no disciplinary sanctions or fines were reported; the firm stated it will implement safeguards to prevent recurrence.",
+    "why_it_matters": "This matter connects fake citations and trial with Outside counsel admitted the errors and apologized to the court; no professional sanctions or monetary penalties reported. in Los Angeles County Superior Court. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and trial and records Outside counsel admitted the errors and apologized to the court; no professional sanctions or monetary penalties reported.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2904/AI_hallucinated_case_law_in_court_f_x8FNIKM.A._County_fire_dispute_-_Los_Angeles_Times.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Los Angeles County Superior Court",
+      "jurisdiction": "state",
+      "state": "",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-11",
+      "ai_tool": "Irys",
+      "outcome": "Outside counsel admitted the errors and apologized to the court; no professional sanctions or monetary penalties reported.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
       ]
     },
     "publication": {
@@ -4443,13 +4498,13 @@
     }
   },
   {
-    "id": "joann-ledoux-v-outliers-inc-2026-07-24",
-    "slug": "joann-ledoux-v-outliers-inc-2026-07-24",
-    "case_name": "Joann LeDoux v. Outliers, Inc.",
+    "id": "joann-ledoux-v-outliers-inc-1-2026-07-24",
+    "slug": "joann-ledoux-v-outliers-inc-1-2026-07-24",
+    "case_name": "Joann LeDoux v. Outliers, Inc. (1)",
     "classification": "adjudicated",
     "severity": "medium",
-    "summary": "Fabricated: Case Law | Plaintiff cited a non-existent state-court decision, \"Berg v. Chevrolet Motor Div., 84 Wn.2d 102, 108, 524 P.2d 226 (1974)\"; court identified this citation as nonexistent and noted the correct authority was Baughn v. Honda Motor Co. Outcome: Monetary Sanction. Order to show cause is here; tools disclosed later (see here).",
-    "direct_answer": "Fabricated: Case Law | Plaintiff cited a non-existent state-court decision, \"Berg v. Chevrolet Motor Div., 84 Wn.2d 102, 108, 524 P.2d 226 (1974)\"; court identified this citation as nonexistent and noted the correct authority was Baughn v. Honda Motor Co. Outcome: Monetary Sanction. Order to show cause is here; tools disclosed later (see here).",
+    "summary": "Fabricated: Doctrinal Work | Plaintiff's expert reports (Kababick and Shippee) cite multiple articles that do not exist or are misattributed (court reviewed a table of ~10 such faulty citations and found errors). Outcome: Monetary Sanction. Order to show cause is here; tools disclosed later (see here).",
+    "direct_answer": "Fabricated: Doctrinal Work | Plaintiff's expert reports (Kababick and Shippee) cite multiple articles that do not exist or are misattributed (court reviewed a table of ~10 such faulty citations and found errors). Outcome: Monetary Sanction. Order to show cause is here; tools disclosed later (see here).",
     "why_it_matters": "This matter connects fake citations and fabricated quotes with Monetary Sanction in W.D. Washington. It provides a source-linked baseline for verification, supervision, and response controls.",
     "judicial_reasoning": null,
     "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Monetary Sanction. The linked source controls the precise reasoning and procedural context.",
@@ -7797,6 +7852,62 @@
       "limitations": [
         "The source of the hallucinated citation is not explicitly identified as AI-generated in the court's opinion."
       ]
+    }
+  },
+  {
+    "id": "appeal-of-pdo-ahuska-joint-venture-llc-2026-07-13",
+    "slug": "appeal-of-pdo-ahuska-joint-venture-llc-2026-07-13",
+    "case_name": "Appeal of PDO Ahuska Joint Venture LLC",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | Appellant cited Lockheed Martin Corp., ASBCA No. 57525, 13-1 BCA ¶ 35,241 to support that contract interpretation is a question of law for summary judgment; Board found the citation fictitious/miscited and that 13-1 BCA ¶ 35,241 actually addresses Raytheon Missile Systems (a jurisdiction motion), and Lockheed Martin appears at 12-1 BCA ¶ 35,017 which does not support the asserted proposition. Outcome: Citations struck.",
+    "direct_answer": "Fabricated: Case Law | Appellant cited Lockheed Martin Corp., ASBCA No. 57525, 13-1 BCA ¶ 35,241 to support that contract interpretation is a question of law for summary judgment; Board found the citation fictitious/miscited and that 13-1 BCA ¶ 35,241 actually addresses Raytheon Missile Systems (a jurisdiction motion), and Lockheed Martin appears at 12-1 BCA ¶ 35,017 which does not support the asserted proposition. Outcome: Citations struck.",
+    "why_it_matters": "This matter connects pro se and fake citations with Citations struck in ASBCA. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Citations struck. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2903/64164_PDO_Ahuska_Joint_Venture_LLC_7.13.26_NonDispDec.pdf",
+      "name": "David Timm",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "ASBCA",
+      "jurisdiction": "federal",
+      "state": "",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-13",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Citations struck",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "published-opinion",
+        "contract",
+        "trial"
+      ],
+      "sanction_types": [
+        "struck-filing"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

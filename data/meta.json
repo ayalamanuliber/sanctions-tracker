@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-08-20",
-  "last_checked": "2026-08-20",
-  "last_checked_at": "2026-08-20T08:58:34.209Z",
+  "last_updated": "2026-08-21",
+  "last_checked": "2026-08-21",
+  "last_checked_at": "2026-08-21T09:00:30.805Z",
   "latest_record_date": "2026-08-18",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 1935,
-  "source_linked_count": 1931,
+  "source_record_count": 1937,
+  "source_linked_count": 1933,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 1,
-  "dataset_checksum": "407439c6fcd68239ff7a254a53d3b567e087418f9c05fc984ae8f79fdef0e84b",
-  "total_cases": 1934,
-  "us_cases": 1325,
-  "us_adjudicated": 1321,
+  "dataset_checksum": "957b46abc0c8d9953f9383b362a1f0e3714a52e79a9b23c3bdb6640d6695477c",
+  "total_cases": 1936,
+  "us_cases": 1327,
+  "us_adjudicated": 1323,
   "us_alleged_only": 4,
   "countries_tracked": 42,
-  "enriched_count": 1934,
+  "enriched_count": 1936,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
@@ -22,13 +22,13 @@
   "largest_single_sanction": 282508,
   "avg_sanction": 7801,
   "severity_counts": {
-    "medium": 320,
-    "high": 201,
+    "medium": 323,
     "low": 1374,
+    "high": 200,
     "career-ending": 39
   },
   "by_country": {
-    "US": 1325,
+    "US": 1327,
     "Brazil": 41,
     "Canada": 211,
     "Australia": 98,
@@ -7920,10 +7920,10 @@
       "count": 39,
       "total": 10302,
       "severities": {
-        "medium": 12,
-        "high": 2,
+        "medium": 13,
         "low": 24,
-        "career-ending": 1
+        "career-ending": 1,
+        "high": 1
       },
       "cases": [
         {
@@ -7948,29 +7948,29 @@
           "source_url": "https://www.damiencharlotin.com/documents/2894/Muriel_v._Farris_USA_18_August_2026.pdf"
         },
         {
-          "id": "joann-ledoux-v-outliers-inc-2026-08-18",
-          "name": "Joann LeDoux v. Outliers, Inc.",
-          "court": "W.D. Wash.",
+          "id": "joann-ledoux-v-outliers-inc-2-2026-08-18",
+          "name": "Joann LeDoux v. Outliers, Inc. (2)",
+          "court": "W.D. Washington",
           "judge": "",
           "date": "2026-08-18",
           "amount": null,
           "amount_display": "",
-          "severity": "high",
+          "severity": "medium",
           "tool": "Claude and ChatGPT",
-          "summary": "Fabricated: Other | AI-generated formatted citation table appended to expert reports of James Kababick and Ronald Shippee contained numerous false/fabricated academic citations; plaintiff admitted providing the same AI-generated citation table to both experts. Outcome: Court issued sua sponte sanctions against Plaintiff's counsel for submitting AI-generated false citations; excluded expert Dr. Gabriel Holguin for unreliability and excluded/struck other expert evidence tied to the false citations.. Plaintiff's counsel used generative AI (Claude and ChatGPT) to produce a formatted citation table appended to expert reports, which contained numerous fabricated/false academic citations. The Court found these AI-generated citations undermined expert credibility, sanctioned counsel sua sponte, and excluded expert testimony (notably Dr. Holguin) as unreliable under Daubert because the hallucinated citations showed lack of verification and shattered credibility. The Court relied on counsel's admitted use of AI and the similarity of errors across expert reports in reaching these conclusions.",
+          "summary": "Fabricated: Exhibits & Submissions | Plaintiff's counsel (Jocelyn Stewart) used Claude or ChatGPT to generate citation data provided as an appendix/submission to the court and experts, resulting in numerous false citations in filings and expert exhibits. Outcome: Expert Brief excluded/struck.",
           "sanction_types": [
-            "struck-filing",
-            "professional"
+            "struck-filing"
           ],
           "tags": [
             "fake-citations",
+            "tort",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/2902/Ledoux_v._Outliers_USA_August_2026.pdf"
         },
         {
-          "id": "joann-ledoux-v-outliers-inc-2026-07-24",
-          "name": "Joann LeDoux v. Outliers, Inc.",
+          "id": "joann-ledoux-v-outliers-inc-1-2026-07-24",
+          "name": "Joann LeDoux v. Outliers, Inc. (1)",
           "court": "W.D. Washington",
           "judge": "",
           "date": "2026-07-24",
@@ -7978,7 +7978,7 @@
           "amount_display": "$3.0K",
           "severity": "medium",
           "tool": "ChatGPT, Claude",
-          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent state-court decision, \"Berg v. Chevrolet Motor Div., 84 Wn.2d 102, 108, 524 P.2d 226 (1974)\"; court identified this citation as nonexistent and noted the correct authority was Baughn v. Honda Motor Co. Outcome: Monetary Sanction. Order to show cause is here; tools disclosed later (see here).",
+          "summary": "Fabricated: Doctrinal Work | Plaintiff's expert reports (Kababick and Shippee) cite multiple articles that do not exist or are misattributed (court reviewed a table of ~10 such faulty citations and found errors). Outcome: Monetary Sanction. Order to show cause is here; tools disclosed later (see here).",
           "sanction_types": [
             "monetary"
           ],
@@ -8835,6 +8835,7 @@
           "tags": [
             "pro-se",
             "fake-citations",
+            "civil-rights",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/2898/DAVENPORT_v._CHURILLA_et_al_USA_12_August_2026.pdf"
@@ -13514,6 +13515,7 @@
             "pro-se",
             "fake-citations",
             "misrepresented-authority",
+            "tort",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/2896/Eyong_v_72_Barrow_St_Realty_Corp_USA_11_August_2026.pdf"
@@ -23953,11 +23955,11 @@
   ],
   "by_week": {
     "2026-W34": 3,
-    "2026-W33": 20,
+    "2026-W33": 21,
     "2026-W32": 24,
     "2026-W31": 31,
     "2026-W30": 22,
-    "2026-W29": 28,
+    "2026-W29": 29,
     "2026-W28": 22,
     "2026-W27": 28,
     "2026-W26": 27,
@@ -24087,8 +24089,8 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-08": 47,
-    "2026-07": 117,
+    "2026-08": 48,
+    "2026-07": 118,
     "2026-06": 127,
     "2026-05": 153,
     "2026-04": 126,
@@ -24132,14 +24134,14 @@
     "2023": 16,
     "2024": 59,
     "2025": 845,
-    "2026": 1014
+    "2026": 1016
   },
   "by_tool": {
-    "AI (implied, unspecified)": 1295,
+    "AI (implied, unspecified)": 1296,
     "Claude and ChatGPT": 1,
     "Unidentified": 414,
     "ChatGPT": 106,
-    "Irys": 1,
+    "Irys": 2,
     "Gemini Pro; Perplexity; Cetient Legal AI; ChatGPT": 1,
     "Open Law; Claude; ChatGPT": 1,
     "Claude and other generative AI platforms": 1,
@@ -24278,7 +24280,7 @@
     },
     {
       "week": "2026-W29",
-      "count": 28
+      "count": 29
     },
     {
       "week": "2026-W30",
@@ -24294,7 +24296,7 @@
     },
     {
       "week": "2026-W33",
-      "count": 20
+      "count": 21
     },
     {
       "week": "2026-W34",

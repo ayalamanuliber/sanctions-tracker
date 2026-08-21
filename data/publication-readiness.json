@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "407439c6fcd68239ff7a254a53d3b567e087418f9c05fc984ae8f79fdef0e84b",
-  "corpus_checked": "2026-08-20",
-  "total_cases": 1934,
-  "total_assessments": 1934,
+  "dataset_checksum": "957b46abc0c8d9953f9383b362a1f0e3714a52e79a9b23c3bdb6640d6695477c",
+  "corpus_checked": "2026-08-21",
+  "total_cases": 1936,
+  "total_assessments": 1936,
   "tiers": {
-    "index-ready": 1914,
+    "index-ready": 1916,
     "enrichment-ready": 16,
     "research-only": 4
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 102,
-    "operational-lesson-not-recorded": 1198,
+    "operational-lesson-not-recorded": 1200,
     "outcome-not-recorded": 378,
-    "publication-review-pending": 1934,
+    "publication-review-pending": 1936,
     "source-link-missing": 3,
-    "specific-ai-tool-not-established": 1710,
+    "specific-ai-tool-not-established": 1711,
     "summary-missing": 1,
     "summary-needs-detail": 788,
     "summary-too-brief": 15
@@ -126,14 +126,14 @@
       ]
     },
     {
-      "id": "joann-ledoux-v-outliers-inc-2026-08-18",
-      "slug": "joann-ledoux-v-outliers-inc-2026-08-18",
+      "id": "joann-ledoux-v-outliers-inc-2-2026-08-18",
+      "slug": "joann-ledoux-v-outliers-inc-2-2026-08-18",
       "score": 90,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
       "source_eligible": true,
-      "summary_length": 1098,
+      "summary_length": 293,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -1887,6 +1887,97 @@
           "impact": "context",
           "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
         },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "meni-silga-v-state-farm-2026-08-11",
+      "slug": "meni-silga-v-state-farm-2026-08-11",
+      "score": 90,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 909,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
         {
           "field": "lesson",
           "code": "operational-lesson-not-recorded",
@@ -7986,14 +8077,14 @@
       ]
     },
     {
-      "id": "joann-ledoux-v-outliers-inc-2026-07-24",
-      "slug": "joann-ledoux-v-outliers-inc-2026-07-24",
+      "id": "joann-ledoux-v-outliers-inc-1-2026-07-24",
+      "slug": "joann-ledoux-v-outliers-inc-1-2026-07-24",
       "score": 90,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
       "source_eligible": true,
-      "summary_length": 346,
+      "summary_length": 303,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -12359,6 +12450,103 @@
           "impact": "important",
           "remediation": "Record the documented disposition, consequence, or procedural posture."
         },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "appeal-of-pdo-ahuska-joint-venture-llc-2026-07-13",
+      "slug": "appeal-of-pdo-ahuska-joint-venture-llc-2026-07-13",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 445,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",

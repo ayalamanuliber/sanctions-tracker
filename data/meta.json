@@ -1,36 +1,36 @@
 {
-  "last_updated": "2026-08-21",
-  "last_checked": "2026-08-21",
-  "last_checked_at": "2026-08-21T09:00:30.805Z",
-  "latest_record_date": "2026-08-18",
+  "last_updated": "2026-08-22",
+  "last_checked": "2026-08-22",
+  "last_checked_at": "2026-08-22T08:50:20.788Z",
+  "latest_record_date": "2026-08-21",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 1937,
-  "source_linked_count": 1933,
+  "source_record_count": 1942,
+  "source_linked_count": 1938,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 1,
-  "dataset_checksum": "957b46abc0c8d9953f9383b362a1f0e3714a52e79a9b23c3bdb6640d6695477c",
-  "total_cases": 1936,
-  "us_cases": 1327,
-  "us_adjudicated": 1323,
+  "dataset_checksum": "e5b1ea95702d1b67bb35fbc702bbec963179f11c8a0ac67d964346b113dcb10a",
+  "total_cases": 1941,
+  "us_cases": 1329,
+  "us_adjudicated": 1325,
   "us_alleged_only": 4,
   "countries_tracked": 42,
-  "enriched_count": 1936,
+  "enriched_count": 1941,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
-  "monetary_sanctions_total_usd": 1731830,
+  "monetary_sanctions_total_usd": 1736831,
   "largest_single_sanction": 282508,
-  "avg_sanction": 7801,
+  "avg_sanction": 7754,
   "severity_counts": {
-    "medium": 323,
-    "low": 1374,
-    "high": 200,
+    "high": 202,
+    "medium": 324,
+    "low": 1376,
     "career-ending": 39
   },
   "by_country": {
-    "US": 1327,
+    "US": 1329,
     "Brazil": 41,
-    "Canada": 211,
+    "Canada": 214,
     "Australia": 98,
     "South Africa": 6,
     "Netherlands": 7,
@@ -17336,6 +17336,454 @@
       ]
     },
     {
+      "state": "DC",
+      "count": 19,
+      "total": 5002,
+      "severities": {
+        "low": 12,
+        "high": 2,
+        "medium": 3,
+        "career-ending": 2
+      },
+      "cases": [
+        {
+          "id": "catarina-almeida-porfirio-v-homeland-security-et-al-2026-07-23",
+          "name": "Catarina Almeida Porfirio v. Homeland Security, et al.",
+          "court": "D. D.C.",
+          "judge": "",
+          "date": "2026-07-23",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Opposition brief cites 'Ravenell v. Van Buren, 2019 WL 6619363 (D.D.C. Dec. 5, 2019)'; the government could not locate the case and the Court also could not find it.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "immigration",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2700/ALMEIDA_PORFIRIO_v_NOEM_et_al_USA_23_July_2026.pdf"
+        },
+        {
+          "id": "in-re-lisa-cato-2026-07-10",
+          "name": "In re Lisa Cato",
+          "court": "D. D.C. (Bankruptcy)",
+          "judge": "",
+          "date": "2026-07-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | The Motion included fabricated quotations and incorrect citations; the court observed these were not first-time errors and undermined the movant's arguments and may violate Rule 9011. Outcome: Motion for Sanctions denied.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "bankruptcy",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2690/In_re_Cato_USA_10_July_2026.pdf"
+        },
+        {
+          "id": "nguedi-v-general-dynamics-information-technology-2026-03-31",
+          "name": "Nguedi v. General Dynamics Information Technology",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "False Quotes: Case Law | Attributed a nonexistent quotation to Brady v. Office of Sergeant at Arms; court found the quote does not appear in the decision and the case does not involve the stated proposition.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1909/Nguedi_v._AO_USA_31_March_2026.pdf"
+        },
+        {
+          "id": "zavadovsky-v-republic-of-austria-et-al-2026-03-31",
+          "name": "Zavadovsky v. Republic of Austria, et al.",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Plaintiffs attributed a fabricated quotation to United States v. Microsoft Corp.; the court found the quotation to be fake. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1921/Zavadovsky_v._Austria_USA_30_March_2026.pdf"
+        },
+        {
+          "id": "andre-lamont-goddard-jr-v-city-university-of-seattle-2026-03-06",
+          "name": "Andre Lamont Goddard, Jr. v. City University of Seattle",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2026-03-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Court could not locate the cited decision and found it likely fabricated; citation does not support plaintiff's proposition. Outcome: Admonishment.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1651/Lamont_v._City_U_of_Seattle_USA_6_March_2026.pdf"
+        },
+        {
+          "id": "tabitha-alberti-v-district-of-columbia-2026-02-10",
+          "name": "Tabitha Alberti v. District of Columbia",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2026-02-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Plaintiff's Opposition contained citations to cases that do not exist and invented/incorrect quotations; court found brief \"riddled\" with fabricated citations and inaccurate references.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1478/Alberti_v._DC_USA_10_February_2026.pdf"
+        },
+        {
+          "id": "osborne-properties-limited-partnership-v-fartun-abdullahi-mohamed-et-al-2026-01-16",
+          "name": "Osborne Properties Limited Partnership v. Fartun Abdullahi Mohamed et al.",
+          "court": "DC Minnesotta",
+          "judge": "",
+          "date": "2026-01-16",
+          "amount": 5000,
+          "amount_display": "$5.0K",
+          "severity": "high",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Cited 'Doherty v. Alma E. Clark Mem’l Home, 282 Minn. 257, 259, 164 N.W.2d 575, 577 (1969)'; court found no such case exists and struck the citation. Outcome: Citations Struck; Monetary Sanctions; Bar Referral. Disciplinary proceedings eventually filed (see here, case number  A26-1496).Order cites the database in footnote 2.",
+          "sanction_types": [
+            "monetary",
+            "struck-filing",
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "bar-referral",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2905/MCRO_27-CV-25-4499_Order-Other_2026-01-20_20260822005753.pdf"
+        },
+        {
+          "id": "x-v-canada-2026-01-16",
+          "name": "X. v. Canada",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2026-01-16",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "On January 16, 2026, the District of Columbia record addressed a pro se plaintiff’s quotations attributed to cases but not found in the cited opinions, including language attributed to Chambers v. NASCO, Inc.; the public corpus records an adverse-costs order.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv"
+        },
+        {
+          "id": "viken-v-schuelke-2026-01-13",
+          "name": "Viken v. Schuelke",
+          "court": "Minnesotta DC",
+          "judge": "",
+          "date": "2026-01-13",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "Lexis Assist",
+          "summary": "False Quotes: Case Law | Memorandum attributes the quotation 'failure to properly serve required parties invalidates the termination of the contract for deed and, consequently, the vendor's standing to bring title-based lawsuits.' to Enga v. Felland, but the quote does not appear in Enga. Outcome: Order to Show Cause.",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2337/10_-_Viken_v_Schuelke.pdf"
+        },
+        {
+          "id": "wanyu-zhang-v-national-public-radio-inc-2025-12-18",
+          "name": "Wanyu Zhang v. National Public Radio, Inc.",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2025-12-18",
+          "amount": 1,
+          "amount_display": "$1",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Opposition brief cited a non-existent case as if it were binding authority. Outcome: Brief struck; Adverse Costs Order.",
+          "sanction_types": [
+            "monetary",
+            "struck-filing"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2266/Zhang_v._NPR_USA_18_December_2026.pdf"
+        },
+        {
+          "id": "ekeocha-v-us-department-of-state-2025-11-19",
+          "name": "Ekeocha v. U.S. Department of State",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2025-11-19",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff's Opposition cites \"Litvin v. Blinken, 93 F.4th 1162, 1168 (D.C. Cir. 2024)\", which the Court found does not appear to exist. Outcome: Admonishment.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "immigration",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1058/Ekeocha_v._US_State_Department_USA_19_November_2025.pdf"
+        },
+        {
+          "id": "alexandria-jones-v-dc-office-of-unified-communications-2025-10-22",
+          "name": "Alexandria Jones v. DC Office of Unified Communications",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2025-10-22",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Counsel attributed quotations to cases that do not contain the quoted material; the court observed these nonexistent quotations and linked them to apparent AI reliance. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/906/Jones_v._DC_Office_of_Unified_Communication_USA_22_October_2025.pdf"
+        },
+        {
+          "id": "n-bar-trade-v-amazon-2025-10-22",
+          "name": "N-BAR Trade v. Amazon",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2025-10-22",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Opposing party (Amazon) could not locate several quotations cited in Plaintiffs' Opposition; court found the quotations do not actually appear in the cases attributed and warned counsel against submitting nonexistent quotations. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/905/N-BAR_Trade_et_al_v._Amazon.com_Services_USA_22_October_2025.pdf"
+        },
+        {
+          "id": "conrad-smith-et-al-v-donald-j-trump-et-al-2025-10-16",
+          "name": "Conrad Smith et al. v. Donald J. Trump et al.",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2025-10-16",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Legal Norm | Opposition contained multiple fabricated Local Civil Rule citations (e.g., “Civil Procedure Rule 104 (7)-(8)”, “D.D.C. local Rule 104(7)”, “D.D.C. Rule 8(a)”, “L.R. 104.8”); court found these rules do not exist. Outcome: Show Cause Order.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/885/Smith_v._Trump_USA_16_OCtober_2025.pdf"
+        },
+        {
+          "id": "smith-v-athena-construction-group-inc-2025-10-03",
+          "name": "Smith v. Athena Construction Group, Inc.",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2025-10-03",
+          "amount": 1,
+          "amount_display": "$1",
+          "severity": "high",
+          "tool": "Grammarly; ProWritingAid",
+          "summary": "Misrepresented: Case Law | Pl.'s Opp'n cited Simpkins for the proposition that courts in this Circuit routinely reject motions based solely on attorney argument; the court found this to be a false proposition of law. Outcome: Costs Order; Order to notify Bar. Show Cause Order is available here.",
+          "sanction_types": [
+            "monetary",
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/850/SMITH_v_ATHENA_CONSTRUCTION_GROUP_INC__dcdce-18-02080__0201.0.pdf"
+        },
+        {
+          "id": "doe-v-noem-2025-07-01",
+          "name": "Doe v. Noem",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2025-07-01",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "ChatGPT",
+          "summary": "Outcome: Order to Show Cause. Fake citation, in this brief, was to : Moms Against Poverty v. Dep’t of State, 2022 WL 17951329, at *3 . Case docket can be found here.Counsel later confirmed having used ChatGPT and apologised.",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "trial"
+          ],
+          "source_url": "https://lawandcrime.com/high-profile/the-court-has-found-no-such-case-judge-calls-out-immigration-lawyer-for-citing-seemingly-non-existent-authority-in-battle-against-trump-administration/"
+        },
+        {
+          "id": "williams-v-capital-one-bank-2025-03-18",
+          "name": "Williams v. Capital One Bank",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2025-03-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "career-ending",
+          "tool": "CoCounsel",
+          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent case; the court confirmed no such case exists. Outcome: Case dismissed with prejudice for failure to state a claim. No monetary sanction imposed, but the court issued a formal warning. AI UseWhile not formally admitted, Plaintiff’s opposition brief referred to “legal generative AI program CoCounsel,” and the court noted that the structure and citation pattern were consistent with AI-generated output. Capital One was unable to verify several case citations, prompting the court to scrutinize the submission.Hallucination DetailsAt least one case was fully fabricated, and another was a real case misattributed to the wrong jurisdiction and reporter. The court emphasized that it could not determine whether the mis-citations were the result of confusion, poor research, or hallucinated AI output—but the burden rested with the party filing them.Ruling/SanctionThe court dismissed the complaint with prejudice, noting Plaintiff had already filed and withdrawn a prior version and had had full opportunity to amend. Though it did not impose monetary sanctions, it issued a strong warning and directed Plaintiff to notify other courts where he had similar pending cases if any filings included erroneous AI-generated citations.",
+          "sanction_types": [
+            "monetary",
+            "warning",
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/362/Williams_v._Capital_One_Bank_N.A._D._D.C._March_18_2025.pdf"
+        },
+        {
+          "id": "rubio-v-district-of-columbia-dhs-2024-12-03",
+          "name": "Rubio v. District of Columbia DHS",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2024-12-03",
+          "amount": null,
+          "amount_display": "",
+          "severity": "career-ending",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent case the Court could not locate. Outcome: Complaint dismissed with prejudice; no Rule 11 sanctions imposed, but clear judicial warning on AI misuse and citation verification duties. AI UsePlaintiff’s proposed second amended complaint included multiple fictitious legal authorities, phrased in language suggesting generative AI use (e.g., “Here are some relevant legal precedents...”). The court stated it “bears some of the hallmarks of an AI response” and noted that the citations appeared to have been “invented by artificial intelligence (‘AI’).”Hallucination DetailsThe court could not locate the following cited cases:Ford v. District of Columbia, 70 F.3d 231 (D.C. Cir. 1995)Davis v. District of Columbia, 817 A.2d 1234 (D.C. 2003)Ward v. District of Columbia, 818 A.2d 27 (D.C. 2003)Reese v. District of Columbia, 37 A.3d 232 (D.C. 2012)These were used to allege a pattern of constitutional violations by the District but were found to be fabricated.Ruling/SanctionThe court denied Plaintiff’s motion to file a second amended complaint and dismissed the federal claims with prejudice. No formal Rule 11 sanctions were imposed, but the court emphasized the importance of verifying legal citations, citing Mata v. Avianca as precedent for how courts have responded to similar AI-related misuse.Key Judicial ReasoningThe Court noted that while AI may be a helpful tool for pro se litigants, its use does not relieve them of the obligation to verify that every citation is real. The submission of fictitious legal authorities, even if inadvertent, is improper and may warrant sanctions. Here, the repeated failure to plead a viable claim after multiple amendments led to dismissal with prejudice.",
+          "sanction_types": [
+            "warning",
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/308/Rubio_v._DC_DHS_US_DC_District_Court_December_3_2024.pdf"
+        },
+        {
+          "id": "usa-v-michel-2024-08-30",
+          "name": "USA v. Michel",
+          "court": "D. DC",
+          "judge": "",
+          "date": "2024-08-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "EyeLevel",
+          "summary": "False Quotes: Exhibits & Submissions | Defense closing argument, generated in part by an AI tool, misattributed Puff Daddy’s lyric to the Fugees; the Court noted the mistake and found no prejudice. Outcome: Misattribution was irrelevant. As acknowledged by Counsel, he also used AI to generate parts of his pleadings.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fabricated-quotes",
+            "criminal",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/475/USA_v._Michel_DDC_USA_30_August_2024.pdf"
+        }
+      ]
+    },
+    {
       "state": "CT",
       "count": 18,
       "total": 5000,
@@ -17745,427 +18193,6 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/346/Moales_v._Land_Rover_Cherry_Hill_D._Connecticut_April_30_2025.pdf"
-        }
-      ]
-    },
-    {
-      "state": "DC",
-      "count": 18,
-      "total": 2,
-      "severities": {
-        "low": 12,
-        "medium": 3,
-        "high": 1,
-        "career-ending": 2
-      },
-      "cases": [
-        {
-          "id": "catarina-almeida-porfirio-v-homeland-security-et-al-2026-07-23",
-          "name": "Catarina Almeida Porfirio v. Homeland Security, et al.",
-          "court": "D. D.C.",
-          "judge": "",
-          "date": "2026-07-23",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Opposition brief cites 'Ravenell v. Van Buren, 2019 WL 6619363 (D.D.C. Dec. 5, 2019)'; the government could not locate the case and the Court also could not find it.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "immigration",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2700/ALMEIDA_PORFIRIO_v_NOEM_et_al_USA_23_July_2026.pdf"
-        },
-        {
-          "id": "in-re-lisa-cato-2026-07-10",
-          "name": "In re Lisa Cato",
-          "court": "D. D.C. (Bankruptcy)",
-          "judge": "",
-          "date": "2026-07-10",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | The Motion included fabricated quotations and incorrect citations; the court observed these were not first-time errors and undermined the movant's arguments and may violate Rule 9011. Outcome: Motion for Sanctions denied.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "bankruptcy",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2690/In_re_Cato_USA_10_July_2026.pdf"
-        },
-        {
-          "id": "nguedi-v-general-dynamics-information-technology-2026-03-31",
-          "name": "Nguedi v. General Dynamics Information Technology",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "False Quotes: Case Law | Attributed a nonexistent quotation to Brady v. Office of Sergeant at Arms; court found the quote does not appear in the decision and the case does not involve the stated proposition.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1909/Nguedi_v._AO_USA_31_March_2026.pdf"
-        },
-        {
-          "id": "zavadovsky-v-republic-of-austria-et-al-2026-03-31",
-          "name": "Zavadovsky v. Republic of Austria, et al.",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Plaintiffs attributed a fabricated quotation to United States v. Microsoft Corp.; the court found the quotation to be fake. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1921/Zavadovsky_v._Austria_USA_30_March_2026.pdf"
-        },
-        {
-          "id": "andre-lamont-goddard-jr-v-city-university-of-seattle-2026-03-06",
-          "name": "Andre Lamont Goddard, Jr. v. City University of Seattle",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2026-03-06",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Court could not locate the cited decision and found it likely fabricated; citation does not support plaintiff's proposition. Outcome: Admonishment.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1651/Lamont_v._City_U_of_Seattle_USA_6_March_2026.pdf"
-        },
-        {
-          "id": "tabitha-alberti-v-district-of-columbia-2026-02-10",
-          "name": "Tabitha Alberti v. District of Columbia",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2026-02-10",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Plaintiff's Opposition contained citations to cases that do not exist and invented/incorrect quotations; court found brief \"riddled\" with fabricated citations and inaccurate references.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1478/Alberti_v._DC_USA_10_February_2026.pdf"
-        },
-        {
-          "id": "x-v-canada-2026-01-16",
-          "name": "X. v. Canada",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2026-01-16",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "On January 16, 2026, the District of Columbia record addressed a pro se plaintiff’s quotations attributed to cases but not found in the cited opinions, including language attributed to Chambers v. NASCO, Inc.; the public corpus records an adverse-costs order.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv"
-        },
-        {
-          "id": "viken-v-schuelke-2026-01-13",
-          "name": "Viken v. Schuelke",
-          "court": "Minnesotta DC",
-          "judge": "",
-          "date": "2026-01-13",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "Lexis Assist",
-          "summary": "False Quotes: Case Law | Memorandum attributes the quotation 'failure to properly serve required parties invalidates the termination of the contract for deed and, consequently, the vendor's standing to bring title-based lawsuits.' to Enga v. Felland, but the quote does not appear in Enga. Outcome: Order to Show Cause.",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2337/10_-_Viken_v_Schuelke.pdf"
-        },
-        {
-          "id": "wanyu-zhang-v-national-public-radio-inc-2025-12-18",
-          "name": "Wanyu Zhang v. National Public Radio, Inc.",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2025-12-18",
-          "amount": 1,
-          "amount_display": "$1",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Opposition brief cited a non-existent case as if it were binding authority. Outcome: Brief struck; Adverse Costs Order.",
-          "sanction_types": [
-            "monetary",
-            "struck-filing"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2266/Zhang_v._NPR_USA_18_December_2026.pdf"
-        },
-        {
-          "id": "ekeocha-v-us-department-of-state-2025-11-19",
-          "name": "Ekeocha v. U.S. Department of State",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2025-11-19",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff's Opposition cites \"Litvin v. Blinken, 93 F.4th 1162, 1168 (D.C. Cir. 2024)\", which the Court found does not appear to exist. Outcome: Admonishment.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "immigration",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1058/Ekeocha_v._US_State_Department_USA_19_November_2025.pdf"
-        },
-        {
-          "id": "alexandria-jones-v-dc-office-of-unified-communications-2025-10-22",
-          "name": "Alexandria Jones v. DC Office of Unified Communications",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2025-10-22",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Counsel attributed quotations to cases that do not contain the quoted material; the court observed these nonexistent quotations and linked them to apparent AI reliance. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/906/Jones_v._DC_Office_of_Unified_Communication_USA_22_October_2025.pdf"
-        },
-        {
-          "id": "n-bar-trade-v-amazon-2025-10-22",
-          "name": "N-BAR Trade v. Amazon",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2025-10-22",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Opposing party (Amazon) could not locate several quotations cited in Plaintiffs' Opposition; court found the quotations do not actually appear in the cases attributed and warned counsel against submitting nonexistent quotations. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/905/N-BAR_Trade_et_al_v._Amazon.com_Services_USA_22_October_2025.pdf"
-        },
-        {
-          "id": "conrad-smith-et-al-v-donald-j-trump-et-al-2025-10-16",
-          "name": "Conrad Smith et al. v. Donald J. Trump et al.",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2025-10-16",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Legal Norm | Opposition contained multiple fabricated Local Civil Rule citations (e.g., “Civil Procedure Rule 104 (7)-(8)”, “D.D.C. local Rule 104(7)”, “D.D.C. Rule 8(a)”, “L.R. 104.8”); court found these rules do not exist. Outcome: Show Cause Order.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/885/Smith_v._Trump_USA_16_OCtober_2025.pdf"
-        },
-        {
-          "id": "smith-v-athena-construction-group-inc-2025-10-03",
-          "name": "Smith v. Athena Construction Group, Inc.",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2025-10-03",
-          "amount": 1,
-          "amount_display": "$1",
-          "severity": "high",
-          "tool": "Grammarly; ProWritingAid",
-          "summary": "Misrepresented: Case Law | Pl.'s Opp'n cited Simpkins for the proposition that courts in this Circuit routinely reject motions based solely on attorney argument; the court found this to be a false proposition of law. Outcome: Costs Order; Order to notify Bar. Show Cause Order is available here.",
-          "sanction_types": [
-            "monetary",
-            "bar-referral",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/850/SMITH_v_ATHENA_CONSTRUCTION_GROUP_INC__dcdce-18-02080__0201.0.pdf"
-        },
-        {
-          "id": "doe-v-noem-2025-07-01",
-          "name": "Doe v. Noem",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2025-07-01",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "ChatGPT",
-          "summary": "Outcome: Order to Show Cause. Fake citation, in this brief, was to : Moms Against Poverty v. Dep’t of State, 2022 WL 17951329, at *3 . Case docket can be found here.Counsel later confirmed having used ChatGPT and apologised.",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "trial"
-          ],
-          "source_url": "https://lawandcrime.com/high-profile/the-court-has-found-no-such-case-judge-calls-out-immigration-lawyer-for-citing-seemingly-non-existent-authority-in-battle-against-trump-administration/"
-        },
-        {
-          "id": "williams-v-capital-one-bank-2025-03-18",
-          "name": "Williams v. Capital One Bank",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2025-03-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "career-ending",
-          "tool": "CoCounsel",
-          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent case; the court confirmed no such case exists. Outcome: Case dismissed with prejudice for failure to state a claim. No monetary sanction imposed, but the court issued a formal warning. AI UseWhile not formally admitted, Plaintiff’s opposition brief referred to “legal generative AI program CoCounsel,” and the court noted that the structure and citation pattern were consistent with AI-generated output. Capital One was unable to verify several case citations, prompting the court to scrutinize the submission.Hallucination DetailsAt least one case was fully fabricated, and another was a real case misattributed to the wrong jurisdiction and reporter. The court emphasized that it could not determine whether the mis-citations were the result of confusion, poor research, or hallucinated AI output—but the burden rested with the party filing them.Ruling/SanctionThe court dismissed the complaint with prejudice, noting Plaintiff had already filed and withdrawn a prior version and had had full opportunity to amend. Though it did not impose monetary sanctions, it issued a strong warning and directed Plaintiff to notify other courts where he had similar pending cases if any filings included erroneous AI-generated citations.",
-          "sanction_types": [
-            "monetary",
-            "warning",
-            "case-dismissed"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/362/Williams_v._Capital_One_Bank_N.A._D._D.C._March_18_2025.pdf"
-        },
-        {
-          "id": "rubio-v-district-of-columbia-dhs-2024-12-03",
-          "name": "Rubio v. District of Columbia DHS",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2024-12-03",
-          "amount": null,
-          "amount_display": "",
-          "severity": "career-ending",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent case the Court could not locate. Outcome: Complaint dismissed with prejudice; no Rule 11 sanctions imposed, but clear judicial warning on AI misuse and citation verification duties. AI UsePlaintiff’s proposed second amended complaint included multiple fictitious legal authorities, phrased in language suggesting generative AI use (e.g., “Here are some relevant legal precedents...”). The court stated it “bears some of the hallmarks of an AI response” and noted that the citations appeared to have been “invented by artificial intelligence (‘AI’).”Hallucination DetailsThe court could not locate the following cited cases:Ford v. District of Columbia, 70 F.3d 231 (D.C. Cir. 1995)Davis v. District of Columbia, 817 A.2d 1234 (D.C. 2003)Ward v. District of Columbia, 818 A.2d 27 (D.C. 2003)Reese v. District of Columbia, 37 A.3d 232 (D.C. 2012)These were used to allege a pattern of constitutional violations by the District but were found to be fabricated.Ruling/SanctionThe court denied Plaintiff’s motion to file a second amended complaint and dismissed the federal claims with prejudice. No formal Rule 11 sanctions were imposed, but the court emphasized the importance of verifying legal citations, citing Mata v. Avianca as precedent for how courts have responded to similar AI-related misuse.Key Judicial ReasoningThe Court noted that while AI may be a helpful tool for pro se litigants, its use does not relieve them of the obligation to verify that every citation is real. The submission of fictitious legal authorities, even if inadvertent, is improper and may warrant sanctions. Here, the repeated failure to plead a viable claim after multiple amendments led to dismissal with prejudice.",
-          "sanction_types": [
-            "warning",
-            "case-dismissed"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/308/Rubio_v._DC_DHS_US_DC_District_Court_December_3_2024.pdf"
-        },
-        {
-          "id": "usa-v-michel-2024-08-30",
-          "name": "USA v. Michel",
-          "court": "D. DC",
-          "judge": "",
-          "date": "2024-08-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "EyeLevel",
-          "summary": "False Quotes: Exhibits & Submissions | Defense closing argument, generated in part by an AI tool, misattributed Puff Daddy’s lyric to the Fugees; the Court noted the mistake and found no prejudice. Outcome: Misattribution was irrelevant. As acknowledged by Counsel, he also used AI to generate parts of his pleadings.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fabricated-quotes",
-            "criminal",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/475/USA_v._Michel_DDC_USA_30_August_2024.pdf"
         }
       ]
     },
@@ -23954,13 +23981,13 @@
     }
   ],
   "by_week": {
-    "2026-W34": 3,
+    "2026-W34": 4,
     "2026-W33": 21,
     "2026-W32": 24,
     "2026-W31": 31,
     "2026-W30": 22,
     "2026-W29": 29,
-    "2026-W28": 22,
+    "2026-W28": 23,
     "2026-W27": 28,
     "2026-W26": 27,
     "2026-W25": 20,
@@ -23983,9 +24010,9 @@
     "2026-W08": 27,
     "2026-W07": 42,
     "2026-W06": 31,
-    "2026-W05": 28,
+    "2026-W05": 29,
     "2026-W04": 36,
-    "2026-W03": 37,
+    "2026-W03": 38,
     "2026-W02": 29,
     "2026-W01": 22,
     "2025-W52": 21,
@@ -23993,7 +24020,7 @@
     "2025-W50": 28,
     "2025-W49": 44,
     "2025-W48": 29,
-    "2025-W47": 40,
+    "2025-W47": 41,
     "2025-W46": 26,
     "2025-W45": 30,
     "2025-W44": 35,
@@ -24089,16 +24116,16 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-08": 48,
-    "2026-07": 118,
+    "2026-08": 49,
+    "2026-07": 119,
     "2026-06": 127,
     "2026-05": 153,
     "2026-04": 126,
     "2026-03": 178,
     "2026-02": 132,
-    "2026-01": 134,
+    "2026-01": 136,
     "2025-12": 154,
-    "2025-11": 127,
+    "2025-11": 128,
     "2025-10": 120,
     "2025-09": 97,
     "2025-08": 87,
@@ -24133,13 +24160,13 @@
   "by_year": {
     "2023": 16,
     "2024": 59,
-    "2025": 845,
-    "2026": 1016
+    "2025": 846,
+    "2026": 1020
   },
   "by_tool": {
-    "AI (implied, unspecified)": 1296,
+    "Unidentified": 416,
+    "AI (implied, unspecified)": 1299,
     "Claude and ChatGPT": 1,
-    "Unidentified": 414,
     "ChatGPT": 106,
     "Irys": 2,
     "Gemini Pro; Perplexity; Cetient Legal AI; ChatGPT": 1,
@@ -24249,7 +24276,7 @@
     "6th Circuit": 109,
     "2nd Circuit": 144,
     "10th Circuit": 114,
-    "D.C. Circuit": 18,
+    "D.C. Circuit": 19,
     "1st Circuit": 1,
     "Federal Circuit": 1
   },
@@ -24276,7 +24303,7 @@
     },
     {
       "week": "2026-W28",
-      "count": 22
+      "count": 23
     },
     {
       "week": "2026-W29",
@@ -24300,7 +24327,7 @@
     },
     {
       "week": "2026-W34",
-      "count": 3
+      "count": 4
     }
   ]
 }

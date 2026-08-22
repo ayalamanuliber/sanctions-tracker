@@ -1,14 +1,18 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "957b46abc0c8d9953f9383b362a1f0e3714a52e79a9b23c3bdb6640d6695477c",
-  "corpus_checked": "2026-08-21",
-  "total_cases": 1936,
+  "dataset_checksum": "e5b1ea95702d1b67bb35fbc702bbec963179f11c8a0ac67d964346b113dcb10a",
+  "corpus_checked": "2026-08-22",
+  "total_cases": 1941,
   "tiers": {
-    "index-ready": 1916,
+    "index-ready": 1921,
     "enrichment-ready": 16,
     "research-only": 4
   },
   "by_slug": {
+    "capital-standard-llc-v-u-s-bank-national-association-2026-08-21": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "in-re-marriage-of-rebekah-muriel-and-johnathan-david-farris-2026-08-18": {
       "tier": "index-ready",
       "score": 81
@@ -550,6 +554,10 @@
       "score": 80
     },
     "in-re-lisa-cato-2026-07-10": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "jean-lucien-kibondo-kilongozi-v-the-minister-of-citizenship-and-immigration-2026-07-10": {
       "tier": "index-ready",
       "score": 85
     },
@@ -3609,6 +3617,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "sara-raza-v-the-attorney-general-of-canada-2026-01-28": {
+      "tier": "index-ready",
+      "score": 75
+    },
     "sas-la-volumerie-2026-01-28": {
       "tier": "index-ready",
       "score": 85
@@ -3804,6 +3816,10 @@
     "lutfi-v-tucker-2026-01-16": {
       "tier": "index-ready",
       "score": 86
+    },
+    "osborne-properties-limited-partnership-v-fartun-abdullahi-mohamed-et-al-2026-01-16": {
+      "tier": "index-ready",
+      "score": 85
     },
     "rev-heidi-grossman-lepp-v-conrad-mallett-jr-et-al-2026-01-16": {
       "tier": "index-ready",
@@ -4868,6 +4884,10 @@
     "senat-fur-familiensachen-17-wf-144-25-2025-11-20": {
       "tier": "index-ready",
       "score": 76
+    },
+    "0997510-bc-ltd-v-area-15-2025-bcpaab-20252585-2025-11-19": {
+      "tier": "index-ready",
+      "score": 85
     },
     "dj-v-sn-2025-11-19": {
       "tier": "index-ready",

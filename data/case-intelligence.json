@@ -1,5 +1,65 @@
 [
   {
+    "id": "capital-standard-llc-v-u-s-bank-national-association-2026-08-21",
+    "slug": "capital-standard-llc-v-u-s-bank-national-association-2026-08-21",
+    "case_name": "Capital Standard, LLC v. U.S. Bank National Association",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Misrepresented: Case Law | Cited Maciejewski v. Holland, 441 So. 2d 703 (Fla. 2d DCA 1983) for unrelated propositions (e.g., ratification), though the two-page opinion does not contain those propositions. Outcome: Attorney Keefe fined $1,500; ordered to pay U.S. Bank's appellate fees for researching and answering the amended initial brief (amount remanded to trial court); referred to The Florida Bar; offending briefs struck.. Attorney Kenneth Keefe relied on a generative AI tool that produced numerous AI \"hallucinations\" (fabricated cases, false quotations, and misstatements of existing authorities) across his amended initial brief and reply. The court issued a show-cause, found at least 46 specific hallucinations, ordered Keefe to produce supporting authorities, received no timely compliance, struck the offending briefs, and imposed sanctions: a $1,500 fine, an award of fees to U.S. Bank for researching and answering the amended brief (amount remanded for determination), and referral to The Florida Bar. The court based sanctions on violations of Fla. R. Gen. Prac. & Jud. Admin. 2.515(d) and Fla. R. App. P. 9.210/9.410(a), noting the burden on courts and opposing parties and the duty of counsel to verify authorities.",
+    "direct_answer": "Misrepresented: Case Law | Cited Maciejewski v. Holland, 441 So. 2d 703 (Fla. 2d DCA 1983) for unrelated propositions (e.g., ratification), though the two-page opinion does not contain those propositions. Outcome: Attorney Keefe fined $1,500; ordered to pay U.S. Bank's appellate fees for researching and answering the amended initial brief (amount remanded to trial court); referred to The Florida Bar; offending briefs struck.. Attorney Kenneth Keefe relied on a generative AI tool that produced numerous AI \"hallucinations\" (fabricated cases, false quotations, and misstatements of existing authorities) across his amended initial brief and reply. The court issued a show-cause, found at least 46 specific hallucinations, ordered Keefe to produce supporting authorities, received no timely compliance, struck the offending briefs, and imposed sanctions: a $1,500 fine, an award of fees to U.S. Bank for researching and answering the amended brief (amount remanded for determination), and referral to The Florida Bar. The court based sanctions on violations of Fla. R. Gen. Prac. & Jud. Admin. 2.515(d) and Fla. R. App. P. 9.210/9.410(a), noting the burden on courts and opposing parties and the duty of counsel to verify authorities.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Attorney Keefe fined $1,500; ordered to pay U.S. Bank's appellate fees for researching and answering the amended initial brief (amount remanded to trial court); referred to The Florida Bar; offending briefs struck. in Fla. 2d DCA. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Attorney Keefe fined $1,500; ordered to pay U.S. Bank's appellate fees for researching and answering the amended initial brief (amount remanded to trial court); referred to The Florida Bar; offending briefs struck.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2906/Capital_Standard_v._US_Bank_NA_USA_21_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Fla. 2d DCA",
+      "jurisdiction": "state",
+      "state": "",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-21",
+      "ai_tool": "Unidentified",
+      "outcome": "Attorney Keefe fined $1,500; ordered to pay U.S. Bank's appellate fees for researching and answering the amended initial brief (amount remanded to trial court); referred to The Florida Bar; offending briefs struck.",
+      "amount": 1,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "struck-filing",
+        "bar-referral",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "in-re-marriage-of-rebekah-muriel-and-johnathan-david-farris-2026-08-18",
     "slug": "in-re-marriage-of-rebekah-muriel-and-johnathan-david-farris-2026-08-18",
     "case_name": "In re Marriage of Rebekah Muriel and Johnathan David Farris",
@@ -8987,6 +9047,59 @@
         "The specific generative AI tool used by the movant remains unidentified.",
         "The full extent of the movant's prior disciplinary history beyond the referenced ECF No. 83 is not detailed."
       ]
+    }
+  },
+  {
+    "id": "jean-lucien-kibondo-kilongozi-v-the-minister-of-citizenship-and-immigration-2026-07-10",
+    "slug": "jean-lucien-kibondo-kilongozi-v-the-minister-of-citizenship-and-immigration-2026-07-10",
+    "case_name": "JEAN LUCIEN KIBONDO KILONGOZI v THE MINISTER OF CITIZENSHIP AND IMMIGRATION",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | Adopter's submissions cited a non-existent Federal Court of Appeal decision; the Court expressly found the decision to be inexistent. Outcome: The Court identified the cited authority as non-existent and treated it as unreliable; no professional sanction or monetary penalty was imposed related to the fabricated citation.. In responding to a procedural fairness letter, the adopter (through submissions) cited a purported Federal Court of Appeal decision \"Stum c Canada (Ministre de la Citoyenneté et de l’Immigration), 2004 CAF 148,\" which the Court found to be an inexistent decision (a fabricated citation). The Court noted the citation was not real, disregarded it when assessing the fairness and reasonableness of the officer's process, and proceeded without imposing any sanction. The Court relied on the existing record and contemporaneous GCMS notes rather than the fabricated authority.",
+    "direct_answer": "Fabricated: Case Law | Adopter's submissions cited a non-existent Federal Court of Appeal decision; the Court expressly found the decision to be inexistent. Outcome: The Court identified the cited authority as non-existent and treated it as unreliable; no professional sanction or monetary penalty was imposed related to the fabricated citation.. In responding to a procedural fairness letter, the adopter (through submissions) cited a purported Federal Court of Appeal decision \"Stum c Canada (Ministre de la Citoyenneté et de l’Immigration), 2004 CAF 148,\" which the Court found to be an inexistent decision (a fabricated citation). The Court noted the citation was not real, disregarded it when assessing the fairness and reasonableness of the officer's process, and proceeded without imposing any sanction. The Court relied on the existing record and contemporaneous GCMS notes rather than the fabricated authority.",
+    "why_it_matters": "This matter connects fake citations and trial with The Court identified the cited authority as non-existent and treated it as unreliable; no professional sanction or monetary penalty was imposed related to the fabricated citation. in Federal Court. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and trial and records The Court identified the cited authority as non-existent and treated it as unreliable; no professional sanction or monetary penalty was imposed related to the fabricated citation.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2908/Kibondo-Kilongozi-v.-Canada-Citizenship-and-Immigration-2026-FC-928.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Federal Court",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-10",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "The Court identified the cited authority as non-existent and treated it as unreliable; no professional sanction or monetary penalty was imposed related to the fabricated citation.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {
@@ -84303,6 +84416,58 @@
     }
   },
   {
+    "id": "sara-raza-v-the-attorney-general-of-canada-2026-01-28",
+    "slug": "sara-raza-v-the-attorney-general-of-canada-2026-01-28",
+    "case_name": "Sara Raza v The Attorney General of Canada",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "The Federal Court dismissed the applicant's judicial review of a CRA second-review decision denying CRB. The decision contains no allegation or finding of AI or AI-assisted submissions, nor any fabricated or misquoted authorities. The Court found the Second Officer's reasons and notes adequate and concluded the applicant failed to provide verifiable documentation and did not suffer a procedural fairness breach.",
+    "direct_answer": "The Federal Court dismissed the applicant's judicial review of a CRA second-review decision denying CRB. The decision contains no allegation or finding of AI or AI-assisted submissions, nor any fabricated or misquoted authorities. The Court found the Second Officer's reasons and notes adequate and concluded the applicant failed to provide verifiable documentation and did not suffer a procedural fairness breach.",
+    "why_it_matters": "This matter connects pro se and trial with a recorded judicial or procedural response in Federal Court (Canada). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and trial and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2907/Raza-v.-Canada-Attorney-General-2026-FC-130.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Federal Court (Canada)",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-01-28",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "sas-la-volumerie-2026-01-28",
     "slug": "sas-la-volumerie-2026-01-28",
     "case_name": "SAS La Volumerie",
@@ -89156,6 +89321,68 @@
       "limitations": [
         "The specific AI tool used by the applicant remains unidentified."
       ]
+    }
+  },
+  {
+    "id": "osborne-properties-limited-partnership-v-fartun-abdullahi-mohamed-et-al-2026-01-16",
+    "slug": "osborne-properties-limited-partnership-v-fartun-abdullahi-mohamed-et-al-2026-01-16",
+    "case_name": "Osborne Properties Limited Partnership v. Fartun Abdullahi Mohamed et al.",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Fabricated: Case Law | Cited 'Doherty v. Alma E. Clark Mem’l Home, 282 Minn. 257, 259, 164 N.W.2d 575, 577 (1969)'; court found no such case exists and struck the citation. Outcome: Citations Struck; Monetary Sanctions; Bar Referral. Disciplinary proceedings eventually filed (see here, case number A26-1496).Order cites the database in footnote 2.",
+    "direct_answer": "Fabricated: Case Law | Cited 'Doherty v. Alma E. Clark Mem’l Home, 282 Minn. 257, 259, 164 N.W.2d 575, 577 (1969)'; court found no such case exists and struck the citation. Outcome: Citations Struck; Monetary Sanctions; Bar Referral. Disciplinary proceedings eventually filed (see here, case number A26-1496).Order cites the database in footnote 2.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Citations Struck; Monetary Sanctions; Bar Referral in DC Minnesotta. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Citations Struck; Monetary Sanctions; Bar Referral. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2905/MCRO_27-CV-25-4499_Order-Other_2026-01-20_20260822005753.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "DC Minnesotta",
+      "jurisdiction": "state",
+      "state": "DC",
+      "country": "US",
+      "circuit": "D.C. Circuit",
+      "judge": null,
+      "date": "2026-01-16",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Citations Struck; Monetary Sanctions; Bar Referral",
+      "amount": 5000,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "bar-referral",
+        "contract",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "struck-filing",
+        "bar-referral",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {
@@ -115268,6 +115495,59 @@
       "limitations": [
         "The specific AI tool used by counsel remains unidentified."
       ]
+    }
+  },
+  {
+    "id": "0997510-bc-ltd-v-area-15-2025-bcpaab-20252585-2025-11-19",
+    "slug": "0997510-bc-ltd-v-area-15-2025-bcpaab-20252585-2025-11-19",
+    "case_name": "0997510 BC Ltd. v. Area 15, 2025 BCPAAB 20252585",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Appellant submitted an unverifiable referenced case and summary produced with AI; Board could not locate the decision and the Appellant later withdrew it. Outcome: Appellant withdrew the unverifiable case references; the Board excluded all portions of the submission relying on the fabricated cases from the evidentiary record and issued a caution; no costs or professional sanctions were imposed.. The Appellant submitted legal case references and summaries that the Board was unable to verify. After the Board requested copies, the Appellant admitted the materials were produced with AI and that the cited cases did not correspond to verifiable BC decisions, took responsibility, and withdrew the references. The Board found this conduct breached its Code (sections 2.3, 6.1, 6.3, 6.4) and Rules (Rule 21), excluded the affected evidence from the record, cautioned the Appellant, and declined to award costs or other sanctions in this matter.",
+    "direct_answer": "Fabricated: Case Law | Appellant submitted an unverifiable referenced case and summary produced with AI; Board could not locate the decision and the Appellant later withdrew it. Outcome: Appellant withdrew the unverifiable case references; the Board excluded all portions of the submission relying on the fabricated cases from the evidentiary record and issued a caution; no costs or professional sanctions were imposed.. The Appellant submitted legal case references and summaries that the Board was unable to verify. After the Board requested copies, the Appellant admitted the materials were produced with AI and that the cited cases did not correspond to verifiable BC decisions, took responsibility, and withdrew the references. The Board found this conduct breached its Code (sections 2.3, 6.1, 6.3, 6.4) and Rules (Rule 21), excluded the affected evidence from the record, cautioned the Appellant, and declined to award costs or other sanctions in this matter.",
+    "why_it_matters": "This matter connects fake citations and trial with Appellant withdrew the unverifiable case references; the Board excluded all portions of the submission relying on the fabricated cases from the evidentiary record and issued a caution; no costs or professional sanctions were imposed. in BCPAAB. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and trial and records Appellant withdrew the unverifiable case references; the Board excluded all portions of the submission relying on the fabricated cases from the evidentiary record and issued a caution; no costs or professional sanctions were imposed.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2909/0997510-BC-Ltd.-v.-Area-15-2025-BCPAAB-20252585.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "BCPAAB",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2025-11-19",
+      "ai_tool": "Unidentified",
+      "outcome": "Appellant withdrew the unverifiable case references; the Board excluded all portions of the submission relying on the fabricated cases from the evidentiary record and issued a caution; no costs or professional sanctions were imposed.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

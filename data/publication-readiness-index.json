@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "e5b1ea95702d1b67bb35fbc702bbec963179f11c8a0ac67d964346b113dcb10a",
-  "corpus_checked": "2026-08-22",
-  "total_cases": 1941,
+  "dataset_checksum": "049269b3f3e5b7193593da06a9054dd7f3ce04beb23e36996360773507521d19",
+  "corpus_checked": "2026-08-23",
+  "total_cases": 1952,
   "tiers": {
-    "index-ready": 1921,
+    "index-ready": 1932,
     "enrichment-ready": 16,
     "research-only": 4
   },
@@ -12,6 +12,38 @@
     "capital-standard-llc-v-u-s-bank-national-association-2026-08-21": {
       "tier": "index-ready",
       "score": 85
+    },
+    "cecile-kasengela-v-kaiser-foundation-hospitals-et-al-2026-08-20": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "muscat-et-al-v-united-states-of-america-2026-08-20": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "in-re-the-marriage-of-kira-lindsay-and-jamie-alexander-dillon-2026-08-19": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "mitchell-v-hig-realty-credit-fund-l-p-2026-08-19": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "snisko-v-cascade-funding-mortgage-trust-hb4-2026-08-19": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "wilkinson-v-schmelzer-2026-08-19": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "zoryana-kaspryak-v-mykhaylo-stadarskyy-2026-08-19": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "gilberto-garcia-perez-v-todd-blanche-et-al-2026-08-18": {
+      "tier": "index-ready",
+      "score": 81
     },
     "in-re-marriage-of-rebekah-muriel-and-johnathan-david-farris-2026-08-18": {
       "tier": "index-ready",
@@ -21,6 +53,14 @@
       "tier": "index-ready",
       "score": 90
     },
+    "kourradi-v-christopher-2026-08-18": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "sani-v-institute-for-human-reproduction-2026-08-18": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "davos-francois-2026-08-17": {
       "tier": "enrichment-ready",
       "score": 70
@@ -28,6 +68,10 @@
     "boettcher-v-boettcher-2026-08-14": {
       "tier": "index-ready",
       "score": 81
+    },
+    "brankle-v-schmell-2026-08-14": {
+      "tier": "index-ready",
+      "score": 90
     },
     "daryl-harris-v-christopher-a-wray-2026-08-14": {
       "tier": "index-ready",
@@ -190,6 +234,10 @@
       "score": 81
     },
     "bisher-v-civic-et-al-2026-08-03": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "damon-forney-v-township-of-cary-north-carolina-2026-08-03": {
       "tier": "index-ready",
       "score": 81
     },
@@ -557,13 +605,13 @@
       "tier": "index-ready",
       "score": 85
     },
-    "jean-lucien-kibondo-kilongozi-v-the-minister-of-citizenship-and-immigration-2026-07-10": {
-      "tier": "index-ready",
-      "score": 85
-    },
     "john-p-chapman-v-officer-decker-et-al-2026-07-10": {
       "tier": "index-ready",
       "score": 85
+    },
+    "kilongozi-v-minister-for-citizenship-2026-07-10": {
+      "tier": "index-ready",
+      "score": 76
     },
     "marion-parnell-jr-v-florida-department-of-corrections-2026-07-10": {
       "tier": "index-ready",
@@ -3617,10 +3665,6 @@
       "tier": "index-ready",
       "score": 85
     },
-    "sara-raza-v-the-attorney-general-of-canada-2026-01-28": {
-      "tier": "index-ready",
-      "score": 75
-    },
     "sas-la-volumerie-2026-01-28": {
       "tier": "index-ready",
       "score": 85
@@ -4885,9 +4929,9 @@
       "tier": "index-ready",
       "score": 76
     },
-    "0997510-bc-ltd-v-area-15-2025-bcpaab-20252585-2025-11-19": {
+    "0997510-bc-ltd-v-area-15-2025-11-19": {
       "tier": "index-ready",
-      "score": 85
+      "score": 81
     },
     "dj-v-sn-2025-11-19": {
       "tier": "index-ready",

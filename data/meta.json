@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-08-23",
-  "last_checked": "2026-08-23",
-  "last_checked_at": "2026-08-23T08:50:50.831Z",
+  "last_updated": "2026-08-24",
+  "last_checked": "2026-08-24",
+  "last_checked_at": "2026-08-24T09:07:08.324Z",
   "latest_record_date": "2026-08-21",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 1953,
-  "source_linked_count": 1949,
+  "source_record_count": 1954,
+  "source_linked_count": 1951,
   "source_link_coverage_pct": 99.8,
-  "records_missing_date": 1,
-  "dataset_checksum": "049269b3f3e5b7193593da06a9054dd7f3ce04beb23e36996360773507521d19",
-  "total_cases": 1952,
-  "us_cases": 1341,
-  "us_adjudicated": 1336,
+  "records_missing_date": 0,
+  "dataset_checksum": "cb340cd257bc4c44451c13c8769be82dc4cbb79b5ef6c15efa0914b4ea7a05b0",
+  "total_cases": 1954,
+  "us_cases": 1343,
+  "us_adjudicated": 1338,
   "us_alleged_only": 5,
   "countries_tracked": 42,
-  "enriched_count": 1952,
+  "enriched_count": 1954,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
@@ -23,12 +23,12 @@
   "avg_sanction": 7699,
   "severity_counts": {
     "high": 203,
-    "low": 1384,
+    "low": 1386,
     "medium": 326,
     "career-ending": 39
   },
   "by_country": {
-    "US": 1341,
+    "US": 1343,
     "Brazil": 41,
     "Canada": 213,
     "Australia": 98,
@@ -6881,36 +6881,15 @@
     },
     {
       "state": "MI",
-      "count": 47,
+      "count": 46,
       "total": 3485,
       "severities": {
-        "low": 35,
+        "low": 34,
         "medium": 8,
         "high": 3,
         "career-ending": 1
       },
       "cases": [
-        {
-          "id": "muscat-et-al-v-united-states-of-america-2026-08-20",
-          "name": "Muscat et al. v. United States of America",
-          "court": "E.D. Michigan",
-          "judge": "",
-          "date": "2026-08-20",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Outcome: Warning. The magistrate judge warned plaintiffs about using generative AI to draft briefs because AI tools can 'hallucinate' nonexistent cases. The order cites prior E.D. Mich. decisions (Seither and Ali) in which courts found hallucinated citations and in some instances awarded Rule 11 sanctions. The court emphasized that Rule 11(b)(2) still applies and that courts may impose sanctions for AI-generated phantom cases, but did not impose any sanction in this matter.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2911/Muscat_et_al_v._United_States_of_America_USA_19_August_2026.pdf"
-        },
         {
           "id": "anish-sam-mathew-v-parv-verma-2026-08-10",
           "name": "Anish Sam Mathew v. Parv Verma",
@@ -9704,6 +9683,818 @@
       ]
     },
     {
+      "state": "NV",
+      "count": 35,
+      "total": 5252,
+      "severities": {
+        "low": 27,
+        "medium": 4,
+        "high": 2,
+        "career-ending": 2
+      },
+      "cases": [
+        {
+          "id": "kelly-v-financial-industry-regulatory-authority-2026-08-19",
+          "name": "Kelly v. Financial Industry Regulatory Authority",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-08-19",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Court found multiple nonexistent case citations and extended false quoting from page 9, line 20 to page 10, line 5 of Kelly's opposition. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2924/Kelly_v._Financial_Industry_Regulatory_Authority_USA_19_August_2026.pdf"
+        },
+        {
+          "id": "progressive-northern-insurance-company-v-tony-pete-flores-et-al-2026-07-13",
+          "name": "Progressive Northern Insurance Company v. Tony Pete Flores, et al.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-07-13",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "False Quotes: Case Law | Plaintiffs also identified authorities quoted with inaccurate language (false or misleading quotations) originating from AI-generated text in Defendants' filings. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2607/Progressive_Northern_Insurance_Company_v._Flores_USA_13_July_2026.pdf"
+        },
+        {
+          "id": "preston-house-v-th-foods-inc-2026-06-18",
+          "name": "Preston House v. TH Foods, Inc.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-06-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited a case the court identified as apparently hallucinated; the court noted Scherer v. UTI Worldwide, Inc., 2017 WL 2806896 (D. Nev. 2017) appears fabricated. Outcome: Briefs struck; Warning.",
+          "sanction_types": [
+            "warning",
+            "struck-filing"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2452/Preston_House_v._TH_Foods_USA_18_June_2026.pdf"
+        },
+        {
+          "id": "progressive-northern-insurance-company-v-tony-pete-flores-et-al-2026-06-18",
+          "name": "Progressive Northern Insurance Company v. Tony Pete Flores, et al.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-06-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Submission included authorities that the Court describes as fabricated or non-existent case law cited in Defendants' motions. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2523/Progressive_Northern_Insurance_v_Flores_et__USA_18_June_2026.pdf"
+        },
+        {
+          "id": "seeto-v-kendall-2026-05-05",
+          "name": "Seeto v. Kendall",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-05-05",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Plaintiff attributed the phrase “would offer a possible temptation to the average man as a judge to forget the burden of proof” to Withrow v. Larkin, but the court found that language does not appear in Withrow. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "administrative",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2109/Seeto_v._Kendall_USA_5_May_2026.pdf"
+        },
+        {
+          "id": "yanling-zhang-v-yanhui-zhang-2026-04-22",
+          "name": "Yanling Zhang v. Yanhui Zhang",
+          "court": "SC Nevada",
+          "judge": "",
+          "date": "2026-04-22",
+          "amount": 250,
+          "amount_display": "$250",
+          "severity": "high",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Appellant cited City of Henderson v. Bldg. & Constr. Trades Council, but the Court's research indicates this citation is fictional. Outcome: Monetary Fine; Bar Referral; Refusal to file corrected brief. Order to Show Cause is here.",
+          "sanction_types": [
+            "monetary",
+            "bar-referral"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "bar-referral",
+            "family",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2088/Zhang_v._Zhang_USA_22_April_2026.pdf"
+        },
+        {
+          "id": "sims-v-souily-lefave-1-2026-04-07",
+          "name": "Sims v. Souily-Lefave (1)",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-04-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited Cruz v. Fox for the proposition regarding premature depositions; the Court found the citation to be AI-generated/misleading and not supporting the claimed proposition. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "ip",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1942/Sims_v._Souilly-Lefave_USA_7_April_2026.pdf"
+        },
+        {
+          "id": "wendy-wolkenstein-and-rebecca-knepp-v-dan-heinrich-and-samual-tillery-2026-04-06",
+          "name": "Wendy Wolkenstein and Rebecca Knepp v. Dan Heinrich and Samual Tillery",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-04-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Case Law | Plaintiffs cited Stanley v. University of Southern California for the proposition that service-of-process fees are taxable under 28 U.S.C. § 1920(1); court found the citation does not support that proposition. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1940/Wolkenstein_et_al_v_Heinrich_et_al_USA_6_APril_2026.pdf"
+        },
+        {
+          "id": "edward-c-allen-v-western-governors-university-et-al-2026-03-31",
+          "name": "Edward C. Allen v. Western Governors University, et al.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": 1,
+          "amount_display": "$1",
+          "severity": "career-ending",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Plaintiff attributed the quote \"both baseless and made without a reasonable and competent inquiry\" to Christian v. Mattel; court found no such quote in that opinion. Outcome: Case dismissed with prejudice; Adverse Costs Order.",
+          "sanction_types": [
+            "monetary",
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1886/Allen_v._Western_Governors_University_USA_31_March_2026.pdf"
+        },
+        {
+          "id": "anthony-wallace-v-pennymac-loan-services-llc-et-al-2026-03-26",
+          "name": "Anthony Wallace v. PennyMac Loan Services, LLC, et al.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-03-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Court found the cited 'Shapiro v JPMorgan Chase & Co., No. 1:13-cv-09764-PGG, 2014 WL 1224546' does not correspond to any case; SDNY docket shows the number not associated with that name. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1841/Wallace_v._Pennymac_USA_26_March_2026.pdf"
+        },
+        {
+          "id": "albert-taylor-v-las-vegas-metropolitan-police-department-et-al-2026-03-13",
+          "name": "Albert Taylor v. Las Vegas Metropolitan Police Department, et al.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-03-13",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff's filings contained citations to non-existent cases; the court described them as 'hallucinogenic' and warned that unverified AI-generated citations may lead to Rule 11 sanctions. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1695/Taylor_v._Las_Vegas_Metro_USA_13_March_2026.pdf"
+        },
+        {
+          "id": "kim-elizabeth-harwell-v-westcare-nevada-inc-2026-03-06",
+          "name": "Kim Elizabeth Harwell v. WestCare Nevada, Inc.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-03-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "ChatGPT",
+          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent case 'Estate of Saila v. Circle K Corp.' in support of negligence; court could not find the case and noted the citation numbers corresponded to unrelated cases. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1623/Harwell_v._Westcare_Nevada.pdf"
+        },
+        {
+          "id": "united-states-v-robert-ponce-jr-2026-02-26",
+          "name": "United States v. Robert Ponce, Jr.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-02-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Multiple citations in Ponce's motions and replies cited non-existent cases; the court described them as 'hallucinogenic' and warned they may stem from AI-generated writing. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "criminal",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1589/USA_v._Ponce_USA_26_February_2026.pdf"
+        },
+        {
+          "id": "stephen-schaaf-v-nellis-auction-holdings-llc-et-al-2026-01-30",
+          "name": "Stephen Schaaf v. Nellis Auction Holdings, LLC, et al.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-01-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "The court declined to impose requested case-dispositive sanctions over improper citations in earlier briefing, but publicly admonished plaintiff's counsel and warned that future similar conduct could lead to monetary sanctions, referral, or consequences affecting the case.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1444/Schaff_v._Nellis_Auction_USA_January_2026.pdf"
+        },
+        {
+          "id": "james-fahey-v-wallys-las-vegas-llc-et-al-2026-01-15",
+          "name": "James Fahey v. Wally’s Las Vegas, LLC, et al.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-01-15",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Plaintiff attributed a statement about Rule 36 being self-executing to Asea v. Southern Pacific Transportation, but the Court determined the quoted language does not appear in that opinion as cited. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fabricated-quotes",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1381/Fahey_v_Wallys_Las_Vegas_USA_15_January_2026.pdf"
+        },
+        {
+          "id": "smith-v-eighth-judicial-district-court-in-and-for-county-of-clark-2026-01-13",
+          "name": "Smith v. Eighth Judicial District Court in and for County of Clark",
+          "court": "SC Nevada",
+          "judge": "",
+          "date": "2026-01-13",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Case Law | Petitioner relied on Ruiz v. City of North Las Vegas (127 Nev. 254, 255 P.3d 216 (2011)) to support that \"oral pronouncements have no legal effect until reduced to writing and filed,\" but the court noted Ruiz does not concern that proposition. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "family",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1389/Smith_v_Eighth_Judicial_District_Court_in_and_for_County_of_Clark.pdf"
+        },
+        {
+          "id": "thu-thuy-nguyen-v-pennymac-loan-services-2026-01-07",
+          "name": "Thu Thuy Nguyen v. PennyMac Loan Services",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2026-01-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited Obot v. Wells Fargo Bank, N.A.; the Court could not locate the D. Nev. decision and concluded it was fake. Outcome: Warning; Possible Monetary Sanction.",
+          "sanction_types": [
+            "monetary",
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1295/Nguyen_v._Pennymac_Loan_Services_USA_7_January_2026.pdf"
+        },
+        {
+          "id": "mt-real-estate-investment-inc-v-servis-one-inc-et-al-2025-12-30",
+          "name": "M.T. Real Estate Investment Inc. v. Servis One, Inc., et al.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2025-12-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Court could not locate the district court opinion cited; counsel admitted the citation was not real and produced by AI. Outcome: Briefs Struck; Adverse Costs Order; Bar Referral.",
+          "sanction_types": [
+            "monetary",
+            "struck-filing",
+            "bar-referral"
+          ],
+          "tags": [
+            "fake-citations",
+            "bar-referral",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1234/MT_Real_Estate_v._Servus_One_USA_30_December_2025.pdf"
+        },
+        {
+          "id": "nicole-beverly-silverberg-v-steven-bonomo-et-al-2025-12-30",
+          "name": "Nicole Beverly Silverberg v. Steven Bonomo, et al.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2025-12-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Plaintiff attributed the proposition that a defaulted corporation 'lacks standing to defend or prosecute actions until reinstated' to Executive Management Ltd. v. Ticor Title Insurance Co.; the court found no such quote or related holding in that opinion. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1264/Silverberg_v._Bonomo_USA_30_December_2025.pdf"
+        },
+        {
+          "id": "harvey-v-torrent-leasing-us-bank-2025-12-15",
+          "name": "Harvey v. Torrent Leasing & U.S. Bank",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2025-12-15",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "ChatGPT",
+          "summary": "False Quotes: Case Law | Plaintiff included a fabricated/incorrect quotation attributed to Nesses v. Shepard; the court identified the quotation as fake. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1248/Harvey_v._Torrent_Leasing_USA_15_December_2025.pdf"
+        },
+        {
+          "id": "preston-house-v-th-foods-inc-2025-12-11",
+          "name": "Preston House v. TH Foods, Inc.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2025-12-11",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Case Law | Plaintiff cited real cases but attributed them to the wrong courts or to propositions those cases do not support. Outcome: Admonishment.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1167/House_v._TH_Foods_USA_11_December_2025.pdf"
+        },
+        {
+          "id": "james-fahey-v-wallys-las-vegas-llc-et-al-2025-12-10",
+          "name": "James Fahey v. Wally’s Las Vegas, LLC, et al.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2025-12-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited 'Hagen v. Williams, No. 2:18-cv-00425, 2020 WL 1272618,' but the court found the case name, docket number, and database identifier do not correspond and the citation appears nonexistent. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1166/Fahey_v_Wallys_Las_Vegas_USA_10_December_2025.pdf"
+        },
+        {
+          "id": "cappucci-v-maupin-cox-legoy-llp-2025-11-30",
+          "name": "Cappucci v. Maupin, Cox & Legoy, LLP",
+          "court": "Nevada DC",
+          "judge": "",
+          "date": "2025-11-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Court identified this citation as non-existent and cited it as an example of fabricated authority used by the plaintiffs.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2343/16_-_Cappucci_v_Maupin_Cox_And_Legoy_LLP.pdf"
+        },
+        {
+          "id": "coleman-lewis-v-pnc-bank-na-2025-11-05",
+          "name": "Coleman & Lewis v. PNC Bank, N.A.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2025-11-05",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Plaintiffs cited non-existent quotes attributed to Medrano v. Flagstar Bank; the Court flagged these as inaccurate/AI-hallucinated. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/995/Coleman__Sahar_v._PNC_Bank_USA_5_November_2025.pdf"
+        },
+        {
+          "id": "jackson-v-united-states-dhs-2025-10-01",
+          "name": "Jackson v. United States DHS",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2025-10-01",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited a district-court case called Sorrells v. United States (E.D.N.C.) that the court found does not appear to exist. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "administrative",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/962/Jackson_v_United_States_DHS_USA_1_October_2025.pdf"
+        },
+        {
+          "id": "jade-riley-burch-v-hca-healthcare-2025-09-26",
+          "name": "Jade Riley Burch v. HCA Healthcare",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2025-09-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent case titled 'Qwest Communications Int'l, Inc. v. WorldCom, Inc., 213 F. Supp. 2d. 1225 (D. Colo. 2002)'; the court noted this citation does not exist and identified the closest real case (Qwest Commc'n Int'l., Inc. v. WorldQuest Networks, 213 F.R.D. 418 (D. Colo. 2003)). Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/835/Jade_Riley_Burch_Plaintiff_v_HCA_Healthcare_Inc_et_al_Defendants_USA_26_September_2025.pdf"
+        },
+        {
+          "id": "melinda-lshay-johnson-v-mini-of-las-vegas-2025-09-24",
+          "name": "Melinda L'Shay Johnson v. MINI of Las Vegas",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2025-09-24",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Pro se plaintiff cited a non-existent authority in support of a surreply; the court reviewed the citation and found it fabricated or mis-cited and unrelated to the surreply standard. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/842/Johnson_v._Mini_of_Las_Vegas.pdf"
+        },
+        {
+          "id": "sigal-v-croner-2025-09-22",
+          "name": "Sigal v. Croner",
+          "court": "Nevada DC",
+          "judge": "",
+          "date": "2025-09-22",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Listed by Defendants and flagged by the court as a likely AI-generated/fictitious authority cited in Plaintiff's Opposition. Outcome: Court declined to impose sanctions now but cautioned Plaintiff's counsel and warned that future submission of inaccurate or AI-generated authorities will trigger a NRCP 11(c)(3) show-cause hearing and potential sanctions.. The court flagged multiple authorities in Plaintiff's Opposition as likely AI-generated or inaccurate, preserving the unverified citations in the record but finding basis for concern after its own review. Defendants' counsel identified several suspect authorities (e.g., Pope v. Fellhauer, Wells v. Maroulis, Taylor v. Colon), and the court cautioned Plaintiff's counsel that future submissions of inaccurate or AI-generated citations will prompt a NRCP 11(c)(3) show-cause order and possible sanctions. No show-cause hearing or monetary sanction was imposed at this time.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2353/26_-_Sigal_v_Croner.pdf"
+        },
+        {
+          "id": "commnv-vs-uprise-2025-09-05",
+          "name": "CommNV vs Uprise",
+          "court": "Nevada DC",
+          "judge": "",
+          "date": "2025-09-05",
+          "amount": 5000,
+          "amount_display": "$5.0K",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law Outcome: Monetary Penalty OR Order to volunteer and teach about AI or share their experience. See the story here.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "fake-citations",
+            "trial"
+          ],
+          "source_url": "https://www.youtube.com/watch?v=zVni1Bxo6kI"
+        },
+        {
+          "id": "lori-chavez-deremer-v-nab-llc-asia-trinh-and-nicole-brown-2025-08-11",
+          "name": "Lori Chavez-DeRemer v. NAB, LLC, Asia Trinh, and Nicole Brown",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2025-08-11",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Trinh's brief cited at least one non-existent case; the Secretary flagged it (ECF No. 170 n.1), and the court acknowledged it and warned about AI-generated fake precedent. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/698/Lori_Chavez-DeRemer_Plaintiff_v_NAB_LLC_Asia_Trinh_and_Nicole_Brown_Defend.pdf"
+        },
+        {
+          "id": "commnv-llc-v-uprise-llc-2025-08-06",
+          "name": "CommNV, LLC v. Uprise, LLC",
+          "court": "Nevada DC",
+          "judge": "",
+          "date": "2025-08-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Court could not locate the cited opinion and found no supporting language; the citation appears fabricated. Outcome: Order to Explain.",
+          "sanction_types": [
+            "ordered-to-explain"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "published-opinion",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2357/30_-_CommNV_LLC_v_Uprise_LLC.pdf"
+        },
+        {
+          "id": "thompson-v-nevada-secretary-of-state-2025-08-04",
+          "name": "Thompson v. Nevada Secretary of State",
+          "court": "Nevada DC",
+          "judge": "",
+          "date": "2025-08-04",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited State v. Nye County, 129 Nev. 521 (2013); the Court determined no such case exists and characterized it as an AI-generated, unverified citation. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2358/31_-_Thompson_v_Nevada_Secretary_of_State.pdf"
+        },
+        {
+          "id": "angela-williams-et-al-v-jamal-rashid-et-al-2025-06-09",
+          "name": "Angela Williams, et al. v. Jamal Rashid, et al.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2025-06-09",
+          "amount": 1,
+          "amount_display": "$1",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "False Quotes: Case Law | Reply brief contained quotations that do not appear in the cases cited; Bistro identified at least two such misquotes in its notice. Outcome: Filing struck; Adverse Costs Order.",
+          "sanction_types": [
+            "monetary",
+            "struck-filing"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2389/Williams_v._Rashid_USA_10_June_2026.pdf"
+        },
+        {
+          "id": "sims-v-souily-lefave-2-2025-04-15",
+          "name": "Sims v. Souily-Lefave (2)",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2025-04-15",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent case, Graham v. Nyquist, without reporter or page; the Court could not locate it on Westlaw. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/347/Sims_v._Souily-Lefave_D._Nevada_USA_April_15_2025.pdf"
+        },
+        {
+          "id": "saxena-v-martinez-hernandez-et-al-2025-02-18",
+          "name": "Saxena v. Martinez-Hernandez et al.",
+          "court": "D. Nevada",
+          "judge": "",
+          "date": "2025-02-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "career-ending",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited Spokane v. Douglass, 800 F.3d 1075 (2015), for ‘under color of state law’; the court found no such case exists and that the citation corresponds to Avendano-Hernandez v. Lynch, which does not address that topic. Outcome: Complaint dismissed with prejudice; no formal AI-related sanction imposed, but dismissal explicitly acknowledged fictitious citations as contributing factor. AI UseThe plaintiff submitted citations that were entirely fabricated. When challenged, Saxena denied AI use and insisted the cases existed, offering no evidence. The court concluded either he fabricated the citations or relied on AI and failed to verify them.Hallucination DetailsSpokane v. Douglass turned out to conflate unrelated decisions and misused citations from other casesHummel v. State could not be found in any Nevada or national database; citation matched an unrelated Oregon caseThe court found no plausible explanation for these citations other than AI generation or outright fabrication.Ruling/SanctionThe court dismissed the case with prejudice for repeated failure to comply with Rule 8 and for the submission of fictitious citations. Though no separate sanctions motion was granted, the court's ruling incorporated the AI misuse into its reasoning and concluded that Saxena could not be trusted to proceed further in good faith.Key Judicial ReasoningCiting Morgan v. Cmty. Against Violence, the court reasoned that “courts do not make allowances for a plaintiff who cites to fake, nonexistent, misleading authorities.” Saxena’s refusal to acknowledge the fabrication compounded the issue. In a subsequent order, the court held that being pro se and disabled \"is no excuse for submitting non-existent authority to the court in support of a brief\".",
+          "sanction_types": [
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/313/Saxena_v._Martinez-Hernandez_et_al_D._Nev_February_18_2025.pdf"
+        }
+      ]
+    },
+    {
       "state": "OH",
       "count": 35,
       "total": 22338,
@@ -11278,795 +12069,6 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/453/Mid_Cent._Operating_Engrs_Health_v._Hoosiervac_S.D._Indiana_USA_May_28_2025.pdf"
-        }
-      ]
-    },
-    {
-      "state": "NV",
-      "count": 34,
-      "total": 5252,
-      "severities": {
-        "low": 26,
-        "medium": 4,
-        "high": 2,
-        "career-ending": 2
-      },
-      "cases": [
-        {
-          "id": "progressive-northern-insurance-company-v-tony-pete-flores-et-al-2026-07-13",
-          "name": "Progressive Northern Insurance Company v. Tony Pete Flores, et al.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-07-13",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "False Quotes: Case Law | Plaintiffs also identified authorities quoted with inaccurate language (false or misleading quotations) originating from AI-generated text in Defendants' filings. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2607/Progressive_Northern_Insurance_Company_v._Flores_USA_13_July_2026.pdf"
-        },
-        {
-          "id": "preston-house-v-th-foods-inc-2026-06-18",
-          "name": "Preston House v. TH Foods, Inc.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-06-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited a case the court identified as apparently hallucinated; the court noted Scherer v. UTI Worldwide, Inc., 2017 WL 2806896 (D. Nev. 2017) appears fabricated. Outcome: Briefs struck; Warning.",
-          "sanction_types": [
-            "warning",
-            "struck-filing"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2452/Preston_House_v._TH_Foods_USA_18_June_2026.pdf"
-        },
-        {
-          "id": "progressive-northern-insurance-company-v-tony-pete-flores-et-al-2026-06-18",
-          "name": "Progressive Northern Insurance Company v. Tony Pete Flores, et al.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-06-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Submission included authorities that the Court describes as fabricated or non-existent case law cited in Defendants' motions. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2523/Progressive_Northern_Insurance_v_Flores_et__USA_18_June_2026.pdf"
-        },
-        {
-          "id": "seeto-v-kendall-2026-05-05",
-          "name": "Seeto v. Kendall",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-05-05",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Plaintiff attributed the phrase “would offer a possible temptation to the average man as a judge to forget the burden of proof” to Withrow v. Larkin, but the court found that language does not appear in Withrow. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "administrative",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2109/Seeto_v._Kendall_USA_5_May_2026.pdf"
-        },
-        {
-          "id": "yanling-zhang-v-yanhui-zhang-2026-04-22",
-          "name": "Yanling Zhang v. Yanhui Zhang",
-          "court": "SC Nevada",
-          "judge": "",
-          "date": "2026-04-22",
-          "amount": 250,
-          "amount_display": "$250",
-          "severity": "high",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant cited City of Henderson v. Bldg. & Constr. Trades Council, but the Court's research indicates this citation is fictional. Outcome: Monetary Fine; Bar Referral; Refusal to file corrected brief. Order to Show Cause is here.",
-          "sanction_types": [
-            "monetary",
-            "bar-referral"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "bar-referral",
-            "family",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2088/Zhang_v._Zhang_USA_22_April_2026.pdf"
-        },
-        {
-          "id": "sims-v-souily-lefave-1-2026-04-07",
-          "name": "Sims v. Souily-Lefave (1)",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-04-07",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited Cruz v. Fox for the proposition regarding premature depositions; the Court found the citation to be AI-generated/misleading and not supporting the claimed proposition. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "ip",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1942/Sims_v._Souilly-Lefave_USA_7_April_2026.pdf"
-        },
-        {
-          "id": "wendy-wolkenstein-and-rebecca-knepp-v-dan-heinrich-and-samual-tillery-2026-04-06",
-          "name": "Wendy Wolkenstein and Rebecca Knepp v. Dan Heinrich and Samual Tillery",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-04-06",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | Plaintiffs cited Stanley v. University of Southern California for the proposition that service-of-process fees are taxable under 28 U.S.C. § 1920(1); court found the citation does not support that proposition. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1940/Wolkenstein_et_al_v_Heinrich_et_al_USA_6_APril_2026.pdf"
-        },
-        {
-          "id": "edward-c-allen-v-western-governors-university-et-al-2026-03-31",
-          "name": "Edward C. Allen v. Western Governors University, et al.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": 1,
-          "amount_display": "$1",
-          "severity": "career-ending",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Plaintiff attributed the quote \"both baseless and made without a reasonable and competent inquiry\" to Christian v. Mattel; court found no such quote in that opinion. Outcome: Case dismissed with prejudice; Adverse Costs Order.",
-          "sanction_types": [
-            "monetary",
-            "case-dismissed"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1886/Allen_v._Western_Governors_University_USA_31_March_2026.pdf"
-        },
-        {
-          "id": "anthony-wallace-v-pennymac-loan-services-llc-et-al-2026-03-26",
-          "name": "Anthony Wallace v. PennyMac Loan Services, LLC, et al.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-03-26",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Court found the cited 'Shapiro v JPMorgan Chase & Co., No. 1:13-cv-09764-PGG, 2014 WL 1224546' does not correspond to any case; SDNY docket shows the number not associated with that name. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1841/Wallace_v._Pennymac_USA_26_March_2026.pdf"
-        },
-        {
-          "id": "albert-taylor-v-las-vegas-metropolitan-police-department-et-al-2026-03-13",
-          "name": "Albert Taylor v. Las Vegas Metropolitan Police Department, et al.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-03-13",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff's filings contained citations to non-existent cases; the court described them as 'hallucinogenic' and warned that unverified AI-generated citations may lead to Rule 11 sanctions. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1695/Taylor_v._Las_Vegas_Metro_USA_13_March_2026.pdf"
-        },
-        {
-          "id": "kim-elizabeth-harwell-v-westcare-nevada-inc-2026-03-06",
-          "name": "Kim Elizabeth Harwell v. WestCare Nevada, Inc.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-03-06",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "ChatGPT",
-          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent case 'Estate of Saila v. Circle K Corp.' in support of negligence; court could not find the case and noted the citation numbers corresponded to unrelated cases. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1623/Harwell_v._Westcare_Nevada.pdf"
-        },
-        {
-          "id": "united-states-v-robert-ponce-jr-2026-02-26",
-          "name": "United States v. Robert Ponce, Jr.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-02-26",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Multiple citations in Ponce's motions and replies cited non-existent cases; the court described them as 'hallucinogenic' and warned they may stem from AI-generated writing. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "criminal",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1589/USA_v._Ponce_USA_26_February_2026.pdf"
-        },
-        {
-          "id": "stephen-schaaf-v-nellis-auction-holdings-llc-et-al-2026-01-30",
-          "name": "Stephen Schaaf v. Nellis Auction Holdings, LLC, et al.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-01-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "The court declined to impose requested case-dispositive sanctions over improper citations in earlier briefing, but publicly admonished plaintiff's counsel and warned that future similar conduct could lead to monetary sanctions, referral, or consequences affecting the case.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1444/Schaff_v._Nellis_Auction_USA_January_2026.pdf"
-        },
-        {
-          "id": "james-fahey-v-wallys-las-vegas-llc-et-al-2026-01-15",
-          "name": "James Fahey v. Wally’s Las Vegas, LLC, et al.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-01-15",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Plaintiff attributed a statement about Rule 36 being self-executing to Asea v. Southern Pacific Transportation, but the Court determined the quoted language does not appear in that opinion as cited. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fabricated-quotes",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1381/Fahey_v_Wallys_Las_Vegas_USA_15_January_2026.pdf"
-        },
-        {
-          "id": "smith-v-eighth-judicial-district-court-in-and-for-county-of-clark-2026-01-13",
-          "name": "Smith v. Eighth Judicial District Court in and for County of Clark",
-          "court": "SC Nevada",
-          "judge": "",
-          "date": "2026-01-13",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | Petitioner relied on Ruiz v. City of North Las Vegas (127 Nev. 254, 255 P.3d 216 (2011)) to support that \"oral pronouncements have no legal effect until reduced to writing and filed,\" but the court noted Ruiz does not concern that proposition. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "family",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1389/Smith_v_Eighth_Judicial_District_Court_in_and_for_County_of_Clark.pdf"
-        },
-        {
-          "id": "thu-thuy-nguyen-v-pennymac-loan-services-2026-01-07",
-          "name": "Thu Thuy Nguyen v. PennyMac Loan Services",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2026-01-07",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited Obot v. Wells Fargo Bank, N.A.; the Court could not locate the D. Nev. decision and concluded it was fake. Outcome: Warning; Possible Monetary Sanction.",
-          "sanction_types": [
-            "monetary",
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1295/Nguyen_v._Pennymac_Loan_Services_USA_7_January_2026.pdf"
-        },
-        {
-          "id": "mt-real-estate-investment-inc-v-servis-one-inc-et-al-2025-12-30",
-          "name": "M.T. Real Estate Investment Inc. v. Servis One, Inc., et al.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2025-12-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Court could not locate the district court opinion cited; counsel admitted the citation was not real and produced by AI. Outcome: Briefs Struck; Adverse Costs Order; Bar Referral.",
-          "sanction_types": [
-            "monetary",
-            "struck-filing",
-            "bar-referral"
-          ],
-          "tags": [
-            "fake-citations",
-            "bar-referral",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1234/MT_Real_Estate_v._Servus_One_USA_30_December_2025.pdf"
-        },
-        {
-          "id": "nicole-beverly-silverberg-v-steven-bonomo-et-al-2025-12-30",
-          "name": "Nicole Beverly Silverberg v. Steven Bonomo, et al.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2025-12-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Plaintiff attributed the proposition that a defaulted corporation 'lacks standing to defend or prosecute actions until reinstated' to Executive Management Ltd. v. Ticor Title Insurance Co.; the court found no such quote or related holding in that opinion. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1264/Silverberg_v._Bonomo_USA_30_December_2025.pdf"
-        },
-        {
-          "id": "harvey-v-torrent-leasing-us-bank-2025-12-15",
-          "name": "Harvey v. Torrent Leasing & U.S. Bank",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2025-12-15",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "ChatGPT",
-          "summary": "False Quotes: Case Law | Plaintiff included a fabricated/incorrect quotation attributed to Nesses v. Shepard; the court identified the quotation as fake. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1248/Harvey_v._Torrent_Leasing_USA_15_December_2025.pdf"
-        },
-        {
-          "id": "preston-house-v-th-foods-inc-2025-12-11",
-          "name": "Preston House v. TH Foods, Inc.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2025-12-11",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | Plaintiff cited real cases but attributed them to the wrong courts or to propositions those cases do not support. Outcome: Admonishment.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1167/House_v._TH_Foods_USA_11_December_2025.pdf"
-        },
-        {
-          "id": "james-fahey-v-wallys-las-vegas-llc-et-al-2025-12-10",
-          "name": "James Fahey v. Wally’s Las Vegas, LLC, et al.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2025-12-10",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited 'Hagen v. Williams, No. 2:18-cv-00425, 2020 WL 1272618,' but the court found the case name, docket number, and database identifier do not correspond and the citation appears nonexistent. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1166/Fahey_v_Wallys_Las_Vegas_USA_10_December_2025.pdf"
-        },
-        {
-          "id": "cappucci-v-maupin-cox-legoy-llp-2025-11-30",
-          "name": "Cappucci v. Maupin, Cox & Legoy, LLP",
-          "court": "Nevada DC",
-          "judge": "",
-          "date": "2025-11-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Court identified this citation as non-existent and cited it as an example of fabricated authority used by the plaintiffs.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2343/16_-_Cappucci_v_Maupin_Cox_And_Legoy_LLP.pdf"
-        },
-        {
-          "id": "coleman-lewis-v-pnc-bank-na-2025-11-05",
-          "name": "Coleman & Lewis v. PNC Bank, N.A.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2025-11-05",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Plaintiffs cited non-existent quotes attributed to Medrano v. Flagstar Bank; the Court flagged these as inaccurate/AI-hallucinated. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/995/Coleman__Sahar_v._PNC_Bank_USA_5_November_2025.pdf"
-        },
-        {
-          "id": "jackson-v-united-states-dhs-2025-10-01",
-          "name": "Jackson v. United States DHS",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2025-10-01",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited a district-court case called Sorrells v. United States (E.D.N.C.) that the court found does not appear to exist. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "administrative",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/962/Jackson_v_United_States_DHS_USA_1_October_2025.pdf"
-        },
-        {
-          "id": "jade-riley-burch-v-hca-healthcare-2025-09-26",
-          "name": "Jade Riley Burch v. HCA Healthcare",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2025-09-26",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent case titled 'Qwest Communications Int'l, Inc. v. WorldCom, Inc., 213 F. Supp. 2d. 1225 (D. Colo. 2002)'; the court noted this citation does not exist and identified the closest real case (Qwest Commc'n Int'l., Inc. v. WorldQuest Networks, 213 F.R.D. 418 (D. Colo. 2003)). Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/835/Jade_Riley_Burch_Plaintiff_v_HCA_Healthcare_Inc_et_al_Defendants_USA_26_September_2025.pdf"
-        },
-        {
-          "id": "melinda-lshay-johnson-v-mini-of-las-vegas-2025-09-24",
-          "name": "Melinda L'Shay Johnson v. MINI of Las Vegas",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2025-09-24",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Pro se plaintiff cited a non-existent authority in support of a surreply; the court reviewed the citation and found it fabricated or mis-cited and unrelated to the surreply standard. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/842/Johnson_v._Mini_of_Las_Vegas.pdf"
-        },
-        {
-          "id": "sigal-v-croner-2025-09-22",
-          "name": "Sigal v. Croner",
-          "court": "Nevada DC",
-          "judge": "",
-          "date": "2025-09-22",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Listed by Defendants and flagged by the court as a likely AI-generated/fictitious authority cited in Plaintiff's Opposition. Outcome: Court declined to impose sanctions now but cautioned Plaintiff's counsel and warned that future submission of inaccurate or AI-generated authorities will trigger a NRCP 11(c)(3) show-cause hearing and potential sanctions.. The court flagged multiple authorities in Plaintiff's Opposition as likely AI-generated or inaccurate, preserving the unverified citations in the record but finding basis for concern after its own review. Defendants' counsel identified several suspect authorities (e.g., Pope v. Fellhauer, Wells v. Maroulis, Taylor v. Colon), and the court cautioned Plaintiff's counsel that future submissions of inaccurate or AI-generated citations will prompt a NRCP 11(c)(3) show-cause order and possible sanctions. No show-cause hearing or monetary sanction was imposed at this time.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2353/26_-_Sigal_v_Croner.pdf"
-        },
-        {
-          "id": "commnv-vs-uprise-2025-09-05",
-          "name": "CommNV vs Uprise",
-          "court": "Nevada DC",
-          "judge": "",
-          "date": "2025-09-05",
-          "amount": 5000,
-          "amount_display": "$5.0K",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law Outcome: Monetary Penalty OR Order to volunteer and teach about AI or share their experience. See the story here.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "fake-citations",
-            "trial"
-          ],
-          "source_url": "https://www.youtube.com/watch?v=zVni1Bxo6kI"
-        },
-        {
-          "id": "lori-chavez-deremer-v-nab-llc-asia-trinh-and-nicole-brown-2025-08-11",
-          "name": "Lori Chavez-DeRemer v. NAB, LLC, Asia Trinh, and Nicole Brown",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2025-08-11",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Trinh's brief cited at least one non-existent case; the Secretary flagged it (ECF No. 170 n.1), and the court acknowledged it and warned about AI-generated fake precedent. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/698/Lori_Chavez-DeRemer_Plaintiff_v_NAB_LLC_Asia_Trinh_and_Nicole_Brown_Defend.pdf"
-        },
-        {
-          "id": "commnv-llc-v-uprise-llc-2025-08-06",
-          "name": "CommNV, LLC v. Uprise, LLC",
-          "court": "Nevada DC",
-          "judge": "",
-          "date": "2025-08-06",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Court could not locate the cited opinion and found no supporting language; the citation appears fabricated. Outcome: Order to Explain.",
-          "sanction_types": [
-            "ordered-to-explain"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "published-opinion",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2357/30_-_CommNV_LLC_v_Uprise_LLC.pdf"
-        },
-        {
-          "id": "thompson-v-nevada-secretary-of-state-2025-08-04",
-          "name": "Thompson v. Nevada Secretary of State",
-          "court": "Nevada DC",
-          "judge": "",
-          "date": "2025-08-04",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited State v. Nye County, 129 Nev. 521 (2013); the Court determined no such case exists and characterized it as an AI-generated, unverified citation. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2358/31_-_Thompson_v_Nevada_Secretary_of_State.pdf"
-        },
-        {
-          "id": "angela-williams-et-al-v-jamal-rashid-et-al-2025-06-09",
-          "name": "Angela Williams, et al. v. Jamal Rashid, et al.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2025-06-09",
-          "amount": 1,
-          "amount_display": "$1",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "False Quotes: Case Law | Reply brief contained quotations that do not appear in the cases cited; Bistro identified at least two such misquotes in its notice. Outcome: Filing struck; Adverse Costs Order.",
-          "sanction_types": [
-            "monetary",
-            "struck-filing"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2389/Williams_v._Rashid_USA_10_June_2026.pdf"
-        },
-        {
-          "id": "sims-v-souily-lefave-2-2025-04-15",
-          "name": "Sims v. Souily-Lefave (2)",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2025-04-15",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent case, Graham v. Nyquist, without reporter or page; the Court could not locate it on Westlaw. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/347/Sims_v._Souily-Lefave_D._Nevada_USA_April_15_2025.pdf"
-        },
-        {
-          "id": "saxena-v-martinez-hernandez-et-al-2025-02-18",
-          "name": "Saxena v. Martinez-Hernandez et al.",
-          "court": "D. Nevada",
-          "judge": "",
-          "date": "2025-02-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "career-ending",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited Spokane v. Douglass, 800 F.3d 1075 (2015), for ‘under color of state law’; the court found no such case exists and that the citation corresponds to Avendano-Hernandez v. Lynch, which does not address that topic. Outcome: Complaint dismissed with prejudice; no formal AI-related sanction imposed, but dismissal explicitly acknowledged fictitious citations as contributing factor. AI UseThe plaintiff submitted citations that were entirely fabricated. When challenged, Saxena denied AI use and insisted the cases existed, offering no evidence. The court concluded either he fabricated the citations or relied on AI and failed to verify them.Hallucination DetailsSpokane v. Douglass turned out to conflate unrelated decisions and misused citations from other casesHummel v. State could not be found in any Nevada or national database; citation matched an unrelated Oregon caseThe court found no plausible explanation for these citations other than AI generation or outright fabrication.Ruling/SanctionThe court dismissed the case with prejudice for repeated failure to comply with Rule 8 and for the submission of fictitious citations. Though no separate sanctions motion was granted, the court's ruling incorporated the AI misuse into its reasoning and concluded that Saxena could not be trusted to proceed further in good faith.Key Judicial ReasoningCiting Morgan v. Cmty. Against Violence, the court reasoned that “courts do not make allowances for a plaintiff who cites to fake, nonexistent, misleading authorities.” Saxena’s refusal to acknowledge the fabrication compounded the issue. In a subsequent order, the court held that being pro se and disabled \"is no excuse for submitting non-existent authority to the court in support of a brief\".",
-          "sanction_types": [
-            "case-dismissed"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/313/Saxena_v._Martinez-Hernandez_et_al_D._Nev_February_18_2025.pdf"
         }
       ]
     },
@@ -21815,13 +21817,34 @@
     },
     {
       "state": "DE",
-      "count": 11,
+      "count": 12,
       "total": 1,
       "severities": {
-        "medium": 2,
-        "low": 9
+        "low": 10,
+        "medium": 2
       },
       "cases": [
+        {
+          "id": "disruptive-resources-llc-v-ballistic-barrier-products-inc-et-al-2026-08-20",
+          "name": "Disruptive Resources, LLC v. Ballistic Barrier Products Inc. et al.",
+          "court": "D. Delaware",
+          "judge": "",
+          "date": "2026-08-20",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Strongsuit",
+          "summary": "Misrepresented: Exhibits & Submissions | Two sections of the Joint Claim Construction Brief contained a concluding statement proposing an incorrect claim construction generated by AI; counsel missed a one-page section when editing. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "misrepresented-authority",
+            "ip",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2925/Disruptive_Resources_LLC_v._Ballistic_Barrier_Products_USA_20_August_2026.pdf"
+        },
         {
           "id": "stephen-j-palumbo-and-lori-a-palumbo-v-gregory-m-palumbo-2026-08-10",
           "name": "Stephen J. Palumbo and Lori A. Palumbo v. Gregory M. Palumbo",
@@ -22688,6 +22711,176 @@
       ]
     },
     {
+      "state": "VT",
+      "count": 7,
+      "total": 7361,
+      "severities": {
+        "low": 3,
+        "medium": 3,
+        "high": 1
+      },
+      "cases": [
+        {
+          "id": "cheryl-o-donnell-v-hope-clough-2026-07-10",
+          "name": "Cheryl O’Donnell v. Hope Clough",
+          "court": "SC Vermont",
+          "judge": "",
+          "date": "2026-07-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Defendant repeatedly cited a purported Vermont opinion 'Hering v. Gurdak, 2014 VT 56' that the Court could not identify and which did not support her argument. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2686/Cheryl_Donnell_v._Hope_Clough_USA_10_July_2926.pdf"
+        },
+        {
+          "id": "lafayette-v-winters-2026-01-07",
+          "name": "Lafayette v. Winters",
+          "court": "Vermont SC",
+          "judge": "",
+          "date": "2026-01-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Brief cited a non-existent decision 'In re Grievance of Bunk, 2007 VT 41' — the Court found this citation fabricated and unrelated. Outcome: Briefs struck.",
+          "sanction_types": [
+            "struck-filing"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "administrative",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2339/12_-_Lafayette_v_Winters.pdf"
+        },
+        {
+          "id": "fitzgerald-v-brady-2025-12-23",
+          "name": "Fitzgerald v. Brady",
+          "court": "Vermont SC",
+          "judge": "",
+          "date": "2025-12-23",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited a Vermont decision 'Russin v. Shepard, 2014 VT 22, 12' which the court found does not exist. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2340/13_-_Fitzgerald_v_Brady.pdf"
+        },
+        {
+          "id": "robert-lafayette-v-alex-abrami-et-al-2025-12-18",
+          "name": "Robert Lafayette v. Alex Abrami et al",
+          "court": "Vermont SC",
+          "judge": "",
+          "date": "2025-12-18",
+          "amount": 7361,
+          "amount_display": "$7.4K",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff admitted including fictitious case citations in his filings; court noted prior warning by another court and ordered him to show cause for sanctions. Outcome: Adverse Costs Order; Pre-Filing Injunction. Order to show cause is here.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1222/Lafayette_v._Abrami_USA_18_December_2025.pdf"
+        },
+        {
+          "id": "rivard-v-dept-of-corrections-2025-12-10",
+          "name": "Rivard v. Dept. of Corrections",
+          "court": "Vermont SC",
+          "judge": "",
+          "date": "2025-12-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Petitioner's brief cites a non-existent Vermont decision 'Paige v. State, 2023 VT 66, ¶ 17'; the court found no such citation. Outcome: Admonishment.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "criminal",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2342/15_-_Rivard_v_Dept_of_Corrections.pdf"
+        },
+        {
+          "id": "richard-laroche-v-darla-sterett-laroche-2025-11-13",
+          "name": "Richard LaRoche v. Darla Sterett (LaRoche)",
+          "court": "Vermont SC",
+          "judge": "",
+          "date": "2025-11-13",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "Unidentified",
+          "summary": "False Quotes: Case Law | Brief included a purported quotation attributed to Sprague v. Nally that does not appear in the opinion; counsel admitted the language originated from an AI 'helper' and failed to verify it. Outcome: Order to file order in all pending Vermont Superior Court cases where Counsel appears.",
+          "sanction_types": [
+            "professional"
+          ],
+          "tags": [
+            "fabricated-quotes",
+            "family",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1033/Richard_LaRoche_v_Darla_Sterett_USA_13_November_2025.pdf"
+        },
+        {
+          "id": "robert-lafayette-v-blueprint-basketball-et-al-2024-04-26",
+          "name": "Robert Lafayette v. Blueprint Basketball et al",
+          "court": "Vermont SC",
+          "judge": "",
+          "date": "2024-04-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited Pavlovich v. National Life Insurance Company (VT, 2010) but failed to file a copy when ordered; court concluded the case likely does not exist and that citing it may violate V.R.C.P. 11(b). Outcome: Order to Show Cause.",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1109/Lafayette_v._Blueprint_Basketball_USA_26_April_2024.pdf"
+        }
+      ]
+    },
+    {
       "state": "NE",
       "count": 6,
       "total": 2000,
@@ -23122,154 +23315,6 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/353/Martin_v._Hawai_D._Hawai_USA_August_20_2024.pdf"
-        }
-      ]
-    },
-    {
-      "state": "VT",
-      "count": 6,
-      "total": 7361,
-      "severities": {
-        "medium": 3,
-        "low": 2,
-        "high": 1
-      },
-      "cases": [
-        {
-          "id": "lafayette-v-winters-2026-01-07",
-          "name": "Lafayette v. Winters",
-          "court": "Vermont SC",
-          "judge": "",
-          "date": "2026-01-07",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Brief cited a non-existent decision 'In re Grievance of Bunk, 2007 VT 41' — the Court found this citation fabricated and unrelated. Outcome: Briefs struck.",
-          "sanction_types": [
-            "struck-filing"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "administrative",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2339/12_-_Lafayette_v_Winters.pdf"
-        },
-        {
-          "id": "fitzgerald-v-brady-2025-12-23",
-          "name": "Fitzgerald v. Brady",
-          "court": "Vermont SC",
-          "judge": "",
-          "date": "2025-12-23",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited a Vermont decision 'Russin v. Shepard, 2014 VT 22, 12' which the court found does not exist. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2340/13_-_Fitzgerald_v_Brady.pdf"
-        },
-        {
-          "id": "robert-lafayette-v-alex-abrami-et-al-2025-12-18",
-          "name": "Robert Lafayette v. Alex Abrami et al",
-          "court": "Vermont SC",
-          "judge": "",
-          "date": "2025-12-18",
-          "amount": 7361,
-          "amount_display": "$7.4K",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff admitted including fictitious case citations in his filings; court noted prior warning by another court and ordered him to show cause for sanctions. Outcome: Adverse Costs Order; Pre-Filing Injunction. Order to show cause is here.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1222/Lafayette_v._Abrami_USA_18_December_2025.pdf"
-        },
-        {
-          "id": "rivard-v-dept-of-corrections-2025-12-10",
-          "name": "Rivard v. Dept. of Corrections",
-          "court": "Vermont SC",
-          "judge": "",
-          "date": "2025-12-10",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Petitioner's brief cites a non-existent Vermont decision 'Paige v. State, 2023 VT 66, ¶ 17'; the court found no such citation. Outcome: Admonishment.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "criminal",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2342/15_-_Rivard_v_Dept_of_Corrections.pdf"
-        },
-        {
-          "id": "richard-laroche-v-darla-sterett-laroche-2025-11-13",
-          "name": "Richard LaRoche v. Darla Sterett (LaRoche)",
-          "court": "Vermont SC",
-          "judge": "",
-          "date": "2025-11-13",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "Unidentified",
-          "summary": "False Quotes: Case Law | Brief included a purported quotation attributed to Sprague v. Nally that does not appear in the opinion; counsel admitted the language originated from an AI 'helper' and failed to verify it. Outcome: Order to file order in all pending Vermont Superior Court cases where Counsel appears.",
-          "sanction_types": [
-            "professional"
-          ],
-          "tags": [
-            "fabricated-quotes",
-            "family",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1033/Richard_LaRoche_v_Darla_Sterett_USA_13_November_2025.pdf"
-        },
-        {
-          "id": "robert-lafayette-v-blueprint-basketball-et-al-2024-04-26",
-          "name": "Robert Lafayette v. Blueprint Basketball et al",
-          "court": "Vermont SC",
-          "judge": "",
-          "date": "2024-04-26",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited Pavlovich v. National Life Insurance Company (VT, 2010) but failed to file a copy when ordered; court concluded the case likely does not exist and that citing it may violate V.R.C.P. 11(b). Outcome: Order to Show Cause.",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1109/Lafayette_v._Blueprint_Basketball_USA_26_April_2024.pdf"
         }
       ]
     },
@@ -24125,13 +24170,13 @@
     }
   ],
   "by_week": {
-    "2026-W34": 14,
+    "2026-W34": 15,
     "2026-W33": 22,
     "2026-W32": 25,
     "2026-W31": 31,
     "2026-W30": 22,
     "2026-W29": 29,
-    "2026-W28": 23,
+    "2026-W28": 24,
     "2026-W27": 28,
     "2026-W26": 27,
     "2026-W25": 20,
@@ -24260,8 +24305,8 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-08": 61,
-    "2026-07": 119,
+    "2026-08": 62,
+    "2026-07": 120,
     "2026-06": 127,
     "2026-05": 153,
     "2026-04": 126,
@@ -24305,11 +24350,12 @@
     "2023": 16,
     "2024": 59,
     "2025": 846,
-    "2026": 1031
+    "2026": 1033
   },
   "by_tool": {
     "Unidentified": 418,
-    "AI (implied, unspecified)": 1307,
+    "AI (implied, unspecified)": 1308,
+    "Strongsuit": 1,
     "Claude and ChatGPT": 1,
     "ChatGPT": 107,
     "Irys": 2,
@@ -24411,14 +24457,14 @@
   },
   "by_circuit": {
     "11th Circuit": 114,
-    "9th Circuit": 301,
-    "6th Circuit": 110,
+    "9th Circuit": 302,
+    "3rd Circuit": 76,
     "7th Circuit": 116,
     "8th Circuit": 60,
-    "3rd Circuit": 75,
     "5th Circuit": 139,
     "4th Circuit": 71,
-    "2nd Circuit": 144,
+    "6th Circuit": 109,
+    "2nd Circuit": 145,
     "10th Circuit": 114,
     "D.C. Circuit": 19,
     "1st Circuit": 1,
@@ -24447,7 +24493,7 @@
     },
     {
       "week": "2026-W28",
-      "count": 23
+      "count": 24
     },
     {
       "week": "2026-W29",
@@ -24471,7 +24517,7 @@
     },
     {
       "week": "2026-W34",
-      "count": 14
+      "count": 15
     }
   ]
 }

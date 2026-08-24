@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "049269b3f3e5b7193593da06a9054dd7f3ce04beb23e36996360773507521d19",
-  "corpus_checked": "2026-08-23",
-  "total_cases": 1952,
-  "total_assessments": 1952,
+  "dataset_checksum": "cb340cd257bc4c44451c13c8769be82dc4cbb79b5ef6c15efa0914b4ea7a05b0",
+  "corpus_checked": "2026-08-24",
+  "total_cases": 1954,
+  "total_assessments": 1954,
   "tiers": {
-    "index-ready": 1932,
+    "index-ready": 1934,
     "enrichment-ready": 16,
     "research-only": 4
   },
   "issue_counts": {
     "court-not-recorded": 1,
-    "discrepancy-detail-not-recorded": 103,
-    "operational-lesson-not-recorded": 1216,
+    "discrepancy-detail-not-recorded": 102,
+    "operational-lesson-not-recorded": 1218,
     "outcome-not-recorded": 379,
-    "publication-review-pending": 1952,
+    "publication-review-pending": 1954,
     "source-link-missing": 3,
-    "specific-ai-tool-not-established": 1726,
+    "specific-ai-tool-not-established": 1727,
     "summary-missing": 1,
-    "summary-needs-detail": 795,
+    "summary-needs-detail": 797,
     "summary-too-brief": 15
   },
   "records": [
@@ -217,14 +217,14 @@
       ]
     },
     {
-      "id": "muscat-et-al-v-united-states-of-america-2026-08-20",
-      "slug": "muscat-et-al-v-united-states-of-america-2026-08-20",
-      "score": 80,
+      "id": "disruptive-resources-llc-v-ballistic-barrier-products-inc-et-al-2026-08-20",
+      "slug": "disruptive-resources-llc-v-ballistic-barrier-products-inc-et-al-2026-08-20",
+      "score": 90,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
       "source_eligible": true,
-      "summary_length": 478,
+      "summary_length": 249,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -268,7 +268,98 @@
         },
         {
           "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
           "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "in-re-the-marriage-of-kira-lindsay-and-jamie-alexander-dillon-2026-08-19",
+      "slug": "in-re-the-marriage-of-kira-lindsay-and-jamie-alexander-dillon-2026-08-19",
+      "score": 81,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 229,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 6,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
           "maximum": 5
         },
         {
@@ -294,10 +385,10 @@
       ],
       "missing_fields": [
         {
-          "field": "hallucination_items",
-          "code": "discrepancy-detail-not-recorded",
-          "impact": "important",
-          "remediation": "Record the cited, quoted, or authority discrepancy supported by the source."
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
         },
         {
           "field": "ai_tool_used",
@@ -320,14 +411,14 @@
       ]
     },
     {
-      "id": "in-re-the-marriage-of-kira-lindsay-and-jamie-alexander-dillon-2026-08-19",
-      "slug": "in-re-the-marriage-of-kira-lindsay-and-jamie-alexander-dillon-2026-08-19",
+      "id": "kelly-v-financial-industry-regulatory-authority-2026-08-19",
+      "slug": "kelly-v-financial-industry-regulatory-authority-2026-08-19",
       "score": 81,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
       "source_eligible": true,
-      "summary_length": 229,
+      "summary_length": 178,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -14650,6 +14741,109 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "cheryl-o-donnell-v-hope-clough-2026-07-10",
+      "slug": "cheryl-o-donnell-v-hope-clough-2026-07-10",
+      "score": 81,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 200,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 6,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",

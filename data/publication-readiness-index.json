@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "049269b3f3e5b7193593da06a9054dd7f3ce04beb23e36996360773507521d19",
-  "corpus_checked": "2026-08-23",
-  "total_cases": 1952,
+  "dataset_checksum": "cb340cd257bc4c44451c13c8769be82dc4cbb79b5ef6c15efa0914b4ea7a05b0",
+  "corpus_checked": "2026-08-24",
+  "total_cases": 1954,
   "tiers": {
-    "index-ready": 1932,
+    "index-ready": 1934,
     "enrichment-ready": 16,
     "research-only": 4
   },
@@ -17,11 +17,15 @@
       "tier": "index-ready",
       "score": 85
     },
-    "muscat-et-al-v-united-states-of-america-2026-08-20": {
+    "disruptive-resources-llc-v-ballistic-barrier-products-inc-et-al-2026-08-20": {
       "tier": "index-ready",
-      "score": 80
+      "score": 90
     },
     "in-re-the-marriage-of-kira-lindsay-and-jamie-alexander-dillon-2026-08-19": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "kelly-v-financial-industry-regulatory-authority-2026-08-19": {
       "tier": "index-ready",
       "score": 81
     },
@@ -592,6 +596,10 @@
     "cartagena-v-dixon-blackburn-and-t-a-blackburn-law-2-2026-07-10": {
       "tier": "index-ready",
       "score": 85
+    },
+    "cheryl-o-donnell-v-hope-clough-2026-07-10": {
+      "tier": "index-ready",
+      "score": 81
     },
     "del-biaggio-v-bansen-2026-07-10": {
       "tier": "index-ready",

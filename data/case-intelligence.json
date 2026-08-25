@@ -841,6 +841,60 @@
     }
   },
   {
+    "id": "7669-06-24-2026-08-17",
+    "slug": "7669-06-24-2026-08-17",
+    "case_name": "סע\"ש 7669-06-24",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | Plaintiff's counsel cited 'ע\"ע ארצי1201 חנוך אלי נ' רמטקס' which the court could not locate; counsel later admitted it likely derived from AI search. Outcome: Monetary Sanction.",
+    "direct_answer": "Fabricated: Case Law | Plaintiff's counsel cited 'ע\"ע ארצי1201 חנוך אלי נ' רמטקס' which the court could not locate; counsel later admitted it likely derived from AI search. Outcome: Monetary Sanction.",
+    "why_it_matters": "This matter connects fake citations and employment with Monetary Sanction in Haifa Regional Labor Court. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and employment and records Monetary Sanction. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2927/yunes.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Haifa Regional Labor Court",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Israel",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-17",
+      "ai_tool": "Unidentified",
+      "outcome": "Monetary Sanction",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "employment",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "boettcher-v-boettcher-2026-08-14",
     "slug": "boettcher-v-boettcher-2026-08-14",
     "case_name": "Boettcher v. Boettcher",
@@ -34283,6 +34337,60 @@
         "The specific AI tool used is not identified.",
         "The court does not explicitly confirm the use of AI, though the 'cut-and-paste' language is strongly suggestive."
       ]
+    }
+  },
+  {
+    "id": "in-re-latasha-transrina-kebe-2026-05-13",
+    "slug": "in-re-latasha-transrina-kebe-2026-05-13",
+    "case_name": "In re: Latasha Transrina Kebe",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Misrepresented: Case Law | Reply contained citation errors/misstated case law identified by opposing counsel and acknowledged in Debtor's Corrective Notice; court found the citations were not warranted by existing law under Rule 9011(b)(2). Outcome: Monetary Sanction.",
+    "direct_answer": "Misrepresented: Case Law | Reply contained citation errors/misstated case law identified by opposing counsel and acknowledged in Debtor's Corrective Notice; court found the citations were not warranted by existing law under Rule 9011(b)(2). Outcome: Monetary Sanction.",
+    "why_it_matters": "This matter connects misrepresented authority and bankruptcy with Monetary Sanction in S.D. Florida. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies misrepresented authority and bankruptcy and records Monetary Sanction. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2926/In_re_Kebe_USA_13_May_2026_-_Two_docs.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "S.D. Florida",
+      "jurisdiction": "federal",
+      "state": "FL",
+      "country": "US",
+      "circuit": "11th Circuit",
+      "judge": null,
+      "date": "2026-05-13",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Monetary Sanction",
+      "amount": 2232,
+      "professional_sanction": "No",
+      "tags": [
+        "misrepresented-authority",
+        "bankruptcy",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {
@@ -118915,6 +119023,60 @@
     }
   },
   {
+    "id": "vg-koln-beschluss-vom-14-11-2025-4-l-3030-25-2025-11-14",
+    "slug": "vg-koln-beschluss-vom-14-11-2025-4-l-3030-25-2025-11-14",
+    "case_name": "VG Köln, Beschluss vom 14.11.2025 - 4 L 3030/25",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Antragschrift enthält fehlerhafte/ungenaue Zitate zu angeblichen OVG NRW-Entscheidungen; Gericht bemerkt, dass Zitationen fehlerhaft sind und nahelegen, dass ein KI-Werkzeug ungeprüft genutzt wurde. Outcome: Eilantrag abgelehnt; Gericht stellte fehlerhafte Zitate fest und wies vorsorglich auf möglichen ungeprüften Einsatz eines KI-Werkzeugs hin, sah jedoch keine Sanktion vor.. Das Gericht stellte fest, dass der Antragsteller fehlerhaft zitierte und offenbar ungeprüft Ergebnisse eines KI-Werkzeugs übernommen hat (Hinweis auf KI-Halluzinationen). Wegen der fehlerhaften Zitierung hielt das Gericht den Vortrag des Antragstellers in Bezug auf vermeintliche Entscheidungen des OVG NRW für nicht überzeugend. Der Antrag wurde abgelehnt; das Gericht erteilte einen Hinweis, verhängte jedoch keine berufsrechtliche Sanktion oder Geldstrafe.",
+    "direct_answer": "Fabricated: Case Law | Antragschrift enthält fehlerhafte/ungenaue Zitate zu angeblichen OVG NRW-Entscheidungen; Gericht bemerkt, dass Zitationen fehlerhaft sind und nahelegen, dass ein KI-Werkzeug ungeprüft genutzt wurde. Outcome: Eilantrag abgelehnt; Gericht stellte fehlerhafte Zitate fest und wies vorsorglich auf möglichen ungeprüften Einsatz eines KI-Werkzeugs hin, sah jedoch keine Sanktion vor.. Das Gericht stellte fest, dass der Antragsteller fehlerhaft zitierte und offenbar ungeprüft Ergebnisse eines KI-Werkzeugs übernommen hat (Hinweis auf KI-Halluzinationen). Wegen der fehlerhaften Zitierung hielt das Gericht den Vortrag des Antragstellers in Bezug auf vermeintliche Entscheidungen des OVG NRW für nicht überzeugend. Der Antrag wurde abgelehnt; das Gericht erteilte einen Hinweis, verhängte jedoch keine berufsrechtliche Sanktion oder Geldstrafe.",
+    "why_it_matters": "This matter connects pro se and fake citations with Eilantrag abgelehnt; Gericht stellte fehlerhafte Zitate fest und wies vorsorglich auf möglichen ungeprüften Einsatz eines KI-Werkzeugs hin, sah jedoch keine Sanktion vor. in VG Köln. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Eilantrag abgelehnt; Gericht stellte fehlerhafte Zitate fest und wies vorsorglich auf möglichen ungeprüften Einsatz eines KI-Werkzeugs hin, sah jedoch keine Sanktion vor.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2929/2538663.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "VG Köln",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Germany",
+      "circuit": null,
+      "judge": null,
+      "date": "2025-11-14",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Eilantrag abgelehnt; Gericht stellte fehlerhafte Zitate fest und wies vorsorglich auf möglichen ungeprüften Einsatz eines KI-Werkzeugs hin, sah jedoch keine Sanktion vor.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "wills-and-aiadaui-v-wilson-2025-11-14",
     "slug": "wills-and-aiadaui-v-wilson-2025-11-14",
     "case_name": "Wills and Aiadaui v Wilson",
@@ -137901,6 +138063,61 @@
         "Full extent of fabricated citations",
         "Source retrieval note: http-403."
       ]
+    }
+  },
+  {
+    "id": "lg-frankfurt-13-zivilkammer-2-13-s-56-24-2025-09-25",
+    "slug": "lg-frankfurt-13-zivilkammer-2-13-s-56-24-2025-09-25",
+    "case_name": "LG Frankfurt, 13. Zivilkammer, 2-13 S 56/24",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | One of three purported BGH decisions quoted verbatim in the counsel's brief was a complete fabrication; the referenced fundstelle, date and Aktenzeichen do not exist. Outcome: Court found the cited BGH decisions to be complete fabrications, admonished counsel for relying on or presenting invented authorities; no professional sanction was imposed in this decision.. The plaintiff's counsel submitted a brief (10.08.2025) containing three purported BGH decisions quoted verbatim with fundstellen, dates, and Aktenzeichen. The court determined these citations were complete fabrications (non-existent references and inappropriate ZB-Aktenzeichen) and noted the counsel later admitted the falsity; the court observed that common chatbots can 'halluzinate' such authorities but held that a lawyer must verify sources and not incorporate unverified chatbot output into filings. The court applied this reasoning in evaluating the merits and admonished the professional duty to verify citations, but did not impose disciplinary sanctions in this order.",
+    "direct_answer": "Fabricated: Case Law | One of three purported BGH decisions quoted verbatim in the counsel's brief was a complete fabrication; the referenced fundstelle, date and Aktenzeichen do not exist. Outcome: Court found the cited BGH decisions to be complete fabrications, admonished counsel for relying on or presenting invented authorities; no professional sanction was imposed in this decision.. The plaintiff's counsel submitted a brief (10.08.2025) containing three purported BGH decisions quoted verbatim with fundstellen, dates, and Aktenzeichen. The court determined these citations were complete fabrications (non-existent references and inappropriate ZB-Aktenzeichen) and noted the counsel later admitted the falsity; the court observed that common chatbots can 'halluzinate' such authorities but held that a lawyer must verify sources and not incorporate unverified chatbot output into filings. The court applied this reasoning in evaluating the merits and admonished the professional duty to verify citations, but did not impose disciplinary sanctions in this order.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Court found the cited BGH decisions to be complete fabrications, admonished counsel for relying on or presenting invented authorities; no professional sanction was imposed in this decision. in LG Frankfurt (13. Zivilkammer). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Court found the cited BGH decisions to be complete fabrications, admonished counsel for relying on or presenting invented authorities; no professional sanction was imposed in this decision.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2930/LG_Frankfurt_2-13_S_56-24_LARE250001360.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "LG Frankfurt (13. Zivilkammer)",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Germany",
+      "circuit": null,
+      "judge": null,
+      "date": "2025-09-25",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Court found the cited BGH decisions to be complete fabrications, admonished counsel for relying on or presenting invented authorities; no professional sanction was imposed in this decision.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "trial"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {
@@ -170809,6 +171026,59 @@
       "limitations": [
         "The specific AI tool used by the defendant is not named in the text, only implied by the nature of the errors."
       ]
+    }
+  },
+  {
+    "id": "olg-celle-5-u-1-25-2025-04-29",
+    "slug": "olg-celle-5-u-1-25-2025-04-29",
+    "case_name": "OLG Celle, 5 U 1/25",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | Defendant cited an OLG München decision (12.11.2015, 23 U 2003/15, NJW-RR 2016, 328); court found the citation unverifiable in juris and beck-online and treated it as a Fehlzitat. Outcome: The court identified the cited authorities as unverifiable 'Fehlzitate' and declined to rely on them; no professional sanction or monetary penalty was imposed.. The defendant's briefs contained multiple case citations that the court determined were 'Fehlzitate' (unverifiable) because they could not be found in juris or beck-online under the given parameters. The court flagged these fabricated citations, refused to rely on them, and based its legal assessment on other verified authorities and the parties' factual pleadings. No professional sanctions or fines were imposed.",
+    "direct_answer": "Fabricated: Case Law | Defendant cited an OLG München decision (12.11.2015, 23 U 2003/15, NJW-RR 2016, 328); court found the citation unverifiable in juris and beck-online and treated it as a Fehlzitat. Outcome: The court identified the cited authorities as unverifiable 'Fehlzitate' and declined to rely on them; no professional sanction or monetary penalty was imposed.. The defendant's briefs contained multiple case citations that the court determined were 'Fehlzitate' (unverifiable) because they could not be found in juris or beck-online under the given parameters. The court flagged these fabricated citations, refused to rely on them, and based its legal assessment on other verified authorities and the parties' factual pleadings. No professional sanctions or fines were imposed.",
+    "why_it_matters": "This matter connects fake citations and trial with The court identified the cited authorities as unverifiable 'Fehlzitate' and declined to rely on them; no professional sanction or monetary penalty was imposed. in OLG Celle. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and trial and records The court identified the cited authorities as unverifiable 'Fehlzitate' and declined to rely on them; no professional sanction or monetary penalty was imposed.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2928/55ea1bb2-0c67-4731-8e65-0d75ddb8ad0c_C3aj4xa.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "OLG Celle",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Germany",
+      "circuit": null,
+      "judge": null,
+      "date": "2025-04-29",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "The court identified the cited authorities as unverifiable 'Fehlzitate' and declined to rely on them; no professional sanction or monetary penalty was imposed.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

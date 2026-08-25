@@ -1,34 +1,35 @@
 {
-  "last_updated": "2026-08-24",
-  "last_checked": "2026-08-24",
-  "last_checked_at": "2026-08-24T09:07:08.324Z",
+  "last_updated": "2026-08-25",
+  "last_checked": "2026-08-25",
+  "last_checked_at": "2026-08-25T09:02:15.166Z",
   "latest_record_date": "2026-08-21",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 1954,
-  "source_linked_count": 1951,
+  "source_record_count": 1959,
+  "source_linked_count": 1956,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 0,
-  "dataset_checksum": "cb340cd257bc4c44451c13c8769be82dc4cbb79b5ef6c15efa0914b4ea7a05b0",
-  "total_cases": 1954,
-  "us_cases": 1343,
-  "us_adjudicated": 1338,
+  "dataset_checksum": "aa1861474ea3869bb8719ea770a5f32b918b410cdc63112182e7de08cb0b662b",
+  "total_cases": 1959,
+  "us_cases": 1344,
+  "us_adjudicated": 1339,
   "us_alleged_only": 5,
   "countries_tracked": 42,
-  "enriched_count": 1954,
+  "enriched_count": 1959,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
-  "monetary_sanctions_total_usd": 1739877,
+  "monetary_sanctions_total_usd": 1742109,
   "largest_single_sanction": 282508,
-  "avg_sanction": 7699,
+  "avg_sanction": 7674,
   "severity_counts": {
     "high": 203,
-    "low": 1386,
-    "medium": 326,
+    "low": 1388,
+    "medium": 329,
     "career-ending": 39
   },
   "by_country": {
-    "US": 1343,
+    "US": 1344,
+    "Israel": 56,
     "Brazil": 41,
     "Canada": 213,
     "Australia": 98,
@@ -37,7 +38,6 @@
     "GB": 62,
     "China": 1,
     "India": 13,
-    "Israel": 55,
     "France": 13,
     "Spain": 8,
     "Poland": 2,
@@ -59,7 +59,7 @@
     "AE": 2,
     "Denmark": 1,
     "Czech Republic": 2,
-    "Germany": 8,
+    "Germany": 11,
     "Qatar": 1,
     "Austria": 2,
     "International Arbitration": 1,
@@ -3477,12 +3477,12 @@
     },
     {
       "state": "FL",
-      "count": 64,
-      "total": 100519,
+      "count": 65,
+      "total": 102751,
       "severities": {
         "high": 9,
         "low": 39,
-        "medium": 14,
+        "medium": 15,
         "career-ending": 2
       },
       "cases": [
@@ -3857,6 +3857,27 @@
             "appellate"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/2142/Gleason_v._MArcus_USA_13_May_2026.pdf"
+        },
+        {
+          "id": "in-re-latasha-transrina-kebe-2026-05-13",
+          "name": "In re: Latasha Transrina Kebe",
+          "court": "S.D. Florida",
+          "judge": "",
+          "date": "2026-05-13",
+          "amount": 2232,
+          "amount_display": "$2.2K",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Case Law | Reply contained citation errors/misstated case law identified by opposing counsel and acknowledged in Debtor's Corrective Notice; court found the citations were not warranted by existing law under Rule 9011(b)(2). Outcome: Monetary Sanction.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "misrepresented-authority",
+            "bankruptcy",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2926/In_re_Kebe_USA_13_May_2026_-_Two_docs.pdf"
         },
         {
           "id": "richard-paul-smith-v-verra-mobility-corporation-et-al-2026-05-01",
@@ -4606,29 +4627,6 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/729/Multiphone_Latin_v._Millicom_International_Cellular.pdf"
-        },
-        {
-          "id": "takefman-v-the-pickleball-club-llc-2025-08-27",
-          "name": "Takefman v. The Pickleball Club, LLC",
-          "court": "CA Florida (3d)",
-          "judge": "",
-          "date": "2025-08-27",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant cited a non-existent case 'Hernandez v. Gilbert' in the initial brief and repeated the citation in the reply after opposing counsel pointed out it was fake. Outcome: Order to show cause. \" Opposing counsel, and the court, should not have to parse case citations and parentheticals to discern whether cases exist, and if so, if they stand for the propositions asserted. \"",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "other",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/756/Takefman_v._Pickleball_USA_27_August_2025.pdf"
         }
       ]
     },
@@ -24170,7 +24168,7 @@
     }
   ],
   "by_week": {
-    "2026-W34": 15,
+    "2026-W34": 16,
     "2026-W33": 22,
     "2026-W32": 25,
     "2026-W31": 31,
@@ -24184,7 +24182,7 @@
     "2026-W23": 31,
     "2026-W22": 32,
     "2026-W21": 44,
-    "2026-W20": 27,
+    "2026-W20": 28,
     "2026-W19": 39,
     "2026-W18": 47,
     "2026-W17": 30,
@@ -24210,14 +24208,14 @@
     "2025-W49": 44,
     "2025-W48": 29,
     "2025-W47": 41,
-    "2025-W46": 26,
+    "2025-W46": 27,
     "2025-W45": 30,
     "2025-W44": 35,
     "2025-W43": 24,
     "2025-W42": 27,
     "2025-W41": 20,
     "2025-W40": 25,
-    "2025-W39": 26,
+    "2025-W39": 27,
     "2025-W38": 26,
     "2025-W37": 16,
     "2025-W36": 20,
@@ -24238,7 +24236,7 @@
     "2025-W21": 11,
     "2025-W20": 12,
     "2025-W19": 9,
-    "2025-W18": 7,
+    "2025-W18": 8,
     "2025-W17": 5,
     "2025-W16": 5,
     "2025-W15": 6,
@@ -24305,23 +24303,23 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-08": 62,
+    "2026-08": 63,
     "2026-07": 120,
     "2026-06": 127,
-    "2026-05": 153,
+    "2026-05": 154,
     "2026-04": 126,
     "2026-03": 178,
     "2026-02": 132,
     "2026-01": 135,
     "2025-12": 154,
-    "2025-11": 128,
+    "2025-11": 129,
     "2025-10": 120,
-    "2025-09": 97,
+    "2025-09": 98,
     "2025-08": 87,
     "2025-07": 82,
     "2025-06": 47,
     "2025-05": 47,
-    "2025-04": 29,
+    "2025-04": 30,
     "2025-03": 24,
     "2025-02": 15,
     "2025-01": 16,
@@ -24349,12 +24347,12 @@
   "by_year": {
     "2023": 16,
     "2024": 59,
-    "2025": 846,
-    "2026": 1033
+    "2025": 849,
+    "2026": 1035
   },
   "by_tool": {
-    "Unidentified": 418,
-    "AI (implied, unspecified)": 1308,
+    "Unidentified": 419,
+    "AI (implied, unspecified)": 1312,
     "Strongsuit": 1,
     "Claude and ChatGPT": 1,
     "ChatGPT": 107,
@@ -24456,7 +24454,7 @@
     "Google Bard": 1
   },
   "by_circuit": {
-    "11th Circuit": 114,
+    "11th Circuit": 115,
     "9th Circuit": 302,
     "3rd Circuit": 76,
     "7th Circuit": 116,
@@ -24517,7 +24515,7 @@
     },
     {
       "week": "2026-W34",
-      "count": 15
+      "count": 16
     }
   ]
 }

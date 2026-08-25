@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "cb340cd257bc4c44451c13c8769be82dc4cbb79b5ef6c15efa0914b4ea7a05b0",
-  "corpus_checked": "2026-08-24",
-  "total_cases": 1954,
+  "dataset_checksum": "aa1861474ea3869bb8719ea770a5f32b918b410cdc63112182e7de08cb0b662b",
+  "corpus_checked": "2026-08-25",
+  "total_cases": 1959,
   "tiers": {
-    "index-ready": 1934,
+    "index-ready": 1939,
     "enrichment-ready": 16,
     "research-only": 4
   },
@@ -68,6 +68,10 @@
     "davos-francois-2026-08-17": {
       "tier": "enrichment-ready",
       "score": 70
+    },
+    "7669-06-24-2026-08-17": {
+      "tier": "index-ready",
+      "score": 81
     },
     "boettcher-v-boettcher-2026-08-14": {
       "tier": "index-ready",
@@ -1596,6 +1600,10 @@
     "henri-giovani-morales-jimenez-v-christopher-shanahan-2026-05-13": {
       "tier": "index-ready",
       "score": 81
+    },
+    "in-re-latasha-transrina-kebe-2026-05-13": {
+      "tier": "index-ready",
+      "score": 85
     },
     "jane-doe-1-et-al-v-mount-saint-mary-high-school-corporation-2026-05-13": {
       "tier": "index-ready",
@@ -5049,6 +5057,10 @@
       "tier": "index-ready",
       "score": 90
     },
+    "vg-koln-beschluss-vom-14-11-2025-4-l-3030-25-2025-11-14": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "wills-and-aiadaui-v-wilson-2025-11-14": {
       "tier": "index-ready",
       "score": 76
@@ -5828,6 +5840,10 @@
     "greenopolis-welfare-association-gwa-v-narender-singh-et-al-2025-09-25": {
       "tier": "index-ready",
       "score": 86
+    },
+    "lg-frankfurt-13-zivilkammer-2-13-s-56-24-2025-09-25": {
+      "tier": "index-ready",
+      "score": 85
     },
     "oready-llc-2-2025-09-25": {
       "tier": "index-ready",
@@ -7208,6 +7224,10 @@
     "beschluss-5-u-125-2025-04-29": {
       "tier": "index-ready",
       "score": 90
+    },
+    "olg-celle-5-u-1-25-2025-04-29": {
+      "tier": "index-ready",
+      "score": 85
     },
     "simpson-v-hung-long-enterprises-inc-2025-04-25": {
       "tier": "index-ready",

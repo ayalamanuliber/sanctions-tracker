@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "aa1861474ea3869bb8719ea770a5f32b918b410cdc63112182e7de08cb0b662b",
-  "corpus_checked": "2026-08-25",
-  "total_cases": 1959,
-  "total_assessments": 1959,
+  "dataset_checksum": "c1fbcb04730ae63d960f15c9b3230c2f8407b4475286396dd9252aaad6b3fccb",
+  "corpus_checked": "2026-08-26",
+  "total_cases": 1962,
+  "total_assessments": 1962,
   "tiers": {
-    "index-ready": 1939,
+    "index-ready": 1942,
     "enrichment-ready": 16,
     "research-only": 4
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 102,
-    "operational-lesson-not-recorded": 1223,
-    "outcome-not-recorded": 379,
-    "publication-review-pending": 1959,
+    "operational-lesson-not-recorded": 1226,
+    "outcome-not-recorded": 382,
+    "publication-review-pending": 1962,
     "source-link-missing": 3,
-    "specific-ai-tool-not-established": 1732,
+    "specific-ai-tool-not-established": 1734,
     "summary-missing": 1,
-    "summary-needs-detail": 798,
+    "summary-needs-detail": 799,
     "summary-too-brief": 15
   },
   "records": [
@@ -105,6 +105,97 @@
           "impact": "context",
           "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
         },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "unspecified-murder-appeal-las-cruces-area-2026-08-21",
+      "slug": "unspecified-murder-appeal-las-cruces-area-2026-08-21",
+      "score": 90,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 284,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
         {
           "field": "lesson",
           "code": "operational-lesson-not-recorded",
@@ -293,6 +384,115 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "faiz-enterprise-v-state-tax-officer-unit-67-surat-anr-2026-08-20",
+      "slug": "faiz-enterprise-v-state-tax-officer-unit-67-surat-anr-2026-08-20",
+      "score": 76,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 230,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 6,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
         {
           "field": "lesson",
           "code": "operational-lesson-not-recorded",
@@ -90631,6 +90831,103 @@
       ]
     },
     {
+      "id": "andrey-ivanov-hometrade-realty-inc-brokerage-v-uri-kiselman-viva-solar-inc-costs-endorseme-2026-01-29",
+      "slug": "andrey-ivanov-hometrade-realty-inc-brokerage-v-uri-kiselman-viva-solar-inc-costs-endorseme-2026-01-29",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 981,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
       "id": "ava-naeini-v-confluent-inc-2026-01-29",
       "slug": "ava-naeini-v-confluent-inc-2026-01-29",
       "score": 76,
@@ -125295,7 +125592,7 @@
     {
       "id": "vg-koln-beschluss-vom-14-11-2025-4-l-3030-25-2025-11-14",
       "slug": "vg-koln-beschluss-vom-14-11-2025-4-l-3030-25-2025-11-14",
-      "score": 85,
+      "score": 80,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
@@ -125339,7 +125636,7 @@
         },
         {
           "criterion": "outcome",
-          "points": 5,
+          "points": 0,
           "maximum": 5
         },
         {
@@ -125369,6 +125666,12 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
@@ -177419,7 +177722,7 @@
     {
       "id": "olg-celle-5-u-1-25-2025-04-29",
       "slug": "olg-celle-5-u-1-25-2025-04-29",
-      "score": 85,
+      "score": 80,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
@@ -177463,7 +177766,7 @@
         },
         {
           "criterion": "outcome",
-          "points": 5,
+          "points": 0,
           "maximum": 5
         },
         {
@@ -177493,6 +177796,12 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",

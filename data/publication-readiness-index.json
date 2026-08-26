@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "aa1861474ea3869bb8719ea770a5f32b918b410cdc63112182e7de08cb0b662b",
-  "corpus_checked": "2026-08-25",
-  "total_cases": 1959,
+  "dataset_checksum": "c1fbcb04730ae63d960f15c9b3230c2f8407b4475286396dd9252aaad6b3fccb",
+  "corpus_checked": "2026-08-26",
+  "total_cases": 1962,
   "tiers": {
-    "index-ready": 1939,
+    "index-ready": 1942,
     "enrichment-ready": 16,
     "research-only": 4
   },
@@ -13,6 +13,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "unspecified-murder-appeal-las-cruces-area-2026-08-21": {
+      "tier": "index-ready",
+      "score": 90
+    },
     "cecile-kasengela-v-kaiser-foundation-hospitals-et-al-2026-08-20": {
       "tier": "index-ready",
       "score": 85
@@ -20,6 +24,10 @@
     "disruptive-resources-llc-v-ballistic-barrier-products-inc-et-al-2026-08-20": {
       "tier": "index-ready",
       "score": 90
+    },
+    "faiz-enterprise-v-state-tax-officer-unit-67-surat-anr-2026-08-20": {
+      "tier": "index-ready",
+      "score": 76
     },
     "in-re-the-marriage-of-kira-lindsay-and-jamie-alexander-dillon-2026-08-19": {
       "tier": "index-ready",
@@ -3641,6 +3649,10 @@
       "tier": "index-ready",
       "score": 76
     },
+    "andrey-ivanov-hometrade-realty-inc-brokerage-v-uri-kiselman-viva-solar-inc-costs-endorseme-2026-01-29": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "ava-naeini-v-confluent-inc-2026-01-29": {
       "tier": "index-ready",
       "score": 76
@@ -5059,7 +5071,7 @@
     },
     "vg-koln-beschluss-vom-14-11-2025-4-l-3030-25-2025-11-14": {
       "tier": "index-ready",
-      "score": 85
+      "score": 80
     },
     "wills-and-aiadaui-v-wilson-2025-11-14": {
       "tier": "index-ready",
@@ -7227,7 +7239,7 @@
     },
     "olg-celle-5-u-1-25-2025-04-29": {
       "tier": "index-ready",
-      "score": 85
+      "score": 80
     },
     "simpson-v-hung-long-enterprises-inc-2025-04-25": {
       "tier": "index-ready",

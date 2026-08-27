@@ -1,17 +1,61 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "c1fbcb04730ae63d960f15c9b3230c2f8407b4475286396dd9252aaad6b3fccb",
-  "corpus_checked": "2026-08-26",
-  "total_cases": 1962,
+  "dataset_checksum": "847383c98a403d3b70a612caba66c23149e3d41d1662d0cedbed9069802aa620",
+  "corpus_checked": "2026-08-27",
+  "total_cases": 1980,
   "tiers": {
-    "index-ready": 1942,
-    "enrichment-ready": 16,
-    "research-only": 4
+    "index-ready": 1957,
+    "enrichment-ready": 18,
+    "research-only": 5
   },
   "by_slug": {
+    "thomas-raynard-james-v-detective-kevin-conley-et-al-2026-08-27": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "darrin-l-johnson-jr-v-nationstar-mortgage-llc-et-al-2026-08-26": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "krystal-faye-potterf-et-al-v-drew-f-wessels-et-al-2026-08-26": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "noella-p-turgeon-v-fhlmc-2026-08-26": {
+      "tier": "enrichment-ready",
+      "score": 75
+    },
+    "tyler-shelbert-v-baxter-international-inc-2026-08-26": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "anddone-llc-v-shante-gaines-reset-financial-group-llc-2026-08-25": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "benjamin-v-state-2026-08-25": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "kurelko-v-ballard-2026-08-25": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "michael-l-ruiz-v-magellan-financial-insurance-services-2-2026-08-24": {
+      "tier": "index-ready",
+      "score": 86
+    },
+    "adibi-v-aig-israel-insurance-co-2026-08-23": {
+      "tier": "enrichment-ready",
+      "score": 75
+    },
     "capital-standard-llc-v-u-s-bank-national-association-2026-08-21": {
       "tier": "index-ready",
       "score": 85
+    },
+    "joseph-m-speranza-v-golden-technologies-inc-2026-08-21": {
+      "tier": "index-ready",
+      "score": 76
     },
     "unspecified-murder-appeal-las-cruces-area-2026-08-21": {
       "tier": "index-ready",
@@ -28,6 +72,18 @@
     "faiz-enterprise-v-state-tax-officer-unit-67-surat-anr-2026-08-20": {
       "tier": "index-ready",
       "score": 76
+    },
+    "full-standard-properties-llc-v-sj-6070-llc-2026-08-20": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "michael-dotson-v-bob-evans-farms-llc-2026-08-20": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "stephen-lohbeck-v-amazon-com-services-llc-2026-08-20": {
+      "tier": "index-ready",
+      "score": 85
     },
     "in-re-the-marriage-of-kira-lindsay-and-jamie-alexander-dillon-2026-08-19": {
       "tier": "index-ready",
@@ -96,6 +152,10 @@
     "guerra-quezada-v-united-states-guerra-vasquez-v-united-states-consolidated-2026-08-14": {
       "tier": "index-ready",
       "score": 85
+    },
+    "rivard-v-vermont-dept-of-corrections-2026-08-14": {
+      "tier": "index-ready",
+      "score": 81
     },
     "apelacao-civel-no-1032884-04-2025-8-26-0224-2026-08-13": {
       "tier": "index-ready",
@@ -212,6 +272,10 @@
     "mohamed-ali-v-saeed-osman-2026-08-06": {
       "tier": "index-ready",
       "score": 81
+    },
+    "jennifer-lynn-cain-v-hyatt-corporation-2026-08-05": {
+      "tier": "index-ready",
+      "score": 85
     },
     "mary-rose-f-calenzo-v-waste-management-inc-2026-08-05": {
       "tier": "index-ready",
@@ -357,7 +421,7 @@
       "tier": "index-ready",
       "score": 85
     },
-    "michael-l-ruiz-v-magellan-financial-insurance-services-2-2026-07-28": {
+    "michael-l-ruiz-v-magellan-financial-insurance-services-1-2026-07-28": {
       "tier": "index-ready",
       "score": 90
     },
@@ -383,7 +447,7 @@
     },
     "beslissing-in-de-zaak-26-379-db-li-d-2026-07-27": {
       "tier": "index-ready",
-      "score": 90
+      "score": 85
     },
     "lichfield-v-kubler-netflix-inc-2026-07-27": {
       "tier": "index-ready",
@@ -648,6 +712,10 @@
     "in-the-interest-of-q-c-and-p-c-children-2026-07-09": {
       "tier": "index-ready",
       "score": 76
+    },
+    "michigan-mm-inc-v-alea-properties-2026-07-09": {
+      "tier": "research-only",
+      "score": 65
     },
     "sarl-galvalux-c-urssaf-2026-07-09": {
       "tier": "index-ready",
@@ -1976,6 +2044,10 @@
     "louis-l-ligon-iii-v-meta-platforms-inc-2026-04-28": {
       "tier": "index-ready",
       "score": 85
+    },
+    "loyer-v-wayne-county-michigan-et-al-2026-04-28": {
+      "tier": "index-ready",
+      "score": 81
     },
     "mazac-v-muise-2026-04-28": {
       "tier": "index-ready",

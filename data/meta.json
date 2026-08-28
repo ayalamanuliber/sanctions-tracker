@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-08-27",
-  "last_checked": "2026-08-27",
-  "last_checked_at": "2026-08-27T19:06:32.310Z",
+  "last_updated": "2026-08-28",
+  "last_checked": "2026-08-28",
+  "last_checked_at": "2026-08-28T20:13:20.217Z",
   "latest_record_date": "2026-08-27",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 1980,
-  "source_linked_count": 1976,
+  "source_record_count": 1981,
+  "source_linked_count": 1977,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 0,
-  "dataset_checksum": "847383c98a403d3b70a612caba66c23149e3d41d1662d0cedbed9069802aa620",
-  "total_cases": 1980,
-  "us_cases": 1362,
-  "us_adjudicated": 1356,
+  "dataset_checksum": "ae07386435828055e4ce669f3d948618292fbc44e56b2ee12780deabbef051f3",
+  "total_cases": 1981,
+  "us_cases": 1363,
+  "us_adjudicated": 1357,
   "us_alleged_only": 6,
   "countries_tracked": 42,
-  "enriched_count": 1980,
+  "enriched_count": 1981,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
@@ -23,12 +23,12 @@
   "avg_sanction": 7659,
   "severity_counts": {
     "high": 207,
-    "low": 1400,
+    "low": 1401,
     "medium": 334,
     "career-ending": 39
   },
   "by_country": {
-    "US": 1362,
+    "US": 1363,
     "Israel": 57,
     "India": 14,
     "Brazil": 41,
@@ -21119,6 +21119,318 @@
       ]
     },
     {
+      "state": "UT",
+      "count": 14,
+      "total": 9525,
+      "severities": {
+        "low": 11,
+        "medium": 3
+      },
+      "cases": [
+        {
+          "id": "jack-ferm-v-agritech-properties-et-al-2026-08-24",
+          "name": "Jack Ferm v. Agritech Properties, et al.",
+          "court": "D. Utah",
+          "judge": "",
+          "date": "2026-08-24",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law Outcome: Warning. (Existence of hallucinations in drafting verified by myself thanks to PelAIkan.)",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fabricated-quotes",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2956/Ferm_v._Agritech_USA_25_August_2026.pdf"
+        },
+        {
+          "id": "hack-v-preston-et-al-2026-08-07",
+          "name": "Hack v. Preston et al",
+          "court": "D. Utah",
+          "judge": "",
+          "date": "2026-08-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "ChatGPT",
+          "summary": "Misrepresented: Case Law | Reply brief relied on Hukill but provided an incorrect citation and mischaracterized the Tenth Circuit's analysis; court flagged the misrepresentation and warned about AI hallucinations. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "misrepresented-authority",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2845/Hack_v._Preston_et_al_USA_7_August_2026.pdf"
+        },
+        {
+          "id": "carey-v-breakell-et-al-2026-07-30",
+          "name": "Carey v. Breakell et al.",
+          "court": "D. Utah",
+          "judge": "",
+          "date": "2026-07-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Case Law | The Opposition miscited a real Tenth Circuit decision (Huff v. Reeves) as having been issued in 2022; the court noted the miscitation in its review. The district court found multiple case citations in Plaintiff’s counsel’s Opposition could not be located on Westlaw and appeared to be fake (suggesting improper use of AI). The court explained that citation to non-existent opinions undermines filings and may violate Rule 11, but because it was transferring the case to Arizona it left investigation or sanctioning to the receiving judge rather than imposing relief itself.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2742/Carey_v._Breakell_et_al_USA_30_July_2026.pdf"
+        },
+        {
+          "id": "hagan-v-black-diamond-experts-llc-2026-07-23",
+          "name": "Hagan v. Black Diamond Experts, LLC",
+          "court": "D. Utah",
+          "judge": "",
+          "date": "2026-07-23",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Opposition cites Weatherly v. A.O. Smith Corp., 841 F. Supp. 2d 913, 920 (D.S.D. 2012), which the Court could not locate and determined likely to be an AI-generated fabricated opinion. Outcome: Admonishment & Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2702/Hagan_v._Black_Diamond_Experts_USA_July_2026.pdf"
+        },
+        {
+          "id": "regan-wilkes-et-al-v-canyons-school-district-et-al-2026-05-04",
+          "name": "Regan Wilkes, et al. v. Canyons School District, et al.",
+          "court": "D. Utah",
+          "judge": "",
+          "date": "2026-05-04",
+          "amount": 7000,
+          "amount_display": "$7.0K",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Amended Complaint cited a non-existent 'A.S. v. Norwalk Public Schools (2017)' (purported 6th Cir.) in support of tolling/limitations arguments; court identified it as another fabricated citation. Outcome: Order to Show Cause. Order to Show Cause is here.",
+          "sanction_types": [
+            "monetary",
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "administrative",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2092/Wilkes_v._Canyon_School_USA_4_May_2026.pdf"
+        },
+        {
+          "id": "primerica-life-insurance-company-v-daniel-vett-finlayson-michelle-johnson-2026-0",
+          "name": "Primerica Life Insurance Company v. Daniel Vett Finlayson; Michelle Johnson",
+          "court": "D. Utah",
+          "judge": "",
+          "date": "2026-04-22",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Opposition contained multiple case citations the Court could not locate on Westlaw; counsel later confirmed clerical/research errors and the Court suggested possible improper AI use. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2021/Primerica_USA_22_April_2026.pdf"
+        },
+        {
+          "id": "nicholas-and-barbara-moulder-v-davis-school-district-on-behalf-of-mm-2026-03-23",
+          "name": "Nicholas and Barbara Moulder v. Davis School District (on behalf of M.M.)",
+          "court": "D. Utah",
+          "judge": "",
+          "date": "2026-03-23",
+          "amount": 1525,
+          "amount_display": "$1.5K",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Plaintiffs' briefing cited a non-existent case as legal authority; court found the case did not exist and counsel admitted failing to verify after using AI. Outcome: CLE; Monetary Sanction.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1836/Moulder_v._Davis_School_USA_23_March_2026.pdf"
+        },
+        {
+          "id": "prisbrey-v-prisbrey-2026-03-19",
+          "name": "Prisbrey v. Prisbrey",
+          "court": "CA Utah",
+          "judge": "",
+          "date": "2026-03-19",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Appellate brief included multiple incorrect or nonexistent Utah case citations; the court found four of six cited authorities incorrect and said some citations \"appear to be made out of whole cloth.\"",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "family",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1834/Prisbrey_v_Prisbrey_USA_19_March_2026.pdf"
+        },
+        {
+          "id": "ryan-lee-v-capital-one-bank-et-al-2026-02-24",
+          "name": "Ryan Lee v. Capital One Bank et al.",
+          "court": "D. Utah",
+          "judge": "",
+          "date": "2026-02-24",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "The report recommended dismissal of claims against a defendant and admonished the self-represented plaintiff to avoid misrepresentations in future filings, discussing defective citations and the possibility of sanctions when legal materials are not accurately checked.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1656/Ryan_Lee_Plaintiff_v_Capital_One_Bank_USA_USA_24_February_2026.pdf"
+        },
+        {
+          "id": "black-oak-capital-boca-llc-v-paul-evans-llc-et-al-2025-12-04",
+          "name": "Black Oak Capital BOCA, LLC v. Paul Evans, LLC, et al.",
+          "court": "D. Utah",
+          "judge": "",
+          "date": "2025-12-04",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Opposition cited Rawson v. Mathews, 212 P.3d 752, 756–57 (Utah 2009) to support equitable tolling; court determined the opinion does not exist and called it a hallucinated case. Outcome: Order for counsel to read cited authorities and file a certification within 30 days.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1144/Black_Oak_Capital_v._Paul_Evans_USA_4_December_2025.pdf"
+        },
+        {
+          "id": "ross-logan-v-lvnv-funding-et-al-2025-11-05",
+          "name": "Ross Logan v. LVNV Funding et al.",
+          "court": "D. Utah",
+          "judge": "",
+          "date": "2025-11-05",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "In a service-and-default dispute, the District of Utah denied without prejudice a request to strike Logan’s opposition even though the movant alleged it was AI-generated, because Rule 12(f) did not authorize striking that memorandum. The court expressly warned of serious concerns about alleged AI-hallucinated quotations and left any sanctions issue to a possible Rule 11 motion.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/988/Logan_v._LVNV_Funding_USA_5_November_2025.pdf"
+        },
+        {
+          "id": "khoury-et-al-v-intermountain-health-care-inc-et-al-2025-09-30",
+          "name": "Khoury et al v. Intermountain Health Care Inc. et al",
+          "court": "D. Utah",
+          "judge": "",
+          "date": "2025-09-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "ChatGPT",
+          "summary": "Fabricated: Exhibits & Submissions Outcome: Case dismissed. Case dismissed for \"good cause\" in light of motions to dismiss expert. Expert had confessed using ChatGPT.",
+          "sanction_types": [
+            "case-dismissed"
+          ],
+          "tags": [
+            "fake-citations",
+            "administrative",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/843/Khoury_et_al_v_Intermountain_Health_Care_Inc__utdce-20-00372__0307.0.pdf"
+        },
+        {
+          "id": "andersen-v-olympus-as-daybreak-2025-05-30",
+          "name": "Andersen v. Olympus as Daybreak",
+          "court": "D. Utah",
+          "judge": "",
+          "date": "2025-05-30",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Outcome: Warning. In an earlier decision, the court had already warned the plaintiff against \"any further legal misrepresentations in future communications\".",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "trial"
+          ],
+          "source_url": "https://law.justia.com/cases/federal/district-courts/utah/utdce/2:2025cv00178/154869/20/"
+        },
+        {
+          "id": "garner-v-kadince-2025-05-22",
+          "name": "Garner v. Kadince",
+          "court": "CA Utah",
+          "judge": "",
+          "date": "2025-05-22",
+          "amount": 1000,
+          "amount_display": "$1.0K",
+          "severity": "medium",
+          "tool": "ChatGPT",
+          "summary": "Fabricated: Case Law | Fabricated appellate case cited in the Petition; opposing counsel showed it appears only in ChatGPT and not in any legal database, and the court sanctioned counsel for relying on fake precedent. AI UseThe fabricated citations originated from a ChatGPT query submitted by an unlicensed law clerk at Petitioner's law firm. Neither Counsel reviewed the petition’s contents before filing. The firm had no AI use policy in place at the time, though they implemented one after the order to show cause was issued.Hallucination DetailsChief among the hallucinations was Royer v. Nelson, which Respondents demonstrated existed only in ChatGPT’s output and in no official database. Other cited cases were also inapposite or unverifiable. Petitioner’s counsel admitted fault and stated they were unaware AI had been used during drafting.Ruling/SanctionThe court issued three targeted sanctions:Attorney fees: Respondents’ counsel are to submit an itemized bill; Counsel must pay within 10 days of receiptClient refund: Petitioner’s counsel must refund all fees paid by Mr. Garner in relation to the defective petitionCharitable payment: Counsel must donate $1,000 to “and Justice for all” within 14 days and file proof of payment with the courtKey Judicial ReasoningThe panel (Per Curiam) emphasized that the conduct, while not malicious, still diverted judicial resources and imposed unnecessary burdens on the opposing party. Unlike Mata or Hayes, the attorneys in this case quickly admitted the issue and cooperated, which the court acknowledged. Nonetheless, the submission of fabricated law—especially under counsel's signature—breaches core duties of candor and verification, warranting formal sanctions. The court warned that Utah’s judiciary cannot be expected to verify every citation and must be able to trust lawyers to do so",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "fake-citations",
+            "contract",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/397/Garner_v._Kadince_UT_AC_USA_2025.pdf"
+        }
+      ]
+    },
+    {
       "state": "MA",
       "count": 14,
       "total": 2000,
@@ -21733,297 +22045,6 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/2363/36_-_Postma_v_York.pdf"
-        }
-      ]
-    },
-    {
-      "state": "UT",
-      "count": 13,
-      "total": 9525,
-      "severities": {
-        "low": 10,
-        "medium": 3
-      },
-      "cases": [
-        {
-          "id": "hack-v-preston-et-al-2026-08-07",
-          "name": "Hack v. Preston et al",
-          "court": "D. Utah",
-          "judge": "",
-          "date": "2026-08-07",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "ChatGPT",
-          "summary": "Misrepresented: Case Law | Reply brief relied on Hukill but provided an incorrect citation and mischaracterized the Tenth Circuit's analysis; court flagged the misrepresentation and warned about AI hallucinations. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "misrepresented-authority",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2845/Hack_v._Preston_et_al_USA_7_August_2026.pdf"
-        },
-        {
-          "id": "carey-v-breakell-et-al-2026-07-30",
-          "name": "Carey v. Breakell et al.",
-          "court": "D. Utah",
-          "judge": "",
-          "date": "2026-07-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | The Opposition miscited a real Tenth Circuit decision (Huff v. Reeves) as having been issued in 2022; the court noted the miscitation in its review. The district court found multiple case citations in Plaintiff’s counsel’s Opposition could not be located on Westlaw and appeared to be fake (suggesting improper use of AI). The court explained that citation to non-existent opinions undermines filings and may violate Rule 11, but because it was transferring the case to Arizona it left investigation or sanctioning to the receiving judge rather than imposing relief itself.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2742/Carey_v._Breakell_et_al_USA_30_July_2026.pdf"
-        },
-        {
-          "id": "hagan-v-black-diamond-experts-llc-2026-07-23",
-          "name": "Hagan v. Black Diamond Experts, LLC",
-          "court": "D. Utah",
-          "judge": "",
-          "date": "2026-07-23",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Opposition cites Weatherly v. A.O. Smith Corp., 841 F. Supp. 2d 913, 920 (D.S.D. 2012), which the Court could not locate and determined likely to be an AI-generated fabricated opinion. Outcome: Admonishment & Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2702/Hagan_v._Black_Diamond_Experts_USA_July_2026.pdf"
-        },
-        {
-          "id": "regan-wilkes-et-al-v-canyons-school-district-et-al-2026-05-04",
-          "name": "Regan Wilkes, et al. v. Canyons School District, et al.",
-          "court": "D. Utah",
-          "judge": "",
-          "date": "2026-05-04",
-          "amount": 7000,
-          "amount_display": "$7.0K",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Amended Complaint cited a non-existent 'A.S. v. Norwalk Public Schools (2017)' (purported 6th Cir.) in support of tolling/limitations arguments; court identified it as another fabricated citation. Outcome: Order to Show Cause. Order to Show Cause is here.",
-          "sanction_types": [
-            "monetary",
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "administrative",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2092/Wilkes_v._Canyon_School_USA_4_May_2026.pdf"
-        },
-        {
-          "id": "primerica-life-insurance-company-v-daniel-vett-finlayson-michelle-johnson-2026-0",
-          "name": "Primerica Life Insurance Company v. Daniel Vett Finlayson; Michelle Johnson",
-          "court": "D. Utah",
-          "judge": "",
-          "date": "2026-04-22",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Opposition contained multiple case citations the Court could not locate on Westlaw; counsel later confirmed clerical/research errors and the Court suggested possible improper AI use. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2021/Primerica_USA_22_April_2026.pdf"
-        },
-        {
-          "id": "nicholas-and-barbara-moulder-v-davis-school-district-on-behalf-of-mm-2026-03-23",
-          "name": "Nicholas and Barbara Moulder v. Davis School District (on behalf of M.M.)",
-          "court": "D. Utah",
-          "judge": "",
-          "date": "2026-03-23",
-          "amount": 1525,
-          "amount_display": "$1.5K",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Plaintiffs' briefing cited a non-existent case as legal authority; court found the case did not exist and counsel admitted failing to verify after using AI. Outcome: CLE; Monetary Sanction.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1836/Moulder_v._Davis_School_USA_23_March_2026.pdf"
-        },
-        {
-          "id": "prisbrey-v-prisbrey-2026-03-19",
-          "name": "Prisbrey v. Prisbrey",
-          "court": "CA Utah",
-          "judge": "",
-          "date": "2026-03-19",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellate brief included multiple incorrect or nonexistent Utah case citations; the court found four of six cited authorities incorrect and said some citations \"appear to be made out of whole cloth.\"",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "family",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1834/Prisbrey_v_Prisbrey_USA_19_March_2026.pdf"
-        },
-        {
-          "id": "ryan-lee-v-capital-one-bank-et-al-2026-02-24",
-          "name": "Ryan Lee v. Capital One Bank et al.",
-          "court": "D. Utah",
-          "judge": "",
-          "date": "2026-02-24",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "The report recommended dismissal of claims against a defendant and admonished the self-represented plaintiff to avoid misrepresentations in future filings, discussing defective citations and the possibility of sanctions when legal materials are not accurately checked.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1656/Ryan_Lee_Plaintiff_v_Capital_One_Bank_USA_USA_24_February_2026.pdf"
-        },
-        {
-          "id": "black-oak-capital-boca-llc-v-paul-evans-llc-et-al-2025-12-04",
-          "name": "Black Oak Capital BOCA, LLC v. Paul Evans, LLC, et al.",
-          "court": "D. Utah",
-          "judge": "",
-          "date": "2025-12-04",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Opposition cited Rawson v. Mathews, 212 P.3d 752, 756–57 (Utah 2009) to support equitable tolling; court determined the opinion does not exist and called it a hallucinated case. Outcome: Order for counsel to read cited authorities and file a certification within 30 days.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1144/Black_Oak_Capital_v._Paul_Evans_USA_4_December_2025.pdf"
-        },
-        {
-          "id": "ross-logan-v-lvnv-funding-et-al-2025-11-05",
-          "name": "Ross Logan v. LVNV Funding et al.",
-          "court": "D. Utah",
-          "judge": "",
-          "date": "2025-11-05",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "In a service-and-default dispute, the District of Utah denied without prejudice a request to strike Logan’s opposition even though the movant alleged it was AI-generated, because Rule 12(f) did not authorize striking that memorandum. The court expressly warned of serious concerns about alleged AI-hallucinated quotations and left any sanctions issue to a possible Rule 11 motion.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/988/Logan_v._LVNV_Funding_USA_5_November_2025.pdf"
-        },
-        {
-          "id": "khoury-et-al-v-intermountain-health-care-inc-et-al-2025-09-30",
-          "name": "Khoury et al v. Intermountain Health Care Inc. et al",
-          "court": "D. Utah",
-          "judge": "",
-          "date": "2025-09-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "ChatGPT",
-          "summary": "Fabricated: Exhibits & Submissions Outcome: Case dismissed. Case dismissed for \"good cause\" in light of motions to dismiss expert. Expert had confessed using ChatGPT.",
-          "sanction_types": [
-            "case-dismissed"
-          ],
-          "tags": [
-            "fake-citations",
-            "administrative",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/843/Khoury_et_al_v_Intermountain_Health_Care_Inc__utdce-20-00372__0307.0.pdf"
-        },
-        {
-          "id": "andersen-v-olympus-as-daybreak-2025-05-30",
-          "name": "Andersen v. Olympus as Daybreak",
-          "court": "D. Utah",
-          "judge": "",
-          "date": "2025-05-30",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Outcome: Warning. In an earlier decision, the court had already warned the plaintiff against \"any further legal misrepresentations in future communications\".",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "trial"
-          ],
-          "source_url": "https://law.justia.com/cases/federal/district-courts/utah/utdce/2:2025cv00178/154869/20/"
-        },
-        {
-          "id": "garner-v-kadince-2025-05-22",
-          "name": "Garner v. Kadince",
-          "court": "CA Utah",
-          "judge": "",
-          "date": "2025-05-22",
-          "amount": 1000,
-          "amount_display": "$1.0K",
-          "severity": "medium",
-          "tool": "ChatGPT",
-          "summary": "Fabricated: Case Law | Fabricated appellate case cited in the Petition; opposing counsel showed it appears only in ChatGPT and not in any legal database, and the court sanctioned counsel for relying on fake precedent. AI UseThe fabricated citations originated from a ChatGPT query submitted by an unlicensed law clerk at Petitioner's law firm. Neither Counsel reviewed the petition’s contents before filing. The firm had no AI use policy in place at the time, though they implemented one after the order to show cause was issued.Hallucination DetailsChief among the hallucinations was Royer v. Nelson, which Respondents demonstrated existed only in ChatGPT’s output and in no official database. Other cited cases were also inapposite or unverifiable. Petitioner’s counsel admitted fault and stated they were unaware AI had been used during drafting.Ruling/SanctionThe court issued three targeted sanctions:Attorney fees: Respondents’ counsel are to submit an itemized bill; Counsel must pay within 10 days of receiptClient refund: Petitioner’s counsel must refund all fees paid by Mr. Garner in relation to the defective petitionCharitable payment: Counsel must donate $1,000 to “and Justice for all” within 14 days and file proof of payment with the courtKey Judicial ReasoningThe panel (Per Curiam) emphasized that the conduct, while not malicious, still diverted judicial resources and imposed unnecessary burdens on the opposing party. Unlike Mata or Hayes, the attorneys in this case quickly admitted the issue and cooperated, which the court acknowledged. Nonetheless, the submission of fabricated law—especially under counsel's signature—breaches core duties of candor and verification, warranting formal sanctions. The court warned that Utah’s judiciary cannot be expected to verify every citation and must be able to trust lawyers to do so",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "fake-citations",
-            "contract",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/397/Garner_v._Kadince_UT_AC_USA_2025.pdf"
         }
       ]
     },
@@ -24430,7 +24451,7 @@
     }
   ],
   "by_week": {
-    "2026-W35": 9,
+    "2026-W35": 10,
     "2026-W34": 23,
     "2026-W33": 23,
     "2026-W32": 26,
@@ -24566,7 +24587,7 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-08": 81,
+    "2026-08": 82,
     "2026-07": 121,
     "2026-06": 127,
     "2026-05": 154,
@@ -24611,11 +24632,11 @@
     "2023": 16,
     "2024": 59,
     "2025": 849,
-    "2026": 1056
+    "2026": 1057
   },
   "by_tool": {
     "Unidentified": 424,
-    "AI (implied, unspecified)": 1327,
+    "AI (implied, unspecified)": 1328,
     "ChatGPT": 109,
     "Strongsuit": 1,
     "Claude and ChatGPT": 1,
@@ -24722,8 +24743,8 @@
     "7th Circuit": 117,
     "5th Circuit": 141,
     "3rd Circuit": 77,
+    "10th Circuit": 116,
     "9th Circuit": 307,
-    "10th Circuit": 115,
     "8th Circuit": 60,
     "2nd Circuit": 146,
     "D.C. Circuit": 19,
@@ -24777,7 +24798,7 @@
     },
     {
       "week": "2026-W35",
-      "count": 9
+      "count": 10
     }
   ]
 }

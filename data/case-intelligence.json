@@ -452,6 +452,60 @@
     }
   },
   {
+    "id": "jack-ferm-v-agritech-properties-et-al-2026-08-24",
+    "slug": "jack-ferm-v-agritech-properties-et-al-2026-08-24",
+    "case_name": "Jack Ferm v. Agritech Properties, et al.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "False Quotes: Case Law Outcome: Warning. (Existence of hallucinations in drafting verified by myself thanks to PelAIkan.)",
+    "direct_answer": "False Quotes: Case Law Outcome: Warning. (Existence of hallucinations in drafting verified by myself thanks to PelAIkan.)",
+    "why_it_matters": "This matter connects pro se and fabricated quotes with Warning in D. Utah. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fabricated quotes and records Warning. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2956/Ferm_v._Agritech_USA_25_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "D. Utah",
+      "jurisdiction": "federal",
+      "state": "UT",
+      "country": "US",
+      "circuit": "10th Circuit",
+      "judge": null,
+      "date": "2026-08-24",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Warning",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fabricated-quotes",
+        "trial"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "michael-l-ruiz-v-magellan-financial-insurance-services-2-2026-08-24",
     "slug": "michael-l-ruiz-v-magellan-financial-insurance-services-2-2026-08-24",
     "case_name": "Michael L. Ruiz v. Magellan Financial & Insurance Services (2)",
@@ -112595,34 +112649,28 @@
     }
   },
   {
-    "id": "kingdom-of-sweden-v-samantha-ashhadi-soliman-2025-12-01",
-    "slug": "kingdom-of-sweden-v-samantha-ashhadi-soliman-2025-12-01",
-    "case_name": "Kingdom of Sweden v. Samantha Ashhadi Soliman",
+    "id": "kingdom-of-sweden-v-x-2025-12-01",
+    "slug": "kingdom-of-sweden-v-x-2025-12-01",
+    "case_name": "Kingdom of Sweden v. [X]",
     "classification": "adjudicated",
     "severity": "low",
-    "summary": "In an appeal regarding a breach of contract judgment for unpaid student loans, the California Court of Appeal admonished the pro se appellant for extensive reliance on nonexistent legal authority and misrepresented case law. The appellant cited cases that did not support her propositions or address the issues cited, included fabricated quotes, and relied on nonexistent statutes. The court noted that while such conduct could justify striking the brief or dismissing the appeal, it chose to decide the case on its merits, ultimately affirming the trial court's judgment in favor of the Kingdom of Sweden. The court's opinion explicitly documented these citation and quotation errors as part of the official record.",
-    "why_it_matters": "This record documents a Pro Se Litigant filing issue in CA California, with the listed outcome: Admonishment.",
-    "judicial_reasoning": "Misrepresented: Case Law | Appellant cited Southern Cal. Gas Co. v. Public Utilities Com. as holding courts must evaluate standing based on objective evidence; the court noted that Southern Cal. Gas does not discuss standing and thus was misapplied. || Misrepresented: Case Law | Appellant relied on Patterson v. Superior Court for the proposition that courts cannot presume standing; the court observed Patterson does not address standing and that Patterson was disapproved by Ramirez. || Fabricated: Legal Norm | In her reply brief appellant cited a nonexistent 'Code of Civil Procedure section 2330' claiming it mandates how agency relationships must be established; the court treated this statute as a nonexistent citation. || Misrepresented: Legal Norm | Appellant misquoted Code of Civil Procedure section 437c, subdivision (f)(2), claiming it bars granting summary judgment while a counter-motion is pending; the court noted the subdivision's actual text differs from appellant's description. || False Quotes: Case Law | Appellant attributed the sentence 'Standing is a jurisdictional issue that must be addressed before the merits of a case may be reached.' to Apartment Assn. of Los Angeles County, Inc. v. City of Los Angeles; the court found the quoted language does not appear in that opinion. || False Quotes: Case Law | Appellant quoted Angelucci v. Century Supper Club as stating 'A plaintiff must have a real, present interest in the outcome – not just a theoretical or governmental interest in enforcing its laws.' The court found the quote is not in Angelucci.",
-    "decision_context": "The record concerns whether authorities presented to the decision-maker existed and could be verified. The tracked outcome is Admonishment; the linked source controls the precise reasoning.",
+    "summary": "Misrepresented: Case Law | Appellant cited Southern Cal. Gas Co. v. Public Utilities Com. as holding courts must evaluate standing based on objective evidence; the court noted that Southern Cal. Gas does not discuss standing and thus was misapplied. Outcome: Admonishment.",
+    "direct_answer": "Misrepresented: Case Law | Appellant cited Southern Cal. Gas Co. v. Public Utilities Com. as holding courts must evaluate standing based on objective evidence; the court noted that Southern Cal. Gas does not discuss standing and thus was misapplied. Outcome: Admonishment.",
+    "why_it_matters": "This matter connects pro se and fake citations with Admonishment in CA California. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Admonishment. The linked source controls the precise reasoning and procedural context.",
     "practical_implications": [
-      "Verify each cited authority, quotation, and proposition against the underlying source before filing.",
-      "Confirm that every authority actually supports the proposition for which it is offered."
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
     ],
-    "evidence_boundary": "Retained unchanged after audit: the existing summary is source-specific, non-placeholder, and supported by the recorded source link. Read the underlying source before relying on it for legal advice or a filing.",
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
     "verified_fields": [
       "case_name",
       "court",
       "date",
-      "party",
-      "ai_tool_used",
-      "hallucination_items",
-      "outcome",
-      "source_url",
-      "procedural_posture",
-      "ai_attribution_status",
-      "recorded_tool",
-      "failure_modes",
-      "judicial_reasoning"
+      "source_url"
     ],
     "source": {
       "url": "https://www.damiencharlotin.com/documents/1114/Sweden_v._Ashhadi_USA_1_December_2025.pdf",
@@ -112654,45 +112702,9 @@
       ]
     },
     "publication": {
-      "ready": true,
-      "agent_status": "enriched",
-      "blocked_reason": null
-    },
-    "direct_answer": "The court admonished the pro se appellant for filing briefs containing multiple misrepresented cases, fabricated legal quotes, and nonexistent statutory citations. While the court noted these violations could warrant dismissal, it proceeded to affirm the underlying judgment on the merits.",
-    "procedural_posture": "Appellate review of a trial court's order granting summary judgment in favor of the respondent, Kingdom of Sweden.",
-    "ai_attribution_status": "implied",
-    "recorded_tool": "AI (implied, unspecified)",
-    "outcome_summary": "The court affirmed the trial court's judgment and issued an admonishment regarding the appellant's procedural violations.",
-    "uncertainties": [
-      "The specific AI tool used by the appellant is not identified in the record.",
-      "The extent to which the appellant relied on AI versus manual error is not explicitly stated."
-    ],
-    "evidence_notes": [
-      {
-        "field": "outcome",
-        "basis": "The court affirmed the judgment and admonished the appellant for procedural violations.",
-        "locator": "p. 2, 4"
-      },
-      {
-        "field": "recorded_tool",
-        "basis": "The court noted the appellant's briefs contained errors characteristic of AI-generated hallucinations.",
-        "locator": "p. 1"
-      },
-      {
-        "field": "judicial_reasoning",
-        "basis": "The court explained that while the appellant's conduct could justify dismissal, it chose to decide the appeal on the merits.",
-        "locator": "p. 2"
-      }
-    ],
-    "evidence_review": {
-      "status": "primary-document-verified",
-      "confidence": "high",
-      "reviewed_at": "2026-07-27T19:22:49.207Z",
-      "prompt_version": "case-intelligence-v7",
-      "limitations": [
-        "The specific AI tool used by the appellant is not identified in the record.",
-        "The extent to which the appellant relied on AI versus manual error is not explicitly stated."
-      ]
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

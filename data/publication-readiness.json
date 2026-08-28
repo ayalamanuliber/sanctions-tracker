@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "847383c98a403d3b70a612caba66c23149e3d41d1662d0cedbed9069802aa620",
-  "corpus_checked": "2026-08-27",
-  "total_cases": 1980,
-  "total_assessments": 1980,
+  "dataset_checksum": "ae07386435828055e4ce669f3d948618292fbc44e56b2ee12780deabbef051f3",
+  "corpus_checked": "2026-08-28",
+  "total_cases": 1981,
+  "total_assessments": 1981,
   "tiers": {
-    "index-ready": 1957,
+    "index-ready": 1958,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 102,
-    "operational-lesson-not-recorded": 1244,
+    "operational-lesson-not-recorded": 1245,
     "outcome-not-recorded": 383,
-    "publication-review-pending": 1980,
+    "publication-review-pending": 1981,
     "source-link-missing": 4,
-    "specific-ai-tool-not-established": 1752,
+    "specific-ai-tool-not-established": 1753,
     "summary-missing": 1,
-    "summary-needs-detail": 807,
+    "summary-needs-detail": 808,
     "summary-too-brief": 17
   },
   "records": [
@@ -734,6 +734,109 @@
       "index_eligible": true,
       "source_eligible": true,
       "summary_length": 219,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 6,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-needs-detail",
+          "impact": "improvement",
+          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "jack-ferm-v-agritech-properties-et-al-2026-08-24",
+      "slug": "jack-ferm-v-agritech-properties-et-al-2026-08-24",
+      "score": 81,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 121,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -119782,8 +119885,8 @@
       ]
     },
     {
-      "id": "kingdom-of-sweden-v-samantha-ashhadi-soliman-2025-12-01",
-      "slug": "kingdom-of-sweden-v-samantha-ashhadi-soliman-2025-12-01",
+      "id": "kingdom-of-sweden-v-x-2025-12-01",
+      "slug": "kingdom-of-sweden-v-x-2025-12-01",
       "score": 85,
       "maximum_score": 100,
       "tier": "index-ready",

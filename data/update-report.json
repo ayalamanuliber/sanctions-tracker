@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-08-28T20:13:20.217Z",
-  "checked_date": "2026-08-28",
+  "checked_at": "2026-08-29T13:51:47.915Z",
+  "checked_date": "2026-08-29",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
   "raw_rows": 1981,
   "imported_records": 1981,
-  "previous_records": 1980,
-  "record_delta": 1,
+  "previous_records": 1981,
+  "record_delta": 0,
   "skipped_missing_date": 0,
   "invalid_dates": 0,
   "future_dates": 0,
@@ -14,6 +14,6 @@
   "source_link_coverage_pct": 99.8,
   "latest_record_date": "2026-08-27",
   "latest_record_name": "Thomas Raynard James v. Detective Kevin Conley, et al.",
-  "dataset_checksum": "ae07386435828055e4ce669f3d948618292fbc44e56b2ee12780deabbef051f3",
+  "dataset_checksum": "b098fdbe46f3d7a2ea5df4d7a06033d2cd5d235efc28e8d04d703b7ec1c9ecea",
   "status": "validated"
 }

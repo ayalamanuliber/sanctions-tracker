@@ -1,14 +1,18 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "b098fdbe46f3d7a2ea5df4d7a06033d2cd5d235efc28e8d04d703b7ec1c9ecea",
-  "corpus_checked": "2026-08-29",
-  "total_cases": 1981,
+  "dataset_checksum": "08ff4eae21c1627eebb3b6ecef8962bdd6d9b3079d32a7489d10fef798e4ab28",
+  "corpus_checked": "2026-08-30",
+  "total_cases": 1983,
   "tiers": {
-    "index-ready": 1958,
+    "index-ready": 1960,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "by_slug": {
+    "estate-of-bernie-leynell-nelson-v-hurley-medical-center-2026-08-28": {
+      "tier": "index-ready",
+      "score": 75
+    },
     "thomas-raynard-james-v-detective-kevin-conley-et-al-2026-08-27": {
       "tier": "index-ready",
       "score": 85
@@ -52,6 +56,10 @@
     "adibi-v-aig-israel-insurance-co-2026-08-23": {
       "tier": "enrichment-ready",
       "score": 75
+    },
+    "tel-aviv-district-court-ai-case-2026-08-23": {
+      "tier": "index-ready",
+      "score": 85
     },
     "capital-standard-llc-v-u-s-bank-national-association-2026-08-21": {
       "tier": "index-ready",

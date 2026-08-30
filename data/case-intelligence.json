@@ -1,5 +1,56 @@
 [
   {
+    "id": "estate-of-bernie-leynell-nelson-v-hurley-medical-center-2026-08-28",
+    "slug": "estate-of-bernie-leynell-nelson-v-hurley-medical-center-2026-08-28",
+    "case_name": "Estate of Bernie Leynell Nelson v Hurley Medical Center",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "No AI-generated hallucinations were identified in the opinion. The dissenting judge critiques plaintiffs for mis-citing and misrepresenting prior authorities (e.g., Chapa, VanStelle, Howard) but these are legal mischaracterizations by parties, not fabricated or AI-originated citations. The opinion discusses consent-form precedent (Markel II/IV, Grewe) and concludes the hospital’s consent form dispelled any reasonable belief of ostensible agency; no sanctions or remedial actions related to AI misuse or fabricated authority were imposed.",
+    "direct_answer": "No AI-generated hallucinations were identified in the opinion. The dissenting judge critiques plaintiffs for mis-citing and misrepresenting prior authorities (e.g., Chapa, VanStelle, Howard) but these are legal mischaracterizations by parties, not fabricated or AI-originated citations. The opinion discusses consent-form precedent (Markel II/IV, Grewe) and concludes the hospital’s consent form dispelled any reasonable belief of ostensible agency; no sanctions or remedial actions related to AI misuse or fabricated authority were imposed.",
+    "why_it_matters": "This matter connects trial with a recorded judicial or procedural response in Mich. Ct. App.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies trial and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2958/Nelson_v._Hurley_Medical_Center.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Mich. Ct. App.",
+      "jurisdiction": "state",
+      "state": "",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-28",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "thomas-raynard-james-v-detective-kevin-conley-et-al-2026-08-27",
     "slug": "thomas-raynard-james-v-detective-kevin-conley-et-al-2026-08-27",
     "case_name": "Thomas Raynard James v. Detective Kevin Conley, et al.",
@@ -606,6 +657,60 @@
       ],
       "sanction_types": [
         "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "tel-aviv-district-court-ai-case-2026-08-23",
+    "slug": "tel-aviv-district-court-ai-case-2026-08-23",
+    "case_name": "אדיבי נ' איי אי ג'י ישראל חברה לביטוח בע\"מ",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | Plaintiff's counsel cited this purported appellate decision in the response; the court found no record of such a decision and treated it as a fabricated AI-generated citation. Outcome: Court found the filings relied on AI-generated fabricated case citations, admonished counsel, and ordered the plaintiff to pay respondent's costs of 20,000 ILS; warned about uncontrolled use of AI and the risk of future personal costs.. The court determined that the plaintiff's counsel relied on 'AI hallucinations' — citations presented as judicial precedents that do not exist. The judge reviewed the referenced authorities, found no record of the cited decisions, characterized the reliance as misleading and possibly produced by AI, and sanctioned the plaintiff by ordering costs of 20,000 ILS while issuing a formal warning about uncritical use of AI in pleadings.",
+    "direct_answer": "Fabricated: Case Law | Plaintiff's counsel cited this purported appellate decision in the response; the court found no record of such a decision and treated it as a fabricated AI-generated citation. Outcome: Court found the filings relied on AI-generated fabricated case citations, admonished counsel, and ordered the plaintiff to pay respondent's costs of 20,000 ILS; warned about uncontrolled use of AI and the risk of future personal costs.. The court determined that the plaintiff's counsel relied on 'AI hallucinations' — citations presented as judicial precedents that do not exist. The judge reviewed the referenced authorities, found no record of the cited decisions, characterized the reliance as misleading and possibly produced by AI, and sanctioned the plaintiff by ordering costs of 20,000 ILS while issuing a formal warning about uncritical use of AI in pleadings.",
+    "why_it_matters": "This matter connects fake citations and trial with Court found the filings relied on AI-generated fabricated case citations, admonished counsel, and ordered the plaintiff to pay respondent's costs of 20,000 ILS; warned about uncontrolled use of AI and the risk of future personal costs. in Tel Aviv District Court. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and trial and records Court found the filings relied on AI-generated fabricated case citations, admonished counsel, and ordered the plaintiff to pay respondent's costs of 20,000 ILS; warned about uncontrolled use of AI and the risk of future personal costs.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2957/adiby1.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Tel Aviv District Court",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Israel",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-23",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Court found the filings relied on AI-generated fabricated case citations, admonished counsel, and ordered the plaintiff to pay respondent's costs of 20,000 ILS; warned about uncontrolled use of AI and the risk of future personal costs.",
+      "amount": 1,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "warning"
       ]
     },
     "publication": {

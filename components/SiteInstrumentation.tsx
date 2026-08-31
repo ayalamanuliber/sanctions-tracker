@@ -158,7 +158,9 @@ export function trackProductEvent(
 
 function sanitizedEvent<T extends { url: string }>(event: T): T {
   try {
-    const url = new URL(event.url, window.location.origin);
+    // Next's pathname omits the configured basePath. Attribute telemetry to
+    // the public browser URL so /legal-ai-risk is not collapsed to /dataset.
+    const url = new URL(window.location.href);
     url.search = "";
     url.hash = "";
     return { ...event, url: url.toString() };

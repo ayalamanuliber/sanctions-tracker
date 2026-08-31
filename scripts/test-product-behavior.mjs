@@ -51,6 +51,10 @@ for (const stableProxyPath of [
   );
 }
 assert.ok(
+  instrumentationSource.includes("new URL(window.location.href)"),
+  "Vercel telemetry must preserve the public /legal-ai-risk browser path",
+);
+assert.ok(
   nextConfigSource.includes("https://www.googletagmanager.com") &&
     nextConfigSource.includes("https://*.google-analytics.com"),
   "The CSP must permit the configured analytics transports",

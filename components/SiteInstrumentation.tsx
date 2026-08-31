@@ -9,6 +9,13 @@ import { useEffect } from "react";
 const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-3NT67L5FK9";
 const SESSION_EVENT_KEY = "aivortex_tracker_session_started";
+// Legal AI Risk is served both on its Vercel project and below /legal-ai-risk
+// on www.aivortex.io. Stable host-relative observability paths work on both
+// hosts; deployment-injected hashed paths only exist on the origin project.
+const VERCEL_ANALYTICS_SCRIPT = "/_vercel/insights/script.js";
+const VERCEL_ANALYTICS_ENDPOINT = "/_vercel/insights";
+const VERCEL_SPEED_SCRIPT = "/_vercel/speed-insights/script.js";
+const VERCEL_SPEED_ENDPOINT = "/_vercel/speed-insights/vitals";
 
 type EventValue = string | number | boolean;
 type EventProperties = Record<string, EventValue | undefined>;
@@ -416,8 +423,18 @@ export default function SiteInstrumentation() {
         onLoad={initializeGoogleAnalytics}
         onReady={initializeGoogleAnalytics}
       />
-      <Analytics beforeSend={sanitizedEvent} />
-      <SpeedInsights beforeSend={sanitizedEvent} />
+      <Analytics
+        beforeSend={sanitizedEvent}
+        scriptSrc={VERCEL_ANALYTICS_SCRIPT}
+        viewEndpoint={`${VERCEL_ANALYTICS_ENDPOINT}/view`}
+        eventEndpoint={`${VERCEL_ANALYTICS_ENDPOINT}/event`}
+        sessionEndpoint={`${VERCEL_ANALYTICS_ENDPOINT}/session`}
+      />
+      <SpeedInsights
+        beforeSend={sanitizedEvent}
+        scriptSrc={VERCEL_SPEED_SCRIPT}
+        endpoint={VERCEL_SPEED_ENDPOINT}
+      />
     </>
   );
 }

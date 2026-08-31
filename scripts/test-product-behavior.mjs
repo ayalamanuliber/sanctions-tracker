@@ -37,6 +37,19 @@ assert.ok(
     instrumentationSource.includes("www.googletagmanager.com/gtag/js"),
   "The tracker must load GA4, Vercel Web Analytics, and Speed Insights",
 );
+for (const stableProxyPath of [
+  "/_vercel/insights/script.js",
+  "/_vercel/insights/view",
+  "/_vercel/insights/event",
+  "/_vercel/insights/session",
+  "/_vercel/speed-insights/script.js",
+  "/_vercel/speed-insights/vitals",
+]) {
+  assert.ok(
+    instrumentationSource.includes(stableProxyPath),
+    `Observability must use the stable public-host path ${stableProxyPath}`,
+  );
+}
 assert.ok(
   nextConfigSource.includes("https://www.googletagmanager.com") &&
     nextConfigSource.includes("https://*.google-analytics.com"),

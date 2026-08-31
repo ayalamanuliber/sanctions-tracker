@@ -39,15 +39,23 @@ assert.ok(
 );
 for (const stableProxyPath of [
   "/_vercel/insights/script.js",
-  "/_vercel/insights/view",
-  "/_vercel/insights/event",
-  "/_vercel/insights/session",
+  "/_vercel/insights",
   "/_vercel/speed-insights/script.js",
   "/_vercel/speed-insights/vitals",
 ]) {
   assert.ok(
     instrumentationSource.includes(stableProxyPath),
     `Observability must use the stable public-host path ${stableProxyPath}`,
+  );
+}
+for (const endpointProp of [
+  'viewEndpoint={`${VERCEL_ANALYTICS_ENDPOINT}/view`}',
+  'eventEndpoint={`${VERCEL_ANALYTICS_ENDPOINT}/event`}',
+  'sessionEndpoint={`${VERCEL_ANALYTICS_ENDPOINT}/session`}',
+]) {
+  assert.ok(
+    instrumentationSource.includes(endpointProp),
+    `Observability must derive the stable host-relative endpoint ${endpointProp}`,
   );
 }
 assert.ok(

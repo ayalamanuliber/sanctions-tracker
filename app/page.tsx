@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ProductHome from "@/components/ProductHome";
 import meta from "@/data/meta.json";
+import { PUBLIC_DATASET_MANIFEST } from "@/lib/public-dataset";
 import { PUBLIC_BASE_URL, SITE_PUBLICATION_DATE, publicUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -52,23 +53,24 @@ export default function HomePage() {
       {
         "@type": "Dataset",
         "@id": `${PUBLIC_BASE_URL}#dataset`,
-        name: "AI Vortex Legal AI Risk Corpus",
+        name: PUBLIC_DATASET_MANIFEST.name,
         description:
           "Structured public-record research on legal AI citation failures, court responses, sanctions, and related consequences.",
-        url: publicUrl("/cases"),
+        url: publicUrl("/dataset"),
         creator: { "@id": "https://www.aivortex.io/#organization" },
-        dateModified: SITE_PUBLICATION_DATE,
+        dateModified: PUBLIC_DATASET_MANIFEST.last_checked,
+        version: PUBLIC_DATASET_MANIFEST.version,
         isAccessibleForFree: true,
         distribution: [
           {
             "@type": "DataDownload",
             encodingFormat: "application/json",
-            contentUrl: publicUrl("/api/dataset?format=json"),
+            contentUrl: PUBLIC_DATASET_MANIFEST.json_url,
           },
           {
             "@type": "DataDownload",
             encodingFormat: "text/csv",
-            contentUrl: publicUrl("/api/dataset?format=csv"),
+            contentUrl: PUBLIC_DATASET_MANIFEST.csv_url,
           },
         ],
       },

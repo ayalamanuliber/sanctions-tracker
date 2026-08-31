@@ -456,6 +456,8 @@ export default function SourcesPage() {
             <section className={`${shell.card} ${styles.section}`}>
               <div className={styles.railHeading}><FileCheck2 aria-hidden="true" /><div><span>Artifacts</span><h2>Research exports</h2></div></div>
               <div className={styles.download}>
+                <Link href="/dataset">Dataset, version, and citation guide <ExternalLink /></Link>
+                <Link href="/api/dataset/manifest">Machine-readable dataset manifest <ExternalLink /></Link>
                 <Link href="/api/artifact?type=source&format=md">Global source appendix <ExternalLink /></Link>
                 <Link href="/api/artifact?type=source&format=md&state=NJ">New Jersey appendix <ExternalLink /></Link>
                 <Link href="/api/artifact?type=source&format=md&state=NY">New York appendix <ExternalLink /></Link>

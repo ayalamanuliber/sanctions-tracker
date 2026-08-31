@@ -50,6 +50,7 @@ const sourceSuggestions = ["CourtListener", "Damien Charlotin", "uscourts.gov", 
 
 const workflows = [
   { icon: Search, label: "Search every public record", href: "/cases" },
+  { icon: Database, label: "Download and cite the dataset", href: "/dataset" },
   { icon: MapIcon, label: "Explore the evidence map", href: "/map" },
   { icon: Landmark, label: "Browse courts and jurisdictions", href: "/courts" },
   { icon: FileSearch, label: "Analyze the public corpus", href: "/analytics" },

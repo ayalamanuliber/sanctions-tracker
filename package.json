@@ -17,6 +17,7 @@
     "validate:responsive": "node scripts/validate-responsive-routes.mjs",
     "test:product": "node scripts/test-product-behavior.mjs",
     "test:public-routes": "node scripts/validate-public-routes.mjs",
+    "test:authority-asset": "node scripts/validate-authority-asset.mjs",
     "test:publication-readiness": "node scripts/test-publication-readiness.mjs",
     "indexnow:submit": "node scripts/submit-indexnow.mjs",
     "indexnow:dry-run": "node scripts/submit-indexnow.mjs --dry-run",

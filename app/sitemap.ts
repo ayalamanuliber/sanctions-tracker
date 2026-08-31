@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/topics",
     "/map",
     "/analytics",
+    "/dataset",
     "/sources",
     "/resources",
     "/about",

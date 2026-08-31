@@ -3,22 +3,17 @@ import { NextRequest, NextResponse } from "next/server";
 import {
   LAST_CHECKED,
   LATEST_RECORD_DATE,
-  LEGAL_RISK_CASES,
   queryCases,
   sourceTier,
   type CaseQuery,
 } from "@/lib/cases";
 import { attributionStatus } from "@/lib/corpus-analytics";
-
-const PUBLIC_FIELDS = [
-  "id", "slug", "case_name", "date", "court", "judge", "country", "state",
-  "severity", "ai_tool_used", "tags", "sanction_types", "outcome", "amount",
-  "amount_display", "source_name", "source_url", "alleged",
-] as const;
-
-function publicRecord(item: (typeof LEGAL_RISK_CASES)[number]) {
-  return Object.fromEntries(PUBLIC_FIELDS.map((field) => [field, item[field]]));
-}
+import {
+  PUBLIC_DATASET_FIELDS,
+  PUBLIC_DATASET_MANIFEST,
+  PUBLIC_DATASET_VERSION,
+  publicDatasetRecord,
+} from "@/lib/public-dataset";
 
 function csvCell(value: unknown) {
   const content = Array.isArray(value) ? value.join(" | ") : String(value ?? "");
@@ -57,28 +52,36 @@ export async function GET(request: NextRequest) {
     if (review === "not-reviewed" && item.reviewed) return false;
     return true;
   });
-  const records = filtered.map(publicRecord);
+  const records = filtered.map(publicDatasetRecord);
   const filteredLabel = params.size > 1 ? "filtered" : "complete";
   const filename = `ai-vortex-legal-ai-risk-${filteredLabel}-${LAST_CHECKED}.${format}`;
+  const commonHeaders = {
+    "Cache-Control": "public, max-age=3600, stale-while-revalidate=86400",
+    "Content-Disposition": `attachment; filename="${filename}"`,
+    "Last-Modified": new Date(`${PUBLIC_DATASET_VERSION}T00:00:00Z`).toUTCString(),
+    "X-Dataset-Records": String(records.length),
+    "X-Dataset-Version": PUBLIC_DATASET_VERSION,
+  };
   if (format === "json") {
     return NextResponse.json(
       {
+        dataset: PUBLIC_DATASET_MANIFEST,
         last_checked: LAST_CHECKED,
         latest_record_date: LATEST_RECORD_DATE,
         record_count: records.length,
         records,
       },
-      { headers: { "Content-Disposition": `attachment; filename="${filename}"` } },
+      { headers: commonHeaders },
     );
   }
   const csv = [
-    PUBLIC_FIELDS.join(","),
-    ...records.map((record) => PUBLIC_FIELDS.map((field) => csvCell(record[field])).join(",")),
+    PUBLIC_DATASET_FIELDS.join(","),
+    ...records.map((record) => PUBLIC_DATASET_FIELDS.map((field) => csvCell(record[field])).join(",")),
   ].join("\n");
   return new NextResponse(csv, {
     headers: {
+      ...commonHeaders,
       "Content-Type": "text/csv; charset=utf-8",
-      "Content-Disposition": `attachment; filename="${filename}"`,
     },
   });
 }

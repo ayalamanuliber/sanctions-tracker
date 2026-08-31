@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(PUBLIC_ORIGIN),
   title: "AI Vortex Legal AI Intelligence | Evidence You Can Trace",
   description: "Prepare your next move with source-linked legal AI cases, judicial responses, sanctions, and review records you can inspect and share.",
+  alternates: {
+    types: {
+      "application/rss+xml": publicUrl("/feed"),
+      "application/json": publicUrl("/api/dataset/manifest"),
+    },
+  },
   icons: {
     icon: [
       { url: assetUrl("/favicon-48x48.png"), sizes: "48x48", type: "image/png" },

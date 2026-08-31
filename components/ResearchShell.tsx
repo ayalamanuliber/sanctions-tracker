@@ -70,7 +70,7 @@ export default function ResearchShell({ children }: { children: React.ReactNode 
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
           <span>AI Vortex is an independent publisher of legal AI risk intelligence. Not legal advice.</span>
-          <nav aria-label="Footer navigation"><Link href="/cases">Cases</Link><Link href="/courts">Courts</Link><Link href="/judges">Judges</Link><Link href="/tools">AI tools</Link><Link href="/sources">Methodology</Link><Link href="/resources">Resources</Link><Link href="/about">About</Link><Link href="/submit">Corrections</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></nav>
+          <nav aria-label="Footer navigation"><Link href="/cases">Cases</Link><Link href="/courts">Courts</Link><Link href="/judges">Judges</Link><Link href="/tools">AI tools</Link><Link href="/dataset">Dataset</Link><Link href="/sources">Methodology</Link><Link href="/resources">Resources</Link><Link href="/about">About</Link><Link href="/submit">Corrections</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></nav>
         </div>
       </footer>
     </div>

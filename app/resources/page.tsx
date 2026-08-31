@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   Bot,
+  Database,
   FileCheck2,
   FileSearch,
   Gauge,
@@ -25,6 +26,12 @@ export const metadata: Metadata = {
 };
 
 const resources = [
+  {
+    icon: Database,
+    title: "Public dataset and citation guide",
+    body: "Download JSON or CSV, inspect the current version and checksum, and cite the corpus without losing its evidence boundaries.",
+    href: "/dataset",
+  },
   {
     icon: Scale,
     title: "Case and order library",

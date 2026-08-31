@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "08ff4eae21c1627eebb3b6ecef8962bdd6d9b3079d32a7489d10fef798e4ab28",
-  "corpus_checked": "2026-08-30",
-  "total_cases": 1983,
+  "dataset_checksum": "7c57ea491fa36333e0293949f8d7ed954b5225f57aa9e763e3a0041326cc0a09",
+  "corpus_checked": "2026-08-31",
+  "total_cases": 1994,
   "tiers": {
-    "index-ready": 1960,
+    "index-ready": 1971,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "by_slug": {
     "estate-of-bernie-leynell-nelson-v-hurley-medical-center-2026-08-28": {
       "tier": "index-ready",
-      "score": 75
+      "score": 80
     },
     "thomas-raynard-james-v-detective-kevin-conley-et-al-2026-08-27": {
       "tier": "index-ready",
@@ -22,6 +22,10 @@
       "score": 81
     },
     "krystal-faye-potterf-et-al-v-drew-f-wessels-et-al-2026-08-26": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "mfrd-and-national-disability-insurance-agency-2026-08-26": {
       "tier": "index-ready",
       "score": 81
     },
@@ -45,6 +49,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "heywood-v-state-of-queensland-department-of-education-2026-08-24": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "jack-ferm-v-agritech-properties-et-al-2026-08-24": {
       "tier": "index-ready",
       "score": 81
@@ -54,12 +62,8 @@
       "score": 86
     },
     "adibi-v-aig-israel-insurance-co-2026-08-23": {
-      "tier": "enrichment-ready",
-      "score": 75
-    },
-    "tel-aviv-district-court-ai-case-2026-08-23": {
       "tier": "index-ready",
-      "score": 85
+      "score": 81
     },
     "capital-standard-llc-v-u-s-bank-national-association-2026-08-21": {
       "tier": "index-ready",
@@ -205,9 +209,9 @@
       "tier": "index-ready",
       "score": 85
     },
-    "egan-v-commonwealth-of-australia-2026-fca-1104-2026-08-11": {
+    "egan-v-commonwealth-of-australia-2026-08-11": {
       "tier": "index-ready",
-      "score": 80
+      "score": 76
     },
     "eyong-v-72-barrow-st-realty-corp-2026-08-11": {
       "tier": "index-ready",
@@ -284,6 +288,14 @@
     "mohamed-ali-v-saeed-osman-2026-08-06": {
       "tier": "index-ready",
       "score": 81
+    },
+    "ms-wayan-buschman-v-good-to-great-schools-australia-2026-08-06": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "abudahou-v-metro-finance-pty-ltd-2026-08-05": {
+      "tier": "index-ready",
+      "score": 76
     },
     "jennifer-lynn-cain-v-hyatt-corporation-2026-08-05": {
       "tier": "index-ready",
@@ -513,6 +525,14 @@
       "tier": "index-ready",
       "score": 85
     },
+    "pravesh-koonjah-v-gpc-asia-pacific-pty-ltd-2026-07-23": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "weq-v-medical-board-of-australia-2026-07-23": {
+      "tier": "enrichment-ready",
+      "score": 65
+    },
     "asif-v-minister-for-immigration-and-citizenship-2026-07-22": {
       "tier": "index-ready",
       "score": 86
@@ -549,6 +569,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "shahin-v-industrial-relations-secretary-on-behalf-of-multicultural-nsw-no-2-2026-07-21": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "dc-yichang-city-hubei-ai-case-2026-07-21": {
       "tier": "index-ready",
       "score": 85
@@ -582,6 +606,10 @@
       "score": 85
     },
     "chryshawna-a-and-jeremy-webb-v-sullivan-county-assessor-2026-07-16": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "emmanuel-tischler-v-avada-traffic-pty-ltd-2026-07-16": {
       "tier": "index-ready",
       "score": 85
     },
@@ -625,6 +653,10 @@
       "tier": "index-ready",
       "score": 90
     },
+    "niyonkuru-v-early-childhood-regulatory-authority-department-of-education-2026-07-15": {
+      "tier": "index-ready",
+      "score": 76
+    },
     "rebecca-jean-v-seattle-credit-union-2026-07-15": {
       "tier": "index-ready",
       "score": 85
@@ -636,6 +668,10 @@
     "valurie-kaye-mettler-v-michigan-state-police-et-al-2026-07-15": {
       "tier": "index-ready",
       "score": 81
+    },
+    "broadwater-tower-2026-07-14": {
+      "tier": "index-ready",
+      "score": 85
     },
     "immigration-case-2026-07-14": {
       "tier": "enrichment-ready",
@@ -753,6 +789,10 @@
       "tier": "index-ready",
       "score": 76
     },
+    "laxton-construction-pty-ltd-v-ecofit-electrical-pty-ltd-2026-07-07": {
+      "tier": "index-ready",
+      "score": 76
+    },
     "recurso-de-suplicacion-0005472-2025-2026-07-07": {
       "tier": "index-ready",
       "score": 85
@@ -774,6 +814,10 @@
       "score": 80
     },
     "14095863-canada-inc-v-moosehead-breweries-limited-2026-07-03": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "miles-a-pseudonym-v-saunders-a-pseudonym-2026-07-03": {
       "tier": "index-ready",
       "score": 76
     },

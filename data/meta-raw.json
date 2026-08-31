@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-08-30",
-  "last_checked": "2026-08-30",
-  "last_checked_at": "2026-08-30T13:49:52.709Z",
+  "last_updated": "2026-08-31",
+  "last_checked": "2026-08-31",
+  "last_checked_at": "2026-08-31T16:11:49.097Z",
   "latest_record_date": "2026-08-28",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 1983,
-  "source_linked_count": 1979,
+  "source_record_count": 1994,
+  "source_linked_count": 1990,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 0,
-  "dataset_checksum": "08ff4eae21c1627eebb3b6ecef8962bdd6d9b3079d32a7489d10fef798e4ab28",
-  "total_cases": 1983,
+  "dataset_checksum": "7c57ea491fa36333e0293949f8d7ed954b5225f57aa9e763e3a0041326cc0a09",
+  "total_cases": 1994,
   "us_cases": 1364,
   "us_adjudicated": 1358,
   "us_alleged_only": 6,
   "countries_tracked": 42,
-  "enriched_count": 1983,
+  "enriched_count": 1994,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
@@ -22,18 +22,18 @@
   "largest_single_sanction": 282508,
   "avg_sanction": 7626,
   "severity_counts": {
-    "low": 1402,
+    "low": 1414,
     "high": 207,
-    "medium": 335,
+    "medium": 334,
     "career-ending": 39
   },
   "by_country": {
     "US": 1364,
-    "Israel": 58,
+    "Australia": 110,
+    "Israel": 57,
     "India": 14,
     "Brazil": 41,
     "Canada": 214,
-    "Australia": 98,
     "South Africa": 6,
     "Netherlands": 7,
     "GB": 62,
@@ -5764,15 +5764,35 @@
     },
     {
       "state": "MI",
-      "count": 49,
+      "count": 50,
       "total": 3485,
       "severities": {
-        "low": 37,
+        "low": 38,
         "medium": 8,
         "high": 3,
         "career-ending": 1
       },
       "cases": [
+        {
+          "id": "estate-of-bernie-leynell-nelson-v-hurley-medical-center-2026-08-28",
+          "name": "Estate of Bernie Leynell Nelson v Hurley Medical Center",
+          "court": "CA Michigan",
+          "judge": "",
+          "date": "2026-08-28",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "No AI-generated hallucinations were identified in the opinion. The dissenting judge critiques plaintiffs for mis-citing and misrepresenting prior authorities (e.g., Chapa, VanStelle, Howard) but these are legal mischaracterizations by parties, not fabricated or AI-originated citations. The opinion discusses consent-form precedent (Markel II/IV, Grewe) and concludes the hospital’s consent form dispelled any reasonable belief of ostensible agency; no sanctions or remedial actions related to AI misuse or fabricated authority were imposed.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "misrepresented-authority",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2958/Nelson_v._Hurley_Medical_Center.pdf"
+        },
         {
           "id": "krystal-faye-potterf-et-al-v-drew-f-wessels-et-al-2026-08-26",
           "name": "Krystal Faye Potterf, et al. v. Drew F. Wessels, et al.",
@@ -24451,15 +24471,15 @@
     }
   ],
   "by_week": {
-    "2026-W35": 11,
-    "2026-W34": 24,
+    "2026-W35": 13,
+    "2026-W34": 23,
     "2026-W33": 23,
-    "2026-W32": 26,
+    "2026-W32": 28,
     "2026-W31": 31,
-    "2026-W30": 22,
-    "2026-W29": 29,
-    "2026-W28": 25,
-    "2026-W27": 28,
+    "2026-W30": 25,
+    "2026-W29": 32,
+    "2026-W28": 26,
+    "2026-W27": 29,
     "2026-W26": 27,
     "2026-W25": 20,
     "2026-W24": 35,
@@ -24587,8 +24607,8 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-08": 84,
-    "2026-07": 121,
+    "2026-08": 87,
+    "2026-07": 129,
     "2026-06": 127,
     "2026-05": 154,
     "2026-04": 127,
@@ -24632,11 +24652,11 @@
     "2023": 16,
     "2024": 59,
     "2025": 849,
-    "2026": 1059
+    "2026": 1070
   },
   "by_tool": {
-    "AI (implied, unspecified)": 1330,
-    "Unidentified": 424,
+    "AI (implied, unspecified)": 1334,
+    "Unidentified": 430,
     "ChatGPT": 109,
     "Strongsuit": 1,
     "Claude and ChatGPT": 1,
@@ -24646,13 +24666,13 @@
     "Claude and other generative AI platforms": 1,
     "Claude AI": 1,
     "ChatGPT, Claude": 1,
+    "Google AI": 2,
     "GPT-3.5": 1,
     "Claude": 4,
     "Westlaw Precision": 1,
     "Perplexity": 3,
     "Cetient": 1,
     "Grok": 3,
-    "Google AI": 1,
     "Eve Legal": 1,
     "First Drafts": 1,
     "Deepseek": 1,
@@ -24737,9 +24757,9 @@
     "Google Bard": 1
   },
   "by_circuit": {
+    "6th Circuit": 113,
     "11th Circuit": 116,
     "4th Circuit": 73,
-    "6th Circuit": 112,
     "7th Circuit": 117,
     "5th Circuit": 141,
     "3rd Circuit": 77,
@@ -24766,19 +24786,19 @@
     },
     {
       "week": "2026-W27",
-      "count": 28
-    },
-    {
-      "week": "2026-W28",
-      "count": 25
-    },
-    {
-      "week": "2026-W29",
       "count": 29
     },
     {
+      "week": "2026-W28",
+      "count": 26
+    },
+    {
+      "week": "2026-W29",
+      "count": 32
+    },
+    {
       "week": "2026-W30",
-      "count": 22
+      "count": 25
     },
     {
       "week": "2026-W31",
@@ -24786,7 +24806,7 @@
     },
     {
       "week": "2026-W32",
-      "count": 26
+      "count": 28
     },
     {
       "week": "2026-W33",
@@ -24794,11 +24814,11 @@
     },
     {
       "week": "2026-W34",
-      "count": 24
+      "count": 23
     },
     {
       "week": "2026-W35",
-      "count": 11
+      "count": 13
     }
   ]
 }

@@ -26,11 +26,11 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "Mich. Ct. App.",
+      "court": "CA Michigan",
       "jurisdiction": "state",
-      "state": "",
+      "state": "MI",
       "country": "US",
-      "circuit": null,
+      "circuit": "6th Circuit",
       "judge": null,
       "date": "2026-08-28",
       "ai_tool": "AI (implied, unspecified)",
@@ -38,7 +38,8 @@
       "amount": null,
       "professional_sanction": "No",
       "tags": [
-        "trial"
+        "misrepresented-authority",
+        "appellate"
       ],
       "sanction_types": [
         "none-adjudicated"
@@ -207,6 +208,62 @@
         "fabricated-quotes",
         "misrepresented-authority",
         "civil-rights",
+        "trial"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "mfrd-and-national-disability-insurance-agency-2026-08-26",
+    "slug": "mfrd-and-national-disability-insurance-agency-2026-08-26",
+    "case_name": "MFRD and National Disability Insurance Agency",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Applicant's written submissions contained multiple purported case authorities and citations that did not exist; Tribunal found no reported cases matching the names/citations. Outcome: Warning.",
+    "direct_answer": "Fabricated: Case Law | Applicant's written submissions contained multiple purported case authorities and citations that did not exist; Tribunal found no reported cases matching the names/citations. Outcome: Warning.",
+    "why_it_matters": "This matter connects pro se and fake citations with Warning in ARTA. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Warning. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2987/MFRD_and_National_Disability_Insurance_Agency_NDIS_2026_ARTA_1833_26_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "ARTA",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-26",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Warning",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "misrepresented-authority",
         "trial"
       ],
       "sanction_types": [
@@ -503,6 +560,61 @@
     }
   },
   {
+    "id": "heywood-v-state-of-queensland-department-of-education-2026-08-24",
+    "slug": "heywood-v-state-of-queensland-department-of-education-2026-08-24",
+    "case_name": "Heywood v State of Queensland (Department of Education)",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Appellant's submissions contained multiple references to cases that either do not exist or were incorrectly cited; the Commission found these references likely resulted from AI use and required accuracy in future filings. Outcome: Admonishment.",
+    "direct_answer": "Fabricated: Case Law | Appellant's submissions contained multiple references to cases that either do not exist or were incorrectly cited; the Commission found these references likely resulted from AI use and required accuracy in future filings. Outcome: Admonishment.",
+    "why_it_matters": "This matter connects pro se and fake citations with Admonishment in Queensland IRC. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Admonishment. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2986/Heywood_v_State_of_Queensland_Department_of_Education_2026_QIRC_261_24_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Queensland IRC",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-24",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Admonishment",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "employment",
+        "trial"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "jack-ferm-v-agritech-properties-et-al-2026-08-24",
     "slug": "jack-ferm-v-agritech-properties-et-al-2026-08-24",
     "case_name": "Jack Ferm v. Agritech Properties, et al.",
@@ -640,59 +752,6 @@
       "tier": "secondary-report"
     },
     "record": {
-      "court": "Tel Aviv-Jaffa DC",
-      "jurisdiction": "international",
-      "state": "",
-      "country": "Israel",
-      "circuit": null,
-      "judge": null,
-      "date": "2026-08-23",
-      "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Monetary Sanction",
-      "amount": null,
-      "professional_sanction": "No",
-      "tags": [
-        "fake-citations",
-        "trial"
-      ],
-      "sanction_types": [
-        "monetary"
-      ]
-    },
-    "publication": {
-      "ready": false,
-      "agent_status": "structured-record-baseline",
-      "blocked_reason": "Pending source-level evidence review."
-    }
-  },
-  {
-    "id": "tel-aviv-district-court-ai-case-2026-08-23",
-    "slug": "tel-aviv-district-court-ai-case-2026-08-23",
-    "case_name": "אדיבי נ' איי אי ג'י ישראל חברה לביטוח בע\"מ",
-    "classification": "adjudicated",
-    "severity": "medium",
-    "summary": "Fabricated: Case Law | Plaintiff's counsel cited this purported appellate decision in the response; the court found no record of such a decision and treated it as a fabricated AI-generated citation. Outcome: Court found the filings relied on AI-generated fabricated case citations, admonished counsel, and ordered the plaintiff to pay respondent's costs of 20,000 ILS; warned about uncontrolled use of AI and the risk of future personal costs.. The court determined that the plaintiff's counsel relied on 'AI hallucinations' — citations presented as judicial precedents that do not exist. The judge reviewed the referenced authorities, found no record of the cited decisions, characterized the reliance as misleading and possibly produced by AI, and sanctioned the plaintiff by ordering costs of 20,000 ILS while issuing a formal warning about uncritical use of AI in pleadings.",
-    "direct_answer": "Fabricated: Case Law | Plaintiff's counsel cited this purported appellate decision in the response; the court found no record of such a decision and treated it as a fabricated AI-generated citation. Outcome: Court found the filings relied on AI-generated fabricated case citations, admonished counsel, and ordered the plaintiff to pay respondent's costs of 20,000 ILS; warned about uncontrolled use of AI and the risk of future personal costs.. The court determined that the plaintiff's counsel relied on 'AI hallucinations' — citations presented as judicial precedents that do not exist. The judge reviewed the referenced authorities, found no record of the cited decisions, characterized the reliance as misleading and possibly produced by AI, and sanctioned the plaintiff by ordering costs of 20,000 ILS while issuing a formal warning about uncritical use of AI in pleadings.",
-    "why_it_matters": "This matter connects fake citations and trial with Court found the filings relied on AI-generated fabricated case citations, admonished counsel, and ordered the plaintiff to pay respondent's costs of 20,000 ILS; warned about uncontrolled use of AI and the risk of future personal costs. in Tel Aviv District Court. It provides a source-linked baseline for verification, supervision, and response controls.",
-    "judicial_reasoning": null,
-    "decision_context": "The structured public record identifies fake citations and trial and records Court found the filings relied on AI-generated fabricated case citations, admonished counsel, and ordered the plaintiff to pay respondent's costs of 20,000 ILS; warned about uncontrolled use of AI and the risk of future personal costs.. The linked source controls the precise reasoning and procedural context.",
-    "practical_implications": [
-      "Verify the existence, citation, court, and precedential status of every authority before filing.",
-      "Read the linked source and subsequent docket history before relying on this record for legal work."
-    ],
-    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
-    "verified_fields": [
-      "case_name",
-      "court",
-      "date",
-      "source_url"
-    ],
-    "source": {
-      "url": "https://www.damiencharlotin.com/documents/2957/adiby1.pdf",
-      "name": "Damien Charlotin AI Hallucination Cases Database",
-      "tier": "publisher-archive"
-    },
-    "record": {
       "court": "Tel Aviv District Court",
       "jurisdiction": "international",
       "state": "",
@@ -701,7 +760,7 @@
       "judge": null,
       "date": "2026-08-23",
       "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Court found the filings relied on AI-generated fabricated case citations, admonished counsel, and ordered the plaintiff to pay respondent's costs of 20,000 ILS; warned about uncontrolled use of AI and the risk of future personal costs.",
+      "outcome": "Admonishment; Monetary Fine",
       "amount": 1,
       "professional_sanction": "No",
       "tags": [
@@ -2730,16 +2789,16 @@
     }
   },
   {
-    "id": "egan-v-commonwealth-of-australia-2026-fca-1104-2026-08-11",
-    "slug": "egan-v-commonwealth-of-australia-2026-fca-1104-2026-08-11",
-    "case_name": "Egan v Commonwealth of Australia [2026] FCA 1104",
+    "id": "egan-v-commonwealth-of-australia-2026-08-11",
+    "slug": "egan-v-commonwealth-of-australia-2026-08-11",
+    "case_name": "Egan v Commonwealth of Australia",
     "classification": "adjudicated",
     "severity": "low",
-    "summary": "False Quotes: Case Law | Applicant relied on a purported quoted passage attributed to Taylor v Johnson that does not exist; Court checked reports and found the passage absent. Outcome: Court noted and rejected AI-generated erroneous quotations and citations, ignored the applicant's unsolicited post-hearing email, allowed summary judgment for the Respondent; no professional sanction or monetary penalty imposed.. The applicant (self-represented) admitted using generative AI in preparing supplementary submissions and filed a notice of corrections; the Commonwealth identified non-existent authorities and erroneous quotations. The Court found a prominent quoted passage attributed to Taylor v Johnson did not exist, identified other incorrect citations (including Alati v Kruger) and disregarded AI-generated material that was not relied upon. The judge emphasised the duty to verify authorities, struck certain AI-generated passages from consideration (and ignored a gratuitous post-hearing email), but imposed no professional or financial sanction.",
-    "direct_answer": "False Quotes: Case Law | Applicant relied on a purported quoted passage attributed to Taylor v Johnson that does not exist; Court checked reports and found the passage absent. Outcome: Court noted and rejected AI-generated erroneous quotations and citations, ignored the applicant's unsolicited post-hearing email, allowed summary judgment for the Respondent; no professional sanction or monetary penalty imposed.. The applicant (self-represented) admitted using generative AI in preparing supplementary submissions and filed a notice of corrections; the Commonwealth identified non-existent authorities and erroneous quotations. The Court found a prominent quoted passage attributed to Taylor v Johnson did not exist, identified other incorrect citations (including Alati v Kruger) and disregarded AI-generated material that was not relied upon. The judge emphasised the duty to verify authorities, struck certain AI-generated passages from consideration (and ignored a gratuitous post-hearing email), but imposed no professional or financial sanction.",
-    "why_it_matters": "This matter connects pro se and fake citations with Court noted and rejected AI-generated erroneous quotations and citations, ignored the applicant's unsolicited post-hearing email, allowed summary judgment for the Respondent; no professional sanction or monetary penalty imposed. in Federal Court of Australia. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "summary": "Fabricated: Case Law | Applicant cited various authorities and legislation in supplementary submissions that the Commonwealth identified as non-existent (fabricated) and required correction.",
+    "direct_answer": "Fabricated: Case Law | Applicant cited various authorities and legislation in supplementary submissions that the Commonwealth identified as non-existent (fabricated) and required correction.",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in Federal Court. It provides a source-linked baseline for verification, supervision, and response controls.",
     "judicial_reasoning": null,
-    "decision_context": "The structured public record identifies pro se and fake citations and records Court noted and rejected AI-generated erroneous quotations and citations, ignored the applicant's unsolicited post-hearing email, allowed summary judgment for the Respondent; no professional sanction or monetary penalty imposed.. The linked source controls the precise reasoning and procedural context.",
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
     "practical_implications": [
       "Verify the existence, citation, court, and precedential status of every authority before filing.",
       "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
@@ -3847,6 +3906,116 @@
       ],
       "sanction_types": [
         "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "ms-wayan-buschman-v-good-to-great-schools-australia-2026-08-06",
+    "slug": "ms-wayan-buschman-v-good-to-great-schools-australia-2026-08-06",
+    "case_name": "Ms Wayan Buschman v Good To Great Schools Australia",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Case Law | Applicant relied on AI-presented excerpts of case law which were incorrectly applied, giving false hope about the merits. Outcome: Admonishment.",
+    "direct_answer": "Misrepresented: Case Law | Applicant relied on AI-presented excerpts of case law which were incorrectly applied, giving false hope about the merits. Outcome: Admonishment.",
+    "why_it_matters": "This matter connects pro se and misrepresented authority with Admonishment in Fair Work Commission. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and misrepresented authority and records Admonishment. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2984/Ms_Wayan_Buschman_v_Good_To_Great_Schools_Australia_2026_FWC_2975_6_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Fair Work Commission",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-06",
+      "ai_tool": "Unidentified",
+      "outcome": "Admonishment",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "abudahou-v-metro-finance-pty-ltd-2026-08-05",
+    "slug": "abudahou-v-metro-finance-pty-ltd-2026-08-05",
+    "case_name": "Abudahou v Metro Finance Pty Ltd",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Legal Norm | Applicant relied on a non-existent provision 's 41(7)(a)' of the Bankruptcy Act as the basis to set aside the bankruptcy notice; court held the provision does not exist.",
+    "direct_answer": "Fabricated: Legal Norm | Applicant relied on a non-existent provision 's 41(7)(a)' of the Bankruptcy Act as the basis to set aside the bankruptcy notice; court held the provision does not exist.",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in Federal Court. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2983/Abudahou_v_Metro_Finance_Pty_Ltd_2026_FedCFamC2G_1512_5_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Federal Court",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-05",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
       ]
     },
     "publication": {
@@ -7072,6 +7241,117 @@
     }
   },
   {
+    "id": "pravesh-koonjah-v-gpc-asia-pacific-pty-ltd-2026-07-23",
+    "slug": "pravesh-koonjah-v-gpc-asia-pacific-pty-ltd-2026-07-23",
+    "case_name": "Pravesh Koonjah v GPC Asia Pacific Pty Ltd",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "False Quotes: Case Law | Applicant cited Ayub v NSW Trains [2016] FWCFB 5500 para [7] for a proposition the paragraph does not state; court identified this as a sign of AI hallucination.",
+    "direct_answer": "False Quotes: Case Law | Applicant cited Ayub v NSW Trains [2016] FWCFB 5500 para [7] for a proposition the paragraph does not state; court identified this as a sign of AI hallucination.",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in Fair Work Commission. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2981/Pravesh_Koonjah_v_GPC_Asia_Pacific_Pty_Ltd_2026_FWC_2680_23_July_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Fair Work Commission",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-23",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "employment",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "weq-v-medical-board-of-australia-2026-07-23",
+    "slug": "weq-v-medical-board-of-australia-2026-07-23",
+    "case_name": "WEQ v Medical Board of Australia",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "The public record identifies pro se and trial. The matter is recorded in Victoria SC on 2026-07-23 and concerns pro se and trial. The tracked outcome is the procedural response described in the linked source; consult the linked source for the complete record.",
+    "direct_answer": "The public record identifies pro se and trial. The matter is recorded in Victoria SC on 2026-07-23 and concerns pro se and trial. The tracked outcome is the procedural response described in the linked source; consult the linked source for the complete record.",
+    "why_it_matters": "This matter connects pro se and trial with a recorded judicial or procedural response in Victoria SC. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and trial and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2982/WEQ_v_Medical_Board_of_Australia_2026_VSC_463_23_July_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Victoria SC",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-23",
+      "ai_tool": "Unidentified",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "asif-v-minister-for-immigration-and-citizenship-2026-07-22",
     "slug": "asif-v-minister-for-immigration-and-citizenship-2026-07-22",
     "case_name": "Asif v Minister for Immigration and Citizenship",
@@ -7631,6 +7911,61 @@
       "limitations": [
         "The specific AI tool used by the pro se litigant remains unidentified."
       ]
+    }
+  },
+  {
+    "id": "shahin-v-industrial-relations-secretary-on-behalf-of-multicultural-nsw-no-2-2026-07-21",
+    "slug": "shahin-v-industrial-relations-secretary-on-behalf-of-multicultural-nsw-no-2-2026-07-21",
+    "case_name": "Shahin v Industrial Relations Secretary on behalf of Multicultural NSW (No.2)",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Legal Norm | Appellant relied on AI-assisted material that imported the Fair Work Act concept of a 'valid reason' (s 387(a)) into proceedings under the IR Act, reflecting a misapplication of statutory law. Outcome: Adverse Inferences. The Full Bench noted the appellant admitted using generative AI to prepare evidence and submissions and failed to verify the truth and accuracy of AI-produced material. The Court found the appellant advanced arguments derived from an inapplicable statutory regime (invoking the Fair Work Act concept of a 'valid reason') and produced inconsistent evidence about mitigation and income, which he attributed to AI use. The Bench criticised this misuse under Practice Note 33, drew adverse inferences about credibility and accuracy, and refused leave to appeal. No professional discipline or monetary penalty was ordered.",
+    "direct_answer": "Misrepresented: Legal Norm | Appellant relied on AI-assisted material that imported the Fair Work Act concept of a 'valid reason' (s 387(a)) into proceedings under the IR Act, reflecting a misapplication of statutory law. Outcome: Adverse Inferences. The Full Bench noted the appellant admitted using generative AI to prepare evidence and submissions and failed to verify the truth and accuracy of AI-produced material. The Court found the appellant advanced arguments derived from an inapplicable statutory regime (invoking the Fair Work Act concept of a 'valid reason') and produced inconsistent evidence about mitigation and income, which he attributed to AI use. The Bench criticised this misuse under Practice Note 33, drew adverse inferences about credibility and accuracy, and refused leave to appeal. No professional discipline or monetary penalty was ordered.",
+    "why_it_matters": "This matter connects pro se and misrepresented authority with Adverse Inferences in Industrial Relations Commission (NSW). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and misrepresented authority and records Adverse Inferences. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2989/Shahin_v_Industrial_Relations_Secretary_No.2_2026_NSWIRComm_11_21_July_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Industrial Relations Commission (NSW)",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-21",
+      "ai_tool": "Unidentified",
+      "outcome": "Adverse Inferences",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "misrepresented-authority",
+        "employment",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {
@@ -8345,6 +8680,60 @@
       "limitations": [
         "The specific generative AI tool used by the petitioners remains unidentified."
       ]
+    }
+  },
+  {
+    "id": "emmanuel-tischler-v-avada-traffic-pty-ltd-2026-07-16",
+    "slug": "emmanuel-tischler-v-avada-traffic-pty-ltd-2026-07-16",
+    "case_name": "Emmanuel Tischler v Avada Traffic Pty Ltd",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Legal Norm | The notice asserted that s 387(a) establishes a 'threshold', an incorrect legal characterization identified by the Court as an AI-generated misuse of legal terminology. The appellant admitted copying and pasting the decision into Google AI and used its output in his revised notice of appeal. The Commission found the notice contained AI-typical errors—misuse of legal terminology (e.g. treating s 387(a) as a 'threshold') and mistaking the Commissioner's summaries for findings—rendering the grounds unarguable. The Full Bench refused permission to appeal, noting the matter did not engage the public interest and that the AI-generated errors did not show an appealable error or injustice.",
+    "direct_answer": "Misrepresented: Legal Norm | The notice asserted that s 387(a) establishes a 'threshold', an incorrect legal characterization identified by the Court as an AI-generated misuse of legal terminology. The appellant admitted copying and pasting the decision into Google AI and used its output in his revised notice of appeal. The Commission found the notice contained AI-typical errors—misuse of legal terminology (e.g. treating s 387(a) as a 'threshold') and mistaking the Commissioner's summaries for findings—rendering the grounds unarguable. The Full Bench refused permission to appeal, noting the matter did not engage the public interest and that the AI-generated errors did not show an appealable error or injustice.",
+    "why_it_matters": "This matter connects pro se and misrepresented authority with a recorded judicial or procedural response in Fair Work Commission. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and misrepresented authority and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2980/Emmanuel_Tischler_v_Avada_Traffic_Pty_Ltd_2026_FWCFB_174_16_July_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Fair Work Commission",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-16",
+      "ai_tool": "Google AI",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {
@@ -9305,6 +9694,60 @@
     }
   },
   {
+    "id": "niyonkuru-v-early-childhood-regulatory-authority-department-of-education-2026-07-15",
+    "slug": "niyonkuru-v-early-childhood-regulatory-authority-department-of-education-2026-07-15",
+    "case_name": "Niyonkuru v Early Childhood Regulatory Authority, Department of Education",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Applicant cited 'Family Day Care Educator [2020] QCAT 789'; respondent and Tribunal could not locate the decision and concluded it was likely an AI-generated, fabricated case, which the Tribunal did not rely on.",
+    "direct_answer": "Fabricated: Case Law | Applicant cited 'Family Day Care Educator [2020] QCAT 789'; respondent and Tribunal could not locate the decision and concluded it was likely an AI-generated, fabricated case, which the Tribunal did not rely on.",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in Queensland CAT. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2988/Niyonkuru_v_Early_Childhood_Regulatory_Authority_2026_QCAT_320_15_July_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Queensland CAT",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-15",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "rebecca-jean-v-seattle-credit-union-2026-07-15",
     "slug": "rebecca-jean-v-seattle-credit-union-2026-07-15",
     "case_name": "Rebecca Jean v. Seattle Credit Union",
@@ -9600,6 +10043,61 @@
       "limitations": [
         "The specific AI tool used by the litigant remains unidentified."
       ]
+    }
+  },
+  {
+    "id": "broadwater-tower-2026-07-14",
+    "slug": "broadwater-tower-2026-07-14",
+    "case_name": "Broadwater Tower",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Legal Norm | Applicant's AI-generated summary asserted an 'Interim Budget Rule (The \"Gap\" Period)' entitling an 'interim spending allowance' for the period between financial year end and AGM; adjudicator found no such rule in legislation or authorities. Outcome: Warning.",
+    "direct_answer": "Fabricated: Legal Norm | Applicant's AI-generated summary asserted an 'Interim Budget Rule (The \"Gap\" Period)' entitling an 'interim spending allowance' for the period between financial year end and AGM; adjudicator found no such rule in legislation or authorities. Outcome: Warning.",
+    "why_it_matters": "This matter connects pro se and fake citations with Warning in Queensland's BCCMC. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Warning. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2979/Broadwater_Tower_2026_QBCCMCmr_221_14_July_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Queensland's BCCMC",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-14",
+      "ai_tool": "Unidentified",
+      "outcome": "Warning",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "administrative",
+        "trial"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {
@@ -12263,6 +12761,60 @@
     }
   },
   {
+    "id": "laxton-construction-pty-ltd-v-ecofit-electrical-pty-ltd-2026-07-07",
+    "slug": "laxton-construction-pty-ltd-v-ecofit-electrical-pty-ltd-2026-07-07",
+    "case_name": "Laxton Construction Pty Ltd v EcoFit Electrical Pty Ltd",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Case Law | Briginshaw was cited as authority for a heightened approach to 'serious commercial allegations' (including unsupported large cash transactions); Tribunal found this to be a mischaracterisation of the case.",
+    "direct_answer": "Misrepresented: Case Law | Briginshaw was cited as authority for a heightened approach to 'serious commercial allegations' (including unsupported large cash transactions); Tribunal found this to be a mischaracterisation of the case.",
+    "why_it_matters": "This matter connects pro se and misrepresented authority with a recorded judicial or procedural response in Victoria CAT. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and misrepresented authority and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2978/Laxton_Construction_Pty_Ltd_v_EcoFit_Electrical_Pty_Ltd_2026_VCAT_530_7_July_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Victoria CAT",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-07",
+      "ai_tool": "Unidentified",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "recurso-de-suplicacion-0005472-2025-2026-07-07",
     "slug": "recurso-de-suplicacion-0005472-2025-2026-07-07",
     "case_name": "Recurso de Suplicación 0005472/2025",
@@ -12842,6 +13394,61 @@
       "limitations": [
         "Whether the Requesting Party actually used AI or intentionally fabricated the content without AI assistance."
       ]
+    }
+  },
+  {
+    "id": "miles-a-pseudonym-v-saunders-a-pseudonym-2026-07-03",
+    "slug": "miles-a-pseudonym-v-saunders-a-pseudonym-2026-07-03",
+    "case_name": "Miles (a pseudonym) v Saunders (a pseudonym)",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Appellant relied on an authority cited as Re KJ [2020] VMC 112 that the court could not verify and which was disclosed as from online AI research.",
+    "direct_answer": "Fabricated: Case Law | Appellant relied on an authority cited as Re KJ [2020] VMC 112 that the court could not verify and which was disclosed as from online AI research.",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in VCC. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2977/Miles_a_pseudonym_v_Saunders_a_pseudonym_2026_VCC_325_3_July_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "VCC",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-03",
+      "ai_tool": "Unidentified",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "family",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

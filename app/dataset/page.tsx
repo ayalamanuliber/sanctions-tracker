@@ -21,7 +21,7 @@ import {
   PUBLIC_DATASET_FIELDS,
   PUBLIC_DATASET_MANIFEST,
 } from "@/lib/public-dataset";
-import { publicUrl } from "@/lib/site";
+import { assetUrl, publicUrl } from "@/lib/site";
 import workspace from "../workspace.module.css";
 import styles from "./dataset.module.css";
 
@@ -141,12 +141,12 @@ export default function DatasetPage() {
             </p>
           </div>
           <div className={shell.headActions}>
-            <Link className={shell.button} href="/api/dataset?format=csv">
+            <a className={shell.button} href={assetUrl("/api/dataset?format=csv")}>
               Download CSV <Download size={15} />
-            </Link>
-            <Link className={shell.buttonSecondary} href="/api/dataset?format=json">
+            </a>
+            <a className={shell.buttonSecondary} href={assetUrl("/api/dataset?format=json")}>
               Download JSON <Braces size={15} />
-            </Link>
+            </a>
           </div>
         </header>
 
@@ -177,21 +177,21 @@ export default function DatasetPage() {
                 <div><h2>Public downloads</h2><p>Complete exports and a small manifest for automated freshness checks.</p></div>
               </div>
               <div className={styles.downloadGrid}>
-                <Link href="/api/dataset?format=json">
+                <a href={assetUrl("/api/dataset?format=json")}>
                   <FileJson aria-hidden="true" />
                   <div><strong>JSON dataset</strong><span>Records plus version, citation, fields, filters, and boundaries.</span></div>
                   <Download aria-hidden="true" />
-                </Link>
-                <Link href="/api/dataset?format=csv">
+                </a>
+                <a href={assetUrl("/api/dataset?format=csv")}>
                   <FileSpreadsheet aria-hidden="true" />
                   <div><strong>CSV dataset</strong><span>Flat public fields for analysis, spreadsheets, and reproducible filters.</span></div>
                   <Download aria-hidden="true" />
-                </Link>
-                <Link href="/api/dataset/manifest">
+                </a>
+                <a href={assetUrl("/api/dataset/manifest")}>
                   <Fingerprint aria-hidden="true" />
                   <div><strong>Dataset manifest</strong><span>Version, checksum, record count, field list, and canonical URLs without the full corpus payload.</span></div>
                   <Link2 aria-hidden="true" />
-                </Link>
+                </a>
               </div>
               <p className={workspace.warning}>
                 The SHA-256 value identifies the ingested source snapshot. It is

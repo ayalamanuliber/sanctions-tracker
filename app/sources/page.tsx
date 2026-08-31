@@ -38,7 +38,7 @@ import {
 } from "@/lib/publication";
 import { ENTITY_MEDIA_COUNTS, ENTITY_MEDIA_REVISION } from "@/lib/entity-media";
 import { getEntities } from "@/lib/entity-pages";
-import { publicUrl } from "@/lib/site";
+import { assetUrl, publicUrl } from "@/lib/site";
 import styles from "./sources.module.css";
 
 export const metadata: Metadata = {
@@ -457,10 +457,10 @@ export default function SourcesPage() {
               <div className={styles.railHeading}><FileCheck2 aria-hidden="true" /><div><span>Artifacts</span><h2>Research exports</h2></div></div>
               <div className={styles.download}>
                 <Link href="/dataset">Dataset, version, and citation guide <ExternalLink /></Link>
-                <Link href="/api/dataset/manifest">Machine-readable dataset manifest <ExternalLink /></Link>
-                <Link href="/api/artifact?type=source&format=md">Global source appendix <ExternalLink /></Link>
-                <Link href="/api/artifact?type=source&format=md&state=NJ">New Jersey appendix <ExternalLink /></Link>
-                <Link href="/api/artifact?type=source&format=md&state=NY">New York appendix <ExternalLink /></Link>
+                <a href={assetUrl("/api/dataset/manifest")}>Machine-readable dataset manifest <ExternalLink /></a>
+                <a href={assetUrl("/api/artifact?type=source&format=md")}>Global source appendix <ExternalLink /></a>
+                <a href={assetUrl("/api/artifact?type=source&format=md&state=NJ")}>New Jersey appendix <ExternalLink /></a>
+                <a href={assetUrl("/api/artifact?type=source&format=md&state=NY")}>New York appendix <ExternalLink /></a>
                 <Link href="/analytics/print?tier=free">Current analytics brief <ExternalLink /></Link>
               </div>
             </section>

@@ -55,6 +55,10 @@ assert.ok(
   "Vercel telemetry must preserve the public /legal-ai-risk browser path",
 );
 assert.ok(
+  instrumentationSource.includes('from "@vercel/analytics/react"'),
+  "Analytics must use one host-aware auto pageview instead of adding a second basePath-stripped Next pageview",
+);
+assert.ok(
   nextConfigSource.includes("https://www.googletagmanager.com") &&
     nextConfigSource.includes("https://*.google-analytics.com"),
   "The CSP must permit the configured analytics transports",

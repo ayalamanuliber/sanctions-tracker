@@ -1,6 +1,6 @@
 "use client";
 
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 import { track as trackVercel } from "@vercel/analytics";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";

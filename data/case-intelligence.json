@@ -1,5 +1,172 @@
 [
   {
+    "id": "state-of-hawaii-v-cody-presti-2026-08-31",
+    "slug": "state-of-hawaii-v-cody-presti-2026-08-31",
+    "case_name": "State of Hawaii v. Cody Presti",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Opening Brief cited 'Stroud V people (Colo.)'; court's search returned zero appellate opinions from Colorado under that name. Outcome: Arguments supported by nonexistent authority were deemed waived; court declined to impose sanctions in this criminal direct appeal though noted sanctions were available under appellate rules.. The appellant's opening brief cited 95 authorities, of which the court could reliably identify only 41; eleven cited cases could not be located or were demonstrably incorrect/misattributed. The court found multiple citations were to nonexistent opinions or to reporter/volume numbers that corresponded to unrelated cases, treated arguments relying on those authorities as waived, and declined to apply civil Rule 11 sanctions on direct criminal appeal while noting HRAP Rules 30 and 51 could authorize sanctions in other circumstances. The court emphasized that fabricated citations undermine judicial integrity and waste resources.",
+    "direct_answer": "Fabricated: Case Law | Opening Brief cited 'Stroud V people (Colo.)'; court's search returned zero appellate opinions from Colorado under that name. Outcome: Arguments supported by nonexistent authority were deemed waived; court declined to impose sanctions in this criminal direct appeal though noted sanctions were available under appellate rules.. The appellant's opening brief cited 95 authorities, of which the court could reliably identify only 41; eleven cited cases could not be located or were demonstrably incorrect/misattributed. The court found multiple citations were to nonexistent opinions or to reporter/volume numbers that corresponded to unrelated cases, treated arguments relying on those authorities as waived, and declined to apply civil Rule 11 sanctions on direct criminal appeal while noting HRAP Rules 30 and 51 could authorize sanctions in other circumstances. The court emphasized that fabricated citations undermine judicial integrity and waste resources.",
+    "why_it_matters": "This matter connects pro se and fake citations with Arguments supported by nonexistent authority were deemed waived; court declined to impose sanctions in this criminal direct appeal though noted sanctions were available under appellate rules. in Intermediate Court of Appeals of Hawaii. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Arguments supported by nonexistent authority were deemed waived; court declined to impose sanctions in this criminal direct appeal though noted sanctions were available under appellate rules.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2997/State_v._Presti_USA_31_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Intermediate Court of Appeals of Hawaii",
+      "jurisdiction": "federal",
+      "state": "HI",
+      "country": "US",
+      "circuit": "9th Circuit",
+      "judge": null,
+      "date": "2026-08-31",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Arguments supported by nonexistent authority were deemed waived; court declined to impose sanctions in this criminal direct appeal though noted sanctions were available under appellate rules.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "published-opinion",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "charlie-reyes-v-bryce-bailey-et-al-2026-08-28",
+    "slug": "charlie-reyes-v-bryce-bailey-et-al-2026-08-28",
+    "case_name": "Charlie Reyes v. Bryce Bailey, et al.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Plaintiff miscited (and may have fabricated) a case citation in his Amended Complaint; defendants reasonably alleged fabrication and court relied on plaintiff's admission. Outcome: No Sanctions. Plaintiff (pro se) admitted he miscited a case in his Amended Complaint. Defendants reasonably alleged the citation may have been fabricated. The Court found the defendants' contention reasonable given the plaintiff's admission, but declined to impose Rule 11 sanctions, concluding there was no violation and that other alleged defects did not warrant sanctions.",
+    "direct_answer": "Fabricated: Case Law | Plaintiff miscited (and may have fabricated) a case citation in his Amended Complaint; defendants reasonably alleged fabrication and court relied on plaintiff's admission. Outcome: No Sanctions. Plaintiff (pro se) admitted he miscited a case in his Amended Complaint. Defendants reasonably alleged the citation may have been fabricated. The Court found the defendants' contention reasonable given the plaintiff's admission, but declined to impose Rule 11 sanctions, concluding there was no violation and that other alleged defects did not warrant sanctions.",
+    "why_it_matters": "This matter connects pro se and fake citations with No Sanctions in D. New Mexico. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records No Sanctions. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2996/Reyes_v._Bailey_USA_28_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "D. New Mexico",
+      "jurisdiction": "federal",
+      "state": "NM",
+      "country": "US",
+      "circuit": "10th Circuit",
+      "judge": null,
+      "date": "2026-08-28",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "No Sanctions",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "other",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "erin-booker-v-the-kroger-co-2026-08-28",
+    "slug": "erin-booker-v-the-kroger-co-2026-08-28",
+    "case_name": "Erin Booker v. The Kroger Co.",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | One of four cited authorities was determined to be a nonexistent case relied upon to support a legal proposition. Outcome: Monetary Sanctions; CLE.",
+    "direct_answer": "Fabricated: Case Law | One of four cited authorities was determined to be a nonexistent case relied upon to support a legal proposition. Outcome: Monetary Sanctions; CLE.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Monetary Sanctions; CLE in N.D. Georgia. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Monetary Sanctions; CLE. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3000/Booker_v._Kroger_USA_28_AUgust_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "N.D. Georgia",
+      "jurisdiction": "federal",
+      "state": "GA",
+      "country": "US",
+      "circuit": "11th Circuit",
+      "judge": null,
+      "date": "2026-08-28",
+      "ai_tool": "Unidentified",
+      "outcome": "Monetary Sanctions; CLE",
+      "amount": 8000,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "estate-of-bernie-leynell-nelson-v-hurley-medical-center-2026-08-28",
     "slug": "estate-of-bernie-leynell-nelson-v-hurley-medical-center-2026-08-28",
     "case_name": "Estate of Bernie Leynell Nelson v Hurley Medical Center",
@@ -43,6 +210,337 @@
       ],
       "sanction_types": [
         "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "sanja-noble-v-wmc-mortgage-corp-et-al-2026-08-28",
+    "slug": "sanja-noble-v-wmc-mortgage-corp-et-al-2026-08-28",
+    "case_name": "Sanja Noble v. WMC Mortgage Corp. et al.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Appellant's brief cited 'Ferguson v. Georges, 389 Ill. App. 3d 543, 553-54 (2010)' for the standard of review; court found the authority actually is People v. Mott, 389 Ill. App. 3d 539 (2009) and labeled the citation 'hallucinated'. Outcome: Appellate court identified the citation as a hallucination, corrected the authority (pointing to People v. Mott), declined to strike the brief, and refused to consider the unsupported assertion; no professional sanction imposed.. The appellant's pro se brief contained a 'hallucinated' citation—attributing the standard of review to 'Ferguson v. Georges, 389 Ill. App. 3d 543, 553-54 (2010)'. The appellate court found this was incorrect and that the cited language actually appears in People v. Mott, 389 Ill. App. 3d 539 (2009), characterizing the error as resulting from AI-generated, unverified content. The court noted the deficiency, declined to strike the brief, and refused to consider the unsupported argument; no sanctions were imposed.",
+    "direct_answer": "Fabricated: Case Law | Appellant's brief cited 'Ferguson v. Georges, 389 Ill. App. 3d 543, 553-54 (2010)' for the standard of review; court found the authority actually is People v. Mott, 389 Ill. App. 3d 539 (2009) and labeled the citation 'hallucinated'. Outcome: Appellate court identified the citation as a hallucination, corrected the authority (pointing to People v. Mott), declined to strike the brief, and refused to consider the unsupported assertion; no professional sanction imposed.. The appellant's pro se brief contained a 'hallucinated' citation—attributing the standard of review to 'Ferguson v. Georges, 389 Ill. App. 3d 543, 553-54 (2010)'. The appellate court found this was incorrect and that the cited language actually appears in People v. Mott, 389 Ill. App. 3d 539 (2009), characterizing the error as resulting from AI-generated, unverified content. The court noted the deficiency, declined to strike the brief, and refused to consider the unsupported argument; no sanctions were imposed.",
+    "why_it_matters": "This matter connects pro se and fake citations with Appellate court identified the citation as a hallucination, corrected the authority (pointing to People v. Mott), declined to strike the brief, and refused to consider the unsupported assertion; no professional sanction imposed. in Ill. App. 1st Dist.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Appellate court identified the citation as a hallucination, corrected the authority (pointing to People v. Mott), declined to strike the brief, and refused to consider the unsupported assertion; no professional sanction imposed.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2999/Noble_v._WMC_Mortgage_Corp_USA_28_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Ill. App. 1st Dist.",
+      "jurisdiction": "state",
+      "state": "",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-28",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Appellate court identified the citation as a hallucination, corrected the authority (pointing to People v. Mott), declined to strike the brief, and refused to consider the unsupported assertion; no professional sanction imposed.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "struck-filing"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "adams-v-matrix-providers-inc-et-al-2026-08-27",
+    "slug": "adams-v-matrix-providers-inc-et-al-2026-08-27",
+    "case_name": "Adams v. Matrix Providers Inc. et al.",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | Filed a phantom/non-existent case citation in briefing (identified at hearing and in show-cause response). Court and opposing counsel flagged it as fake and potentially AI-generated. Outcome: Admonishment; Monetary Fine.",
+    "direct_answer": "Fabricated: Case Law | Filed a phantom/non-existent case citation in briefing (identified at hearing and in show-cause response). Court and opposing counsel flagged it as fake and potentially AI-generated. Outcome: Admonishment; Monetary Fine.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Admonishment; Monetary Fine in D. Colorado. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Admonishment; Monetary Fine. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2991/Adams_v._Matrix_Providers_Inc._et_al_USA_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "D. Colorado",
+      "jurisdiction": "federal",
+      "state": "CO",
+      "country": "US",
+      "circuit": "10th Circuit",
+      "judge": null,
+      "date": "2026-08-27",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Admonishment; Monetary Fine",
+      "amount": 1000,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "employment",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "ashmeade-v-amazon-com-services-llc-2026-08-27",
+    "slug": "ashmeade-v-amazon-com-services-llc-2026-08-27",
+    "case_name": "Ashmeade v. Amazon.com Services LLC",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Plaintiff cited “In re State Street Bank and Trust Co. ERISA Litig., No. 07-cv-10907, 2009 WL 10260136, at *1 (S.D.N.Y. Apr. 8, 2009)”; court found the Westlaw number and caption did not correspond to a real decision. Outcome: Warning.",
+    "direct_answer": "Fabricated: Case Law | Plaintiff cited “In re State Street Bank and Trust Co. ERISA Litig., No. 07-cv-10907, 2009 WL 10260136, at *1 (S.D.N.Y. Apr. 8, 2009)”; court found the Westlaw number and caption did not correspond to a real decision. Outcome: Warning.",
+    "why_it_matters": "This matter connects pro se and fake citations with Warning in S.D. New York. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Warning. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2992/Ashmeade_v._Amazon_USA_27_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "S.D. New York",
+      "jurisdiction": "federal",
+      "state": "NY",
+      "country": "US",
+      "circuit": "2nd Circuit",
+      "judge": null,
+      "date": "2026-08-27",
+      "ai_tool": "Unidentified",
+      "outcome": "Warning",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "employment",
+        "trial"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "paige-kiser-ty-kiser-v-desimone-auto-group-et-al-2026-08-27",
+    "slug": "paige-kiser-ty-kiser-v-desimone-auto-group-et-al-2026-08-27",
+    "case_name": "Paige Kiser & Ty Kiser v. DeSimone Auto Group et al.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Appellants' counsel cited a non-existent case 'Com v. Reid, 770 A.2d 771 (Pa. Super. 2001)'; the court could not locate it and called it 'counterfeit authority,' suggesting possible chatbot origin. Outcome: Admonishment; Issue deemed waived/underdeveloped for appeal..",
+    "direct_answer": "Fabricated: Case Law | Appellants' counsel cited a non-existent case 'Com v. Reid, 770 A.2d 771 (Pa. Super. 2001)'; the court could not locate it and called it 'counterfeit authority,' suggesting possible chatbot origin. Outcome: Admonishment; Issue deemed waived/underdeveloped for appeal..",
+    "why_it_matters": "This matter connects fake citations and tort with Admonishment; Issue deemed waived/underdeveloped for appeal. in SC Pennsylvania. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and tort and records Admonishment; Issue deemed waived/underdeveloped for appeal.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2995/Kiser_P._v._DeSimone_Auto_Group_USA_27_AUgust_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "SC Pennsylvania",
+      "jurisdiction": "state",
+      "state": "PA",
+      "country": "US",
+      "circuit": "3rd Circuit",
+      "judge": null,
+      "date": "2026-08-27",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Admonishment; Issue deemed waived/underdeveloped for appeal.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "tort",
+        "trial"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "peter-williams-et-al-v-dallas-fort-worth-international-airport-board-et-al-2026-08-27",
+    "slug": "peter-williams-et-al-v-dallas-fort-worth-international-airport-board-et-al-2026-08-27",
+    "case_name": "Peter Williams, et al. v. Dallas-Fort Worth International Airport Board, et al.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Plaintiffs cited 'Dawkins v. Fields, 354 F.3d 392 (5th Cir. 2003)' to support clearly established law; the Court found no such controlling authority and treated the citation as erroneous. Outcome: Admonishment & Warning.",
+    "direct_answer": "Fabricated: Case Law | Plaintiffs cited 'Dawkins v. Fields, 354 F.3d 392 (5th Cir. 2003)' to support clearly established law; the Court found no such controlling authority and treated the citation as erroneous. Outcome: Admonishment & Warning.",
+    "why_it_matters": "This matter connects fake citations and misrepresented authority with Admonishment & Warning in N.D. Texas. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and misrepresented authority and records Admonishment & Warning. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2990/Willia_Fh3WTMr._Dallas-Fort_Worth_International_Airport_Board_et_al_USA_27_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "N.D. Texas",
+      "jurisdiction": "federal",
+      "state": "TX",
+      "country": "US",
+      "circuit": "5th Circuit",
+      "judge": null,
+      "date": "2026-08-27",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Admonishment & Warning",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "misrepresented-authority",
+        "civil-rights",
+        "trial"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "salloum-v-department-of-transportation-2026-08-27",
+    "slug": "salloum-v-department-of-transportation-2026-08-27",
+    "case_name": "Salloum v. Department of Transportation",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Appellant cited a case that the court found does not appear to exist. Outcome: Admonishment & Warning.",
+    "direct_answer": "Fabricated: Case Law | Appellant cited a case that the court found does not appear to exist. Outcome: Admonishment & Warning.",
+    "why_it_matters": "This matter connects pro se and fake citations with Admonishment & Warning in CA Colorado. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Admonishment & Warning. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2993/Salloum_v_Dept_of_Transportation_USA_27_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "CA Colorado",
+      "jurisdiction": "state",
+      "state": "CO",
+      "country": "US",
+      "circuit": "10th Circuit",
+      "judge": null,
+      "date": "2026-08-27",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Admonishment & Warning",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "employment",
+        "appellate"
+      ],
+      "sanction_types": [
+        "warning"
       ]
     },
     "publication": {
@@ -107,6 +605,64 @@
     }
   },
   {
+    "id": "varma-v-the-bank-of-new-york-mellon-2026-08-27",
+    "slug": "varma-v-the-bank-of-new-york-mellon-2026-08-27",
+    "case_name": "Varma v. The Bank of New York Mellon",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Opening brief cited a case that the court found appears not to exist. Outcome: Sanctions imposed: appellants sanctioned to pay Bank of New York's appellate attorney fees (amount to be determined by the trial court); matter remanded to determine fee award; court forwarded opinion to State Bar for possible investigation.. The appellants' opening brief contained numerous citations to non-existent cases, quotations that do not appear in the authorities cited, and propositions unsupported by cited cases—hallmarks the court attributed to generative AI. The court issued an order to show cause, found the appellants failed to show cause, and sanctioned them for unreasonable violation of appellate briefing rules by ordering payment of the respondent's appellate attorney fees (amount to be set by the trial court). The court emphasized that pro se litigants remain responsible for verifying authorities and referred the matter to the State Bar to investigate potential unauthorized practice.",
+    "direct_answer": "Fabricated: Case Law | Opening brief cited a case that the court found appears not to exist. Outcome: Sanctions imposed: appellants sanctioned to pay Bank of New York's appellate attorney fees (amount to be determined by the trial court); matter remanded to determine fee award; court forwarded opinion to State Bar for possible investigation.. The appellants' opening brief contained numerous citations to non-existent cases, quotations that do not appear in the authorities cited, and propositions unsupported by cited cases—hallmarks the court attributed to generative AI. The court issued an order to show cause, found the appellants failed to show cause, and sanctioned them for unreasonable violation of appellate briefing rules by ordering payment of the respondent's appellate attorney fees (amount to be set by the trial court). The court emphasized that pro se litigants remain responsible for verifying authorities and referred the matter to the State Bar to investigate potential unauthorized practice.",
+    "why_it_matters": "This matter connects pro se and fake citations with Sanctions imposed: appellants sanctioned to pay Bank of New York's appellate attorney fees (amount to be determined by the trial court); matter remanded to determine fee award; court forwarded opinion to State Bar for possible investigation. in Cal. Ct. App., 4th App. Dist., Div. 2. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Sanctions imposed: appellants sanctioned to pay Bank of New York's appellate attorney fees (amount to be determined by the trial court); matter remanded to determine fee award; court forwarded opinion to State Bar for possible investigation.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2994/Varma_v._BNYM_USA_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Cal. Ct. App., 4th App. Dist., Div. 2",
+      "jurisdiction": "state",
+      "state": "",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-27",
+      "ai_tool": "Unidentified",
+      "outcome": "Sanctions imposed: appellants sanctioned to pay Bank of New York's appellate attorney fees (amount to be determined by the trial court); matter remanded to determine fee award; court forwarded opinion to State Bar for possible investigation.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "bar-referral"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "darrin-l-johnson-jr-v-nationstar-mortgage-llc-et-al-2026-08-26",
     "slug": "darrin-l-johnson-jr-v-nationstar-mortgage-llc-et-al-2026-08-26",
     "case_name": "Darrin L. Johnson, Jr. v. Nationstar Mortgage LLC, et al.",
@@ -153,6 +709,63 @@
       ],
       "sanction_types": [
         "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "fairrow-v-easten-2026-08-26",
+    "slug": "fairrow-v-easten-2026-08-26",
+    "case_name": "Fairrow v. Easten",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Appellant cited 'Napp v. Napp' at the provided citation, which the court found did not exist; court suggested the intended authority was Breitbart-Napp v. Napp, 216 Ariz. 74 (App. 2007).",
+    "direct_answer": "Fabricated: Case Law | Appellant cited 'Napp v. Napp' at the provided citation, which the court found did not exist; court suggested the intended authority was Breitbart-Napp v. Napp, 216 Ariz. 74 (App. 2007).",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in CA Arizona. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/2998/ALIYAH_FAIRROW_v._BRENTLY_EASTEN_USA_26_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "CA Arizona",
+      "jurisdiction": "state",
+      "state": "AZ",
+      "country": "US",
+      "circuit": "9th Circuit",
+      "judge": null,
+      "date": "2026-08-26",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "misrepresented-authority",
+        "family",
+        "appellate"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
       ]
     },
     "publication": {

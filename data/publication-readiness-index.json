@@ -1,25 +1,69 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "7c57ea491fa36333e0293949f8d7ed954b5225f57aa9e763e3a0041326cc0a09",
-  "corpus_checked": "2026-08-31",
-  "total_cases": 1994,
+  "dataset_checksum": "34fee4918e36db5eea42a6959a2af0feb18ee2f52229f885cb3ba8a1db36bee5",
+  "corpus_checked": "2026-09-01",
+  "total_cases": 2005,
   "tiers": {
-    "index-ready": 1971,
+    "index-ready": 1982,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "by_slug": {
+    "state-of-hawaii-v-cody-presti-2026-08-31": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "charlie-reyes-v-bryce-bailey-et-al-2026-08-28": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "erin-booker-v-the-kroger-co-2026-08-28": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "estate-of-bernie-leynell-nelson-v-hurley-medical-center-2026-08-28": {
       "tier": "index-ready",
       "score": 80
     },
+    "sanja-noble-v-wmc-mortgage-corp-et-al-2026-08-28": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "adams-v-matrix-providers-inc-et-al-2026-08-27": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "ashmeade-v-amazon-com-services-llc-2026-08-27": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "paige-kiser-ty-kiser-v-desimone-auto-group-et-al-2026-08-27": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "peter-williams-et-al-v-dallas-fort-worth-international-airport-board-et-al-2026-08-27": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "salloum-v-department-of-transportation-2026-08-27": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "thomas-raynard-james-v-detective-kevin-conley-et-al-2026-08-27": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "varma-v-the-bank-of-new-york-mellon-2026-08-27": {
       "tier": "index-ready",
       "score": 85
     },
     "darrin-l-johnson-jr-v-nationstar-mortgage-llc-et-al-2026-08-26": {
       "tier": "index-ready",
       "score": 81
+    },
+    "fairrow-v-easten-2026-08-26": {
+      "tier": "index-ready",
+      "score": 76
     },
     "krystal-faye-potterf-et-al-v-drew-f-wessels-et-al-2026-08-26": {
       "tier": "index-ready",

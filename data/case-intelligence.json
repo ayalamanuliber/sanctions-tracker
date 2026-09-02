@@ -154,6 +154,7 @@
         "fake-citations",
         "fabricated-quotes",
         "misrepresented-authority",
+        "other",
         "trial"
       ],
       "sanction_types": [
@@ -650,6 +651,7 @@
         "fake-citations",
         "fabricated-quotes",
         "misrepresented-authority",
+        "other",
         "trial"
       ],
       "sanction_types": [
@@ -1833,6 +1835,60 @@
       ],
       "sanction_types": [
         "ordered-to-show-cause"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "perez-v-schaal-et-al-2026-08-20",
+    "slug": "perez-v-schaal-et-al-2026-08-20",
+    "case_name": "Perez v. Schaal, et al.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "False Quotes: Case Law | Plaintiff attributed the sentence \"The filing of an answer … effected a waiver of the right to demur.\" to Adorh (Adohr) Milk Farms, Inc. v. Love (255 Cal.App.2d 366), but the court could not find that language in that opinion or any reported case and noted the quotation may be AI-generated. Outcome: Court warned the pro se plaintiff to verify all citations and quotations, declined to impose sanctions at this time.. The pro se plaintiff quoted a passage attributed to Adorh (Adohr) Milk Farms, Inc. v. Love (255 Cal.App.2d 366) that the court could not find in that opinion or any other reported case. The court identified the likely AI origin of the fabricated quotation, cited case law warning that relying on fabricated authority is sanctionable, and cautioned the plaintiff to verify citations. The court declined to impose sanctions at this time but warned future fabricated citations could result in sanctions.",
+    "direct_answer": "False Quotes: Case Law | Plaintiff attributed the sentence \"The filing of an answer … effected a waiver of the right to demur.\" to Adorh (Adohr) Milk Farms, Inc. v. Love (255 Cal.App.2d 366), but the court could not find that language in that opinion or any reported case and noted the quotation may be AI-generated. Outcome: Court warned the pro se plaintiff to verify all citations and quotations, declined to impose sanctions at this time.. The pro se plaintiff quoted a passage attributed to Adorh (Adohr) Milk Farms, Inc. v. Love (255 Cal.App.2d 366) that the court could not find in that opinion or any other reported case. The court identified the likely AI origin of the fabricated quotation, cited case law warning that relying on fabricated authority is sanctionable, and cautioned the plaintiff to verify citations. The court declined to impose sanctions at this time but warned future fabricated citations could result in sanctions.",
+    "why_it_matters": "This matter connects pro se and fabricated quotes with Court warned the pro se plaintiff to verify all citations and quotations, declined to impose sanctions at this time. in Super. Ct., Sacramento County (Cal.). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fabricated quotes and records Court warned the pro se plaintiff to verify all citations and quotations, declined to impose sanctions at this time.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3004/Perez_v._Schaal_USA_21_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Super. Ct., Sacramento County (Cal.)",
+      "jurisdiction": "state",
+      "state": "",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-20",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Court warned the pro se plaintiff to verify all citations and quotations, declined to impose sanctions at this time.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fabricated-quotes",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
       ]
     },
     "publication": {

@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "34fee4918e36db5eea42a6959a2af0feb18ee2f52229f885cb3ba8a1db36bee5",
-  "corpus_checked": "2026-09-01",
-  "total_cases": 2005,
-  "total_assessments": 2005,
+  "dataset_checksum": "d5fb058bd7ded8265fb5a7e0a763ef64e383f92da05ff9a56815b673724b1f06",
+  "corpus_checked": "2026-09-02",
+  "total_cases": 2006,
+  "total_assessments": 2006,
   "tiers": {
-    "index-ready": 1982,
+    "index-ready": 1983,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 103,
-    "operational-lesson-not-recorded": 1269,
+    "operational-lesson-not-recorded": 1270,
     "outcome-not-recorded": 392,
-    "publication-review-pending": 2005,
+    "publication-review-pending": 2006,
     "source-link-missing": 4,
-    "specific-ai-tool-not-established": 1776,
+    "specific-ai-tool-not-established": 1777,
     "summary-missing": 2,
     "summary-needs-detail": 820,
     "summary-too-brief": 16
@@ -3225,6 +3225,103 @@
       "index_eligible": true,
       "source_eligible": true,
       "summary_length": 316,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "perez-v-schaal-et-al-2026-08-20",
+      "slug": "perez-v-schaal-et-al-2026-08-20",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 944,
       "score_breakdown": [
         {
           "criterion": "case_name",

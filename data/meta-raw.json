@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-09-01",
-  "last_checked": "2026-09-01",
-  "last_checked_at": "2026-09-01T13:31:28.265Z",
+  "last_updated": "2026-09-02",
+  "last_checked": "2026-09-02",
+  "last_checked_at": "2026-09-02T12:48:13.715Z",
   "latest_record_date": "2026-08-31",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 2005,
-  "source_linked_count": 2001,
+  "source_record_count": 2006,
+  "source_linked_count": 2002,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 0,
-  "dataset_checksum": "34fee4918e36db5eea42a6959a2af0feb18ee2f52229f885cb3ba8a1db36bee5",
-  "total_cases": 2005,
-  "us_cases": 1375,
-  "us_adjudicated": 1369,
+  "dataset_checksum": "d5fb058bd7ded8265fb5a7e0a763ef64e383f92da05ff9a56815b673724b1f06",
+  "total_cases": 2006,
+  "us_cases": 1376,
+  "us_adjudicated": 1370,
   "us_alleged_only": 6,
   "countries_tracked": 42,
-  "enriched_count": 2005,
+  "enriched_count": 2006,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
@@ -22,13 +22,13 @@
   "largest_single_sanction": 282508,
   "avg_sanction": 7599,
   "severity_counts": {
-    "low": 1423,
+    "low": 1424,
     "medium": 336,
     "high": 207,
     "career-ending": 39
   },
   "by_country": {
-    "US": 1375,
+    "US": 1376,
     "Australia": 110,
     "Israel": 57,
     "India": 14,
@@ -15673,6 +15673,7 @@
             "fake-citations",
             "fabricated-quotes",
             "misrepresented-authority",
+            "other",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/3000/Booker_v._Kroger_USA_28_AUgust_2026.pdf"
@@ -24627,7 +24628,7 @@
   "by_week": {
     "2026-W36": 1,
     "2026-W35": 23,
-    "2026-W34": 23,
+    "2026-W34": 24,
     "2026-W33": 23,
     "2026-W32": 28,
     "2026-W31": 31,
@@ -24762,7 +24763,7 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-08": 98,
+    "2026-08": 99,
     "2026-07": 129,
     "2026-06": 127,
     "2026-05": 154,
@@ -24807,10 +24808,10 @@
     "2023": 16,
     "2024": 59,
     "2025": 849,
-    "2026": 1081
+    "2026": 1082
   },
   "by_tool": {
-    "AI (implied, unspecified)": 1342,
+    "AI (implied, unspecified)": 1343,
     "Unidentified": 433,
     "ChatGPT": 109,
     "Strongsuit": 1,
@@ -24965,7 +24966,7 @@
     },
     {
       "week": "2026-W34",
-      "count": 23
+      "count": 24
     },
     {
       "week": "2026-W35",

@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "34fee4918e36db5eea42a6959a2af0feb18ee2f52229f885cb3ba8a1db36bee5",
-  "corpus_checked": "2026-09-01",
-  "total_cases": 2005,
+  "dataset_checksum": "d5fb058bd7ded8265fb5a7e0a763ef64e383f92da05ff9a56815b673724b1f06",
+  "corpus_checked": "2026-09-02",
+  "total_cases": 2006,
   "tiers": {
-    "index-ready": 1982,
+    "index-ready": 1983,
     "enrichment-ready": 18,
     "research-only": 5
   },
@@ -138,6 +138,10 @@
       "score": 85
     },
     "michael-dotson-v-bob-evans-farms-llc-2026-08-20": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "perez-v-schaal-et-al-2026-08-20": {
       "tier": "index-ready",
       "score": 85
     },

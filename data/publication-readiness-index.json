@@ -1,14 +1,18 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "d5fb058bd7ded8265fb5a7e0a763ef64e383f92da05ff9a56815b673724b1f06",
-  "corpus_checked": "2026-09-02",
-  "total_cases": 2006,
+  "dataset_checksum": "ecb75b7bf9d3b00cb2543ad95b3ffea89e85a0befb9239d28055c7abe5ead0d3",
+  "corpus_checked": "2026-09-03",
+  "total_cases": 2009,
   "tiers": {
-    "index-ready": 1983,
+    "index-ready": 1986,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "by_slug": {
+    "vijay-ghanshyam-gadiya-v-union-of-india-anr-2026-09-02": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "state-of-hawaii-v-cody-presti-2026-08-31": {
       "tier": "index-ready",
       "score": 85
@@ -27,7 +31,7 @@
     },
     "sanja-noble-v-wmc-mortgage-corp-et-al-2026-08-28": {
       "tier": "index-ready",
-      "score": 85
+      "score": 80
     },
     "adams-v-matrix-providers-inc-et-al-2026-08-27": {
       "tier": "index-ready",
@@ -210,6 +214,10 @@
       "score": 90
     },
     "daryl-harris-v-christopher-a-wray-2026-08-14": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "davis-v-gopal-didyuk-and-methodist-healthcare-memphis-hospitals-2026-08-14": {
       "tier": "index-ready",
       "score": 85
     },
@@ -7528,6 +7536,10 @@
     "aq-v-bt-2025-03-28": {
       "tier": "index-ready",
       "score": 86
+    },
+    "casey-dutt-v-dgk-roofing-and-home-l-l-c-2025-03-28": {
+      "tier": "index-ready",
+      "score": 80
     },
     "lyj-v-occupational-therapy-board-of-australia-2025-03-26": {
       "tier": "index-ready",

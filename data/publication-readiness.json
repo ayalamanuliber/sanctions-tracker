@@ -1,27 +1,124 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "d5fb058bd7ded8265fb5a7e0a763ef64e383f92da05ff9a56815b673724b1f06",
-  "corpus_checked": "2026-09-02",
-  "total_cases": 2006,
-  "total_assessments": 2006,
+  "dataset_checksum": "ecb75b7bf9d3b00cb2543ad95b3ffea89e85a0befb9239d28055c7abe5ead0d3",
+  "corpus_checked": "2026-09-03",
+  "total_cases": 2009,
+  "total_assessments": 2009,
   "tiers": {
-    "index-ready": 1983,
+    "index-ready": 1986,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 103,
-    "operational-lesson-not-recorded": 1270,
-    "outcome-not-recorded": 392,
-    "publication-review-pending": 2006,
+    "operational-lesson-not-recorded": 1273,
+    "outcome-not-recorded": 394,
+    "publication-review-pending": 2009,
     "source-link-missing": 4,
-    "specific-ai-tool-not-established": 1777,
+    "specific-ai-tool-not-established": 1780,
     "summary-missing": 2,
     "summary-needs-detail": 820,
     "summary-too-brief": 16
   },
   "records": [
+    {
+      "id": "vijay-ghanshyam-gadiya-v-union-of-india-anr-2026-09-02",
+      "slug": "vijay-ghanshyam-gadiya-v-union-of-india-anr-2026-09-02",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 910,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
     {
       "id": "state-of-hawaii-v-cody-presti-2026-08-31",
       "slug": "state-of-hawaii-v-cody-presti-2026-08-31",
@@ -425,7 +522,7 @@
     {
       "id": "sanja-noble-v-wmc-mortgage-corp-et-al-2026-08-28",
       "slug": "sanja-noble-v-wmc-mortgage-corp-et-al-2026-08-28",
-      "score": 85,
+      "score": 80,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
@@ -469,7 +566,7 @@
         },
         {
           "criterion": "outcome",
-          "points": 5,
+          "points": 0,
           "maximum": 5
         },
         {
@@ -499,6 +596,12 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
@@ -5019,6 +5122,103 @@
       "index_eligible": true,
       "source_eligible": true,
       "summary_length": 295,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "davis-v-gopal-didyuk-and-methodist-healthcare-memphis-hospitals-2026-08-14",
+      "slug": "davis-v-gopal-didyuk-and-methodist-healthcare-memphis-hospitals-2026-08-14",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 974,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -184959,6 +185159,109 @@
           "code": "specific-ai-tool-not-established",
           "impact": "context",
           "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "casey-dutt-v-dgk-roofing-and-home-l-l-c-2025-03-28",
+      "slug": "casey-dutt-v-dgk-roofing-and-home-l-l-c-2025-03-28",
+      "score": 80,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 434,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
         },
         {
           "field": "reviewed",

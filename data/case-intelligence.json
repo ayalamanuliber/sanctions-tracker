@@ -1,5 +1,60 @@
 [
   {
+    "id": "vijay-ghanshyam-gadiya-v-union-of-india-anr-2026-09-02",
+    "slug": "vijay-ghanshyam-gadiya-v-union-of-india-anr-2026-09-02",
+    "case_name": "Vijay Ghanshyam Gadiya v. Union of India & Anr.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The Customs authority relied on case laws that the Supreme Court verified as non-existent or carrying fake citations. Outcome: The High Court order and Order-in-Original imposing the penalty were set aside; proceedings were remanded for fresh determination by a different officer of the same rank.. The Supreme Court found that the Customs authority’s Order-in-Original relied on judgments and articles apparently generated using AI. Its verification showed that some authorities were non-existent or had fake citations, while other existing authorities did not support the propositions attributed to them. Treating reliance on such dubious material as fatal to the order, the Court set aside both the High Court judgment and the penalty order and remanded the matter for a fresh decision. The Court left it to the appointing authority to consider action against the author of the order.",
+    "direct_answer": "Fabricated: Case Law | The Customs authority relied on case laws that the Supreme Court verified as non-existent or carrying fake citations. Outcome: The High Court order and Order-in-Original imposing the penalty were set aside; proceedings were remanded for fresh determination by a different officer of the same rank.. The Supreme Court found that the Customs authority’s Order-in-Original relied on judgments and articles apparently generated using AI. Its verification showed that some authorities were non-existent or had fake citations, while other existing authorities did not support the propositions attributed to them. Treating reliance on such dubious material as fatal to the order, the Court set aside both the High Court judgment and the penalty order and remanded the matter for a fresh decision. The Court left it to the appointing authority to consider action against the author of the order.",
+    "why_it_matters": "This matter connects fake citations and misrepresented authority with The High Court order and Order-in-Original imposing the penalty were set aside; proceedings were remanded for fresh determination by a different officer of the same rank. in Supreme Court of India. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and misrepresented authority and records The High Court order and Order-in-Original imposing the penalty were set aside; proceedings were remanded for fresh determination by a different officer of the same rank.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3013/Vijay_Ghanshyam_Gadiya_v_Union_of_India_.pdf",
+      "name": "Alvin Antony",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Supreme Court of India",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "India",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-02",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "The High Court order and Order-in-Original imposing the penalty were set aside; proceedings were remanded for fresh determination by a different officer of the same rank.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "state-of-hawaii-v-cody-presti-2026-08-31",
     "slug": "state-of-hawaii-v-cody-presti-2026-08-31",
     "case_name": "State of Hawaii v. Cody Presti",
@@ -27,25 +82,26 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "Intermediate Court of Appeals of Hawaii",
-      "jurisdiction": "federal",
+      "court": "ICA Hawaii",
+      "jurisdiction": "state",
       "state": "HI",
       "country": "US",
       "circuit": "9th Circuit",
       "judge": null,
       "date": "2026-08-31",
       "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Arguments supported by nonexistent authority were deemed waived; court declined to impose sanctions in this criminal direct appeal though noted sanctions were available under appellate rules.",
+      "outcome": "Warning",
       "amount": null,
       "professional_sanction": "No",
       "tags": [
         "pro-se",
         "fake-citations",
         "published-opinion",
-        "trial"
+        "criminal",
+        "appellate"
       ],
       "sanction_types": [
-        "none-adjudicated"
+        "warning"
       ]
     },
     "publication": {
@@ -247,24 +303,25 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "Ill. App. 1st Dist.",
+      "court": "CA Illinois",
       "jurisdiction": "state",
-      "state": "",
+      "state": "IL",
       "country": "US",
-      "circuit": null,
+      "circuit": "7th Circuit",
       "judge": null,
       "date": "2026-08-28",
       "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Appellate court identified the citation as a hallucination, corrected the authority (pointing to People v. Mott), declined to strike the brief, and refused to consider the unsupported assertion; no professional sanction imposed.",
+      "outcome": "",
       "amount": null,
       "professional_sanction": "No",
       "tags": [
         "pro-se",
         "fake-citations",
-        "trial"
+        "other",
+        "appellate"
       ],
       "sanction_types": [
-        "struck-filing"
+        "none-adjudicated"
       ]
     },
     "publication": {
@@ -1871,24 +1928,25 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "Super. Ct., Sacramento County (Cal.)",
+      "court": "SC California",
       "jurisdiction": "state",
-      "state": "",
+      "state": "CA",
       "country": "US",
-      "circuit": null,
+      "circuit": "9th Circuit",
       "judge": null,
       "date": "2026-08-20",
       "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Court warned the pro se plaintiff to verify all citations and quotations, declined to impose sanctions at this time.",
+      "outcome": "Warning",
       "amount": null,
       "professional_sanction": "No",
       "tags": [
         "pro-se",
         "fabricated-quotes",
+        "tort",
         "trial"
       ],
       "sanction_types": [
-        "none-adjudicated"
+        "warning"
       ]
     },
     "publication": {
@@ -2830,6 +2888,64 @@
       ],
       "sanction_types": [
         "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "davis-v-gopal-didyuk-and-methodist-healthcare-memphis-hospitals-2026-08-14",
+    "slug": "davis-v-gopal-didyuk-and-methodist-healthcare-memphis-hospitals-2026-08-14",
+    "case_name": "Davis v. Gopal, Didyuk, and Methodist Healthcare-Memphis Hospitals",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Legal Norm | The memoranda requested costs under a nonexistent Tennessee statute. The motion states that Tennessee Code chapter 20-5 ends at section 20-5-118 and contains no section 20-5-119(c). Outcome: Plaintiff moved for a Rule 11.03(1)(b) order to show cause; no sanction had yet been imposed.. Plaintiff's motion alleges that defense counsel filed motions to dismiss containing nonexistent Tennessee statutes, nonexistent statutory subdivisions, fabricated quotations, invented legal standards, incorrect reporter citations, and facts attributed to the wrong cases. The motion identifies alleged AI-generated or copied errors involving Martin, Stevens, J.A.C., Roberts, Lawson, Foster, Bray, and other authorities. The requested relief was an order requiring the identified attorneys and firms to explain their conduct under oath and attend a hearing under Tennessee Rule of Civil Procedure 11.03(1)(b); the motion expressly reserved any sanctions decision.",
+    "direct_answer": "Fabricated: Legal Norm | The memoranda requested costs under a nonexistent Tennessee statute. The motion states that Tennessee Code chapter 20-5 ends at section 20-5-118 and contains no section 20-5-119(c). Outcome: Plaintiff moved for a Rule 11.03(1)(b) order to show cause; no sanction had yet been imposed.. Plaintiff's motion alleges that defense counsel filed motions to dismiss containing nonexistent Tennessee statutes, nonexistent statutory subdivisions, fabricated quotations, invented legal standards, incorrect reporter citations, and facts attributed to the wrong cases. The motion identifies alleged AI-generated or copied errors involving Martin, Stevens, J.A.C., Roberts, Lawson, Foster, Bray, and other authorities. The requested relief was an order requiring the identified attorneys and firms to explain their conduct under oath and attend a hearing under Tennessee Rule of Civil Procedure 11.03(1)(b); the motion expressly reserved any sanctions decision.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Plaintiff moved for a Rule 11.03(1)(b) order to show cause; no sanction had yet been imposed. in Shelby County Circuit Court, Tenn.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Plaintiff moved for a Rule 11.03(1)(b) order to show cause; no sanction had yet been imposed.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3011/David_v_6QHOnoF._Gopal_USA_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Shelby County Circuit Court, Tenn.",
+      "jurisdiction": "state",
+      "state": "",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-14",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Plaintiff moved for a Rule 11.03(1)(b) order to show cause; no sanction had yet been imposed.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "appellate"
+      ],
+      "sanction_types": [
+        "ordered-to-show-cause",
+        "none-adjudicated"
       ]
     },
     "publication": {
@@ -176220,6 +176336,59 @@
         "The full text of the tribunal's reasoning is not available in the provided metadata.",
         "Source retrieval note: generic-or-shared-source."
       ]
+    }
+  },
+  {
+    "id": "casey-dutt-v-dgk-roofing-and-home-l-l-c-2025-03-28",
+    "slug": "casey-dutt-v-dgk-roofing-and-home-l-l-c-2025-03-28",
+    "case_name": "Casey Dutt v. DGK Roofing and Home, L.L.C.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Defendant cited a nonexistent Ohio appellate case for the proposition that misunderstanding legal obligations or procedural confusion constitutes excusable neglect under Civ.R. 60(B). The Court checked the cited reporter location and found it referred instead to Gottfried-Smith v. Gottfried, which did not analyze Civ.R. 60(B). This led to a subsequent complaint before the Ohio Disciplinary Counsel: see here.",
+    "direct_answer": "Fabricated: Case Law | Defendant cited a nonexistent Ohio appellate case for the proposition that misunderstanding legal obligations or procedural confusion constitutes excusable neglect under Civ.R. 60(B). The Court checked the cited reporter location and found it referred instead to Gottfried-Smith v. Gottfried, which did not analyze Civ.R. 60(B). This led to a subsequent complaint before the Ohio Disciplinary Counsel: see here.",
+    "why_it_matters": "This matter connects fake citations and trial with a recorded judicial or procedural response in Ohio CCP. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and trial and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3009/Dutt_v._DGK_Roofing__Home_USA_28_March_2025.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Ohio CCP",
+      "jurisdiction": "state",
+      "state": "OH",
+      "country": "US",
+      "circuit": "6th Circuit",
+      "judge": null,
+      "date": "2025-03-28",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

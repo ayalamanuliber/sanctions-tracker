@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-09-03T12:51:18.176Z",
-  "checked_date": "2026-09-03",
+  "checked_at": "2026-09-04T12:45:17.642Z",
+  "checked_date": "2026-09-04",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
   "raw_rows": 2009,
   "imported_records": 2009,
-  "previous_records": 2006,
-  "record_delta": 3,
+  "previous_records": 2009,
+  "record_delta": 0,
   "skipped_missing_date": 0,
   "invalid_dates": 0,
   "future_dates": 0,
@@ -14,6 +14,6 @@
   "source_link_coverage_pct": 99.8,
   "latest_record_date": "2026-09-02",
   "latest_record_name": "Vijay Ghanshyam Gadiya v. Union of India & Anr.",
-  "dataset_checksum": "ecb75b7bf9d3b00cb2543ad95b3ffea89e85a0befb9239d28055c7abe5ead0d3",
+  "dataset_checksum": "7dd7e67a3fe22384719f67be357e63f30b25dadb9264768882e391bb91e17896",
   "status": "validated"
 }

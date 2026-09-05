@@ -1,5 +1,60 @@
 [
   {
+    "id": "douglas-v-deutsche-bank-national-trust-company-2026-09-03",
+    "slug": "douglas-v-deutsche-bank-national-trust-company-2026-09-03",
+    "case_name": "Douglas v. Deutsche Bank National Trust Company",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Fabricated: Case Law | The appellee's brief cited a nonexistent case purportedly named Abadie v. District of Columbia; the attorney admitted the authority was not legitimate, and the court declined to reproduce the fabricated citation. Outcome: Brief Stricken; Bar Referral.",
+    "direct_answer": "Fabricated: Case Law | The appellee's brief cited a nonexistent case purportedly named Abadie v. District of Columbia; the attorney admitted the authority was not legitimate, and the court declined to reproduce the fabricated citation. Outcome: Brief Stricken; Bar Referral.",
+    "why_it_matters": "This matter connects fake citations and bar referral with Brief Stricken; Bar Referral in D.C. Court of Appeals. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and bar referral and records Brief Stricken; Bar Referral. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded link is a secondary public source and should be checked against the docket where available. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://reason.com/volokh/2026/09/04/incredulity-that-competent-law-firm-representing-one-of-the-largest-financial-institutions-in-the-world-filed-brief-with-ai-hallucinations/",
+      "name": "Volokh",
+      "tier": "secondary-report"
+    },
+    "record": {
+      "court": "D.C. Court of Appeals",
+      "jurisdiction": "federal",
+      "state": "",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-03",
+      "ai_tool": "Google AI",
+      "outcome": "Brief Stricken; Bar Referral",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "bar-referral",
+        "other",
+        "trial"
+      ],
+      "sanction_types": [
+        "bar-referral"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "vijay-ghanshyam-gadiya-v-union-of-india-anr-2026-09-02",
     "slug": "vijay-ghanshyam-gadiya-v-union-of-india-anr-2026-09-02",
     "case_name": "Vijay Ghanshyam Gadiya v. Union of India & Anr.",
@@ -42,6 +97,60 @@
       "tags": [
         "fake-citations",
         "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "fleming-v-the-owners-strata-plan-lms-4383-2026-08-31",
+    "slug": "fleming-v-the-owners-strata-plan-lms-4383-2026-08-31",
+    "case_name": "Fleming v. The Owners, Strata Plan LMS 4383",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The applicants relied on several nonexistent cases in their additional submissions. The CRT identified them as likely AI hallucinations and declined to address arguments based on them.",
+    "direct_answer": "Fabricated: Case Law | The applicants relied on several nonexistent cases in their additional submissions. The CRT identified them as likely AI hallucinations and declined to address arguments based on them.",
+    "why_it_matters": "This matter connects fake citations and landlord tenant with a recorded judicial or procedural response in CRT British Columbia. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and landlord tenant and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3021/Fleming-v.-The-Owners-Strata-Plan-LMS-4383-2026-BCCRT-1266.pdf",
+      "name": "Courtready",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "CRT British Columbia",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-31",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "landlord-tenant",
         "trial"
       ],
       "sanction_types": [
@@ -319,6 +428,58 @@
         "fake-citations",
         "other",
         "appellate"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "united-food-and-commercial-workers-canada-union-local-no-401-v-1074867-alberta-ltd-2026-08-28",
+    "slug": "united-food-and-commercial-workers-canada-union-local-no-401-v-1074867-alberta-ltd-2026-08-28",
+    "case_name": "United Food and Commercial Workers Canada Union, Local No. 401 v 1074867 ALBERTA LTD.",
+    "classification": "allegation",
+    "severity": "low",
+    "summary": "The Union sought costs partly because it suspected that the Employer’s submissions were prepared using generative AI. The Board stated that the objection lacked merit and that some arguments mischaracterized the Board’s cases, policies, and procedures, but it did not identify any specific fabricated citation or false quotation and declined to exercise its restrictive costs authority. The objection was dismissed and ballot counting was directed.",
+    "direct_answer": "The Union sought costs partly because it suspected that the Employer’s submissions were prepared using generative AI. The Board stated that the objection lacked merit and that some arguments mischaracterized the Board’s cases, policies, and procedures, but it did not identify any specific fabricated citation or false quotation and declined to exercise its restrictive costs authority. The objection was dismissed and ballot counting was directed.",
+    "why_it_matters": "This matter connects trial with a recorded judicial or procedural response in Alberta LRB. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies trial and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Keep allegations separate from adjudicated findings in research, reporting, and client communications.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record concerns a public allegation and does not establish an adjudicated finding. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3022/United-Food-and-Commercial-Workers-Canada-Unio.pdf",
+      "name": "Courtready",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Alberta LRB",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-28",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "trial"
       ],
       "sanction_types": [
         "none-adjudicated"
@@ -1223,6 +1384,121 @@
       ],
       "sanction_types": [
         "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "lpc-commercial-services-llc-v-ar-razzaaq-properties-llc-2026-08-25",
+    "slug": "lpc-commercial-services-llc-v-ar-razzaaq-properties-llc-2026-08-25",
+    "case_name": "LPC Commercial Services, LLC v. Ar-Razzaaq Properties, LLC",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Case Law | The brief presented a purported direct quotation from a Virginia case that differed from the source by at least one word; the court found that the quotation was not exact. Outcome: Order to complete CLE.",
+    "direct_answer": "Misrepresented: Case Law | The brief presented a purported direct quotation from a Virginia case that differed from the source by at least one word; the court found that the quotation was not exact. Outcome: Order to complete CLE.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Order to complete CLE in CA Virginia. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Order to complete CLE. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3018/LPC_v._Ar-Razzaaq_USA_25_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "CA Virginia",
+      "jurisdiction": "state",
+      "state": "VA",
+      "country": "US",
+      "circuit": "4th Circuit",
+      "judge": null,
+      "date": "2026-08-25",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Order to complete CLE",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "contract",
+        "appellate"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "solicitors-regulation-authority-ltd-v-abhishek-kumar-2026-08-25",
+    "slug": "solicitors-regulation-authority-ltd-v-abhishek-kumar-2026-08-25",
+    "case_name": "Solicitors Regulation Authority Ltd v Abhishek Kumar",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Misrepresented: Case Law | The Respondent cited SRA v Chan as a 2020 Administrative Court authority, but the Tribunal found that the relevant SRA v Chan case was from 2015 and did not bear the cited reference. Outcome: Counsel struck off the Register of Foreign Lawyers.",
+    "direct_answer": "Misrepresented: Case Law | The Respondent cited SRA v Chan as a 2020 Administrative Court authority, but the Tribunal found that the relevant SRA v Chan case was from 2015 and did not bear the cited reference. Outcome: Counsel struck off the Register of Foreign Lawyers.",
+    "why_it_matters": "This matter connects fabricated quotes and misrepresented authority with Counsel struck off the Register of Foreign Lawyers in Solicitors Disciplinary Tribunal. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fabricated quotes and misrepresented authority and records Counsel struck off the Register of Foreign Lawyers. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3023/12884-2026-Kumar-.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Solicitors Disciplinary Tribunal",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "GB",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-25",
+      "ai_tool": "Unidentified",
+      "outcome": "Counsel struck off the Register of Foreign Lawyers",
+      "amount": null,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "immigration",
+        "trial"
+      ],
+      "sanction_types": [
+        "struck-filing",
+        "professional"
       ]
     },
     "publication": {
@@ -15735,6 +16011,59 @@
     }
   },
   {
+    "id": "kay-v-association-of-academic-staff-university-of-alberta-and-university-of-alberta-board--2026-06-30",
+    "slug": "kay-v-association-of-academic-staff-university-of-alberta-and-university-of-alberta-board-2026-06-30",
+    "case_name": "Kay v Association of Academic Staff University of Alberta and University of Alberta (Board of Governors)",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Case Law | The submission cited Mennes for the principle that the substance of an employer’s action is determined by its practical effects. The Board found that Mennes did not address employer action or its characterization. Outcome: Warning.",
+    "direct_answer": "Misrepresented: Case Law | The submission cited Mennes for the principle that the substance of an employer’s action is determined by its practical effects. The Board found that Mennes did not address employer action or its characterization. Outcome: Warning.",
+    "why_it_matters": "This matter connects misrepresented authority and trial with Warning in Alberta LRB. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies misrepresented authority and trial and records Warning. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3020/Kay-v-Association-of-Academic-Staff-University-of-Alberta-2026-ALRB-84.pdf",
+      "name": "Courtready",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Alberta LRB",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-06-30",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Warning",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "p-three-development-llc-v-therm-flo-inc-2026-06-30",
     "slug": "p-three-development-llc-v-therm-flo-inc-2026-06-30",
     "case_name": "P-Three Development, LLC v. Therm Flo, Inc.",
@@ -21671,6 +22000,65 @@
       "limitations": [
         "The specific AI tool used by the pro se litigant remains unidentified."
       ]
+    }
+  },
+  {
+    "id": "habib-anor-v-secretary-of-state-for-the-home-department-2026-06-12",
+    "slug": "habib-anor-v-secretary-of-state-for-the-home-department-2026-06-12",
+    "case_name": "Habib & Anor v Secretary of State for the Home Department",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Misrepresented: Case Law | AH (Sudan) was cited for a flexible approach to obtaining documents from countries with weak or disrupted state structures, but the Tribunal found that the case was not authority for that proposition. Outcome: Appeal dismissed; solicitors and counsel issued a notice to show cause concerning possible wasted costs and referral to the SRA/BSB. No professional sanction or monetary penalty was imposed in this decision.. The Upper Tribunal identified multiple incorrect, misleading, and apparently fabricated authorities in the appellants’ grounds of appeal and amended skeleton argument. It found that AH (Sudan), Matusha, and AA (Nigeria) did not support the propositions for which they were cited, and that the alleged quotation from Matusha did not appear in that judgment. Other citations appeared to correspond to unrelated cases or could not be located. The court considered that an AI large language model may have been used, but this was not established. It directed the solicitors and counsel to explain the drafting, any AI use, and their citation checks, reserving questions of wasted costs and regulatory referral.",
+    "direct_answer": "Misrepresented: Case Law | AH (Sudan) was cited for a flexible approach to obtaining documents from countries with weak or disrupted state structures, but the Tribunal found that the case was not authority for that proposition. Outcome: Appeal dismissed; solicitors and counsel issued a notice to show cause concerning possible wasted costs and referral to the SRA/BSB. No professional sanction or monetary penalty was imposed in this decision.. The Upper Tribunal identified multiple incorrect, misleading, and apparently fabricated authorities in the appellants’ grounds of appeal and amended skeleton argument. It found that AH (Sudan), Matusha, and AA (Nigeria) did not support the propositions for which they were cited, and that the alleged quotation from Matusha did not appear in that judgment. Other citations appeared to correspond to unrelated cases or could not be located. The court considered that an AI large language model may have been used, but this was not established. It directed the solicitors and counsel to explain the drafting, any AI use, and their citation checks, reserving questions of wasted costs and regulatory referral.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Appeal dismissed; solicitors and counsel issued a notice to show cause concerning possible wasted costs and referral to the SRA/BSB. No professional sanction or monetary penalty was imposed in this decision. in Upper Tribunal (Immigration and Asylum Chamber). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Appeal dismissed; solicitors and counsel issued a notice to show cause concerning possible wasted costs and referral to the SRA/BSB. No professional sanction or monetary penalty was imposed in this decision.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3029/UI-2026-000882___UI-2026-000883.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Upper Tribunal (Immigration and Asylum Chamber)",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "GB",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-06-12",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Appeal dismissed; solicitors and counsel issued a notice to show cause concerning possible wasted costs and referral to the SRA/BSB. No professional sanction or monetary penalty was imposed in this decision.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "case-dismissed",
+        "bar-referral"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {
@@ -51688,6 +52076,63 @@
     }
   },
   {
+    "id": "brook-house-henley-rtm-company-limited-v-henley-brook-limited-2026-04-13",
+    "slug": "brook-house-henley-rtm-company-limited-v-henley-brook-limited-2026-04-13",
+    "case_name": "Brook House (Henley) RTM Company Limited v Henley Brook Limited",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The Respondent relied on a purported paragraph 28 of Gala Unity, but the Tribunal noted that the judgment extends only to paragraph 19 and contains no such paragraph.",
+    "direct_answer": "Fabricated: Case Law | The Respondent relied on a purported paragraph 28 of Gala Unity, but the Tribunal noted that the judgment extends only to paragraph 19 and contains no such paragraph.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with a recorded judicial or procedural response in First-tier Tribunal (Property Chamber). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded link is a secondary public source and should be checked against the docket where available. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://naturalandartificiallaw.com/76-uk-cases-of-ai-hallucinated-false-citations/",
+      "name": "Natural & Artificial Intelligence in Law",
+      "tier": "secondary-report"
+    },
+    "record": {
+      "court": "First-tier Tribunal (Property Chamber)",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "GB",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-04-13",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "mutzarei-hashmal-v-beer-ya-akov-2026-04-13",
     "slug": "mutzarei-hashmal-v-beer-ya-akov-2026-04-13",
     "case_name": "Mutzarei Hashmal v. Beer Ya'akov",
@@ -69835,6 +70280,60 @@
     }
   },
   {
+    "id": "chevalier-hernandez-v-poplar-dock-management-company-ltd-2026-03-09",
+    "slug": "chevalier-hernandez-v-poplar-dock-management-company-ltd-2026-03-09",
+    "case_name": "Chevalier-Hernandez v Poplar Dock Management Company Ltd",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The Applicant cited a purported case supporting the proposition that pest-control treatments were qualifying works under section 20 of the Landlord and Tenant Act 1985. The Tribunal and Respondent could not find the case in any legal database or law report and treated it as a fake authority. Outcome: The Applicant withdrew the argument; the Tribunal warned litigants to verify authorities but imposed no sanction.. The Applicant relied on an unidentified purported legal authority claiming that a pest-control programme constituted qualifying works requiring consultation under section 20 of the Landlord and Tenant Act 1985. The Tribunal and Respondent could not locate the case in any legal database or law report, despite the authority containing purported party names, court, date, facts, legal points, judge, and citation. The Applicant withdrew the argument and said he may have found it through Google or ChatGPT. The Tribunal characterized the authority as a fake case and reminded litigants, including litigants in person, to verify that legal authorities are genuine.",
+    "direct_answer": "Fabricated: Case Law | The Applicant cited a purported case supporting the proposition that pest-control treatments were qualifying works under section 20 of the Landlord and Tenant Act 1985. The Tribunal and Respondent could not find the case in any legal database or law report and treated it as a fake authority. Outcome: The Applicant withdrew the argument; the Tribunal warned litigants to verify authorities but imposed no sanction.. The Applicant relied on an unidentified purported legal authority claiming that a pest-control programme constituted qualifying works requiring consultation under section 20 of the Landlord and Tenant Act 1985. The Tribunal and Respondent could not locate the case in any legal database or law report, despite the authority containing purported party names, court, date, facts, legal points, judge, and citation. The Applicant withdrew the argument and said he may have found it through Google or ChatGPT. The Tribunal characterized the authority as a fake case and reminded litigants, including litigants in person, to verify that legal authorities are genuine.",
+    "why_it_matters": "This matter connects pro se and fake citations with The Applicant withdrew the argument; the Tribunal warned litigants to verify authorities but imposed no sanction. in First-tier Tribunal (Property Chamber). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records The Applicant withdrew the argument; the Tribunal warned litigants to verify authorities but imposed no sanction.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3026/68_Boardwalk_Place_DECISION_amended_24.02.26.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "First-tier Tribunal (Property Chamber)",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "GB",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-03-09",
+      "ai_tool": "ChatGPT",
+      "outcome": "The Applicant withdrew the argument; the Tribunal warned litigants to verify authorities but imposed no sanction.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "m7-indústria-e-comércio-de-compensados-e-laminados-v-us-structural-plywood-integ",
     "slug": "m7-industria-e-comercio-de-compensados-e-laminados-v-us-structural-plywood-integ",
     "case_name": "M7 Indústria e Comércio de Compensados e Laminados v. U.S. Structural Plywood Integrity Coalition, et al.",
@@ -85690,6 +86189,60 @@
     }
   },
   {
+    "id": "1-v-2026-02-03",
+    "slug": "1-v-2026-02-03",
+    "case_name": "ОСОБА_1 v. Головне управління Пенсійного фонду України в Кіровоградській області",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The appeal cited a purported Grand Chamber decision dated 2018-12-04 in case No. 826/2042/16. The court found that no such Grand Chamber decision existed in that case.",
+    "direct_answer": "Fabricated: Case Law | The appeal cited a purported Grand Chamber decision dated 2018-12-04 in case No. 826/2042/16. The court found that no such Grand Chamber decision existed in that case.",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in Supreme Court. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3016/Supreme_Court_Ukraine_AI_Hallucinations_Case_340-2365-25_2026-02-03.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Supreme Court",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Ukraine",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-02-03",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "broadwater-tower-2026-02-02",
     "slug": "broadwater-tower-2026-02-02",
     "case_name": "Broadwater Tower",
@@ -94181,6 +94734,63 @@
         "Whether the petitioner actually used generative AI tools.",
         "The specific AI tool, if any, employed by the petitioner."
       ]
+    }
+  },
+  {
+    "id": "1-v-2026-01-15",
+    "slug": "1-v-2026-01-15",
+    "case_name": "ОСОБА_1 v. Головне управління Пенсійного фонду України в Житомирській області",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The appeal cited a purported Grand Chamber decision in case No. 9901/12/19 dated 3 July 2019 and attributed to it a legal conclusion concerning the status of informational letters. The Court found that the relevant decision was actually dated 25 June 2019 and did not contain that conclusion.",
+    "direct_answer": "Fabricated: Case Law | The appeal cited a purported Grand Chamber decision in case No. 9901/12/19 dated 3 July 2019 and attributed to it a legal conclusion concerning the status of informational letters. The Court found that the relevant decision was actually dated 25 June 2019 and did not contain that conclusion.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with a recorded judicial or procedural response in Supreme Court. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3017/Supreme_Court_Ukraine_AI_Hallucinations_Case_240-14153-24_2026-01-15.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Supreme Court",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Ukraine",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-01-15",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {
@@ -114196,6 +114806,61 @@
       ],
       "sanction_types": [
         "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "lockesfield-management-company-limited-v-the-leasehold-and-freehold-owners-of-lockesfield--2025-12-01",
+    "slug": "lockesfield-management-company-limited-v-the-leasehold-and-freehold-owners-of-lockesfield-2025-12-01",
+    "case_name": "Lockesfield Management Company Limited v The Leasehold and Freehold Owners of Lockesfield Place",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The Respondents relied on legal authorities that appeared irrelevant and did not support the propositions for which they were cited. The Tribunal disregarded them.",
+    "direct_answer": "Fabricated: Case Law | The Respondents relied on legal authorities that appeared irrelevant and did not support the propositions for which they were cited. The Tribunal disregarded them.",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in First-tier Tribunal (Property Chamber). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded link is a secondary public source and should be checked against the docket where available. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://naturalandartificiallaw.com/76-uk-cases-of-ai-hallucinated-false-citations/",
+      "name": "Natural & Artificial Intelligence in Law",
+      "tier": "secondary-report"
+    },
+    "record": {
+      "court": "First-tier Tribunal (Property Chamber)",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "GB",
+      "circuit": null,
+      "judge": null,
+      "date": "2025-12-01",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "landlord-tenant",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
       ]
     },
     "publication": {
@@ -141800,6 +142465,67 @@
       "limitations": [
         "The specific AI tool used by the representative is not identified in the court record."
       ]
+    }
+  },
+  {
+    "id": "franklin-paterson-wandji-mboungueng-v-severn-trent-water-limited-2025-09-22",
+    "slug": "franklin-paterson-wandji-mboungueng-v-severn-trent-water-limited-2025-09-22",
+    "case_name": "Franklin Paterson Wandji Mboungueng v Severn Trent Water Limited",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Misrepresented: Case Law | The Claimant cited an incorrect EAT reference and asserted that the case held that a technical omission should not override hearing serious discrimination allegations. The Tribunal found that the correct reference was PA/1281/02/MAA and that the case instead concerned the strict application of time limits, subject to exceptional circumstances, not discrimination allegations. Outcome: The application to set aside the dismissal was refused. No sanction or monetary penalty was imposed for the inaccurate authorities, but the Tribunal warned that further serious inaccuracies could result in strike-out for scandalous or unreasonable conduct.. The Claimant relied on several authorities that were either non-existent, incorrectly cited, or materially misrepresented. The Employment Judge strongly suspected that AI had been used but did not determine this conclusively. The Tribunal explained that using AI was not itself improper, but submitting unchecked and misleading authorities was a serious problem. The inaccurate references did not affect the refusal of the application, and the Tribunal made no orders on its own initiative, while warning that further similar conduct could lead to strike-out.",
+    "direct_answer": "Misrepresented: Case Law | The Claimant cited an incorrect EAT reference and asserted that the case held that a technical omission should not override hearing serious discrimination allegations. The Tribunal found that the correct reference was PA/1281/02/MAA and that the case instead concerned the strict application of time limits, subject to exceptional circumstances, not discrimination allegations. Outcome: The application to set aside the dismissal was refused. No sanction or monetary penalty was imposed for the inaccurate authorities, but the Tribunal warned that further serious inaccuracies could result in strike-out for scandalous or unreasonable conduct.. The Claimant relied on several authorities that were either non-existent, incorrectly cited, or materially misrepresented. The Employment Judge strongly suspected that AI had been used but did not determine this conclusively. The Tribunal explained that using AI was not itself improper, but submitting unchecked and misleading authorities was a serious problem. The inaccurate references did not affect the refusal of the application, and the Tribunal made no orders on its own initiative, while warning that further similar conduct could lead to strike-out.",
+    "why_it_matters": "This matter connects pro se and fake citations with The application to set aside the dismissal was refused. No sanction or monetary penalty was imposed for the inaccurate authorities, but the Tribunal warned that further serious inaccuracies could result in strike-out for scandalous or unreasonable conduct. in Employment Tribunal, Birmingham. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records The application to set aside the dismissal was refused. No sanction or monetary penalty was imposed for the inaccurate authorities, but the Tribunal warned that further serious inaccuracies could result in strike-out for scandalous or unreasonable conduct.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3027/Franklin_Paterson_Wandji_Mboungueng_v_Severn_Trent_Vjzkziz.23_Reconsideration_reasons_.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Employment Tribunal, Birmingham",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "GB",
+      "circuit": null,
+      "judge": null,
+      "date": "2025-09-22",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "The application to set aside the dismissal was refused. No sanction or monetary penalty was imposed for the inaccurate authorities, but the Tribunal warned that further serious inaccuracies could result in strike-out for scandalous or unreasonable conduct.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "struck-filing",
+        "case-dismissed",
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {
@@ -185119,6 +185845,60 @@
       "limitations": [
         "The specific prompt used by the appellant to generate the ChatGPT list is not disclosed in the judgment."
       ]
+    }
+  },
+  {
+    "id": "dr-c-mallon-v-steer-energy-solutions-limited-2024-06-15",
+    "slug": "dr-c-mallon-v-steer-energy-solutions-limited-2024-06-15",
+    "case_name": "Dr C Mallon v Steer Energy Solutions Limited",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | The tribunal stated that the claimant’s AI-generated submissions created non-existent case law and precedent, rendering the submissions unreliable and confusing; no individual fabricated authority was identified in the judgment. Outcome: The claimant was ordered to pay £7,500 in costs; the AI-generated submissions were cited as contributing to unreasonable conduct and wasted costs, but no separate penalty was imposed specifically for hallucination.. The claimant submitted lengthy correspondence and attachments relying on several unidentified AI generators. The tribunal found that the submissions were often highly unreliable and literally created non-existent case law and precedent, causing confusion and additional work. The court treated this approach as part of the claimant’s unreasonable conduct in the proceedings and reaffirmed a £7,500 costs order, while making no separate sanction specifically for the fabricated authorities.",
+    "direct_answer": "Fabricated: Case Law | The tribunal stated that the claimant’s AI-generated submissions created non-existent case law and precedent, rendering the submissions unreliable and confusing; no individual fabricated authority was identified in the judgment. Outcome: The claimant was ordered to pay £7,500 in costs; the AI-generated submissions were cited as contributing to unreasonable conduct and wasted costs, but no separate penalty was imposed specifically for hallucination.. The claimant submitted lengthy correspondence and attachments relying on several unidentified AI generators. The tribunal found that the submissions were often highly unreliable and literally created non-existent case law and precedent, causing confusion and additional work. The court treated this approach as part of the claimant’s unreasonable conduct in the proceedings and reaffirmed a £7,500 costs order, while making no separate sanction specifically for the fabricated authorities.",
+    "why_it_matters": "This matter connects pro se and fake citations with The claimant was ordered to pay £7,500 in costs; the AI-generated submissions were cited as contributing to unreasonable conduct and wasted costs, but no separate penalty was imposed specifically for hallucination. in Birmingham Employment Tribunal. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records The claimant was ordered to pay £7,500 in costs; the AI-generated submissions were cited as contributing to unreasonable conduct and wasted costs, but no separate penalty was imposed specifically for hallucination.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3028/Dr_C_Mallon_v_Steer_Energy_Solutions_Ltd_-_1403759_2021_-_Recon.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Birmingham Employment Tribunal",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "GB",
+      "circuit": null,
+      "judge": null,
+      "date": "2024-06-15",
+      "ai_tool": "Unidentified",
+      "outcome": "The claimant was ordered to pay £7,500 in costs; the AI-generated submissions were cited as contributing to unreasonable conduct and wasted costs, but no separate penalty was imposed specifically for hallucination.",
+      "amount": 1,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

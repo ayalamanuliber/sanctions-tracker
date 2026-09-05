@@ -1,17 +1,25 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "7dd7e67a3fe22384719f67be357e63f30b25dadb9264768882e391bb91e17896",
-  "corpus_checked": "2026-09-04",
-  "total_cases": 2009,
+  "dataset_checksum": "dd85aaef0f7cf19fb9640d57cfdcda2752d049fe6a3b1e23a747bde1ee8258c5",
+  "corpus_checked": "2026-09-05",
+  "total_cases": 2023,
   "tiers": {
-    "index-ready": 1986,
+    "index-ready": 2000,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "by_slug": {
+    "douglas-v-deutsche-bank-national-trust-company-2026-09-03": {
+      "tier": "index-ready",
+      "score": 90
+    },
     "vijay-ghanshyam-gadiya-v-union-of-india-anr-2026-09-02": {
       "tier": "index-ready",
       "score": 85
+    },
+    "fleming-v-the-owners-strata-plan-lms-4383-2026-08-31": {
+      "tier": "index-ready",
+      "score": 76
     },
     "state-of-hawaii-v-cody-presti-2026-08-31": {
       "tier": "index-ready",
@@ -32,6 +40,10 @@
     "sanja-noble-v-wmc-mortgage-corp-et-al-2026-08-28": {
       "tier": "index-ready",
       "score": 80
+    },
+    "united-food-and-commercial-workers-canada-union-local-no-401-v-1074867-alberta-ltd-2026-08-28": {
+      "tier": "index-ready",
+      "score": 75
     },
     "adams-v-matrix-providers-inc-et-al-2026-08-27": {
       "tier": "index-ready",
@@ -96,6 +108,14 @@
     "kurelko-v-ballard-2026-08-25": {
       "tier": "index-ready",
       "score": 81
+    },
+    "lpc-commercial-services-llc-v-ar-razzaaq-properties-llc-2026-08-25": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "solicitors-regulation-authority-ltd-v-abhishek-kumar-2026-08-25": {
+      "tier": "index-ready",
+      "score": 85
     },
     "heywood-v-state-of-queensland-department-of-education-2026-08-24": {
       "tier": "index-ready",
@@ -937,6 +957,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "kay-v-association-of-academic-staff-university-of-alberta-and-university-of-alberta-board-2026-06-30": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "p-three-development-llc-v-therm-flo-inc-2026-06-30": {
       "tier": "index-ready",
       "score": 81
@@ -1176,6 +1200,10 @@
     "cibc-mortgages-inc-v-reina-flores-2026-06-12": {
       "tier": "index-ready",
       "score": 76
+    },
+    "habib-anor-v-secretary-of-state-for-the-home-department-2026-06-12": {
+      "tier": "index-ready",
+      "score": 85
     },
     "jason-wimberly-v-verizon-new-york-inc-2026-06-12": {
       "tier": "index-ready",
@@ -2393,6 +2421,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "brook-house-henley-rtm-company-limited-v-henley-brook-limited-2026-04-13": {
+      "tier": "index-ready",
+      "score": 76
+    },
     "mutzarei-hashmal-v-beer-ya-akov-2026-04-13": {
       "tier": "index-ready",
       "score": 85
@@ -3133,6 +3165,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "chevalier-hernandez-v-poplar-dock-management-company-ltd-2026-03-09": {
+      "tier": "index-ready",
+      "score": 90
+    },
     "m7-industria-e-comercio-de-compensados-e-laminados-v-us-structural-plywood-integ": {
       "tier": "index-ready",
       "score": 90
@@ -3781,6 +3817,10 @@
       "tier": "index-ready",
       "score": 90
     },
+    "1-v-2026-02-03": {
+      "tier": "index-ready",
+      "score": 76
+    },
     "broadwater-tower-2026-02-02": {
       "tier": "index-ready",
       "score": 90
@@ -4128,6 +4168,10 @@
     "re-imo-the-estate-of-joseph-l-weddington-2026-01-15": {
       "tier": "index-ready",
       "score": 85
+    },
+    "1-v-2026-01-15": {
+      "tier": "index-ready",
+      "score": 80
     },
     "boyd-v-lee-2026-01-14": {
       "tier": "index-ready",
@@ -4944,6 +4988,10 @@
     "kingdom-of-sweden-v-x-2025-12-01": {
       "tier": "index-ready",
       "score": 85
+    },
+    "lockesfield-management-company-limited-v-the-leasehold-and-freehold-owners-of-lockesfield-2025-12-01": {
+      "tier": "index-ready",
+      "score": 76
     },
     "lothamer-tax-resolution-inc-v-paul-kimmel-2-2025-12-01": {
       "tier": "index-ready",
@@ -6084,6 +6132,10 @@
     "stile-carpentry-ltd-v-2004424-ontario-2025-09-23": {
       "tier": "index-ready",
       "score": 76
+    },
+    "franklin-paterson-wandji-mboungueng-v-severn-trent-water-limited-2025-09-22": {
+      "tier": "index-ready",
+      "score": 85
     },
     "in-re-molina-2025-09-22": {
       "tier": "index-ready",
@@ -7924,6 +7976,10 @@
     "x-bv-in-z-v-tax-inspector-2024-06-26": {
       "tier": "index-ready",
       "score": 95
+    },
+    "dr-c-mallon-v-steer-energy-solutions-limited-2024-06-15": {
+      "tier": "index-ready",
+      "score": 85
     },
     "dowlah-v-professional-staff-congress-2024-05-30": {
       "tier": "index-ready",

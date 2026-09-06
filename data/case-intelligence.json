@@ -24479,7 +24479,7 @@
       "date": "2026-06-09",
       "ai_tool": "AI (implied, unspecified)",
       "outcome": "Adverse Costs Order; Bar Referral",
-      "amount": 80056,
+      "amount": 85056,
       "professional_sanction": "Yes",
       "tags": [
         "fake-citations",
@@ -25343,11 +25343,11 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "CA Minnesotta",
+      "court": "CA Minnesota",
       "jurisdiction": "state",
-      "state": "",
+      "state": "MN",
       "country": "US",
-      "circuit": null,
+      "circuit": "8th Circuit",
       "judge": null,
       "date": "2026-06-08",
       "ai_tool": "AI (implied, unspecified)",
@@ -28863,6 +28863,7 @@
       "amount": null,
       "professional_sanction": "No",
       "tags": [
+        "pro-se",
         "fake-citations",
         "fabricated-quotes",
         "misrepresented-authority",
@@ -35958,7 +35959,7 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "D. Minnesotta",
+      "court": "D. Minnesota",
       "jurisdiction": "federal",
       "state": "MN",
       "country": "US",
@@ -41688,7 +41689,7 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "D. Minnesotta",
+      "court": "D. Minnesota",
       "jurisdiction": "federal",
       "state": "MN",
       "country": "US",
@@ -70303,7 +70304,7 @@
     ],
     "source": {
       "url": "https://www.damiencharlotin.com/documents/3026/68_Boardwalk_Place_DECISION_amended_24.02.26.pdf",
-      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "name": "Natural & Artificial Intelligence in Law",
       "tier": "publisher-archive"
     },
     "record": {
@@ -70315,16 +70316,17 @@
       "judge": null,
       "date": "2026-03-09",
       "ai_tool": "ChatGPT",
-      "outcome": "The Applicant withdrew the argument; the Tribunal warned litigants to verify authorities but imposed no sanction.",
+      "outcome": "Warning",
       "amount": null,
       "professional_sanction": "No",
       "tags": [
         "pro-se",
         "fake-citations",
+        "landlord-tenant",
         "trial"
       ],
       "sanction_types": [
-        "none-adjudicated"
+        "warning"
       ]
     },
     "publication": {
@@ -96046,11 +96048,11 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "Minnesotta DC",
+      "court": "Minnesota DC",
       "jurisdiction": "state",
-      "state": "DC",
+      "state": "MN",
       "country": "US",
-      "circuit": "D.C. Circuit",
+      "circuit": "8th Circuit",
       "judge": null,
       "date": "2026-01-13",
       "ai_tool": "Lexis Assist",
@@ -104636,105 +104638,6 @@
       "prompt_version": "case-intelligence-v7",
       "limitations": [
         "The specific AI tool used by the applicant remains unidentified."
-      ]
-    }
-  },
-  {
-    "id": "patrick-joseph-groulx-v-csl-limited-2025-12-19",
-    "slug": "patrick-joseph-groulx-v-csl-limited-2025-12-19",
-    "case_name": "Patrick Joseph Groulx v CSL Limited",
-    "classification": "adjudicated",
-    "severity": "low",
-    "summary": "In Patrick Joseph Groulx v CSL Limited, the Michigan Court of Appeals dismissed the appellant's appeal due to the inclusion of two non-existent case citations in the appellant's brief. The court determined that the appellant failed to comply with court rules regarding the submission of filings, specifically citing MCR 1.109(E)(5)(b) and MCR 7.211(C)(2)(b). While the court granted the motion to dismiss the appeal, it denied the appellees' request for sanctions at that time because the request was procedurally improper under MCR 7.211(C)(8). The court's order allowed the appellees to file a separate motion for sanctions for vexatious proceedings within 21 days of the dismissal order.",
-    "why_it_matters": "Fabricated cites can kill an appeal outright; run a cite-check pass on every AI-assisted brief before filing.",
-    "judicial_reasoning": "Fabricated: Case Law | Appellant's brief included citation to a non-existent case; court found it to be a fabricated case citation and relied on this as part of basis to dismiss the appeal. || Fabricated: Case Law | Appellant's brief included a second citation to a non-existent case; court treated this as another fabricated citation contributing to dismissal.",
-    "decision_context": "The record concerns whether authorities presented to the decision-maker existed and could be verified. The tracked outcome is Appeal dismissed; the linked source controls the precise reasoning.",
-    "practical_implications": [
-      "Verify each cited authority, quotation, and proposition against the underlying source before filing.",
-      "Assign a responsible reviewer for AI-assisted research and drafting.",
-      "Retain a matter-level record of source checks and corrections."
-    ],
-    "evidence_boundary": "Retained unchanged after audit: the existing summary is source-specific, non-placeholder, and supported by the recorded source link. Read the underlying source before relying on it for legal advice or a filing.",
-    "verified_fields": [
-      "case_name",
-      "court",
-      "date",
-      "party",
-      "ai_tool_used",
-      "hallucination_items",
-      "outcome",
-      "source_url",
-      "procedural_posture"
-    ],
-    "source": {
-      "url": "https://www.damiencharlotin.com/documents/1326/Groux_v._CSL_USA_19_December_2025.pdf",
-      "name": "Damien Charlotin AI Hallucination Cases Database",
-      "tier": "publisher-archive"
-    },
-    "record": {
-      "court": "CA Michigan",
-      "jurisdiction": "state",
-      "state": "MI",
-      "country": "US",
-      "circuit": "6th Circuit",
-      "judge": null,
-      "date": "2025-12-19",
-      "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Appeal dismissed",
-      "amount": null,
-      "professional_sanction": "No",
-      "tags": [
-        "fake-citations",
-        "contract",
-        "appellate"
-      ],
-      "sanction_types": [
-        "case-dismissed"
-      ]
-    },
-    "publication": {
-      "ready": true,
-      "agent_status": "enriched",
-      "blocked_reason": null
-    },
-    "direct_answer": "The Michigan Court of Appeals dismissed the appellant's appeal because the appellant's brief contained two fabricated case citations, violating court rules regarding the duty of candor and procedural compliance. The court did not impose sanctions at the time of dismissal but permitted the appellees to file a subsequent motion for sanctions.",
-    "procedural_posture": "The Court of Appeals granted a motion to dismiss the appeal based on the appellant's failure to conform to court rules.",
-    "outcome_summary": "The appeal was dismissed, and the court denied the current request for sanctions without prejudice to a future filing.",
-    "professional_consequence": "None imposed in this order; however, the court granted leave for the appellees to file a motion for sanctions for vexatious proceedings.",
-    "uncertainties": [
-      "The specific AI tool used is not identified in the court order.",
-      "The final outcome of any subsequent motion for sanctions is not documented in this record."
-    ],
-    "evidence_notes": [
-      {
-        "field": "procedural_posture",
-        "basis": "The court granted a motion to dismiss the appeal.",
-        "locator": "p. 1"
-      },
-      {
-        "field": "outcome",
-        "basis": "The appeal was dismissed for failure to conform to court rules.",
-        "locator": "p. 1"
-      },
-      {
-        "field": "judicial_reasoning",
-        "basis": "The court cited the inclusion of two non-existent cases as the basis for dismissal.",
-        "locator": "p. 1"
-      },
-      {
-        "field": "professional_consequence",
-        "basis": "The court denied the request for sanctions without prejudice.",
-        "locator": "p. 1"
-      }
-    ],
-    "evidence_review": {
-      "status": "primary-document-verified",
-      "confidence": "high",
-      "reviewed_at": "2026-07-27T19:21:49.191Z",
-      "prompt_version": "case-intelligence-v7",
-      "limitations": [
-        "The specific AI tool used is not identified in the court order.",
-        "The final outcome of any subsequent motion for sanctions is not documented in this record."
       ]
     }
   },
@@ -124661,7 +124564,7 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "CA Texas, Austin",
+      "court": "CA Texas",
       "jurisdiction": "state",
       "state": "TX",
       "country": "US",
@@ -124673,6 +124576,7 @@
       "amount": null,
       "professional_sanction": "No",
       "tags": [
+        "pro-se",
         "fake-citations",
         "misrepresented-authority",
         "family",
@@ -129274,7 +129178,7 @@
       "judge": null,
       "date": "2025-10-30",
       "ai_tool": "Amicus (Casemine)",
-      "outcome": "Monetary Sanction; Referral to the Bar; Order to serve decision on clinet;",
+      "outcome": "Monetary Sanction; Referral to the Bar; Order to serve decision on client",
       "amount": 7500,
       "professional_sanction": "No",
       "tags": [
@@ -132408,7 +132312,7 @@
       "date": "2025-10-22",
       "ai_tool": "ChatGPT",
       "outcome": "Pleadings struck; public reprimands; monetary sanctions; remedial filing and certification requirements",
-      "amount": 28495,
+      "amount": 29495,
       "professional_sanction": "Yes",
       "tags": [
         "fake-citations",
@@ -140708,11 +140612,11 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "CC Minnesota",
+      "court": "CC Mississippi",
       "jurisdiction": "state",
-      "state": "MN",
+      "state": "MS",
       "country": "US",
-      "circuit": "8th Circuit",
+      "circuit": "5th Circuit",
       "judge": null,
       "date": "2025-09-26",
       "ai_tool": "FastCase",
@@ -145647,12 +145551,13 @@
       "judge": null,
       "date": "2025-09-12",
       "ai_tool": "ChatGPT",
-      "outcome": "Monetary sanction; additional reporting and certification requirements; bar reerral",
+      "outcome": "Monetary sanction; additional reporting and certification requirements; bar referral",
       "amount": 13000,
       "professional_sanction": "No",
       "tags": [
         "fake-citations",
         "misrepresented-authority",
+        "bar-referral",
         "contract",
         "trial"
       ],
@@ -146775,7 +146680,7 @@
       "judge": null,
       "date": "2025-09-09",
       "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Monetary sanction; Order to be server on client; State Bar notified",
+      "outcome": "Monetary sanction; Order to be served on client; State Bar notified",
       "amount": 1500,
       "professional_sanction": "Yes",
       "tags": [
@@ -169961,11 +169866,11 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "Minnesotta Tax Court",
+      "court": "Minnesota Tax Court",
       "jurisdiction": "federal",
-      "state": "",
+      "state": "MN",
       "country": "US",
-      "circuit": null,
+      "circuit": "8th Circuit",
       "judge": null,
       "date": "2025-05-29",
       "ai_tool": "Unidentified",
@@ -173056,67 +172961,6 @@
       "limitations": [
         "The final outcome of the contempt proceedings before Justice Murray.",
         "The final outcome of the PNG Law Society disciplinary investigation."
-      ]
-    }
-  },
-  {
-    "id": "in-re-thomas-grant-neusom-2025-05-08",
-    "slug": "in-re-thomas-grant-neusom-2025-05-08",
-    "case_name": "In re Thomas Grant Neusom",
-    "classification": "adjudicated",
-    "severity": "career-ending",
-    "summary": "Outcome: Suspension from practice before the Middle District of Florida for one year; immediate prohibition on accepting new federal matters; conditional reinstatement. (Grievance Committee Report available here.)AI UseNeusom told the grievance committee that he “may have used artificial intelligence” in preparing filings, and that any hallucinated cases were not deliberately fabricated but may have come from AI tools. The filings in question included a notice of removal and a motion for summary judgment. The judge later noted a pattern of citations inconsistent with established case law and unsupported by known databases.Hallucination DetailsCitations included cases that either did not exist or were grossly mischaracterized. Notably:Southern Specialties, Inc. v. Pulido Produce, Inc. – no such case found in Westlaw, Lexis, or PACERTrilogy Communications v. Times Fiber – cited in support of breach of contract when it was a patent matter involving no such principlesNeusom failed to produce the full texts of the cited cases when requested and instead filed a 721-page exhibit in violation of court orders.Ruling/SanctionThe court adopted the grievance committee’s recommendation and imposed a one-year suspension. Neusom is prohibited from accepting new federal cases in the Middle District of Florida during the suspension and must:Notify existing clients and the court of his suspensionFile a compliance affidavit within 30 daysComplete appropriate CLE and counseling programsRemain in good standing with the Florida BarApply for reinstatement only after certifying complianceKey Judicial ReasoningThe court found that Neusom violated Rules 4-1.3, 4-3.3(a)(3), 4-3.4(c), and 4-8.4(c) of the Florida Rules of Professional Conduct. His failure to verify AI-generated content, compounded by noncompliance with orders and false statements to opposing counsel, demonstrated a pattern of recklessness and dishonesty. The court emphasized that federal proceedings require a high standard of diligence and that invoking AI cannot excuse failure to meet professional obligations.",
-    "why_it_matters": "One-year federal suspension follows when attorneys hedge on AI use and ignore court orders to produce cited cases.",
-    "judicial_reasoning": "The court found that Neusom violated Rules 4-1.3, 4-3.3(a)(3), 4-3.4(c), and 4-8.4(c) of the Florida Rules of Professional Conduct. His failure to verify AI-generated content, compounded by noncompliance with orders and false statements to opposing counsel, demonstrated a pattern of recklessness and dishonesty. The court emphasized that federal proceedings require a high standard of diligence and that invoking AI cannot excuse failure to meet professional obligations",
-    "decision_context": "The linked record identifies contract and trial and records Suspension from practice before the Middle District of Florida for one year; immediate prohibition on accepting new federal matters; conditional reinstatement. This page does not infer judicial reasoning beyond the source.",
-    "practical_implications": [
-      "Escalate unresolved verification failures before filing and preserve the responsible reviewer's signoff record.",
-      "Read the linked source and subsequent docket history before relying on this record for legal work."
-    ],
-    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
-    "verified_fields": [
-      "case_name",
-      "court",
-      "date",
-      "source_url"
-    ],
-    "source": {
-      "url": "https://www.damiencharlotin.com/documents/332/Re_Thomas_Grant_Neusom_Florida_USA_May_8_2025.pdf",
-      "name": "Natural & Artificial Intelligence in Law",
-      "tier": "publisher-archive"
-    },
-    "record": {
-      "court": "M.D. Florida",
-      "jurisdiction": "federal",
-      "state": "FL",
-      "country": "US",
-      "circuit": "11th Circuit",
-      "judge": null,
-      "date": "2025-05-08",
-      "ai_tool": "Unidentified",
-      "outcome": "Suspension from practice before the Middle District of Florida for one year; immediate prohibition on accepting new federal matters; conditional reinstatement",
-      "amount": null,
-      "professional_sanction": "Yes",
-      "tags": [
-        "contract",
-        "trial"
-      ],
-      "sanction_types": [
-        "professional"
-      ]
-    },
-    "publication": {
-      "ready": true,
-      "agent_status": "adequate_unchanged",
-      "blocked_reason": null
-    },
-    "evidence_review": {
-      "status": "primary-document-verified",
-      "confidence": "high",
-      "reviewed_at": "2026-07-27T19:24:38.931Z",
-      "prompt_version": "case-intelligence-v7",
-      "limitations": [
-        "The provided source document does not explicitly mention the use of AI, despite the case record summary suggesting it."
       ]
     }
   },
@@ -180490,7 +180334,7 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "D. Minnesotta",
+      "court": "D. Minnesota",
       "jurisdiction": "federal",
       "state": "MN",
       "country": "US",
@@ -185962,6 +185806,58 @@
         "Specific AI tool identity",
         "Source retrieval note: http-403."
       ]
+    }
+  },
+  {
+    "id": "in-re-thomas-grant-neusom-2024-05-08",
+    "slug": "in-re-thomas-grant-neusom-2024-05-08",
+    "case_name": "In re Thomas Grant Neusom",
+    "classification": "adjudicated",
+    "severity": "career-ending",
+    "summary": "Outcome: Suspension from practice before the Middle District of Florida for one year; immediate prohibition on accepting new federal matters; conditional reinstatement. (Grievance Committee Report available here.)AI UseNeusom told the grievance committee that he “may have used artificial intelligence” in preparing filings, and that any hallucinated cases were not deliberately fabricated but may have come from AI tools. The filings in question included a notice of removal and a motion for summary judgment. The judge later noted a pattern of citations inconsistent with established case law and unsupported by known databases.Hallucination DetailsCitations included cases that either did not exist or were grossly mischaracterized. Notably:Southern Specialties, Inc. v. Pulido Produce, Inc. – no such case found in Westlaw, Lexis, or PACERTrilogy Communications v. Times Fiber – cited in support of breach of contract when it was a patent matter involving no such principlesNeusom failed to produce the full texts of the cited cases when requested and instead filed a 721-page exhibit in violation of court orders.Ruling/SanctionThe court adopted the grievance committee’s recommendation and imposed a one-year suspension. Neusom is prohibited from accepting new federal cases in the Middle District of Florida during the suspension and must:Notify existing clients and the court of his suspensionFile a compliance affidavit within 30 daysComplete appropriate CLE and counseling programsRemain in good standing with the Florida BarApply for reinstatement only after certifying complianceKey Judicial ReasoningThe court found that Neusom violated Rules 4-1.3, 4-3.3(a)(3), 4-3.4(c), and 4-8.4(c) of the Florida Rules of Professional Conduct. His failure to verify AI-generated content, compounded by noncompliance with orders and false statements to opposing counsel, demonstrated a pattern of recklessness and dishonesty. The court emphasized that federal proceedings require a high standard of diligence and that invoking AI cannot excuse failure to meet professional obligations.",
+    "direct_answer": "Outcome: Suspension from practice before the Middle District of Florida for one year; immediate prohibition on accepting new federal matters; conditional reinstatement. (Grievance Committee Report available here.)AI UseNeusom told the grievance committee that he “may have used artificial intelligence” in preparing filings, and that any hallucinated cases were not deliberately fabricated but may have come from AI tools. The filings in question included a notice of removal and a motion for summary judgment. The judge later noted a pattern of citations inconsistent with established case law and unsupported by known databases.Hallucination DetailsCitations included cases that either did not exist or were grossly mischaracterized. Notably:Southern Specialties, Inc. v. Pulido Produce, Inc. – no such case found in Westlaw, Lexis, or PACERTrilogy Communications v. Times Fiber – cited in support of breach of contract when it was a patent matter involving no such principlesNeusom failed to produce the full texts of the cited cases when requested and instead filed a 721-page exhibit in violation of court orders.Ruling/SanctionThe court adopted the grievance committee’s recommendation and imposed a one-year suspension. Neusom is prohibited from accepting new federal cases in the Middle District of Florida during the suspension and must:Notify existing clients and the court of his suspensionFile a compliance affidavit within 30 daysComplete appropriate CLE and counseling programsRemain in good standing with the Florida BarApply for reinstatement only after certifying complianceKey Judicial ReasoningThe court found that Neusom violated Rules 4-1.3, 4-3.3(a)(3), 4-3.4(c), and 4-8.4(c) of the Florida Rules of Professional Conduct. His failure to verify AI-generated content, compounded by noncompliance with orders and false statements to opposing counsel, demonstrated a pattern of recklessness and dishonesty. The court emphasized that federal proceedings require a high standard of diligence and that invoking AI cannot excuse failure to meet professional obligations.",
+    "why_it_matters": "This matter connects contract and trial with Suspension from practice before the Middle District of Florida for one year; immediate prohibition on accepting new federal matters; conditional reinstatement in M.D. Florida. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies contract and trial and records Suspension from practice before the Middle District of Florida for one year; immediate prohibition on accepting new federal matters; conditional reinstatement. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/332/Re_Thomas_Grant_Neusom_Florida_USA_May_8_2025.pdf",
+      "name": "Natural & Artificial Intelligence in Law",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "M.D. Florida",
+      "jurisdiction": "federal",
+      "state": "FL",
+      "country": "US",
+      "circuit": "11th Circuit",
+      "judge": null,
+      "date": "2024-05-08",
+      "ai_tool": "Unidentified",
+      "outcome": "Suspension from practice before the Middle District of Florida for one year; immediate prohibition on accepting new federal matters; conditional reinstatement",
+      "amount": null,
+      "professional_sanction": "Yes",
+      "tags": [
+        "contract",
+        "trial"
+      ],
+      "sanction_types": [
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

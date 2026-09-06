@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "dd85aaef0f7cf19fb9640d57cfdcda2752d049fe6a3b1e23a747bde1ee8258c5",
-  "corpus_checked": "2026-09-05",
-  "total_cases": 2023,
+  "dataset_checksum": "22defbc9236f5fb02e625bedf2e987fe7e01e266ceb96104742e8396f0166fcc",
+  "corpus_checked": "2026-09-06",
+  "total_cases": 2022,
   "tiers": {
-    "index-ready": 2000,
+    "index-ready": 1999,
     "enrichment-ready": 18,
     "research-only": 5
   },
@@ -4573,10 +4573,6 @@
       "tier": "index-ready",
       "score": 80
     },
-    "patrick-joseph-groulx-v-csl-limited-2025-12-19": {
-      "tier": "index-ready",
-      "score": 86
-    },
     "arabyads-holding-limited-v-gulrez-alam-marghoob-alam-2025-12-18": {
       "tier": "index-ready",
       "score": 90
@@ -7413,10 +7409,6 @@
       "tier": "index-ready",
       "score": 95
     },
-    "in-re-thomas-grant-neusom-2025-05-08": {
-      "tier": "index-ready",
-      "score": 85
-    },
     "israel-v-ibrahim-mahajneh-2025-05-07": {
       "tier": "index-ready",
       "score": 90
@@ -7982,6 +7974,10 @@
       "score": 85
     },
     "dowlah-v-professional-staff-congress-2024-05-30": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "in-re-thomas-grant-neusom-2024-05-08": {
       "tier": "index-ready",
       "score": 80
     },

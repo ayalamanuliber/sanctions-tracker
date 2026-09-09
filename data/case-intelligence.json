@@ -1,5 +1,380 @@
 [
   {
+    "id": "asiedu-v-eastlund-2026-09-08",
+    "slug": "asiedu-v-eastlund-2026-09-08",
+    "case_name": "Asiedu v. Eastlund",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | The district court found that Asiedu cited nonexistent cases in his filings; the appellate opinion confirms that these citations did not constitute existing law but does not identify them individually. Outcome: Affirmed sanctions of $2,341.25 in reasonable costs and attorney fees for bad-faith use of inaccurate, misleading, and nonexistent caselaw.. Michael Kwabena Asiedu, appearing pro se, admitted at the sanctions hearing that he used artificial intelligence to research and draft his filings but did not verify the accuracy of the caselaw citations. The district court found that he repeatedly cited nonexistent cases or cited real cases for propositions they did not support, thereby misleading the court. The Minnesota Court of Appeals held that this constituted bad faith, applied the same filing standards to Asiedu as to attorneys, and affirmed the award of $2,341.25 in attorney fees and costs. The opinion does not identify the individual fabricated or misrepresented citations.",
+    "direct_answer": "Fabricated: Case Law | The district court found that Asiedu cited nonexistent cases in his filings; the appellate opinion confirms that these citations did not constitute existing law but does not identify them individually. Outcome: Affirmed sanctions of $2,341.25 in reasonable costs and attorney fees for bad-faith use of inaccurate, misleading, and nonexistent caselaw.. Michael Kwabena Asiedu, appearing pro se, admitted at the sanctions hearing that he used artificial intelligence to research and draft his filings but did not verify the accuracy of the caselaw citations. The district court found that he repeatedly cited nonexistent cases or cited real cases for propositions they did not support, thereby misleading the court. The Minnesota Court of Appeals held that this constituted bad faith, applied the same filing standards to Asiedu as to attorneys, and affirmed the award of $2,341.25 in attorney fees and costs. The opinion does not identify the individual fabricated or misrepresented citations.",
+    "why_it_matters": "This matter connects pro se and fake citations with Affirmed sanctions of $2,341.25 in reasonable costs and attorney fees for bad-faith use of inaccurate, misleading, and nonexistent caselaw. in Minn. Ct. App.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Affirmed sanctions of $2,341.25 in reasonable costs and attorney fees for bad-faith use of inaccurate, misleading, and nonexistent caselaw.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3044/Asiedu_USA_8_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Minn. Ct. App.",
+      "jurisdiction": "state",
+      "state": "",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-08",
+      "ai_tool": "Unidentified",
+      "outcome": "Affirmed sanctions of $2,341.25 in reasonable costs and attorney fees for bad-faith use of inaccurate, misleading, and nonexistent caselaw.",
+      "amount": 1,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "carter-v-city-of-buffalo-2026-09-08",
+    "slug": "carter-v-city-of-buffalo-2026-09-08",
+    "case_name": "Carter v. City of Buffalo",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Case Law | The Court stated that Carter continued to use case law that did not support the propositions for which it was cited, but did not identify individual citations or explain the deficiencies in each authority. Outcome: The Court warned that future misuse of artificial intelligence may result in sanctions.. The Court suspected that Carter may have used artificial intelligence to prepare her amended complaint because she continued to rely on case law that did not support the propositions asserted, despite the Court's prior instructions. The decision does not identify particular fabricated citations or false quotations, and no sanction was imposed in this order. Carter was warned that future misuse of artificial intelligence in submissions could result in sanctions.",
+    "direct_answer": "Misrepresented: Case Law | The Court stated that Carter continued to use case law that did not support the propositions for which it was cited, but did not identify individual citations or explain the deficiencies in each authority. Outcome: The Court warned that future misuse of artificial intelligence may result in sanctions.. The Court suspected that Carter may have used artificial intelligence to prepare her amended complaint because she continued to rely on case law that did not support the propositions asserted, despite the Court's prior instructions. The decision does not identify particular fabricated citations or false quotations, and no sanction was imposed in this order. Carter was warned that future misuse of artificial intelligence in submissions could result in sanctions.",
+    "why_it_matters": "This matter connects pro se and misrepresented authority with The Court warned that future misuse of artificial intelligence may result in sanctions. in W.D.N.Y.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and misrepresented authority and records The Court warned that future misuse of artificial intelligence may result in sanctions.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3046/Carter_v._Buffalo_USA_8_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "W.D.N.Y.",
+      "jurisdiction": "federal",
+      "state": "NY",
+      "country": "US",
+      "circuit": "2nd Circuit",
+      "judge": null,
+      "date": "2026-09-08",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "The Court warned that future misuse of artificial intelligence may result in sanctions.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "g-p-v-jose-hernandez-arevalo-2026-09-08",
+    "slug": "g-p-v-jose-hernandez-arevalo-2026-09-08",
+    "case_name": "G.P. v. Jose Hernandez Arevalo",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Counsel cited a nonexistent federal case as authority; the error was identified by Turo and acknowledged by G.P., who replaced it with a California Court of Appeal decision. The court referred to the authority as apparently fabricated and did not impose sanctions. Outcome: The court noted the fabricated citation and declined to impose sanctions at that time.. G.P.’s opposition brief contained an apparently AI-fabricated citation to the nonexistent case Kader v. S. Fla. Maint., Inc., No. 22-cv-23224, 2023 WL 3578798 (S.D. Fla. May 22, 2023). Turo identified the error, and G.P.’s counsel did not dispute it, acknowledging the citation and replacing it with a California Court of Appeal decision. The court stated that the fabricated authority, together with repeated and unexcused missed deadlines, fell below the required standard of professional responsibility, but imposed no sanctions given the procedural posture.",
+    "direct_answer": "Fabricated: Case Law | Counsel cited a nonexistent federal case as authority; the error was identified by Turo and acknowledged by G.P., who replaced it with a California Court of Appeal decision. The court referred to the authority as apparently fabricated and did not impose sanctions. Outcome: The court noted the fabricated citation and declined to impose sanctions at that time.. G.P.’s opposition brief contained an apparently AI-fabricated citation to the nonexistent case Kader v. S. Fla. Maint., Inc., No. 22-cv-23224, 2023 WL 3578798 (S.D. Fla. May 22, 2023). Turo identified the error, and G.P.’s counsel did not dispute it, acknowledging the citation and replacing it with a California Court of Appeal decision. The court stated that the fabricated authority, together with repeated and unexcused missed deadlines, fell below the required standard of professional responsibility, but imposed no sanctions given the procedural posture.",
+    "why_it_matters": "This matter connects fake citations and trial with The court noted the fabricated citation and declined to impose sanctions at that time. in W.D. Washington. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and trial and records The court noted the fabricated citation and declined to impose sanctions at that time.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3045/Arevalo_9_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "W.D. Washington",
+      "jurisdiction": "federal",
+      "state": "WA",
+      "country": "US",
+      "circuit": "9th Circuit",
+      "judge": null,
+      "date": "2026-09-08",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "The court noted the fabricated citation and declined to impose sanctions at that time.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "philippeaux-v-united-states-et-al-2026-09-08",
+    "slug": "philippeaux-v-united-states-et-al-2026-09-08",
+    "case_name": "Philippeaux v. United States, et al.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The Court stated that Plaintiff cited an apparently nonexistent Second Circuit case in his opposition; the citation was part of the Court’s discussion of the filings’ confusion and supported its Rule 8 analysis. Outcome: The Court identified apparently nonexistent cases in Plaintiff’s opposition as further support for dismissing the claims against the VA Defendants and transferring the remaining claims.. The Court observed that Plaintiff appeared to have copied and pasted third-party advice into his filings and cited apparently nonexistent cases, specifically Bennett v. United States, 77 F.4th 124 (2d Cir. 2023), and Detweiler v. United States, 131 F. Supp. 2d 116 (D.D.C. 2001). The Court treated these citations as evidence that the filings were confused and impenetrable, but did not impose a separate AI-related sanction. It dismissed the VA-related claims without leave to amend and transferred the Military Defendant claims to the Court of Federal Claims.",
+    "direct_answer": "Fabricated: Case Law | The Court stated that Plaintiff cited an apparently nonexistent Second Circuit case in his opposition; the citation was part of the Court’s discussion of the filings’ confusion and supported its Rule 8 analysis. Outcome: The Court identified apparently nonexistent cases in Plaintiff’s opposition as further support for dismissing the claims against the VA Defendants and transferring the remaining claims.. The Court observed that Plaintiff appeared to have copied and pasted third-party advice into his filings and cited apparently nonexistent cases, specifically Bennett v. United States, 77 F.4th 124 (2d Cir. 2023), and Detweiler v. United States, 131 F. Supp. 2d 116 (D.D.C. 2001). The Court treated these citations as evidence that the filings were confused and impenetrable, but did not impose a separate AI-related sanction. It dismissed the VA-related claims without leave to amend and transferred the Military Defendant claims to the Court of Federal Claims.",
+    "why_it_matters": "This matter connects pro se and fake citations with The Court identified apparently nonexistent cases in Plaintiff’s opposition as further support for dismissing the claims against the VA Defendants and transferring the remaining claims. in S.D.N.Y.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records The Court identified apparently nonexistent cases in Plaintiff’s opposition as further support for dismissing the claims against the VA Defendants and transferring the remaining claims.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3043/Philippeaux_v._del_Toro_USA_8_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "S.D.N.Y.",
+      "jurisdiction": "federal",
+      "state": "NY",
+      "country": "US",
+      "circuit": "2nd Circuit",
+      "judge": null,
+      "date": "2026-09-08",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "The Court identified apparently nonexistent cases in Plaintiff’s opposition as further support for dismissing the claims against the VA Defendants and transferring the remaining claims.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "case-dismissed"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "state-ex-rel-steven-schnell-v-honorable-rebecca-richardson-2026-09-08",
+    "slug": "state-ex-rel-steven-schnell-v-honorable-rebecca-richardson-2026-09-08",
+    "case_name": "State ex rel. Steven Schnell v. Honorable Rebecca Richardson",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | Counsel cited two nonexistent or incorrectly cited cases to support the proposition that all litigation involving one family must be heard by a single court. The court could not identify authority supporting that proposition and found that the citations misrepresented the law. Outcome: Writ denied; counsel sanctioned $1,750 under Missouri Rule 55.03 for filing fictitious and unsupported case citations.. Relator’s counsel, Jenna Rohr Conley, cited two cases in support of a venue-transfer argument. The citations did not correspond to the cases identified, and the cases located by the court under the same names did not support the asserted proposition. Conley admitted using generative AI to research the authorities and failing to verify the citations. The court held that filing nonexistent and unsupported authorities violated the reasonable-inquiry and existing-law requirements of Rule 55.03 and ordered Conley to pay $1,750 in reasonable attorney’s fees incurred by the underlying petitioners.",
+    "direct_answer": "Fabricated: Case Law | Counsel cited two nonexistent or incorrectly cited cases to support the proposition that all litigation involving one family must be heard by a single court. The court could not identify authority supporting that proposition and found that the citations misrepresented the law. Outcome: Writ denied; counsel sanctioned $1,750 under Missouri Rule 55.03 for filing fictitious and unsupported case citations.. Relator’s counsel, Jenna Rohr Conley, cited two cases in support of a venue-transfer argument. The citations did not correspond to the cases identified, and the cases located by the court under the same names did not support the asserted proposition. Conley admitted using generative AI to research the authorities and failing to verify the citations. The court held that filing nonexistent and unsupported authorities violated the reasonable-inquiry and existing-law requirements of Rule 55.03 and ordered Conley to pay $1,750 in reasonable attorney’s fees incurred by the underlying petitioners.",
+    "why_it_matters": "This matter connects fake citations and misrepresented authority with Writ denied; counsel sanctioned $1,750 under Missouri Rule 55.03 for filing fictitious and unsupported case citations. in Mo. Ct. App., E.D.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and misrepresented authority and records Writ denied; counsel sanctioned $1,750 under Missouri Rule 55.03 for filing fictitious and unsupported case citations.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3051/State_of_Missouri_v._Richardson_USA_8_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Mo. Ct. App., E.D.",
+      "jurisdiction": "federal",
+      "state": "",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-08",
+      "ai_tool": "Unidentified",
+      "outcome": "Writ denied; counsel sanctioned $1,750 under Missouri Rule 55.03 for filing fictitious and unsupported case citations.",
+      "amount": 1,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "state-v-carlson-2026-09-04",
+    "slug": "state-v-carlson-2026-09-04",
+    "case_name": "State v. Carlson",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "The opinion mentions that Carlson appeared to be speaking to a type of AI assistant during the underlying incident. However, the decision does not identify any AI-generated legal argument, fabricated citation, false quote, or misrepresented precedent. The appeal was affirmed, but no ruling or sanction related to AI misuse was issued.",
+    "direct_answer": "The opinion mentions that Carlson appeared to be speaking to a type of AI assistant during the underlying incident. However, the decision does not identify any AI-generated legal argument, fabricated citation, false quote, or misrepresented precedent. The appeal was affirmed, but no ruling or sanction related to AI misuse was issued.",
+    "why_it_matters": "This matter connects trial with a recorded judicial or procedural response in Ohio Court of Appeals, Second District. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies trial and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3048/State_v._Carlson_2025-CA-29_USA_4_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Ohio Court of Appeals, Second District",
+      "jurisdiction": "federal",
+      "state": "OH",
+      "country": "US",
+      "circuit": "6th Circuit",
+      "judge": null,
+      "date": "2026-09-04",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "wurm-v-anchor-bay-packaging-corporation-2026-09-04",
+    "slug": "wurm-v-anchor-bay-packaging-corporation-2026-09-04",
+    "case_name": "Wurm v. Anchor Bay Packaging Corporation",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Outcome: Plaintiff’s motions were stricken or denied; the case was stayed, and Plaintiff was ordered to show cause why sanctions or contempt should not be imposed. No sanction for an AI hallucination was imposed in this order.. The Court found that Plaintiff’s motions had the earmarks of being generated by AI and warned that generative AI can produce nonexistent cases and misstatements of law. However, the order did not identify any particular hallucinated citation, false quotation, or misrepresented precedent in Plaintiff’s filings. The motions were stricken or denied primarily for violating local rules, lacking a proper signature, and disregarding the Court’s prior orders. The Court stayed the case and ordered Plaintiff to show cause regarding possible sanctions or contempt.",
+    "direct_answer": "Outcome: Plaintiff’s motions were stricken or denied; the case was stayed, and Plaintiff was ordered to show cause why sanctions or contempt should not be imposed. No sanction for an AI hallucination was imposed in this order.. The Court found that Plaintiff’s motions had the earmarks of being generated by AI and warned that generative AI can produce nonexistent cases and misstatements of law. However, the order did not identify any particular hallucinated citation, false quotation, or misrepresented precedent in Plaintiff’s filings. The motions were stricken or denied primarily for violating local rules, lacking a proper signature, and disregarding the Court’s prior orders. The Court stayed the case and ordered Plaintiff to show cause regarding possible sanctions or contempt.",
+    "why_it_matters": "This matter connects pro se and trial with Plaintiff’s motions were stricken or denied; the case was stayed, and Plaintiff was ordered to show cause why sanctions or contempt should not be imposed. No sanction for an AI hallucination was imposed in this order. in E.D. Mich.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and trial and records Plaintiff’s motions were stricken or denied; the case was stayed, and Plaintiff was ordered to show cause why sanctions or contempt should not be imposed. No sanction for an AI hallucination was imposed in this order.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3041/Wurm_v._Packaging__USA_4_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "E.D. Mich.",
+      "jurisdiction": "federal",
+      "state": "MI",
+      "country": "US",
+      "circuit": "6th Circuit",
+      "judge": null,
+      "date": "2026-09-04",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Plaintiff’s motions were stricken or denied; the case was stayed, and Plaintiff was ordered to show cause why sanctions or contempt should not be imposed. No sanction for an AI hallucination was imposed in this order.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "douglas-v-deutsche-bank-national-trust-company-2026-09-03",
     "slug": "douglas-v-deutsche-bank-national-trust-company-2026-09-03",
     "case_name": "Douglas v. Deutsche Bank National Trust Company",
@@ -46,6 +421,222 @@
       ],
       "sanction_types": [
         "bar-referral"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "falkenstein-v-niles-2026-09-03",
+    "slug": "falkenstein-v-niles-2026-09-03",
+    "case_name": "Falkenstein v. Niles",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "False Quotes: Case Law | The motion placed in quotation marks language attributing personal trademark-infringement liability to an individual who was the “moving, active conscious force behind the [defendant’s] infringement.” The Court stated that Yost does not contain that language and instead says an officer may be liable for torts he “authorizes or directs or in which he participates.” Outcome: Counsel was ordered to explain the disputed citations, quotations, factual representations, and AI use at the motions hearing; no Rule 11 violation or sanction was determined.. The Court identified multiple citation and quotation problems in Defendants’ motion to dismiss, reply, and preliminary-injunction opposition. The filings attributed nonexistent or inaccurate quotations to Yost, Herb Reed, and Oakland Tribune; attributed a successor-in-interest proposition to Cumulus Media that the Court could not locate; misrepresented Complaint paragraph 21; and relied on Barr while overlooking its statement that formalities of quasi-corporate organization are not required. Counsel had disclosed and certified the use of generative AI in portions of some filings, while denying AI use in the motion to dismiss. The Court ordered counsel to explain the sources of the authorities and representations, the extent of AI assistance, and the verification steps taken, but expressly made no finding of an ethical or Rule 11 violation.",
+    "direct_answer": "False Quotes: Case Law | The motion placed in quotation marks language attributing personal trademark-infringement liability to an individual who was the “moving, active conscious force behind the [defendant’s] infringement.” The Court stated that Yost does not contain that language and instead says an officer may be liable for torts he “authorizes or directs or in which he participates.” Outcome: Counsel was ordered to explain the disputed citations, quotations, factual representations, and AI use at the motions hearing; no Rule 11 violation or sanction was determined.. The Court identified multiple citation and quotation problems in Defendants’ motion to dismiss, reply, and preliminary-injunction opposition. The filings attributed nonexistent or inaccurate quotations to Yost, Herb Reed, and Oakland Tribune; attributed a successor-in-interest proposition to Cumulus Media that the Court could not locate; misrepresented Complaint paragraph 21; and relied on Barr while overlooking its statement that formalities of quasi-corporate organization are not required. Counsel had disclosed and certified the use of generative AI in portions of some filings, while denying AI use in the motion to dismiss. The Court ordered counsel to explain the sources of the authorities and representations, the extent of AI assistance, and the verification steps taken, but expressly made no finding of an ethical or Rule 11 violation.",
+    "why_it_matters": "This matter connects fabricated quotes and misrepresented authority with Counsel was ordered to explain the disputed citations, quotations, factual representations, and AI use at the motions hearing; no Rule 11 violation or sanction was determined. in C.D. Cal.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fabricated quotes and misrepresented authority and records Counsel was ordered to explain the disputed citations, quotations, factual representations, and AI use at the motions hearing; no Rule 11 violation or sanction was determined.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3039/Falkenstein_v._Niles_USA_3_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "C.D. Cal.",
+      "jurisdiction": "federal",
+      "state": "CA",
+      "country": "US",
+      "circuit": "9th Circuit",
+      "judge": null,
+      "date": "2026-09-03",
+      "ai_tool": "Unidentified",
+      "outcome": "Counsel was ordered to explain the disputed citations, quotations, factual representations, and AI use at the motions hearing; no Rule 11 violation or sanction was determined.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "santos-v-hoboken-public-school-district-et-al-2026-09-03",
+    "slug": "santos-v-hoboken-public-school-district-et-al-2026-09-03",
+    "case_name": "Santos v. Hoboken Public School District, et al.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Outcome: The court warned that continued use of improper or non-existent citations could result in sanctions, including dismissal with prejudice; no specific citation was analyzed or sanction imposed.. The court noted that Plaintiff’s opposition relied on improperly cited cases and cases that were non-existent. It warned that continued use could lead to sanctions, including dismissal with prejudice. The decision does not identify the allegedly false citations, determine whether they were fabricated, or impose a sanction based on them; the motion to dismiss was granted on the merits, with leave to amend in part.",
+    "direct_answer": "Outcome: The court warned that continued use of improper or non-existent citations could result in sanctions, including dismissal with prejudice; no specific citation was analyzed or sanction imposed.. The court noted that Plaintiff’s opposition relied on improperly cited cases and cases that were non-existent. It warned that continued use could lead to sanctions, including dismissal with prejudice. The decision does not identify the allegedly false citations, determine whether they were fabricated, or impose a sanction based on them; the motion to dismiss was granted on the merits, with leave to amend in part.",
+    "why_it_matters": "This matter connects pro se and trial with The court warned that continued use of improper or non-existent citations could result in sanctions, including dismissal with prejudice; no specific citation was analyzed or sanction imposed. in D.N.J.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and trial and records The court warned that continued use of improper or non-existent citations could result in sanctions, including dismissal with prejudice; no specific citation was analyzed or sanction imposed.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3042/SANTOS_v._HOBOKEN_PUBLIC_SCHOOL_DISTRICT_et_al_USA_3_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "D.N.J.",
+      "jurisdiction": "federal",
+      "state": "NJ",
+      "country": "US",
+      "circuit": "3rd Circuit",
+      "judge": null,
+      "date": "2026-09-03",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "The court warned that continued use of improper or non-existent citations could result in sanctions, including dismissal with prejudice; no specific citation was analyzed or sanction imposed.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "trial"
+      ],
+      "sanction_types": [
+        "case-dismissed"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "morgan-cole-v-hobby-town-unlimited-inc-2026-09-02",
+    "slug": "morgan-cole-v-hobby-town-unlimited-inc-2026-09-02",
+    "case_name": "Morgan Cole v. Hobby Town Unlimited, Inc.",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Fabricated: Case Law | The default-judgment motion contained four hallucinated citations, including citations to non-existent cases or authorities that were inaccurately described; the Court treated them as classic indicators of unverified AI use and found their inclusion objectively unreasonable under Rule 11. Outcome: Attorney David Baldemar Reyes was ordered to pay a $1,000 Rule 11 sanction and send the order to the Illinois ARDC.. Attorney Reyes admitted that a motion for default judgment contained four inaccurate, AI-generated citations and accepted responsibility for failing to independently verify them. The Court found that the motion included non-existent or mischaracterized cases, and that the same or similar hallucinations had appeared in at least two prior filings, including filings in Hippe and Pittman. Because prior corrective measures had failed, the Court imposed a $1,000 Rule 11 sanction for deterrence and required Reyes to send the order to the Illinois ARDC.",
+    "direct_answer": "Fabricated: Case Law | The default-judgment motion contained four hallucinated citations, including citations to non-existent cases or authorities that were inaccurately described; the Court treated them as classic indicators of unverified AI use and found their inclusion objectively unreasonable under Rule 11. Outcome: Attorney David Baldemar Reyes was ordered to pay a $1,000 Rule 11 sanction and send the order to the Illinois ARDC.. Attorney Reyes admitted that a motion for default judgment contained four inaccurate, AI-generated citations and accepted responsibility for failing to independently verify them. The Court found that the motion included non-existent or mischaracterized cases, and that the same or similar hallucinations had appeared in at least two prior filings, including filings in Hippe and Pittman. Because prior corrective measures had failed, the Court imposed a $1,000 Rule 11 sanction for deterrence and required Reyes to send the order to the Illinois ARDC.",
+    "why_it_matters": "This matter connects fake citations and misrepresented authority with Attorney David Baldemar Reyes was ordered to pay a $1,000 Rule 11 sanction and send the order to the Illinois ARDC. in C.D. Illinois. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and misrepresented authority and records Attorney David Baldemar Reyes was ordered to pay a $1,000 Rule 11 sanction and send the order to the Illinois ARDC.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3040/Cole_v._Hobby_Lobby_USA_2_September_21026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "C.D. Illinois",
+      "jurisdiction": "federal",
+      "state": "IL",
+      "country": "US",
+      "circuit": "7th Circuit",
+      "judge": null,
+      "date": "2026-09-02",
+      "ai_tool": "Unidentified",
+      "outcome": "Attorney David Baldemar Reyes was ordered to pay a $1,000 Rule 11 sanction and send the order to the Illinois ARDC.",
+      "amount": 1,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fake-citations",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "sea-swivel-inc-v-shuttleslide-llc-et-al-2026-09-02",
+    "slug": "sea-swivel-inc-v-shuttleslide-llc-et-al-2026-09-02",
+    "case_name": "Sea Swivel Inc. v. Shuttleslide LLC, et al.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Case Law | The response asserted that Affordable Aerial Photography established that Plaintiff’s motion to strike was untimely. The Court explained that the cited decision expressly declined to decide whether a renewed 21-day period applied and therefore did not support that proposition. Outcome: Motion to strike granted; no AI-related sanction imposed, but counsel was cautioned about Rule 11 obligations when relying on AI.. Shuttleslide’s response, titled “CoCounsel Skill Results” and bearing CoCounsel metadata, relied on Affordable Aerial Photography, Inc. v. Abdelsayed for the proposition that Plaintiff’s motion to strike was untimely. The Court found that precedent did not decide the timeliness issue and was expressly silent on it, making the response’s assertion that the motion was untimely “pursuant to” that case inaccurate. The Court held the motion timely under Rule 12(f), granted the motion to strike, and cautioned counsel that attorneys remain responsible under Rule 11 for inaccurate AI-assisted work product.",
+    "direct_answer": "Misrepresented: Case Law | The response asserted that Affordable Aerial Photography established that Plaintiff’s motion to strike was untimely. The Court explained that the cited decision expressly declined to decide whether a renewed 21-day period applied and therefore did not support that proposition. Outcome: Motion to strike granted; no AI-related sanction imposed, but counsel was cautioned about Rule 11 obligations when relying on AI.. Shuttleslide’s response, titled “CoCounsel Skill Results” and bearing CoCounsel metadata, relied on Affordable Aerial Photography, Inc. v. Abdelsayed for the proposition that Plaintiff’s motion to strike was untimely. The Court found that precedent did not decide the timeliness issue and was expressly silent on it, making the response’s assertion that the motion was untimely “pursuant to” that case inaccurate. The Court held the motion timely under Rule 12(f), granted the motion to strike, and cautioned counsel that attorneys remain responsible under Rule 11 for inaccurate AI-assisted work product.",
+    "why_it_matters": "This matter connects misrepresented authority and trial with Motion to strike granted; no AI-related sanction imposed, but counsel was cautioned about Rule 11 obligations when relying on AI. in S.D. Fla.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies misrepresented authority and trial and records Motion to strike granted; no AI-related sanction imposed, but counsel was cautioned about Rule 11 obligations when relying on AI.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3038/Sea_Swivel_Inc._v._Rhodan_Marine_Systems_of_Florida_USA_2_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "S.D. Fla.",
+      "jurisdiction": "federal",
+      "state": "FL",
+      "country": "US",
+      "circuit": "11th Circuit",
+      "judge": null,
+      "date": "2026-09-02",
+      "ai_tool": "CoCounsel",
+      "outcome": "Motion to strike granted; no AI-related sanction imposed, but counsel was cautioned about Rule 11 obligations when relying on AI.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "struck-filing"
       ]
     },
     "publication": {
@@ -110,6 +701,116 @@
     }
   },
   {
+    "id": "willie-c-fortune-v-cta-certified-transmission-2026-09-01",
+    "slug": "willie-c-fortune-v-cta-certified-transmission-2026-09-01",
+    "case_name": "Willie C. Fortune v. CTA Certified Transmission",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The appellant cited three completely fictitious cases in his brief. One was cited five times, another twice, and the third once; the court found that the nonexistent authorities constituted spurious citations and a flagrant violation of the duty of candor. Outcome: Appeal dismissed for pervasive briefing deficiencies, fictitious cases, and inaccurate legal citations.. The pro se appellant submitted an appellate brief containing three completely fictitious cases, inaccurate citations, irrelevant authorities, incorrect pin cites, and substantive misstatements of the holdings of cited cases. The court held that the pervasive deficiencies and reliance on nonexistent case law prevented meaningful appellate review and violated the applicable briefing and certification rules. The appeal was dismissed.",
+    "direct_answer": "Fabricated: Case Law | The appellant cited three completely fictitious cases in his brief. One was cited five times, another twice, and the third once; the court found that the nonexistent authorities constituted spurious citations and a flagrant violation of the duty of candor. Outcome: Appeal dismissed for pervasive briefing deficiencies, fictitious cases, and inaccurate legal citations.. The pro se appellant submitted an appellate brief containing three completely fictitious cases, inaccurate citations, irrelevant authorities, incorrect pin cites, and substantive misstatements of the holdings of cited cases. The court held that the pervasive deficiencies and reliance on nonexistent case law prevented meaningful appellate review and violated the applicable briefing and certification rules. The appeal was dismissed.",
+    "why_it_matters": "This matter connects pro se and fake citations with Appeal dismissed for pervasive briefing deficiencies, fictitious cases, and inaccurate legal citations. in Missouri Court of Appeals, Western District. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Appeal dismissed for pervasive briefing deficiencies, fictitious cases, and inaccurate legal citations.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3049/Willie_C._Fortune_vs._CTA_Certified_Transmission_USA_1_Septmber_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Missouri Court of Appeals, Western District",
+      "jurisdiction": "federal",
+      "state": "MO",
+      "country": "US",
+      "circuit": "8th Circuit",
+      "judge": null,
+      "date": "2026-09-01",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Appeal dismissed for pervasive briefing deficiencies, fictitious cases, and inaccurate legal citations.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "case-dismissed"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "woodley-v-gottschall-2026-09-01",
+    "slug": "woodley-v-gottschall-2026-09-01",
+    "case_name": "Woodley v. Gottschall",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The appellant cited In re G.B.K. as a Pennsylvania Superior Court case, but the cited page contained headnotes for a New Jersey landlord-tenant case and no reported Pennsylvania case with that caption existed. Outcome: The court identified the citations as nonexistent; the related claims were waived, and the judgment of sentence was affirmed.. In his pro se appellate brief, Gottschall cited In re G.B.K., 720 A.2d 362 (Pa. Super. 1998), and Commonwealth v. Drahus, 663 A.2d 611 (Pa. Super. 1995). The Superior Court determined that neither was a reported Pennsylvania case: the first citation led to headnotes for a New Jersey landlord-tenant case, and the second citation led to the beginning of a New Hampshire constructive-trust case. The court gave no merits consideration to the First Amendment claim supported by the nonexistent Drahus citation because the claim was also unpreserved, and affirmed the contempt judgment.",
+    "direct_answer": "Fabricated: Case Law | The appellant cited In re G.B.K. as a Pennsylvania Superior Court case, but the cited page contained headnotes for a New Jersey landlord-tenant case and no reported Pennsylvania case with that caption existed. Outcome: The court identified the citations as nonexistent; the related claims were waived, and the judgment of sentence was affirmed.. In his pro se appellate brief, Gottschall cited In re G.B.K., 720 A.2d 362 (Pa. Super. 1998), and Commonwealth v. Drahus, 663 A.2d 611 (Pa. Super. 1995). The Superior Court determined that neither was a reported Pennsylvania case: the first citation led to headnotes for a New Jersey landlord-tenant case, and the second citation led to the beginning of a New Hampshire constructive-trust case. The court gave no merits consideration to the First Amendment claim supported by the nonexistent Drahus citation because the claim was also unpreserved, and affirmed the contempt judgment.",
+    "why_it_matters": "This matter connects pro se and fake citations with The court identified the citations as nonexistent; the related claims were waived, and the judgment of sentence was affirmed. in Superior Court of Pennsylvania. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records The court identified the citations as nonexistent; the related claims were waived, and the judgment of sentence was affirmed.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3047/Woodley_K._v._Gottschall_J._USA_1_Septmber_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Superior Court of Pennsylvania",
+      "jurisdiction": "state",
+      "state": "PA",
+      "country": "US",
+      "circuit": "3rd Circuit",
+      "judge": null,
+      "date": "2026-09-01",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "The court identified the citations as nonexistent; the related claims were waived, and the judgment of sentence was affirmed.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "fleming-v-the-owners-strata-plan-lms-4383-2026-08-31",
     "slug": "fleming-v-the-owners-strata-plan-lms-4383-2026-08-31",
     "case_name": "Fleming v. The Owners, Strata Plan LMS 4383",
@@ -155,6 +856,61 @@
       ],
       "sanction_types": [
         "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "illinois-department-of-healthcare-and-family-services-ex-rel-shona-l-williams-v-samuel-r-l-2026-08-31",
+    "slug": "illinois-department-of-healthcare-and-family-services-ex-rel-shona-l-williams-v-samuel-r-l-2026-08-31",
+    "case_name": "Illinois Department of Healthcare and Family Services ex rel. Shona L. Williams v. Samuel R. Lee, II",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The court found that the sole authority cited in the brief, In re Marriage of Whittaker, did not exist and appeared to be fabricated or hallucinated through generative AI. The court noted that this violated the supreme court’s AI policy and could support sanctions, but it declined to dismiss the appeal or strike the brief. Outcome: The court identified the cited case as nonexistent but declined to dismiss the appeal or strike the brief; it reached the merits. The dissent would have stricken the brief and dismissed the appeal.. Samuel Lee’s brief relied exclusively on In re Marriage of Whittaker, 2021 IL App (5th) 200162-U, to argue that vacation and holiday overnights should be included in calculating child support. The appellate court determined that Whittaker was nonexistent and stated that it appeared to have been fabricated or generated through improper use of generative AI. Although the conduct was potentially sanctionable under Illinois Supreme Court Rule 375(a) and the Illinois Supreme Court Policy on AI, the majority exercised its discretion to reach the merits and remanded for recalculation of overnights. The dissent would have imposed the procedural consequence of striking the brief and dismissing the appeal.",
+    "direct_answer": "Fabricated: Case Law | The court found that the sole authority cited in the brief, In re Marriage of Whittaker, did not exist and appeared to be fabricated or hallucinated through generative AI. The court noted that this violated the supreme court’s AI policy and could support sanctions, but it declined to dismiss the appeal or strike the brief. Outcome: The court identified the cited case as nonexistent but declined to dismiss the appeal or strike the brief; it reached the merits. The dissent would have stricken the brief and dismissed the appeal.. Samuel Lee’s brief relied exclusively on In re Marriage of Whittaker, 2021 IL App (5th) 200162-U, to argue that vacation and holiday overnights should be included in calculating child support. The appellate court determined that Whittaker was nonexistent and stated that it appeared to have been fabricated or generated through improper use of generative AI. Although the conduct was potentially sanctionable under Illinois Supreme Court Rule 375(a) and the Illinois Supreme Court Policy on AI, the majority exercised its discretion to reach the merits and remanded for recalculation of overnights. The dissent would have imposed the procedural consequence of striking the brief and dismissing the appeal.",
+    "why_it_matters": "This matter connects pro se and fake citations with The court identified the cited case as nonexistent but declined to dismiss the appeal or strike the brief; it reached the merits. The dissent would have stricken the brief and dismissed the appeal. in Illinois Appellate Court, Third District. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records The court identified the cited case as nonexistent but declined to dismiss the appeal or strike the brief; it reached the merits. The dissent would have stricken the brief and dismissed the appeal.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3050/IDHFS_v._Lee_USA_August_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Illinois Appellate Court, Third District",
+      "jurisdiction": "state",
+      "state": "IL",
+      "country": "US",
+      "circuit": "7th Circuit",
+      "judge": null,
+      "date": "2026-08-31",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "The court identified the cited case as nonexistent but declined to dismiss the appeal or strike the brief; it reached the merits. The dissent would have stricken the brief and dismissed the appeal.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "struck-filing",
+        "case-dismissed"
       ]
     },
     "publication": {

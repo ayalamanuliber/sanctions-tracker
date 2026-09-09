@@ -1,15 +1,59 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "20db2de9f1c7f347d1f96c635d21001bdbce06dc8b11ca7f3cea13bb1c953069",
-  "corpus_checked": "2026-09-08",
-  "total_cases": 2022,
+  "dataset_checksum": "43a28c79e649d06a5c110de82c3c78b44a3d1946a46a3dcccad6fe53675c84ac",
+  "corpus_checked": "2026-09-09",
+  "total_cases": 2036,
   "tiers": {
-    "index-ready": 1999,
+    "index-ready": 2013,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "by_slug": {
+    "asiedu-v-eastlund-2026-09-08": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "carter-v-city-of-buffalo-2026-09-08": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "g-p-v-jose-hernandez-arevalo-2026-09-08": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "philippeaux-v-united-states-et-al-2026-09-08": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "state-ex-rel-steven-schnell-v-honorable-rebecca-richardson-2026-09-08": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "state-v-carlson-2026-09-04": {
+      "tier": "index-ready",
+      "score": 75
+    },
+    "wurm-v-anchor-bay-packaging-corporation-2026-09-04": {
+      "tier": "index-ready",
+      "score": 80
+    },
     "douglas-v-deutsche-bank-national-trust-company-2026-09-03": {
+      "tier": "index-ready",
+      "score": 90
+    },
+    "falkenstein-v-niles-2026-09-03": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "santos-v-hoboken-public-school-district-et-al-2026-09-03": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "morgan-cole-v-hobby-town-unlimited-inc-2026-09-02": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "sea-swivel-inc-v-shuttleslide-llc-et-al-2026-09-02": {
       "tier": "index-ready",
       "score": 90
     },
@@ -17,9 +61,21 @@
       "tier": "index-ready",
       "score": 85
     },
+    "willie-c-fortune-v-cta-certified-transmission-2026-09-01": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "woodley-v-gottschall-2026-09-01": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "fleming-v-the-owners-strata-plan-lms-4383-2026-08-31": {
       "tier": "index-ready",
       "score": 76
+    },
+    "illinois-department-of-healthcare-and-family-services-ex-rel-shona-l-williams-v-samuel-r-l-2026-08-31": {
+      "tier": "index-ready",
+      "score": 85
     },
     "state-of-hawaii-v-cody-presti-2026-08-31": {
       "tier": "index-ready",

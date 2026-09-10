@@ -1,40 +1,41 @@
 {
-  "last_updated": "2026-09-09",
-  "last_checked": "2026-09-09",
-  "last_checked_at": "2026-09-09T12:59:33.750Z",
+  "last_updated": "2026-09-10",
+  "last_checked": "2026-09-10",
+  "last_checked_at": "2026-09-10T12:56:58.487Z",
   "latest_record_date": "2026-09-08",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
   "source_record_count": 2036,
   "source_linked_count": 2032,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 0,
-  "dataset_checksum": "43a28c79e649d06a5c110de82c3c78b44a3d1946a46a3dcccad6fe53675c84ac",
+  "dataset_checksum": "6360ad052fd1286c8863a83b537a8a55143fa72a2c539a1470787dcff6adb07d",
   "total_cases": 2036,
-  "us_cases": 1393,
-  "us_adjudicated": 1387,
+  "us_cases": 1392,
+  "us_adjudicated": 1386,
   "us_alleged_only": 6,
-  "countries_tracked": 43,
+  "countries_tracked": 45,
   "enriched_count": 2036,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
-  "monetary_sanctions_total_usd": 1776615,
+  "monetary_sanctions_total_usd": 1780702,
   "largest_single_sanction": 282508,
-  "avg_sanction": 7496,
+  "avg_sanction": 7577,
   "severity_counts": {
-    "medium": 342,
+    "medium": 341,
     "low": 1445,
-    "high": 210,
+    "high": 211,
     "career-ending": 39
   },
   "by_country": {
-    "US": 1393,
+    "US": 1392,
     "India": 15,
-    "Canada": 217,
+    "Canada": 216,
     "Australia": 110,
     "GB": 69,
     "Israel": 57,
     "Brazil": 41,
+    "Domestic Arbitration; USA": 1,
     "South Africa": 6,
     "Netherlands": 7,
     "China": 1,
@@ -49,6 +50,7 @@
     "Russian Federation": 1,
     "Singapore": 7,
     "New Zealand": 7,
+    "Canada; Domestic Arbitration": 1,
     "Ireland": 6,
     "Colombia": 3,
     "Portugal": 1,
@@ -78,29 +80,30 @@
       "count": 140,
       "total": 241054,
       "severities": {
-        "low": 84,
+        "medium": 32,
+        "low": 83,
         "high": 22,
-        "medium": 31,
         "career-ending": 3
       },
       "cases": [
         {
           "id": "falkenstein-v-niles-2026-09-03",
           "name": "Falkenstein v. Niles",
-          "court": "C.D. Cal.",
+          "court": "C.D. California",
           "judge": "",
           "date": "2026-09-03",
           "amount": null,
           "amount_display": "",
-          "severity": "low",
+          "severity": "medium",
           "tool": "Unidentified",
           "summary": "False Quotes: Case Law | The motion placed in quotation marks language attributing personal trademark-infringement liability to an individual who was the “moving, active conscious force behind the [defendant’s] infringement.” The Court stated that Yost does not contain that language and instead says an officer may be liable for torts he “authorizes or directs or in which he participates.” Outcome: Counsel was ordered to explain the disputed citations, quotations, factual representations, and AI use at the motions hearing; no Rule 11 violation or sanction was determined.. The Court identified multiple citation and quotation problems in Defendants’ motion to dismiss, reply, and preliminary-injunction opposition. The filings attributed nonexistent or inaccurate quotations to Yost, Herb Reed, and Oakland Tribune; attributed a successor-in-interest proposition to Cumulus Media that the Court could not locate; misrepresented Complaint paragraph 21; and relied on Barr while overlooking its statement that formalities of quasi-corporate organization are not required. Counsel had disclosed and certified the use of generative AI in portions of some filings, while denying AI use in the motion to dismiss. The Court ordered counsel to explain the sources of the authorities and representations, the extent of AI assistance, and the verification steps taken, but expressly made no finding of an ethical or Rule 11 violation.",
           "sanction_types": [
-            "none-adjudicated"
+            "ordered-to-show-cause"
           ],
           "tags": [
             "fabricated-quotes",
             "misrepresented-authority",
+            "ip",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/3039/Falkenstein_v._Niles_USA_3_September_2026.pdf"
@@ -1218,7 +1221,7 @@
         {
           "id": "carter-v-city-of-buffalo-2026-09-08",
           "name": "Carter v. City of Buffalo",
-          "court": "W.D.N.Y.",
+          "court": "W.D. New York",
           "judge": "",
           "date": "2026-09-08",
           "amount": null,
@@ -1227,11 +1230,12 @@
           "tool": "AI (implied, unspecified)",
           "summary": "Misrepresented: Case Law | The Court stated that Carter continued to use case law that did not support the propositions for which it was cited, but did not identify individual citations or explain the deficiencies in each authority. Outcome: The Court warned that future misuse of artificial intelligence may result in sanctions.. The Court suspected that Carter may have used artificial intelligence to prepare her amended complaint because she continued to rely on case law that did not support the propositions asserted, despite the Court's prior instructions. The decision does not identify particular fabricated citations or false quotations, and no sanction was imposed in this order. Carter was warned that future misuse of artificial intelligence in submissions could result in sanctions.",
           "sanction_types": [
-            "none-adjudicated"
+            "warning"
           ],
           "tags": [
             "pro-se",
             "misrepresented-authority",
+            "civil-rights",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/3046/Carter_v._Buffalo_USA_8_September_2026.pdf"
@@ -1239,7 +1243,7 @@
         {
           "id": "philippeaux-v-united-states-et-al-2026-09-08",
           "name": "Philippeaux v. United States, et al.",
-          "court": "S.D.N.Y.",
+          "court": "S.D. New York",
           "judge": "",
           "date": "2026-09-08",
           "amount": null,
@@ -1248,11 +1252,12 @@
           "tool": "AI (implied, unspecified)",
           "summary": "Fabricated: Case Law | The Court stated that Plaintiff cited an apparently nonexistent Second Circuit case in his opposition; the citation was part of the Court’s discussion of the filings’ confusion and supported its Rule 8 analysis. Outcome: The Court identified apparently nonexistent cases in Plaintiff’s opposition as further support for dismissing the claims against the VA Defendants and transferring the remaining claims.. The Court observed that Plaintiff appeared to have copied and pasted third-party advice into his filings and cited apparently nonexistent cases, specifically Bennett v. United States, 77 F.4th 124 (2d Cir. 2023), and Detweiler v. United States, 131 F. Supp. 2d 116 (D.D.C. 2001). The Court treated these citations as evidence that the filings were confused and impenetrable, but did not impose a separate AI-related sanction. It dismissed the VA-related claims without leave to amend and transferred the Military Defendant claims to the Court of Federal Claims.",
           "sanction_types": [
-            "case-dismissed"
+            "none-adjudicated"
           ],
           "tags": [
             "pro-se",
             "fake-citations",
+            "administrative",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/3043/Philippeaux_v._del_Toro_USA_8_September_2026.pdf"
@@ -3474,7 +3479,7 @@
         {
           "id": "sea-swivel-inc-v-shuttleslide-llc-et-al-2026-09-02",
           "name": "Sea Swivel Inc. v. Shuttleslide LLC, et al.",
-          "court": "S.D. Fla.",
+          "court": "S.D. Florida",
           "judge": "",
           "date": "2026-09-02",
           "amount": null,
@@ -3483,10 +3488,11 @@
           "tool": "CoCounsel",
           "summary": "Misrepresented: Case Law | The response asserted that Affordable Aerial Photography established that Plaintiff’s motion to strike was untimely. The Court explained that the cited decision expressly declined to decide whether a renewed 21-day period applied and therefore did not support that proposition. Outcome: Motion to strike granted; no AI-related sanction imposed, but counsel was cautioned about Rule 11 obligations when relying on AI.. Shuttleslide’s response, titled “CoCounsel Skill Results” and bearing CoCounsel metadata, relied on Affordable Aerial Photography, Inc. v. Abdelsayed for the proposition that Plaintiff’s motion to strike was untimely. The Court found that precedent did not decide the timeliness issue and was expressly silent on it, making the response’s assertion that the motion was untimely “pursuant to” that case inaccurate. The Court held the motion timely under Rule 12(f), granted the motion to strike, and cautioned counsel that attorneys remain responsible under Rule 11 for inaccurate AI-assisted work product.",
           "sanction_types": [
-            "struck-filing"
+            "warning"
           ],
           "tags": [
             "misrepresented-authority",
+            "ip",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/3038/Sea_Swivel_Inc._v._Rhodan_Marine_Systems_of_Florida_USA_2_September_2026.pdf"
@@ -4611,12 +4617,12 @@
     },
     {
       "state": "IL",
-      "count": 65,
-      "total": 101604,
+      "count": 64,
+      "total": 101603,
       "severities": {
         "high": 7,
         "low": 41,
-        "medium": 16,
+        "medium": 15,
         "career-ending": 1
       },
       "cases": [
@@ -4626,18 +4632,21 @@
           "court": "C.D. Illinois",
           "judge": "",
           "date": "2026-09-02",
-          "amount": 1,
-          "amount_display": "$1",
+          "amount": null,
+          "amount_display": "",
           "severity": "high",
-          "tool": "Unidentified",
+          "tool": "AI (implied, unspecified)",
           "summary": "Fabricated: Case Law | The default-judgment motion contained four hallucinated citations, including citations to non-existent cases or authorities that were inaccurately described; the Court treated them as classic indicators of unverified AI use and found their inclusion objectively unreasonable under Rule 11. Outcome: Attorney David Baldemar Reyes was ordered to pay a $1,000 Rule 11 sanction and send the order to the Illinois ARDC.. Attorney Reyes admitted that a motion for default judgment contained four inaccurate, AI-generated citations and accepted responsibility for failing to independently verify them. The Court found that the motion included non-existent or mischaracterized cases, and that the same or similar hallucinations had appeared in at least two prior filings, including filings in Hippe and Pittman. Because prior corrective measures had failed, the Court imposed a $1,000 Rule 11 sanction for deterrence and required Reyes to send the order to the Illinois ARDC.",
           "sanction_types": [
             "monetary",
+            "bar-referral",
             "professional"
           ],
           "tags": [
             "fake-citations",
             "misrepresented-authority",
+            "bar-referral",
+            "civil-rights",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/3040/Cole_v._Hobby_Lobby_USA_2_September_21026.pdf"
@@ -4645,7 +4654,7 @@
         {
           "id": "illinois-department-of-healthcare-and-family-services-ex-rel-shona-l-williams-v-samuel-r-l-2026-08-31",
           "name": "Illinois Department of Healthcare and Family Services ex rel. Shona L. Williams v. Samuel R. Lee, II",
-          "court": "Illinois Appellate Court, Third District",
+          "court": "CA Illinois",
           "judge": "",
           "date": "2026-08-31",
           "amount": null,
@@ -4654,13 +4663,13 @@
           "tool": "AI (implied, unspecified)",
           "summary": "Fabricated: Case Law | The court found that the sole authority cited in the brief, In re Marriage of Whittaker, did not exist and appeared to be fabricated or hallucinated through generative AI. The court noted that this violated the supreme court’s AI policy and could support sanctions, but it declined to dismiss the appeal or strike the brief. Outcome: The court identified the cited case as nonexistent but declined to dismiss the appeal or strike the brief; it reached the merits. The dissent would have stricken the brief and dismissed the appeal.. Samuel Lee’s brief relied exclusively on In re Marriage of Whittaker, 2021 IL App (5th) 200162-U, to argue that vacation and holiday overnights should be included in calculating child support. The appellate court determined that Whittaker was nonexistent and stated that it appeared to have been fabricated or generated through improper use of generative AI. Although the conduct was potentially sanctionable under Illinois Supreme Court Rule 375(a) and the Illinois Supreme Court Policy on AI, the majority exercised its discretion to reach the merits and remanded for recalculation of overnights. The dissent would have imposed the procedural consequence of striking the brief and dismissing the appeal.",
           "sanction_types": [
-            "struck-filing",
             "case-dismissed"
           ],
           "tags": [
             "pro-se",
             "fake-citations",
-            "trial"
+            "family",
+            "appellate"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/3050/IDHFS_v._Lee_USA_August_2026.pdf"
         },
@@ -4844,28 +4853,6 @@
             "appellate"
           ],
           "source_url": "https://reason.com/volokh/2026/07/31/we-do-not-know-why-attorney-cole-feels-compelled-to-rush-out-obviously-flawed-filings-but-this-must-stop-15k-sanction/"
-        },
-        {
-          "id": "morgan-cole-v-hobby-town-unlimited-inc-2026-07-24",
-          "name": "Morgan Cole v. Hobby Town Unlimited, Inc.",
-          "court": "C.D. Illinois",
-          "judge": "",
-          "date": "2026-07-24",
-          "amount": null,
-          "amount_display": "",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | Plaintiff cited Sierra Club v. Franklin County Power of Illinois, LLC, 546 F.3d 918 (7th Cir. 2008) to support that required fixes are modest in cost, but Sierra Club addresses environmental injunctive relief and is unrelated to website accessibility costs. Outcome: Order to Show Cause.",
-          "sanction_types": [
-            "ordered-to-show-cause"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2703/Cole_v._Hobby_Town_USA_24_July_2026.pdf"
         },
         {
           "id": "mary-c-graves-v-brian-k-graves-2026-07-23",
@@ -5749,6 +5736,28 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/1368/Pletcher_v_Village_of_Libertyville_Police_Pension_Board.pdf"
+        },
+        {
+          "id": "jeffery-todd-henson-sr-v-lynn-a-espejo-2025-11-12",
+          "name": "Jeffery Todd Henson, Sr. v. Lynn A. Espejo",
+          "court": "C.D. Illinois",
+          "judge": "",
+          "date": "2025-11-12",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent case as authority; the Court identified the citation as nonexistent and observed the reporter page corresponds to United States v. Woodrum.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1030/Henson_v._Espero_USA_12_November_2025.pdf"
         }
       ]
     },
@@ -5757,8 +5766,8 @@
       "count": 50,
       "total": 3485,
       "severities": {
-        "low": 38,
-        "medium": 8,
+        "medium": 9,
+        "low": 37,
         "high": 3,
         "career-ending": 1
       },
@@ -5766,19 +5775,21 @@
         {
           "id": "wurm-v-anchor-bay-packaging-corporation-2026-09-04",
           "name": "Wurm v. Anchor Bay Packaging Corporation",
-          "court": "E.D. Mich.",
+          "court": "E.D. Michigan",
           "judge": "",
           "date": "2026-09-04",
           "amount": null,
           "amount_display": "",
-          "severity": "low",
+          "severity": "medium",
           "tool": "AI (implied, unspecified)",
           "summary": "Outcome: Plaintiff’s motions were stricken or denied; the case was stayed, and Plaintiff was ordered to show cause why sanctions or contempt should not be imposed. No sanction for an AI hallucination was imposed in this order.. The Court found that Plaintiff’s motions had the earmarks of being generated by AI and warned that generative AI can produce nonexistent cases and misstatements of law. However, the order did not identify any particular hallucinated citation, false quotation, or misrepresented precedent in Plaintiff’s filings. The motions were stricken or denied primarily for violating local rules, lacking a proper signature, and disregarding the Court’s prior orders. The Court stayed the case and ordered Plaintiff to show cause regarding possible sanctions or contempt.",
           "sanction_types": [
-            "none-adjudicated"
+            "ordered-to-show-cause",
+            "struck-filing"
           ],
           "tags": [
             "pro-se",
+            "other",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/3041/Wurm_v._Packaging__USA_4_September_2026.pdf"
@@ -8057,6 +8068,7 @@
           ],
           "tags": [
             "fake-citations",
+            "tort",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/3045/Arevalo_9_September_2026.pdf"
@@ -8956,7 +8968,7 @@
         {
           "id": "woodley-v-gottschall-2026-09-01",
           "name": "Woodley v. Gottschall",
-          "court": "Superior Court of Pennsylvania",
+          "court": "SC Pennsylvania",
           "judge": "",
           "date": "2026-09-01",
           "amount": null,
@@ -8970,6 +8982,7 @@
           "tags": [
             "pro-se",
             "fake-citations",
+            "family",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/3047/Woodley_K._v._Gottschall_J._USA_1_Septmber_2026.pdf"
@@ -9854,841 +9867,6 @@
       ]
     },
     {
-      "state": "OH",
-      "count": 37,
-      "total": 22338,
-      "severities": {
-        "low": 31,
-        "medium": 5,
-        "career-ending": 1
-      },
-      "cases": [
-        {
-          "id": "state-v-carlson-2026-09-04",
-          "name": "State v. Carlson",
-          "court": "Ohio Court of Appeals, Second District",
-          "judge": "",
-          "date": "2026-09-04",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "The opinion mentions that Carlson appeared to be speaking to a type of AI assistant during the underlying incident. However, the decision does not identify any AI-generated legal argument, fabricated citation, false quote, or misrepresented precedent. The appeal was affirmed, but no ruling or sanction related to AI misuse was issued.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/3048/State_v._Carlson_2025-CA-29_USA_4_September_2026.pdf"
-        },
-        {
-          "id": "burgess-v-greater-cleveland-regional-transit-authority-2026-08-06",
-          "name": "Burgess v. Greater Cleveland Regional Transit Authority",
-          "court": "N.D. Ohio",
-          "judge": "",
-          "date": "2026-08-06",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Defendant's Opposition cited 'State ex rel. Shimola v. City of Cleveland' at 70 Ohio St.3d 40 (incorrect/misleading citation); the Court found this citation hallucinatory and noted the actual Shimola decision is at 70 Ohio St.3d 100, 637 N.E.2d 325. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2890/Burgess_v._Greater_Cleveland_Regional_Transit_Authority_USA_6_August_2026.pdf"
-        },
-        {
-          "id": "state-v-davis-2026-08-03",
-          "name": "State v. Davis",
-          "court": "CA Ohio",
-          "judge": "",
-          "date": "2026-08-03",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Misrepresented: Case Law | Appellant cited State v. Sanchez as supporting an 'indefinite-pendency' tolling rule; the court found Sanchez does not address that topic and suggested the citation arose from Appellant's AI queries.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "misrepresented-authority",
-            "criminal",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2783/State_v._Davis_USA_3_August_2026.pdf"
-        },
-        {
-          "id": "terence-a-gragston-v-amazon-llc-2026-07-29",
-          "name": "Terence A. Gragston v. Amazon LLC",
-          "court": "S.D. Ohio",
-          "judge": "",
-          "date": "2026-07-29",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Pro se plaintiff cited a purported Sixth Circuit opinion to support his argument; the Court found no such case or Westlaw citation and determined the citation was AI‑hallucinated. Outcome: Court issued a formal warning that future reliance on AI‑hallucinated caselaw will result in sanctions, including monetary penalties and possible dismissal with prejudice; no sanction was imposed at this time.. The pro se plaintiff relied on purported Sixth Circuit authority that the Court determined was AI‑hallucinated (a fabricated opinion/citation). The Court's independent review found no case matching the cited docket number or Westlaw citation and formally warned that further reliance on AI‑generated or unverified authorities will result in sanctions (including monetary penalties and dismissal with prejudice). The Court preserved the unverified citations in the record but noted links were unavailable.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2786/TERENCE_A_GRAGSTON_Plaintiff_v_AMAZON_LLC_Defendant_USA_July_2026.pdf"
-        },
-        {
-          "id": "ammann-v-markel-insurance-company-2026-07-16",
-          "name": "Ammann v. Markel Insurance Company",
-          "court": "N.D. Ohio",
-          "judge": "",
-          "date": "2026-07-16",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited a nonexistent Ohio case 'Pilch v. Dept. of Human Servs.' as support for assignability of bad-faith claims; the Court found no such authority and concluded the citation was AI-generated. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2697/MICHAEL_AMMANN_Plaintiff_v_MARKEL_INSURANCE_COMPANY_USA_16_July_2026.pdf"
-        },
-        {
-          "id": "burlingame-v-argo-private-client-group-ltd-et-al-2026-07-08",
-          "name": "Burlingame v. Argo Private Client Group Ltd, et al.",
-          "court": "N.D. Ohio",
-          "judge": "",
-          "date": "2026-07-08",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff's briefing contained a citation to at least one case that may not exist; the SDNY court and this Court flagged it as potentially fabricated. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2585/Burlingame_v._ARGO_Private_Client_Group_Ltd._USA_8_July_2026.pdf"
-        },
-        {
-          "id": "morgan-v-jones-2026-06-26",
-          "name": "Morgan v. Jones",
-          "court": "Ohio",
-          "judge": "",
-          "date": "2026-06-26",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant cited 'City of Columbus v. Edwards-Bosh v. Tri-County Toyota, 10th Dist. Franklin No. 07AP-1042, 2008-Ohio-4320, ¶ 13-16'; court found no such case and the webcite pointed to an unrelated opinion.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "family",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2522/Morgan_v._Jones_USA_26_June_2026.pdf"
-        },
-        {
-          "id": "guo-v-meade-motorcars-l-l-c-2026-05-26",
-          "name": "Guo v. Meade Motorcars, L.L.C.",
-          "court": "CA Ohio (6d)",
-          "judge": "",
-          "date": "2026-05-26",
-          "amount": 100,
-          "amount_display": "$100",
-          "severity": "medium",
-          "tool": "Deepseek",
-          "summary": "Fabricated: Case Law | Appellant cited \"Davis v. Davis, 590 N.E.2d 1372 (Ohio Ct. App. 1990)\" for the proposition that challenges to foreign-judgment jurisdiction must be made in the rendering court; trial court and opposing counsel could not locate the case at that citation. Outcome: Monetary Sanction.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2237/Guo_v._Meade_Motorcars_USA_26_May_2026.pdf"
-        },
-        {
-          "id": "arron-v-custer-et-al-2026-05-21",
-          "name": "Arron v. Custer, et al.",
-          "court": "S.D. Ohio",
-          "judge": "",
-          "date": "2026-05-21",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited a purported 2023 Ohio Supreme Court opinion 'Arron v. Arron'; the Court could not locate or confirm its existence and treated the citation as unverified. Outcome: Citation treated as unverified.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2198/Shelby_v._Custer_USA_21_May_2026.pdf"
-        },
-        {
-          "id": "city-of-shaker-heights-v-andre-d-thompson-2026-05-21",
-          "name": "City of Shaker Heights v. Andre D. Thompson",
-          "court": "CA Ohio (8d)",
-          "judge": "",
-          "date": "2026-05-21",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant cited a purported Ohio case captioned 'State v. Banks'; the court could not locate such a case and determined the citation corresponded to an unrelated Sixth District zoning case (Toledo v. Heron Arizona Fund 1, LLC), concluding the 'State v. Banks' citation was fabricated or incorrect.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "criminal",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2174/CITY_OF_SHAKER_HEIGHTS_v_ANDRE_D_THOMPSON_USA_21_May_2025.pdf"
-        },
-        {
-          "id": "isaiah-hunter-bey-v-city-of-cleveland-law-department-2026-05-21",
-          "name": "Isaiah Hunter-Bey v. City of Cleveland Law Department",
-          "court": "CA Ohio (8d)",
-          "judge": "",
-          "date": "2026-05-21",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant's brief included unspecified nonexistent (AI‑fabricated) case citations; the court flagged 'nonexistent cases' in the brief. Outcome: Admonishment.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "administrative",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2176/ISAIAH_HUNTER-BEY_v_CITY_OF_CLEVELAND_LAW_DEPARTMENT_USA_21_May_2026.pdf"
-        },
-        {
-          "id": "brock-et-al-v-hamilton-county-jfs-children-services-et-al-2026-05-15",
-          "name": "Brock et al. v. Hamilton County JFS Children Services et al.",
-          "court": "S.D. Ohio",
-          "judge": "",
-          "date": "2026-05-15",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited Jansen v. City of Cincinnati, 904 F.3d 336, claiming it held that §1983 claims against child welfare workers for fabricating evidence are not barred by Rooker-Feldman; the Court found the citation incorrect (904 F.3d 336 corresponds to Gilkers v. Vannoy, a Fifth Circuit case) and that Jansen is 904 F.2d 336 (1990) and does not address child welfare or that holding. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2182/Brock_v._Hamilton_CS_USA_15_May_2026.pdf"
-        },
-        {
-          "id": "ascent-management-inc-et-al-v-shell-oil-company-et-al-2026-04-30",
-          "name": "Ascent Management, Inc. et al v. Shell Oil Company et al",
-          "court": "Montgomery CC, Ohio",
-          "judge": "",
-          "date": "2026-04-30",
-          "amount": 5237,
-          "amount_display": "$5.2K",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | November 5, 2024 filing cited 'Perrico v. Verizon, 2018-Ohio-3994.' Court found no such opinion on search and treated it as a fabricated citation. Outcome: Adverse Costs Order.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "published-opinion",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2464/Ascent_Management_v._Shell_USA_30_April_2026.pdf"
-        },
-        {
-          "id": "quandel-construction-group-inc-v-hunt-construction-group-inc-2026-03-31",
-          "name": "Quandel Construction Group, Inc. v. Hunt Construction Group, Inc.",
-          "court": "S.D. Ohio",
-          "judge": "",
-          "date": "2026-03-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Hunt cited a nonexistent Aerpio case and incorrect citation (wrong case name/number and Westlaw cite); court identified the correct case as Aerpio Pharms., Inc. v. Quaggin, 2019 WL 4717477 (S.D. Ohio Sept. 26, 2019). Outcome: Order to Explain.",
-          "sanction_types": [
-            "ordered-to-explain"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1892/Quandel_v._Hunt_USA_31_March_2026.pdf"
-        },
-        {
-          "id": "hong-chris-lu-v-capital-one-na-et-al-2026-03-25",
-          "name": "Hong Chris Lu v. Capital One, N.A., et al.",
-          "court": "N.D. Ohio",
-          "judge": "",
-          "date": "2026-03-25",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Opposition brief (Doc. 39) contained numerous fabricated cases and troubling citation inconsistencies; opposing counsel identified the fake citations (Doc. 41); plaintiff later apologized and withdrew or corrected the filings (Doc. 47). Outcome: Factor in dismissing the case with prejudice.",
-          "sanction_types": [
-            "case-dismissed"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1830/LU_v._Capital_One_USA_25_March_2025.pdf"
-        },
-        {
-          "id": "state-v-coleman-2026-03-20",
-          "name": "State v. Coleman",
-          "court": "CA Ohio",
-          "judge": "",
-          "date": "2026-03-20",
-          "amount": 2000,
-          "amount_display": "$2.0K",
-          "severity": "career-ending",
-          "tool": "ChatGPT",
-          "summary": "Fabricated: Exhibits & Submissions | Application to reopen attributed an inflammatory prosecutor quotation cited to the trial transcript p.559; court found p.559 was the court reporter's signature page and no such quotation existed — the quote was generated by ChatGPT and incorporated into the filing without verification. Outcome: Monetary Sanction; Bar Referral; Counsel disqualified in this case; Order to notify the judgment in other cases; CLE; Letter of apology. \"{¶133} This case illustrates the peril. An attorney who, by his own counsel’s admission, was sophisticated in his understanding of AI tools permitted a non-attorney staff member to use a public generative AI platform to prepare an appellate filing. The AI tool fabricated transcript quotations—attributing specific, inflammatory statements to a real prosecutor that were never spoken. The attorney filed the document without verifying its contents. When the fabrications were identified, he did not correct the record. He appealed this court’s denial of the tainted application to the Supreme Court of Ohio without disclosing the fabrications. He proffered an AI policy that itself appeared to have been generated by AI, complete with unfilled placeholder brackets. Two months after a sanctions hearing, a filing in another court bore the unmistakable hallmarks of unchecked AI output, including a ChatGPT prompt embedded in the text of a legal brief.{¶134} This court does not write to condemn the use of artificial intelligence in the practice of law. To the contrary, this court recognizes that AI is an inevitable and potentially beneficial feature of modern legal practice. But the use of AI does not relieve an attorney of any of the obligations imposed by the Rules of Professional Conduct, by the rules of court, or by the oath of admission to the bar. An attorney who files a document containing AI-generated content is responsible for that content, fully and without qualification. The duty to verify, the duty of candor, the duty of competence, and the duty of supervision cannot be delegated to a machine.{¶135} The sanctions imposed herein are proportionate, individually justified, and collectively designed to serve the purposes for which the court’s sanctioning authority exists: to compensate for harm, to deter future misconduct, to protect the integrity of the judicial process, to preserve public confidence in the administration of justice, and to ensure that the practice of law remains a profession grounded in truth, accuracy, and candor. \"(Disciplinary proceedings were later initiated against Counsel.)",
-          "sanction_types": [
-            "monetary",
-            "bar-referral",
-            "professional",
-            "disqualification"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "bar-referral",
-            "disqualification",
-            "criminal",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1774/2026-Ohio-965.pdf"
-        },
-        {
-          "id": "kettering-adventist-healthcare-v-sandra-collier-et-al-2026-02-25",
-          "name": "Kettering Adventist Healthcare v. Sandra Collier, et al.",
-          "court": "S.D. Ohio",
-          "judge": "",
-          "date": "2026-02-25",
-          "amount": 7500,
-          "amount_display": "$7.5K",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | Counsel cited United States v. Pendergraft, 297 F.3d 1198 (11th Cir. 2002) as supporting civil-extortion elements; the Court noted Pendergraft addresses criminal extortion under the Hobbs Act, not civil extortion under Ohio law (misapplied authority). Outcome: Contempt Finding; Brief Struck; Monetary Sanction. OSC is here.",
-          "sanction_types": [
-            "monetary",
-            "struck-filing"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1574/Kettering_USA_25_February_2026.pdf"
-        },
-        {
-          "id": "kendle-mardis-v-dealer-loyalty-protection-inc-et-al-2026-02-18",
-          "name": "Kendle Mardis v. Dealer Loyalty Protection, Inc., et al.",
-          "court": "S.D. Ohio",
-          "judge": "",
-          "date": "2026-02-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited 'Johnson v. Mitchell, 2:20-cv-1882, 2020 WL 5649609 (S.D. Ohio Sept. 23, 2020)'; defendants and the Court found the case does not exist and flagged it as likely AI-generated. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1553/Mardis_v._Dealer_Loyalty_Protection_USA_18_February_2026.pdf"
-        },
-        {
-          "id": "hector-salvatori-v-the-huntington-national-bank-2026-01-07",
-          "name": "Hector Salvatori v. The Huntington National Bank",
-          "court": "S.D. Ohio",
-          "judge": "",
-          "date": "2026-01-07",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Court found the cited Pineda v. Chase Bank (07-CV-563-PJH, 2007 WL 521222) does not exist in the N.D. Cal.; the Westlaw cite actually links to a different case.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1268/Salvatori_The_Huntington_National_Bank_USA_7_December_2025.pdf"
-        },
-        {
-          "id": "in-re-tf-pf-and-ss-minor-children-2025-11-25",
-          "name": "In re T.F., P.F., and S.S. Minor Children",
-          "court": "CA Ohio",
-          "judge": "",
-          "date": "2025-11-25",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant cited \"Sain v. Roo, 2018-Ohio-2878, ¶ 19,\" which the court found to be fictitious (no case assigned to that citation).",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "family",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1153/In_re_TF_PF_and_SS_Minor_Children_USA_25_November_2025.pdf"
-        },
-        {
-          "id": "south-central-ohio-job-and-family-services-v-corey-mason-2025-11-25",
-          "name": "South Central Ohio Job and Family Services v. Corey Mason",
-          "court": "CA Ohio",
-          "judge": "",
-          "date": "2025-11-25",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant cited '2016-Ohio-2987' as Nolan v. Nolan; the court found that citation is misattributed and does not support the asserted legal proposition (2016-Ohio-2987 corresponds to State v. Hari).",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "other",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1152/Robson_v._Mason_USA_25_November_2025.pdf"
-        },
-        {
-          "id": "in-re-marguerite-latete-kilpatrick-2025-11-24",
-          "name": "In re: Marguerite Latete Kilpatrick",
-          "court": "S.D. Ohio (Bankruptcy)",
-          "judge": "",
-          "date": "2025-11-24",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Debtor cited 'In re Miller, 150 B.R. 834 (Bankr. N.D. Ohio 1993)', which the Court found to be non-existent and noted 150 B.R. 834 corresponds to Brandt v. 440 Assocs., indicating a made-up citation; Court flagged this as a potential AI hallucination and basis for Rule 9011 review.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "bankruptcy",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1091/In_re_Marguerite_Latete_Kilpatrick_Debtor_USA_24_November_2025.pdf"
-        },
-        {
-          "id": "michael-izquierdo-v-wipro-limited-2025-11-21",
-          "name": "Michael Izquierdo v. Wipro Limited",
-          "court": "N.D. Ohio",
-          "judge": "",
-          "date": "2025-11-21",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited 'Whelan v. Colgan Air, Inc., 2010 WL 3610460 (E.D.N.Y.)' to argue COBRA inadequacy; the Court found the case does not exist and labeled the citation likely hallucinated. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1100/Izquierdo_v._Wipro_Limited_USA_21_November_2025.pdf"
-        },
-        {
-          "id": "state-ex-rel-soretha-marie-eldridge-v-judge-ashley-kilbane-2025-10-31",
-          "name": "State ex rel. Soretha Marie Eldridge v. Judge Ashley Kilbane",
-          "court": "CA Ohio",
-          "judge": "",
-          "date": "2025-10-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law Relator admitted her petition contained citation errors and hallucinated cases after relying on inadequate assistance; court denied leave to amend and dismissed the writs.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "civil-rights",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1002/Eldridge_v._Kilbane_USA_31_October_2025.pdf"
-        },
-        {
-          "id": "safe-choice-llc-v-city-of-cleveland-2025-10-30",
-          "name": "Safe Choice, LLC v. City of Cleveland",
-          "court": "N.D. Ohio",
-          "judge": "",
-          "date": "2025-10-30",
-          "amount": 7500,
-          "amount_display": "$7.5K",
-          "severity": "medium",
-          "tool": "Amicus (Casemine)",
-          "summary": "Misrepresented: Case Law | Attorney attributed the phrase 'fresh injury' to Kuhnle; court found the Sixth Circuit never used that phrase and deemed the citation misrepresented. Outcome: Monetary Sanction; Referral to the Bar; Order to serve decision on clinet;. Order to show cause is here.",
-          "sanction_types": [
-            "monetary",
-            "bar-referral"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/961/Safe_Choice_v._City_of_Cleveland_USA_30_October_2025.pdf"
-        },
-        {
-          "id": "souders-v-lazor-2025-10-08",
-          "name": "Souders v. Lazor",
-          "court": "CA Ohio",
-          "judge": "",
-          "date": "2025-10-08",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Appellant cited 'White v. Gainer, No. 06-C-367, 2007 U.S. Dist. LEXIS 27813 (N.D. Ill. Apr. 9, 2007)'; the court stated that this case does not exist. Outcome: Court rejected reliance on the cited authorities.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "tort",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/864/Souders.pdf"
-        },
-        {
-          "id": "jose-villavicencio-v-judge-stephanie-mingo-2025-10-07",
-          "name": "Jose Villavicencio v. Judge Stephanie Mingo",
-          "court": "S.D. Ohio",
-          "judge": "",
-          "date": "2025-10-07",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | Plaintiff cited Marsh v. Chambers for the proposition that federal district courts may issue mandamus to compel state court officers; the court held this characterization was \"patently false.\" Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "administrative",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/854/JOSE_VILLAVICENCIO_Plaintiff_v_JUDGE_STEPHANIE_MINGO_Defendant.pdf"
-        },
-        {
-          "id": "vision-management-group-v-constant-aviation-2025-09-22",
-          "name": "Vision Management Group v. Constant Aviation",
-          "court": "N.D. Ohio",
-          "judge": "",
-          "date": "2025-09-22",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Counsel miscited Cook and referenced a non-existent page; the court identified the incorrect citation and corrected the record (noting the correct Cook citation). Outcome: Warning, arguments disregarded.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/812/Vision_Management_Group_LLC_et_al_Plaintiffs_v_Constant_Aviation_LLC_Defendant.pdf"
-        },
-        {
-          "id": "calvin-bradley-v-matthew-eichhorn-et-al-2025-09-11",
-          "name": "Calvin Bradley v. Matthew Eichhorn, et al.",
-          "court": "S.D. Ohio",
-          "judge": "",
-          "date": "2025-09-11",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | Plaintiff cited \"State v. Gonzales, 2016-Ohio-8319, 6th Dist.\"; the court found 2016-Ohio-8319 leads to a case titled State v. Gonzalez at the Ohio Supreme Court (not Sixth Dist.) and is unrelated to the issue asserted. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/787/CALVIN_BRADLEY_Plaintiff_v_MATTHEW_EICHHORN_et_al_Defendants.pdf"
-        },
-        {
-          "id": "nixon-v-ken-ganley-ford-west-2025-09-03",
-          "name": "Nixon v. Ken Ganley Ford West",
-          "court": "N.D. Ohio",
-          "judge": "",
-          "date": "2025-09-03",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Court concluded at least two of Plaintiff's motions contained citations to nonexistent cases created by generative AI; Defendants reported inability to locate the cited authorities. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/782/Nixon_v_Ken_Ganley_Ford_West.pdf"
-        },
-        {
-          "id": "lahti-v-consensys-software-inc-2025-08-19",
-          "name": "Lahti v. Consensys Software Inc.",
-          "court": "S.D. Ohio",
-          "judge": "",
-          "date": "2025-08-19",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law Outcome: Submission Stricken. \"The case at bar epitomizes the concern. Inordinate judicial resources were expended on reviewing cases cited by Plaintiff that did not exist. No doubt Plaintiff’s opponent in this litigation was forced to expend similar energies. Here, too, as noted, certain cases Plaintiff cited in support of her arguments stood for the opposite result from that which Plaintiff stated in her briefs. This kind of activity not only wastes precious and limited judicial resources, but it also drives up the cost of litigation unnecessarily for those who must defend against or seek to prosecute claims on behalf of paying clients, given the underpinnings of the American Rule that attaches to most civil litigation in this country.\"",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/718/Lahti_v._Consensys_Software_USA_20_AUgust_2025.pdf"
-        },
-        {
-          "id": "smith-v-gamble-2025-07-07",
-          "name": "Smith v. Gamble",
-          "court": "CA Ohio",
-          "judge": "",
-          "date": "2025-07-07",
-          "amount": 1,
-          "amount_display": "$1",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "The Ohio Court of Appeals found that Father’s appellee brief used nonexistent cases and inaccurate citations, after he failed to respond to an order requiring copies of authorities the court could not locate. It denied Mother’s motion to strike the brief but granted her sanctions request, including expenses and reasonable attorney fees, and referred the amount to a magistrate.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "pro-se",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/575/Smith_v._Gamble_USA_7_July_2025.PDF"
-        },
-        {
-          "id": "muhammad-v-gap-inc-2025-07-03",
-          "name": "Muhammad v. Gap Inc.",
-          "court": "S.D. Ohio",
-          "judge": "",
-          "date": "2025-07-03",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "ChatGPT",
-          "summary": "Fabricated: Case Law | Plaintiff cited as controlling authority a non-existent S.D. Ohio case. Outcome: OSC. \"Compounding the problem, what generative AI lacks in precision, it more than makes up for in speed. Litigants who simply file the material that AI tools generate, without carefully reviewing it first for accuracy, have the potential to swamp courts with what appear at first glance to be legal arguments built on law and precedent, but which are in fact nothing of the sort. And not only are these problems in their own right, but they also heighten the two concerns the Court highlighted above—that defendants will be forced to spend more time and incur more costs parsing through copious baseless filings to defend an action, and that Courts will waste precious time doing the same in ruling on motions and moving matters along.\"(Plaintiff acknowledged use of ChatGPT in a subsequent filing)Plaintiff was eventually designated as vexatious litigant and his case dismissed with prejudice.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/700/Muhammad_v_Gap_Inc.pdf"
-        },
-        {
-          "id": "casey-dutt-v-dgk-roofing-and-home-l-l-c-2025-03-28",
-          "name": "Casey Dutt v. DGK Roofing and Home, L.L.C.",
-          "court": "Ohio CCP",
-          "judge": "",
-          "date": "2025-03-28",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Defendant cited a nonexistent Ohio appellate case for the proposition that misunderstanding legal obligations or procedural confusion constitutes excusable neglect under Civ.R. 60(B). The Court checked the cited reporter location and found it referred instead to Gottfried-Smith v. Gottfried, which did not analyze Civ.R. 60(B). This led to a subsequent complaint before the Ohio Disciplinary Counsel: see here.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/3009/Dutt_v._DGK_Roofing__Home_USA_28_March_2025.pdf"
-        },
-        {
-          "id": "alkuda-v-mcdonald-hopkins-co-lpa-2025-03-18",
-          "name": "Alkuda v. McDonald Hopkins Co., L.P.A.",
-          "court": "N.D. Ohio",
-          "judge": "",
-          "date": "2025-03-18",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "In Alkuda v. McDonald Hopkins Co., L.P.A., the Northern District of Ohio dismissed with prejudice a trust-related action that was filed outside the applicable limitations periods. The defendant identified fictitious, AI-generated legal citations in the pro se plaintiff’s opposition. The court warned that future submissions containing fictitious citations could result in dismissal or monetary sanctions, while resolving the case on limitations grounds.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "trial"
-          ],
-          "source_url": "https://law.justia.com/cases/federal/district-courts/ohio/ohndce/1:2024cv01103/307896/17/"
-        },
-        {
-          "id": "state-v-saher-2025-02-11",
-          "name": "State v. Saher",
-          "court": "CC Ohio",
-          "judge": "",
-          "date": "2025-02-11",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "ChatGPT",
-          "summary": "Fabricated: Case Law Outcome: Attorney asked to withdraw guilty plea. Initial filing also included part of the ChatGPT prompt.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "trial"
-          ],
-          "source_url": "https://cpdocket.cp.cuyahogacounty.gov/CR_CaseInformation_Docket.aspx?q=h0zD3YbsKWezwPzPd7ddnjVSh8mAfAMq1QUEKKS9Isg1"
-        },
-        {
-          "id": "whaley-v-experian-information-solutions-2023-11-16",
-          "name": "Whaley v. Experian Information Solutions",
-          "court": "S.D. Ohio",
-          "judge": "",
-          "date": "2023-11-16",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "The Southern District of Ohio noted that Whaley admitted using AI to prepare filings and reminded the parties that the presiding judge’s standing order barred AI use in filings before him. The court dismissed the 144-page FCRA complaint without prejudice as prolix and unclear, allowed a short amended complaint, and described potential consequences for violating the AI restriction.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/602/gov.uscourts.ohsd.274822.26.0.pdf"
-        }
-      ]
-    },
-    {
       "state": "NV",
       "count": 36,
       "total": 5252,
@@ -11519,6 +10697,822 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/313/Saxena_v._Martinez-Hernandez_et_al_D._Nev_February_18_2025.pdf"
+        }
+      ]
+    },
+    {
+      "state": "OH",
+      "count": 36,
+      "total": 22338,
+      "severities": {
+        "low": 30,
+        "medium": 5,
+        "career-ending": 1
+      },
+      "cases": [
+        {
+          "id": "burgess-v-greater-cleveland-regional-transit-authority-2026-08-06",
+          "name": "Burgess v. Greater Cleveland Regional Transit Authority",
+          "court": "N.D. Ohio",
+          "judge": "",
+          "date": "2026-08-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Defendant's Opposition cited 'State ex rel. Shimola v. City of Cleveland' at 70 Ohio St.3d 40 (incorrect/misleading citation); the Court found this citation hallucinatory and noted the actual Shimola decision is at 70 Ohio St.3d 100, 637 N.E.2d 325. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2890/Burgess_v._Greater_Cleveland_Regional_Transit_Authority_USA_6_August_2026.pdf"
+        },
+        {
+          "id": "state-v-davis-2026-08-03",
+          "name": "State v. Davis",
+          "court": "CA Ohio",
+          "judge": "",
+          "date": "2026-08-03",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Misrepresented: Case Law | Appellant cited State v. Sanchez as supporting an 'indefinite-pendency' tolling rule; the court found Sanchez does not address that topic and suggested the citation arose from Appellant's AI queries.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "misrepresented-authority",
+            "criminal",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2783/State_v._Davis_USA_3_August_2026.pdf"
+        },
+        {
+          "id": "terence-a-gragston-v-amazon-llc-2026-07-29",
+          "name": "Terence A. Gragston v. Amazon LLC",
+          "court": "S.D. Ohio",
+          "judge": "",
+          "date": "2026-07-29",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Pro se plaintiff cited a purported Sixth Circuit opinion to support his argument; the Court found no such case or Westlaw citation and determined the citation was AI‑hallucinated. Outcome: Court issued a formal warning that future reliance on AI‑hallucinated caselaw will result in sanctions, including monetary penalties and possible dismissal with prejudice; no sanction was imposed at this time.. The pro se plaintiff relied on purported Sixth Circuit authority that the Court determined was AI‑hallucinated (a fabricated opinion/citation). The Court's independent review found no case matching the cited docket number or Westlaw citation and formally warned that further reliance on AI‑generated or unverified authorities will result in sanctions (including monetary penalties and dismissal with prejudice). The Court preserved the unverified citations in the record but noted links were unavailable.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2786/TERENCE_A_GRAGSTON_Plaintiff_v_AMAZON_LLC_Defendant_USA_July_2026.pdf"
+        },
+        {
+          "id": "ammann-v-markel-insurance-company-2026-07-16",
+          "name": "Ammann v. Markel Insurance Company",
+          "court": "N.D. Ohio",
+          "judge": "",
+          "date": "2026-07-16",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited a nonexistent Ohio case 'Pilch v. Dept. of Human Servs.' as support for assignability of bad-faith claims; the Court found no such authority and concluded the citation was AI-generated. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2697/MICHAEL_AMMANN_Plaintiff_v_MARKEL_INSURANCE_COMPANY_USA_16_July_2026.pdf"
+        },
+        {
+          "id": "burlingame-v-argo-private-client-group-ltd-et-al-2026-07-08",
+          "name": "Burlingame v. Argo Private Client Group Ltd, et al.",
+          "court": "N.D. Ohio",
+          "judge": "",
+          "date": "2026-07-08",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff's briefing contained a citation to at least one case that may not exist; the SDNY court and this Court flagged it as potentially fabricated. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2585/Burlingame_v._ARGO_Private_Client_Group_Ltd._USA_8_July_2026.pdf"
+        },
+        {
+          "id": "morgan-v-jones-2026-06-26",
+          "name": "Morgan v. Jones",
+          "court": "Ohio",
+          "judge": "",
+          "date": "2026-06-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Appellant cited 'City of Columbus v. Edwards-Bosh v. Tri-County Toyota, 10th Dist. Franklin No. 07AP-1042, 2008-Ohio-4320, ¶ 13-16'; court found no such case and the webcite pointed to an unrelated opinion.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "family",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2522/Morgan_v._Jones_USA_26_June_2026.pdf"
+        },
+        {
+          "id": "guo-v-meade-motorcars-l-l-c-2026-05-26",
+          "name": "Guo v. Meade Motorcars, L.L.C.",
+          "court": "CA Ohio (6d)",
+          "judge": "",
+          "date": "2026-05-26",
+          "amount": 100,
+          "amount_display": "$100",
+          "severity": "medium",
+          "tool": "Deepseek",
+          "summary": "Fabricated: Case Law | Appellant cited \"Davis v. Davis, 590 N.E.2d 1372 (Ohio Ct. App. 1990)\" for the proposition that challenges to foreign-judgment jurisdiction must be made in the rendering court; trial court and opposing counsel could not locate the case at that citation. Outcome: Monetary Sanction.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2237/Guo_v._Meade_Motorcars_USA_26_May_2026.pdf"
+        },
+        {
+          "id": "arron-v-custer-et-al-2026-05-21",
+          "name": "Arron v. Custer, et al.",
+          "court": "S.D. Ohio",
+          "judge": "",
+          "date": "2026-05-21",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited a purported 2023 Ohio Supreme Court opinion 'Arron v. Arron'; the Court could not locate or confirm its existence and treated the citation as unverified. Outcome: Citation treated as unverified.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2198/Shelby_v._Custer_USA_21_May_2026.pdf"
+        },
+        {
+          "id": "city-of-shaker-heights-v-andre-d-thompson-2026-05-21",
+          "name": "City of Shaker Heights v. Andre D. Thompson",
+          "court": "CA Ohio (8d)",
+          "judge": "",
+          "date": "2026-05-21",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Appellant cited a purported Ohio case captioned 'State v. Banks'; the court could not locate such a case and determined the citation corresponded to an unrelated Sixth District zoning case (Toledo v. Heron Arizona Fund 1, LLC), concluding the 'State v. Banks' citation was fabricated or incorrect.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "criminal",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2174/CITY_OF_SHAKER_HEIGHTS_v_ANDRE_D_THOMPSON_USA_21_May_2025.pdf"
+        },
+        {
+          "id": "isaiah-hunter-bey-v-city-of-cleveland-law-department-2026-05-21",
+          "name": "Isaiah Hunter-Bey v. City of Cleveland Law Department",
+          "court": "CA Ohio (8d)",
+          "judge": "",
+          "date": "2026-05-21",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Appellant's brief included unspecified nonexistent (AI‑fabricated) case citations; the court flagged 'nonexistent cases' in the brief. Outcome: Admonishment.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "administrative",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2176/ISAIAH_HUNTER-BEY_v_CITY_OF_CLEVELAND_LAW_DEPARTMENT_USA_21_May_2026.pdf"
+        },
+        {
+          "id": "brock-et-al-v-hamilton-county-jfs-children-services-et-al-2026-05-15",
+          "name": "Brock et al. v. Hamilton County JFS Children Services et al.",
+          "court": "S.D. Ohio",
+          "judge": "",
+          "date": "2026-05-15",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited Jansen v. City of Cincinnati, 904 F.3d 336, claiming it held that §1983 claims against child welfare workers for fabricating evidence are not barred by Rooker-Feldman; the Court found the citation incorrect (904 F.3d 336 corresponds to Gilkers v. Vannoy, a Fifth Circuit case) and that Jansen is 904 F.2d 336 (1990) and does not address child welfare or that holding. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2182/Brock_v._Hamilton_CS_USA_15_May_2026.pdf"
+        },
+        {
+          "id": "ascent-management-inc-et-al-v-shell-oil-company-et-al-2026-04-30",
+          "name": "Ascent Management, Inc. et al v. Shell Oil Company et al",
+          "court": "Montgomery CC, Ohio",
+          "judge": "",
+          "date": "2026-04-30",
+          "amount": 5237,
+          "amount_display": "$5.2K",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | November 5, 2024 filing cited 'Perrico v. Verizon, 2018-Ohio-3994.' Court found no such opinion on search and treated it as a fabricated citation. Outcome: Adverse Costs Order.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "published-opinion",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2464/Ascent_Management_v._Shell_USA_30_April_2026.pdf"
+        },
+        {
+          "id": "quandel-construction-group-inc-v-hunt-construction-group-inc-2026-03-31",
+          "name": "Quandel Construction Group, Inc. v. Hunt Construction Group, Inc.",
+          "court": "S.D. Ohio",
+          "judge": "",
+          "date": "2026-03-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Hunt cited a nonexistent Aerpio case and incorrect citation (wrong case name/number and Westlaw cite); court identified the correct case as Aerpio Pharms., Inc. v. Quaggin, 2019 WL 4717477 (S.D. Ohio Sept. 26, 2019). Outcome: Order to Explain.",
+          "sanction_types": [
+            "ordered-to-explain"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1892/Quandel_v._Hunt_USA_31_March_2026.pdf"
+        },
+        {
+          "id": "hong-chris-lu-v-capital-one-na-et-al-2026-03-25",
+          "name": "Hong Chris Lu v. Capital One, N.A., et al.",
+          "court": "N.D. Ohio",
+          "judge": "",
+          "date": "2026-03-25",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Opposition brief (Doc. 39) contained numerous fabricated cases and troubling citation inconsistencies; opposing counsel identified the fake citations (Doc. 41); plaintiff later apologized and withdrew or corrected the filings (Doc. 47). Outcome: Factor in dismissing the case with prejudice.",
+          "sanction_types": [
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1830/LU_v._Capital_One_USA_25_March_2025.pdf"
+        },
+        {
+          "id": "state-v-coleman-2026-03-20",
+          "name": "State v. Coleman",
+          "court": "CA Ohio",
+          "judge": "",
+          "date": "2026-03-20",
+          "amount": 2000,
+          "amount_display": "$2.0K",
+          "severity": "career-ending",
+          "tool": "ChatGPT",
+          "summary": "Fabricated: Exhibits & Submissions | Application to reopen attributed an inflammatory prosecutor quotation cited to the trial transcript p.559; court found p.559 was the court reporter's signature page and no such quotation existed — the quote was generated by ChatGPT and incorporated into the filing without verification. Outcome: Monetary Sanction; Bar Referral; Counsel disqualified in this case; Order to notify the judgment in other cases; CLE; Letter of apology. \"{¶133} This case illustrates the peril. An attorney who, by his own counsel’s admission, was sophisticated in his understanding of AI tools permitted a non-attorney staff member to use a public generative AI platform to prepare an appellate filing. The AI tool fabricated transcript quotations—attributing specific, inflammatory statements to a real prosecutor that were never spoken. The attorney filed the document without verifying its contents. When the fabrications were identified, he did not correct the record. He appealed this court’s denial of the tainted application to the Supreme Court of Ohio without disclosing the fabrications. He proffered an AI policy that itself appeared to have been generated by AI, complete with unfilled placeholder brackets. Two months after a sanctions hearing, a filing in another court bore the unmistakable hallmarks of unchecked AI output, including a ChatGPT prompt embedded in the text of a legal brief.{¶134} This court does not write to condemn the use of artificial intelligence in the practice of law. To the contrary, this court recognizes that AI is an inevitable and potentially beneficial feature of modern legal practice. But the use of AI does not relieve an attorney of any of the obligations imposed by the Rules of Professional Conduct, by the rules of court, or by the oath of admission to the bar. An attorney who files a document containing AI-generated content is responsible for that content, fully and without qualification. The duty to verify, the duty of candor, the duty of competence, and the duty of supervision cannot be delegated to a machine.{¶135} The sanctions imposed herein are proportionate, individually justified, and collectively designed to serve the purposes for which the court’s sanctioning authority exists: to compensate for harm, to deter future misconduct, to protect the integrity of the judicial process, to preserve public confidence in the administration of justice, and to ensure that the practice of law remains a profession grounded in truth, accuracy, and candor. \"(Disciplinary proceedings were later initiated against Counsel.)",
+          "sanction_types": [
+            "monetary",
+            "bar-referral",
+            "professional",
+            "disqualification"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "bar-referral",
+            "disqualification",
+            "criminal",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1774/2026-Ohio-965.pdf"
+        },
+        {
+          "id": "kettering-adventist-healthcare-v-sandra-collier-et-al-2026-02-25",
+          "name": "Kettering Adventist Healthcare v. Sandra Collier, et al.",
+          "court": "S.D. Ohio",
+          "judge": "",
+          "date": "2026-02-25",
+          "amount": 7500,
+          "amount_display": "$7.5K",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Case Law | Counsel cited United States v. Pendergraft, 297 F.3d 1198 (11th Cir. 2002) as supporting civil-extortion elements; the Court noted Pendergraft addresses criminal extortion under the Hobbs Act, not civil extortion under Ohio law (misapplied authority). Outcome: Contempt Finding; Brief Struck; Monetary Sanction. OSC is here.",
+          "sanction_types": [
+            "monetary",
+            "struck-filing"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1574/Kettering_USA_25_February_2026.pdf"
+        },
+        {
+          "id": "kendle-mardis-v-dealer-loyalty-protection-inc-et-al-2026-02-18",
+          "name": "Kendle Mardis v. Dealer Loyalty Protection, Inc., et al.",
+          "court": "S.D. Ohio",
+          "judge": "",
+          "date": "2026-02-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited 'Johnson v. Mitchell, 2:20-cv-1882, 2020 WL 5649609 (S.D. Ohio Sept. 23, 2020)'; defendants and the Court found the case does not exist and flagged it as likely AI-generated. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1553/Mardis_v._Dealer_Loyalty_Protection_USA_18_February_2026.pdf"
+        },
+        {
+          "id": "hector-salvatori-v-the-huntington-national-bank-2026-01-07",
+          "name": "Hector Salvatori v. The Huntington National Bank",
+          "court": "S.D. Ohio",
+          "judge": "",
+          "date": "2026-01-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Court found the cited Pineda v. Chase Bank (07-CV-563-PJH, 2007 WL 521222) does not exist in the N.D. Cal.; the Westlaw cite actually links to a different case.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1268/Salvatori_The_Huntington_National_Bank_USA_7_December_2025.pdf"
+        },
+        {
+          "id": "in-re-tf-pf-and-ss-minor-children-2025-11-25",
+          "name": "In re T.F., P.F., and S.S. Minor Children",
+          "court": "CA Ohio",
+          "judge": "",
+          "date": "2025-11-25",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Appellant cited \"Sain v. Roo, 2018-Ohio-2878, ¶ 19,\" which the court found to be fictitious (no case assigned to that citation).",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "family",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1153/In_re_TF_PF_and_SS_Minor_Children_USA_25_November_2025.pdf"
+        },
+        {
+          "id": "south-central-ohio-job-and-family-services-v-corey-mason-2025-11-25",
+          "name": "South Central Ohio Job and Family Services v. Corey Mason",
+          "court": "CA Ohio",
+          "judge": "",
+          "date": "2025-11-25",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Appellant cited '2016-Ohio-2987' as Nolan v. Nolan; the court found that citation is misattributed and does not support the asserted legal proposition (2016-Ohio-2987 corresponds to State v. Hari).",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "other",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1152/Robson_v._Mason_USA_25_November_2025.pdf"
+        },
+        {
+          "id": "in-re-marguerite-latete-kilpatrick-2025-11-24",
+          "name": "In re: Marguerite Latete Kilpatrick",
+          "court": "S.D. Ohio (Bankruptcy)",
+          "judge": "",
+          "date": "2025-11-24",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Debtor cited 'In re Miller, 150 B.R. 834 (Bankr. N.D. Ohio 1993)', which the Court found to be non-existent and noted 150 B.R. 834 corresponds to Brandt v. 440 Assocs., indicating a made-up citation; Court flagged this as a potential AI hallucination and basis for Rule 9011 review.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "bankruptcy",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1091/In_re_Marguerite_Latete_Kilpatrick_Debtor_USA_24_November_2025.pdf"
+        },
+        {
+          "id": "michael-izquierdo-v-wipro-limited-2025-11-21",
+          "name": "Michael Izquierdo v. Wipro Limited",
+          "court": "N.D. Ohio",
+          "judge": "",
+          "date": "2025-11-21",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited 'Whelan v. Colgan Air, Inc., 2010 WL 3610460 (E.D.N.Y.)' to argue COBRA inadequacy; the Court found the case does not exist and labeled the citation likely hallucinated. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1100/Izquierdo_v._Wipro_Limited_USA_21_November_2025.pdf"
+        },
+        {
+          "id": "state-ex-rel-soretha-marie-eldridge-v-judge-ashley-kilbane-2025-10-31",
+          "name": "State ex rel. Soretha Marie Eldridge v. Judge Ashley Kilbane",
+          "court": "CA Ohio",
+          "judge": "",
+          "date": "2025-10-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law Relator admitted her petition contained citation errors and hallucinated cases after relying on inadequate assistance; court denied leave to amend and dismissed the writs.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "civil-rights",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1002/Eldridge_v._Kilbane_USA_31_October_2025.pdf"
+        },
+        {
+          "id": "safe-choice-llc-v-city-of-cleveland-2025-10-30",
+          "name": "Safe Choice, LLC v. City of Cleveland",
+          "court": "N.D. Ohio",
+          "judge": "",
+          "date": "2025-10-30",
+          "amount": 7500,
+          "amount_display": "$7.5K",
+          "severity": "medium",
+          "tool": "Amicus (Casemine)",
+          "summary": "Misrepresented: Case Law | Attorney attributed the phrase 'fresh injury' to Kuhnle; court found the Sixth Circuit never used that phrase and deemed the citation misrepresented. Outcome: Monetary Sanction; Referral to the Bar; Order to serve decision on clinet;. Order to show cause is here.",
+          "sanction_types": [
+            "monetary",
+            "bar-referral"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/961/Safe_Choice_v._City_of_Cleveland_USA_30_October_2025.pdf"
+        },
+        {
+          "id": "souders-v-lazor-2025-10-08",
+          "name": "Souders v. Lazor",
+          "court": "CA Ohio",
+          "judge": "",
+          "date": "2025-10-08",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Appellant cited 'White v. Gainer, No. 06-C-367, 2007 U.S. Dist. LEXIS 27813 (N.D. Ill. Apr. 9, 2007)'; the court stated that this case does not exist. Outcome: Court rejected reliance on the cited authorities.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "tort",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/864/Souders.pdf"
+        },
+        {
+          "id": "jose-villavicencio-v-judge-stephanie-mingo-2025-10-07",
+          "name": "Jose Villavicencio v. Judge Stephanie Mingo",
+          "court": "S.D. Ohio",
+          "judge": "",
+          "date": "2025-10-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Case Law | Plaintiff cited Marsh v. Chambers for the proposition that federal district courts may issue mandamus to compel state court officers; the court held this characterization was \"patently false.\" Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "administrative",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/854/JOSE_VILLAVICENCIO_Plaintiff_v_JUDGE_STEPHANIE_MINGO_Defendant.pdf"
+        },
+        {
+          "id": "vision-management-group-v-constant-aviation-2025-09-22",
+          "name": "Vision Management Group v. Constant Aviation",
+          "court": "N.D. Ohio",
+          "judge": "",
+          "date": "2025-09-22",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Counsel miscited Cook and referenced a non-existent page; the court identified the incorrect citation and corrected the record (noting the correct Cook citation). Outcome: Warning, arguments disregarded.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/812/Vision_Management_Group_LLC_et_al_Plaintiffs_v_Constant_Aviation_LLC_Defendant.pdf"
+        },
+        {
+          "id": "calvin-bradley-v-matthew-eichhorn-et-al-2025-09-11",
+          "name": "Calvin Bradley v. Matthew Eichhorn, et al.",
+          "court": "S.D. Ohio",
+          "judge": "",
+          "date": "2025-09-11",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Case Law | Plaintiff cited \"State v. Gonzales, 2016-Ohio-8319, 6th Dist.\"; the court found 2016-Ohio-8319 leads to a case titled State v. Gonzalez at the Ohio Supreme Court (not Sixth Dist.) and is unrelated to the issue asserted. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/787/CALVIN_BRADLEY_Plaintiff_v_MATTHEW_EICHHORN_et_al_Defendants.pdf"
+        },
+        {
+          "id": "nixon-v-ken-ganley-ford-west-2025-09-03",
+          "name": "Nixon v. Ken Ganley Ford West",
+          "court": "N.D. Ohio",
+          "judge": "",
+          "date": "2025-09-03",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Court concluded at least two of Plaintiff's motions contained citations to nonexistent cases created by generative AI; Defendants reported inability to locate the cited authorities. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/782/Nixon_v_Ken_Ganley_Ford_West.pdf"
+        },
+        {
+          "id": "lahti-v-consensys-software-inc-2025-08-19",
+          "name": "Lahti v. Consensys Software Inc.",
+          "court": "S.D. Ohio",
+          "judge": "",
+          "date": "2025-08-19",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law Outcome: Submission Stricken. \"The case at bar epitomizes the concern. Inordinate judicial resources were expended on reviewing cases cited by Plaintiff that did not exist. No doubt Plaintiff’s opponent in this litigation was forced to expend similar energies. Here, too, as noted, certain cases Plaintiff cited in support of her arguments stood for the opposite result from that which Plaintiff stated in her briefs. This kind of activity not only wastes precious and limited judicial resources, but it also drives up the cost of litigation unnecessarily for those who must defend against or seek to prosecute claims on behalf of paying clients, given the underpinnings of the American Rule that attaches to most civil litigation in this country.\"",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/718/Lahti_v._Consensys_Software_USA_20_AUgust_2025.pdf"
+        },
+        {
+          "id": "smith-v-gamble-2025-07-07",
+          "name": "Smith v. Gamble",
+          "court": "CA Ohio",
+          "judge": "",
+          "date": "2025-07-07",
+          "amount": 1,
+          "amount_display": "$1",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "The Ohio Court of Appeals found that Father’s appellee brief used nonexistent cases and inaccurate citations, after he failed to respond to an order requiring copies of authorities the court could not locate. It denied Mother’s motion to strike the brief but granted her sanctions request, including expenses and reasonable attorney fees, and referred the amount to a magistrate.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "pro-se",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/575/Smith_v._Gamble_USA_7_July_2025.PDF"
+        },
+        {
+          "id": "muhammad-v-gap-inc-2025-07-03",
+          "name": "Muhammad v. Gap Inc.",
+          "court": "S.D. Ohio",
+          "judge": "",
+          "date": "2025-07-03",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "ChatGPT",
+          "summary": "Fabricated: Case Law | Plaintiff cited as controlling authority a non-existent S.D. Ohio case. Outcome: OSC. \"Compounding the problem, what generative AI lacks in precision, it more than makes up for in speed. Litigants who simply file the material that AI tools generate, without carefully reviewing it first for accuracy, have the potential to swamp courts with what appear at first glance to be legal arguments built on law and precedent, but which are in fact nothing of the sort. And not only are these problems in their own right, but they also heighten the two concerns the Court highlighted above—that defendants will be forced to spend more time and incur more costs parsing through copious baseless filings to defend an action, and that Courts will waste precious time doing the same in ruling on motions and moving matters along.\"(Plaintiff acknowledged use of ChatGPT in a subsequent filing)Plaintiff was eventually designated as vexatious litigant and his case dismissed with prejudice.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/700/Muhammad_v_Gap_Inc.pdf"
+        },
+        {
+          "id": "casey-dutt-v-dgk-roofing-and-home-l-l-c-2025-03-28",
+          "name": "Casey Dutt v. DGK Roofing and Home, L.L.C.",
+          "court": "Ohio CCP",
+          "judge": "",
+          "date": "2025-03-28",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Defendant cited a nonexistent Ohio appellate case for the proposition that misunderstanding legal obligations or procedural confusion constitutes excusable neglect under Civ.R. 60(B). The Court checked the cited reporter location and found it referred instead to Gottfried-Smith v. Gottfried, which did not analyze Civ.R. 60(B). This led to a subsequent complaint before the Ohio Disciplinary Counsel: see here.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/3009/Dutt_v._DGK_Roofing__Home_USA_28_March_2025.pdf"
+        },
+        {
+          "id": "alkuda-v-mcdonald-hopkins-co-lpa-2025-03-18",
+          "name": "Alkuda v. McDonald Hopkins Co., L.P.A.",
+          "court": "N.D. Ohio",
+          "judge": "",
+          "date": "2025-03-18",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "In Alkuda v. McDonald Hopkins Co., L.P.A., the Northern District of Ohio dismissed with prejudice a trust-related action that was filed outside the applicable limitations periods. The defendant identified fictitious, AI-generated legal citations in the pro se plaintiff’s opposition. The court warned that future submissions containing fictitious citations could result in dismissal or monetary sanctions, while resolving the case on limitations grounds.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "trial"
+          ],
+          "source_url": "https://law.justia.com/cases/federal/district-courts/ohio/ohndce/1:2024cv01103/307896/17/"
+        },
+        {
+          "id": "state-v-saher-2025-02-11",
+          "name": "State v. Saher",
+          "court": "CC Ohio",
+          "judge": "",
+          "date": "2025-02-11",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "ChatGPT",
+          "summary": "Fabricated: Case Law Outcome: Attorney asked to withdraw guilty plea. Initial filing also included part of the ChatGPT prompt.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "trial"
+          ],
+          "source_url": "https://cpdocket.cp.cuyahogacounty.gov/CR_CaseInformation_Docket.aspx?q=h0zD3YbsKWezwPzPd7ddnjVSh8mAfAMq1QUEKKS9Isg1"
+        },
+        {
+          "id": "whaley-v-experian-information-solutions-2023-11-16",
+          "name": "Whaley v. Experian Information Solutions",
+          "court": "S.D. Ohio",
+          "judge": "",
+          "date": "2023-11-16",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "The Southern District of Ohio noted that Whaley admitted using AI to prepare filings and reminded the parties that the presiding judge’s standing order barred AI use in filings before him. The court dismissed the 144-page FCRA complaint without prejudice as prolix and unclear, allowed a short amended complaint, and described potential consequences for violating the AI restriction.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/602/gov.uscourts.ohsd.274822.26.0.pdf"
         }
       ]
     },
@@ -15178,7 +15172,7 @@
         {
           "id": "santos-v-hoboken-public-school-district-et-al-2026-09-03",
           "name": "Santos v. Hoboken Public School District, et al.",
-          "court": "D.N.J.",
+          "court": "D. New Jersey",
           "judge": "",
           "date": "2026-09-03",
           "amount": null,
@@ -15187,10 +15181,12 @@
           "tool": "AI (implied, unspecified)",
           "summary": "Outcome: The court warned that continued use of improper or non-existent citations could result in sanctions, including dismissal with prejudice; no specific citation was analyzed or sanction imposed.. The court noted that Plaintiff’s opposition relied on improperly cited cases and cases that were non-existent. It warned that continued use could lead to sanctions, including dismissal with prejudice. The decision does not identify the allegedly false citations, determine whether they were fabricated, or impose a sanction based on them; the motion to dismiss was granted on the merits, with leave to amend in part.",
           "sanction_types": [
-            "case-dismissed"
+            "warning"
           ],
           "tags": [
             "pro-se",
+            "fake-citations",
+            "employment",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/3042/SANTOS_v._HOBOKEN_PUBLIC_SCHOOL_DISTRICT_et_al_USA_3_September_2026.pdf"
@@ -16313,6 +16309,568 @@
       ]
     },
     {
+      "state": "OK",
+      "count": 24,
+      "total": 32650,
+      "severities": {
+        "low": 15,
+        "high": 6,
+        "medium": 2,
+        "career-ending": 1
+      },
+      "cases": [
+        {
+          "id": "allahgehovah-jones-v-city-of-moore-et-al-2026-06-24",
+          "name": "Allahgehovah Jones v. City of Moore, et al.",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2026-06-24",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff cited Perez v. Mortgage Bankers Ass'n, 677 F. Supp. 2d 63 (D.D.C. 2009), which the Court found does not correspond to any legitimate case.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2481/Jones_v._Moore_USA_24_June_2026.pdf"
+        },
+        {
+          "id": "state-of-oklahoma-ex-rel-oklahoma-bar-association-v-reeves-2026-05-27",
+          "name": "State of Oklahoma ex rel. Oklahoma Bar Association v. Reeves",
+          "court": "SC Oklahoma",
+          "judge": "",
+          "date": "2026-05-27",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "ChatGPT",
+          "summary": "Fabricated: Case Law | Cited to support that general objections are not considered; court found no case with that combination of style and proposition (fabricated use). Outcome: Public reprimand.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2227/STATE_OF_OKLAHOMA_ex_rel._OBA_v._REEVES.pdf"
+        },
+        {
+          "id": "dalton-gage-hill-v-oklahoma-county-criminal-justice-authority-2-2026-05-21",
+          "name": "Dalton Gage Hill v. Oklahoma County Criminal Justice Authority (2)",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2026-05-21",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Case Law | Plaintiff cited Cooter & Gell to support a heightened Rule 11 standard for civil rights cases; the court found Cooter is an antitrust case and does not support that proposition. Outcome: Magistrate recommended sanctions.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2175/Dalton_Gage_Hill_v._Oklahoma_County_Criminal_Justice_Authority_et_al._USA_21_May_2025.pdf"
+        },
+        {
+          "id": "in-re-the-marriage-of-amy-haddock-and-justin-blu-haddock-2026-05-21",
+          "name": "In re the Marriage of Amy Haddock and Justin Blu Haddock",
+          "court": "DC Oklahoma",
+          "judge": "",
+          "date": "2026-05-21",
+          "amount": 2000,
+          "amount_display": "$2.0K",
+          "severity": "high",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Motion contained three citations to nonexistent law; court found citations were fabricated/nonexistent and flagged them as errant. Outcome: Monetary Sanction; Bar Referral; Mandatory Audit of Firm Knowledge base; Adverse Costs Order. Costs later found to amount to 20,752 USD.",
+          "sanction_types": [
+            "monetary",
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "bar-referral",
+            "family",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2226/26.05.21._Haddock._Order.pdf"
+        },
+        {
+          "id": "jane-doe-1-et-al-v-mount-saint-mary-high-school-corporation-2026-05-13",
+          "name": "Jane Doe 1, et al. v. Mount Saint Mary High School Corporation",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2026-05-13",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "Unidentified",
+          "summary": "False Quotes: Case Law | The brief contained inaccurate quotations attributed to cases; Court found quotations were incorrect or misleading. Outcome: Public reprimand; Notice to client; Bar Self-Referral.",
+          "sanction_types": [
+            "bar-referral",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2140/Jane_Does_1-13_and_15-17_et_al_v_Mount_Saint_Mary_High_School_Corporation_USA__HNb0Hcv.pdf"
+        },
+        {
+          "id": "kristina-crist-v-roy-chris-west-et-al-2026-05-07",
+          "name": "Kristina Crist v. Roy Chris West, et al.",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2026-05-07",
+          "amount": 250,
+          "amount_display": "$250",
+          "severity": "high",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Response brief included nonexistent case opinions cited to support arguments; court found fake authority and held this violated Rule 11(b)(2). Outcome: Public reprimand; Notice to client; Monetary Sanction.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2101/Crist_v_Canadian_County_et_al_USA_7_May_2025.pdf"
+        },
+        {
+          "id": "blackburn-v-united-states-2026-04-07",
+          "name": "Blackburn v. United States",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2026-04-07",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Case Law | Plaintiff cited Davoll, 194 F.3d 1116, 1138 for the proposition that Fed. R. Civ. P. 26(a)(2)(C) limits treating-physician opinion testimony as claimed; court found the pinpointed pages discuss lay-witness scope, not non-retained expert testimony — mischaracterization. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1965/Blackburn_v_m5HCIWT._USA_USA_7_April_2026.pdf"
+        },
+        {
+          "id": "oscar-brownfield-v-cherokee-county-school-district-no-35-2026-03-19",
+          "name": "Oscar Brownfield v. Cherokee County School District No. 35",
+          "court": "E.D. Oklahoma",
+          "judge": "",
+          "date": "2026-03-19",
+          "amount": 500,
+          "amount_display": "$500",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Defendants identified eight cited cases in Plaintiff's Sanctions Motion as non-existent (AI-generated fictitious cases); Court found submission of fictitious cases violated Rule 11. Outcome: Sanctions Motion denied.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1766/Brownfield_v._Cherokee_USA_18_March_2026.pdf"
+        },
+        {
+          "id": "dillon-v-myles-stephenson-et-al-2026-03-11",
+          "name": "Dillon v. Myles Stephenson, et al.",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2026-03-11",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Misrepresented: Case Law | Court found reporter citation incorrect; a case with the same name exists but the cited reporter and proposition are incorrect/misrepresented. Outcome: Admonishment.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1660/Dillon_v._Stephenson_USA_11_March_2026.pdf"
+        },
+        {
+          "id": "dewayne-clark-v-corecivic-2026-03-06",
+          "name": "Dewayne Clark v. CoreCivic",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2026-03-06",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Plaintiff quoted Garrison v. Gambro as stating summary judgment is a \"drastic remedy\" to be granted \"with caution;\" the court found Garrison does not contain that language or proposition. Outcome: Admonishment.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1646/Clark_v._Corecivic_USA_6_March_2026.pdf"
+        },
+        {
+          "id": "chapter-kris-jackson-v-bok-financial-corporation-et-al-3-2026-02-24",
+          "name": "Chapter Kris Jackson v. BOK Financial Corporation et al. (3)",
+          "court": "N.D. Oklahoma",
+          "judge": "",
+          "date": "2026-02-24",
+          "amount": 405,
+          "amount_display": "$405",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Multiple quotations in petitioner's motion to disqualify did not appear in the cited cases; Judge Huntsman identified four fake quotations and previously struck the filing. Outcome: Struck filings; Monetary sanction.",
+          "sanction_types": [
+            "monetary",
+            "struck-filing"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1566/Jackson_v._BOK_USA_24_February_2026.pdf"
+        },
+        {
+          "id": "kizzie-sims-estate-of-gregory-neil-davis-v-board-of-county-commissioners-2026-02",
+          "name": "Kizzie Sims & Estate of Gregory Neil Davis v. Board of County Commissioners",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2026-02-03",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "The court considered assertions that counsel's briefing contained false case citations, reviewed counsel's explanation and claimed verification efforts, and concluded that the cited authorities were not so dissimilar from the propositions advanced as to constitute sanctionable misrepresentation on that record.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "misrepresented-authority",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1453/Sims_v._Board_USA_3_February_2026.pdf"
+        },
+        {
+          "id": "o-gene-bicknell-v-richard-m-silanskas-jr-et-al-2026-01-12",
+          "name": "O. Gene Bicknell v. Richard M. Silanskas Jr., et al.",
+          "court": "N.D. Oklahoma",
+          "judge": "",
+          "date": "2026-01-12",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Cited a non-existent case to support narrowing subpoenas; Court could locate no such case. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1303/Bicknell_v._Silanskas_USA_12_January_2026.pdf"
+        },
+        {
+          "id": "zaykariya-v-freedom-mortgage-corporation-et-al-2026-01-09",
+          "name": "Zaykariya v. Freedom Mortgage Corporation, et al.",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2026-01-09",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Court identified McEwen v. McCullough, 347 F. Supp. 2d 349 as a fake case cited by Plaintiffs. Outcome: Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1304/Zaykaria_v._Freedom_Mortage_Corpo.pdf"
+        },
+        {
+          "id": "dalton-gage-hill-v-oklahoma-county-criminal-justice-authority-1-2025-12-04",
+          "name": "Dalton Gage Hill v. Oklahoma County Criminal Justice Authority (1)",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2025-12-04",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "ChatGPT",
+          "summary": "Fabricated: Case Law | Plaintiff's response (Doc. 97) included multiple non-existent case citations generated by Chat GPT; court found the citations fictitious and counsel admitted AI use. Outcome: Costs Order; Mandatory disclosure of AI use in future filings; CLE obligation. Underlying report &amp; Recommendations can be found here.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "fake-citations",
+            "civil-rights",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/1131/Hill_v._Oklahoma_County_Criminal_Justice_USA_4_December_2025.pdf"
+        },
+        {
+          "id": "beason-v-wheeler-2025-11-19",
+          "name": "Beason v. Wheeler",
+          "court": "DC Oklahoma",
+          "judge": "",
+          "date": "2025-11-19",
+          "amount": null,
+          "amount_display": "",
+          "severity": "high",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | The trial-court order allegedly cited Cummings v. Cimarron Elevator Co., 1998 OK CIV APP 44, 958 P.2d 594, as an Oklahoma Court of Civil Appeals decision adopting Schlagenhauf standards for examinations under 12 O.S. § 3235. The petitioner states that 1998 OK CIV APP 44 is actually Robbins v. Robbins, which concerns alleged ex parte communications in a custody matter, and that 958 P.2d 594 is an Idaho case, Harpole v. State, unrelated to § 3235. Outcome: Judge acknowledged mistake. Allegations first made by Counsel in underlying case (see here). Judge later acknowledged the lapse (see here), and is now under investigation.",
+          "sanction_types": [
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/3055/Wheeler_AI_Fabricated_Citations_Order_Nov_19_2025.pdf"
+        },
+        {
+          "id": "mattox-v-product-innovation-research-2025-10-22",
+          "name": "Mattox v. Product Innovation Research",
+          "court": "E.D. Oklahoma",
+          "judge": "",
+          "date": "2025-10-22",
+          "amount": 29495,
+          "amount_display": "$29.5K",
+          "severity": "high",
+          "tool": "ChatGPT",
+          "summary": "Fabricated: Case Law | Court found no case under this citation; similar Tenth Circuit decision exists but does not contain the quoted law. Outcome: Pleadings struck; public reprimands; monetary sanctions; remedial filing and certification requirements. The Court found 28 false or misleading citations across 11 pleadings (14 fabricated, 14 erroneous/misquoted). Mr. Howie admitted use of ChatGPT and failure to verify citations. The Court applied Rule 11(b) and its AI framework (verification, candor/correction, accountability) and imposed sanctions and restitution. Fines of 3,000, 2,000, and 1,000 USD on individual attorneys, plus opposing party's costs and fees,",
+          "sanction_types": [
+            "monetary",
+            "struck-filing",
+            "professional"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "tort",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/904/Mattox_v._Product_Innovations_Research_USA_22_October_2025.pdf"
+        },
+        {
+          "id": "shantell-robinson-v-oglala-sioux-tribe-et-al-2025-09-09",
+          "name": "Shantell Robinson v. Oglala Sioux Tribe, et al.",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2025-09-09",
+          "amount": null,
+          "amount_display": "",
+          "severity": "career-ending",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent opinion, 'Henlsey v. Alcon Labs, 277 F.3d 535 (4th Cir. 2002)'; Court noted it was non-existent and that fake opinions are not existing law. Outcome: Plaintiff's claims dismissed with prejudice.",
+          "sanction_types": [
+            "case-dismissed"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/784/SHANTELL_ROBINSON_Plaintiff_v_OGLALA_SIOUX_TRIBE_et_al_Defendants.pdf"
+        },
+        {
+          "id": "chapter-kris-jackson-v-bok-financial-corporation-et-al-2-2025-08-26",
+          "name": "Chapter Kris Jackson v. BOK Financial Corporation, et al. (2)",
+          "court": "N.D. Oklahoma",
+          "judge": "",
+          "date": "2025-08-26",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "False Quotes: Case Law | Court identified numerous non-existent quoted passages in Plaintiff's original motion and struck it; the quoted language was false and unsupported by the cited cases. Outcome: Show Cause Order.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "fabricated-quotes",
+            "contract",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/836/Jackson_v._BOK_Financial_Corp_USA_29_September_2025.pdf"
+        },
+        {
+          "id": "jackson-v-bok-financial-corporation-et-al-1-2025-08-08",
+          "name": "Jackson v. BOK Financial Corporation et al (1)",
+          "court": "N.D. Oklahoma",
+          "judge": "",
+          "date": "2025-08-08",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "False Quotes: Case Law | Plaintiff attributed a quotation to Kevlik v. Goldstein; the Court found the quoted language does not appear in the case. Outcome: Motion stricken without prejudice; Warning.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fabricated-quotes",
+            "other",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/706/Jackson_v._Bok.pdf"
+        },
+        {
+          "id": "lowery-wilkinson-lowery-llc-et-al-v-state-of-illinois-et-al-2025-07-31",
+          "name": "Lowery Wilkinson Lowery, LLC, et al. v. State of Illinois, et al.",
+          "court": "E.D. Oklahoma",
+          "judge": "",
+          "date": "2025-07-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Exhibits & Submissions | Plaintiffs attached a fabricated news-image captioned 'FBI raids Courthouse' as an exhibit; the court treated it as a forged, improper submission and cited it in support of sanctions. Outcome: Sanctions. The court found multiple filings and exhibits from the plaintiffs to be fabricated or misleading (including a forged email and a fabricated news-image) and that plaintiffs repeatedly misrepresented legal authority (e.g., falsely attributing authorship of McGirt). The court relied on these findings in its Rule 11/§1927/inherent-power sanctions analysis, granted sanctions, dismissed the amended complaint with prejudice, and set a hearing to determine reasonable attorneys' fees.",
+          "sanction_types": [
+            "none-adjudicated"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "administrative",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/2122/Lowery_v._Illinois_USA_30_July_2025.pdf"
+        },
+        {
+          "id": "sharita-hill-v-state-of-oklahoma-2025-07-03",
+          "name": "Sharita Hill v. State of Oklahoma",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2025-07-03",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff's Response cited nonexistent cases; the Court reviewed and agreed they do not exist. Outcome: Warning. \"Further, these inaccuracies signal that Plaintiff's counsel may have used AI to assist in the drafting of Plaintiff's Response (or otherwise counsel produced exceptionally sloppy work). In this regard, this Court's Chambers Rules include “Disclosure and Certification Requirements” for use of “Generative Artificial Intelligence” and expressly provide that an attorney or party must disclose in any document to be filed with the Court “that AI was used and the specific AI tool that was used” and to “certify in the document that the person has checked the accuracy of any portion of the document drafted by generative AI, including all citations and legal authority.” See id.6 No such disclosure and certification has been made in this case. The Court's Rules further provide that an attorney will be responsible for the contents of any documents prepared with generative AI, in accordance with Rule 11 of the Federal Rules of Civil Procedure, and that the failure to make the disclosure and certification “may result in the imposition of sanctions.”\"",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "fake-citations",
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/555/SHARITA_HILL_v_OKLAHOMA_USA_3_July_2025.pdf"
+        },
+        {
+          "id": "luther-v-oklahoma-dhs-2025-05-23",
+          "name": "Luther v. Oklahoma DHS",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2025-05-23",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Outcome: Warning. \" The Court has serious reason to believe that Plaintiff used artificial intelligence tools to assist in drafting her objection. While the use of such tools is not prohibited, artificial intelligence often cites to legal authorities, like Cabrera, that do not exist. Continuing to cite to non-existent cases will result in sanctions up to and including dismissal. \"",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv"
+        },
+        {
+          "id": "mckeown-v-paycom-payroll-llc-2025-03-31",
+          "name": "McKeown v. Paycom Payroll LLC",
+          "court": "W.D. Oklahoma",
+          "judge": "",
+          "date": "2025-03-31",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | Plaintiff previously filed a brief citing non-existent legal authority; the Court issued a warning against falsified citations (Dkt. 18). Outcome: Submission stricken out, and warning. AI UseAlthough AI was not named and Plaintiff denied intentional fabrication, the court considered the citation (Adamov, 779 F.3d 851, 860 (8th Cir. 2015)) to be plainly fictitious. It noted the possibility that Plaintiff used generative AI tools, given the fabricated citation's plausible-sounding structure and mismatch with existing precedent.Hallucination DetailsPlaintiff submitted fabricated legal authorities in at least two filings, despite being explicitly warned by the court after the first incident. The false case cited in her sur-reply could not be located in any legal database. When asked to produce it, she responded that she had likely “garbled” the citation but provided no plausible alternative or correction.Ruling/SanctionThe court declined to dismiss the action as a sanction, citing the limitations pro se litigants face in accessing reliable legal research tools. However, it granted the defendant’s motion to strike Plaintiff’s two unauthorized sur-replies and formally warned her that further violations of Rule 11 would lead to sanctions, including monetary penalties, filing restrictions, or dismissal.",
+          "sanction_types": [
+            "warning"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "employment",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/357/McKeown_v._Paycom_Payroll_W.D._Oklahoma_March_31_2025.pdf"
+        }
+      ]
+    },
+    {
       "state": "AL",
       "count": 23,
       "total": 113401,
@@ -16865,546 +17423,6 @@
       ]
     },
     {
-      "state": "OK",
-      "count": 23,
-      "total": 32650,
-      "severities": {
-        "low": 15,
-        "high": 5,
-        "medium": 2,
-        "career-ending": 1
-      },
-      "cases": [
-        {
-          "id": "allahgehovah-jones-v-city-of-moore-et-al-2026-06-24",
-          "name": "Allahgehovah Jones v. City of Moore, et al.",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2026-06-24",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff cited Perez v. Mortgage Bankers Ass'n, 677 F. Supp. 2d 63 (D.D.C. 2009), which the Court found does not correspond to any legitimate case.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2481/Jones_v._Moore_USA_24_June_2026.pdf"
-        },
-        {
-          "id": "state-of-oklahoma-ex-rel-oklahoma-bar-association-v-reeves-2026-05-27",
-          "name": "State of Oklahoma ex rel. Oklahoma Bar Association v. Reeves",
-          "court": "SC Oklahoma",
-          "judge": "",
-          "date": "2026-05-27",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "ChatGPT",
-          "summary": "Fabricated: Case Law | Cited to support that general objections are not considered; court found no case with that combination of style and proposition (fabricated use). Outcome: Public reprimand.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2227/STATE_OF_OKLAHOMA_ex_rel._OBA_v._REEVES.pdf"
-        },
-        {
-          "id": "dalton-gage-hill-v-oklahoma-county-criminal-justice-authority-2-2026-05-21",
-          "name": "Dalton Gage Hill v. Oklahoma County Criminal Justice Authority (2)",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2026-05-21",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | Plaintiff cited Cooter & Gell to support a heightened Rule 11 standard for civil rights cases; the court found Cooter is an antitrust case and does not support that proposition. Outcome: Magistrate recommended sanctions.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2175/Dalton_Gage_Hill_v._Oklahoma_County_Criminal_Justice_Authority_et_al._USA_21_May_2025.pdf"
-        },
-        {
-          "id": "in-re-the-marriage-of-amy-haddock-and-justin-blu-haddock-2026-05-21",
-          "name": "In re the Marriage of Amy Haddock and Justin Blu Haddock",
-          "court": "DC Oklahoma",
-          "judge": "",
-          "date": "2026-05-21",
-          "amount": 2000,
-          "amount_display": "$2.0K",
-          "severity": "high",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Motion contained three citations to nonexistent law; court found citations were fabricated/nonexistent and flagged them as errant. Outcome: Monetary Sanction; Bar Referral; Mandatory Audit of Firm Knowledge base; Adverse Costs Order. Costs later found to amount to 20,752 USD.",
-          "sanction_types": [
-            "monetary",
-            "bar-referral",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "bar-referral",
-            "family",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2226/26.05.21._Haddock._Order.pdf"
-        },
-        {
-          "id": "jane-doe-1-et-al-v-mount-saint-mary-high-school-corporation-2026-05-13",
-          "name": "Jane Doe 1, et al. v. Mount Saint Mary High School Corporation",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2026-05-13",
-          "amount": null,
-          "amount_display": "",
-          "severity": "high",
-          "tool": "Unidentified",
-          "summary": "False Quotes: Case Law | The brief contained inaccurate quotations attributed to cases; Court found quotations were incorrect or misleading. Outcome: Public reprimand; Notice to client; Bar Self-Referral.",
-          "sanction_types": [
-            "bar-referral",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2140/Jane_Does_1-13_and_15-17_et_al_v_Mount_Saint_Mary_High_School_Corporation_USA__HNb0Hcv.pdf"
-        },
-        {
-          "id": "kristina-crist-v-roy-chris-west-et-al-2026-05-07",
-          "name": "Kristina Crist v. Roy Chris West, et al.",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2026-05-07",
-          "amount": 250,
-          "amount_display": "$250",
-          "severity": "high",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Response brief included nonexistent case opinions cited to support arguments; court found fake authority and held this violated Rule 11(b)(2). Outcome: Public reprimand; Notice to client; Monetary Sanction.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2101/Crist_v_Canadian_County_et_al_USA_7_May_2025.pdf"
-        },
-        {
-          "id": "blackburn-v-united-states-2026-04-07",
-          "name": "Blackburn v. United States",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2026-04-07",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | Plaintiff cited Davoll, 194 F.3d 1116, 1138 for the proposition that Fed. R. Civ. P. 26(a)(2)(C) limits treating-physician opinion testimony as claimed; court found the pinpointed pages discuss lay-witness scope, not non-retained expert testimony — mischaracterization. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1965/Blackburn_v_m5HCIWT._USA_USA_7_April_2026.pdf"
-        },
-        {
-          "id": "oscar-brownfield-v-cherokee-county-school-district-no-35-2026-03-19",
-          "name": "Oscar Brownfield v. Cherokee County School District No. 35",
-          "court": "E.D. Oklahoma",
-          "judge": "",
-          "date": "2026-03-19",
-          "amount": 500,
-          "amount_display": "$500",
-          "severity": "medium",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Defendants identified eight cited cases in Plaintiff's Sanctions Motion as non-existent (AI-generated fictitious cases); Court found submission of fictitious cases violated Rule 11. Outcome: Sanctions Motion denied.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1766/Brownfield_v._Cherokee_USA_18_March_2026.pdf"
-        },
-        {
-          "id": "dillon-v-myles-stephenson-et-al-2026-03-11",
-          "name": "Dillon v. Myles Stephenson, et al.",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2026-03-11",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | Court found reporter citation incorrect; a case with the same name exists but the cited reporter and proposition are incorrect/misrepresented. Outcome: Admonishment.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1660/Dillon_v._Stephenson_USA_11_March_2026.pdf"
-        },
-        {
-          "id": "dewayne-clark-v-corecivic-2026-03-06",
-          "name": "Dewayne Clark v. CoreCivic",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2026-03-06",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Plaintiff quoted Garrison v. Gambro as stating summary judgment is a \"drastic remedy\" to be granted \"with caution;\" the court found Garrison does not contain that language or proposition. Outcome: Admonishment.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1646/Clark_v._Corecivic_USA_6_March_2026.pdf"
-        },
-        {
-          "id": "chapter-kris-jackson-v-bok-financial-corporation-et-al-3-2026-02-24",
-          "name": "Chapter Kris Jackson v. BOK Financial Corporation et al. (3)",
-          "court": "N.D. Oklahoma",
-          "judge": "",
-          "date": "2026-02-24",
-          "amount": 405,
-          "amount_display": "$405",
-          "severity": "medium",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Multiple quotations in petitioner's motion to disqualify did not appear in the cited cases; Judge Huntsman identified four fake quotations and previously struck the filing. Outcome: Struck filings; Monetary sanction.",
-          "sanction_types": [
-            "monetary",
-            "struck-filing"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1566/Jackson_v._BOK_USA_24_February_2026.pdf"
-        },
-        {
-          "id": "kizzie-sims-estate-of-gregory-neil-davis-v-board-of-county-commissioners-2026-02",
-          "name": "Kizzie Sims & Estate of Gregory Neil Davis v. Board of County Commissioners",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2026-02-03",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "The court considered assertions that counsel's briefing contained false case citations, reviewed counsel's explanation and claimed verification efforts, and concluded that the cited authorities were not so dissimilar from the propositions advanced as to constitute sanctionable misrepresentation on that record.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1453/Sims_v._Board_USA_3_February_2026.pdf"
-        },
-        {
-          "id": "o-gene-bicknell-v-richard-m-silanskas-jr-et-al-2026-01-12",
-          "name": "O. Gene Bicknell v. Richard M. Silanskas Jr., et al.",
-          "court": "N.D. Oklahoma",
-          "judge": "",
-          "date": "2026-01-12",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Cited a non-existent case to support narrowing subpoenas; Court could locate no such case. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1303/Bicknell_v._Silanskas_USA_12_January_2026.pdf"
-        },
-        {
-          "id": "zaykariya-v-freedom-mortgage-corporation-et-al-2026-01-09",
-          "name": "Zaykariya v. Freedom Mortgage Corporation, et al.",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2026-01-09",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Court identified McEwen v. McCullough, 347 F. Supp. 2d 349 as a fake case cited by Plaintiffs. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1304/Zaykaria_v._Freedom_Mortage_Corpo.pdf"
-        },
-        {
-          "id": "dalton-gage-hill-v-oklahoma-county-criminal-justice-authority-1-2025-12-04",
-          "name": "Dalton Gage Hill v. Oklahoma County Criminal Justice Authority (1)",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2025-12-04",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "ChatGPT",
-          "summary": "Fabricated: Case Law | Plaintiff's response (Doc. 97) included multiple non-existent case citations generated by Chat GPT; court found the citations fictitious and counsel admitted AI use. Outcome: Costs Order; Mandatory disclosure of AI use in future filings; CLE obligation. Underlying report &amp; Recommendations can be found here.",
-          "sanction_types": [
-            "monetary"
-          ],
-          "tags": [
-            "fake-citations",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1131/Hill_v._Oklahoma_County_Criminal_Justice_USA_4_December_2025.pdf"
-        },
-        {
-          "id": "mattox-v-product-innovation-research-2025-10-22",
-          "name": "Mattox v. Product Innovation Research",
-          "court": "E.D. Oklahoma",
-          "judge": "",
-          "date": "2025-10-22",
-          "amount": 29495,
-          "amount_display": "$29.5K",
-          "severity": "high",
-          "tool": "ChatGPT",
-          "summary": "Fabricated: Case Law | Court found no case under this citation; similar Tenth Circuit decision exists but does not contain the quoted law. Outcome: Pleadings struck; public reprimands; monetary sanctions; remedial filing and certification requirements. The Court found 28 false or misleading citations across 11 pleadings (14 fabricated, 14 erroneous/misquoted). Mr. Howie admitted use of ChatGPT and failure to verify citations. The Court applied Rule 11(b) and its AI framework (verification, candor/correction, accountability) and imposed sanctions and restitution. Fines of 3,000, 2,000, and 1,000 USD on individual attorneys, plus opposing party's costs and fees,",
-          "sanction_types": [
-            "monetary",
-            "struck-filing",
-            "professional"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "tort",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/904/Mattox_v._Product_Innovations_Research_USA_22_October_2025.pdf"
-        },
-        {
-          "id": "shantell-robinson-v-oglala-sioux-tribe-et-al-2025-09-09",
-          "name": "Shantell Robinson v. Oglala Sioux Tribe, et al.",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2025-09-09",
-          "amount": null,
-          "amount_display": "",
-          "severity": "career-ending",
-          "tool": "Unidentified",
-          "summary": "Fabricated: Case Law | Plaintiff cited a non-existent opinion, 'Henlsey v. Alcon Labs, 277 F.3d 535 (4th Cir. 2002)'; Court noted it was non-existent and that fake opinions are not existing law. Outcome: Plaintiff's claims dismissed with prejudice.",
-          "sanction_types": [
-            "case-dismissed"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "misrepresented-authority",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/784/SHANTELL_ROBINSON_Plaintiff_v_OGLALA_SIOUX_TRIBE_et_al_Defendants.pdf"
-        },
-        {
-          "id": "chapter-kris-jackson-v-bok-financial-corporation-et-al-2-2025-08-26",
-          "name": "Chapter Kris Jackson v. BOK Financial Corporation, et al. (2)",
-          "court": "N.D. Oklahoma",
-          "judge": "",
-          "date": "2025-08-26",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "False Quotes: Case Law | Court identified numerous non-existent quoted passages in Plaintiff's original motion and struck it; the quoted language was false and unsupported by the cited cases. Outcome: Show Cause Order.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/836/Jackson_v._BOK_Financial_Corp_USA_29_September_2025.pdf"
-        },
-        {
-          "id": "jackson-v-bok-financial-corporation-et-al-1-2025-08-08",
-          "name": "Jackson v. BOK Financial Corporation et al (1)",
-          "court": "N.D. Oklahoma",
-          "judge": "",
-          "date": "2025-08-08",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "Unidentified",
-          "summary": "False Quotes: Case Law | Plaintiff attributed a quotation to Kevlik v. Goldstein; the Court found the quoted language does not appear in the case. Outcome: Motion stricken without prejudice; Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fabricated-quotes",
-            "other",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/706/Jackson_v._Bok.pdf"
-        },
-        {
-          "id": "lowery-wilkinson-lowery-llc-et-al-v-state-of-illinois-et-al-2025-07-31",
-          "name": "Lowery Wilkinson Lowery, LLC, et al. v. State of Illinois, et al.",
-          "court": "E.D. Oklahoma",
-          "judge": "",
-          "date": "2025-07-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Exhibits & Submissions | Plaintiffs attached a fabricated news-image captioned 'FBI raids Courthouse' as an exhibit; the court treated it as a forged, improper submission and cited it in support of sanctions. Outcome: Sanctions. The court found multiple filings and exhibits from the plaintiffs to be fabricated or misleading (including a forged email and a fabricated news-image) and that plaintiffs repeatedly misrepresented legal authority (e.g., falsely attributing authorship of McGirt). The court relied on these findings in its Rule 11/§1927/inherent-power sanctions analysis, granted sanctions, dismissed the amended complaint with prejudice, and set a hearing to determine reasonable attorneys' fees.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "misrepresented-authority",
-            "administrative",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/2122/Lowery_v._Illinois_USA_30_July_2025.pdf"
-        },
-        {
-          "id": "sharita-hill-v-state-of-oklahoma-2025-07-03",
-          "name": "Sharita Hill v. State of Oklahoma",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2025-07-03",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff's Response cited nonexistent cases; the Court reviewed and agreed they do not exist. Outcome: Warning. \"Further, these inaccuracies signal that Plaintiff's counsel may have used AI to assist in the drafting of Plaintiff's Response (or otherwise counsel produced exceptionally sloppy work). In this regard, this Court's Chambers Rules include “Disclosure and Certification Requirements” for use of “Generative Artificial Intelligence” and expressly provide that an attorney or party must disclose in any document to be filed with the Court “that AI was used and the specific AI tool that was used” and to “certify in the document that the person has checked the accuracy of any portion of the document drafted by generative AI, including all citations and legal authority.” See id.6 No such disclosure and certification has been made in this case. The Court's Rules further provide that an attorney will be responsible for the contents of any documents prepared with generative AI, in accordance with Rule 11 of the Federal Rules of Civil Procedure, and that the failure to make the disclosure and certification “may result in the imposition of sanctions.”\"",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/555/SHARITA_HILL_v_OKLAHOMA_USA_3_July_2025.pdf"
-        },
-        {
-          "id": "luther-v-oklahoma-dhs-2025-05-23",
-          "name": "Luther v. Oklahoma DHS",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2025-05-23",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Outcome: Warning. \" The Court has serious reason to believe that Plaintiff used artificial intelligence tools to assist in drafting her objection. While the use of such tools is not prohibited, artificial intelligence often cites to legal authorities, like Cabrera, that do not exist. Continuing to cite to non-existent cases will result in sanctions up to and including dismissal. \"",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv"
-        },
-        {
-          "id": "mckeown-v-paycom-payroll-llc-2025-03-31",
-          "name": "McKeown v. Paycom Payroll LLC",
-          "court": "W.D. Oklahoma",
-          "judge": "",
-          "date": "2025-03-31",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Plaintiff previously filed a brief citing non-existent legal authority; the Court issued a warning against falsified citations (Dkt. 18). Outcome: Submission stricken out, and warning. AI UseAlthough AI was not named and Plaintiff denied intentional fabrication, the court considered the citation (Adamov, 779 F.3d 851, 860 (8th Cir. 2015)) to be plainly fictitious. It noted the possibility that Plaintiff used generative AI tools, given the fabricated citation's plausible-sounding structure and mismatch with existing precedent.Hallucination DetailsPlaintiff submitted fabricated legal authorities in at least two filings, despite being explicitly warned by the court after the first incident. The false case cited in her sur-reply could not be located in any legal database. When asked to produce it, she responded that she had likely “garbled” the citation but provided no plausible alternative or correction.Ruling/SanctionThe court declined to dismiss the action as a sanction, citing the limitations pro se litigants face in accessing reliable legal research tools. However, it granted the defendant’s motion to strike Plaintiff’s two unauthorized sur-replies and formally warned her that further violations of Rule 11 would lead to sanctions, including monetary penalties, filing restrictions, or dismissal.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "employment",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/357/McKeown_v._Paycom_Payroll_W.D._Oklahoma_March_31_2025.pdf"
-        }
-      ]
-    },
-    {
       "state": "NC",
       "count": 21,
       "total": 11321,
@@ -17895,15 +17913,38 @@
     },
     {
       "state": "MN",
-      "count": 19,
-      "total": 16000,
+      "count": 20,
+      "total": 18341,
       "severities": {
+        "medium": 2,
         "low": 13,
-        "medium": 1,
         "high": 4,
         "career-ending": 1
       },
       "cases": [
+        {
+          "id": "asiedu-v-eastlund-2026-09-08",
+          "name": "Asiedu v. Eastlund",
+          "court": "CA Minnesota",
+          "judge": "",
+          "date": "2026-09-08",
+          "amount": 2341,
+          "amount_display": "$2.3K",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | The district court found that Asiedu cited nonexistent cases in his filings; the appellate opinion confirms that these citations did not constitute existing law but does not identify them individually. Outcome: Affirmed sanctions of $2,341.25 in reasonable costs and attorney fees for bad-faith use of inaccurate, misleading, and nonexistent caselaw.. Michael Kwabena Asiedu, appearing pro se, admitted at the sanctions hearing that he used artificial intelligence to research and draft his filings but did not verify the accuracy of the caselaw citations. The district court found that he repeatedly cited nonexistent cases or cited real cases for propositions they did not support, thereby misleading the court. The Minnesota Court of Appeals held that this constituted bad faith, applied the same filing standards to Asiedu as to attorneys, and affirmed the award of $2,341.25 in attorney fees and costs. The opinion does not identify the individual fabricated or misrepresented citations.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "misrepresented-authority",
+            "civil-rights",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/3044/Asiedu_USA_8_September_2026.pdf"
+        },
         {
           "id": "ally-bank-v-serge-n-ngouambe-2026-07-27",
           "name": "Ally Bank v. Serge N. Ngouambe",
@@ -22645,17 +22686,40 @@
     },
     {
       "state": "MO",
-      "count": 9,
-      "total": 20000,
+      "count": 10,
+      "total": 21750,
       "severities": {
+        "medium": 1,
         "low": 7,
         "high": 2
       },
       "cases": [
         {
+          "id": "state-ex-rel-steven-schnell-v-honorable-rebecca-richardson-2026-09-08",
+          "name": "State ex rel. Steven Schnell v. Honorable Rebecca Richardson",
+          "court": "CA Missouri",
+          "judge": "",
+          "date": "2026-09-08",
+          "amount": 1750,
+          "amount_display": "$1.8K",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "Fabricated: Case Law | Counsel cited two nonexistent or incorrectly cited cases to support the proposition that all litigation involving one family must be heard by a single court. The court could not identify authority supporting that proposition and found that the citations misrepresented the law. Outcome: Writ denied; counsel sanctioned $1,750 under Missouri Rule 55.03 for filing fictitious and unsupported case citations.. Relator’s counsel, Jenna Rohr Conley, cited two cases in support of a venue-transfer argument. The citations did not correspond to the cases identified, and the cases located by the court under the same names did not support the asserted proposition. Conley admitted using generative AI to research the authorities and failing to verify the citations. The court held that filing nonexistent and unsupported authorities violated the reasonable-inquiry and existing-law requirements of Rule 55.03 and ordered Conley to pay $1,750 in reasonable attorney’s fees incurred by the underlying petitioners.",
+          "sanction_types": [
+            "monetary"
+          ],
+          "tags": [
+            "fake-citations",
+            "misrepresented-authority",
+            "family",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/3051/State_of_Missouri_v._Richardson_USA_8_September_2026.pdf"
+        },
+        {
           "id": "willie-c-fortune-v-cta-certified-transmission-2026-09-01",
           "name": "Willie C. Fortune v. CTA Certified Transmission",
-          "court": "Missouri Court of Appeals, Western District",
+          "court": "Missouri CA",
           "judge": "",
           "date": "2026-09-01",
           "amount": null,
@@ -22670,6 +22734,7 @@
             "pro-se",
             "fake-citations",
             "misrepresented-authority",
+            "tort",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/3049/Willie_C._Fortune_vs._CTA_Certified_Transmission_USA_1_Septmber_2026.pdf"
@@ -24812,13 +24877,13 @@
   ],
   "by_week": {
     "2026-W37": 5,
-    "2026-W36": 13,
+    "2026-W36": 12,
     "2026-W35": 26,
     "2026-W34": 24,
     "2026-W33": 24,
-    "2026-W32": 28,
+    "2026-W32": 29,
     "2026-W31": 31,
-    "2026-W30": 25,
+    "2026-W30": 24,
     "2026-W29": 32,
     "2026-W28": 26,
     "2026-W27": 30,
@@ -24853,7 +24918,7 @@
     "2025-W50": 28,
     "2025-W49": 45,
     "2025-W48": 29,
-    "2025-W47": 41,
+    "2025-W47": 42,
     "2025-W46": 27,
     "2025-W45": 30,
     "2025-W44": 35,
@@ -24951,9 +25016,9 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-09": 15,
-    "2026-08": 105,
-    "2026-07": 129,
+    "2026-09": 14,
+    "2026-08": 106,
+    "2026-07": 128,
     "2026-06": 129,
     "2026-05": 154,
     "2026-04": 128,
@@ -24961,7 +25026,7 @@
     "2026-02": 133,
     "2026-01": 137,
     "2025-12": 154,
-    "2025-11": 129,
+    "2025-11": 130,
     "2025-10": 120,
     "2025-09": 99,
     "2025-08": 87,
@@ -24996,12 +25061,12 @@
   "by_year": {
     "2023": 16,
     "2024": 61,
-    "2025": 850,
-    "2026": 1109
+    "2025": 851,
+    "2026": 1108
   },
   "by_tool": {
-    "Unidentified": 439,
-    "AI (implied, unspecified)": 1364,
+    "Unidentified": 438,
+    "AI (implied, unspecified)": 1365,
     "Google AI": 3,
     "CoCounsel": 4,
     "ChatGPT": 110,
@@ -25102,14 +25167,14 @@
     "Google Bard": 1
   },
   "by_circuit": {
+    "8th Circuit": 65,
     "2nd Circuit": 149,
     "9th Circuit": 312,
-    "6th Circuit": 115,
+    "6th Circuit": 114,
     "3rd Circuit": 80,
-    "7th Circuit": 120,
+    "7th Circuit": 119,
     "11th Circuit": 118,
-    "8th Circuit": 63,
-    "10th Circuit": 119,
+    "10th Circuit": 120,
     "5th Circuit": 143,
     "4th Circuit": 74,
     "D.C. Circuit": 18,
@@ -25135,7 +25200,7 @@
     },
     {
       "week": "2026-W30",
-      "count": 25
+      "count": 24
     },
     {
       "week": "2026-W31",
@@ -25143,7 +25208,7 @@
     },
     {
       "week": "2026-W32",
-      "count": 28
+      "count": 29
     },
     {
       "week": "2026-W33",
@@ -25159,7 +25224,7 @@
     },
     {
       "week": "2026-W36",
-      "count": 13
+      "count": 12
     },
     {
       "week": "2026-W37",

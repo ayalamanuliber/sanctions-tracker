@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-09-09T12:59:33.750Z",
-  "checked_date": "2026-09-09",
+  "checked_at": "2026-09-10T12:56:58.487Z",
+  "checked_date": "2026-09-10",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
   "raw_rows": 2036,
   "imported_records": 2036,
-  "previous_records": 2022,
-  "record_delta": 14,
+  "previous_records": 2036,
+  "record_delta": 0,
   "skipped_missing_date": 0,
   "invalid_dates": 0,
   "future_dates": 0,
@@ -14,6 +14,6 @@
   "source_link_coverage_pct": 99.8,
   "latest_record_date": "2026-09-08",
   "latest_record_name": "Asiedu v. Eastlund",
-  "dataset_checksum": "43a28c79e649d06a5c110de82c3c78b44a3d1946a46a3dcccad6fe53675c84ac",
+  "dataset_checksum": "6360ad052fd1286c8863a83b537a8a55143fa72a2c539a1470787dcff6adb07d",
   "status": "validated"
 }

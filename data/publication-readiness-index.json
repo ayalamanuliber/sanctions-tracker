@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "43a28c79e649d06a5c110de82c3c78b44a3d1946a46a3dcccad6fe53675c84ac",
-  "corpus_checked": "2026-09-09",
+  "dataset_checksum": "6360ad052fd1286c8863a83b537a8a55143fa72a2c539a1470787dcff6adb07d",
+  "corpus_checked": "2026-09-10",
   "total_cases": 2036,
   "tiers": {
     "index-ready": 2013,
@@ -19,19 +19,15 @@
     },
     "g-p-v-jose-hernandez-arevalo-2026-09-08": {
       "tier": "index-ready",
-      "score": 85
+      "score": 80
     },
     "philippeaux-v-united-states-et-al-2026-09-08": {
       "tier": "index-ready",
-      "score": 85
+      "score": 80
     },
     "state-ex-rel-steven-schnell-v-honorable-rebecca-richardson-2026-09-08": {
       "tier": "index-ready",
       "score": 85
-    },
-    "state-v-carlson-2026-09-04": {
-      "tier": "index-ready",
-      "score": 75
     },
     "wurm-v-anchor-bay-packaging-corporation-2026-09-04": {
       "tier": "index-ready",
@@ -47,7 +43,7 @@
     },
     "santos-v-hoboken-public-school-district-et-al-2026-09-03": {
       "tier": "index-ready",
-      "score": 80
+      "score": 85
     },
     "morgan-cole-v-hobby-town-unlimited-inc-2026-09-02": {
       "tier": "index-ready",
@@ -389,6 +385,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "in-the-matter-of-the-arbitration-between-lawcatch-inc-and-counsel-stack-inc-2026-08-07": {
+      "tier": "index-ready",
+      "score": 80
+    },
     "united-states-of-america-v-smith-2026-08-07": {
       "tier": "index-ready",
       "score": 81
@@ -626,10 +626,6 @@
       "score": 85
     },
     "lodhia-v-twelve-trees-2026-07-24": {
-      "tier": "index-ready",
-      "score": 85
-    },
-    "morgan-cole-v-hobby-town-unlimited-inc-2026-07-24": {
       "tier": "index-ready",
       "score": 85
     },
@@ -5245,6 +5241,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "beason-v-wheeler-2025-11-19": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "dj-v-sn-2025-11-19": {
       "tier": "index-ready",
       "score": 86
@@ -6187,7 +6187,7 @@
     },
     "franklin-paterson-wandji-mboungueng-v-severn-trent-water-limited-2025-09-22": {
       "tier": "index-ready",
-      "score": 85
+      "score": 80
     },
     "in-re-molina-2025-09-22": {
       "tier": "index-ready",

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "43a28c79e649d06a5c110de82c3c78b44a3d1946a46a3dcccad6fe53675c84ac",
-  "corpus_checked": "2026-09-09",
+  "dataset_checksum": "6360ad052fd1286c8863a83b537a8a55143fa72a2c539a1470787dcff6adb07d",
+  "corpus_checked": "2026-09-10",
   "total_cases": 2036,
   "total_assessments": 2036,
   "tiers": {
@@ -11,9 +11,9 @@
   },
   "issue_counts": {
     "court-not-recorded": 1,
-    "discrepancy-detail-not-recorded": 107,
+    "discrepancy-detail-not-recorded": 105,
     "operational-lesson-not-recorded": 1302,
-    "outcome-not-recorded": 401,
+    "outcome-not-recorded": 404,
     "publication-review-pending": 2036,
     "source-link-missing": 4,
     "specific-ai-tool-not-established": 1804,
@@ -219,7 +219,7 @@
     {
       "id": "g-p-v-jose-hernandez-arevalo-2026-09-08",
       "slug": "g-p-v-jose-hernandez-arevalo-2026-09-08",
-      "score": 85,
+      "score": 80,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
@@ -263,7 +263,7 @@
         },
         {
           "criterion": "outcome",
-          "points": 5,
+          "points": 0,
           "maximum": 5
         },
         {
@@ -294,6 +294,12 @@
       ],
       "missing_fields": [
         {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
+        {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
           "impact": "context",
@@ -316,7 +322,7 @@
     {
       "id": "philippeaux-v-united-states-et-al-2026-09-08",
       "slug": "philippeaux-v-united-states-et-al-2026-09-08",
-      "score": 85,
+      "score": 80,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
@@ -360,7 +366,7 @@
         },
         {
           "criterion": "outcome",
-          "points": 5,
+          "points": 0,
           "maximum": 5
         },
         {
@@ -390,6 +396,12 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
@@ -487,115 +499,6 @@
         }
       ],
       "missing_fields": [
-        {
-          "field": "ai_tool_used",
-          "code": "specific-ai-tool-not-established",
-          "impact": "context",
-          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
-        },
-        {
-          "field": "lesson",
-          "code": "operational-lesson-not-recorded",
-          "impact": "improvement",
-          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
-        },
-        {
-          "field": "reviewed",
-          "code": "publication-review-pending",
-          "impact": "improvement",
-          "remediation": "Complete and date editorial publication review before calling this case curated."
-        }
-      ]
-    },
-    {
-      "id": "state-v-carlson-2026-09-04",
-      "slug": "state-v-carlson-2026-09-04",
-      "score": 75,
-      "maximum_score": 100,
-      "tier": "index-ready",
-      "index_eligible": true,
-      "source_eligible": true,
-      "summary_length": 335,
-      "score_breakdown": [
-        {
-          "criterion": "case_name",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "date",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "court",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "jurisdiction",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "source_url",
-          "points": 20,
-          "maximum": 20
-        },
-        {
-          "criterion": "source_name",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "summary",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "outcome",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "hallucination_items",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "ai_tool_used",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "tags",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "lesson",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "reviewed",
-          "points": 0,
-          "maximum": 5
-        }
-      ],
-      "missing_fields": [
-        {
-          "field": "outcome",
-          "code": "outcome-not-recorded",
-          "impact": "important",
-          "remediation": "Record the documented disposition, consequence, or procedural posture."
-        },
-        {
-          "field": "hallucination_items",
-          "code": "discrepancy-detail-not-recorded",
-          "impact": "important",
-          "remediation": "Record the cited, quoted, or authority discrepancy supported by the source."
-        },
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
@@ -910,7 +813,7 @@
     {
       "id": "santos-v-hoboken-public-school-district-et-al-2026-09-03",
       "slug": "santos-v-hoboken-public-school-district-et-al-2026-09-03",
-      "score": 80,
+      "score": 85,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
@@ -959,7 +862,7 @@
         },
         {
           "criterion": "hallucination_items",
-          "points": 0,
+          "points": 5,
           "maximum": 5
         },
         {
@@ -984,12 +887,6 @@
         }
       ],
       "missing_fields": [
-        {
-          "field": "hallucination_items",
-          "code": "discrepancy-detail-not-recorded",
-          "impact": "important",
-          "remediation": "Record the cited, quoted, or authority discrepancy supported by the source."
-        },
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
@@ -9460,6 +9357,109 @@
       ]
     },
     {
+      "id": "in-the-matter-of-the-arbitration-between-lawcatch-inc-and-counsel-stack-inc-2026-08-07",
+      "slug": "in-the-matter-of-the-arbitration-between-lawcatch-inc-and-counsel-stack-inc-2026-08-07",
+      "score": 80,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 1045,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
       "id": "united-states-of-america-v-smith-2026-08-07",
       "slug": "united-states-of-america-v-smith-2026-08-07",
       "score": 81,
@@ -15467,103 +15467,6 @@
       "index_eligible": true,
       "source_eligible": true,
       "summary_length": 1230,
-      "score_breakdown": [
-        {
-          "criterion": "case_name",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "date",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "court",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "jurisdiction",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "source_url",
-          "points": 20,
-          "maximum": 20
-        },
-        {
-          "criterion": "source_name",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "summary",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "outcome",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "hallucination_items",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "ai_tool_used",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "tags",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "lesson",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "reviewed",
-          "points": 0,
-          "maximum": 5
-        }
-      ],
-      "missing_fields": [
-        {
-          "field": "ai_tool_used",
-          "code": "specific-ai-tool-not-established",
-          "impact": "context",
-          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
-        },
-        {
-          "field": "lesson",
-          "code": "operational-lesson-not-recorded",
-          "impact": "improvement",
-          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
-        },
-        {
-          "field": "reviewed",
-          "code": "publication-review-pending",
-          "impact": "improvement",
-          "remediation": "Complete and date editorial publication review before calling this case curated."
-        }
-      ]
-    },
-    {
-      "id": "morgan-cole-v-hobby-town-unlimited-inc-2026-07-24",
-      "slug": "morgan-cole-v-hobby-town-unlimited-inc-2026-07-24",
-      "score": 85,
-      "maximum_score": 100,
-      "tier": "index-ready",
-      "index_eligible": true,
-      "source_eligible": true,
-      "summary_length": 314,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -58818,7 +58721,7 @@
       "tier": "index-ready",
       "index_eligible": true,
       "source_eligible": true,
-      "summary_length": 292,
+      "summary_length": 390,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -130176,6 +130079,103 @@
       ]
     },
     {
+      "id": "beason-v-wheeler-2025-11-19",
+      "slug": "beason-v-wheeler-2025-11-19",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 653,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
       "id": "dj-v-sn-2025-11-19",
       "slug": "dj-v-sn-2025-11-19",
       "score": 86,
@@ -152949,7 +152949,7 @@
     {
       "id": "franklin-paterson-wandji-mboungueng-v-severn-trent-water-limited-2025-09-22",
       "slug": "franklin-paterson-wandji-mboungueng-v-severn-trent-water-limited-2025-09-22",
-      "score": 85,
+      "score": 80,
       "maximum_score": 100,
       "tier": "index-ready",
       "index_eligible": true,
@@ -152993,7 +152993,7 @@
         },
         {
           "criterion": "outcome",
-          "points": 5,
+          "points": 0,
           "maximum": 5
         },
         {
@@ -153023,6 +153023,12 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",

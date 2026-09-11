@@ -1,14 +1,18 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "6360ad052fd1286c8863a83b537a8a55143fa72a2c539a1470787dcff6adb07d",
-  "corpus_checked": "2026-09-10",
-  "total_cases": 2036,
+  "dataset_checksum": "8d6d5eb48e839b9dd55e054920a5bbe556323305d79e756a7ac6288945f277c8",
+  "corpus_checked": "2026-09-11",
+  "total_cases": 2038,
   "tiers": {
-    "index-ready": 2013,
+    "index-ready": 2015,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "by_slug": {
+    "beus-gilbert-pllc-v-brigham-young-university-et-al-2026-09-09": {
+      "tier": "index-ready",
+      "score": 90
+    },
     "asiedu-v-eastlund-2026-09-08": {
       "tier": "index-ready",
       "score": 85
@@ -602,6 +606,10 @@
       "score": 76
     },
     "beslissing-in-de-zaak-26-379-db-li-d-2026-07-27": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "in-the-matter-of-brian-e-mitchell-2026-07-27": {
       "tier": "index-ready",
       "score": 85
     },

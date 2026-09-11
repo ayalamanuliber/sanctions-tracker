@@ -1,5 +1,61 @@
 [
   {
+    "id": "beus-gilbert-pllc-v-brigham-young-university-et-al-2026-09-09",
+    "slug": "beus-gilbert-pllc-v-brigham-young-university-et-al-2026-09-09",
+    "case_name": "Beus Gilbert PLLC v. Brigham Young University et al.",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Misrepresented: Case Law | Counsel attributed language concerning an egregious-misconduct standard for vacatur to Denver & Rio Grande, but the court found that the case contains none of the terms “egregious” or “misconduct” and does not address that standard. Outcome: Two AI-ethics CLE courses; Monetary Sanctions. Order to Show Cause is here.",
+    "direct_answer": "Misrepresented: Case Law | Counsel attributed language concerning an egregious-misconduct standard for vacatur to Denver & Rio Grande, but the court found that the case contains none of the terms “egregious” or “misconduct” and does not address that standard. Outcome: Two AI-ethics CLE courses; Monetary Sanctions. Order to Show Cause is here.",
+    "why_it_matters": "This matter connects fake citations and misrepresented authority with Two AI-ethics CLE courses; Monetary Sanctions in D. Utah. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and misrepresented authority and records Two AI-ethics CLE courses; Monetary Sanctions. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3057/Gilbert_v._BYU_USA_9_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "D. Utah",
+      "jurisdiction": "federal",
+      "state": "UT",
+      "country": "US",
+      "circuit": "10th Circuit",
+      "judge": null,
+      "date": "2026-09-09",
+      "ai_tool": "ClearBrief, Claude, ChatGPT, and Gemini",
+      "outcome": "Two AI-ethics CLE courses; Monetary Sanctions",
+      "amount": 3000,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "misrepresented-authority",
+        "other",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "asiedu-v-eastlund-2026-09-08",
     "slug": "asiedu-v-eastlund-2026-09-08",
     "case_name": "Asiedu v. Eastlund",
@@ -8341,6 +8397,62 @@
       ],
       "sanction_types": [
         "monetary",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "in-the-matter-of-brian-e-mitchell-2026-07-27",
+    "slug": "in-the-matter-of-brian-e-mitchell-2026-07-27",
+    "case_name": "In the Matter of Brian E. Mitchell",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Fabricated: Exhibits & Submissions | AI-generated citations, quotations, and parentheticals referred to nonexistent portions of the patent's specification, figures, and prosecution history or inaccurately attributed material. The respondent acknowledged that the citations were not adequately checked and corrected them after the errors were identified. Outcome: Public reprimand.",
+    "direct_answer": "Fabricated: Exhibits & Submissions | AI-generated citations, quotations, and parentheticals referred to nonexistent portions of the patent's specification, figures, and prosecution history or inaccurately attributed material. The respondent acknowledged that the citations were not adequately checked and corrected them after the errors were identified. Outcome: Public reprimand.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Public reprimand in USPTO. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Public reprimand. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3056/Mitchell-Order-D2026-16-Redacted.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "USPTO",
+      "jurisdiction": "state",
+      "state": "",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-07-27",
+      "ai_tool": "Unidentified",
+      "outcome": "Public reprimand",
+      "amount": null,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "ip",
+        "trial"
+      ],
+      "sanction_types": [
         "professional"
       ]
     },

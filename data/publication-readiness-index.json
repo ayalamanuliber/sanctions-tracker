@@ -1,14 +1,18 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "8d6d5eb48e839b9dd55e054920a5bbe556323305d79e756a7ac6288945f277c8",
-  "corpus_checked": "2026-09-11",
-  "total_cases": 2038,
+  "dataset_checksum": "4d37e05a76e222c6d5480ed24f3c5119ba11dca9b375387d20bf6b93c184927e",
+  "corpus_checked": "2026-09-12",
+  "total_cases": 2039,
   "tiers": {
-    "index-ready": 2015,
+    "index-ready": 2016,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "by_slug": {
+    "ulysse-v-vineland-investment-partners-phase-ii-llc-2026-09-10": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "beus-gilbert-pllc-v-brigham-young-university-et-al-2026-09-09": {
       "tier": "index-ready",
       "score": 90

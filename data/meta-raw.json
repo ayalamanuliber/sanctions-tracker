@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-09-11",
-  "last_checked": "2026-09-11",
-  "last_checked_at": "2026-09-11T12:51:11.101Z",
-  "latest_record_date": "2026-09-09",
+  "last_updated": "2026-09-12",
+  "last_checked": "2026-09-12",
+  "last_checked_at": "2026-09-12T12:12:27.115Z",
+  "latest_record_date": "2026-09-10",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 2038,
-  "source_linked_count": 2034,
+  "source_record_count": 2040,
+  "source_linked_count": 2035,
   "source_link_coverage_pct": 99.8,
-  "records_missing_date": 0,
-  "dataset_checksum": "8d6d5eb48e839b9dd55e054920a5bbe556323305d79e756a7ac6288945f277c8",
-  "total_cases": 2038,
-  "us_cases": 1394,
-  "us_adjudicated": 1388,
+  "records_missing_date": 1,
+  "dataset_checksum": "4d37e05a76e222c6d5480ed24f3c5119ba11dca9b375387d20bf6b93c184927e",
+  "total_cases": 2039,
+  "us_cases": 1395,
+  "us_adjudicated": 1389,
   "us_alleged_only": 6,
   "countries_tracked": 45,
-  "enriched_count": 2038,
+  "enriched_count": 2039,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
@@ -22,13 +22,13 @@
   "largest_single_sanction": 282508,
   "avg_sanction": 7558,
   "severity_counts": {
-    "medium": 342,
+    "medium": 343,
     "low": 1445,
     "high": 212,
     "career-ending": 39
   },
   "by_country": {
-    "US": 1394,
+    "US": 1395,
     "India": 15,
     "Canada": 216,
     "Australia": 110,
@@ -3467,15 +3467,37 @@
     },
     {
       "state": "FL",
-      "count": 67,
+      "count": 68,
       "total": 102751,
       "severities": {
+        "medium": 16,
         "low": 40,
         "high": 10,
-        "medium": 15,
         "career-ending": 2
       },
       "cases": [
+        {
+          "id": "ulysse-v-vineland-investment-partners-phase-ii-llc-2026-09-10",
+          "name": "Ulysse v. Vineland Investment Partners Phase II, LLC",
+          "court": "CA Florida (6d)",
+          "judge": "",
+          "date": "2026-09-10",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "AI (implied, unspecified)",
+          "summary": "Fabricated: Case Law | The amended initial brief cited seven non-existent cases, collectively cited at least twenty times. The court identified them as fabricated authorities but did not list their names or citations in the opinion. Outcome: Order to Show Cause.",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "pro-se",
+            "fake-citations",
+            "landlord-tenant",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/3060/Opinion_2025-2767.pdf"
+        },
         {
           "id": "sea-swivel-inc-v-shuttleslide-llc-et-al-2026-09-02",
           "name": "Sea Swivel Inc. v. Shuttleslide LLC, et al.",
@@ -4589,29 +4611,6 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/875/Force_v._Capital_One_USA_15_October_2025.pdf"
-        },
-        {
-          "id": "usa-v-brewer-2025-09-11",
-          "name": "USA v. Brewer",
-          "court": "M.D. Florida",
-          "judge": "",
-          "date": "2025-09-11",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Outdated Advice: Overturned Case Law | United States v. Mmahat was cited for broad discoverability of probation files but the decision was abrogated and unrelated to revocation proceedings; subsequent history not cited. Outcome: Show Cause Order. The court found nearly every citation in counsel's motion to be incomplete, inaccurate, or fabricated, describing the references as typical of AI hallucinations and ordering counsel to show cause why sanctions should not be imposed.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "criminal",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/786/UNITED_STATES_OF_AMERICA_v_BRYAN_L_BREWER.pdf"
         }
       ]
     },
@@ -24898,7 +24897,7 @@
     }
   ],
   "by_week": {
-    "2026-W37": 6,
+    "2026-W37": 7,
     "2026-W36": 12,
     "2026-W35": 26,
     "2026-W34": 24,
@@ -25038,7 +25037,7 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-09": 15,
+    "2026-09": 16,
     "2026-08": 106,
     "2026-07": 129,
     "2026-06": 129,
@@ -25084,12 +25083,12 @@
     "2023": 16,
     "2024": 61,
     "2025": 851,
-    "2026": 1110
+    "2026": 1111
   },
   "by_tool": {
+    "AI (implied, unspecified)": 1366,
     "ClearBrief, Claude, ChatGPT, and Gemini": 1,
     "Unidentified": 439,
-    "AI (implied, unspecified)": 1365,
     "Google AI": 3,
     "CoCounsel": 4,
     "ChatGPT": 110,
@@ -25190,6 +25189,7 @@
     "Google Bard": 1
   },
   "by_circuit": {
+    "11th Circuit": 119,
     "10th Circuit": 121,
     "8th Circuit": 65,
     "2nd Circuit": 149,
@@ -25197,7 +25197,6 @@
     "6th Circuit": 114,
     "3rd Circuit": 80,
     "7th Circuit": 119,
-    "11th Circuit": 118,
     "5th Circuit": 143,
     "4th Circuit": 74,
     "D.C. Circuit": 18,
@@ -25251,7 +25250,7 @@
     },
     {
       "week": "2026-W37",
-      "count": 6
+      "count": 7
     }
   ]
 }

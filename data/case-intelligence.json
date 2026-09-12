@@ -1,5 +1,60 @@
 [
   {
+    "id": "ulysse-v-vineland-investment-partners-phase-ii-llc-2026-09-10",
+    "slug": "ulysse-v-vineland-investment-partners-phase-ii-llc-2026-09-10",
+    "case_name": "Ulysse v. Vineland Investment Partners Phase II, LLC",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | The amended initial brief cited seven non-existent cases, collectively cited at least twenty times. The court identified them as fabricated authorities but did not list their names or citations in the opinion. Outcome: Order to Show Cause.",
+    "direct_answer": "Fabricated: Case Law | The amended initial brief cited seven non-existent cases, collectively cited at least twenty times. The court identified them as fabricated authorities but did not list their names or citations in the opinion. Outcome: Order to Show Cause.",
+    "why_it_matters": "This matter connects pro se and fake citations with Order to Show Cause in CA Florida (6d). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Order to Show Cause. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3060/Opinion_2025-2767.pdf",
+      "name": "Christian Silva",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "CA Florida (6d)",
+      "jurisdiction": "state",
+      "state": "FL",
+      "country": "US",
+      "circuit": "11th Circuit",
+      "judge": null,
+      "date": "2026-09-10",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Order to Show Cause",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "landlord-tenant",
+        "appellate"
+      ],
+      "sanction_types": [
+        "ordered-to-show-cause"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "beus-gilbert-pllc-v-brigham-young-university-et-al-2026-09-09",
     "slug": "beus-gilbert-pllc-v-brigham-young-university-et-al-2026-09-09",
     "case_name": "Beus Gilbert PLLC v. Brigham Young University et al.",

@@ -1,27 +1,124 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "8d6d5eb48e839b9dd55e054920a5bbe556323305d79e756a7ac6288945f277c8",
-  "corpus_checked": "2026-09-11",
-  "total_cases": 2038,
-  "total_assessments": 2038,
+  "dataset_checksum": "4d37e05a76e222c6d5480ed24f3c5119ba11dca9b375387d20bf6b93c184927e",
+  "corpus_checked": "2026-09-12",
+  "total_cases": 2039,
+  "total_assessments": 2039,
   "tiers": {
-    "index-ready": 2015,
+    "index-ready": 2016,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 105,
-    "operational-lesson-not-recorded": 1304,
+    "operational-lesson-not-recorded": 1305,
     "outcome-not-recorded": 404,
-    "publication-review-pending": 2038,
+    "publication-review-pending": 2039,
     "source-link-missing": 4,
-    "specific-ai-tool-not-established": 1805,
+    "specific-ai-tool-not-established": 1806,
     "summary-missing": 2,
     "summary-needs-detail": 824,
     "summary-too-brief": 16
   },
   "records": [
+    {
+      "id": "ulysse-v-vineland-investment-partners-phase-ii-llc-2026-09-10",
+      "slug": "ulysse-v-vineland-investment-partners-phase-ii-llc-2026-09-10",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 262,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
     {
       "id": "beus-gilbert-pllc-v-brigham-young-university-et-al-2026-09-09",
       "slug": "beus-gilbert-pllc-v-brigham-young-university-et-al-2026-09-09",

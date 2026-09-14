@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "a003dce060926b9de1b83face615bd0437be46ff30587c0d8a1c580a3e4d5751",
-  "corpus_checked": "2026-09-13",
-  "total_cases": 2039,
+  "dataset_checksum": "b88b31c969c4bccdabbe6f8069154bb4fb7fd945b9d5befb191af289a48a6227",
+  "corpus_checked": "2026-09-14",
+  "total_cases": 2041,
   "tiers": {
-    "index-ready": 2016,
+    "index-ready": 2018,
     "enrichment-ready": 18,
     "research-only": 5
   },
@@ -80,6 +80,10 @@
     "illinois-department-of-healthcare-and-family-services-ex-rel-shona-l-williams-v-samuel-r-l-2026-08-31": {
       "tier": "index-ready",
       "score": 85
+    },
+    "monsieur-p-c-v-caisse-primaire-d-assurance-maladie-de-moselle-2026-08-31": {
+      "tier": "index-ready",
+      "score": 80
     },
     "state-of-hawaii-v-cody-presti-2026-08-31": {
       "tier": "index-ready",
@@ -5656,6 +5660,10 @@
     "bourse-de-limmobilier-multilogements-inc-c-lanthier-2025-10-29": {
       "tier": "index-ready",
       "score": 91
+    },
+    "case-9-2025-2025-10-29": {
+      "tier": "index-ready",
+      "score": 85
     },
     "joy-wilson-v-kipp-texas-inc-2025-10-29": {
       "tier": "index-ready",

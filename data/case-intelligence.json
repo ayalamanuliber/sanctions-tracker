@@ -997,6 +997,60 @@
     }
   },
   {
+    "id": "monsieur-p-c-v-caisse-primaire-d-assurance-maladie-de-moselle-2026-08-31",
+    "slug": "monsieur-p-c-v-caisse-primaire-d-assurance-maladie-de-moselle-2026-08-31",
+    "case_name": "Monsieur [P] [C] v. Caisse Primaire d’Assurance Maladie de Moselle",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The claimant admitted that the jurisprudential references submitted to support his position were inaccurate and had been produced in error while using an AI tool. The CPAM characterized the references as nonexistent; the judgment does not identify or individually analyze the citations.",
+    "direct_answer": "Fabricated: Case Law | The claimant admitted that the jurisprudential references submitted to support his position were inaccurate and had been produced in error while using an AI tool. The CPAM characterized the references as nonexistent; the judgment does not identify or individually analyze the citations.",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in TJ Metz. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3062/TJ_Metz_ctx_protection_soc._31_aout_2026_n_23-01735.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "TJ Metz",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "France",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-08-31",
+      "ai_tool": "Unidentified",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "state-of-hawaii-v-cody-presti-2026-08-31",
     "slug": "state-of-hawaii-v-cody-presti-2026-08-31",
     "case_name": "State of Hawaii v. Cody Presti",
@@ -130391,6 +130445,59 @@
       "reviewed_at": "2026-07-27T19:24:18.002Z",
       "prompt_version": "case-intelligence-v7",
       "limitations": []
+    }
+  },
+  {
+    "id": "case-9-2025-2025-10-29",
+    "slug": "case-9-2025-2025-10-29",
+    "case_name": "Case 9/2025",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Case Law | The pleading stated that the Vestre Landsret judgment carefully considered deportation, conducted a proportionality assessment, and applied ECHR Article 8. The judgment did not address deportation, conduct such an assessment, or mention Article 8. As reported in local media (see here), the defense lawyer submitted a pleading to the Danish Supreme Court containing inaccurate summaries of seven real judgments. The errors included attributing nonexistent deportation and human-rights analyses to cases, changing the factual circumstances of cases, and presenting Üner v. the Netherlands as supporting the opposite proposition from its actual holding. The lawyer acknowledged that an employee used ChatGPT to prepare case summaries and accepted responsibility for failing to verify them. The article reports no disciplinary sanction or fine. Højesteret indicated that its judges independently study and decide cases and are not dependent on parties’ written submissions.",
+    "direct_answer": "Misrepresented: Case Law | The pleading stated that the Vestre Landsret judgment carefully considered deportation, conducted a proportionality assessment, and applied ECHR Article 8. The judgment did not address deportation, conduct such an assessment, or mention Article 8. As reported in local media (see here), the defense lawyer submitted a pleading to the Danish Supreme Court containing inaccurate summaries of seven real judgments. The errors included attributing nonexistent deportation and human-rights analyses to cases, changing the factual circumstances of cases, and presenting Üner v. the Netherlands as supporting the opposite proposition from its actual holding. The lawyer acknowledged that an employee used ChatGPT to prepare case summaries and accepted responsibility for failing to verify them. The article reports no disciplinary sanction or fine. Højesteret indicated that its judges independently study and decide cases and are not dependent on parties’ written submissions.",
+    "why_it_matters": "This matter connects misrepresented authority and trial with a recorded judicial or procedural response in Højesteret (Supreme Court). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies misrepresented authority and trial and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded link is a secondary public source and should be checked against the docket where available. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://vidensbasen.anklagemyndigheden.dk/h/6dfa19d8-18cc-47d6-b4c4-3bd07bc15ec0/VB/0b4d798d-16ce-4505-8e5f-39ffe2073328#i5982b14c0",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "secondary-report"
+    },
+    "record": {
+      "court": "Højesteret (Supreme Court)",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Denmark",
+      "circuit": null,
+      "judge": null,
+      "date": "2025-10-29",
+      "ai_tool": "ChatGPT",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

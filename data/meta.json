@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-09-14",
-  "last_checked": "2026-09-14",
-  "last_checked_at": "2026-09-14T15:03:30.082Z",
-  "latest_record_date": "2026-09-10",
+  "last_updated": "2026-09-15",
+  "last_checked": "2026-09-15",
+  "last_checked_at": "2026-09-15T13:37:05.036Z",
+  "latest_record_date": "2026-09-15",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 2042,
-  "source_linked_count": 2037,
+  "source_record_count": 2043,
+  "source_linked_count": 2038,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 1,
-  "dataset_checksum": "b88b31c969c4bccdabbe6f8069154bb4fb7fd945b9d5befb191af289a48a6227",
-  "total_cases": 2041,
+  "dataset_checksum": "771b85e40a1c7faff69f453597420cd1818ab67c9a82515d8edfd5d695b0bc82",
+  "total_cases": 2042,
   "us_cases": 1395,
   "us_adjudicated": 1389,
   "us_alleged_only": 6,
   "countries_tracked": 45,
-  "enriched_count": 2041,
+  "enriched_count": 2042,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
@@ -22,17 +22,17 @@
   "largest_single_sanction": 282508,
   "avg_sanction": 7558,
   "severity_counts": {
+    "low": 1448,
     "medium": 343,
-    "low": 1447,
     "high": 212,
     "career-ending": 39
   },
   "by_country": {
+    "Australia": 111,
     "US": 1395,
     "India": 15,
     "Canada": 216,
     "France": 14,
-    "Australia": 110,
     "GB": 69,
     "Israel": 57,
     "Brazil": 41,
@@ -24897,6 +24897,7 @@
     }
   ],
   "by_week": {
+    "2026-W38": 1,
     "2026-W37": 7,
     "2026-W36": 13,
     "2026-W35": 26,
@@ -25037,7 +25038,7 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-09": 16,
+    "2026-09": 17,
     "2026-08": 107,
     "2026-07": 129,
     "2026-06": 129,
@@ -25083,12 +25084,12 @@
     "2023": 16,
     "2024": 61,
     "2025": 852,
-    "2026": 1112
+    "2026": 1113
   },
   "by_tool": {
+    "Unidentified": 441,
     "AI (implied, unspecified)": 1366,
     "ClearBrief, Claude, ChatGPT, and Gemini": 1,
-    "Unidentified": 440,
     "Google AI": 3,
     "CoCounsel": 4,
     "ChatGPT": 111,
@@ -25205,10 +25206,6 @@
   },
   "pace_weeks": [
     {
-      "week": "2026-W26",
-      "count": 27
-    },
-    {
       "week": "2026-W27",
       "count": 30
     },
@@ -25251,6 +25248,10 @@
     {
       "week": "2026-W37",
       "count": 7
+    },
+    {
+      "week": "2026-W38",
+      "count": 1
     }
   ]
 }

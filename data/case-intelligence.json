@@ -1,5 +1,58 @@
 [
   {
+    "id": "neill-fraser-v-tasmania-parole-board-2026-09-15",
+    "slug": "neill-fraser-v-tasmania-parole-board-2026-09-15",
+    "case_name": "Neill-Fraser v Tasmania Parole Board",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The rationale document cited purported supporting cases that did not exist. The court challenge identified the citations as fabricated, and the condition relying on the document was set aside. Outcome: Gag-order condition set aside. As reported by local media, a rationale document prepared by the parole board secretary and relied upon to impose media-related parole conditions cited cases that did not exist and included AI-generated examples of similar conditions. The issue was identified during Neill-Fraser's legal challenge, and the Supreme Court of Tasmania set the condition aside, finding it procedurally unfair, legally unreasonable, and uncertain. The board had already withdrawn the condition and did not contest its formal removal.",
+    "direct_answer": "Fabricated: Case Law | The rationale document cited purported supporting cases that did not exist. The court challenge identified the citations as fabricated, and the condition relying on the document was set aside. Outcome: Gag-order condition set aside. As reported by local media, a rationale document prepared by the parole board secretary and relied upon to impose media-related parole conditions cited cases that did not exist and included AI-generated examples of similar conditions. The issue was identified during Neill-Fraser's legal challenge, and the Supreme Court of Tasmania set the condition aside, finding it procedurally unfair, legally unreasonable, and uncertain. The board had already withdrawn the condition and did not contest its formal removal.",
+    "why_it_matters": "This matter connects fake citations and trial with Gag-order condition set aside in Supreme Court of Tasmania. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and trial and records Gag-order condition set aside. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded link is a secondary public source and should be checked against the docket where available. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.perthnow.com.au/news/crime/murderers-gag-order-lifted-after-ai-error-discovered-c-22874355",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "secondary-report"
+    },
+    "record": {
+      "court": "Supreme Court of Tasmania",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-15",
+      "ai_tool": "Unidentified",
+      "outcome": "Gag-order condition set aside",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "ulysse-v-vineland-investment-partners-phase-ii-llc-2026-09-10",
     "slug": "ulysse-v-vineland-investment-partners-phase-ii-llc-2026-09-10",
     "case_name": "Ulysse v. Vineland Investment Partners Phase II, LLC",

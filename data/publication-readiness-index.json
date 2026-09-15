@@ -1,14 +1,18 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "b88b31c969c4bccdabbe6f8069154bb4fb7fd945b9d5befb191af289a48a6227",
-  "corpus_checked": "2026-09-14",
-  "total_cases": 2041,
+  "dataset_checksum": "771b85e40a1c7faff69f453597420cd1818ab67c9a82515d8edfd5d695b0bc82",
+  "corpus_checked": "2026-09-15",
+  "total_cases": 2042,
   "tiers": {
-    "index-ready": 2018,
+    "index-ready": 2019,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "by_slug": {
+    "neill-fraser-v-tasmania-parole-board-2026-09-15": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "ulysse-v-vineland-investment-partners-phase-ii-llc-2026-09-10": {
       "tier": "index-ready",
       "score": 85

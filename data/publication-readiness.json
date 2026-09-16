@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "771b85e40a1c7faff69f453597420cd1818ab67c9a82515d8edfd5d695b0bc82",
-  "corpus_checked": "2026-09-15",
-  "total_cases": 2042,
-  "total_assessments": 2042,
+  "dataset_checksum": "7a07758ba6ac0474b150cd8026eca4f6292c039dc8d84b2c3515c6baefd6ca2d",
+  "corpus_checked": "2026-09-16",
+  "total_cases": 2041,
+  "total_assessments": 2041,
   "tiers": {
-    "index-ready": 2019,
+    "index-ready": 2018,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 105,
-    "operational-lesson-not-recorded": 1308,
+    "operational-lesson-not-recorded": 1307,
     "outcome-not-recorded": 406,
-    "publication-review-pending": 2042,
+    "publication-review-pending": 2041,
     "source-link-missing": 4,
-    "specific-ai-tool-not-established": 1808,
+    "specific-ai-tool-not-established": 1807,
     "summary-missing": 2,
-    "summary-needs-detail": 824,
+    "summary-needs-detail": 823,
     "summary-too-brief": 16
   },
   "records": [
@@ -21083,109 +21083,6 @@
       ]
     },
     {
-      "id": "progressive-northern-insurance-company-v-tony-pete-flores-et-al-2026-07-13",
-      "slug": "progressive-northern-insurance-company-v-tony-pete-flores-et-al-2026-07-13",
-      "score": 81,
-      "maximum_score": 100,
-      "tier": "index-ready",
-      "index_eligible": true,
-      "source_eligible": true,
-      "summary_length": 205,
-      "score_breakdown": [
-        {
-          "criterion": "case_name",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "date",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "court",
-          "points": 10,
-          "maximum": 10
-        },
-        {
-          "criterion": "jurisdiction",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "source_url",
-          "points": 20,
-          "maximum": 20
-        },
-        {
-          "criterion": "source_name",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "summary",
-          "points": 6,
-          "maximum": 10
-        },
-        {
-          "criterion": "outcome",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "hallucination_items",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "ai_tool_used",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "tags",
-          "points": 5,
-          "maximum": 5
-        },
-        {
-          "criterion": "lesson",
-          "points": 0,
-          "maximum": 5
-        },
-        {
-          "criterion": "reviewed",
-          "points": 0,
-          "maximum": 5
-        }
-      ],
-      "missing_fields": [
-        {
-          "field": "summary",
-          "code": "summary-needs-detail",
-          "impact": "improvement",
-          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
-        },
-        {
-          "field": "ai_tool_used",
-          "code": "specific-ai-tool-not-established",
-          "impact": "context",
-          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
-        },
-        {
-          "field": "lesson",
-          "code": "operational-lesson-not-recorded",
-          "impact": "improvement",
-          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
-        },
-        {
-          "field": "reviewed",
-          "code": "publication-review-pending",
-          "impact": "improvement",
-          "remediation": "Complete and date editorial publication review before calling this case curated."
-        }
-      ]
-    },
-    {
       "id": "whyte-et-al-v-mk-united-inc-et-al-2026-07-13",
       "slug": "whyte-et-al-v-mk-united-inc-et-al-2026-07-13",
       "score": 80,
@@ -30094,7 +29991,7 @@
       "tier": "index-ready",
       "index_eligible": true,
       "source_eligible": true,
-      "summary_length": 166,
+      "summary_length": 224,
       "score_breakdown": [
         {
           "criterion": "case_name",

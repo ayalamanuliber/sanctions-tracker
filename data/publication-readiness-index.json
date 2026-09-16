@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "771b85e40a1c7faff69f453597420cd1818ab67c9a82515d8edfd5d695b0bc82",
-  "corpus_checked": "2026-09-15",
-  "total_cases": 2042,
+  "dataset_checksum": "7a07758ba6ac0474b150cd8026eca4f6292c039dc8d84b2c3515c6baefd6ca2d",
+  "corpus_checked": "2026-09-16",
+  "total_cases": 2041,
   "tiers": {
-    "index-ready": 2019,
+    "index-ready": 2018,
     "enrichment-ready": 18,
     "research-only": 5
   },
@@ -846,10 +846,6 @@
       "score": 76
     },
     "paige-warthen-v-barclays-bank-delaware-warthen-i-ii-iii-2026-07-13": {
-      "tier": "index-ready",
-      "score": 81
-    },
-    "progressive-northern-insurance-company-v-tony-pete-flores-et-al-2026-07-13": {
       "tier": "index-ready",
       "score": 81
     },

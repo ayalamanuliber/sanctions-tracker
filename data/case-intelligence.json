@@ -165888,19 +165888,18 @@
     }
   },
   {
-    "id": "murray-v-state-of-victoria-2025-07-02",
-    "slug": "murray-v-state-of-victoria-2025-07-02",
-    "case_name": "Murray v. State of Victoria",
+    "id": "murray-on-behalf-of-the-wamba-wemba-native-title-claim-group-v-state-of-victoria-2025-07-02",
+    "slug": "murray-on-behalf-of-the-wamba-wemba-native-title-claim-group-v-state-of-victoria-2025-07-02",
+    "case_name": "Murray on behalf of the Wamba Wemba Native Title Claim Group v. State of Victoria",
     "classification": "adjudicated",
     "severity": "low",
     "summary": "Fabricated: Case Law | Most footnoted anthropological/historical sources in the Applicant’s Summary did not exist; FNLRS described the citations as fabricated and the Court accepted they likely arose from AI hallucination. Outcome: Order of costs to other party; no professional referral. \"14 Here, the applicant's solicitor’s use of AI in the preparation of two court documents has given rise to cost, inconvenience and delay to the parties and has compromised the effectiveness of the administration of justice. But I do not consider the use of AI in this case means that it is appropriate to refer the solicitors’ conduct to the Victorian Legal Services Board. Here an inexperienced junior solicitor was given the task of preparing document citations for an amended pleading, and did so while working remotely and without access to the documents to be cited. In attempting to cite the relevant documents she used an (apparently AI-assisted) research tool which she considered had produced accurate citations when she previously used it. And as soon as Massar Briggs Law was told of the false citations the problem was addressed. The junior solicitor and the principal solicitor have apologised or expressed their regret to the other parties and the Court, and there was no suggestion that they were not genuine in doing so.15 The junior solicitor took insufficient care in using Googe Scholar as the source of document citations in court documents, and in failing to check the citations against the physical and electronic copies of the cited documents that were held at Massar Briggs Law’s office. The error was centrally one of failing to check and verify the output of the search tool, which was contributed to by the inexperience of the junior solicitor and the failure of Mr Briggs to have systems in place to ensure that her work was appropriately supervised and checked. To censure those errors it is sufficient that these reasons be published.\"",
-    "why_it_matters": "Juniors working remotely without source access must never finalize citations; require partner verification against primary docs.",
+    "direct_answer": "Fabricated: Case Law | Most footnoted anthropological/historical sources in the Applicant’s Summary did not exist; FNLRS described the citations as fabricated and the Court accepted they likely arose from AI hallucination. Outcome: Order of costs to other party; no professional referral. \"14 Here, the applicant's solicitor’s use of AI in the preparation of two court documents has given rise to cost, inconvenience and delay to the parties and has compromised the effectiveness of the administration of justice. But I do not consider the use of AI in this case means that it is appropriate to refer the solicitors’ conduct to the Victorian Legal Services Board. Here an inexperienced junior solicitor was given the task of preparing document citations for an amended pleading, and did so while working remotely and without access to the documents to be cited. In attempting to cite the relevant documents she used an (apparently AI-assisted) research tool which she considered had produced accurate citations when she previously used it. And as soon as Massar Briggs Law was told of the false citations the problem was addressed. The junior solicitor and the principal solicitor have apologised or expressed their regret to the other parties and the Court, and there was no suggestion that they were not genuine in doing so.15 The junior solicitor took insufficient care in using Googe Scholar as the source of document citations in court documents, and in failing to check the citations against the physical and electronic copies of the cited documents that were held at Massar Briggs Law’s office. The error was centrally one of failing to check and verify the output of the search tool, which was contributed to by the inexperience of the junior solicitor and the failure of Mr Briggs to have systems in place to ensure that her work was appropriately supervised and checked. To censure those errors it is sufficient that these reasons be published.\"",
+    "why_it_matters": "This matter connects fake citations and trial with Order of costs to other party; no professional referral in Federal Court. It provides a source-linked baseline for verification, supervision, and response controls.",
     "judicial_reasoning": null,
-    "decision_context": "The record concerns whether authorities presented to the decision-maker existed and could be verified. The tracked outcome is Order of costs to other party; no professional referral; the linked source controls the precise reasoning.",
+    "decision_context": "The structured public record identifies fake citations and trial and records Order of costs to other party; no professional referral. The linked source controls the precise reasoning and procedural context.",
     "practical_implications": [
       "Verify the existence, citation, court, and precedential status of every authority before filing.",
-      "Escalate unresolved verification failures before filing and preserve the responsible reviewer's signoff record.",
-      "Apply the same source-checking controls to Google Scholar (allegedly) output as to any other research input.",
       "Read the linked source and subsequent docket history before relying on this record for legal work."
     ],
     "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
@@ -165937,20 +165936,9 @@
       ]
     },
     "publication": {
-      "ready": true,
-      "agent_status": "adequate_unchanged",
-      "blocked_reason": null
-    },
-    "evidence_review": {
-      "status": "metadata-only",
-      "confidence": "medium",
-      "reviewed_at": "2026-07-27T19:17:10.531Z",
-      "prompt_version": "case-intelligence-v7",
-      "limitations": [
-        "The specific AI tool used is identified as 'Google Scholar (allegedly)', leaving ambiguity regarding the exact software involved.",
-        "The full text of the court's judgment is not provided, relying on the database summary.",
-        "Source retrieval note: generic-or-shared-source."
-      ]
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

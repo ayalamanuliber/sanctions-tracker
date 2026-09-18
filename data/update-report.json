@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-09-17T13:31:58.125Z",
-  "checked_date": "2026-09-17",
+  "checked_at": "2026-09-18T12:59:35.978Z",
+  "checked_date": "2026-09-18",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
   "raw_rows": 2042,
   "imported_records": 2041,
@@ -14,6 +14,6 @@
   "source_link_coverage_pct": 99.8,
   "latest_record_date": "2026-09-15",
   "latest_record_name": "Neill-Fraser v Tasmania Parole Board",
-  "dataset_checksum": "85bd0c9377645da5d26f3c4540a19095cb494a4015568502e0d129238910049d",
+  "dataset_checksum": "04aab50b935e11782ae8045e1dd0c0166694fedf345b31470c4068f5c3b868c9",
   "status": "validated"
 }

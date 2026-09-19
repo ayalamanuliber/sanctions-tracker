@@ -1,37 +1,37 @@
 {
-  "last_updated": "2026-09-18",
-  "last_checked": "2026-09-18",
-  "last_checked_at": "2026-09-18T12:59:35.978Z",
-  "latest_record_date": "2026-09-15",
+  "last_updated": "2026-09-19",
+  "last_checked": "2026-09-19",
+  "last_checked_at": "2026-09-19T12:31:59.210Z",
+  "latest_record_date": "2026-09-16",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 2042,
-  "source_linked_count": 2037,
+  "source_record_count": 2046,
+  "source_linked_count": 2041,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 1,
-  "dataset_checksum": "04aab50b935e11782ae8045e1dd0c0166694fedf345b31470c4068f5c3b868c9",
-  "total_cases": 2041,
-  "us_cases": 1394,
-  "us_adjudicated": 1388,
+  "dataset_checksum": "85c0502fc7e677d5efa29e5461f8fb02aeba9bcfe0323013503d6c0dc50c8c60",
+  "total_cases": 2045,
+  "us_cases": 1396,
+  "us_adjudicated": 1390,
   "us_alleged_only": 6,
   "countries_tracked": 45,
-  "enriched_count": 2041,
+  "enriched_count": 2045,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
-  "monetary_sanctions_total_usd": 1783702,
+  "monetary_sanctions_total_usd": 1783704,
   "largest_single_sanction": 282508,
-  "avg_sanction": 7558,
+  "avg_sanction": 7495,
   "severity_counts": {
-    "low": 1447,
-    "medium": 343,
-    "high": 212,
+    "high": 214,
+    "low": 1448,
+    "medium": 344,
     "career-ending": 39
   },
   "by_country": {
+    "US": 1396,
+    "Canada": 217,
     "Australia": 111,
-    "US": 1394,
     "India": 15,
-    "Canada": 216,
     "France": 14,
     "GB": 69,
     "Israel": 57,
@@ -48,7 +48,7 @@
     "Kenya": 1,
     "Chile": 3,
     "Russian Federation": 1,
-    "Singapore": 7,
+    "Singapore": 8,
     "New Zealand": 7,
     "Canada; Domestic Arbitration": 1,
     "Ireland": 6,
@@ -1209,15 +1209,37 @@
     },
     {
       "state": "NY",
-      "count": 123,
-      "total": 209524,
+      "count": 124,
+      "total": 209525,
       "severities": {
+        "high": 15,
         "low": 85,
-        "high": 14,
         "medium": 23,
         "career-ending": 1
       },
       "cases": [
+        {
+          "id": "tiekert-v-village-of-mamaroneck-et-al-2026-09-14",
+          "name": "Tiekert v. Village of Mamaroneck, et al.",
+          "court": "S.D.N.Y.",
+          "judge": "",
+          "date": "2026-09-14",
+          "amount": 1,
+          "amount_display": "$1",
+          "severity": "high",
+          "tool": "ChatGPT",
+          "summary": "False Quotes: Case Law | Counsel attributed a quotation to Back, but the Court could not locate it; counsel also claimed Back held that officials may be liable for carrying out discriminatory or retaliatory actions initiated by others. The Court found that Back instead held the superintendent lacked personal involvement and undermined the cited proposition. Outcome: Attorney Brian M. Higbie was found to have violated Rule 11 and sanctioned $500, required to complete two New York CLE credits on AI ethics, disclose future GenAI use in filings, and serve the order on his client.. Plaintiff’s counsel admitted relying on ChatGPT to research and draft opposition briefs, verifying only that cited cases existed, were from the correct jurisdiction, and concerned the general subject matter. The Court found that the briefs contained nonexistent quotations and materially misrepresented the holdings of multiple real cases, including Back, Mangino, Dorsett, Dillon, Ragbir, Mangino, and Gonzalez. The Court held that counsel’s failure to read and verify the authorities violated Rule 11 and constituted bad faith, emphasizing that prior awareness of ChatGPT’s fabrication risks and counsel’s failure to investigate after being alerted supported conscious avoidance. The Court imposed a $500 sanction payable to the Clerk, along with nonmonetary safeguards, but denied defense requests for attorney’s fees because no separate Rule 11 motion had been filed.",
+          "sanction_types": [
+            "monetary",
+            "professional"
+          ],
+          "tags": [
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/3068/Tiekert_v._City_of_Mamaronek_USA_14_September_2026.pdf"
+        },
         {
           "id": "carter-v-city-of-buffalo-2026-09-08",
           "name": "Carter v. City of Buffalo",
@@ -2313,29 +2335,6 @@
             "trial"
           ],
           "source_url": "https://reason.com/volokh/2026/03/29/former-fox-commentator-andrea-tantaross-court-filings-contained-inaccurate-citations-court-suspects-ai-hallucinations/"
-        },
-        {
-          "id": "fecteau-v-safety-national-casualty-corporation-2026-03-25",
-          "name": "Fecteau v. Safety National Casualty Corporation",
-          "court": "S.D. New York",
-          "judge": "",
-          "date": "2026-03-25",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Legal Norm | Plaintiff quoted non-existent statutory language as if from 50 U.S.C. § 3936, asserting it tolled filing deadlines (the Court found the quoted language does not appear in § 3936).",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "contract",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1826/Fecteau_USA_25_March_2026.pdf"
         }
       ]
     },
@@ -24875,7 +24874,7 @@
     }
   ],
   "by_week": {
-    "2026-W38": 1,
+    "2026-W38": 4,
     "2026-W37": 7,
     "2026-W36": 13,
     "2026-W35": 26,
@@ -24903,7 +24902,7 @@
     "2026-W13": 33,
     "2026-W12": 41,
     "2026-W11": 36,
-    "2026-W10": 32,
+    "2026-W10": 33,
     "2026-W09": 32,
     "2026-W08": 27,
     "2026-W07": 42,
@@ -25016,13 +25015,13 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-09": 17,
+    "2026-09": 20,
     "2026-08": 107,
     "2026-07": 128,
     "2026-06": 129,
     "2026-05": 154,
     "2026-04": 128,
-    "2026-03": 179,
+    "2026-03": 180,
     "2026-02": 133,
     "2026-01": 137,
     "2025-12": 154,
@@ -25062,15 +25061,15 @@
     "2023": 16,
     "2024": 61,
     "2025": 852,
-    "2026": 1112
+    "2026": 1116
   },
   "by_tool": {
-    "Unidentified": 440,
-    "AI (implied, unspecified)": 1366,
+    "Unidentified": 441,
+    "AI (implied, unspecified)": 1368,
+    "ChatGPT": 112,
     "ClearBrief, Claude, ChatGPT, and Gemini": 1,
     "Google AI": 3,
     "CoCounsel": 4,
-    "ChatGPT": 111,
     "Strongsuit": 1,
     "Claude and ChatGPT": 1,
     "Irys": 2,
@@ -25168,10 +25167,10 @@
     "Google Bard": 1
   },
   "by_circuit": {
+    "2nd Circuit": 150,
     "11th Circuit": 119,
     "10th Circuit": 121,
     "8th Circuit": 65,
-    "2nd Circuit": 149,
     "9th Circuit": 311,
     "6th Circuit": 114,
     "3rd Circuit": 80,
@@ -25229,7 +25228,7 @@
     },
     {
       "week": "2026-W38",
-      "count": 1
+      "count": 4
     }
   ]
 }

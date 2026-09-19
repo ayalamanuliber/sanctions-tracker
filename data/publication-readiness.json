@@ -1,27 +1,221 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "04aab50b935e11782ae8045e1dd0c0166694fedf345b31470c4068f5c3b868c9",
-  "corpus_checked": "2026-09-18",
-  "total_cases": 2041,
-  "total_assessments": 2041,
+  "dataset_checksum": "85c0502fc7e677d5efa29e5461f8fb02aeba9bcfe0323013503d6c0dc50c8c60",
+  "corpus_checked": "2026-09-19",
+  "total_cases": 2045,
+  "total_assessments": 2045,
   "tiers": {
-    "index-ready": 2018,
+    "index-ready": 2022,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 105,
-    "operational-lesson-not-recorded": 1308,
+    "operational-lesson-not-recorded": 1312,
     "outcome-not-recorded": 406,
-    "publication-review-pending": 2041,
+    "publication-review-pending": 2045,
     "source-link-missing": 4,
-    "specific-ai-tool-not-established": 1807,
+    "specific-ai-tool-not-established": 1810,
     "summary-missing": 2,
     "summary-needs-detail": 823,
     "summary-too-brief": 16
   },
   "records": [
+    {
+      "id": "lisandrillo-v-palozzi-2026-09-16",
+      "slug": "lisandrillo-v-palozzi-2026-09-16",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 1043,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "jamieson-v-halifax-regional-centre-for-education-2026-09-15",
+      "slug": "jamieson-v-halifax-regional-centre-for-education-2026-09-15",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 1034,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
     {
       "id": "neill-fraser-v-tasmania-parole-board-2026-09-15",
       "slug": "neill-fraser-v-tasmania-parole-board-2026-09-15",
@@ -105,6 +299,97 @@
           "impact": "context",
           "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
         },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "tiekert-v-village-of-mamaroneck-et-al-2026-09-14",
+      "slug": "tiekert-v-village-of-mamaroneck-et-al-2026-09-14",
+      "score": 90,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 1455,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
         {
           "field": "lesson",
           "code": "operational-lesson-not-recorded",
@@ -81709,6 +81994,103 @@
       "index_eligible": true,
       "source_eligible": true,
       "summary_length": 262,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "tan-hai-peng-micheal-and-another-as-the-executors-of-the-estate-of-tan-thuan-teck-deceased-2026-03-06",
+      "slug": "tan-hai-peng-micheal-and-another-as-the-executors-of-the-estate-of-tan-thuan-teck-deceased-2026-03-06",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 1209,
       "score_breakdown": [
         {
           "criterion": "case_name",

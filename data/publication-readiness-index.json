@@ -1,17 +1,29 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "04aab50b935e11782ae8045e1dd0c0166694fedf345b31470c4068f5c3b868c9",
-  "corpus_checked": "2026-09-18",
-  "total_cases": 2041,
+  "dataset_checksum": "85c0502fc7e677d5efa29e5461f8fb02aeba9bcfe0323013503d6c0dc50c8c60",
+  "corpus_checked": "2026-09-19",
+  "total_cases": 2045,
   "tiers": {
-    "index-ready": 2018,
+    "index-ready": 2022,
     "enrichment-ready": 18,
     "research-only": 5
   },
   "by_slug": {
+    "lisandrillo-v-palozzi-2026-09-16": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "jamieson-v-halifax-regional-centre-for-education-2026-09-15": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "neill-fraser-v-tasmania-parole-board-2026-09-15": {
       "tier": "index-ready",
       "score": 85
+    },
+    "tiekert-v-village-of-mamaroneck-et-al-2026-09-14": {
+      "tier": "index-ready",
+      "score": 90
     },
     "ulysse-v-vineland-investment-partners-phase-ii-llc-2026-09-10": {
       "tier": "index-ready",
@@ -3274,6 +3286,10 @@
       "score": 86
     },
     "malik-v-insurance-australia-limited-2026-03-06": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "tan-hai-peng-micheal-and-another-as-the-executors-of-the-estate-of-tan-thuan-teck-deceased-2026-03-06": {
       "tier": "index-ready",
       "score": 85
     },

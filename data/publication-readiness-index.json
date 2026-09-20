@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "85c0502fc7e677d5efa29e5461f8fb02aeba9bcfe0323013503d6c0dc50c8c60",
-  "corpus_checked": "2026-09-19",
-  "total_cases": 2045,
+  "dataset_checksum": "9b579932172ef3ac2871c52e91b4916aa3e1063bdb135f93f305afbe174f6bc1",
+  "corpus_checked": "2026-09-20",
+  "total_cases": 2044,
   "tiers": {
-    "index-ready": 2022,
+    "index-ready": 2021,
     "enrichment-ready": 18,
     "research-only": 5
   },
@@ -15,7 +15,7 @@
     },
     "jamieson-v-halifax-regional-centre-for-education-2026-09-15": {
       "tier": "index-ready",
-      "score": 85
+      "score": 80
     },
     "neill-fraser-v-tasmania-parole-board-2026-09-15": {
       "tier": "index-ready",
@@ -3289,7 +3289,7 @@
       "tier": "index-ready",
       "score": 85
     },
-    "tan-hai-peng-micheal-and-another-as-the-executors-of-the-estate-of-tan-thuan-teck-deceased-2026-03-06": {
+    "tan-hai-peng-micheal-and-another-v-tan-cheong-joo-and-others-2026-03-06": {
       "tier": "index-ready",
       "score": 85
     },
@@ -5592,10 +5592,6 @@
     "isaacs-v-novartis-pharmaceuticals-corporation-2025-11-03": {
       "tier": "index-ready",
       "score": 91
-    },
-    "tan-hai-peng-micheal-and-another-2025-11-03": {
-      "tier": "index-ready",
-      "score": 85
     },
     "wheat-v-vichie-2025-11-03": {
       "tier": "index-ready",

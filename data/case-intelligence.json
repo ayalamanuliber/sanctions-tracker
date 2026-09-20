@@ -4,7 +4,7 @@
     "slug": "lisandrillo-v-palozzi-2026-09-16",
     "case_name": "Lisandrillo v. Palozzi",
     "classification": "adjudicated",
-    "severity": "high",
+    "severity": "medium",
     "summary": "Misrepresented: Legal Norm | The filing asserted that a motion to disqualify automatically stayed all trial-court proceedings. The court characterized this as a recurring AI-hallucinated argument and held that the assertion was legally mistaken. Outcome: Petition denied; counsel ordered to show cause, without using AI, why sanctions including possible Florida Bar referral should not be imposed.. The court found that counsel’s filings appeared to contain AI-generated components, including convoluted and frivolous arguments, alleged events contrary to the official record, and legal gibberish. The court expressly noted that the cited cases were real and that the matter did not involve hallucinated law or false legal citations. It rejected the petition and disqualification motion, emphasizing that a judge cannot be disqualified based on AI-hallucinated events or allegations contradicted by the record. Counsel was ordered to show cause within ten days, without using AI, why sanctions or referral to the Florida Bar should not follow.",
     "direct_answer": "Misrepresented: Legal Norm | The filing asserted that a motion to disqualify automatically stayed all trial-court proceedings. The court characterized this as a recurring AI-hallucinated argument and held that the assertion was legally mistaken. Outcome: Petition denied; counsel ordered to show cause, without using AI, why sanctions including possible Florida Bar referral should not be imposed.. The court found that counsel’s filings appeared to contain AI-generated components, including convoluted and frivolous arguments, alleged events contrary to the official record, and legal gibberish. The court expressly noted that the cited cases were real and that the matter did not involve hallucinated law or false legal citations. It rejected the petition and disqualification motion, emphasizing that a judge cannot be disqualified based on AI-hallucinated events or allegations contradicted by the record. Counsel was ordered to show cause within ten days, without using AI, why sanctions or referral to the Florida Bar should not follow.",
     "why_it_matters": "This matter connects fabricated quotes and misrepresented authority with Petition denied; counsel ordered to show cause, without using AI, why sanctions including possible Florida Bar referral should not be imposed. in Fla. 4th DCA. It provides a source-linked baseline for verification, supervision, and response controls.",
@@ -28,27 +28,27 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "Fla. 4th DCA",
+      "court": "CA Florida (4d)",
       "jurisdiction": "state",
-      "state": "",
+      "state": "FL",
       "country": "US",
-      "circuit": null,
+      "circuit": "11th Circuit",
       "judge": null,
       "date": "2026-09-16",
       "ai_tool": "Unidentified",
-      "outcome": "Petition denied; counsel ordered to show cause, without using AI, why sanctions including possible Florida Bar referral should not be imposed.",
+      "outcome": "Order to Show Cause",
       "amount": null,
       "professional_sanction": "No",
       "tags": [
         "fabricated-quotes",
         "misrepresented-authority",
-        "bar-referral",
         "published-opinion",
         "disqualification",
-        "trial"
+        "family",
+        "appellate"
       ],
       "sanction_types": [
-        "bar-referral"
+        "ordered-to-show-cause"
       ]
     },
     "publication": {
@@ -81,7 +81,7 @@
     ],
     "source": {
       "url": "https://www.damiencharlotin.com/documents/3067/Jamieson-v-Halifax-Regional-Centre-for-Education-2026-NSLB-131.pdf",
-      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "name": "Courtready",
       "tier": "publisher-archive"
     },
     "record": {
@@ -93,7 +93,7 @@
       "judge": null,
       "date": "2026-09-15",
       "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Appeal dismissed; the Officer’s decision was upheld. No specific sanction was imposed for the fabricated authority.",
+      "outcome": "",
       "amount": null,
       "professional_sanction": "No",
       "tags": [
@@ -102,7 +102,7 @@
         "trial"
       ],
       "sanction_types": [
-        "case-dismissed"
+        "none-adjudicated"
       ]
     },
     "publication": {
@@ -169,7 +169,7 @@
     "slug": "tiekert-v-village-of-mamaroneck-et-al-2026-09-14",
     "case_name": "Tiekert v. Village of Mamaroneck, et al.",
     "classification": "adjudicated",
-    "severity": "high",
+    "severity": "medium",
     "summary": "False Quotes: Case Law | Counsel attributed a quotation to Back, but the Court could not locate it; counsel also claimed Back held that officials may be liable for carrying out discriminatory or retaliatory actions initiated by others. The Court found that Back instead held the superintendent lacked personal involvement and undermined the cited proposition. Outcome: Attorney Brian M. Higbie was found to have violated Rule 11 and sanctioned $500, required to complete two New York CLE credits on AI ethics, disclose future GenAI use in filings, and serve the order on his client.. Plaintiff’s counsel admitted relying on ChatGPT to research and draft opposition briefs, verifying only that cited cases existed, were from the correct jurisdiction, and concerned the general subject matter. The Court found that the briefs contained nonexistent quotations and materially misrepresented the holdings of multiple real cases, including Back, Mangino, Dorsett, Dillon, Ragbir, Mangino, and Gonzalez. The Court held that counsel’s failure to read and verify the authorities violated Rule 11 and constituted bad faith, emphasizing that prior awareness of ChatGPT’s fabrication risks and counsel’s failure to investigate after being alerted supported conscious avoidance. The Court imposed a $500 sanction payable to the Clerk, along with nonmonetary safeguards, but denied defense requests for attorney’s fees because no separate Rule 11 motion had been filed.",
     "direct_answer": "False Quotes: Case Law | Counsel attributed a quotation to Back, but the Court could not locate it; counsel also claimed Back held that officials may be liable for carrying out discriminatory or retaliatory actions initiated by others. The Court found that Back instead held the superintendent lacked personal involvement and undermined the cited proposition. Outcome: Attorney Brian M. Higbie was found to have violated Rule 11 and sanctioned $500, required to complete two New York CLE credits on AI ethics, disclose future GenAI use in filings, and serve the order on his client.. Plaintiff’s counsel admitted relying on ChatGPT to research and draft opposition briefs, verifying only that cited cases existed, were from the correct jurisdiction, and concerned the general subject matter. The Court found that the briefs contained nonexistent quotations and materially misrepresented the holdings of multiple real cases, including Back, Mangino, Dorsett, Dillon, Ragbir, Mangino, and Gonzalez. The Court held that counsel’s failure to read and verify the authorities violated Rule 11 and constituted bad faith, emphasizing that prior awareness of ChatGPT’s fabrication risks and counsel’s failure to investigate after being alerted supported conscious avoidance. The Court imposed a $500 sanction payable to the Clerk, along with nonmonetary safeguards, but denied defense requests for attorney’s fees because no separate Rule 11 motion had been filed.",
     "why_it_matters": "This matter connects fabricated quotes and misrepresented authority with Attorney Brian M. Higbie was found to have violated Rule 11 and sanctioned $500, required to complete two New York CLE credits on AI ethics, disclose future GenAI use in filings, and serve the order on his client. in S.D.N.Y.. It provides a source-linked baseline for verification, supervision, and response controls.",
@@ -193,7 +193,7 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "S.D.N.Y.",
+      "court": "S.D. New York",
       "jurisdiction": "federal",
       "state": "NY",
       "country": "US",
@@ -201,17 +201,17 @@
       "judge": null,
       "date": "2026-09-14",
       "ai_tool": "ChatGPT",
-      "outcome": "Attorney Brian M. Higbie was found to have violated Rule 11 and sanctioned $500, required to complete two New York CLE credits on AI ethics, disclose future GenAI use in filings, and serve the order on his client.",
-      "amount": 1,
-      "professional_sanction": "Yes",
+      "outcome": "Monetary Sanction; CLE; Disclosure obligations",
+      "amount": 500,
+      "professional_sanction": "No",
       "tags": [
         "fabricated-quotes",
         "misrepresented-authority",
+        "civil-rights",
         "trial"
       ],
       "sanction_types": [
-        "monetary",
-        "professional"
+        "monetary"
       ]
     },
     "publication": {
@@ -72358,16 +72358,16 @@
     }
   },
   {
-    "id": "tan-hai-peng-micheal-and-another-as-the-executors-of-the-estate-of-tan-thuan-teck-deceased-2026-03-06",
-    "slug": "tan-hai-peng-micheal-and-another-as-the-executors-of-the-estate-of-tan-thuan-teck-deceased-2026-03-06",
-    "case_name": "Tan Hai Peng Micheal and another (as the executors of the estate of Tan Thuan Teck, deceased) v Tan Cheong Joo and others",
+    "id": "tan-hai-peng-micheal-and-another-v-tan-cheong-joo-and-others-2026-03-06",
+    "slug": "tan-hai-peng-micheal-and-another-v-tan-cheong-joo-and-others-2026-03-06",
+    "case_name": "Tan Hai Peng Micheal and another v Tan Cheong Joo and others",
     "classification": "adjudicated",
     "severity": "medium",
-    "summary": "Fabricated: Case Law | Case A was a non-existent authority created by pairing a genuine case name with the neutral citation of a different real case; the court noted that the name and citation were individually real but did not belong together, and the case did not support the asserted legal proposition. Outcome: Personal costs orders of SGD 5,000 each against the two solicitors, Mr Goh and Mr Sidhu, totaling SGD 10,000; the court also prohibited them from passing those costs to the defendants.. Defendants’ closing submissions cited two fictitious authorities, referred to by the court as Case A and Case B. Case A combined a real case name with the neutral citation of a different case, while Case B was entirely fictitious; neither supported the propositions for which it was cited. The issue was identified by the claimants, and the solicitors admitted failing to verify the authorities, although neither confirmed which AI tool, if any, had been used. The court held that both solicitors acted improperly, unreasonably, and negligently, and imposed separate personal costs orders of $5,000 each, emphasizing their non-delegable duties to verify authorities and protect the administration of justice.",
-    "direct_answer": "Fabricated: Case Law | Case A was a non-existent authority created by pairing a genuine case name with the neutral citation of a different real case; the court noted that the name and citation were individually real but did not belong together, and the case did not support the asserted legal proposition. Outcome: Personal costs orders of SGD 5,000 each against the two solicitors, Mr Goh and Mr Sidhu, totaling SGD 10,000; the court also prohibited them from passing those costs to the defendants.. Defendants’ closing submissions cited two fictitious authorities, referred to by the court as Case A and Case B. Case A combined a real case name with the neutral citation of a different case, while Case B was entirely fictitious; neither supported the propositions for which it was cited. The issue was identified by the claimants, and the solicitors admitted failing to verify the authorities, although neither confirmed which AI tool, if any, had been used. The court held that both solicitors acted improperly, unreasonably, and negligently, and imposed separate personal costs orders of $5,000 each, emphasizing their non-delegable duties to verify authorities and protect the administration of justice.",
-    "why_it_matters": "This matter connects fake citations and trial with Personal costs orders of SGD 5,000 each against the two solicitors, Mr Goh and Mr Sidhu, totaling SGD 10,000; the court also prohibited them from passing those costs to the defendants. in General Division of the High Court of Singapore. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "summary": "Fabricated: Case Law | Case A was a non-existent authority created by pairing a genuine case name with the neutral citation of a different real case; the court noted that the name and citation were individually real but did not belong together, and the case did not support the asserted legal proposition. Outcome: Monetary Sanction; No pass-through to clients. Earlier decision in the same case here.",
+    "direct_answer": "Fabricated: Case Law | Case A was a non-existent authority created by pairing a genuine case name with the neutral citation of a different real case; the court noted that the name and citation were individually real but did not belong together, and the case did not support the asserted legal proposition. Outcome: Monetary Sanction; No pass-through to clients. Earlier decision in the same case here.",
+    "why_it_matters": "This matter connects fake citations and trial with Monetary Sanction; No pass-through to clients in High Court. It provides a source-linked baseline for verification, supervision, and response controls.",
     "judicial_reasoning": null,
-    "decision_context": "The structured public record identifies fake citations and trial and records Personal costs orders of SGD 5,000 each against the two solicitors, Mr Goh and Mr Sidhu, totaling SGD 10,000; the court also prohibited them from passing those costs to the defendants.. The linked source controls the precise reasoning and procedural context.",
+    "decision_context": "The structured public record identifies fake citations and trial and records Monetary Sanction; No pass-through to clients. The linked source controls the precise reasoning and procedural context.",
     "practical_implications": [
       "Verify the existence, citation, court, and precedential status of every authority before filing.",
       "Read the linked source and subsequent docket history before relying on this record for legal work."
@@ -72385,7 +72385,7 @@
       "tier": "publisher-archive"
     },
     "record": {
-      "court": "General Division of the High Court of Singapore",
+      "court": "High Court",
       "jurisdiction": "international",
       "state": "",
       "country": "Singapore",
@@ -72393,8 +72393,8 @@
       "judge": null,
       "date": "2026-03-06",
       "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Personal costs orders of SGD 5,000 each against the two solicitors, Mr Goh and Mr Sidhu, totaling SGD 10,000; the court also prohibited them from passing those costs to the defendants.",
-      "amount": 1,
+      "outcome": "Monetary Sanction; No pass-through to clients",
+      "amount": null,
       "professional_sanction": "No",
       "tags": [
         "fake-citations",
@@ -128485,106 +128485,6 @@
       "prompt_version": "case-intelligence-v7",
       "limitations": [
         "The specific content of the AI seminar is not detailed beyond the host and date."
-      ]
-    }
-  },
-  {
-    "id": "tan-hai-peng-micheal-and-another-2025-11-03",
-    "slug": "tan-hai-peng-micheal-and-another-2025-11-03",
-    "case_name": "Tan Hai Peng Micheal and another",
-    "classification": "adjudicated",
-    "severity": "low",
-    "summary": "In the Singapore High Court, defendants' counsel submitted closing arguments containing two fictitious legal authorities. The court identified these as fabricated and disregarded them. Upon judicial inquiry, counsel admitted the citations were provided by an assisting solicitor, Mr. Amarjit Singh Sidhu, who claimed the inclusion was an honest oversight. Counsel for the defendants stated he did not know which AI tool was used to generate the citations. The court noted reasonable grounds to suspect AI-generated hallucinations and indicated that it would address potential consequences for the citation of fictitious authorities in a subsequent judgment, following the collection of further information from the involved counsel.",
-    "why_it_matters": "If a colleague hands you an authority, you still own the cite; verify before signing and demand disclosure of the research tool used.",
-    "judicial_reasoning": "Fabricated: Case Law | Defendants' closing submissions cited a non-existent authority at paragraph 67; the court found the authority fictitious and disregarded it; counsel later admitted the authority was provided by a colleague and could not identify the AI tool used. || Fabricated: Case Law | Defendants' closing submissions cited a second non-existent authority at paragraph 68; the court found this authority fictitious as well and declined to repeat the citation; admissions were made that the references originated from the solicitor assisting and the specific AI tool was not identified.",
-    "decision_context": "The record concerns whether authorities presented to the decision-maker existed and could be verified. The tracked outcome is the response recorded in the linked source; the linked source controls the precise reasoning.",
-    "practical_implications": [
-      "Verify each cited authority, quotation, and proposition against the underlying source before filing.",
-      "Assign a responsible reviewer for AI-assisted research and drafting.",
-      "Use only approved research and drafting tools for legal work.",
-      "Retain a matter-level record of source checks and corrections."
-    ],
-    "evidence_boundary": "Retained unchanged after audit: the existing summary is source-specific, non-placeholder, and supported by the recorded source link. Read the underlying source before relying on it for legal advice or a filing.",
-    "verified_fields": [
-      "case_name",
-      "court",
-      "date",
-      "party",
-      "ai_tool_used",
-      "hallucination_items",
-      "outcome",
-      "source_url",
-      "procedural_posture",
-      "ai_attribution_status",
-      "recorded_tool",
-      "failure_modes",
-      "judicial_reasoning"
-    ],
-    "source": {
-      "url": "https://www.damiencharlotin.com/documents/1105/2025_SGHC_217.pdf",
-      "name": "Damien Charlotin AI Hallucination Cases Database",
-      "tier": "publisher-archive"
-    },
-    "record": {
-      "court": "High Court",
-      "jurisdiction": "international",
-      "state": "",
-      "country": "Singapore",
-      "circuit": null,
-      "judge": null,
-      "date": "2025-11-03",
-      "ai_tool": "Unidentified",
-      "outcome": "",
-      "amount": null,
-      "professional_sanction": "No",
-      "tags": [
-        "fake-citations",
-        "contract",
-        "trial"
-      ],
-      "sanction_types": [
-        "none-adjudicated"
-      ]
-    },
-    "publication": {
-      "ready": true,
-      "agent_status": "enriched",
-      "blocked_reason": null
-    },
-    "direct_answer": "The court identified two fictitious authorities in the defendants' closing submissions. Counsel admitted the citations originated from an assisting solicitor and could not identify the specific AI tool used. The court has reserved judgment on potential consequences for this conduct pending further submissions.",
-    "procedural_posture": "Judgment on the merits of the originating claims, with a separate subsequent judgment pending regarding the consequences of counsel's citation of fictitious authorities.",
-    "ai_attribution_status": "implied",
-    "recorded_tool": "Unidentified",
-    "outcome_summary": "The court disregarded the fictitious authorities and initiated a formal inquiry into the conduct of counsel, reserving the determination of consequences for a later date.",
-    "uncertainties": [
-      "The specific AI tool used remains unidentified.",
-      "The final professional or monetary consequences for counsel are not yet determined."
-    ],
-    "evidence_notes": [
-      {
-        "field": "outcome",
-        "basis": "The court disregarded the authorities and reserved the issue of consequences for a later judgment.",
-        "locator": "p. 52, 54"
-      },
-      {
-        "field": "recorded_tool",
-        "basis": "Counsel stated he did not know which AI tool was used.",
-        "locator": "p. 53"
-      },
-      {
-        "field": "judicial_reasoning",
-        "basis": "The court found the authorities fictitious and suspected AI generation.",
-        "locator": "p. 52, 54"
-      }
-    ],
-    "evidence_review": {
-      "status": "primary-document-verified",
-      "confidence": "high",
-      "reviewed_at": "2026-07-27T19:24:03.738Z",
-      "prompt_version": "case-intelligence-v7",
-      "limitations": [
-        "The specific AI tool used remains unidentified.",
-        "The final professional or monetary consequences for counsel are not yet determined."
       ]
     }
   },

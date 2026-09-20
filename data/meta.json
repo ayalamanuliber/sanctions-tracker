@@ -1,30 +1,30 @@
 {
-  "last_updated": "2026-09-19",
-  "last_checked": "2026-09-19",
-  "last_checked_at": "2026-09-19T12:31:59.210Z",
+  "last_updated": "2026-09-20",
+  "last_checked": "2026-09-20",
+  "last_checked_at": "2026-09-20T13:04:27.653Z",
   "latest_record_date": "2026-09-16",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 2046,
-  "source_linked_count": 2041,
+  "source_record_count": 2045,
+  "source_linked_count": 2040,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 1,
-  "dataset_checksum": "85c0502fc7e677d5efa29e5461f8fb02aeba9bcfe0323013503d6c0dc50c8c60",
-  "total_cases": 2045,
+  "dataset_checksum": "9b579932172ef3ac2871c52e91b4916aa3e1063bdb135f93f305afbe174f6bc1",
+  "total_cases": 2044,
   "us_cases": 1396,
   "us_adjudicated": 1390,
   "us_alleged_only": 6,
   "countries_tracked": 45,
-  "enriched_count": 2045,
+  "enriched_count": 2044,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
-  "monetary_sanctions_total_usd": 1783704,
+  "monetary_sanctions_total_usd": 1784202,
   "largest_single_sanction": 282508,
-  "avg_sanction": 7495,
+  "avg_sanction": 7528,
   "severity_counts": {
-    "high": 214,
-    "low": 1448,
-    "medium": 344,
+    "medium": 346,
+    "low": 1447,
+    "high": 212,
     "career-ending": 39
   },
   "by_country": {
@@ -48,7 +48,7 @@
     "Kenya": 1,
     "Chile": 3,
     "Russian Federation": 1,
-    "Singapore": 8,
+    "Singapore": 7,
     "New Zealand": 7,
     "Canada; Domestic Arbitration": 1,
     "Ireland": 6,
@@ -1210,32 +1210,32 @@
     {
       "state": "NY",
       "count": 124,
-      "total": 209525,
+      "total": 210024,
       "severities": {
-        "high": 15,
+        "medium": 24,
         "low": 85,
-        "medium": 23,
+        "high": 14,
         "career-ending": 1
       },
       "cases": [
         {
           "id": "tiekert-v-village-of-mamaroneck-et-al-2026-09-14",
           "name": "Tiekert v. Village of Mamaroneck, et al.",
-          "court": "S.D.N.Y.",
+          "court": "S.D. New York",
           "judge": "",
           "date": "2026-09-14",
-          "amount": 1,
-          "amount_display": "$1",
-          "severity": "high",
+          "amount": 500,
+          "amount_display": "$500",
+          "severity": "medium",
           "tool": "ChatGPT",
           "summary": "False Quotes: Case Law | Counsel attributed a quotation to Back, but the Court could not locate it; counsel also claimed Back held that officials may be liable for carrying out discriminatory or retaliatory actions initiated by others. The Court found that Back instead held the superintendent lacked personal involvement and undermined the cited proposition. Outcome: Attorney Brian M. Higbie was found to have violated Rule 11 and sanctioned $500, required to complete two New York CLE credits on AI ethics, disclose future GenAI use in filings, and serve the order on his client.. Plaintiff’s counsel admitted relying on ChatGPT to research and draft opposition briefs, verifying only that cited cases existed, were from the correct jurisdiction, and concerned the general subject matter. The Court found that the briefs contained nonexistent quotations and materially misrepresented the holdings of multiple real cases, including Back, Mangino, Dorsett, Dillon, Ragbir, Mangino, and Gonzalez. The Court held that counsel’s failure to read and verify the authorities violated Rule 11 and constituted bad faith, emphasizing that prior awareness of ChatGPT’s fabrication risks and counsel’s failure to investigate after being alerted supported conscious avoidance. The Court imposed a $500 sanction payable to the Clerk, along with nonmonetary safeguards, but denied defense requests for attorney’s fees because no separate Rule 11 motion had been filed.",
           "sanction_types": [
-            "monetary",
-            "professional"
+            "monetary"
           ],
           "tags": [
             "fabricated-quotes",
             "misrepresented-authority",
+            "civil-rights",
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/3068/Tiekert_v._City_of_Mamaronek_USA_14_September_2026.pdf"
@@ -3466,15 +3466,39 @@
     },
     {
       "state": "FL",
-      "count": 68,
+      "count": 69,
       "total": 102751,
       "severities": {
-        "medium": 16,
+        "medium": 17,
         "low": 40,
         "high": 10,
         "career-ending": 2
       },
       "cases": [
+        {
+          "id": "lisandrillo-v-palozzi-2026-09-16",
+          "name": "Lisandrillo v. Palozzi",
+          "court": "CA Florida (4d)",
+          "judge": "",
+          "date": "2026-09-16",
+          "amount": null,
+          "amount_display": "",
+          "severity": "medium",
+          "tool": "Unidentified",
+          "summary": "Misrepresented: Legal Norm | The filing asserted that a motion to disqualify automatically stayed all trial-court proceedings. The court characterized this as a recurring AI-hallucinated argument and held that the assertion was legally mistaken. Outcome: Petition denied; counsel ordered to show cause, without using AI, why sanctions including possible Florida Bar referral should not be imposed.. The court found that counsel’s filings appeared to contain AI-generated components, including convoluted and frivolous arguments, alleged events contrary to the official record, and legal gibberish. The court expressly noted that the cited cases were real and that the matter did not involve hallucinated law or false legal citations. It rejected the petition and disqualification motion, emphasizing that a judge cannot be disqualified based on AI-hallucinated events or allegations contradicted by the record. Counsel was ordered to show cause within ten days, without using AI, why sanctions or referral to the Florida Bar should not follow.",
+          "sanction_types": [
+            "ordered-to-show-cause"
+          ],
+          "tags": [
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "published-opinion",
+            "disqualification",
+            "family",
+            "appellate"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/3069/Opinion_2026-2262.pdf"
+        },
         {
           "id": "ulysse-v-vineland-investment-partners-phase-ii-llc-2026-09-10",
           "name": "Ulysse v. Vineland Investment Partners Phase II, LLC",
@@ -4586,30 +4610,6 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/982/Arch_Insurance_Company_v._A3_Development_USA_21_October_2025.pdf"
-        },
-        {
-          "id": "charles-c-force-v-capital-one-na-et-al-2025-10-15",
-          "name": "Charles C. Force v. Capital One, N.A., et al.",
-          "court": "M.D. Florida",
-          "judge": "",
-          "date": "2025-10-15",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Misrepresented: Case Law | Plaintiff cited Graves v. Smith's Transfer Corp., 736 F.2d 819, 820 (1st Cir. 1984) for a proposition the case does not hold; the Court found the case does not discuss the asserted point. Outcome: Filings stricken; Show Cause Order.",
-          "sanction_types": [
-            "none-adjudicated"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "fabricated-quotes",
-            "misrepresented-authority",
-            "civil-rights",
-            "trial"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/875/Force_v._Capital_One_USA_15_October_2025.pdf"
         }
       ]
     },
@@ -24919,7 +24919,7 @@
     "2025-W48": 29,
     "2025-W47": 42,
     "2025-W46": 27,
-    "2025-W45": 30,
+    "2025-W45": 29,
     "2025-W44": 36,
     "2025-W43": 24,
     "2025-W42": 27,
@@ -25025,7 +25025,7 @@
     "2026-02": 133,
     "2026-01": 137,
     "2025-12": 154,
-    "2025-11": 130,
+    "2025-11": 129,
     "2025-10": 121,
     "2025-09": 99,
     "2025-08": 87,
@@ -25060,11 +25060,11 @@
   "by_year": {
     "2023": 16,
     "2024": 61,
-    "2025": 852,
+    "2025": 851,
     "2026": 1116
   },
   "by_tool": {
-    "Unidentified": 441,
+    "Unidentified": 440,
     "AI (implied, unspecified)": 1368,
     "ChatGPT": 112,
     "ClearBrief, Claude, ChatGPT, and Gemini": 1,
@@ -25167,8 +25167,8 @@
     "Google Bard": 1
   },
   "by_circuit": {
+    "11th Circuit": 120,
     "2nd Circuit": 150,
-    "11th Circuit": 119,
     "10th Circuit": 121,
     "8th Circuit": 65,
     "9th Circuit": 311,

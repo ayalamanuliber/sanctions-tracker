@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "9b579932172ef3ac2871c52e91b4916aa3e1063bdb135f93f305afbe174f6bc1",
-  "corpus_checked": "2026-09-20",
-  "total_cases": 2044,
+  "dataset_checksum": "6e74cfca31ae28b2554fd33c9c5007dae7c72448f392410073cc3ffdbee41eb9",
+  "corpus_checked": "2026-09-21",
+  "total_cases": 2046,
   "tiers": {
-    "index-ready": 2021,
+    "index-ready": 2023,
     "enrichment-ready": 18,
     "research-only": 5
   },
@@ -18,6 +18,10 @@
       "score": 80
     },
     "neill-fraser-v-tasmania-parole-board-2026-09-15": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "dey-v-minister-for-immigration-and-citizenship-no-2-2026-09-14": {
       "tier": "index-ready",
       "score": 85
     },
@@ -62,6 +66,10 @@
       "score": 90
     },
     "falkenstein-v-niles-2026-09-03": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "registered-trustees-of-the-assemblies-of-god-gospel-church-international-aggci-v-registrar-2026-09-03": {
       "tier": "index-ready",
       "score": 85
     },

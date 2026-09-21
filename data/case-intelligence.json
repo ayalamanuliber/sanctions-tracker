@@ -165,6 +165,61 @@
     }
   },
   {
+    "id": "dey-v-minister-for-immigration-and-citizenship-no-2-2026-09-14",
+    "slug": "dey-v-minister-for-immigration-and-citizenship-no-2-2026-09-14",
+    "case_name": "Dey v Minister for Immigration and Citizenship (No 2)",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Fabricated: Case Law | Six authorities cited in the judicial review submissions were admitted to be hallucinated after the Court questioned whether they existed. The Court treated their filing as improper conduct and a breach of the lawyer's duty to the Court. Outcome: Personal costs order of AUD 9,600 against the lawyer; no referral to the regulator; lawyer publicly named and reprimanded through the reasons and orders.. The lawyer admitted using generative AI to prepare judicial review submissions and a costs submission. The Court found that six authorities in the judicial review submissions and five authorities in the costs submissions were hallucinated, while other cited authorities did not support the propositions for which they were cited. The Court itself identified the problem and had to fact-check the submissions. It held that filing unverified or hallucinated authorities breached the lawyer's duty to the Court, caused delay and additional costs, and compromised the administration of justice. The Court ordered the lawyer to pay AUD 9,600 in costs, declined to refer him to the regulator, and publicly identified him in the judgment.",
+    "direct_answer": "Fabricated: Case Law | Six authorities cited in the judicial review submissions were admitted to be hallucinated after the Court questioned whether they existed. The Court treated their filing as improper conduct and a breach of the lawyer's duty to the Court. Outcome: Personal costs order of AUD 9,600 against the lawyer; no referral to the regulator; lawyer publicly named and reprimanded through the reasons and orders.. The lawyer admitted using generative AI to prepare judicial review submissions and a costs submission. The Court found that six authorities in the judicial review submissions and five authorities in the costs submissions were hallucinated, while other cited authorities did not support the propositions for which they were cited. The Court itself identified the problem and had to fact-check the submissions. It held that filing unverified or hallucinated authorities breached the lawyer's duty to the Court, caused delay and additional costs, and compromised the administration of justice. The Court ordered the lawyer to pay AUD 9,600 in costs, declined to refer him to the regulator, and publicly identified him in the judgment.",
+    "why_it_matters": "This matter connects fake citations and appellate with Personal costs order of AUD 9,600 against the lawyer; no referral to the regulator; lawyer publicly named and reprimanded through the reasons and orders. in Federal Circuit and Family Court of Australia (Division 2). It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and appellate and records Personal costs order of AUD 9,600 against the lawyer; no referral to the regulator; lawyer publicly named and reprimanded through the reasons and orders.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3104/Dey_v_Minister_for_Immigration_and_Citizenship_14_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Federal Circuit and Family Court of Australia (Division 2)",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Australia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-14",
+      "ai_tool": "Unidentified",
+      "outcome": "Personal costs order of AUD 9,600 against the lawyer; no referral to the regulator; lawyer publicly named and reprimanded through the reasons and orders.",
+      "amount": 1,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fake-citations",
+        "appellate"
+      ],
+      "sanction_types": [
+        "monetary",
+        "bar-referral",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "tiekert-v-village-of-mamaroneck-et-al-2026-09-14",
     "slug": "tiekert-v-village-of-mamaroneck-et-al-2026-09-14",
     "case_name": "Tiekert v. Village of Mamaroneck, et al.",
@@ -765,6 +820,61 @@
       ],
       "sanction_types": [
         "ordered-to-show-cause"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "registered-trustees-of-the-assemblies-of-god-gospel-church-international-aggci-v-registrar-2026-09-03",
+    "slug": "registered-trustees-of-the-assemblies-of-god-gospel-church-international-aggci-v-registrar-2026-09-03",
+    "case_name": "Registered Trustees of the Assemblies of God Gospel Church International (AGGCI) v Registrar of Societies and Others",
+    "classification": "adjudicated",
+    "severity": "career-ending",
+    "summary": "Fabricated: Case Law | Counsel cited a purported Court of Appeal decision that the court could not locate. The cited Civil Appeal No. 27 of 1999 was not found, and the quotation stating that leave is consumed by filing and cannot be resurrected after a case is struck out was treated as fabricated. Outcome: The cited cases and quotations were expunged; counsel was suspended for six months and ordered to publish a written apology, with a further one-month suspension for noncompliance.. Counsel Johnson Johannes Kachenje cited and quoted two purported Court of Appeal decisions that could not be located: Mwanza Restaurant Workers Co-operative Societies v Regional Commissioner of Mwanza, Civil Appeal No. 27 of 1999, and Sanai Murumbe and another v Managing Director, Serengeti Safari Lodges Limited, [1986] T.L.R. 45. The court found that the cases did not exist, that the quotations were consequently fabricated, and that counsel had misstated facts and law despite claiming the mistake was inadvertent and not in bad faith. The court expunged the authorities and quotations from the record, found professional misconduct, suspended counsel for six months, and ordered a public apology in English and Swahili.",
+    "direct_answer": "Fabricated: Case Law | Counsel cited a purported Court of Appeal decision that the court could not locate. The cited Civil Appeal No. 27 of 1999 was not found, and the quotation stating that leave is consumed by filing and cannot be resurrected after a case is struck out was treated as fabricated. Outcome: The cited cases and quotations were expunged; counsel was suspended for six months and ordered to publish a written apology, with a further one-month suspension for noncompliance.. Counsel Johnson Johannes Kachenje cited and quoted two purported Court of Appeal decisions that could not be located: Mwanza Restaurant Workers Co-operative Societies v Regional Commissioner of Mwanza, Civil Appeal No. 27 of 1999, and Sanai Murumbe and another v Managing Director, Serengeti Safari Lodges Limited, [1986] T.L.R. 45. The court found that the cases did not exist, that the quotations were consequently fabricated, and that counsel had misstated facts and law despite claiming the mistake was inadvertent and not in bad faith. The court expunged the authorities and quotations from the record, found professional misconduct, suspended counsel for six months, and ordered a public apology in English and Swahili.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with The cited cases and quotations were expunged; counsel was suspended for six months and ordered to publish a written apology, with a further one-month suspension for noncompliance. in High Court of Tanzania, Main Registry, Dodoma. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records The cited cases and quotations were expunged; counsel was suspended for six months and ordered to publish a written apology, with a further one-month suspension for noncompliance.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3103/God_Gospel_Church_Tanzania_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "High Court of Tanzania, Main Registry, Dodoma",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Tanzania",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-03",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "The cited cases and quotations were expunged; counsel was suspended for six months and ordered to publish a written apology, with a further one-month suspension for noncompliance.",
+      "amount": null,
+      "professional_sanction": "Yes",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "trial"
+      ],
+      "sanction_types": [
+        "professional"
       ]
     },
     "publication": {

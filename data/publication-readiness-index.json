@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "6e74cfca31ae28b2554fd33c9c5007dae7c72448f392410073cc3ffdbee41eb9",
-  "corpus_checked": "2026-09-21",
+  "dataset_checksum": "b8b4119095bb801b7fc4128e427c562712df50ffd0da7a14b8b25e02e5ba4836",
+  "corpus_checked": "2026-09-22",
   "total_cases": 2046,
   "tiers": {
     "index-ready": 2023,

@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-09-21T15:08:28.141Z",
-  "checked_date": "2026-09-21",
+  "checked_at": "2026-09-22T13:26:55.114Z",
+  "checked_date": "2026-09-22",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
   "raw_rows": 2047,
   "imported_records": 2046,
-  "previous_records": 2044,
-  "record_delta": 2,
+  "previous_records": 2046,
+  "record_delta": 0,
   "skipped_missing_date": 1,
   "invalid_dates": 0,
   "future_dates": 0,
@@ -14,6 +14,6 @@
   "source_link_coverage_pct": 99.8,
   "latest_record_date": "2026-09-16",
   "latest_record_name": "Lisandrillo v. Palozzi",
-  "dataset_checksum": "6e74cfca31ae28b2554fd33c9c5007dae7c72448f392410073cc3ffdbee41eb9",
+  "dataset_checksum": "b8b4119095bb801b7fc4128e427c562712df50ffd0da7a14b8b25e02e5ba4836",
   "status": "validated"
 }

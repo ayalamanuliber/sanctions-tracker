@@ -1,21 +1,93 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "3fd5a54bd04512d7f0340ef50432e4427560f131081d13110f760ba6c7fa4d27",
-  "corpus_checked": "2026-09-23",
-  "total_cases": 2046,
+  "dataset_checksum": "9d73be7663ad631ef181146d72dff2aefd713e96517ab73b9b05ec0159dba1c1",
+  "corpus_checked": "2026-09-24",
+  "total_cases": 2077,
   "tiers": {
-    "index-ready": 2023,
-    "enrichment-ready": 18,
+    "index-ready": 2052,
+    "enrichment-ready": 20,
     "research-only": 5
   },
   "by_slug": {
+    "ryan-v-perez-2026-09-23": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "garner-v-transit-employees-federal-credit-union-2026-09-22": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "in-re-marriage-of-maslii-v-ivanova-2026-09-22": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "kimberly-dean-v-commissioner-of-social-security-administration-2026-09-22": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "lawand-hill-v-foundation-media-llc-2026-09-22": {
+      "tier": "enrichment-ready",
+      "score": 70
+    },
+    "posey-v-bushnell-2026-09-22": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "moffett-v-ally-capital-corporation-2026-09-21": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "englert-v-gateway-crossing-property-owners-association-inc-2026-09-18": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "in-re-estate-of-ruth-m-gerdes-2026-09-18": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "in-re-john-daniel-deane-2026-09-18": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "whitfield-v-prime-agency-2026-09-18": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "woodard-v-texas-family-care-network-et-al-2026-09-18": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "cabrera-thompson-v-seattle-public-schools-2026-09-17": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "risner-v-starke-county-2026-09-17": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "varela-v-hauser-2026-09-17": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "lisandrillo-v-palozzi-2026-09-16": {
       "tier": "index-ready",
       "score": 85
     },
+    "beard-v-frasier-et-al-2026-09-15": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "bell-v-city-of-clairton-et-al-2026-09-15": {
+      "tier": "index-ready",
+      "score": 90
+    },
     "jamieson-v-halifax-regional-centre-for-education-2026-09-15": {
       "tier": "index-ready",
       "score": 80
+    },
+    "moore-v-commissioner-of-internal-revenue-2026-09-15": {
+      "tier": "index-ready",
+      "score": 76
     },
     "neill-fraser-v-tasmania-parole-board-2026-09-15": {
       "tier": "index-ready",
@@ -25,9 +97,29 @@
       "tier": "index-ready",
       "score": 85
     },
+    "henry-v-long-island-university-2026-09-14": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "matter-of-h2l-solutions-inc-2026-09-14": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "moszkowski-v-deepgulf-inc-and-toke-oil-and-gas-s-a-2026-09-14": {
+      "tier": "enrichment-ready",
+      "score": 75
+    },
     "tiekert-v-village-of-mamaroneck-et-al-2026-09-14": {
       "tier": "index-ready",
       "score": 90
+    },
+    "virgil-v-experian-information-solutions-et-al-2026-09-11": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "roman-v-td-bank-n-a-2026-09-10": {
+      "tier": "index-ready",
+      "score": 76
     },
     "ulysse-v-vineland-investment-partners-phase-ii-llc-2026-09-10": {
       "tier": "index-ready",
@@ -37,11 +129,39 @@
       "tier": "index-ready",
       "score": 90
     },
+    "fay-v-warren-hospitality-suites-inc-2026-09-09": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "jaber-v-title-premier-llc-et-al-2026-09-09": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "king-v-at-t-corp-et-al-2026-09-09": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "parvaz-v-knj-realty-inc-2026-09-09": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "pennmark-coventry-holdings-llc-v-kohl-s-department-stores-inc-2026-09-09": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "youssian-v-village-of-kings-point-2026-09-09": {
+      "tier": "index-ready",
+      "score": 90
+    },
     "asiedu-v-eastlund-2026-09-08": {
       "tier": "index-ready",
       "score": 85
     },
     "carter-v-city-of-buffalo-2026-09-08": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "ferm-v-cameron-2026-09-08": {
       "tier": "index-ready",
       "score": 85
     },
@@ -56,6 +176,10 @@
     "state-ex-rel-steven-schnell-v-honorable-rebecca-richardson-2026-09-08": {
       "tier": "index-ready",
       "score": 85
+    },
+    "vallee-v-libby-2026-09-08": {
+      "tier": "index-ready",
+      "score": 81
     },
     "wurm-v-anchor-bay-packaging-corporation-2026-09-04": {
       "tier": "index-ready",
@@ -3701,10 +3825,6 @@
       "tier": "index-ready",
       "score": 90
     },
-    "virgil-v-experian-information-solutions-et-al-2026-02-12": {
-      "tier": "index-ready",
-      "score": 86
-    },
     "alamleh-c-r-2026-02-11": {
       "tier": "index-ready",
       "score": 81
@@ -5783,7 +5903,7 @@
     },
     "fca-us-llc-v-stan-steelesteele-services-2025-10-22": {
       "tier": "index-ready",
-      "score": 81
+      "score": 85
     },
     "guardian-piazza-doro-llc-v-ward-ozaeta-2025-10-22": {
       "tier": "index-ready",
@@ -6322,6 +6442,10 @@
       "score": 85
     },
     "bka-holdings-v-sam-2025-09-16": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "bka-holdings-llc-v-sam-2025-09-16": {
       "tier": "index-ready",
       "score": 85
     },

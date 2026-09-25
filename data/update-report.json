@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-09-24T13:35:09.322Z",
-  "checked_date": "2026-09-24",
+  "checked_at": "2026-09-25T13:52:30.357Z",
+  "checked_date": "2026-09-25",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
   "raw_rows": 2078,
   "imported_records": 2077,
-  "previous_records": 2046,
-  "record_delta": 31,
+  "previous_records": 2077,
+  "record_delta": 0,
   "skipped_missing_date": 1,
   "invalid_dates": 0,
   "future_dates": 0,
@@ -14,6 +14,6 @@
   "source_link_coverage_pct": 99.8,
   "latest_record_date": "2026-09-23",
   "latest_record_name": "Ryan v. Perez",
-  "dataset_checksum": "9d73be7663ad631ef181146d72dff2aefd713e96517ab73b9b05ec0159dba1c1",
+  "dataset_checksum": "c7648f3853b8cac20ec9799b7aab72fe8f273b359dfc57b189fd3564b2e86e44",
   "status": "validated"
 }

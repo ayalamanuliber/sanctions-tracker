@@ -233,7 +233,7 @@ function reportSchema(entity: CorpusEntity) {
         about: {
           "@type": aboutType,
           name: entity.label,
-          subjectOf: profile,
+          subjectOf: { "@type": "WebPage", "@id": profile, url: profile },
           ...(definition
             ? {
                 termCode: entity.slug,

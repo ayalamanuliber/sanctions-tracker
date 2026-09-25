@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import caseRedirects from "./data/case-redirects.json";
 
 const basePath = process.env.NEXT_PUBLIC_SITE_BASE_PATH ?? "/legal-ai-risk";
 
@@ -18,9 +19,19 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/cases/joann-ledoux-v-outliers-inc-2026-02-04",
-        destination: "/cases/joann-ledoux-v-outliers-inc-2026-07-24",
+        destination: "/cases/joann-ledoux-v-outliers-inc-1-2026-07-24",
         permanent: true,
       },
+      {
+        source: "/cases/joann-ledoux-v-outliers-inc-2026-02-04/brief",
+        destination: "/cases/joann-ledoux-v-outliers-inc-1-2026-07-24/brief",
+        permanent: true,
+      },
+      ...caseRedirects.aliases.flatMap(({ from, to }) => ["", "/brief"].map(suffix => ({
+        source: `/cases/${from}${suffix}`,
+        destination: `/cases/${to}${suffix}`,
+        permanent: true,
+      }))),
     ];
   },
   async headers() {

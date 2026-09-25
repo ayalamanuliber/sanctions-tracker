@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run validate:case-redirects && next build",
     "start": "next start",
     "update:data": "node scripts/import-charlotin-csv.mjs",
     "update:data:dry-run": "node scripts/import-charlotin-csv.mjs --dry-run",
@@ -32,7 +32,8 @@
     "promote:judges:local": "node scripts/promote-local-judge-candidates.mjs",
     "finalize:cases:kie": "node scripts/finalize-kie-case-intelligence.mjs",
     "promote:cases:kie": "node scripts/promote-kie-case-intelligence.mjs",
-    "write:publication-readiness": "node scripts/validate-publication-readiness.mjs --write"
+    "write:publication-readiness": "node scripts/validate-publication-readiness.mjs --write",
+    "validate:case-redirects": "node scripts/validate-case-redirects.mjs"
   },
   "dependencies": {
     "@hono/node-server": "2.0.12",

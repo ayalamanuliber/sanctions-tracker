@@ -1,0 +1,71 @@
+{
+  "revisions_checked": 61,
+  "identity_rule": "unique exact source URL + exact country + exact court in old and current corpus; no conflicting destination; old slug absent today",
+  "aliases": [
+    {
+      "from": "egan-v-commonwealth-of-australia-2026-fca-1104-2026-08-11",
+      "to": "egan-v-commonwealth-of-australia-2026-08-11",
+      "source_url": "https://www.damiencharlotin.com/documents/2806/Egan_v_Commonwealth_of_Australia_2026_FCA_1104.pdf",
+      "historical_revision": "22d55990bfbcd82922dff8d3f28989fcd984fc89",
+      "country": "Australia",
+      "court": "Federal Court"
+    },
+    {
+      "from": "in-re-thomas-grant-neusom-2025-05-08",
+      "to": "in-re-thomas-grant-neusom-2024-05-08",
+      "source_url": "https://www.damiencharlotin.com/documents/332/Re_Thomas_Grant_Neusom_Florida_USA_May_8_2025.pdf",
+      "historical_revision": "a3627587eaa2d018051cc049cb0f7fedf5b49a2a",
+      "country": "US",
+      "court": "M.D. Florida"
+    },
+    {
+      "from": "jean-lucien-kibondo-kilongozi-v-the-minister-of-citizenship-and-immigration-2026-07-10",
+      "to": "kilongozi-v-minister-for-citizenship-2026-07-10",
+      "source_url": "https://www.damiencharlotin.com/documents/2908/Kibondo-Kilongozi-v.-Canada-Citizenship-and-Immigration-2026-FC-928.pdf",
+      "historical_revision": "d5c5f1a8a79cd739049e205e7d28a170d63d1552",
+      "country": "Canada",
+      "court": "Federal Court"
+    },
+    {
+      "from": "joann-ledoux-v-outliers-inc-2026-07-24",
+      "to": "joann-ledoux-v-outliers-inc-1-2026-07-24",
+      "source_url": "https://www.damiencharlotin.com/documents/2706/Ledoux_v._Outliers_USA_24_July_2026.pdf",
+      "historical_revision": "0ab5fc78bab9ce3b855296330177bdfa3d97fb0b",
+      "country": "US",
+      "court": "W.D. Washington"
+    },
+    {
+      "from": "kingdom-of-sweden-v-samantha-ashhadi-soliman-2025-12-01",
+      "to": "kingdom-of-sweden-v-x-2025-12-01",
+      "source_url": "https://www.damiencharlotin.com/documents/1114/Sweden_v._Ashhadi_USA_1_December_2025.pdf",
+      "historical_revision": "a3627587eaa2d018051cc049cb0f7fedf5b49a2a",
+      "country": "US",
+      "court": "CA California"
+    },
+    {
+      "from": "michael-l-ruiz-v-magellan-financial-insurance-services-2-2026-07-28",
+      "to": "michael-l-ruiz-v-magellan-financial-insurance-services-1-2026-07-28",
+      "source_url": "https://www.damiencharlotin.com/documents/2746/Michael_L_Ruiz_Plaintiff_v_Magellan_Financial_And_Insurance_Services_Defen_USA_V9gvRhH.pdf",
+      "historical_revision": "ef48f2ef8eb047c5930598ce466c98c7f71a4176",
+      "country": "US",
+      "court": "D. Arizona"
+    },
+    {
+      "from": "murray-v-state-of-victoria-2025-07-02",
+      "to": "murray-on-behalf-of-the-wamba-wemba-native-title-claim-group-v-state-of-victoria-2025-07-02",
+      "source_url": "https://www.damiencharlotin.com/documents/533/Murray_v._Victoria_2_July_2025_Australia.docx",
+      "historical_revision": "a3627587eaa2d018051cc049cb0f7fedf5b49a2a",
+      "country": "Australia",
+      "court": "Federal Court"
+    },
+    {
+      "from": "tel-aviv-district-court-ai-case-2026-08-23",
+      "to": "adibi-v-aig-israel-insurance-co-2026-08-23",
+      "source_url": "https://www.damiencharlotin.com/documents/2957/adiby1.pdf",
+      "historical_revision": "6cbead443ffc81ce8ecce9b6e1fa671e4e0c4861",
+      "country": "Israel",
+      "court": "Tel Aviv District Court"
+    }
+  ],
+  "ambiguous": []
+}

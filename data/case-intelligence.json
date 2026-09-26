@@ -1,5 +1,122 @@
 [
   {
+    "id": "aguilar-v-the-crawford-group-inc-2026-09-25",
+    "slug": "aguilar-v-the-crawford-group-inc-2026-09-25",
+    "case_name": "Aguilar v. The Crawford Group, Inc.",
+    "classification": "adjudicated",
+    "severity": "high",
+    "summary": "Misrepresented: Case Law | The brief cited Rodriguez for the proposition that defendants were barred from filing additional Rule 12 motions, but Rodriguez did not mention Rule 12 and did not support that proposition. Outcome: Adverse Costs Order; Pro hac vice status revoked.",
+    "direct_answer": "Misrepresented: Case Law | The brief cited Rodriguez for the proposition that defendants were barred from filing additional Rule 12 motions, but Rodriguez did not mention Rule 12 and did not support that proposition. Outcome: Adverse Costs Order; Pro hac vice status revoked.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Adverse Costs Order; Pro hac vice status revoked in D. Massachusetts. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Adverse Costs Order; Pro hac vice status revoked. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3141/Aguilar_v._The_Crawford_Group_Enterprise_Sanctions_Order.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "D. Massachusetts",
+      "jurisdiction": "federal",
+      "state": "MA",
+      "country": "US",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-25",
+      "ai_tool": "Unidentified",
+      "outcome": "Adverse Costs Order; Pro hac vice status revoked",
+      "amount": 10000,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "tort",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "koeberer-v-weir-et-al-2026-09-24",
+    "slug": "koeberer-v-weir-et-al-2026-09-24",
+    "case_name": "Koeberer v. Weir, et al.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The brief cited Jensen v. Wachovia Bank with a Westlaw number that actually identifies a different Central District of California class-action settlement order. Outcome: Warning. Show Cause Order is here.",
+    "direct_answer": "Fabricated: Case Law | The brief cited Jensen v. Wachovia Bank with a Westlaw number that actually identifies a different Central District of California class-action settlement order. Outcome: Warning. Show Cause Order is here.",
+    "why_it_matters": "This matter connects fake citations and fabricated quotes with Warning in 6th Cir. CA. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and fabricated quotes and records Warning. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3140/Koeberer_v._Weir_USA_24_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "6th Cir. CA",
+      "jurisdiction": "federal",
+      "state": "",
+      "country": "US",
+      "circuit": "6th Circuit",
+      "judge": null,
+      "date": "2026-09-24",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Warning",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "other",
+        "appellate"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "ryan-v-perez-2026-09-23",
     "slug": "ryan-v-perez-2026-09-23",
     "case_name": "Ryan v. Perez",

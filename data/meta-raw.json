@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-09-26",
-  "last_checked": "2026-09-26",
-  "last_checked_at": "2026-09-26T13:09:40.068Z",
+  "last_updated": "2026-09-27",
+  "last_checked": "2026-09-27",
+  "last_checked_at": "2026-09-27T14:01:52.758Z",
   "latest_record_date": "2026-09-25",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 2080,
-  "source_linked_count": 2075,
+  "source_record_count": 2087,
+  "source_linked_count": 2082,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 1,
-  "dataset_checksum": "df3adcd200167ba5a8b8c0529eac9a027ccb6cb52a5c0492c06186d361f94062",
-  "total_cases": 2079,
+  "dataset_checksum": "418a5d07724852973326de07c357b77c32b767f0b3ff9350383e57967bdf927d",
+  "total_cases": 2086,
   "us_cases": 1429,
   "us_adjudicated": 1423,
   "us_alleged_only": 6,
-  "countries_tracked": 45,
-  "enriched_count": 2079,
+  "countries_tracked": 46,
+  "enriched_count": 2086,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
@@ -23,16 +23,16 @@
   "avg_sanction": 7663,
   "severity_counts": {
     "high": 218,
-    "low": 1468,
+    "low": 1475,
     "medium": 352,
     "career-ending": 41
   },
   "by_country": {
     "US": 1429,
-    "Canada": 217,
+    "Canada": 221,
     "Australia": 112,
     "Tanzania": 2,
-    "India": 15,
+    "India": 16,
     "France": 14,
     "GB": 69,
     "Israel": 57,
@@ -42,6 +42,8 @@
     "Netherlands": 7,
     "China": 1,
     "Spain": 8,
+    "Singapore": 8,
+    "Malaysia": 1,
     "Poland": 2,
     "Costa Rica": 1,
     "Italy": 15,
@@ -49,7 +51,6 @@
     "Kenya": 1,
     "Chile": 3,
     "Russian Federation": 1,
-    "Singapore": 7,
     "New Zealand": 7,
     "Canada; Domestic Arbitration": 1,
     "Ireland": 6,
@@ -25209,9 +25210,9 @@
     }
   ],
   "by_week": {
-    "2026-W39": 9,
+    "2026-W39": 11,
     "2026-W38": 19,
-    "2026-W37": 17,
+    "2026-W37": 19,
     "2026-W36": 14,
     "2026-W35": 26,
     "2026-W34": 24,
@@ -25221,8 +25222,8 @@
     "2026-W30": 24,
     "2026-W29": 31,
     "2026-W28": 26,
-    "2026-W27": 30,
-    "2026-W26": 27,
+    "2026-W27": 31,
+    "2026-W26": 28,
     "2026-W25": 20,
     "2026-W24": 36,
     "2026-W23": 31,
@@ -25244,7 +25245,7 @@
     "2026-W07": 41,
     "2026-W06": 32,
     "2026-W05": 29,
-    "2026-W04": 36,
+    "2026-W04": 37,
     "2026-W03": 39,
     "2026-W02": 29,
     "2026-W01": 22,
@@ -25351,15 +25352,15 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-09": 55,
+    "2026-09": 59,
     "2026-08": 107,
     "2026-07": 128,
-    "2026-06": 129,
+    "2026-06": 131,
     "2026-05": 154,
     "2026-04": 128,
     "2026-03": 180,
     "2026-02": 132,
-    "2026-01": 137,
+    "2026-01": 138,
     "2025-12": 154,
     "2025-11": 129,
     "2025-10": 121,
@@ -25397,13 +25398,13 @@
     "2023": 16,
     "2024": 61,
     "2025": 852,
-    "2026": 1150
+    "2026": 1157
   },
   "by_tool": {
-    "Unidentified": 446,
-    "AI (implied, unspecified)": 1395,
+    "Unidentified": 447,
+    "AI (implied, unspecified)": 1400,
     "Lexis AI": 1,
-    "ChatGPT": 112,
+    "ChatGPT": 113,
     "ClearBrief, Claude, ChatGPT, and Gemini": 1,
     "Spellbook AI": 1,
     "Google AI": 3,
@@ -25558,7 +25559,7 @@
     },
     {
       "week": "2026-W37",
-      "count": 17
+      "count": 19
     },
     {
       "week": "2026-W38",
@@ -25566,7 +25567,7 @@
     },
     {
       "week": "2026-W39",
-      "count": 9
+      "count": 11
     }
   ]
 }

@@ -117,6 +117,61 @@
     }
   },
   {
+    "id": "lo-v-the-owners-strata-plan-lms4555-2026-09-23",
+    "slug": "lo-v-the-owners-strata-plan-lms4555-2026-09-23",
+    "case_name": "Lo v. The Owners, Strata Plan LMS4555",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The applicants cited a purported CRT decision as supporting a strata’s duty to enforce flooring bylaws, but the cited neutral citation identifies a different case about puppy veterinary expenses and does not support that proposition.",
+    "direct_answer": "Fabricated: Case Law | The applicants cited a purported CRT decision as supporting a strata’s duty to enforce flooring bylaws, but the cited neutral citation identifies a different case about puppy veterinary expenses and does not support that proposition.",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in Civil Resolution Tribunal of British Columbia. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3143/Lo-v.-The-Owners-Strata-Plan-LMS4555-2026-BCCRT-1357.pdf",
+      "name": "Courtready",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Civil Resolution Tribunal of British Columbia",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-23",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "administrative",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "ryan-v-perez-2026-09-23",
     "slug": "ryan-v-perez-2026-09-23",
     "case_name": "Ryan v. Perez",
@@ -217,6 +272,59 @@
       ],
       "sanction_types": [
         "ordered-to-show-cause"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "goel-v-canada-2026-09-22",
+    "slug": "goel-v-canada-2026-09-22",
+    "case_name": "Goel v. Canada",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The Court reported that authorities relied on in the underlying application did not appear to exist and sought copies from counsel. No individual fabricated citation is identified or analyzed in this decision.",
+    "direct_answer": "Fabricated: Case Law | The Court reported that authorities relied on in the underlying application did not appear to exist and sought copies from counsel. No individual fabricated citation is identified or analyzed in this decision.",
+    "why_it_matters": "This matter connects fake citations and trial with a recorded judicial or procedural response in Federal Court. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and trial and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3144/Goel-v.-Canada-Public-Safety-and-Emergency-Preparedness-2026-CanLII-98679-FC.pdf",
+      "name": "Courtready",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Federal Court",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-22",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
       ]
     },
     "publication": {
@@ -1965,6 +2073,61 @@
     }
   },
   {
+    "id": "kostic-v-scott-venturo-rudakoff-llp-2026-09-09",
+    "slug": "kostic-v-scott-venturo-rudakoff-llp-2026-09-09",
+    "case_name": "Kostic v Scott Venturo Rudakoff LLP",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The plaintiff cited a nonexistent case for the proposition that security for costs cannot be sought while claims remain unresolved. The court found no case named Fitzgerald v The Co-operators General Insurance Company and noted that 2014 ABCA 106 was actually R v TLG, an unrelated criminal case. Outcome: Fictitious citations undermined the reliability of Kostic’s affidavit evidence.",
+    "direct_answer": "Fabricated: Case Law | The plaintiff cited a nonexistent case for the proposition that security for costs cannot be sought while claims remain unresolved. The court found no case named Fitzgerald v The Co-operators General Insurance Company and noted that 2014 ABCA 106 was actually R v TLG, an unrelated criminal case. Outcome: Fictitious citations undermined the reliability of Kostic’s affidavit evidence.",
+    "why_it_matters": "This matter connects pro se and fake citations with Fictitious citations undermined the reliability of Kostic’s affidavit evidence in KB Alberta. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Fictitious citations undermined the reliability of Kostic’s affidavit evidence. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3145/Kostic-v-Scott-Venturo-Rudakoff-LLP-2026-ABKB-626.pdf",
+      "name": "Courtready",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "KB Alberta",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-09",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Fictitious citations undermined the reliability of Kostic’s affidavit evidence",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "tort",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "parvaz-v-knj-realty-inc-2026-09-09",
     "slug": "parvaz-v-knj-realty-inc-2026-09-09",
     "case_name": "Parvaz v. KNJ Realty, Inc.",
@@ -2064,6 +2227,60 @@
         "fabricated-quotes",
         "misrepresented-authority",
         "contract",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "piikani-nation-v-raymond-james-ltd-2026-09-09",
+    "slug": "piikani-nation-v-raymond-james-ltd-2026-09-09",
+    "case_name": "Piikani Nation v Raymond James Ltd.",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | Kostic cited “Katz v Heller, 2013 ABQB 275” for the proposition that employers owe fiduciary duties to protect employees from harm. The Court found no such case; citation 2013 ABQB 275 is actually Blue Steel Investments LLC v Hegco Canada Inc., a receivership case unrelated to fiduciary duties, and characterized Katz v Heller as a phantom citation.",
+    "direct_answer": "Fabricated: Case Law | Kostic cited “Katz v Heller, 2013 ABQB 275” for the proposition that employers owe fiduciary duties to protect employees from harm. The Court found no such case; citation 2013 ABQB 275 is actually Blue Steel Investments LLC v Hegco Canada Inc., a receivership case unrelated to fiduciary duties, and characterized Katz v Heller as a phantom citation.",
+    "why_it_matters": "This matter connects pro se and fake citations with a recorded judicial or procedural response in KB Alberta. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3146/Piikani-Nation-v-Raymond-James-Ltd.-2026-ABKB-622.pdf",
+      "name": "Courtready",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "KB Alberta",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-09",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
         "trial"
       ],
       "sanction_types": [
@@ -19492,6 +19709,60 @@
     }
   },
   {
+    "id": "xpr-v-xpq-2026-06-30",
+    "slug": "xpr-v-xpq-2026-06-30",
+    "case_name": "XPR v XPQ",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The husband cited a fictitious case to support disclosure of the wife’s counselling reports. The court searched LawNet, found that the case did not exist, and treated this as evidence of the risks arising from his unverified use of generative AI. Outcome: Order to disclose AI use.",
+    "direct_answer": "Fabricated: Case Law | The husband cited a fictitious case to support disclosure of the wife’s counselling reports. The court searched LawNet, found that the case did not exist, and treated this as evidence of the risks arising from his unverified use of generative AI. Outcome: Order to disclose AI use.",
+    "why_it_matters": "This matter connects pro se and fake citations with Order to disclose AI use in Family Court. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Order to disclose AI use. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3147/SG_Case_law_2026_SGFC_88.pdf",
+      "name": "Kong Soon Lim",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Family Court",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Singapore",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-06-30",
+      "ai_tool": "Unidentified",
+      "outcome": "Order to disclose AI use",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "yuri-petrini-v-city-of-biloxi-mississippi-et-al-2026-06-30",
     "slug": "yuri-petrini-v-city-of-biloxi-mississippi-et-al-2026-06-30",
     "case_name": "Yuri Petrini v. City of Biloxi, Mississippi, et al.",
@@ -20403,6 +20674,57 @@
       "limitations": [
         "The court explicitly stated it could not speculate on whether the errors were the product of generative AI or poor research practices."
       ]
+    }
+  },
+  {
+    "id": "crescendo-education-v-ktc-human-resource-consultants-2026-06-26",
+    "slug": "crescendo-education-v-ktc-human-resource-consultants-2026-06-26",
+    "case_name": "Crescendo Education v. KTC Human Resource Consultants",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "The public record identifies trial. The matter is recorded in High Court Malaya on 2026-06-26 and concerns trial. The tracked outcome is the procedural response described in the linked source; consult the linked source for the complete record.",
+    "direct_answer": "The public record identifies trial. The matter is recorded in High Court Malaya on 2026-06-26 and concerns trial. The tracked outcome is the procedural response described in the linked source; consult the linked source for the complete record.",
+    "why_it_matters": "This matter connects trial with a recorded judicial or procedural response in High Court Malaya. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies trial and records a recorded judicial or procedural response. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3148/MY_Case_law_Crescendo_Education.pdf",
+      "name": "Kong Soon Lim",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "High Court Malaya",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Malaysia",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-06-26",
+      "ai_tool": "ChatGPT",
+      "outcome": "",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {
@@ -94437,6 +94759,57 @@
       "limitations": [
         "The specific generative AI tool used by the litigant remains unidentified."
       ]
+    }
+  },
+  {
+    "id": "gayathri-v-guru-reddy-ors-o-s-no-4956-2011-2026-01-21",
+    "slug": "gayathri-v-guru-reddy-ors-o-s-no-4956-2011-2026-01-21",
+    "case_name": "Gayathri v. Guru Reddy & Ors., O.S. No. 4956/2011",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Outcome: Judgment later revoked. The order contains what is almost certainly LLM output. The matter is recorded in CCSC Bengaluru on 2026-01-21 and concerns trial. The tracked outcome is Judgment later revoked; consult the linked source for the complete record.",
+    "direct_answer": "Outcome: Judgment later revoked. The order contains what is almost certainly LLM output. The matter is recorded in CCSC Bengaluru on 2026-01-21 and concerns trial. The tracked outcome is Judgment later revoked; consult the linked source for the complete record.",
+    "why_it_matters": "This matter connects trial with Judgment later revoked in CCSC Bengaluru. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies trial and records Judgment later revoked. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3149/Gayathri_vs_Guru_Reddy_Raju_S_N_on_27_January_2026.pdf",
+      "name": "Alvin Antony",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "CCSC Bengaluru",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "India",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-01-21",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Judgment later revoked",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "trial"
+      ],
+      "sanction_types": [
+        "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

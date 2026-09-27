@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "df3adcd200167ba5a8b8c0529eac9a027ccb6cb52a5c0492c06186d361f94062",
-  "corpus_checked": "2026-09-26",
-  "total_cases": 2079,
+  "dataset_checksum": "418a5d07724852973326de07c357b77c32b767f0b3ff9350383e57967bdf927d",
+  "corpus_checked": "2026-09-27",
+  "total_cases": 2086,
   "tiers": {
-    "index-ready": 2054,
-    "enrichment-ready": 20,
+    "index-ready": 2059,
+    "enrichment-ready": 22,
     "research-only": 5
   },
   "by_slug": {
@@ -17,6 +17,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "lo-v-the-owners-strata-plan-lms4555-2026-09-23": {
+      "tier": "index-ready",
+      "score": 80
+    },
     "ryan-v-perez-2026-09-23": {
       "tier": "index-ready",
       "score": 85
@@ -24,6 +28,10 @@
     "garner-v-transit-employees-federal-credit-union-2026-09-22": {
       "tier": "index-ready",
       "score": 85
+    },
+    "goel-v-canada-2026-09-22": {
+      "tier": "index-ready",
+      "score": 76
     },
     "in-re-marriage-of-maslii-v-ivanova-2026-09-22": {
       "tier": "index-ready",
@@ -149,11 +157,19 @@
       "tier": "index-ready",
       "score": 81
     },
+    "kostic-v-scott-venturo-rudakoff-llp-2026-09-09": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "parvaz-v-knj-realty-inc-2026-09-09": {
       "tier": "index-ready",
       "score": 85
     },
     "pennmark-coventry-holdings-llc-v-kohl-s-department-stores-inc-2026-09-09": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "piikani-nation-v-raymond-james-ltd-2026-09-09": {
       "tier": "index-ready",
       "score": 80
     },
@@ -1197,6 +1213,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "xpr-v-xpq-2026-06-30": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "yuri-petrini-v-city-of-biloxi-mississippi-et-al-2026-06-30": {
       "tier": "index-ready",
       "score": 85
@@ -1236,6 +1256,10 @@
     "cavalry-spv-i-llc-v-james-k-bernard-jr-2026-06-26": {
       "tier": "index-ready",
       "score": 81
+    },
+    "crescendo-education-v-ktc-human-resource-consultants-2026-06-26": {
+      "tier": "enrichment-ready",
+      "score": 70
     },
     "ex-parte-a-i-f-h-f-k-a-a-i-f-2026-06-26": {
       "tier": "index-ready",
@@ -4256,6 +4280,10 @@
     "forbes-monaco-apac-v-kawajiri-seiji-2026-01-21": {
       "tier": "index-ready",
       "score": 85
+    },
+    "gayathri-v-guru-reddy-ors-o-s-no-4956-2011-2026-01-21": {
+      "tier": "enrichment-ready",
+      "score": 70
     },
     "kaufman-v-upton-2026-01-21": {
       "tier": "index-ready",

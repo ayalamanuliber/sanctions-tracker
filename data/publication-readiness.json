@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "418a5d07724852973326de07c357b77c32b767f0b3ff9350383e57967bdf927d",
-  "corpus_checked": "2026-09-27",
-  "total_cases": 2086,
-  "total_assessments": 2086,
+  "dataset_checksum": "32b8ecf3bd3efaa5d9deabda3554f005a89a5eb953979c1b298da9c16114f133",
+  "corpus_checked": "2026-09-28",
+  "total_cases": 2095,
+  "total_assessments": 2095,
   "tiers": {
-    "index-ready": 2059,
+    "index-ready": 2068,
     "enrichment-ready": 22,
     "research-only": 5
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 108,
-    "operational-lesson-not-recorded": 1355,
-    "outcome-not-recorded": 418,
-    "publication-review-pending": 2086,
+    "operational-lesson-not-recorded": 1364,
+    "outcome-not-recorded": 420,
+    "publication-review-pending": 2095,
     "source-link-missing": 4,
-    "specific-ai-tool-not-established": 1848,
+    "specific-ai-tool-not-established": 1856,
     "summary-missing": 3,
     "summary-needs-detail": 838,
     "summary-too-brief": 19
@@ -1032,6 +1032,103 @@
           "impact": "improvement",
           "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
         },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "zhejiang-dingli-machinery-co-ltd-v-united-states-2026-09-22",
+      "slug": "zhejiang-dingli-machinery-co-ltd-v-united-states-2026-09-22",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 357,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
@@ -2244,6 +2341,109 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "credit-one-finance-limited-v-cheung-yiu-cho-and-another-2026-09-15",
+      "slug": "credit-one-finance-limited-v-cheung-yiu-cho-and-another-2026-09-15",
+      "score": 80,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 805,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
         {
           "field": "lesson",
           "code": "operational-lesson-not-recorded",
@@ -6008,6 +6208,103 @@
           "impact": "important",
           "remediation": "Record the documented disposition, consequence, or procedural posture."
         },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "heung-long-sang-v-wong-mei-yuen-2026-08-31",
+      "slug": "heung-long-sang-v-wong-mei-yuen-2026-08-31",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 328,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
@@ -78227,6 +78524,103 @@
       ]
     },
     {
+      "id": "credit-one-finance-limited-v-cheung-yiu-cho-another-2026-03-20",
+      "slug": "credit-one-finance-limited-v-cheung-yiu-cho-another-2026-03-20",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 297,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
       "id": "daniel-gentry-v-calvin-thompson-et-al-2026-03-20",
       "slug": "daniel-gentry-v-calvin-thompson-et-al-2026-03-20",
       "score": 91,
@@ -78891,6 +79285,103 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "wu-leshi-v-cheung-long-yin-2026-03-20",
+      "slug": "wu-leshi-v-cheung-long-yin-2026-03-20",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 396,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
         {
           "field": "reviewed",
           "code": "publication-review-pending",
@@ -94715,6 +95206,97 @@
           "code": "specific-ai-tool-not-established",
           "impact": "context",
           "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "tung-lai-lam-v-oriental-online-limited-ors-dceo-12-2024-2026-02-16",
+      "slug": "tung-lai-lam-v-oriental-online-limited-ors-dceo-12-2024-2026-02-16",
+      "score": 90,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 445,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
         },
         {
           "field": "reviewed",
@@ -135897,6 +136479,103 @@
       ]
     },
     {
+      "id": "actmore-estate-limited-v-yat-chun-catering-limited-2025-11-18",
+      "slug": "actmore-estate-limited-v-yat-chun-catering-limited-2025-11-18",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 294,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
       "id": "in-re-bryant-2025-11-18",
       "slug": "in-re-bryant-2025-11-18",
       "score": 85,
@@ -149860,6 +150539,103 @@
           "code": "specific-ai-tool-not-established",
           "impact": "context",
           "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "sze-san-san-v-ibeauty-international-limited-2025-10-16",
+      "slug": "sze-san-san-v-ibeauty-international-limited-2025-10-16",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 1327,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
         },
         {
           "field": "reviewed",
@@ -194870,6 +195646,109 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "yu-hon-tong-thomas-v-cent-aline-property-agency-limited-2025-02-26",
+      "slug": "yu-hon-tong-thomas-v-cent-aline-property-agency-limited-2025-02-26",
+      "score": 80,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 335,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
         {
           "field": "reviewed",
           "code": "publication-review-pending",

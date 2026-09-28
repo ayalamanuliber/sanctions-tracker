@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "418a5d07724852973326de07c357b77c32b767f0b3ff9350383e57967bdf927d",
-  "corpus_checked": "2026-09-27",
-  "total_cases": 2086,
+  "dataset_checksum": "32b8ecf3bd3efaa5d9deabda3554f005a89a5eb953979c1b298da9c16114f133",
+  "corpus_checked": "2026-09-28",
+  "total_cases": 2095,
   "tiers": {
-    "index-ready": 2059,
+    "index-ready": 2068,
     "enrichment-ready": 22,
     "research-only": 5
   },
@@ -48,6 +48,10 @@
     "posey-v-bushnell-2026-09-22": {
       "tier": "index-ready",
       "score": 81
+    },
+    "zhejiang-dingli-machinery-co-ltd-v-united-states-2026-09-22": {
+      "tier": "index-ready",
+      "score": 85
     },
     "moffett-v-ally-capital-corporation-2026-09-21": {
       "tier": "index-ready",
@@ -96,6 +100,10 @@
     "bell-v-city-of-clairton-et-al-2026-09-15": {
       "tier": "index-ready",
       "score": 90
+    },
+    "credit-one-finance-limited-v-cheung-yiu-cho-and-another-2026-09-15": {
+      "tier": "index-ready",
+      "score": 80
     },
     "jamieson-v-halifax-regional-centre-for-education-2026-09-15": {
       "tier": "index-ready",
@@ -248,6 +256,10 @@
     "fleming-v-the-owners-strata-plan-lms-4383-2026-08-31": {
       "tier": "index-ready",
       "score": 76
+    },
+    "heung-long-sang-v-wong-mei-yuen-2026-08-31": {
+      "tier": "index-ready",
+      "score": 85
     },
     "illinois-department-of-healthcare-and-family-services-ex-rel-shona-l-williams-v-samuel-r-l-2026-08-31": {
       "tier": "index-ready",
@@ -3129,6 +3141,10 @@
       "tier": "index-ready",
       "score": 86
     },
+    "credit-one-finance-limited-v-cheung-yiu-cho-another-2026-03-20": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "daniel-gentry-v-calvin-thompson-et-al-2026-03-20": {
       "tier": "index-ready",
       "score": 91
@@ -3156,6 +3172,10 @@
     "state-v-coleman-2026-03-20": {
       "tier": "index-ready",
       "score": 95
+    },
+    "wu-leshi-v-cheung-long-yin-2026-03-20": {
+      "tier": "index-ready",
+      "score": 85
     },
     "anna-sheerer-v-thomas-panas-2026-03-19": {
       "tier": "index-ready",
@@ -3792,6 +3812,10 @@
     "rinaldi-v-department-of-justice-right-to-information-and-privacy-2026-02-16": {
       "tier": "index-ready",
       "score": 86
+    },
+    "tung-lai-lam-v-oriental-online-limited-ors-dceo-12-2024-2026-02-16": {
+      "tier": "index-ready",
+      "score": 90
     },
     "ac739-2026-2026-02-13": {
       "tier": "index-ready",
@@ -5473,6 +5497,10 @@
       "tier": "index-ready",
       "score": 95
     },
+    "actmore-estate-limited-v-yat-chun-catering-limited-2025-11-18": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "in-re-bryant-2025-11-18": {
       "tier": "index-ready",
       "score": 85
@@ -6044,6 +6072,10 @@
     "xl-v-zl-et-al-2025-10-16": {
       "tier": "index-ready",
       "score": 90
+    },
+    "sze-san-san-v-ibeauty-international-limited-2025-10-16": {
+      "tier": "index-ready",
+      "score": 85
     },
     "charles-c-force-v-capital-one-na-et-al-2025-10-15": {
       "tier": "index-ready",
@@ -7928,6 +7960,10 @@
     "bunce-v-visual-technology-innovations-1-2025-02-27": {
       "tier": "index-ready",
       "score": 95
+    },
+    "yu-hon-tong-thomas-v-cent-aline-property-agency-limited-2025-02-26": {
+      "tier": "index-ready",
+      "score": 80
     },
     "yu-hon-tong-thomas-v-centaline-property-agency-2025-02-26": {
       "tier": "index-ready",

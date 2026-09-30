@@ -1,14 +1,18 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "ff0bcd9e7b6418095a792212ac7421790506df7d257ee86c6245751b0a901b59",
-  "corpus_checked": "2026-09-29",
-  "total_cases": 2095,
+  "dataset_checksum": "e5d69a18737cb3a53054eaf27e0db437d062a957d298c4f88001860a16aabef3",
+  "corpus_checked": "2026-09-30",
+  "total_cases": 2096,
   "tiers": {
-    "index-ready": 2068,
+    "index-ready": 2069,
     "enrichment-ready": 22,
     "research-only": 5
   },
   "by_slug": {
+    "ahmed-v-minister-of-citizenship-and-immigration-2026-09-28": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "aguilar-v-the-crawford-group-inc-2026-09-25": {
       "tier": "index-ready",
       "score": 85

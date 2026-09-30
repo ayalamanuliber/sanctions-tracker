@@ -1,5 +1,61 @@
 [
   {
+    "id": "ahmed-v-minister-of-citizenship-and-immigration-2026-09-28",
+    "slug": "ahmed-v-minister-of-citizenship-and-immigration-2026-09-28",
+    "case_name": "Ahmed v. Minister of Citizenship and Immigration",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The memorandum cited a case that could not be found at the stated citation; the Court treated it as a fictitious authority used in the Applicants’ arguments. Outcome: Motion to extend time dismissed; application for leave and judicial review dismissed; no costs ordered, although the Court noted potential sanctions for filing an abusive document.. The Applicants’ Memorandum of Argument cited five cases that could not be found at the cited references and inaccurately characterized several existing decisions. The Court inferred that AI had been used without adequate human verification, noting that the filing contained fictitious authorities and misleading arguments. The Court declined to extend the filing deadline because reliance on false citations and misleading legal arguments constituted an abuse of process, but imposed no costs because the Respondent did not seek them.",
+    "direct_answer": "Fabricated: Case Law | The memorandum cited a case that could not be found at the stated citation; the Court treated it as a fictitious authority used in the Applicants’ arguments. Outcome: Motion to extend time dismissed; application for leave and judicial review dismissed; no costs ordered, although the Court noted potential sanctions for filing an abusive document.. The Applicants’ Memorandum of Argument cited five cases that could not be found at the cited references and inaccurately characterized several existing decisions. The Court inferred that AI had been used without adequate human verification, noting that the filing contained fictitious authorities and misleading arguments. The Court declined to extend the filing deadline because reliance on false citations and misleading legal arguments constituted an abuse of process, but imposed no costs because the Respondent did not seek them.",
+    "why_it_matters": "This matter connects fake citations and misrepresented authority with Motion to extend time dismissed; application for leave and judicial review dismissed; no costs ordered, although the Court noted potential sanctions for filing an abusive document. in Federal Court. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fake citations and misrepresented authority and records Motion to extend time dismissed; application for leave and judicial review dismissed; no costs ordered, although the Court noted potential sanctions for filing an abusive document.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3164/2026fc1202.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Federal Court",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-28",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Motion to extend time dismissed; application for leave and judicial review dismissed; no costs ordered, although the Court noted potential sanctions for filing an abusive document.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fake-citations",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary",
+        "case-dismissed"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "aguilar-v-the-crawford-group-inc-2026-09-25",
     "slug": "aguilar-v-the-crawford-group-inc-2026-09-25",
     "case_name": "Aguilar v. The Crawford Group, Inc.",
@@ -95133,6 +95189,7 @@
       "amount": null,
       "professional_sanction": "No",
       "tags": [
+        "family",
         "trial"
       ],
       "sanction_types": [

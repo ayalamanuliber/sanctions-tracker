@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-09-29",
-  "last_checked": "2026-09-29",
-  "last_checked_at": "2026-09-29T14:52:23.523Z",
-  "latest_record_date": "2026-09-25",
+  "last_updated": "2026-09-30",
+  "last_checked": "2026-09-30",
+  "last_checked_at": "2026-09-30T14:57:39.111Z",
+  "latest_record_date": "2026-09-28",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 2096,
-  "source_linked_count": 2091,
+  "source_record_count": 2097,
+  "source_linked_count": 2092,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 1,
-  "dataset_checksum": "ff0bcd9e7b6418095a792212ac7421790506df7d257ee86c6245751b0a901b59",
-  "total_cases": 2095,
+  "dataset_checksum": "e5d69a18737cb3a53054eaf27e0db437d062a957d298c4f88001860a16aabef3",
+  "total_cases": 2096,
   "us_cases": 1430,
   "us_adjudicated": 1424,
   "us_alleged_only": 6,
   "countries_tracked": 46,
-  "enriched_count": 2095,
+  "enriched_count": 2096,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
@@ -22,14 +22,14 @@
   "largest_single_sanction": 282508,
   "avg_sanction": 7663,
   "severity_counts": {
+    "low": 1483,
     "high": 218,
-    "low": 1482,
     "medium": 354,
     "career-ending": 41
   },
   "by_country": {
+    "Canada": 222,
     "US": 1430,
-    "Canada": 221,
     "China": 5,
     "Australia": 112,
     "Tanzania": 2,
@@ -25210,6 +25210,7 @@
     }
   ],
   "by_week": {
+    "2026-W40": 1,
     "2026-W39": 12,
     "2026-W38": 20,
     "2026-W37": 19,
@@ -25352,7 +25353,7 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-09": 61,
+    "2026-09": 62,
     "2026-08": 108,
     "2026-07": 128,
     "2026-06": 131,
@@ -25398,11 +25399,11 @@
     "2023": 16,
     "2024": 61,
     "2025": 855,
-    "2026": 1163
+    "2026": 1164
   },
   "by_tool": {
+    "AI (implied, unspecified)": 1406,
     "Unidentified": 450,
-    "AI (implied, unspecified)": 1405,
     "Lexis AI": 1,
     "ChatGPT": 113,
     "ClearBrief, Claude, ChatGPT, and Gemini": 1,
@@ -25522,10 +25523,6 @@
   },
   "pace_weeks": [
     {
-      "week": "2026-W28",
-      "count": 26
-    },
-    {
       "week": "2026-W29",
       "count": 31
     },
@@ -25568,6 +25565,10 @@
     {
       "week": "2026-W39",
       "count": 12
+    },
+    {
+      "week": "2026-W40",
+      "count": 1
     }
   ]
 }

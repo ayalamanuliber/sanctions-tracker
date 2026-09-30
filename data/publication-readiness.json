@@ -1,27 +1,124 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "ff0bcd9e7b6418095a792212ac7421790506df7d257ee86c6245751b0a901b59",
-  "corpus_checked": "2026-09-29",
-  "total_cases": 2095,
-  "total_assessments": 2095,
+  "dataset_checksum": "e5d69a18737cb3a53054eaf27e0db437d062a957d298c4f88001860a16aabef3",
+  "corpus_checked": "2026-09-30",
+  "total_cases": 2096,
+  "total_assessments": 2096,
   "tiers": {
-    "index-ready": 2068,
+    "index-ready": 2069,
     "enrichment-ready": 22,
     "research-only": 5
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 108,
-    "operational-lesson-not-recorded": 1364,
+    "operational-lesson-not-recorded": 1365,
     "outcome-not-recorded": 420,
-    "publication-review-pending": 2095,
+    "publication-review-pending": 2096,
     "source-link-missing": 4,
-    "specific-ai-tool-not-established": 1856,
+    "specific-ai-tool-not-established": 1857,
     "summary-missing": 3,
     "summary-needs-detail": 838,
     "summary-too-brief": 19
   },
   "records": [
+    {
+      "id": "ahmed-v-minister-of-citizenship-and-immigration-2026-09-28",
+      "slug": "ahmed-v-minister-of-citizenship-and-immigration-2026-09-28",
+      "score": 85,
+      "maximum_score": 100,
+      "tier": "index-ready",
+      "index_eligible": true,
+      "source_eligible": true,
+      "summary_length": 906,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
     {
       "id": "aguilar-v-the-crawford-group-inc-2026-09-25",
       "slug": "aguilar-v-the-crawford-group-inc-2026-09-25",

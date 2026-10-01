@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-09-30",
-  "last_checked": "2026-09-30",
-  "last_checked_at": "2026-09-30T14:57:39.111Z",
+  "last_updated": "2026-10-01",
+  "last_checked": "2026-10-01",
+  "last_checked_at": "2026-10-01T15:29:13.168Z",
   "latest_record_date": "2026-09-28",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 2097,
+  "source_record_count": 2098,
   "source_linked_count": 2092,
   "source_link_coverage_pct": 99.8,
   "records_missing_date": 1,
-  "dataset_checksum": "e5d69a18737cb3a53054eaf27e0db437d062a957d298c4f88001860a16aabef3",
-  "total_cases": 2096,
-  "us_cases": 1430,
-  "us_adjudicated": 1424,
+  "dataset_checksum": "76c706d625b23a8ee56b2f03745c82a3670d1cc49ee9f30f93f4f9bff9756a77",
+  "total_cases": 2097,
+  "us_cases": 1431,
+  "us_adjudicated": 1425,
   "us_alleged_only": 6,
   "countries_tracked": 46,
-  "enriched_count": 2096,
+  "enriched_count": 2097,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
@@ -22,14 +22,14 @@
   "largest_single_sanction": 282508,
   "avg_sanction": 7663,
   "severity_counts": {
-    "low": 1483,
+    "low": 1484,
     "high": 218,
     "medium": 354,
     "career-ending": 41
   },
   "by_country": {
     "Canada": 222,
-    "US": 1430,
+    "US": 1431,
     "China": 5,
     "Australia": 112,
     "Tanzania": 2,
@@ -78,15 +78,36 @@
   "by_state": [
     {
       "state": "CA",
-      "count": 140,
+      "count": 141,
       "total": 241054,
       "severities": {
+        "low": 84,
         "medium": 32,
-        "low": 83,
         "high": 22,
         "career-ending": 3
       },
       "cases": [
+        {
+          "id": "cervantes-v-bianco-2026-09-24",
+          "name": "Cervantes v. Bianco",
+          "court": "Supreme Court of California",
+          "judge": "",
+          "date": "2026-09-24",
+          "amount": null,
+          "amount_display": "",
+          "severity": "low",
+          "tool": "Unidentified",
+          "summary": "Misrepresented: Case Law | Counsel used misquoted passages from Common Cause and inaccurately recited the case’s holding in support of the Sheriff’s standing argument; the firm later apologized and withdrew the argument. Outcome: The court disapproved the improper use of artificial intelligence, reminded counsel of professional duties of competence and candor, and referred the matter to the State Bar to determine whether discipline was warranted.. In preliminary briefing, counsel for Sheriff Bianco relied on misquoted passages from and an incorrect statement of the holding in Common Cause v. Board of Supervisors. The law firm apologized and withdrew the standing argument, and the court stated that artificial intelligence tools apparently contributed to the significant error. The court disapproved the use of AI in this manner, emphasized counsel’s duties of competence and candor, and referred the matter to the California State Bar; no professional discipline or monetary penalty had yet been imposed.",
+          "sanction_types": [
+            "bar-referral"
+          ],
+          "tags": [
+            "fabricated-quotes",
+            "misrepresented-authority",
+            "trial"
+          ],
+          "source_url": "https://www.damiencharlotin.com/documents/3165/Cervantes_v._Bianco_USA_24_September_2026.pdf"
+        },
         {
           "id": "falkenstein-v-niles-2026-09-03",
           "name": "Falkenstein v. Niles",
@@ -1183,28 +1204,6 @@
             "trial"
           ],
           "source_url": "https://www.damiencharlotin.com/documents/1838/Meriland_Keith_Dillard_v._CBS_Studios_Inc._USA_16_March_2026.pdf"
-        },
-        {
-          "id": "arno-kuigoua-v-adam-michael-sacks-2026-03-10",
-          "name": "Arno Kuigoua v. Adam Michael Sacks",
-          "court": "CA California (2nd)",
-          "judge": "",
-          "date": "2026-03-10",
-          "amount": null,
-          "amount_display": "",
-          "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Second apparently nonexistent or miscited case citation in appellant's opening brief identified by respondent and noted by the court. Outcome: Warning.",
-          "sanction_types": [
-            "warning"
-          ],
-          "tags": [
-            "pro-se",
-            "fake-citations",
-            "tort",
-            "appellate"
-          ],
-          "source_url": "https://www.damiencharlotin.com/documents/1678/Kouigoua_v._Sacks_USA_10_March_2026.pdf"
         }
       ]
     },
@@ -25211,7 +25210,7 @@
   ],
   "by_week": {
     "2026-W40": 1,
-    "2026-W39": 12,
+    "2026-W39": 13,
     "2026-W38": 20,
     "2026-W37": 19,
     "2026-W36": 15,
@@ -25353,7 +25352,7 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-09": 62,
+    "2026-09": 63,
     "2026-08": 108,
     "2026-07": 128,
     "2026-06": 131,
@@ -25399,11 +25398,11 @@
     "2023": 16,
     "2024": 61,
     "2025": 855,
-    "2026": 1164
+    "2026": 1165
   },
   "by_tool": {
     "AI (implied, unspecified)": 1406,
-    "Unidentified": 450,
+    "Unidentified": 451,
     "Lexis AI": 1,
     "ChatGPT": 113,
     "ClearBrief, Claude, ChatGPT, and Gemini": 1,
@@ -25507,11 +25506,11 @@
     "Google Bard": 1
   },
   "by_circuit": {
+    "9th Circuit": 318,
     "6th Circuit": 116,
     "11th Circuit": 122,
     "D.C. Circuit": 19,
     "7th Circuit": 124,
-    "9th Circuit": 317,
     "2nd Circuit": 154,
     "3rd Circuit": 83,
     "5th Circuit": 147,
@@ -25564,7 +25563,7 @@
     },
     {
       "week": "2026-W39",
-      "count": 12
+      "count": 13
     },
     {
       "week": "2026-W40",

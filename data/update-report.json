@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-09-30T14:57:39.111Z",
-  "checked_date": "2026-09-30",
+  "checked_at": "2026-10-01T15:29:13.168Z",
+  "checked_date": "2026-10-01",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "raw_rows": 2097,
-  "imported_records": 2096,
-  "previous_records": 2095,
+  "raw_rows": 2098,
+  "imported_records": 2097,
+  "previous_records": 2096,
   "record_delta": 1,
   "skipped_missing_date": 1,
   "invalid_dates": 0,
@@ -14,6 +14,6 @@
   "source_link_coverage_pct": 99.8,
   "latest_record_date": "2026-09-28",
   "latest_record_name": "Ahmed v. Minister of Citizenship and Immigration",
-  "dataset_checksum": "e5d69a18737cb3a53054eaf27e0db437d062a957d298c4f88001860a16aabef3",
+  "dataset_checksum": "76c706d625b23a8ee56b2f03745c82a3670d1cc49ee9f30f93f4f9bff9756a77",
   "status": "validated"
 }

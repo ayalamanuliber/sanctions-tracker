@@ -36,17 +36,17 @@
       "judge": null,
       "date": "2026-09-28",
       "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Motion to extend time dismissed; application for leave and judicial review dismissed; no costs ordered, although the Court noted potential sanctions for filing an abusive document.",
+      "outcome": "",
       "amount": null,
       "professional_sanction": "No",
       "tags": [
         "fake-citations",
         "misrepresented-authority",
+        "immigration",
         "trial"
       ],
       "sanction_types": [
-        "monetary",
-        "case-dismissed"
+        "none-adjudicated"
       ]
     },
     "publication": {
@@ -106,6 +106,61 @@
       "sanction_types": [
         "monetary",
         "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "cervantes-v-bianco-2026-09-24",
+    "slug": "cervantes-v-bianco-2026-09-24",
+    "case_name": "Cervantes v. Bianco",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Case Law | Counsel used misquoted passages from Common Cause and inaccurately recited the case’s holding in support of the Sheriff’s standing argument; the firm later apologized and withdrew the argument. Outcome: The court disapproved the improper use of artificial intelligence, reminded counsel of professional duties of competence and candor, and referred the matter to the State Bar to determine whether discipline was warranted.. In preliminary briefing, counsel for Sheriff Bianco relied on misquoted passages from and an incorrect statement of the holding in Common Cause v. Board of Supervisors. The law firm apologized and withdrew the standing argument, and the court stated that artificial intelligence tools apparently contributed to the significant error. The court disapproved the use of AI in this manner, emphasized counsel’s duties of competence and candor, and referred the matter to the California State Bar; no professional discipline or monetary penalty had yet been imposed.",
+    "direct_answer": "Misrepresented: Case Law | Counsel used misquoted passages from Common Cause and inaccurately recited the case’s holding in support of the Sheriff’s standing argument; the firm later apologized and withdrew the argument. Outcome: The court disapproved the improper use of artificial intelligence, reminded counsel of professional duties of competence and candor, and referred the matter to the State Bar to determine whether discipline was warranted.. In preliminary briefing, counsel for Sheriff Bianco relied on misquoted passages from and an incorrect statement of the holding in Common Cause v. Board of Supervisors. The law firm apologized and withdrew the standing argument, and the court stated that artificial intelligence tools apparently contributed to the significant error. The court disapproved the use of AI in this manner, emphasized counsel’s duties of competence and candor, and referred the matter to the California State Bar; no professional discipline or monetary penalty had yet been imposed.",
+    "why_it_matters": "This matter connects fabricated quotes and misrepresented authority with The court disapproved the improper use of artificial intelligence, reminded counsel of professional duties of competence and candor, and referred the matter to the State Bar to determine whether discipline was warranted. in Supreme Court of California. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies fabricated quotes and misrepresented authority and records The court disapproved the improper use of artificial intelligence, reminded counsel of professional duties of competence and candor, and referred the matter to the State Bar to determine whether discipline was warranted.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Compare every quoted passage and pincite directly with the underlying opinion or filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3165/Cervantes_v._Bianco_USA_24_September_2026.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Supreme Court of California",
+      "jurisdiction": "state",
+      "state": "CA",
+      "country": "US",
+      "circuit": "9th Circuit",
+      "judge": null,
+      "date": "2026-09-24",
+      "ai_tool": "Unidentified",
+      "outcome": "The court disapproved the improper use of artificial intelligence, reminded counsel of professional duties of competence and candor, and referred the matter to the State Bar to determine whether discipline was warranted.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "fabricated-quotes",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "bar-referral"
       ]
     },
     "publication": {
@@ -2240,61 +2295,6 @@
     }
   },
   {
-    "id": "kostic-v-scott-venturo-rudakoff-llp-2026-09-09",
-    "slug": "kostic-v-scott-venturo-rudakoff-llp-2026-09-09",
-    "case_name": "Kostic v Scott Venturo Rudakoff LLP",
-    "classification": "adjudicated",
-    "severity": "low",
-    "summary": "Fabricated: Case Law | The plaintiff cited a nonexistent case for the proposition that security for costs cannot be sought while claims remain unresolved. The court found no case named Fitzgerald v The Co-operators General Insurance Company and noted that 2014 ABCA 106 was actually R v TLG, an unrelated criminal case. Outcome: Fictitious citations undermined the reliability of Kostic’s affidavit evidence.",
-    "direct_answer": "Fabricated: Case Law | The plaintiff cited a nonexistent case for the proposition that security for costs cannot be sought while claims remain unresolved. The court found no case named Fitzgerald v The Co-operators General Insurance Company and noted that 2014 ABCA 106 was actually R v TLG, an unrelated criminal case. Outcome: Fictitious citations undermined the reliability of Kostic’s affidavit evidence.",
-    "why_it_matters": "This matter connects pro se and fake citations with Fictitious citations undermined the reliability of Kostic’s affidavit evidence in KB Alberta. It provides a source-linked baseline for verification, supervision, and response controls.",
-    "judicial_reasoning": null,
-    "decision_context": "The structured public record identifies pro se and fake citations and records Fictitious citations undermined the reliability of Kostic’s affidavit evidence. The linked source controls the precise reasoning and procedural context.",
-    "practical_implications": [
-      "Verify the existence, citation, court, and precedential status of every authority before filing.",
-      "Read the linked source and subsequent docket history before relying on this record for legal work."
-    ],
-    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
-    "verified_fields": [
-      "case_name",
-      "court",
-      "date",
-      "source_url"
-    ],
-    "source": {
-      "url": "https://www.damiencharlotin.com/documents/3145/Kostic-v-Scott-Venturo-Rudakoff-LLP-2026-ABKB-626.pdf",
-      "name": "Courtready",
-      "tier": "publisher-archive"
-    },
-    "record": {
-      "court": "KB Alberta",
-      "jurisdiction": "international",
-      "state": "",
-      "country": "Canada",
-      "circuit": null,
-      "judge": null,
-      "date": "2026-09-09",
-      "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Fictitious citations undermined the reliability of Kostic’s affidavit evidence",
-      "amount": null,
-      "professional_sanction": "No",
-      "tags": [
-        "pro-se",
-        "fake-citations",
-        "tort",
-        "trial"
-      ],
-      "sanction_types": [
-        "none-adjudicated"
-      ]
-    },
-    "publication": {
-      "ready": false,
-      "agent_status": "structured-record-baseline",
-      "blocked_reason": "Pending source-level evidence review."
-    }
-  },
-  {
     "id": "parvaz-v-knj-realty-inc-2026-09-09",
     "slug": "parvaz-v-knj-realty-inc-2026-09-09",
     "case_name": "Parvaz v. KNJ Realty, Inc.",
@@ -2448,6 +2448,60 @@
       "tags": [
         "pro-se",
         "fake-citations",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "xx-v-scott-venturo-rudakoff-llp-2026-abkb-626-2026-09-09",
+    "slug": "xx-v-scott-venturo-rudakoff-llp-2026-abkb-626-2026-09-09",
+    "case_name": "XX v Scott Venturo Rudakoff LLP (2026 ABKB 626)",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Fabricated: Case Law | The plaintiff cited a nonexistent case for the proposition that security for costs cannot be sought while claims remain unresolved. The court found no case named Fitzgerald v The Co-operators General Insurance Company and noted that 2014 ABCA 106 was actually R v TLG, an unrelated criminal case. Outcome: Fictitious citations undermined the reliability of Kostic’s affidavit evidence.",
+    "direct_answer": "Fabricated: Case Law | The plaintiff cited a nonexistent case for the proposition that security for costs cannot be sought while claims remain unresolved. The court found no case named Fitzgerald v The Co-operators General Insurance Company and noted that 2014 ABCA 106 was actually R v TLG, an unrelated criminal case. Outcome: Fictitious citations undermined the reliability of Kostic’s affidavit evidence.",
+    "why_it_matters": "This matter connects pro se and fake citations with Fictitious citations undermined the reliability of Kostic’s affidavit evidence in KB Alberta. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records Fictitious citations undermined the reliability of Kostic’s affidavit evidence. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. No underlying public source link is currently recorded. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date"
+    ],
+    "source": {
+      "url": "",
+      "name": "Courtready",
+      "tier": "missing"
+    },
+    "record": {
+      "court": "KB Alberta",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-09",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "Fictitious citations undermined the reliability of Kostic’s affidavit evidence",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "tort",
         "trial"
       ],
       "sanction_types": [

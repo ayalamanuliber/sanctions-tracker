@@ -1,19 +1,23 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "e5d69a18737cb3a53054eaf27e0db437d062a957d298c4f88001860a16aabef3",
-  "corpus_checked": "2026-09-30",
-  "total_cases": 2096,
+  "dataset_checksum": "76c706d625b23a8ee56b2f03745c82a3670d1cc49ee9f30f93f4f9bff9756a77",
+  "corpus_checked": "2026-10-01",
+  "total_cases": 2097,
   "tiers": {
     "index-ready": 2069,
     "enrichment-ready": 22,
-    "research-only": 5
+    "research-only": 6
   },
   "by_slug": {
     "ahmed-v-minister-of-citizenship-and-immigration-2026-09-28": {
       "tier": "index-ready",
-      "score": 85
+      "score": 80
     },
     "aguilar-v-the-crawford-group-inc-2026-09-25": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "cervantes-v-bianco-2026-09-24": {
       "tier": "index-ready",
       "score": 85
     },
@@ -169,10 +173,6 @@
       "tier": "index-ready",
       "score": 81
     },
-    "kostic-v-scott-venturo-rudakoff-llp-2026-09-09": {
-      "tier": "index-ready",
-      "score": 85
-    },
     "parvaz-v-knj-realty-inc-2026-09-09": {
       "tier": "index-ready",
       "score": 85
@@ -184,6 +184,10 @@
     "piikani-nation-v-raymond-james-ltd-2026-09-09": {
       "tier": "index-ready",
       "score": 80
+    },
+    "xx-v-scott-venturo-rudakoff-llp-2026-abkb-626-2026-09-09": {
+      "tier": "research-only",
+      "score": 65
     },
     "youssian-v-village-of-kings-point-2026-09-09": {
       "tier": "index-ready",

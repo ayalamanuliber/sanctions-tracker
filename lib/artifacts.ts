@@ -1,3 +1,4 @@
+import { dataAttribution } from "@/lib/data-provenance";
 import sanctionsRaw from "@/data/sanctions.json";
 import metaRaw from "@/data/meta.json";
 import { matchesCourt, matchesTool } from "@/lib/filtering";
@@ -160,7 +161,7 @@ function audienceControls(audience: string | undefined, caseItems: PublicSanctio
   return controls(caseItems);
 }
 
-export function buildArtifactMarkdown(params: {
+function buildArtifactMarkdownContent(params: {
   type?: string;
   title?: string;
   audience?: string;
@@ -446,6 +447,10 @@ export function buildArtifactMarkdown(params: {
   ].join("\n");
 }
 
+export function buildArtifactMarkdown(params: Parameters<typeof buildArtifactMarkdownContent>[0]): string {
+  return `${buildArtifactMarkdownContent(params)}\n\n## Data provenance\n${dataAttribution()}\n`;
+}
+
 function escapeHtml(value: string): string {
   return value
     .replace(/&/g, "&amp;")
@@ -554,6 +559,8 @@ export function buildArtifactCsv(params: {
     [],
     ["source_case", "date", "court", "severity", "source_url"],
     ...caseItems.slice(0, 20).map((item) => [item.case_name, item.date, item.court, item.severity, item.source_url || ""]),
+    [],
+    ["data_provenance", dataAttribution()],
   ];
   return rows.map((row) => row.map((cell) => `"${String(cell || "").replace(/"/g, '""')}"`).join(",")).join("\n");
 }

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/mcp",
+      "destination": "/legal-ai-risk/mcp"
+    },
+    {
+      "source": "/mcp/",
+      "destination": "/legal-ai-risk/mcp"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/mcp",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/mcp/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
+  ]
+}

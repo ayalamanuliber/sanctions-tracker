@@ -1,5 +1,6 @@
 import type { PublicSanctionCase } from "./types";
-import { PUBLIC_BASE_URL } from "@/lib/site";
+import { appUrl, PUBLIC_BASE_URL } from "@/lib/site";
+import { dataAttribution } from "@/lib/data-provenance";
 
 export type PublicMeta = {
   last_updated: string;
@@ -56,6 +57,7 @@ export function formatCurrency(amount: number | null): string {
 export function formatCase(caseItem: PublicSanctionCase): string {
   return [
     `${caseItem.case_name} (${caseItem.date})`,
+    `Case ID: ${caseItem.id}`,
     `Court: ${caseItem.court}`,
     `Jurisdiction: ${caseItem.jurisdiction}${caseItem.state ? ` / ${caseItem.state}` : caseItem.country ? ` / ${caseItem.country}` : ""}`,
     `Judge: ${caseItem.judge || "Unknown"}`,
@@ -67,6 +69,8 @@ export function formatCase(caseItem: PublicSanctionCase): string {
     `Policy gaps: ${caseItem.policy_gap_ids.join(", ") || "None"}`,
     `Summary: ${caseItem.summary || "No summary available."}`,
     `Source: ${caseItem.source_name} - ${caseItem.source_url || "Unavailable"}`,
+    "Boundary: a source link is not independent verification; public records are not incidence rates or legal advice.",
+    dataAttribution(),
   ].join("\n");
 }
 
@@ -80,13 +84,15 @@ export function formatMeta(meta: PublicMeta): string {
     `Total cases: ${meta.total_cases}`,
     `US cases: ${meta.us_cases}`,
     `Countries tracked: ${meta.countries_tracked}`,
-    `Enrichment coverage: ${meta.enrichment_coverage_pct}%`,
+    `Enrichment coverage: ${meta.enrichment_coverage_pct}% (not independent field-by-field verification)`,
     `Total monetary sanctions: ${formatCurrency(meta.monetary_sanctions_total_usd)}`,
     `Largest single sanction: ${formatCurrency(meta.largest_single_sanction)}`,
     `Average sanction: ${formatCurrency(meta.avg_sanction)}`,
     `Severity counts: ${Object.entries(meta.severity_counts)
       .map(([severity, count]) => `${severity}=${count}`)
       .join(", ")}`,
+    "Boundary: tracked public records are not usage-adjusted incidence or vendor failure rates, and are not legal advice. Monetary metrics use the importer's USD-parsed fields and require source-currency verification.",
+    dataAttribution(),
   ].join("\n");
 }
 
@@ -112,7 +118,7 @@ export function formatChecklist(caseItems: PublicSanctionCase[]): string {
     checklist.push("", `Relevant control gaps: ${policyGaps.slice(0, 12).join(", ")}`);
   }
 
-  return checklist.join("\n");
+  return [...checklist, "", dataAttribution()].join("\n");
 }
 
 export function formatTrainingExamples(caseItems: PublicSanctionCase[]): string {
@@ -124,6 +130,7 @@ export function formatTrainingExamples(caseItems: PublicSanctionCase[]): string 
         `Outcome: ${item.sanction_types.join(", ") || "Unspecified"}${item.amount_display ? ` / ${item.amount_display}` : ""}`,
         `Lesson: ${item.summary || "Review the source before using this example."}`,
         `Source: ${item.source_url || "Unavailable"}`,
+        dataAttribution(),
       ].join("\n"),
     )
     .join("\n\n");
@@ -272,7 +279,8 @@ function vortexFooter(meta?: PublicMeta): string[] {
   const checked = meta?.last_checked || meta?.last_updated || "not provided";
   return [
     "AI Vortex note",
-    `- Generated with AI Vortex Legal AI Risk | ${PUBLIC_BASE_URL} | Data: Damien Charlotin AI Hallucination Cases Database + AI Vortex enrichment | Corpus checked: ${checked} | Latest tracked decision: ${meta?.latest_record_date || "not provided"}`,
+    `- Generated with AI Vortex Legal AI Risk | ${PUBLIC_BASE_URL} | Corpus checked: ${checked} | Latest tracked decision: ${meta?.latest_record_date || "not provided"}`,
+    `- ${dataAttribution()}`,
   ];
 }
 
@@ -1069,7 +1077,7 @@ export function formatDashboardDeepLink(params: {
   aiTool?: string;
 }): string {
   const { baseUrl, state, court, audience, caseItems, meta, evidence, practiceArea, aiTool } = params;
-  const url = new URL("/dashboard", baseUrl);
+  const url = appUrl("/dashboard", baseUrl);
   if (state) url.searchParams.set("state", state.toUpperCase());
   if (court) url.searchParams.set("court", court);
   if (audience) url.searchParams.set("audience", audience);
@@ -1278,7 +1286,7 @@ function artifactUrl(
     practiceArea?: string;
   },
 ): string {
-  const url = new URL("/api/artifact", baseUrl);
+  const url = appUrl("/api/artifact", baseUrl);
   url.searchParams.set("type", params.type);
   url.searchParams.set("format", params.format);
   if (params.title) url.searchParams.set("title", params.title);
@@ -1302,7 +1310,7 @@ function printUrl(
     practiceArea?: string;
   },
 ): string {
-  const url = new URL("/artifact/print", baseUrl);
+  const url = appUrl("/artifact/print", baseUrl);
   url.searchParams.set("type", params.type);
   if (params.title) url.searchParams.set("title", params.title);
   if (params.audience) url.searchParams.set("audience", params.audience);
@@ -1323,7 +1331,7 @@ function dashboardUrl(
     practiceArea?: string;
   },
 ): string {
-  const url = new URL("/dashboard", baseUrl);
+  const url = appUrl("/dashboard", baseUrl);
   if (params.state) url.searchParams.set("state", params.state);
   if (params.court) url.searchParams.set("court", params.court);
   if (params.audience) url.searchParams.set("audience", params.audience);
@@ -1341,7 +1349,7 @@ function mapUrl(
     aiTool?: string;
   },
 ): string {
-  const url = new URL("/map", baseUrl);
+  const url = appUrl("/map", baseUrl);
   url.searchParams.set("metric", "cases");
   if (params.state) url.searchParams.set("states", params.state);
   if (params.court) url.searchParams.set("court", params.court);

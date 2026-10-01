@@ -32,6 +32,11 @@ export function publicUrl(path = "") {
   return `${PUBLIC_BASE_URL}/${path.replace(/^\/+/, "")}`;
 }
 
+/** Resolve an app-relative path without discarding the deployment base path. */
+export function appUrl(path: string, baseUrl = PUBLIC_BASE_URL): URL {
+  return new URL(path.replace(/^\/+/, ""), `${baseUrl.replace(/\/+$/, "")}/`);
+}
+
 export function assetUrl(path: string) {
   return `${PUBLIC_BASE_PATH}/${path.replace(/^\/+/, "")}`;
 }

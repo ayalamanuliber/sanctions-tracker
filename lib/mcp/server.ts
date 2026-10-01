@@ -4,7 +4,7 @@ import { z } from "zod";
 import sanctionsRaw from "@/data/sanctions.json";
 import metaRaw from "@/data/meta.json";
 import { matchesCourt, matchesTool } from "@/lib/filtering";
-import { publicUrl } from "@/lib/site";
+import { appUrl, publicUrl } from "@/lib/site";
 import {
   formatCase,
   formatChecklist,
@@ -1038,7 +1038,7 @@ export function createMcpServer(): McpServer {
       },
     },
     async ({ title, court, ai_tools }) => {
-      const url = new URL("/api/artifact", publicBaseUrl);
+      const url = appUrl("/api/artifact", publicBaseUrl);
       url.searchParams.set("type", "ledger");
       url.searchParams.set("format", "csv");
       if (title) url.searchParams.set("title", title);
@@ -1080,7 +1080,7 @@ export function createMcpServer(): McpServer {
     },
     async ({ title, state, court, practice_area, ai_tool, limit }) => {
       const { caseItems, evidence } = resolveContextCases({ state, court, practice_area, ai_tool, limit });
-      const url = new URL("/api/artifact", publicBaseUrl);
+      const url = appUrl("/api/artifact", publicBaseUrl);
       url.searchParams.set("type", "source");
       url.searchParams.set("format", "md");
       url.searchParams.set("title", title);

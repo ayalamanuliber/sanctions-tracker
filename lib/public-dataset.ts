@@ -1,6 +1,7 @@
 import metaRaw from "@/data/meta.json";
 import { LEGAL_RISK_CASES } from "@/lib/cases";
 import { publicUrl } from "@/lib/site";
+import { UPSTREAM_DATABASE } from "@/lib/data-provenance";
 
 const meta = metaRaw as {
   last_checked?: string;
@@ -73,6 +74,7 @@ export const PUBLIC_DATASET_MANIFEST = Object.freeze({
   source_link_coverage_pct: meta.source_link_coverage_pct,
   sha256: PUBLIC_DATASET_CHECKSUM,
   source_register: meta.source_url,
+  upstream_database: UPSTREAM_DATABASE,
   methodology_url: publicUrl("/sources"),
   corrections_url: publicUrl("/submit"),
   json_url: publicUrl("/api/dataset?format=json"),

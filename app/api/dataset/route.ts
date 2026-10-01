@@ -7,6 +7,7 @@ import {
   sourceTier,
   type CaseQuery,
 } from "@/lib/cases";
+import { UPSTREAM_DATABASE } from "@/lib/data-provenance";
 import { attributionStatus } from "@/lib/corpus-analytics";
 import {
   PUBLIC_DATASET_FIELDS,
@@ -61,6 +62,7 @@ export async function GET(request: NextRequest) {
     "Last-Modified": new Date(`${PUBLIC_DATASET_VERSION}T00:00:00Z`).toUTCString(),
     "X-Dataset-Records": String(records.length),
     "X-Dataset-Version": PUBLIC_DATASET_VERSION,
+    Link: `<${UPSTREAM_DATABASE.license_url}>; rel="license"; anchor="${UPSTREAM_DATABASE.url}", <${PUBLIC_DATASET_MANIFEST.manifest_url}>; rel="describedby"`,
   };
   if (format === "json") {
     return NextResponse.json(

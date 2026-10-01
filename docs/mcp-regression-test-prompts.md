@@ -51,9 +51,8 @@ Give us a jurisdiction risk brief for New Jersey.
 Expected:
 - Uses the MCP.
 - Includes evidence note with exact matches, fallback used, source coverage, and tracker last-updated date.
-- Reports 23 NJ cases.
-- Reports date coverage `2025-07-23 to 2026-06-16`.
-- Reports source-link coverage `22/23`.
+- Reports NJ counts, date coverage and source-link coverage from the current validated snapshot.
+- Records the snapshot date; historical fixture values (23 cases and 22/23 source links in June 2026) are not current acceptance targets.
 - Treats D.N.J. cases as federal New Jersey cases.
 - Includes severity mix, failure modes, controls, and next question.
 - Includes source-backed important cases.

@@ -1,23 +1,119 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "76c706d625b23a8ee56b2f03745c82a3670d1cc49ee9f30f93f4f9bff9756a77",
-  "corpus_checked": "2026-10-01",
-  "total_cases": 2097,
+  "dataset_checksum": "40b046750291015b9c010ae3d48542dc29d0c3c7928818d016f2ce840403ecd4",
+  "corpus_checked": "2026-10-02",
+  "total_cases": 2125,
   "tiers": {
-    "index-ready": 2069,
+    "index-ready": 2097,
     "enrichment-ready": 22,
     "research-only": 6
   },
   "by_slug": {
+    "p-m-m-c-g-a-f-m-d-s-h-s-cobro-ordinario-de-sumas-de-dinero-2026-10-01": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "ambrose-v-parlato-2026-09-30": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "ambrose-v-swithin-2026-09-30": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "jackson-v-wells-fargo-bank-n-a-2026-09-30": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "miller-v-colorado-department-of-revenue-2026-09-30": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "nantongo-v-nationwide-mortgage-bankers-inc-2026-09-30": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "sexton-v-department-of-homeless-services-et-al-2026-09-30": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "terrence-jamal-fitch-v-educators-credit-union-and-landmark-credit-union-2026-09-30": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "united-states-v-charles-randall-sorensen-2026-09-30": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "curran-v-mom-s-organic-market-inc-et-al-2026-09-29": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "garcia-v-city-of-monte-vista-colorado-et-al-2026-09-29": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "rhyu-v-frost-2026-09-29": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "tijerino-v-spotify-usa-inc-2026-09-29": {
+      "tier": "enrichment-ready",
+      "score": 75
+    },
     "ahmed-v-minister-of-citizenship-and-immigration-2026-09-28": {
       "tier": "index-ready",
       "score": 80
+    },
+    "anderson-v-wal-mart-associates-inc-2026-09-28": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "orlando-chechitelli-v-etiwanda-school-district-et-al-2026-09-28": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "the-louisiana-community-development-capital-fund-inc-et-al-v-choice-hotels-international-i-2026-09-28": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "verduzco-v-con-agra-foods-packaged-foods-llc-2026-09-28": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "williams-v-dimaanno-et-al-2026-09-28": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "williams-v-federal-aviation-administration-et-al-2026-09-28": {
+      "tier": "index-ready",
+      "score": 85
     },
     "aguilar-v-the-crawford-group-inc-2026-09-25": {
       "tier": "index-ready",
       "score": 85
     },
+    "coyne-v-smurl-2026-09-25": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "adams-v-board-of-trustees-of-the-university-of-illinois-at-chicago-et-al-2026-09-24": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "bourrage-v-sollie-2026-09-24": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "cervantes-v-bianco-2026-09-24": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "chirece-c-v-commissioner-of-social-security-2026-09-24": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "ex-parte-bradley-thomas-2026-09-24": {
       "tier": "index-ready",
       "score": 85
     },
@@ -25,11 +121,27 @@
       "tier": "index-ready",
       "score": 81
     },
+    "robinson-v-dikeland-sewer-district-2026-09-24": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "turner-v-casey-s-retail-company-et-al-2026-09-24": {
+      "tier": "index-ready",
+      "score": 76
+    },
     "lo-v-the-owners-strata-plan-lms4555-2026-09-23": {
       "tier": "index-ready",
       "score": 80
     },
+    "mulqueen-v-coddington-2026-09-23": {
+      "tier": "index-ready",
+      "score": 80
+    },
     "ryan-v-perez-2026-09-23": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "williams-v-wogan-group-llc-d-b-a-chapel-ridge-apartments-of-forrest-city-2026-09-23": {
       "tier": "index-ready",
       "score": 85
     },
@@ -50,8 +162,8 @@
       "score": 76
     },
     "lawand-hill-v-foundation-media-llc-2026-09-22": {
-      "tier": "enrichment-ready",
-      "score": 70
+      "tier": "index-ready",
+      "score": 81
     },
     "posey-v-bushnell-2026-09-22": {
       "tier": "index-ready",

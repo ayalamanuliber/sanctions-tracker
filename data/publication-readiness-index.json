@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "87e91f279f8d24b10966b0b0399678596b10e34dfc51dbe3afefa31fe5665081",
-  "corpus_checked": "2026-10-03",
-  "total_cases": 2125,
+  "dataset_checksum": "003ebce7a076147fbbb04c56fcd429a952411d7b2a7982f373bf9979f91f474a",
+  "corpus_checked": "2026-10-04",
+  "total_cases": 2145,
   "tiers": {
-    "index-ready": 2097,
-    "enrichment-ready": 22,
+    "index-ready": 2115,
+    "enrichment-ready": 24,
     "research-only": 6
   },
   "by_slug": {
@@ -137,6 +137,10 @@
       "tier": "index-ready",
       "score": 80
     },
+    "r-m-v-mohr-2026-09-23": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "ryan-v-perez-2026-09-23": {
       "tier": "index-ready",
       "score": 85
@@ -170,6 +174,10 @@
       "score": 81
     },
     "zhejiang-dingli-machinery-co-ltd-v-united-states-2026-09-22": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "dirir-c-conseil-des-ecoles-publiques-de-l-est-de-l-ontario-2026-09-21": {
       "tier": "index-ready",
       "score": 85
     },
@@ -209,7 +217,15 @@
       "tier": "index-ready",
       "score": 85
     },
+    "in-re-violet-g-2026-09-16": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "lisandrillo-v-palozzi-2026-09-16": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "b-v-v-ramanah-2026-09-15": {
       "tier": "index-ready",
       "score": 85
     },
@@ -236,6 +252,10 @@
     "neill-fraser-v-tasmania-parole-board-2026-09-15": {
       "tier": "index-ready",
       "score": 85
+    },
+    "a2502403-re-2026-09-14": {
+      "tier": "enrichment-ready",
+      "score": 65
     },
     "dey-v-minister-for-immigration-and-citizenship-no-2-2026-09-14": {
       "tier": "index-ready",
@@ -489,6 +509,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "in-the-matter-of-an-investigation-into-implementing-changes-to-the-renewable-energy-object-2026-08-24": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "jack-ferm-v-agritech-properties-et-al-2026-08-24": {
       "tier": "index-ready",
       "score": 81
@@ -508,6 +532,10 @@
     "joseph-m-speranza-v-golden-technologies-inc-2026-08-21": {
       "tier": "index-ready",
       "score": 76
+    },
+    "nationwide-insurance-company-of-florida-et-al-v-oxford-hyperbaric-oxygen-therapy-center-ll-2026-08-21": {
+      "tier": "index-ready",
+      "score": 85
     },
     "unspecified-murder-appeal-las-cruces-area-2026-08-21": {
       "tier": "index-ready",
@@ -541,6 +569,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "a2601612-re-2026-08-19": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "in-re-the-marriage-of-kira-lindsay-and-jamie-alexander-dillon-2026-08-19": {
       "tier": "index-ready",
       "score": 81
@@ -568,6 +600,10 @@
     "gilberto-garcia-perez-v-todd-blanche-et-al-2026-08-18": {
       "tier": "index-ready",
       "score": 81
+    },
+    "imperial-reliance-llc-v-hz-properties-marketing-llc-2026-08-18": {
+      "tier": "index-ready",
+      "score": 85
     },
     "in-re-marriage-of-rebekah-muriel-and-johnathan-david-farris-2026-08-18": {
       "tier": "index-ready",
@@ -677,6 +713,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "suva-v-suva-2026-08-11": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "anish-sam-mathew-v-parv-verma-2026-08-10": {
       "tier": "index-ready",
       "score": 85
@@ -712,6 +752,10 @@
     "wayne-k-smith-sr-v-polk-county-et-al-2026-08-07": {
       "tier": "index-ready",
       "score": 85
+    },
+    "a2501881-re-2026-08-06": {
+      "tier": "index-ready",
+      "score": 81
     },
     "burgess-v-greater-cleveland-regional-transit-authority-2026-08-06": {
       "tier": "index-ready",
@@ -756,6 +800,10 @@
     "san-antonio-independent-school-district-v-laura-becerra-as-next-friend-of-j-c-2026-08-05": {
       "tier": "index-ready",
       "score": 85
+    },
+    "southland-homes-real-estate-and-investment-llc-v-lam-2026-08-05": {
+      "tier": "index-ready",
+      "score": 86
     },
     "ulish-kerry-terrace-booker-iii-v-u-s-bank-national-association-2026-08-05": {
       "tier": "index-ready",
@@ -893,6 +941,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "guedea-v-reno-tahoe-airport-authority-et-al-2026-07-28": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "michael-l-ruiz-v-magellan-financial-insurance-services-1-2026-07-28": {
       "tier": "index-ready",
       "score": 90
@@ -961,6 +1013,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "garciduenas-v-matrix-new-world-engineering-inc-2026-07-23": {
+      "tier": "index-ready",
+      "score": 81
+    },
     "hagan-v-black-diamond-experts-llc-2026-07-23": {
       "tier": "index-ready",
       "score": 85
@@ -1013,6 +1069,10 @@
       "tier": "index-ready",
       "score": 85
     },
+    "goel-v-the-minister-of-citizenship-and-immigration-2026-07-21": {
+      "tier": "index-ready",
+      "score": 80
+    },
     "merritt-v-moore-2026-07-21": {
       "tier": "index-ready",
       "score": 85
@@ -1062,6 +1122,10 @@
       "score": 85
     },
     "giggs-v-michel-dba-soma-md-advanced-medical-aesthetics-2026-07-16": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "in-re-bernardo-romero-2026-07-16": {
       "tier": "index-ready",
       "score": 80
     },
@@ -1129,9 +1193,17 @@
       "tier": "index-ready",
       "score": 90
     },
+    "salvador-guzman-v-lithia-motors-inc-et-al-2026-07-14": {
+      "tier": "enrichment-ready",
+      "score": 65
+    },
     "tekway-inc-v-at-t-services-inc-2026-07-14": {
       "tier": "index-ready",
       "score": 80
+    },
+    "thompson-v-county-of-san-diego-2026-07-14": {
+      "tier": "index-ready",
+      "score": 86
     },
     "appeal-of-pdo-ahuska-joint-venture-llc-2026-07-13": {
       "tier": "index-ready",
@@ -1236,6 +1308,10 @@
     "laxton-construction-pty-ltd-v-ecofit-electrical-pty-ltd-2026-07-07": {
       "tier": "index-ready",
       "score": 76
+    },
+    "penland-v-united-states-2026-07-07": {
+      "tier": "index-ready",
+      "score": 85
     },
     "recurso-de-suplicacion-0005472-2025-2026-07-07": {
       "tier": "index-ready",
@@ -1577,6 +1653,10 @@
       "tier": "index-ready",
       "score": 76
     },
+    "estate-of-rose-boehs-et-al-v-oklahoma-department-of-human-services-et-al-2026-06-12": {
+      "tier": "index-ready",
+      "score": 85
+    },
     "habib-anor-v-secretary-of-state-for-the-home-department-2026-06-12": {
       "tier": "index-ready",
       "score": 85
@@ -1773,7 +1853,7 @@
       "tier": "index-ready",
       "score": 85
     },
-    "lnu-v-blanche-2026-06-03": {
+    "malkeet-lnu-v-blanche-2026-06-03": {
       "tier": "index-ready",
       "score": 81
     },

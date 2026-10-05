@@ -60922,8 +60922,8 @@
     "legal_field_secondary": "administrative"
   },
   {
-    "id": "greenfield-one-iii-gmbh-co-kg-v-chaney-2025-12-18",
-    "case_name": "Greenfield One III Gmbh & Co. Kg v. Chaney",
+    "id": "anonymized-discovery-record-c566fb3413eb",
+    "case_name": "Anonymized discovery-order record",
     "court": "Delaware Ch.",
     "state": "DE",
     "state_display": "DE",
@@ -60932,10 +60932,10 @@
     "jurisdiction": "state",
     "date": "2025-12-18",
     "party": "Pro Se Litigant",
-    "ai_tool_used": "AI (implied, unspecified)",
-    "ai_tool_raw": "Implied",
-    "hallucination_items": "Fabricated: Case Law | Defendant cited Hudson v. Wesley Coll., 2018 WL 2435541, at 3 (Del. Ch. May 30, 2018), which the court found does not exist and called erroneous (likely AI-generated).",
-    "outcome": "Warning",
+    "ai_tool_used": "Unidentified",
+    "ai_tool_raw": "Unidentified",
+    "hallucination_items": "Nonexistent authority cited in a filing. Actual AI use is not established by the available court comments.",
+    "outcome": "Discovery compelled; sanctions denied without prejudice; citation warning",
     "amount": null,
     "amount_display": "",
     "monetary_raw": "",
@@ -60944,9 +60944,9 @@
       "warning"
     ],
     "alleged": false,
-    "summary": "Fabricated: Case Law | Defendant cited Hudson v. Wesley Coll., 2018 WL 2435541, at 3 (Del. Ch. May 30, 2018), which the court found does not exist and called erroneous (likely AI-generated). Outcome: Warning.",
-    "source_url": "https://www.damiencharlotin.com/documents/2341/14_-_Greenfield_One_III_Gmbh_And_Co_Kg_v_Chaney.pdf",
-    "source_name": "Damien Charlotin AI Hallucination Cases Database",
+    "summary": "The court granted a motion to compel discovery and denied sanctions without prejudice. It identified a nonexistent citation and required greater care in future filings. The available court comments mention a separate future generative-AI order; they do not establish actual AI use. The reproduction’s probable-AI statement is an editorial note.",
+    "source_url": "",
+    "source_name": "Court-order reproduction (identifiers withheld)",
     "severity": "low",
     "policy_gap_ids": [
       "citation-verification"
@@ -60957,10 +60957,10 @@
       "contract",
       "trial"
     ],
-    "lesson": "",
+    "lesson": "Verify that each cited authority exists before relying on it in a filing.",
     "enriched": true,
     "enriched_at": "2026-10-05",
-    "confidence": "high",
+    "confidence": "medium",
     "reviewed": false,
     "reviewed_at": null,
     "wiki_notes": "",

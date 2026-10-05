@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { readFileSync, renameSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { buildPublicationReadinessIndex, buildPublicationReadinessReport } from "../lib/publication-readiness.mjs";
+import { publicCsvRows, publicCorpusRecords } from "../lib/public-record-controls.mjs";
 
 const repoRoot = path.resolve(import.meta.dirname, "..");
 const cliArgs = process.argv.slice(2);
@@ -573,7 +574,7 @@ const existing = JSON.parse(readFileSync(existingPath, "utf8"));
 const existingByKey = new Map(existing.map((item) => [`${slugify(item.case_name)}|${item.date}`, item]));
 
 const sourceText = await readSource();
-const rows = parseCsv(sourceText);
+const rows = publicCsvRows(parseCsv(sourceText));
 const datedRows = rows.filter((row) => row["Case Name"] && row.Date);
 const missingDateRows = rows.filter((row) => row["Case Name"] && !row.Date);
 const invalidDateRows = datedRows.filter(
@@ -607,7 +608,7 @@ if (validRows.length < Math.floor(existing.length * 0.9)) {
   );
 }
 
-const cases = validRows
+const cases = publicCorpusRecords(validRows
   .map((row) => {
     const key = `${slugify(row["Case Name"])}|${row.Date}`;
     const previous = existingByKey.get(key);
@@ -670,7 +671,7 @@ const cases = validRows
       legal_field_secondary: row["Legal Field Secondary"],
     };
   })
-  .sort((a, b) => b.date.localeCompare(a.date) || a.case_name.localeCompare(b.case_name));
+  .sort((a, b) => b.date.localeCompare(a.date) || a.case_name.localeCompare(b.case_name)));
 
 const sourceLinkedCount = cases.filter((item) => item.source_url).length;
 const sourceLinkCoveragePct = cases.length

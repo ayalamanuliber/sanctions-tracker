@@ -10,10 +10,10 @@
   "invalid_dates": 0,
   "future_dates": 0,
   "duplicate_keys": 0,
-  "source_linked_count": 2144,
-  "source_link_coverage_pct": 99.8,
+  "source_linked_count": 2143,
+  "source_link_coverage_pct": 99.7,
   "latest_record_date": "2026-10-01",
   "latest_record_name": "P. M. M. c/ G. A., F. M. d. S.H. s/ cobro ordinario de sumas de dinero",
-  "dataset_checksum": "d88b9657167e083ed97e1cae5bf8b1d3ca8482f9e1ea090c99f9fd512431d461",
+  "dataset_checksum": "c60722bb14ca1f1238cef6c08492f03ff9ae03ed7f8c6fcba60ef626e576b7ba",
   "status": "validated"
 }

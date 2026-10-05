@@ -1,24 +1,24 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "d88b9657167e083ed97e1cae5bf8b1d3ca8482f9e1ea090c99f9fd512431d461",
+  "dataset_checksum": "c60722bb14ca1f1238cef6c08492f03ff9ae03ed7f8c6fcba60ef626e576b7ba",
   "corpus_checked": "2026-10-05",
   "total_cases": 2149,
   "total_assessments": 2149,
   "tiers": {
-    "index-ready": 2115,
+    "index-ready": 2114,
     "enrichment-ready": 28,
-    "research-only": 6
+    "research-only": 7
   },
   "issue_counts": {
     "court-not-recorded": 1,
     "discrepancy-detail-not-recorded": 114,
-    "operational-lesson-not-recorded": 1418,
+    "operational-lesson-not-recorded": 1417,
     "outcome-not-recorded": 439,
     "publication-review-pending": 2149,
-    "source-link-missing": 5,
+    "source-link-missing": 6,
     "specific-ai-tool-not-established": 1905,
     "summary-missing": 9,
-    "summary-needs-detail": 850,
+    "summary-needs-detail": 849,
     "summary-too-brief": 19
   },
   "records": [
@@ -126203,14 +126203,14 @@
       ]
     },
     {
-      "id": "greenfield-one-iii-gmbh-co-kg-v-chaney-2025-12-18",
-      "slug": "greenfield-one-iii-gmbh-co-kg-v-chaney-2025-12-18",
-      "score": 81,
+      "id": "anonymized-discovery-record-c566fb3413eb",
+      "slug": "anonymized-discovery-record-c566fb3413eb",
+      "score": 70,
       "maximum_score": 100,
-      "tier": "index-ready",
-      "index_eligible": true,
-      "source_eligible": true,
-      "summary_length": 208,
+      "tier": "research-only",
+      "index_eligible": false,
+      "source_eligible": false,
+      "summary_length": 344,
       "score_breakdown": [
         {
           "criterion": "case_name",
@@ -126234,7 +126234,7 @@
         },
         {
           "criterion": "source_url",
-          "points": 20,
+          "points": 0,
           "maximum": 20
         },
         {
@@ -126244,7 +126244,7 @@
         },
         {
           "criterion": "summary",
-          "points": 6,
+          "points": 10,
           "maximum": 10
         },
         {
@@ -126269,7 +126269,7 @@
         },
         {
           "criterion": "lesson",
-          "points": 0,
+          "points": 5,
           "maximum": 5
         },
         {
@@ -126280,22 +126280,16 @@
       ],
       "missing_fields": [
         {
-          "field": "summary",
-          "code": "summary-needs-detail",
-          "impact": "improvement",
-          "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+          "field": "source_url",
+          "code": "source-link-missing",
+          "impact": "blocking",
+          "remediation": "Add a stable primary, docket, or clearly labeled secondary source URL."
         },
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
           "impact": "context",
           "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
-        },
-        {
-          "field": "lesson",
-          "code": "operational-lesson-not-recorded",
-          "impact": "improvement",
-          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
         },
         {
           "field": "reviewed",

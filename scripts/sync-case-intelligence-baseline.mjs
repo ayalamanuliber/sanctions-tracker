@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { publicCorpusRecords, publicIntelligenceRecords } from "../lib/public-record-controls.mjs";
 
 const ROOT = process.cwd();
 const CASES_PATH = path.join(ROOT, "data", "cases.json");
@@ -146,7 +147,7 @@ function baseline(record) {
   };
 }
 
-const cases = JSON.parse(fs.readFileSync(CASES_PATH, "utf8"));
+const cases = publicCorpusRecords(JSON.parse(fs.readFileSync(CASES_PATH, "utf8")));
 const existing = fs.existsSync(INTELLIGENCE_PATH)
   ? JSON.parse(fs.readFileSync(INTELLIGENCE_PATH, "utf8"))
   : [];
@@ -181,7 +182,7 @@ for (const record of cases) {
   preserved += 1;
 }
 
-const serialized = `${JSON.stringify(next, null, 2)}\n`;
+const serialized = `${JSON.stringify(publicIntelligenceRecords(next), null, 2)}\n`;
 const temporary = `${INTELLIGENCE_PATH}.tmp-${process.pid}`;
 fs.writeFileSync(temporary, serialized);
 JSON.parse(fs.readFileSync(temporary, "utf8"));

@@ -111540,34 +111540,31 @@
     }
   },
   {
-    "id": "greenfield-one-iii-gmbh-co-kg-v-chaney-2025-12-18",
-    "slug": "greenfield-one-iii-gmbh-co-kg-v-chaney-2025-12-18",
-    "case_name": "Greenfield One III Gmbh & Co. Kg v. Chaney",
+    "id": "anonymized-discovery-record-c566fb3413eb",
+    "slug": "anonymized-discovery-record-c566fb3413eb",
+    "case_name": "Anonymized discovery-order record",
     "classification": "adjudicated",
     "severity": "low",
-    "summary": "In a discovery dispute before the Delaware Court of Chancery, the court granted the plaintiffs' motion to compel discovery against a pro se defendant. The court ordered the defendant to produce financial records, correspondence, and interrogatory responses related to his business activities and the company's dissolution. During the proceedings, the court noted that the defendant included an erroneous, non-existent citation (Hudson v. Wesley Coll.) in his filing, which the court attributed to the likely use of generative AI. The court declined to impose immediate sanctions or fees, citing the defendant's recent transition to pro se status, but issued a formal warning regarding the accuracy of future filings and the use of generative AI tools.",
-    "why_it_matters": "This record documents a Pro Se Litigant filing issue in Delaware Ch., with the listed outcome: Warning.",
-    "judicial_reasoning": "Fabricated: Case Law | Defendant cited Hudson v. Wesley Coll., 2018 WL 2435541, at 3 (Del. Ch. May 30, 2018), which the court found does not exist and called erroneous (likely AI-generated).",
-    "decision_context": "The record concerns whether authorities presented to the decision-maker existed and could be verified. The tracked outcome is Warning; the linked source controls the precise reasoning.",
+    "summary": "The court granted a motion to compel discovery and denied sanctions without prejudice. It identified a nonexistent citation and required greater care in future filings. The available court comments mention a separate future generative-AI order; they do not establish actual AI use. The reproduction’s probable-AI statement is an editorial note.",
+    "direct_answer": "The court granted a motion to compel discovery and denied sanctions without prejudice. It identified a nonexistent citation and required greater care in future filings. The available court comments mention a separate future generative-AI order; they do not establish actual AI use. The reproduction’s probable-AI statement is an editorial note.",
+    "why_it_matters": "A nonexistent citation requires verification and correction regardless of whether an AI tool was used.",
+    "judicial_reasoning": "The court identified a nonexistent citation and directed greater care in future filings. It declined sanctions and fees at that stage while compelling discovery.",
+    "decision_context": "A discovery dispute involving an unrepresented litigant.",
     "practical_implications": [
-      "Verify each cited authority, quotation, and proposition against the underlying source before filing."
+      "Check each cited authority against an authoritative legal source before filing.",
+      "Distinguish a court finding from a reproduction publisher’s editorial note."
     ],
-    "evidence_boundary": "Retained unchanged after audit: the existing summary is source-specific, non-placeholder, and supported by the recorded source link. Read the underlying source before relying on it for legal advice or a filing.",
+    "evidence_boundary": "Party and source-document identifiers are withheld in this public record. The available reproduction supports the discovery disposition and citation warning; it does not establish actual AI use. A separate future AI order is mentioned but has not been verified here.",
     "verified_fields": [
-      "case_name",
       "court",
       "date",
-      "party",
-      "ai_tool_used",
-      "hallucination_items",
-      "outcome",
-      "source_url",
-      "procedural_posture"
+      "procedural_posture",
+      "outcome"
     ],
     "source": {
-      "url": "https://www.damiencharlotin.com/documents/2341/14_-_Greenfield_One_III_Gmbh_And_Co_Kg_v_Chaney.pdf",
-      "name": "Damien Charlotin AI Hallucination Cases Database",
-      "tier": "publisher-archive"
+      "url": "",
+      "name": "Court-order reproduction (identifiers withheld)",
+      "tier": "missing"
     },
     "record": {
       "court": "Delaware Ch.",
@@ -111577,8 +111574,8 @@
       "circuit": "3rd Circuit",
       "judge": null,
       "date": "2025-12-18",
-      "ai_tool": "AI (implied, unspecified)",
-      "outcome": "Warning",
+      "ai_tool": "Unidentified",
+      "outcome": "Discovery compelled; sanctions denied without prejudice; citation warning",
       "amount": null,
       "professional_sanction": "No",
       "tags": [
@@ -111593,40 +111590,42 @@
     },
     "publication": {
       "ready": true,
-      "agent_status": "enriched",
+      "agent_status": "publisher-anonymized",
       "blocked_reason": null
     },
-    "direct_answer": "The Delaware Court of Chancery issued a formal warning to a pro se defendant after he included a non-existent case citation in his filing, which the court identified as likely generated by AI. The court ordered the defendant to comply with discovery obligations and cautioned that future failures would result in renewed motions for sanctions.",
-    "procedural_posture": "The court granted the plaintiffs' motion to compel discovery and denied the request for sanctions without prejudice, while issuing a formal warning to the pro se defendant regarding his filing practices.",
-    "recorded_tool": "AI (unspecified)",
-    "outcome_summary": "The court granted the motion to compel and issued a formal warning to the defendant regarding his discovery compliance and the accuracy of his legal citations.",
+    "procedural_posture": "The discovery motion was granted; the request for sanctions was denied without prejudice.",
+    "ai_attribution_status": "unspecified",
+    "recorded_tool": "Unidentified",
+    "outcome_summary": "Discovery compelled; sanctions denied without prejudice; citation warning",
     "uncertainties": [
-      "The specific AI tool used by the defendant remains unidentified."
+      "Actual AI use is unverified.",
+      "The separate AI order referenced by the court has not been verified here."
     ],
     "evidence_notes": [
       {
         "field": "outcome",
-        "basis": "The court granted the motion to compel and issued a warning.",
-        "locator": "p. 3"
+        "basis": "Court comments grant discovery relief and deny sanctions without prejudice.",
+        "locator": "reproduction pp. 2–3"
       },
       {
         "field": "judicial_reasoning",
-        "basis": "The court identified the citation as non-existent and likely AI-generated.",
-        "locator": "p. 3"
+        "basis": "Court comments identify a nonexistent citation and mention a separate future AI order.",
+        "locator": "reproduction p. 3"
       },
       {
-        "field": "recorded_tool",
-        "basis": "The court noted the likely use of generative AI tools.",
-        "locator": "p. 1"
+        "field": "ai_attribution_status",
+        "basis": "Probable AI generation is stated in the reproduction’s editorial note, rather than as a finding in the available court comments.",
+        "locator": "reproduction p. 1, editorial note"
       }
     ],
     "evidence_review": {
-      "status": "primary-document-verified",
-      "confidence": "high",
-      "reviewed_at": "2026-07-27T19:21:51.970Z",
-      "prompt_version": "case-intelligence-v7",
+      "status": "primary-document-limited",
+      "confidence": "medium",
+      "reviewed_at": "2026-10-05",
+      "prompt_version": "publisher-update",
       "limitations": [
-        "The specific AI tool used by the defendant remains unidentified."
+        "Underlying reproduction is not redistributed or directly linked in this anonymous record.",
+        "Actual AI use and the separate AI order are not established by the available material."
       ]
     }
   },

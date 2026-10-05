@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "identity_sha256": [
+    "f27e831db6b6fade678ccae9be037c0b49471f524867b90e747a293d959282a6",
+    "c3a9fa8f9ef39eaaca4d245d48772d79041b7c2f9d1d096558e707e49c5d958e",
+    "94fd44298cadfaa057e864242ce1c85bc6a73b74ab1dcd8bef08270ce4d2d01c",
+    "fecd542373110e3b1a0930420143455fdd4594f23933c6c93a74aa25b7c4a488",
+    "5c49a744c71785fb1b74dc3dc0be67abd5d03ba8e7400f7df00a3dd45f7713e2",
+    "ac71d74cd94d8c3a6d1ac1b187919c4f8563510e741ec6d0745e6bd0779ba9fa",
+    "73ccc32702d4317e3e891736f03974bcb1977d4f340fbac9e2dcdfaed22359a8",
+    "db7a5bec2bb897c01a7d3da115b1225866e1142666a71d62dda4c09d0386e5ec",
+    "721ab1ce7349df9eaf2ee746fdc936176acee0d6f27c4033c91495e68d08a980"
+  ],
+  "matter_key_sha256": [
+    "a0c991b200399266132dfc259d5e2d2b2a2327d84f09b80dc625d0ac46429a08",
+    "90232fb088dfd35621acbd919b5134b895d85d16a9c399dea084d86dd4928e72"
+  ],
+  "source_identity_sha256": [
+    "644c2a45380c08efb66ab407d44e8b5fd23cbf3fe565f43246bc17563239eff5",
+    "73935336c9a2d98322293ef82ad965152e8fe96d28c3d8581f5e8df71ca8c1d9"
+  ],
+  "asset_sha256": [
+    "15ad4b7741d47aca34108b36568668a6d33aa7740e87336bf877b0cbfec43131"
+  ],
+  "record": {
+    "id": "anonymized-discovery-record-c566fb3413eb",
+    "case_name": "Anonymized discovery-order record",
+    "court": "Delaware Ch.",
+    "state": "DE",
+    "state_display": "DE",
+    "country": "US",
+    "circuit": "3rd Circuit",
+    "jurisdiction": "state",
+    "date": "2025-12-18",
+    "party": "Pro Se Litigant",
+    "ai_tool_used": "Unidentified",
+    "ai_tool_raw": "Unidentified",
+    "hallucination_items": "Nonexistent authority cited in a filing. Actual AI use is not established by the available court comments.",
+    "outcome": "Discovery compelled; sanctions denied without prejudice; citation warning",
+    "amount": null,
+    "amount_display": "",
+    "monetary_raw": "",
+    "professional_sanction": "No",
+    "sanction_types": [
+      "warning"
+    ],
+    "alleged": false,
+    "summary": "The court granted a motion to compel discovery and denied sanctions without prejudice. It identified a nonexistent citation and required greater care in future filings. The available court comments mention a separate future generative-AI order; they do not establish actual AI use. The reproduction’s probable-AI statement is an editorial note.",
+    "source_url": "",
+    "source_name": "Court-order reproduction (identifiers withheld)",
+    "severity": "low",
+    "policy_gap_ids": [
+      "citation-verification"
+    ],
+    "tags": [
+      "pro-se",
+      "fake-citations",
+      "contract",
+      "trial"
+    ],
+    "lesson": "Verify that each cited authority exists before relying on it in a filing.",
+    "enriched": true,
+    "enriched_at": "2026-10-05",
+    "confidence": "medium",
+    "reviewed": false,
+    "reviewed_at": null,
+    "wiki_notes": "",
+    "related_case_ids": [],
+    "legal_field_primary": "contract",
+    "legal_field_secondary": "not addressed"
+  },
+  "intelligence": {
+    "id": "anonymized-discovery-record-c566fb3413eb",
+    "slug": "anonymized-discovery-record-c566fb3413eb",
+    "case_name": "Anonymized discovery-order record",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "The court granted a motion to compel discovery and denied sanctions without prejudice. It identified a nonexistent citation and required greater care in future filings. The available court comments mention a separate future generative-AI order; they do not establish actual AI use. The reproduction’s probable-AI statement is an editorial note.",
+    "direct_answer": "The court granted a motion to compel discovery and denied sanctions without prejudice. It identified a nonexistent citation and required greater care in future filings. The available court comments mention a separate future generative-AI order; they do not establish actual AI use. The reproduction’s probable-AI statement is an editorial note.",
+    "why_it_matters": "A nonexistent citation requires verification and correction regardless of whether an AI tool was used.",
+    "judicial_reasoning": "The court identified a nonexistent citation and directed greater care in future filings. It declined sanctions and fees at that stage while compelling discovery.",
+    "decision_context": "A discovery dispute involving an unrepresented litigant.",
+    "practical_implications": [
+      "Check each cited authority against an authoritative legal source before filing.",
+      "Distinguish a court finding from a reproduction publisher’s editorial note."
+    ],
+    "evidence_boundary": "Party and source-document identifiers are withheld in this public record. The available reproduction supports the discovery disposition and citation warning; it does not establish actual AI use. A separate future AI order is mentioned but has not been verified here.",
+    "verified_fields": [
+      "court",
+      "date",
+      "procedural_posture",
+      "outcome"
+    ],
+    "source": {
+      "url": "",
+      "name": "Court-order reproduction (identifiers withheld)",
+      "tier": "missing"
+    },
+    "record": {
+      "court": "Delaware Ch.",
+      "jurisdiction": "state",
+      "state": "DE",
+      "country": "US",
+      "circuit": "3rd Circuit",
+      "judge": null,
+      "date": "2025-12-18",
+      "ai_tool": "Unidentified",
+      "outcome": "Discovery compelled; sanctions denied without prejudice; citation warning",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "contract",
+        "trial"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": true,
+      "agent_status": "publisher-anonymized",
+      "blocked_reason": null
+    },
+    "procedural_posture": "The discovery motion was granted; the request for sanctions was denied without prejudice.",
+    "ai_attribution_status": "unspecified",
+    "recorded_tool": "Unidentified",
+    "outcome_summary": "Discovery compelled; sanctions denied without prejudice; citation warning",
+    "uncertainties": [
+      "Actual AI use is unverified.",
+      "The separate AI order referenced by the court has not been verified here."
+    ],
+    "evidence_notes": [
+      {
+        "field": "outcome",
+        "basis": "Court comments grant discovery relief and deny sanctions without prejudice.",
+        "locator": "reproduction pp. 2–3"
+      },
+      {
+        "field": "judicial_reasoning",
+        "basis": "Court comments identify a nonexistent citation and mention a separate future AI order.",
+        "locator": "reproduction p. 3"
+      },
+      {
+        "field": "ai_attribution_status",
+        "basis": "Probable AI generation is stated in the reproduction’s editorial note, rather than as a finding in the available court comments.",
+        "locator": "reproduction p. 1, editorial note"
+      }
+    ],
+    "evidence_review": {
+      "status": "primary-document-limited",
+      "confidence": "medium",
+      "reviewed_at": "2026-10-05",
+      "prompt_version": "publisher-update",
+      "limitations": [
+        "Underlying reproduction is not redistributed or directly linked in this anonymous record.",
+        "Actual AI use and the separate AI order are not established by the available material."
+      ]
+    }
+  },
+  "csv_row": {
+    "Case Name": "Anonymized discovery-order record",
+    "Court": "Delaware Ch.",
+    "State(s)": "USA",
+    "Date": "2025-12-18",
+    "Party(ies)": "Pro Se Litigant",
+    "AI Tool": "Unidentified",
+    "Hallucination Items": "Nonexistent authority cited in a filing. Actual AI use is not established by the available court comments.",
+    "Outcome": "Discovery compelled; sanctions denied without prejudice; citation warning",
+    "Monetary Penalty": "",
+    "Professional Sanction": "No",
+    "Alleged": "No",
+    "Vendor Disputed": "No",
+    "Vendor Disputed Explanation": "",
+    "Pointer": "",
+    "Source": "",
+    "Details": "",
+    "Legal Field Primary": "contract",
+    "Legal Field Secondary": "not addressed"
+  },
+  "identity_word_lengths": [
+    2,
+    3,
+    8,
+    11
+  ]
+}

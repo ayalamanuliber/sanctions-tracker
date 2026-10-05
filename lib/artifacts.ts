@@ -1,12 +1,13 @@
 import { dataAttribution } from "@/lib/data-provenance";
 import sanctionsRaw from "@/data/sanctions.json";
+import { publicCorpusRecords } from "@/lib/public-record-controls.mjs";
 import metaRaw from "@/data/meta.json";
 import { matchesCourt, matchesTool } from "@/lib/filtering";
 import type { PublicSanctionCase } from "@/lib/mcp/types";
 
 type ArtifactFormat = "md" | "markdown" | "html" | "doc" | "word" | "pdf" | "pdf-ready" | "word-ready" | "csv" | "xlsx" | "docx";
 
-const cases = (sanctionsRaw as unknown as PublicSanctionCase[]).slice().sort((a, b) => b.date.localeCompare(a.date));
+const cases = (publicCorpusRecords(sanctionsRaw) as PublicSanctionCase[]).slice().sort((a, b) => b.date.localeCompare(a.date));
 const meta = metaRaw as {
   last_updated: string;
   last_checked?: string;
@@ -611,16 +612,16 @@ export function markdownToBasicPdf(markdown: string): Uint8Array {
     const content = ["BT", "/F1 10 Tf", "50 760 Td", ...page.flatMap((line, lineIndex) => [lineIndex === 0 ? "" : "0 -12 Td", `(${pdfEscape(line)}) Tj`]), "ET"].join("\n");
     const contentId = 4 + index * 2;
     objects.push(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 ${fontId} 0 R >> >> /Contents ${contentId} 0 R >>`);
-    objects.push(`<< /Length ${content.length} >>\nstream\n${content}\nendstream`);
+    objects.push(`<< /Length ${Buffer.byteLength(content, "utf8")} >>\nstream\n${content}\nendstream`);
   });
   objects.push("<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>");
   let pdf = "%PDF-1.4\n";
   const offsets = [0];
   objects.forEach((object, index) => {
-    offsets.push(pdf.length);
+    offsets.push(Buffer.byteLength(pdf, "utf8"));
     pdf += `${index + 1} 0 obj\n${object}\nendobj\n`;
   });
-  const xref = pdf.length;
+  const xref = Buffer.byteLength(pdf, "utf8");
   pdf += `xref\n0 ${objects.length + 1}\n0000000000 65535 f \n`;
   offsets.slice(1).forEach((offset) => {
     pdf += `${String(offset).padStart(10, "0")} 00000 n \n`;

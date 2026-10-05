@@ -2,6 +2,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 
 import sanctionsRaw from "@/data/sanctions.json";
+import { publicCorpusRecords, isRetiredRecordIdentity } from "@/lib/public-record-controls.mjs";
 import metaRaw from "@/data/meta.json";
 import { matchesCourt, matchesTool } from "@/lib/filtering";
 import { appUrl, publicUrl } from "@/lib/site";
@@ -32,7 +33,7 @@ import type { EvidenceNoteInput } from "./format";
 import { filterCases, limitCases } from "./query";
 import type { PublicSanctionCase } from "./types";
 
-const sanctions = (sanctionsRaw as unknown as PublicSanctionCase[])
+const sanctions = (publicCorpusRecords(sanctionsRaw) as PublicSanctionCase[])
   .slice()
   .sort((a, b) => b.date.localeCompare(a.date));
 
@@ -252,7 +253,7 @@ export function createMcpServer(): McpServer {
       if (!caseItem) {
         return {
           isError: true,
-          content: [{ type: "text", text: `Case not found: ${case_id}` }],
+          content: [{ type: "text", text: isRetiredRecordIdentity(case_id) ? "This record identifier is no longer published." : `Case not found: ${case_id}` }],
         };
       }
 
@@ -285,7 +286,7 @@ export function createMcpServer(): McpServer {
             text:
               results.length > 0
                 ? results.map(formatCase).join("\n\n")
-                : `No cases matched "${query}".`,
+                : "No cases matched the provided query.",
           },
         ],
       };
@@ -385,7 +386,7 @@ export function createMcpServer(): McpServer {
             text:
               matches.length > 0
                 ? formatTrainingExamples(matches)
-                : `No training examples matched "${query}".`,
+                : "No training examples matched the provided query.",
           },
         ],
       };

@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "d88b9657167e083ed97e1cae5bf8b1d3ca8482f9e1ea090c99f9fd512431d461",
+  "dataset_checksum": "c60722bb14ca1f1238cef6c08492f03ff9ae03ed7f8c6fcba60ef626e576b7ba",
   "corpus_checked": "2026-10-05",
   "total_cases": 2149,
   "tiers": {
-    "index-ready": 2115,
+    "index-ready": 2114,
     "enrichment-ready": 28,
-    "research-only": 6
+    "research-only": 7
   },
   "by_slug": {
     "p-m-m-c-g-a-f-m-d-s-h-s-cobro-ordinario-de-sumas-de-dinero-2026-10-01": {
@@ -5073,9 +5073,9 @@
       "tier": "index-ready",
       "score": 81
     },
-    "greenfield-one-iii-gmbh-co-kg-v-chaney-2025-12-18": {
-      "tier": "index-ready",
-      "score": 81
+    "anonymized-discovery-record-c566fb3413eb": {
+      "tier": "research-only",
+      "score": 70
     },
     "jpmorgan-chase-bank-na-v-christina-buenzli-2025-12-18": {
       "tier": "index-ready",

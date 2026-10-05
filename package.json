@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prebuild": "node scripts/apply-public-record-controls.mjs && node scripts/test-public-record-controls.mjs",
     "dev": "next dev",
     "build": "npm run validate:case-redirects && next build",
     "start": "next start",

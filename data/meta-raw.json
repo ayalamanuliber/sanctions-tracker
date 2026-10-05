@@ -5,10 +5,10 @@
   "latest_record_date": "2026-10-01",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
   "source_record_count": 2150,
-  "source_linked_count": 2144,
-  "source_link_coverage_pct": 99.8,
+  "source_linked_count": 2143,
+  "source_link_coverage_pct": 99.7,
   "records_missing_date": 1,
-  "dataset_checksum": "d88b9657167e083ed97e1cae5bf8b1d3ca8482f9e1ea090c99f9fd512431d461",
+  "dataset_checksum": "c60722bb14ca1f1238cef6c08492f03ff9ae03ed7f8c6fcba60ef626e576b7ba",
   "total_cases": 2149,
   "us_cases": 1472,
   "us_adjudicated": 1465,
@@ -23134,16 +23134,16 @@
           "source_url": "https://www.damiencharlotin.com/documents/1388/Re_IMO_the_Estate_of_Joseph_L_Weddington_Jr_deceased.pdf"
         },
         {
-          "id": "greenfield-one-iii-gmbh-co-kg-v-chaney-2025-12-18",
-          "name": "Greenfield One III Gmbh & Co. Kg v. Chaney",
+          "id": "anonymized-discovery-record-c566fb3413eb",
+          "name": "Anonymized discovery-order record",
           "court": "Delaware Ch.",
           "judge": "",
           "date": "2025-12-18",
           "amount": null,
           "amount_display": "",
           "severity": "low",
-          "tool": "AI (implied, unspecified)",
-          "summary": "Fabricated: Case Law | Defendant cited Hudson v. Wesley Coll., 2018 WL 2435541, at 3 (Del. Ch. May 30, 2018), which the court found does not exist and called erroneous (likely AI-generated). Outcome: Warning.",
+          "tool": "Unidentified",
+          "summary": "The court granted a motion to compel discovery and denied sanctions without prejudice. It identified a nonexistent citation and required greater care in future filings. The available court comments mention a separate future generative-AI order; they do not establish actual AI use. The reproduction’s probable-AI statement is an editorial note.",
           "sanction_types": [
             "warning"
           ],
@@ -23153,7 +23153,7 @@
             "contract",
             "trial"
           ],
-          "source_url": "https://www.damiencharlotin.com/documents/2341/14_-_Greenfield_One_III_Gmbh_And_Co_Kg_v_Chaney.pdf"
+          "source_url": ""
         },
         {
           "id": "dorsey-v-jones-2025-12-16",
@@ -25747,8 +25747,8 @@
     "2026": 1217
   },
   "by_tool": {
-    "AI (implied, unspecified)": 1441,
-    "Unidentified": 463,
+    "AI (implied, unspecified)": 1440,
+    "Unidentified": 464,
     "Lex": 1,
     "Harvey": 1,
     "Lexis AI": 1,

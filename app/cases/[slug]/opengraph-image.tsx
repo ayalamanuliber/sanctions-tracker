@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { getCaseBySlug } from "@/lib/cases";
+import { ANONYMOUS_RECORD_ID } from "@/lib/public-record-controls.mjs";
 
 export const alt = "AI Vortex legal AI risk case record";
 export const size = { width: 1200, height: 630 };
@@ -15,6 +16,7 @@ export default async function OpenGraphImage({
   const court = item?.court || "Public legal record";
   const date = item?.date || "";
   const impact = item?.severity?.replace("-", " ") || "tracked";
+  const anonymized = item?.id === ANONYMOUS_RECORD_ID;
 
   return new ImageResponse(
     <div
@@ -53,7 +55,7 @@ export default async function OpenGraphImage({
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
         <span style={{ color: "#f0ad2c", fontSize: 17, fontWeight: 800, letterSpacing: "0.14em" }}>
-          SOURCE-LINKED PUBLIC RECORD
+          {anonymized ? "ANONYMIZED PUBLIC RECORD" : "SOURCE-LINKED PUBLIC RECORD"}
         </span>
         <div
           style={{
@@ -82,7 +84,7 @@ export default async function OpenGraphImage({
           fontSize: 16,
         }}
       >
-        <span>Search the precedent · inspect the source · share the record</span>
+        <span>{anonymized ? "Source identifiers withheld · read the evidence boundary" : "Search the precedent · inspect the source · share the record"}</span>
         <span>aivortex.io/legal-ai-risk</span>
       </div>
     </div>,

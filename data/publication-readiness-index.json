@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "003ebce7a076147fbbb04c56fcd429a952411d7b2a7982f373bf9979f91f474a",
-  "corpus_checked": "2026-10-04",
-  "total_cases": 2145,
+  "dataset_checksum": "d88b9657167e083ed97e1cae5bf8b1d3ca8482f9e1ea090c99f9fd512431d461",
+  "corpus_checked": "2026-10-05",
+  "total_cases": 2149,
   "tiers": {
     "index-ready": 2115,
-    "enrichment-ready": 24,
+    "enrichment-ready": 28,
     "research-only": 6
   },
   "by_slug": {
@@ -716,6 +716,10 @@
     "suva-v-suva-2026-08-11": {
       "tier": "index-ready",
       "score": 85
+    },
+    "vehicle-repair-case-2026-08-11": {
+      "tier": "enrichment-ready",
+      "score": 65
     },
     "anish-sam-mathew-v-parv-verma-2026-08-10": {
       "tier": "index-ready",
@@ -1677,6 +1681,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "seoul-e-d-civil-case-2026-06-12": {
+      "tier": "enrichment-ready",
+      "score": 65
+    },
     "shaddai-harris-v-nadia-lyotard-and-mitchell-sadler-2026-06-12": {
       "tier": "index-ready",
       "score": 85
@@ -1704,6 +1712,10 @@
     "myriane-beland-v-procureur-general-du-canada-2026-06-11": {
       "tier": "index-ready",
       "score": 81
+    },
+    "patent-case-2026-06-11": {
+      "tier": "enrichment-ready",
+      "score": 65
     },
     "quinteros-v-harbor-distributing-llc-2026-06-11": {
       "tier": "index-ready",
@@ -1972,6 +1984,10 @@
     "strategic-funding-source-inc-v-sti-ny-llc-2026-05-28": {
       "tier": "index-ready",
       "score": 85
+    },
+    "suwon-d-monetary-claims-2026-05-28": {
+      "tier": "enrichment-ready",
+      "score": 65
     },
     "usa-ex-rels-v-barton-associates-inc-2026-05-28": {
       "tier": "index-ready",

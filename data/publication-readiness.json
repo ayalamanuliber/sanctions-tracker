@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "003ebce7a076147fbbb04c56fcd429a952411d7b2a7982f373bf9979f91f474a",
-  "corpus_checked": "2026-10-04",
-  "total_cases": 2145,
-  "total_assessments": 2145,
+  "dataset_checksum": "d88b9657167e083ed97e1cae5bf8b1d3ca8482f9e1ea090c99f9fd512431d461",
+  "corpus_checked": "2026-10-05",
+  "total_cases": 2149,
+  "total_assessments": 2149,
   "tiers": {
     "index-ready": 2115,
-    "enrichment-ready": 24,
+    "enrichment-ready": 28,
     "research-only": 6
   },
   "issue_counts": {
     "court-not-recorded": 1,
-    "discrepancy-detail-not-recorded": 110,
-    "operational-lesson-not-recorded": 1414,
-    "outcome-not-recorded": 435,
-    "publication-review-pending": 2145,
+    "discrepancy-detail-not-recorded": 114,
+    "operational-lesson-not-recorded": 1418,
+    "outcome-not-recorded": 439,
+    "publication-review-pending": 2149,
     "source-link-missing": 5,
-    "specific-ai-tool-not-established": 1901,
-    "summary-missing": 5,
+    "specific-ai-tool-not-established": 1905,
+    "summary-missing": 9,
     "summary-needs-detail": 850,
     "summary-too-brief": 19
   },
@@ -17681,6 +17681,121 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "vehicle-repair-case-2026-08-11",
+      "slug": "vehicle-repair-case-2026-08-11",
+      "score": 65,
+      "maximum_score": 100,
+      "tier": "enrichment-ready",
+      "index_eligible": false,
+      "source_eligible": true,
+      "summary_length": 0,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 0,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-missing",
+          "impact": "blocking",
+          "remediation": "Add a neutral, source-grounded summary of the matter."
+        },
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
+        {
+          "field": "hallucination_items",
+          "code": "discrepancy-detail-not-recorded",
+          "impact": "important",
+          "remediation": "Record the cited, quoted, or authority discrepancy supported by the source."
+        },
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",
@@ -42068,6 +42183,121 @@
       ]
     },
     {
+      "id": "seoul-e-d-civil-case-2026-06-12",
+      "slug": "seoul-e-d-civil-case-2026-06-12",
+      "score": 65,
+      "maximum_score": 100,
+      "tier": "enrichment-ready",
+      "index_eligible": false,
+      "source_eligible": true,
+      "summary_length": 0,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 0,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-missing",
+          "impact": "blocking",
+          "remediation": "Add a neutral, source-grounded summary of the matter."
+        },
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
+        {
+          "field": "hallucination_items",
+          "code": "discrepancy-detail-not-recorded",
+          "impact": "important",
+          "remediation": "Record the cited, quoted, or authority discrepancy supported by the source."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
       "id": "shaddai-harris-v-nadia-lyotard-and-mitchell-sadler-2026-06-12",
       "slug": "shaddai-harris-v-nadia-lyotard-and-mitchell-sadler-2026-06-12",
       "score": 85,
@@ -42749,6 +42979,121 @@
           "code": "summary-needs-detail",
           "impact": "improvement",
           "remediation": "Expand the summary toward 240 characters with procedural and evidentiary context."
+        },
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "patent-case-2026-06-11",
+      "slug": "patent-case-2026-06-11",
+      "score": 65,
+      "maximum_score": 100,
+      "tier": "enrichment-ready",
+      "index_eligible": false,
+      "source_eligible": true,
+      "summary_length": 0,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 0,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-missing",
+          "impact": "blocking",
+          "remediation": "Add a neutral, source-grounded summary of the matter."
+        },
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
+        {
+          "field": "hallucination_items",
+          "code": "discrepancy-detail-not-recorded",
+          "impact": "important",
+          "remediation": "Record the cited, quoted, or authority discrepancy supported by the source."
         },
         {
           "field": "ai_tool_used",
@@ -49561,6 +49906,121 @@
         }
       ],
       "missing_fields": [
+        {
+          "field": "ai_tool_used",
+          "code": "specific-ai-tool-not-established",
+          "impact": "context",
+          "remediation": "Keep the attribution boundary explicit; do not infer a specific tool without source support."
+        },
+        {
+          "field": "lesson",
+          "code": "operational-lesson-not-recorded",
+          "impact": "improvement",
+          "remediation": "Add a neutral, source-grounded operational lesson or leave the page without a lesson module."
+        },
+        {
+          "field": "reviewed",
+          "code": "publication-review-pending",
+          "impact": "improvement",
+          "remediation": "Complete and date editorial publication review before calling this case curated."
+        }
+      ]
+    },
+    {
+      "id": "suwon-d-monetary-claims-2026-05-28",
+      "slug": "suwon-d-monetary-claims-2026-05-28",
+      "score": 65,
+      "maximum_score": 100,
+      "tier": "enrichment-ready",
+      "index_eligible": false,
+      "source_eligible": true,
+      "summary_length": 0,
+      "score_breakdown": [
+        {
+          "criterion": "case_name",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "date",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "court",
+          "points": 10,
+          "maximum": 10
+        },
+        {
+          "criterion": "jurisdiction",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "source_url",
+          "points": 20,
+          "maximum": 20
+        },
+        {
+          "criterion": "source_name",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "summary",
+          "points": 0,
+          "maximum": 10
+        },
+        {
+          "criterion": "outcome",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "hallucination_items",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "ai_tool_used",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "tags",
+          "points": 5,
+          "maximum": 5
+        },
+        {
+          "criterion": "lesson",
+          "points": 0,
+          "maximum": 5
+        },
+        {
+          "criterion": "reviewed",
+          "points": 0,
+          "maximum": 5
+        }
+      ],
+      "missing_fields": [
+        {
+          "field": "summary",
+          "code": "summary-missing",
+          "impact": "blocking",
+          "remediation": "Add a neutral, source-grounded summary of the matter."
+        },
+        {
+          "field": "outcome",
+          "code": "outcome-not-recorded",
+          "impact": "important",
+          "remediation": "Record the documented disposition, consequence, or procedural posture."
+        },
+        {
+          "field": "hallucination_items",
+          "code": "discrepancy-detail-not-recorded",
+          "impact": "important",
+          "remediation": "Record the cited, quoted, or authority discrepancy supported by the source."
+        },
         {
           "field": "ai_tool_used",
           "code": "specific-ai-tool-not-established",

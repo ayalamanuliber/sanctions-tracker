@@ -111254,6 +111254,96 @@
     }
   },
   {
+    "id": "anonymized-discovery-record-c566fb3413eb",
+    "slug": "anonymized-discovery-record-c566fb3413eb",
+    "case_name": "Anonymized discovery-order record",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "The court granted a motion to compel discovery and denied sanctions without prejudice. It identified a nonexistent citation and required greater care in future filings. The available court comments mention a separate future generative-AI order; they do not establish actual AI use. The reproduction’s probable-AI statement is an editorial note.",
+    "direct_answer": "The court granted a motion to compel discovery and denied sanctions without prejudice. It identified a nonexistent citation and required greater care in future filings. The available court comments mention a separate future generative-AI order; they do not establish actual AI use. The reproduction’s probable-AI statement is an editorial note.",
+    "why_it_matters": "A nonexistent citation requires verification and correction regardless of whether an AI tool was used.",
+    "judicial_reasoning": "The court identified a nonexistent citation and directed greater care in future filings. It declined sanctions and fees at that stage while compelling discovery.",
+    "decision_context": "A discovery dispute involving an unrepresented litigant.",
+    "practical_implications": [
+      "Check each cited authority against an authoritative legal source before filing.",
+      "Distinguish a court finding from a reproduction publisher’s editorial note."
+    ],
+    "evidence_boundary": "Party and source-document identifiers are withheld in this public record. The available reproduction supports the discovery disposition and citation warning; it does not establish actual AI use. A separate future AI order is mentioned but has not been verified here.",
+    "verified_fields": [
+      "court",
+      "date",
+      "procedural_posture",
+      "outcome"
+    ],
+    "source": {
+      "url": "",
+      "name": "Court-order reproduction (identifiers withheld)",
+      "tier": "missing"
+    },
+    "record": {
+      "court": "Delaware Ch.",
+      "jurisdiction": "state",
+      "state": "DE",
+      "country": "US",
+      "circuit": "3rd Circuit",
+      "judge": null,
+      "date": "2025-12-18",
+      "ai_tool": "Unidentified",
+      "outcome": "Discovery compelled; sanctions denied without prejudice; citation warning",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "contract",
+        "trial"
+      ],
+      "sanction_types": [
+        "warning"
+      ]
+    },
+    "publication": {
+      "ready": true,
+      "agent_status": "publisher-anonymized",
+      "blocked_reason": null
+    },
+    "procedural_posture": "The discovery motion was granted; the request for sanctions was denied without prejudice.",
+    "ai_attribution_status": "unspecified",
+    "recorded_tool": "Unidentified",
+    "outcome_summary": "Discovery compelled; sanctions denied without prejudice; citation warning",
+    "uncertainties": [
+      "Actual AI use is unverified.",
+      "The separate AI order referenced by the court has not been verified here."
+    ],
+    "evidence_notes": [
+      {
+        "field": "outcome",
+        "basis": "Court comments grant discovery relief and deny sanctions without prejudice.",
+        "locator": "reproduction pp. 2–3"
+      },
+      {
+        "field": "judicial_reasoning",
+        "basis": "Court comments identify a nonexistent citation and mention a separate future AI order.",
+        "locator": "reproduction p. 3"
+      },
+      {
+        "field": "ai_attribution_status",
+        "basis": "Probable AI generation is stated in the reproduction’s editorial note, rather than as a finding in the available court comments.",
+        "locator": "reproduction p. 1, editorial note"
+      }
+    ],
+    "evidence_review": {
+      "status": "primary-document-limited",
+      "confidence": "medium",
+      "reviewed_at": "2026-10-05",
+      "prompt_version": "publisher-update",
+      "limitations": [
+        "Underlying reproduction is not redistributed or directly linked in this anonymous record.",
+        "Actual AI use and the separate AI order are not established by the available material."
+      ]
+    }
+  },
+  {
     "id": "arabyads-holding-limited-v-gulrez-alam-marghoob-alam-2025-12-18",
     "slug": "arabyads-holding-limited-v-gulrez-alam-marghoob-alam-2025-12-18",
     "case_name": "Arabyads Holding Limited v. Gulrez Alam Marghoob Alam",
@@ -111536,96 +111626,6 @@
       "prompt_version": "case-intelligence-v7",
       "limitations": [
         "The specific AI tool used by the petitioners remains unidentified."
-      ]
-    }
-  },
-  {
-    "id": "anonymized-discovery-record-c566fb3413eb",
-    "slug": "anonymized-discovery-record-c566fb3413eb",
-    "case_name": "Anonymized discovery-order record",
-    "classification": "adjudicated",
-    "severity": "low",
-    "summary": "The court granted a motion to compel discovery and denied sanctions without prejudice. It identified a nonexistent citation and required greater care in future filings. The available court comments mention a separate future generative-AI order; they do not establish actual AI use. The reproduction’s probable-AI statement is an editorial note.",
-    "direct_answer": "The court granted a motion to compel discovery and denied sanctions without prejudice. It identified a nonexistent citation and required greater care in future filings. The available court comments mention a separate future generative-AI order; they do not establish actual AI use. The reproduction’s probable-AI statement is an editorial note.",
-    "why_it_matters": "A nonexistent citation requires verification and correction regardless of whether an AI tool was used.",
-    "judicial_reasoning": "The court identified a nonexistent citation and directed greater care in future filings. It declined sanctions and fees at that stage while compelling discovery.",
-    "decision_context": "A discovery dispute involving an unrepresented litigant.",
-    "practical_implications": [
-      "Check each cited authority against an authoritative legal source before filing.",
-      "Distinguish a court finding from a reproduction publisher’s editorial note."
-    ],
-    "evidence_boundary": "Party and source-document identifiers are withheld in this public record. The available reproduction supports the discovery disposition and citation warning; it does not establish actual AI use. A separate future AI order is mentioned but has not been verified here.",
-    "verified_fields": [
-      "court",
-      "date",
-      "procedural_posture",
-      "outcome"
-    ],
-    "source": {
-      "url": "",
-      "name": "Court-order reproduction (identifiers withheld)",
-      "tier": "missing"
-    },
-    "record": {
-      "court": "Delaware Ch.",
-      "jurisdiction": "state",
-      "state": "DE",
-      "country": "US",
-      "circuit": "3rd Circuit",
-      "judge": null,
-      "date": "2025-12-18",
-      "ai_tool": "Unidentified",
-      "outcome": "Discovery compelled; sanctions denied without prejudice; citation warning",
-      "amount": null,
-      "professional_sanction": "No",
-      "tags": [
-        "pro-se",
-        "fake-citations",
-        "contract",
-        "trial"
-      ],
-      "sanction_types": [
-        "warning"
-      ]
-    },
-    "publication": {
-      "ready": true,
-      "agent_status": "publisher-anonymized",
-      "blocked_reason": null
-    },
-    "procedural_posture": "The discovery motion was granted; the request for sanctions was denied without prejudice.",
-    "ai_attribution_status": "unspecified",
-    "recorded_tool": "Unidentified",
-    "outcome_summary": "Discovery compelled; sanctions denied without prejudice; citation warning",
-    "uncertainties": [
-      "Actual AI use is unverified.",
-      "The separate AI order referenced by the court has not been verified here."
-    ],
-    "evidence_notes": [
-      {
-        "field": "outcome",
-        "basis": "Court comments grant discovery relief and deny sanctions without prejudice.",
-        "locator": "reproduction pp. 2–3"
-      },
-      {
-        "field": "judicial_reasoning",
-        "basis": "Court comments identify a nonexistent citation and mention a separate future AI order.",
-        "locator": "reproduction p. 3"
-      },
-      {
-        "field": "ai_attribution_status",
-        "basis": "Probable AI generation is stated in the reproduction’s editorial note, rather than as a finding in the available court comments.",
-        "locator": "reproduction p. 1, editorial note"
-      }
-    ],
-    "evidence_review": {
-      "status": "primary-document-limited",
-      "confidence": "medium",
-      "reviewed_at": "2026-10-05",
-      "prompt_version": "publisher-update",
-      "limitations": [
-        "Underlying reproduction is not redistributed or directly linked in this anonymous record.",
-        "Actual AI use and the separate AI order are not established by the available material."
       ]
     }
   },

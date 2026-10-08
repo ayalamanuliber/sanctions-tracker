@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-07T15:35:31.716Z",
-  "checked_date": "2026-10-07",
+  "checked_at": "2026-10-08T15:41:05.755Z",
+  "checked_date": "2026-10-08",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
   "raw_rows": 2150,
   "imported_records": 2149,
@@ -14,6 +14,6 @@
   "source_link_coverage_pct": 99.7,
   "latest_record_date": "2026-10-01",
   "latest_record_name": "P. M. M. c/ G. A., F. M. d. S.H. s/ cobro ordinario de sumas de dinero",
-  "dataset_checksum": "1aa69192e3d5942826f215794d93bdc874ea97a68cac7f591a0f749d1bf2a3ff",
+  "dataset_checksum": "1568f8161fb510f91ba8e444d8da1d4cba22b23dcdc373bd15575a5df03b2223",
   "status": "validated"
 }

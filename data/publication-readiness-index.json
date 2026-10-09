@@ -1,15 +1,87 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "1568f8161fb510f91ba8e444d8da1d4cba22b23dcdc373bd15575a5df03b2223",
-  "corpus_checked": "2026-10-08",
-  "total_cases": 2149,
+  "dataset_checksum": "af050ab7b450db2d9cf1c5e16d904a49e00da6f7919b4e8a69a0ed044fde34be",
+  "corpus_checked": "2026-10-09",
+  "total_cases": 2180,
   "tiers": {
-    "index-ready": 2114,
-    "enrichment-ready": 28,
-    "research-only": 7
+    "index-ready": 2143,
+    "enrichment-ready": 29,
+    "research-only": 8
   },
   "by_slug": {
+    "in-the-matter-of-gary-brown-jr-2026-10-08": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "thorogood-v-merit-systems-protection-board-2026-10-08": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "duckett-v-board-of-regents-of-the-university-of-wisconsin-system-2026-10-07": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "illinois-department-of-healthcare-and-family-services-ex-rel-shaina-matos-v-daniel-badea-2026-10-07": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "in-re-alexis-lorene-landrum-2026-10-07": {
+      "tier": "index-ready",
+      "score": 76
+    },
+    "kid-international-llc-v-city-national-bank-of-florida-2026-10-07": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "tapscott-v-fariss-2026-10-07": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "washington-v-justice-2026-10-07": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "slim-v-cox-communications-inc-2026-10-06": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "smith-v-yavapai-prescott-indian-tribe-local-board-2026-10-06": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "cooper-v-john-doe-county-court-clerk-et-al-2026-10-05": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "grobler-v-kentucky-housing-corporation-2026-10-02": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "meetingtv-inc-v-koi-security-inc-et-al-2026-10-02": {
+      "tier": "index-ready",
+      "score": 80
+    },
+    "mercante-v-tarzia-2026-10-02": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "shannon-v-shannon-2026-10-02": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "fj-v-secretary-of-state-for-the-home-department-2026-10-01": {
+      "tier": "index-ready",
+      "score": 80
+    },
     "p-m-m-c-g-a-f-m-d-s-h-s-cobro-ordinario-de-sumas-de-dinero-2026-10-01": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "sanchez-v-synchrony-bank-n-a-2026-10-01": {
+      "tier": "index-ready",
+      "score": 81
+    },
+    "simpson-v-porter-2026-10-01": {
       "tier": "index-ready",
       "score": 85
     },
@@ -44,6 +116,10 @@
     "united-states-v-charles-randall-sorensen-2026-09-30": {
       "tier": "index-ready",
       "score": 81
+    },
+    "zheng-liu-v-lynk-global-inc-2026-09-30": {
+      "tier": "index-ready",
+      "score": 85
     },
     "curran-v-mom-s-organic-market-inc-et-al-2026-09-29": {
       "tier": "index-ready",
@@ -173,6 +249,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "the-king-on-the-application-of-sergio-graft-v-willesden-county-court-2026-09-22": {
+      "tier": "index-ready",
+      "score": 80
+    },
     "zhejiang-dingli-machinery-co-ltd-v-united-states-2026-09-22": {
       "tier": "index-ready",
       "score": 85
@@ -216,6 +296,10 @@
     "varela-v-hauser-2026-09-17": {
       "tier": "index-ready",
       "score": 85
+    },
+    "ii-sab-po-175-26-2026-09-16": {
+      "tier": "index-ready",
+      "score": 76
     },
     "in-re-violet-g-2026-09-16": {
       "tier": "index-ready",
@@ -353,6 +437,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "ht-v-secretary-of-state-for-the-home-department-2026-09-04": {
+      "tier": "index-ready",
+      "score": 80
+    },
     "wurm-v-anchor-bay-packaging-corporation-2026-09-04": {
       "tier": "index-ready",
       "score": 80
@@ -362,6 +450,10 @@
       "score": 90
     },
     "falkenstein-v-niles-2026-09-03": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "i-sa-go-210-26-2026-09-03": {
       "tier": "index-ready",
       "score": 85
     },
@@ -398,6 +490,10 @@
       "score": 76
     },
     "heung-long-sang-v-wong-mei-yuen-2026-08-31": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "i-osk-590-26-2026-08-31": {
       "tier": "index-ready",
       "score": 85
     },
@@ -438,6 +534,10 @@
       "score": 85
     },
     "ashmeade-v-amazon-com-services-llc-2026-08-27": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "i-osk-935-26-2026-08-27": {
       "tier": "index-ready",
       "score": 85
     },
@@ -528,6 +628,10 @@
     "capital-standard-llc-v-u-s-bank-national-association-2026-08-21": {
       "tier": "index-ready",
       "score": 85
+    },
+    "hoxha-others-tanveer-ahmed-fraudulent-applications-procedure-2026-08-21": {
+      "tier": "enrichment-ready",
+      "score": 65
     },
     "joseph-m-speranza-v-golden-technologies-inc-2026-08-21": {
       "tier": "index-ready",
@@ -643,7 +747,7 @@
     },
     "davis-v-gopal-didyuk-and-methodist-healthcare-memphis-hospitals-2026-08-14": {
       "tier": "index-ready",
-      "score": 85
+      "score": 80
     },
     "guerra-quezada-v-united-states-guerra-vasquez-v-united-states-consolidated-2026-08-14": {
       "tier": "index-ready",
@@ -1024,6 +1128,10 @@
     "hagan-v-black-diamond-experts-llc-2026-07-23": {
       "tier": "index-ready",
       "score": 85
+    },
+    "iheat-me-ltd-v-the-commissioners-for-his-majesty-s-revenue-and-customs-2026-07-23": {
+      "tier": "index-ready",
+      "score": 80
     },
     "mary-c-graves-v-brian-k-graves-2026-07-23": {
       "tier": "index-ready",
@@ -1932,10 +2040,6 @@
     "wyszynski-v-the-owners-strata-plan-bcs1721-2026-06-01": {
       "tier": "index-ready",
       "score": 76
-    },
-    "garcia-v-city-of-monte-vista-colorado-et-al-2026-05-29": {
-      "tier": "index-ready",
-      "score": 81
     },
     "jaclyn-cocco-v-rosario-palmieri-jr-2026-05-29": {
       "tier": "index-ready",
@@ -3877,6 +3981,10 @@
       "tier": "index-ready",
       "score": 81
     },
+    "brigade-talent-llc-v-erin-dana-lichy-jams-arbitration-no-5425003089-2026-02-24": {
+      "tier": "research-only",
+      "score": 75
+    },
     "chapter-kris-jackson-v-bok-financial-corporation-et-al-3-2026-02-24": {
       "tier": "index-ready",
       "score": 81
@@ -5069,6 +5177,10 @@
       "tier": "index-ready",
       "score": 90
     },
+    "disability-pride-new-mexico-v-dionysios-mccutcheon-2025-12-18": {
+      "tier": "index-ready",
+      "score": 76
+    },
     "edward-starski-v-chandler-holderness-2025-12-18": {
       "tier": "index-ready",
       "score": 81
@@ -5600,6 +5712,10 @@
     "supplying-demand-llc-matter-of-2025-11-24": {
       "tier": "index-ready",
       "score": 85
+    },
+    "victor-adam-bosak-iii-v-robert-rogers-r-d-rogers-llc-2025-11-24": {
+      "tier": "index-ready",
+      "score": 80
     },
     "yakov-magdalasov-v-bytedance-inc-tiktok-inc-and-maria-malvar-2025-11-24": {
       "tier": "index-ready",
@@ -6520,6 +6636,10 @@
     "anpv-sapv-v-secretary-of-state-for-the-home-department-2025-09-29": {
       "tier": "index-ready",
       "score": 91
+    },
+    "anpv-and-sapv-v-secretary-of-state-for-the-home-department-2025-09-29": {
+      "tier": "index-ready",
+      "score": 90
     },
     "munoz-v-lopez-2025-09-29": {
       "tier": "index-ready",
@@ -7660,6 +7780,10 @@
     "malone-anor-v-laois-county-council-ors-2025-06-23": {
       "tier": "index-ready",
       "score": 90
+    },
+    "michael-marcavage-v-lackawanna-county-2025-06-23": {
+      "tier": "index-ready",
+      "score": 85
     },
     "mintvest-capital-ltd-v-nydig-trust-company-et-al-2025-06-23": {
       "tier": "index-ready",

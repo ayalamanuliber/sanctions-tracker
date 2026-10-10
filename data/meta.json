@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-10-09",
-  "last_checked": "2026-10-09",
-  "last_checked_at": "2026-10-09T15:20:22.180Z",
+  "last_updated": "2026-10-10",
+  "last_checked": "2026-10-10",
+  "last_checked_at": "2026-10-10T14:29:51.197Z",
   "latest_record_date": "2026-10-08",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
-  "source_record_count": 2181,
-  "source_linked_count": 2174,
+  "source_record_count": 2185,
+  "source_linked_count": 2178,
   "source_link_coverage_pct": 99.7,
   "records_missing_date": 1,
-  "dataset_checksum": "af050ab7b450db2d9cf1c5e16d904a49e00da6f7919b4e8a69a0ed044fde34be",
-  "total_cases": 2180,
+  "dataset_checksum": "a3f6db271150662b809693813d367452e051f5ed0236bb469d28519875865742",
+  "total_cases": 2184,
   "us_cases": 1491,
   "us_adjudicated": 1483,
   "us_alleged_only": 8,
   "countries_tracked": 47,
-  "enriched_count": 2180,
+  "enriched_count": 2184,
   "enrichment_coverage_pct": 100,
   "reviewed_count": 0,
   "reviewed_coverage_pct": 0,
@@ -22,16 +22,16 @@
   "largest_single_sanction": 282508,
   "avg_sanction": 7636,
   "severity_counts": {
-    "low": 1555,
-    "medium": 362,
+    "low": 1558,
+    "medium": 363,
     "high": 222,
     "career-ending": 41
   },
   "by_country": {
     "US": 1491,
+    "Canada": 232,
     "GB": 76,
     "Argentina": 9,
-    "Canada": 228,
     "Poland": 6,
     "China": 5,
     "Australia": 112,
@@ -21725,7 +21725,7 @@
           "amount": 3000,
           "amount_display": "$3.0K",
           "severity": "medium",
-          "tool": "ClearBrief, Claude, ChatGPT, and Gemini",
+          "tool": "Claude, ChatGPT, and Gemini",
           "summary": "Misrepresented: Case Law | Counsel attributed language concerning an egregious-misconduct standard for vacatur to Denver & Rio Grande, but the court found that the case contains none of the terms “egregious” or “misconduct” and does not address that standard. Outcome: Two AI-ethics CLE courses; Monetary Sanctions. Order to Show Cause is here.",
           "sanction_types": [
             "monetary"
@@ -25759,12 +25759,12 @@
     }
   ],
   "by_week": {
-    "2026-W41": 11,
-    "2026-W40": 28,
+    "2026-W41": 12,
+    "2026-W40": 29,
     "2026-W39": 25,
     "2026-W38": 24,
     "2026-W37": 19,
-    "2026-W36": 18,
+    "2026-W36": 19,
     "2026-W35": 28,
     "2026-W34": 28,
     "2026-W33": 26,
@@ -25776,7 +25776,7 @@
     "2026-W27": 31,
     "2026-W26": 28,
     "2026-W25": 20,
-    "2026-W24": 39,
+    "2026-W24": 40,
     "2026-W23": 31,
     "2026-W22": 32,
     "2026-W21": 44,
@@ -25903,11 +25903,11 @@
     "2023-W15": 1
   },
   "by_month": {
-    "2026-10": 19,
-    "2026-09": 100,
+    "2026-10": 21,
+    "2026-09": 101,
     "2026-08": 119,
     "2026-07": 136,
-    "2026-06": 134,
+    "2026-06": 135,
     "2026-05": 154,
     "2026-04": 128,
     "2026-03": 182,
@@ -25950,17 +25950,17 @@
     "2023": 16,
     "2024": 61,
     "2025": 859,
-    "2026": 1244
+    "2026": 1248
   },
   "by_tool": {
-    "AI (implied, unspecified)": 1462,
-    "Unidentified": 471,
+    "AI (implied, unspecified)": 1463,
+    "Unidentified": 474,
     "Westlaw AI": 1,
     "Lex": 1,
     "Harvey": 1,
     "Lexis AI": 1,
     "ChatGPT": 113,
-    "ClearBrief, Claude, ChatGPT, and Gemini": 1,
+    "Claude, ChatGPT, and Gemini": 1,
     "Spellbook AI": 1,
     "Google AI": 3,
     "CoCounsel": 4,
@@ -26105,7 +26105,7 @@
     },
     {
       "week": "2026-W36",
-      "count": 18
+      "count": 19
     },
     {
       "week": "2026-W37",
@@ -26121,11 +26121,11 @@
     },
     {
       "week": "2026-W40",
-      "count": 28
+      "count": 29
     },
     {
       "week": "2026-W41",
-      "count": 11
+      "count": 12
     }
   ]
 }

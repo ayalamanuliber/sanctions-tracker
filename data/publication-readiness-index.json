@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "af050ab7b450db2d9cf1c5e16d904a49e00da6f7919b4e8a69a0ed044fde34be",
-  "corpus_checked": "2026-10-09",
-  "total_cases": 2180,
+  "dataset_checksum": "a3f6db271150662b809693813d367452e051f5ed0236bb469d28519875865742",
+  "corpus_checked": "2026-10-10",
+  "total_cases": 2184,
   "tiers": {
-    "index-ready": 2143,
+    "index-ready": 2147,
     "enrichment-ready": 29,
     "research-only": 8
   },
@@ -16,6 +16,10 @@
     "thorogood-v-merit-systems-protection-board-2026-10-08": {
       "tier": "index-ready",
       "score": 81
+    },
+    "1182573-b-c-ltd-v-gerber-2026-10-07": {
+      "tier": "index-ready",
+      "score": 80
     },
     "duckett-v-board-of-regents-of-the-university-of-wisconsin-system-2026-10-07": {
       "tier": "index-ready",
@@ -68,6 +72,10 @@
     "shannon-v-shannon-2026-10-02": {
       "tier": "index-ready",
       "score": 81
+    },
+    "droit-de-la-famille-261553-2026-10-01": {
+      "tier": "index-ready",
+      "score": 85
     },
     "fj-v-secretary-of-state-for-the-home-department-2026-10-01": {
       "tier": "index-ready",
@@ -466,6 +474,10 @@
       "score": 85
     },
     "morgan-cole-v-hobby-town-unlimited-inc-2026-09-02": {
+      "tier": "index-ready",
+      "score": 85
+    },
+    "owings-v-campbell-2026-09-02": {
       "tier": "index-ready",
       "score": 85
     },
@@ -1864,6 +1876,10 @@
     "state-of-iowa-ex-rel-j-g-v-mynesia-a-anderson-2026-06-10": {
       "tier": "index-ready",
       "score": 76
+    },
+    "9232-6271-quebec-inc-camping-ste-justine-2026-06-09": {
+      "tier": "index-ready",
+      "score": 85
     },
     "casey-a-gaddy-v-wood-brothers-bar-inc-et-al-2026-06-09": {
       "tier": "index-ready",

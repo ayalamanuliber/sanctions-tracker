@@ -112,6 +112,58 @@
     }
   },
   {
+    "id": "1182573-b-c-ltd-v-gerber-2026-10-07",
+    "slug": "1182573-b-c-ltd-v-gerber-2026-10-07",
+    "case_name": "1182573 B.C. Ltd. v Gerber",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Outcome: The notice of appeal was converted to an application for leave to appeal, and leave was dismissed; no AI-related sanction was imposed.. The self-represented appellant, Mr. Toma, admitted relying on generative AI to prepare submissions. The Court warned that AI can hallucinate authorities, quotes, and case summaries, and emphasized that litigants remain responsible for verifying all filed materials. However, the decision does not identify any particular hallucinated citation, false quotation, or misrepresented precedent in the appellant’s materials, and no AI-related sanction was imposed.",
+    "direct_answer": "Outcome: The notice of appeal was converted to an application for leave to appeal, and leave was dismissed; no AI-related sanction was imposed.. The self-represented appellant, Mr. Toma, admitted relying on generative AI to prepare submissions. The Court warned that AI can hallucinate authorities, quotes, and case summaries, and emphasized that litigants remain responsible for verifying all filed materials. However, the decision does not identify any particular hallucinated citation, false quotation, or misrepresented precedent in the appellant’s materials, and no AI-related sanction was imposed.",
+    "why_it_matters": "This matter connects pro se and trial with The notice of appeal was converted to an application for leave to appeal, and leave was dismissed; no AI-related sanction was imposed. in B.C.C.A.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and trial and records The notice of appeal was converted to an application for leave to appeal, and leave was dismissed; no AI-related sanction was imposed.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3263/1182573-B.C.-Ltd.-v-Gerber-2026-BCCA-399.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "B.C.C.A.",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-10-07",
+      "ai_tool": "Unidentified",
+      "outcome": "The notice of appeal was converted to an application for leave to appeal, and leave was dismissed; no AI-related sanction was imposed.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "trial"
+      ],
+      "sanction_types": [
+        "case-dismissed"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
     "id": "duckett-v-board-of-regents-of-the-university-of-wisconsin-system-2026-10-07",
     "slug": "duckett-v-board-of-regents-of-the-university-of-wisconsin-system-2026-10-07",
     "case_name": "Duckett v. Board of Regents of the University of Wisconsin System",
@@ -833,6 +885,62 @@
       ],
       "sanction_types": [
         "struck-filing"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "droit-de-la-famille-261553-2026-10-01",
+    "slug": "droit-de-la-famille-261553-2026-10-01",
+    "case_name": "Droit de la famille — 261553",
+    "classification": "adjudicated",
+    "severity": "medium",
+    "summary": "Fabricated: Case Law | The appeal materials cited a judgment that did not exist. The court identified the reference as fabricated and treated it as a failure to verify AI-generated legal authorities. Outcome: The court found that the self-represented appellant used AI negligently without verifying the authorities. It ordered costs in favor of the respondent under article 340 C.C.P., but rejected the requested $10,000 monetary sanction.. The appellant’s appeal materials, prepared using artificial intelligence, contained two references to nonexistent judgments and one inaccurate reference to a cited paragraph. The Court of Appeal held that AI use is permissible only if the litigant verifies the accuracy of the authorities and complies with the Court’s AI notice. It characterized the conduct as negligence rather than bad faith; unlike a related case involving knowing use of fabricated authorities, the court imposed costs under article 340 C.C.P. rather than a separate $10,000 sanction.",
+    "direct_answer": "Fabricated: Case Law | The appeal materials cited a judgment that did not exist. The court identified the reference as fabricated and treated it as a failure to verify AI-generated legal authorities. Outcome: The court found that the self-represented appellant used AI negligently without verifying the authorities. It ordered costs in favor of the respondent under article 340 C.C.P., but rejected the requested $10,000 monetary sanction.. The appellant’s appeal materials, prepared using artificial intelligence, contained two references to nonexistent judgments and one inaccurate reference to a cited paragraph. The Court of Appeal held that AI use is permissible only if the litigant verifies the accuracy of the authorities and complies with the Court’s AI notice. It characterized the conduct as negligence rather than bad faith; unlike a related case involving knowing use of fabricated authorities, the court imposed costs under article 340 C.C.P. rather than a separate $10,000 sanction.",
+    "why_it_matters": "This matter connects pro se and fake citations with The court found that the self-represented appellant used AI negligently without verifying the authorities. It ordered costs in favor of the respondent under article 340 C.C.P., but rejected the requested $10,000 monetary sanction. in Quebec Court of Appeal. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and fake citations and records The court found that the self-represented appellant used AI negligently without verifying the authorities. It ordered costs in favor of the respondent under article 340 C.C.P., but rejected the requested $10,000 monetary sanction.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Verify the existence, citation, court, and precedential status of every authority before filing.",
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3266/Droit-de-la-famille-261553-2026-QCCA-1300.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Quebec Court of Appeal",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-10-01",
+      "ai_tool": "AI (implied, unspecified)",
+      "outcome": "The court found that the self-represented appellant used AI negligently without verifying the authorities. It ordered costs in favor of the respondent under article 340 C.C.P., but rejected the requested $10,000 monetary sanction.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "fake-citations",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "monetary"
       ]
     },
     "publication": {
@@ -5133,7 +5241,7 @@
       "circuit": "10th Circuit",
       "judge": null,
       "date": "2026-09-09",
-      "ai_tool": "ClearBrief, Claude, ChatGPT, and Gemini",
+      "ai_tool": "Claude, ChatGPT, and Gemini",
       "outcome": "Two AI-ethics CLE courses; Monetary Sanctions",
       "amount": 3000,
       "professional_sanction": "No",
@@ -6425,6 +6533,60 @@
         "monetary",
         "bar-referral",
         "professional"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
+    }
+  },
+  {
+    "id": "owings-v-campbell-2026-09-02",
+    "slug": "owings-v-campbell-2026-09-02",
+    "case_name": "Owings v. Campbell",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Case Law | The petitioner relied on Atira Property Management Inc. v. Richardson as supporting his position. The court reviewed the decision and found that it did not support the petitioner’s position and was distinguishable, noting the reliance as an example of the perils of using artificial intelligence in preparing submissions. Outcome: The court rejected the petitioner’s reliance on Atira Property Management Inc. v. Richardson and dismissed the petition.. The self-represented petitioner admitted using artificial intelligence to prepare his submissions and relied on Atira Property Management Inc. v. Richardson, 2015 BCSC 751. The court reviewed that decision and found that it did not support the petitioner’s position and was distinguishable. The court characterized the reliance as an example of the perils of using artificial intelligence in preparing submissions, but imposed no sanction or monetary penalty. The petition was dismissed on the merits because the petitioner had not raised the address issue before the tribunal and had not shown patent unreasonableness.",
+    "direct_answer": "Misrepresented: Case Law | The petitioner relied on Atira Property Management Inc. v. Richardson as supporting his position. The court reviewed the decision and found that it did not support the petitioner’s position and was distinguishable, noting the reliance as an example of the perils of using artificial intelligence in preparing submissions. Outcome: The court rejected the petitioner’s reliance on Atira Property Management Inc. v. Richardson and dismissed the petition.. The self-represented petitioner admitted using artificial intelligence to prepare his submissions and relied on Atira Property Management Inc. v. Richardson, 2015 BCSC 751. The court reviewed that decision and found that it did not support the petitioner’s position and was distinguishable. The court characterized the reliance as an example of the perils of using artificial intelligence in preparing submissions, but imposed no sanction or monetary penalty. The petition was dismissed on the merits because the petitioner had not raised the address issue before the tribunal and had not shown patent unreasonableness.",
+    "why_it_matters": "This matter connects pro se and misrepresented authority with The court rejected the petitioner’s reliance on Atira Property Management Inc. v. Richardson and dismissed the petition. in B.C.S.C.. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and misrepresented authority and records The court rejected the petitioner’s reliance on Atira Property Management Inc. v. Richardson and dismissed the petition.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3265/Owings-v-Campbell-2026-BCSC-1872.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "B.C.S.C.",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-09-02",
+      "ai_tool": "Unidentified",
+      "outcome": "The court rejected the petitioner’s reliance on Atira Property Management Inc. v. Richardson and dismissed the petition.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "case-dismissed"
       ]
     },
     "publication": {
@@ -32134,6 +32296,60 @@
       "limitations": [
         "The specific generative AI tool used by the appellant remains unidentified."
       ]
+    }
+  },
+  {
+    "id": "9232-6271-quebec-inc-camping-ste-justine-2026-06-09",
+    "slug": "9232-6271-quebec-inc-camping-ste-justine-2026-06-09",
+    "case_name": "9232-6271 Québec inc. (Camping Ste-Justine)",
+    "classification": "adjudicated",
+    "severity": "low",
+    "summary": "Misrepresented: Doctrinal Work | The AI-generated memorandum contained inaccuracies and errors in the interpretation of legal concepts; the Tribunal found the document unreliable as a whole and excluded it, but did not identify the specific erroneous passages. Outcome: The objection was sustained and the AI-generated memorandum was excluded; the bingo licence application was rejected on independent eligibility grounds.. The applicant’s representative admitted that the memorandum submitted to the Tribunal had been generated using generative AI, although she had located and submitted the three cited Tribunal decisions herself. The Contentieux identified inaccuracies in the document’s interpretation of legal concepts. The Tribunal held that the errors undermined the reliability of the entire memorandum, sustained the objection, and refused to consider it. The three cited decisions were independently verified and were not excluded. The licence application was ultimately rejected because the applicant was a for-profit corporation and had not established that it was a charitable organization.",
+    "direct_answer": "Misrepresented: Doctrinal Work | The AI-generated memorandum contained inaccuracies and errors in the interpretation of legal concepts; the Tribunal found the document unreliable as a whole and excluded it, but did not identify the specific erroneous passages. Outcome: The objection was sustained and the AI-generated memorandum was excluded; the bingo licence application was rejected on independent eligibility grounds.. The applicant’s representative admitted that the memorandum submitted to the Tribunal had been generated using generative AI, although she had located and submitted the three cited Tribunal decisions herself. The Contentieux identified inaccuracies in the document’s interpretation of legal concepts. The Tribunal held that the errors undermined the reliability of the entire memorandum, sustained the objection, and refused to consider it. The three cited decisions were independently verified and were not excluded. The licence application was ultimately rejected because the applicant was a for-profit corporation and had not established that it was a charitable organization.",
+    "why_it_matters": "This matter connects pro se and misrepresented authority with The objection was sustained and the AI-generated memorandum was excluded; the bingo licence application was rejected on independent eligibility grounds. in Régie des alcools, des courses et des jeux du Québec. It provides a source-linked baseline for verification, supervision, and response controls.",
+    "judicial_reasoning": null,
+    "decision_context": "The structured public record identifies pro se and misrepresented authority and records The objection was sustained and the AI-generated memorandum was excluded; the bingo licence application was rejected on independent eligibility grounds.. The linked source controls the precise reasoning and procedural context.",
+    "practical_implications": [
+      "Confirm that each authority supports the stated proposition and has not been mischaracterized.",
+      "Read the linked source and subsequent docket history before relying on this record for legal work."
+    ],
+    "evidence_boundary": "The record summarizes the outcome described in the linked public source. The recorded document is hosted in the upstream publisher archive. This page is not a substitute for the complete docket, subsequent history, or jurisdiction-specific advice.",
+    "verified_fields": [
+      "case_name",
+      "court",
+      "date",
+      "source_url"
+    ],
+    "source": {
+      "url": "https://www.damiencharlotin.com/documents/3264/9232-6271-Quebec-inc.-Camping-Ste-Justine-2026-QCRACJ-230.pdf",
+      "name": "Damien Charlotin AI Hallucination Cases Database",
+      "tier": "publisher-archive"
+    },
+    "record": {
+      "court": "Régie des alcools, des courses et des jeux du Québec",
+      "jurisdiction": "international",
+      "state": "",
+      "country": "Canada",
+      "circuit": null,
+      "judge": null,
+      "date": "2026-06-09",
+      "ai_tool": "Unidentified",
+      "outcome": "The objection was sustained and the AI-generated memorandum was excluded; the bingo licence application was rejected on independent eligibility grounds.",
+      "amount": null,
+      "professional_sanction": "No",
+      "tags": [
+        "pro-se",
+        "misrepresented-authority",
+        "trial"
+      ],
+      "sanction_types": [
+        "none-adjudicated"
+      ]
+    },
+    "publication": {
+      "ready": false,
+      "agent_status": "structured-record-baseline",
+      "blocked_reason": "Pending source-level evidence review."
     }
   },
   {

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "dataset_checksum": "a3f6db271150662b809693813d367452e051f5ed0236bb469d28519875865742",
-  "corpus_checked": "2026-10-10",
+  "dataset_checksum": "0eab26971b1664bb580ad1524783e686d079d367ad6ab356837ea738e5119288",
+  "corpus_checked": "2026-10-11",
   "total_cases": 2184,
   "total_assessments": 2184,
   "tiers": {
@@ -172015,7 +172015,7 @@
       "tier": "index-ready",
       "index_eligible": true,
       "source_eligible": true,
-      "summary_length": 246,
+      "summary_length": 303,
       "score_breakdown": [
         {
           "criterion": "case_name",

@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-11T14:56:45.024Z",
-  "checked_date": "2026-10-11",
+  "checked_at": "2026-10-12T17:59:29.206Z",
+  "checked_date": "2026-10-12",
   "source_url": "https://www.damiencharlotin.com/hallucinations/hallucinations/download.csv",
   "raw_rows": 2185,
   "imported_records": 2184,
@@ -14,6 +14,6 @@
   "source_link_coverage_pct": 99.7,
   "latest_record_date": "2026-10-08",
   "latest_record_name": "In the Matter of Gary Brown, Jr.",
-  "dataset_checksum": "0eab26971b1664bb580ad1524783e686d079d367ad6ab356837ea738e5119288",
+  "dataset_checksum": "d35866a1676a81c3e9fdfd4cf6f0be38ec6225f1ead00fa2494d6244d4706783",
   "status": "validated"
 }
